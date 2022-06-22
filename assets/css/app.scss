@@ -216,3 +216,52 @@
     }
   }
 }
+
+.get-involved {
+  background: #010101;
+  padding: 60px 16px 200px;
+  
+  .title {
+    text-shadow: 0px 0px 10px rgb(224, 32, 158);
+    color: rgb(255, 255, 255);
+    font-family: Prototype;
+    font-size: 32px;
+    letter-spacing: 1.6px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: -20px 0 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .actions {
+    background: center center / cover url(/assets/images/background-actions.png);
+    padding: 40px 16px;
+
+    a {
+      display: block;
+      background: rgb(247, 243, 0);
+      background-position: top 23px center;
+      background-repeat: no-repeat;
+      box-shadow: 4px 4px 0px 0px rgb(224, 32, 158);
+      padding: 64px 40px 23px;
+      color: rgb(224, 32, 158);
+      font-family: Prototype, sans-serif;
+      font-size: 18px;
+      letter-spacing: 1.5px;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &.twitter {
+        background-image: url(/assets/images/twitter.svg);
+        margin-bottom: 40px;
+      }
+
+      &.mailing-list {
+        background-image: url(/assets/images/mailing-list.svg);
+      }
+    }
+  }
+}
