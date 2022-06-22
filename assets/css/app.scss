@@ -153,7 +153,19 @@ body {
 
 .talks {
   background: top 80px center / 100% no-repeat url(/assets/images/talks-background-top.svg), bottom 80px center / 100% no-repeat url(/assets/images/talks-background-bottom.svg);
-  padding: 280px 16px 280px;
+  padding: 80% 16px 80%;
+
+  @media only screen and (min-width: 420px) {
+    padding: 72% 16px 72%;
+  }
+
+  @media only screen and (min-width: 580px) {
+    padding: 62% 16px 62%;
+  }
+
+  @media only screen and (min-width: 820px) {
+    padding: 55% 16px 55%;
+  }
 
   .title {
     text-shadow: 0px 0px 10px rgb(224, 32, 158);
@@ -242,7 +254,7 @@ body {
   }
 
   .actions {
-    background: center center / cover url(/assets/images/background-actions.png);
+    background: center center / contain url(/assets/images/background-actions.png) no-repeat;
     padding: 40px 16px;
 
     a {
