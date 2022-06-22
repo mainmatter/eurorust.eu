@@ -4,8 +4,12 @@
 @import "./fonts.scss";
 @import "./reset.scss";
 
+body {
+  background: #010101;
+}
+
 .hero {
-  background: top center / cover url(/assets/images/hero-background.jpg) #010101;
+  background: top center / cover url(/assets/images/hero-background.jpg);
   padding: 130px 16px 100px;
   display: flex;
   flex-direction: column;
@@ -147,7 +151,7 @@
 }
 
 .talks {
-  background: top 80px center / 100% no-repeat url(/assets/images/talks-background-top.svg), bottom 80px center / 100% no-repeat url(/assets/images/talks-background-bottom.svg) #010101;
+  background: top 80px center / 100% no-repeat url(/assets/images/talks-background-top.svg), bottom 80px center / 100% no-repeat url(/assets/images/talks-background-bottom.svg);
   padding: 280px 16px 280px;
 
   .title {
@@ -219,7 +223,7 @@
 }
 
 .get-involved {
-  background: bottom 80px center / 180px no-repeat url(/assets/images/get-involved-background-bottom.svg) #010101;
+  background: bottom 80px center / 180px no-repeat url(/assets/images/get-involved-background-bottom.svg);
   padding: 60px 16px 280px;
   
   .title {
@@ -268,7 +272,6 @@
 }
 
 footer {
-  background: #010101;
   padding: 40px 16px;
   display: flex;
   flex-direction: column;
