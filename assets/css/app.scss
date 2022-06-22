@@ -100,3 +100,47 @@
     height: auto;
   }
 }
+
+.speak {
+  background: linear-gradient(-180deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 52%, rgba(255, 255, 255, 0) 100%)
+  rgb(247, 243, 0);
+  padding: 80px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .title {
+    color: rgb(2, 0, 46);
+    font-family: Prototype;
+    font-size: 32px;
+    letter-spacing: 1.6px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 37px;
+  }
+  
+  p {
+    color: rgb(2, 0, 46);
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 32px;
+    text-align: center;
+    padding: 0 16px;
+    margin-bottom: 37px;
+  }
+
+  .cfp {
+    background: rgb(224, 32, 158);
+    box-shadow: 4px 4px 0px 0px rgb(2, 0, 46);
+    padding: 23px 40px;
+    color: rgb(247, 243, 0);
+    font-family: Prototype, sans-serif;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    transform: rotate(-4deg);
+  }
+}
