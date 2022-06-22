@@ -1,0 +1,20 @@
+# eurorust.eu
+
+The source code for [https://eurorust.eu](https://eurorust.eu).
+
+![simplabs logo](./public/assets/images/logos/simplabs.svg)
+
+## Installation
+
+- `git clone <repository-url>` this repository
+- `bundle`
+
+## Running / Development
+
+- `bundle exec jekyll serve --watch -H 0.0.0.0 --incremental `
+- open [http://localhost:4000](http://localhost:4000).
+
+## Copyright
+
+Copyright &copy; 2022 simplabs GmbH (https://simplabs.com), released under the
+[Creative Commons Attribution-NonCommercial 4.0 International license](https://creativecommons.org/licenses/by-nc/4.0/).
