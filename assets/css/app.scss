@@ -5,11 +5,10 @@
 @import "./reset.scss";
 
 body {
-  background: #010101;
+  background: top center / cover url(/assets/images/hero-background.jpg) #010101 no-repeat;
 }
 
 .hero {
-  background: top center / cover url(/assets/images/hero-background.jpg);
   padding: 130px 16px 100px;
   display: flex;
   flex-direction: column;
@@ -68,7 +67,7 @@ body {
 }
 
 .about {
-  background: top left 32px / 120px no-repeat url(/assets/images/about-background.svg) #010101;
+  background: top left 32px / 120px no-repeat url(/assets/images/about-background.svg);
   padding: 120px 16px 80px;
   display: flex;
   flex-direction: column;
