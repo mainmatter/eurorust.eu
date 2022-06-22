@@ -144,3 +144,75 @@
     transform: rotate(-4deg);
   }
 }
+
+.talks {
+  background: top 80px center / 100% no-repeat url(/assets/images/talks-background-top.svg), bottom 80px center / 100% no-repeat url(/assets/images/talks-background-bottom.svg) #010101;
+  padding: 280px 16px 280px;
+
+  .title {
+    text-shadow: 0px 0px 10px rgb(224, 32, 158);
+    color: rgb(255, 255, 255);
+    font-family: Prototype;
+    font-size: 32px;
+    letter-spacing: 1.6px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: -20px 0 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      background: center center / cover url(/assets/images/yellow-diamond.svg);
+      height: 62px;
+      width: 62px;
+    }
+
+    &:after {
+      content: "";
+      display: inline-block;
+      background: center center / cover url(/assets/images/yellow-diamond.svg);
+      height: 62px;
+      width: 62px;
+    }
+  }
+  
+  p {
+    color: rgb(255, 255, 255);
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 32px;
+    text-align: center;
+    padding: 0 16px;
+    margin-bottom: 60px;
+  }
+
+  .topics {
+    list-style-type: none;
+    color: rgb(2, 0, 46);
+    font-family: Prototype, sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    text-align: justify;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    li {
+      transform: rotate(-4deg);
+      display: inline-block;
+      background: rgb(255, 255, 255);
+      border: 1.5px solid rgb(255, 255, 255);
+      box-shadow: 1px 1px 0px 0px rgb(224, 32, 158);
+      padding: 2px 5px;
+    }
+
+    li + li {
+      margin-top: 40px;
+    }
+  }
+}
