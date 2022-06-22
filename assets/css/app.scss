@@ -5,7 +5,7 @@
 
 .hero {
   background: top center / cover url(/assets/images/hero-background.jpg) #010101;
-  padding: 130px 16px;
+  padding: 130px 16px 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,5 +58,45 @@
     letter-spacing: 1.5px;
     text-align: center;
     text-transform: uppercase;
+  }
+}
+
+.about {
+  background: top left 32px / 120px no-repeat url(/assets/images/about-background.svg) #010101;
+  padding: 120px 16px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .title {
+    text-shadow: 0px 0px 10px rgb(224, 32, 158);
+    color: rgb(255, 255, 255);
+    font-family: Prototype;
+    font-size: 32px;
+    letter-spacing: 1.6px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 37px;
+  }
+
+  p {
+    color: rgb(255, 255, 255);
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 32px;
+    text-align: center;
+    padding: 0 16px;
+
+    &.rustfest {
+      font-size: 24px;
+      margin-top: 32px;
+    }
+  }
+
+  .rustfest-logo {
+    margin-top: 32px;
+    width: 232px;
+    height: auto;
   }
 }
