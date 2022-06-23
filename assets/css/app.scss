@@ -297,6 +297,27 @@ body {
     margin: 0 0 17px;
   }
 
+  h3 {
+    text-shadow: 0px 0px 10px rgb(224, 32, 158);
+    color: rgb(255, 255, 255);
+    font-family: Prototype;
+    font-size: 24px;
+    letter-spacing: 1.6px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 0 17px;
+  }
+
+ a {
+   color: rgb(255, 255, 255);
+   transition: text-decoration-color .15s ease-out;
+   text-decoration-color: rgb(224, 32, 158);
+
+   &:hover {
+     text-decoration-color: rgb(247, 243, 0);
+   }
+ }
+
   p {
     color: rgb(255, 255, 255);
     font-family: Roboto;
@@ -305,8 +326,12 @@ body {
     line-height: 32px;
     padding: 0 16px;
 
-    & + p {
+    & + p, & + h3 {
       margin-top: 17px;
+    }
+
+    &.note {
+      font-style: italic;
     }
   }
 }
