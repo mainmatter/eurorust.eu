@@ -4,6 +4,7 @@
 @import "./reset.scss";
 @import "./fonts.scss";
 @import "./typography.scss";
+@import "./mixins.scss";
 
 body {
   background: top center / cover url(/assets/images/hero-background.jpg) #010101 no-repeat;
@@ -135,15 +136,15 @@ body {
   background: top 80px center / 100% no-repeat url(/assets/images/talks-background-top.svg), bottom 80px center / 100% no-repeat url(/assets/images/talks-background-bottom.svg);
   padding: 80% 16px 80%;
 
-  @media only screen and (min-width: 420px) {
+  @include min-screen-width(420px) {
     padding: 72% 16px 72%;
   }
 
-  @media only screen and (min-width: 580px) {
+  @include min-screen-width(580px) {
     padding: 62% 16px 62%;
   }
 
-  @media only screen and (min-width: 820px) {
+  @include min-screen-width(820px) {
     padding: 55% 16px 55%;
   }
 
