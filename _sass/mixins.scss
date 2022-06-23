@@ -3,3 +3,9 @@
     @content;
   }
 }
+
+@mixin desktop-only {
+  @include min-screen-width(768px) {
+    @content;
+  }
+}
