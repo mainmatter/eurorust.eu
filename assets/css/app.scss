@@ -262,6 +262,7 @@ body {
       border: 1.5px solid rgb(255, 255, 255);
       box-shadow: 1px 1px 0px 0px rgb(224, 32, 158);
       padding: 2px 5px;
+      text-align: left;
 
       @include desktop-only {
         margin-top: 40px;
