@@ -374,13 +374,46 @@ footer {
   flex-direction: column;
   align-items: center;
 
+  @include desktop-only {
+    width: 95vw;
+    min-width: 760px;
+    max-width: 1340px;
+    margin: 0 auto;
+  }
+
   .avatar {
     width: 120px;
     height: auto;
   }
 
-  .copy {
-    margin: 24px 0 40px;
+  .meta {
+    margin: 24px 0;
+
+    .presented {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+
+      img {
+        height: 20px;
+        margin-left: 10px;
+      }
+    }
+
+    @include desktop-only {
+      display: flex;
+      width: 100%;
+      align-items: baseline;
+      justify-content: start;
+      margin-bottom: 24px;
+
+      .copy {
+        margin-right: 24px;
+      }
+    }    
+  }
+
+  .copy, .presented {
     text-shadow: 0px 0px 5px rgb(224, 32, 158);
     color: rgb(224, 32, 158);
     font-family: Prototype;
@@ -426,6 +459,17 @@ footer {
 
     li + li {
       margin-top: 18px;
+    }
+
+    @include desktop-only {
+      flex-direction: row;
+      align-items: start;
+      justify-content: start;
+    
+      li + li {
+        margin-top: 0;
+        margin-left: 18px;
+      }
     }
   }
 }
