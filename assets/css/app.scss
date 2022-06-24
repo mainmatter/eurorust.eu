@@ -189,21 +189,17 @@ body {
 
 .talks {
   background: top 80px center / 100% no-repeat url(/assets/images/talks-background-top.svg), bottom 80px center / 100% no-repeat url(/assets/images/talks-background-bottom.svg);
-  padding: 80% 16px 80%;
+  padding: 66vw 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   @include min-screen-width(420px) {
-    padding: 72% 16px 72%;
+    padding: 50vw 16px;
   }
 
-  @include min-screen-width(580px) {
-    padding: 62% 16px 62%;
-  }
-
-  @include min-screen-width(820px) {
-    padding: 55% 16px 55%;
+  @include min-screen-width(720px) {
+    padding: 37.5vw 16px;
   }
 
   .title {
