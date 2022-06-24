@@ -454,59 +454,78 @@ footer {
   .links {
     width: 100%;
     border-top: 2px dotted rgb(35, 190, 155);
-    padding-top: 24px;
-    list-style-type: none;
+    padding-top: 16px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
 
-    li {
-      font-family: Prototype;
-      font-size: 18px;
-      letter-spacing: 0.9px;
-      line-height: 40px;
-      text-align: center;
-
-      a {
-        text-shadow: 0px 0px 5px rgb(35, 190, 155);
-        color: rgb(35, 190, 155);
-        text-transform: uppercase;
-        text-decoration: none;
-
-        &:before {
-          content: "•";
-          margin-right: 10px;
-
-          @include desktop-only {
-            display: none;
+    .pages {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    
+      li {
+        font-family: Prototype;
+        font-size: 18px;
+        letter-spacing: 0.9px;
+        line-height: 40px;
+        text-align: center;
+    
+        a {
+          text-shadow: 0px 0px 5px rgb(35, 190, 155);
+          color: rgb(35, 190, 155);
+          text-transform: uppercase;
+          text-decoration: none;
+    
+          &:before {
+            content: "•";
+            margin-right: 10px;
+    
+            @include desktop-only {
+              display: none;
+            }
+          }
+    
+          &:after {
+            content: "•";
+            margin-left: 10px;
           }
         }
-
-        &:after {
-          content: "•";
+      }
+    
+      li + li {
+        margin-top: 18px;
+      }
+    
+      @include desktop-only {
+        flex-direction: row;
+        align-items: start;
+        justify-content: start;
+      
+        li + li {
+          margin-top: 0;
           margin-left: 10px;
+        }
+    
+        li:last-child {
+          a:after {
+            display: none;
+          }
         }
       }
     }
 
-    li + li {
-      margin-top: 18px;
+    .social {
+      margin-top: 24px;
     }
 
     @include desktop-only {
       flex-direction: row;
-      align-items: start;
-      justify-content: start;
     
-      li + li {
+      .social {
         margin-top: 0;
-        margin-left: 10px;
-      }
-
-      li:last-child {
-        a:after {
-          display: none;
-        }
       }
     }
   }
