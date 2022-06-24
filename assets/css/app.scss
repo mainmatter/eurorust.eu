@@ -26,7 +26,7 @@ body {
 
       @include desktop-only {
         width: 75vw;
-        max-width: 1200px;
+        max-width: 1068px;
         margin-bottom: 80px;
       }
     }
@@ -42,29 +42,32 @@ body {
     transform: rotate(-4deg);
     margin-bottom: 100px;
     text-align: center;
+    font-weight: normal;
 
     @include desktop-only {
       font-size: 40px;
       letter-spacing: 2px;
     }
 
-    .date {
+    .date, .location {
       text-shadow: none;
       display: inline-block;
-      background: rgb(255, 255, 255);
       border: 1.5px solid rgb(255, 255, 255);
       box-shadow: 1px 1px 0px 0px rgb(224, 32, 158);
       padding: 2px 5px;
+
+      @include desktop-only {
+        border: 5px solid rgb(255, 255, 255);
+      }
+    }
+
+    .date {
+      background: rgb(255, 255, 255);
     }
 
     .location {
-      text-shadow: none;
-      display: inline-block;
       color: rgb(255, 255, 255);
       background: rgb(2, 0, 46);
-      border: 1.5px solid rgb(255, 255, 255);
-      box-shadow: 1px 1px 0px 0px rgb(224, 32, 158);
-      padding: 2px 5px;
     }
   }
 
@@ -477,6 +480,10 @@ footer {
         &:before {
           content: "•";
           margin-right: 10px;
+
+          @include desktop-only {
+            display: none;
+          }
         }
 
         &:after {
@@ -497,7 +504,13 @@ footer {
     
       li + li {
         margin-top: 0;
-        margin-left: 18px;
+        margin-left: 10px;
+      }
+
+      li:last-child {
+        a:after {
+          display: none;
+        }
       }
     }
   }
