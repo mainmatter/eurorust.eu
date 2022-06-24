@@ -289,7 +289,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
+  @include desktop-only {
+    background-position: top 25% right;
+    padding-bottom: 120px;
+  }
+
   .title {
     margin: -20px 0 17px;
     display: flex;
