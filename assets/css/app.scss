@@ -97,6 +97,23 @@ body {
     margin-bottom: 37px;
   }
 
+  @include desktop-only {
+    background: none;
+
+    .title {
+      display: flex;
+      align-items: center;
+    }
+
+    .title:before {
+      content: "";
+      background: top left 32px / 120px no-repeat url(/assets/images/about-background.svg);
+      width: 133px;
+      height: 133px;
+      margin-left: -133px;
+    }
+  }
+
   p {
     padding: 0 16px;
 
@@ -110,6 +127,13 @@ body {
     margin-top: 32px;
     width: 232px;
     height: auto;
+  }
+
+  @include desktop-only {
+    p {
+      width: 50vw;
+      min-width: 680px;
+    }
   }
 }
 
@@ -151,11 +175,21 @@ body {
       letter-spacing: 2px;
     }
   }
+
+  @include desktop-only {
+    p {
+      width: 50vw;
+      min-width: 680px;
+    }
+  }
 }
 
 .talks {
   background: top 80px center / 100% no-repeat url(/assets/images/talks-background-top.svg), bottom 80px center / 100% no-repeat url(/assets/images/talks-background-bottom.svg);
   padding: 80% 16px 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @include min-screen-width(420px) {
     padding: 72% 16px 72%;
@@ -238,6 +272,13 @@ body {
 
     li + li {
       margin-top: 40px;
+    }
+  }
+
+  @include desktop-only {
+    p {
+      width: 50vw;
+      min-width: 680px;
     }
   }
 }
