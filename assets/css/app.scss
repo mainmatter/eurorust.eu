@@ -7,7 +7,11 @@
 @import "./mixins.scss";
 
 body {
-  background: top center / cover url(/assets/images/hero-background.jpg) #010101 no-repeat;
+  background: top center url(/assets/images/hero-background.jpg) #010101 no-repeat;
+
+  @include desktop-only {
+    background-size: contain;
+  }
 }
 
 .hero {
@@ -21,7 +25,7 @@ body {
     margin-bottom: 43px;
 
     img {
-      width: 100vw;
+      width: 90vw;
       height: auto;
 
       @include desktop-only {
@@ -81,6 +85,7 @@ body {
     letter-spacing: 1.5px;
     text-align: center;
     text-transform: uppercase;
+    border: none;
 
     @include desktop-only {
       font-size: 24px;
