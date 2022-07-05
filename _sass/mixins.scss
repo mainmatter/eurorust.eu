@@ -21,3 +21,27 @@
     @content;
   }
 }
+
+@mixin call-to-action-button($color, $bgColor) {
+  display: block;
+  background: rgb(247, 243, 0);
+  background-position: top 23px center;
+  background-repeat: no-repeat;
+  box-shadow: 4px 4px 0px 0px rgb(224, 32, 158);
+  max-width: 80vw;
+  padding: 1.2rem 2.2rem;
+  color: rgb(224, 32, 158);
+  font-family: Prototype, sans-serif;
+
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  @include desktop-only {
+    display: inline-block;
+    max-width: 360px;
+    margin-right: 10px;
+  }
+
+  @content;
+}

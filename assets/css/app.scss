@@ -15,6 +15,25 @@ body {
   }
 }
 
+.tickets button,
+.talk a {
+  background: rgb(224, 32, 158);
+  box-shadow: 4px 4px 0px 0px rgb(247, 243, 0);
+  padding: 20px 44px;
+  color: rgb(247, 243, 0);
+  font-family: Prototype, sans-serif;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+
+  @include desktop-and-tablet-only {
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+}
+
 .hero {
   padding: 130px 16px 100px;
   display: flex;
@@ -80,24 +99,6 @@ body {
     .location {
       color: rgb(255, 255, 255);
       background: rgb(2, 0, 46);
-    }
-  }
-
-  .tickets button {
-    background: rgb(224, 32, 158);
-    box-shadow: 4px 4px 0px 0px rgb(247, 243, 0);
-    padding: 20px 44px;
-    color: rgb(247, 243, 0);
-    font-family: Prototype, sans-serif;
-    font-size: 18px;
-    letter-spacing: 1.5px;
-    text-align: center;
-    text-transform: uppercase;
-    border: none;
-
-    @include desktop-and-tablet-only {
-      font-size: 24px;
-      letter-spacing: 2px;
     }
   }
 }
@@ -312,6 +313,174 @@ body {
   }
 }
 
+.our-speakers {
+  padding: 66vw 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include min-screen-width(420px) {
+    padding: 50vw 16px;
+  }
+
+  @include min-screen-width(720px) {
+    padding: 37.5vw 16px;
+  }
+
+  .title {
+    margin: -20px 0 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10rem;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      background: center center / cover url(/assets/images/yellow-diamond.svg);
+      height: 62px;
+      width: 62px;
+    }
+
+    &:after {
+      content: "";
+      display: inline-block;
+      background: center center / cover url(/assets/images/yellow-diamond.svg);
+      height: 62px;
+      width: 62px;
+    }
+  }
+
+  p.description {
+    max-width: 36%;
+    @include mobile-only {
+      max-width: 100%;
+    }
+  }
+
+  .speakers {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* This is better for small screens, once min() is better supported */
+    /* grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); */
+    gap: 64px;
+    max-width: 75%;
+    @include desktop-only {
+      max-width: 1000px;
+    }
+    margin-top: 100px;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    img.photo {
+      border: #f7f300 6px solid;
+      display: inline-block;
+      height: 192px;
+      width: 192px;
+      border-radius: 50%;
+      margin-bottom: 24px;
+      @include mobile-only {
+        margin-bottom: 10px;
+      }
+    }
+
+    a,
+    p {
+      color: rgb(253, 248, 244);
+      font-family: Prototype, sans-serif;
+      font-size: 18px;
+      letter-spacing: 0.9px;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      @include mobile-only {
+        margin-bottom: 10px;
+      }
+    }
+
+    .links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        margin: 0 8px;
+      }
+    }
+  }
+}
+
+.speaker-profile {
+  margin: 0 auto;
+  display: grid;
+  align-items: center;
+  padding-top: 10rem;
+  @include min-screen-width(900px) {
+    width: 95vw;
+    grid-template-columns: 250px 4fr;
+    width: 80%;
+    padding-bottom: 10rem;
+    @include min-screen-width(1440px) {
+      padding: 10rem;
+    }
+  }
+  align-items: center;
+
+  .profile-image {
+    margin: auto;
+    height: 20rem;
+    border: #f7f300 6px solid;
+    display: inline-block;
+    border-radius: 50%;
+    margin-bottom: 24px;
+    @include mobile-only {
+      margin-bottom: 10px;
+    }
+    @include min-screen-width(900px) {
+      margin: 0;
+    }
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  .speaker-details {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 2rem;
+    @include desktop-and-tablet-only {
+      margin-left: 10rem;
+    }
+    gap: 2rem;
+  }
+
+  .talk {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .links {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
 .get-involved {
   background: bottom 80px center / 180px no-repeat
     url(/assets/images/get-involved-background-bottom.svg);
@@ -348,36 +517,26 @@ body {
   }
 
   .actions {
+    display: flex;
+    align-items: center;
+
     @include mobile-only {
-      align-items: center;
-      display: flex;
       flex-direction: column;
     }
 
     a {
-      display: block;
-      background: rgb(247, 243, 0);
-      background-position: top 23px center;
-      background-repeat: no-repeat;
-      box-shadow: 4px 4px 0px 0px rgb(224, 32, 158);
-      padding: 56px 0px 23px;
-      height: 6.3rem;
-      width: 22.5rem;
-      max-width: 80vw;
-      color: rgb(224, 32, 158);
-      font-family: Prototype, sans-serif;
-      font-size: 16px;
-      letter-spacing: 1.5px;
-      text-align: center;
-      text-decoration: none;
-      text-transform: uppercase;
+      @include call-to-action-button(rgb(224, 32, 158), rgb(247, 243, 0)) {
+        font-size: 16px;
+        letter-spacing: 1.5px;
+        padding: 56px 0px 23px;
+        width: 22.5rem;
+        margin-bottom: 1rem;
+        align-items: center;
 
-      @include desktop-and-tablet-only {
-        font-size: 18px;
-        letter-spacing: 2px;
-        display: inline-block;
-        max-width: 360px;
-        margin-right: 10px;
+        @include desktop-and-tablet-only {
+          font-size: 18px;
+          letter-spacing: 2px;
+        }
       }
 
       &.twitter {
@@ -476,6 +635,200 @@ body {
 
   img {
     width: 246px;
+  }
+}
+
+.schedule {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  background: top -0.5rem left 38% / 4rem no-repeat url(/assets/images/schedule-background.svg);
+
+  @include mobile-only {
+    background-position-x: 0;
+  }
+
+  .content {
+    width: 100vw;
+    color: rgb(255, 255, 255);
+
+    .title {
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+    }
+
+    .timetable {
+      margin: auto;
+      width: 60vw;
+
+      @include mobile-only {
+        width: 80vw;
+      }
+
+      h5,
+      h6 {
+        text-align: center;
+        &.timezone {
+          margin-bottom: 2rem;
+        }
+      }
+
+      h5 {
+        color: #f7f300;
+        font-family: Prototype;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+        letter-spacing: 1.2px;
+        margin-bottom: 1rem;
+        font-weight: bold;
+        text-shadow: 0px 0px 10px #e0209e;
+      }
+
+      h6 {
+        color: rgb(255, 255, 255);
+        font-family: "Roboto", sans-serif;
+        font-size: 1.1rem;
+        line-height: 2.5rem;
+        font-weight: bold;
+      }
+
+      a {
+        text-decoration: underline;
+        font-family: "Robot", sans-serif;
+        font-weight: bold;
+        color: #f7f300;
+      }
+
+      table {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        width: 100%;
+
+        thead tr {
+          th {
+            padding-bottom: 7px;
+            font-weight: bold;
+            text-align: left;
+            font-size: 1.2rem;
+            font-family: "Lato", sans-serif;
+            text-transform: uppercase;
+
+            &.time {
+              width: 8rem;
+            }
+          }
+
+          th:first-child {
+            padding-left: 0;
+            width: 30%;
+          }
+        }
+
+        tbody tr {
+          border-top: 1px dotted #23be9b;
+          min-width: 100vw;
+
+          & > td:first-child {
+            padding-right: 0px;
+            color: #f7f300;
+            text-shadow: 0px 0px 10px #e0209e;
+            font-family: Prototype;
+            font-size: 18px;
+            letter-spacing: 0.9px;
+            text-transform: uppercase;
+          }
+
+          & > td:last-child {
+            padding-right: 26px;
+            @media only screen and (min-width: 576px) {
+              padding-right: 0;
+            }
+          }
+
+          &:last-child {
+            border-bottom: 1px dotted #23be9b;
+            min-width: 100%;
+          }
+        }
+
+        td {
+          font-size: 1rem;
+          text-align: left;
+          padding: 1.5rem 0 1.5rem 0;
+          vertical-align: top;
+
+          .speaker {
+            margin-top: 0.5rem;
+            display: block;
+            font-style: italic;
+            font-family: "Roboto", sans-serif;
+          }
+        }
+      }
+
+      .full-schedule {
+        text-align: center;
+        margin-top: 4rem;
+        a {
+          @include call-to-action-button(rgb(224, 32, 158), rgb(247, 243, 0)) {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  &.full-schedule {
+    .content .timetable table {
+      td {
+        h3,
+        p {
+          @include desktop-and-tablet-only {
+            text-align: left;
+          }
+          margin-bottom: 2rem;
+        }
+      }
+
+      tbody tr {
+        @include mobile-only {
+          display: flex;
+          flex-direction: column;
+        }
+        min-width: auto;
+
+        & > td:last-child {
+          padding-right: 0;
+        }
+      }
+
+      .talk-info {
+        gap: 2rem;
+      }
+
+      .talk-info,
+      .speaker {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        p {
+          margin: 0;
+        }
+
+        img.photo {
+          border: #f7f300 6px solid;
+          display: inline-block;
+          height: 192px;
+          width: 192px;
+          border-radius: 50%;
+          @include mobile-only {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
   }
 }
 
