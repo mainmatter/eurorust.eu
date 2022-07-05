@@ -155,58 +155,6 @@ body {
   }
 }
 
-.speak {
-  background: linear-gradient(
-      -180deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgb(255, 255, 255) 52%,
-      rgba(255, 255, 255, 0) 100%
-    )
-    rgb(247, 243, 0);
-  padding: 80px 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  .title {
-    text-shadow: none;
-    color: rgb(2, 0, 46);
-    margin-bottom: 37px;
-  }
-
-  p {
-    color: rgb(2, 0, 46);
-    padding: 0 16px;
-    margin-bottom: 37px;
-  }
-
-  .cfp {
-    background: rgb(224, 32, 158);
-    box-shadow: 4px 4px 0px 0px rgb(2, 0, 46);
-    padding: 23px 40px;
-    color: rgb(247, 243, 0);
-    font-family: Prototype, sans-serif;
-    font-size: 18px;
-    letter-spacing: 1.5px;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
-    transform: rotate(-4deg);
-
-    @include desktop-only {
-      font-size: 24px;
-      letter-spacing: 2px;
-    }
-  }
-
-  @include desktop-only {
-    p {
-      width: 50vw;
-      min-width: 680px;
-    }
-  }
-}
-
 .talks {
   background: top 80px center / 100% no-repeat
       url(/assets/images/talks-background-top.svg),
