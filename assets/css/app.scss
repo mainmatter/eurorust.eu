@@ -311,34 +311,43 @@ body {
 .get-involved {
   background: bottom 80px center / 180px no-repeat
     url(/assets/images/get-involved-background-bottom.svg);
-  padding: 60px 16px 280px;
+  padding: 60px 16px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   @include desktop-only {
-    background-position: top 25% right;
-    padding-bottom: 120px;
+    background-position: top 50% right;
+  }
+
+  @include mobile-only {
+    background: bottom center / 180px no-repeat
+      url(/assets/images/get-involved-background-bottom.svg);
+    padding-bottom: 200px;
   }
 
   .title {
-    margin: -20px 0 17px;
+    margin: 0 0 46px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .actions {
+  .container {
     background: center center / contain
       url(/assets/images/background-actions.png) no-repeat;
-    padding: 40px 16px;
+    height: 30rem;
 
     @include desktop-only {
+      padding-top: 10rem;
+    }
+  }
+
+  .actions {
+    @include mobile-only {
+      align-items: center;
       display: flex;
-      justify-content: space-evenly;
-      align-items: start;
-      width: 50vw;
-      min-width: 800px;
+      flex-direction: column;
     }
 
     a {
@@ -347,25 +356,32 @@ body {
       background-position: top 23px center;
       background-repeat: no-repeat;
       box-shadow: 4px 4px 0px 0px rgb(224, 32, 158);
-      padding: 64px 40px 23px;
+      padding: 56px 0px 23px;
+      height: 6.3rem;
+      width: 22.5rem;
+      max-width: 80vw;
       color: rgb(224, 32, 158);
       font-family: Prototype, sans-serif;
-      font-size: 18px;
+      font-size: 16px;
       letter-spacing: 1.5px;
       text-align: center;
       text-decoration: none;
       text-transform: uppercase;
 
       @include desktop-only {
-        font-size: 24px;
+        font-size: 18px;
         letter-spacing: 2px;
         display: inline-block;
         max-width: 360px;
+        margin-right: 10px;
       }
 
       &.twitter {
         background-image: url(/assets/images/twitter.svg);
-        margin-bottom: 40px;
+
+        @include mobile-only {
+          margin-bottom: 40px;
+        }
       }
 
       &.mailing-list {
