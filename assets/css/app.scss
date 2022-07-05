@@ -155,7 +155,7 @@ body {
   }
 }
 
-.talks {
+.our-speakers {
   background: top 80px center / 100% no-repeat
       url(/assets/images/talks-background-top.svg),
     bottom 80px center / 100% no-repeat
@@ -196,62 +196,61 @@ body {
     }
   }
 
-  p {
-    padding: 0 16px;
-    margin-bottom: 60px;
+  p.description {
+    max-width: 36%;
+    @include mobile-only {
+      max-width: 100%;
+    }
   }
 
-  .topics {
-    list-style-type: none;
-    color: rgb(2, 0, 46);
-    font-family: Prototype, sans-serif;
-    font-size: 16px;
-    letter-spacing: 0.8px;
-    text-align: justify;
-    text-transform: uppercase;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    @include desktop-only {
-      font-size: 24px;
-      letter-spacing: 2px;
-      flex-direction: row;
-      flex-wrap: wrap;
-      max-width: 50vw;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-column-gap: 40px;
-    }
+  .speakers {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* This is better for small screens, once min() is better supported */
+    /* grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); */
+    gap: 64px;
+    max-width: 75%;
+    margin-top: 100px;
 
     li {
-      transform: rotate(-4deg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    img.photo {
+      border: #f7f300 6px solid;
       display: inline-block;
-      background: rgb(255, 255, 255);
-      border: 1.5px solid rgb(255, 255, 255);
-      box-shadow: 1px 1px 0px 0px rgb(224, 32, 158);
-      padding: 2px 5px;
-      text-align: left;
-
-      @include desktop-only {
-        margin-top: 40px;
-
-        &:nth-child(2n) {
-          margin-top: 0;
-        }
+      height: 192px;
+      width: 192px;
+      border-radius: 50%;
+      margin-bottom: 24px;
+      @include mobile-only {
+        margin-bottom: 10px;
       }
     }
 
-    li + li {
-      margin-top: 40px;
-    }
-  }
-
-  @include desktop-only {
     p {
-      width: 50vw;
-      min-width: 680px;
+      color: rgb(253, 248, 244);
+      font-family: Prototype, sans-serif;
+      font-size: 18px;
+      letter-spacing: 0.9px;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      @include mobile-only {
+        margin-bottom: 10px;
+      }
+    }
+
+    .links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        margin: 0 8px;
+      }
     }
   }
 }
@@ -325,7 +324,7 @@ body {
       }
 
       &.twitter {
-        background-image: url(/assets/images/twitter.svg);
+        background-image: url(/assets/images/icons/twitter.svg);
 
         @include mobile-only {
           margin-bottom: 40px;
@@ -333,7 +332,7 @@ body {
       }
 
       &.mailing-list {
-        background-image: url(/assets/images/mailing-list.svg);
+        background-image: url(/assets/images/icons/mailing-list.svg);
       }
     }
   }
