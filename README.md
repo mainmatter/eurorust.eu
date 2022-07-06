@@ -11,8 +11,16 @@ The source code for [https://eurorust.eu](https://eurorust.eu).
 
 ## Running / Development
 
-- `bundle exec jekyll serve --watch -H 0.0.0.0 --incremental `
+- `bundle exec jekyll serve --watch -H 0.0.0.0 --incremental`
 - open [http://localhost:4000](http://localhost:4000).
+
+### Docker
+
+To run the app via Docker, use the included setup with
+
+```bash
+docker compose up
+```
 
 ## Copyright
 
