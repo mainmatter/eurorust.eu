@@ -410,6 +410,102 @@ body {
   }
 }
 
+.venue {
+  padding: 60px 16px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include min-screen-width(1024px) {
+    padding-bottom: 280px;
+  }
+
+  .location {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    width: 80%;
+    padding-top: 80px;
+    margin-bottom: 80px;
+    flex-direction: column;
+    gap: 2.2em;
+
+    &:first-child {
+      @include desktop-only {
+        background: calc(0% - 1em) 0%/10rem no-repeat
+          url(/assets/images/venue-background-top.svg);
+      }
+    }
+
+    &.dinner {
+      flex-direction: column-reverse;
+
+      @include desktop-only {
+        background: calc(50% - 4em) calc(10% - 2rem) / 10rem no-repeat
+          url(/assets/images/venue-background-bottom.svg);
+      }
+    }
+
+    @include min-screen-width(1024px) {
+      flex-direction: row;
+      gap: initial;
+      &.dinner {
+        flex-direction: row;
+      }
+    }
+
+    .location-info {
+      @include min-screen-width(1024px) {
+        width: 44%;
+      }
+      display: flex;
+      flex-direction: column;
+      gap: 2.2rem;
+
+      @include min-screen-width(1024px) {
+        &:nth-child(2) {
+          flex-direction: column;
+        }
+        align-self: start;
+      }
+
+      .title {
+        @include titlePill(white, black);
+
+        align-self: center;
+
+        @include min-screen-width(1024px) {
+          align-self: start;
+        }
+      }
+
+      p {
+        text-align: center;
+        @include min-screen-width(1024px) {
+          text-align: start;
+        }
+      }
+
+      .map {
+        height: 200px;
+      }
+    }
+
+    .hexagon {
+      @include hexagon(17rem, 20rem, 8px, white);
+
+      @include min-screen-width(500px) {
+        @include hexagon(26rem, 30rem, 8px, white);
+      }
+
+      .image {
+        object-fit: cover;
+      }
+    }
+  }
+}
+
 .generic-content {
   padding: 60px 16px;
 
