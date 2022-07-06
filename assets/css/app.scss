@@ -394,6 +394,11 @@ body {
     padding-bottom: 280px;
   }
 
+  @include desktop-only {
+    background: calc(50% - 4em) calc(50% - 2rem) / 8rem no-repeat
+      url(/assets/images/get-involved-background-bottom.svg);
+  }
+
   .location {
     display: flex;
     align-items: center;
@@ -418,7 +423,9 @@ body {
     }
 
     .location-info {
-      width: 44%;
+      @include min-screen-width(1024px) {
+        width: 44%;
+      }
       display: flex;
       flex-direction: column;
       gap: 2.2rem;
@@ -453,7 +460,11 @@ body {
     }
 
     .hexagon {
-      @include hexagon(26rem, 30rem, 8px, white);
+      @include hexagon(17rem, 20rem, 8px, white);
+
+      @include min-screen-width(500px) {
+        @include hexagon(26rem, 30rem, 8px, white);
+      }
 
       .image {
         object-fit: cover;
