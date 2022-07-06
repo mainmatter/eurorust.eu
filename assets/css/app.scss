@@ -579,10 +579,6 @@ body {
     text-shadow: none;
   }
 
-  // h1 {
-  //   margin-top: 8rem;
-  // }
-
   h2 {
     margin-bottom: 8rem;
   }
@@ -854,7 +850,7 @@ body {
     gap: 2.2em;
 
     &:first-child {
-      @include desktop-only {
+      @include desktop-and-tablet-only {
         background: calc(0% - 1em) 0%/10rem no-repeat
           url(/assets/images/venue-background-top.svg);
       }
@@ -872,6 +868,7 @@ body {
     @include min-screen-width(1024px) {
       flex-direction: row;
       gap: initial;
+
       &.dinner {
         flex-direction: row;
       }
@@ -885,7 +882,7 @@ body {
       flex-direction: column;
       gap: 2.2rem;
 
-      @include min-screen-width(1024px) {
+      @include desktop-only {
         &:nth-child(2) {
           flex-direction: column;
         }
@@ -897,14 +894,14 @@ body {
 
         align-self: center;
 
-        @include min-screen-width(1024px) {
+        @include desktop-only {
           align-self: start;
         }
       }
 
       p {
         text-align: center;
-        @include min-screen-width(1024px) {
+        @include desktop-only {
           text-align: start;
         }
       }
