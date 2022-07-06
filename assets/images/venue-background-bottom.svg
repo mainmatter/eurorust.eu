@@ -1,0 +1,35 @@
+
+<svg width="155px" height="139px" viewBox="0 0 155 139" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <polygon id="path-cvgqxqavgs-1" points="63 0 85.5166605 13 85.5166605 39 63 52 40.4833395 39 40.4833395 13"></polygon>
+        <filter x="-94.3%" y="-102.4%" width="288.5%" height="304.9%" filterUnits="objectBoundingBox" id="filter-cvgqxqavgs-2">
+            <feMorphology radius="2.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="15" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.878431373   0 0 0 0 0.125490196   0 0 0 0 0.619978061  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <polygon id="path-cvgqxqavgs-3" points="13 41 24.2583302 47.5 24.2583302 60.5 13 67 1.74166975 60.5 1.74166975 47.5"></polygon>
+        <filter x="-195.2%" y="-204.9%" width="490.4%" height="509.8%" filterUnits="objectBoundingBox" id="filter-cvgqxqavgs-4">
+            <feMorphology radius="2.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="15" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.878431373   0 0 0 0 0.125490196   0 0 0 0 0.619978061  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2022-Desktop-HD---Full" transform="translate(-557.000000, -5698.000000)">
+            <g id="conference-dinner" transform="translate(0.000000, 5672.000000)">
+                <g id="Group-6" transform="translate(591.000000, 62.000000)">
+                    <g id="Polygon">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-cvgqxqavgs-2)" xlink:href="#path-cvgqxqavgs-1"></use>
+                        <use fill="#E0209E" fill-rule="evenodd" xlink:href="#path-cvgqxqavgs-1"></use>
+                    </g>
+                    <g id="Polygon">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-cvgqxqavgs-4)" xlink:href="#path-cvgqxqavgs-3"></use>
+                        <use fill="#23BE9B" fill-rule="evenodd" xlink:href="#path-cvgqxqavgs-3"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
