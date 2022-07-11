@@ -211,107 +211,6 @@ body {
   }
 }
 
-.talks {
-  background: top 80px center / 100% no-repeat
-      url(/assets/images/talks-background-top.svg),
-    bottom 80px center / 100% no-repeat
-      url(/assets/images/talks-background-bottom.svg);
-  padding: 66vw 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  @include min-screen-width(420px) {
-    padding: 50vw 16px;
-  }
-
-  @include min-screen-width(720px) {
-    padding: 37.5vw 16px;
-  }
-
-  .title {
-    margin: -20px 0 17px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &:before {
-      content: "";
-      display: inline-block;
-      background: center center / cover url(/assets/images/yellow-diamond.svg);
-      height: 62px;
-      width: 62px;
-    }
-
-    &:after {
-      content: "";
-      display: inline-block;
-      background: center center / cover url(/assets/images/yellow-diamond.svg);
-      height: 62px;
-      width: 62px;
-    }
-  }
-
-  p {
-    padding: 0 16px;
-    margin-bottom: 60px;
-  }
-
-  .topics {
-    list-style-type: none;
-    color: rgb(2, 0, 46);
-    font-family: Prototype, sans-serif;
-    font-size: 16px;
-    letter-spacing: 0.8px;
-    text-align: justify;
-    text-transform: uppercase;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    @include desktop-and-tablet-only {
-      font-size: 24px;
-      letter-spacing: 2px;
-      flex-direction: row;
-      flex-wrap: wrap;
-      max-width: 50vw;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-column-gap: 40px;
-    }
-
-    li {
-      transform: rotate(-4deg);
-      display: inline-block;
-      background: rgb(255, 255, 255);
-      border: 1.5px solid rgb(255, 255, 255);
-      box-shadow: 1px 1px 0px 0px rgb(224, 32, 158);
-      padding: 2px 5px;
-      text-align: left;
-
-      @include desktop-and-tablet-only {
-        margin-top: 40px;
-
-        &:nth-child(2n) {
-          margin-top: 0;
-        }
-      }
-    }
-
-    li + li {
-      margin-top: 40px;
-    }
-  }
-
-  @include desktop-and-tablet-only {
-    p {
-      width: 50vw;
-      min-width: 680px;
-    }
-  }
-}
-
 .get-involved {
   background: bottom 80px center / 180px no-repeat
     url(/assets/images/get-involved-background-bottom.svg);
@@ -348,36 +247,26 @@ body {
   }
 
   .actions {
+    display: flex;
+    align-items: center;
+
     @include mobile-only {
-      align-items: center;
-      display: flex;
       flex-direction: column;
     }
 
     a {
-      display: block;
-      background: rgb(247, 243, 0);
-      background-position: top 23px center;
-      background-repeat: no-repeat;
-      box-shadow: 4px 4px 0px 0px rgb(224, 32, 158);
-      padding: 56px 0px 23px;
-      height: 6.3rem;
-      width: 22.5rem;
-      max-width: 80vw;
-      color: rgb(224, 32, 158);
-      font-family: Prototype, sans-serif;
-      font-size: 16px;
-      letter-spacing: 1.5px;
-      text-align: center;
-      text-decoration: none;
-      text-transform: uppercase;
+      @include call-to-action-button(rgb(224, 32, 158), rgb(247, 243, 0)) {
+        font-size: 16px;
+        letter-spacing: 1.5px;
+        padding: 56px 0px 23px;
+        width: 22.5rem;
+        margin-bottom: 1rem;
+        align-items: center;
 
-      @include desktop-and-tablet-only {
-        font-size: 18px;
-        letter-spacing: 2px;
-        display: inline-block;
-        max-width: 360px;
-        margin-right: 10px;
+        @include desktop-and-tablet-only {
+          font-size: 18px;
+          letter-spacing: 2px;
+        }
       }
 
       &.twitter {
@@ -407,6 +296,151 @@ body {
 
   img {
     width: 246px;
+  }
+}
+
+.schedule {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  background: top -0.5rem left 38% / 8rem no-repeat url(/assets/images/schedule-background.svg);
+
+  @include mobile-only {
+    background-position-x: 0;
+  }
+
+  .content {
+    width: 100vw;
+    color: rgb(255, 255, 255);
+    @include desktop-only {
+      background: bottom 15% right -10% / 400px no-repeat url(/assets/images/background-actions.png);
+    }
+
+    .title {
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+    }
+
+    .timetable {
+      margin: auto;
+      width: 60vw;
+
+      @include mobile-only {
+        width: 80vw;
+      }
+
+      h5,
+      h6 {
+        text-align: center;
+      }
+
+      h5 {
+        color: #f7f300;
+        font-family: Prototype;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+        letter-spacing: 1.2px;
+        margin-bottom: 1rem;
+        font-weight: bold;
+        text-shadow: 0px 0px 10px #e0209e;
+      }
+
+      h6 {
+        color: rgb(255, 255, 255);
+        font-family: "Roboto", sans-serif;
+        font-size: 1.1rem;
+        line-height: 2.5rem;
+        font-weight: bold;
+      }
+
+      a {
+        text-decoration: underline;
+        font-family: "Robot", sans-serif;
+        font-weight: bold;
+        color: #f7f300;
+      }
+
+      table {
+        margin-top: 5rem;
+        width: 100%;
+
+        thead tr {
+          th {
+            padding-bottom: 7px;
+            font-weight: bold;
+            text-align: left;
+            font-size: 1.2rem;
+            font-family: "Lato", sans-serif;
+            text-transform: uppercase;
+
+            &.time {
+              width: 8rem;
+            }
+          }
+
+          th:first-child {
+            padding-left: 0;
+            width: 30%;
+          }
+        }
+
+        tbody tr {
+          border-top: 1px dotted #23be9b;
+          min-width: 100vw;
+
+          & > td:first-child {
+            padding-right: 0px;
+            color: #f7f300;
+            text-shadow: 0px 0px 10px #e0209e;
+            font-family: Prototype;
+            font-size: 18px;
+            letter-spacing: 0.9px;
+            text-transform: uppercase;
+          }
+
+          & > td:last-child {
+            padding-right: 26px;
+            @media only screen and (min-width: 576px) {
+              padding-right: 0;
+            }
+          }
+
+          &:last-child {
+            border-bottom: 1px dotted #23be9b;
+            min-width: 100%;
+          }
+        }
+
+        td {
+          font-size: 1rem;
+          text-align: left;
+          padding: 1.5rem 0 1.5rem 0;
+          vertical-align: top;
+
+          .speaker {
+            margin-top: 0.5rem;
+            display: block;
+            font-style: italic;
+            font-family: "Roboto", sans-serif;
+          }
+        }
+      }
+
+      .full-schedule {
+        text-align: center;
+        margin-top: 4rem;
+        a {
+          @include call-to-action-button(rgb(224, 32, 158), rgb(247, 243, 0)) {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+
+    @media only screen and (min-width: 576px) {
+      .timetable {
+      }
+    }
   }
 }
 
