@@ -291,36 +291,26 @@ body {
   }
 
   .actions {
+    display: flex;
+    align-items: center;
+
     @include mobile-only {
-      align-items: center;
-      display: flex;
       flex-direction: column;
     }
 
     a {
-      display: block;
-      background: rgb(247, 243, 0);
-      background-position: top 23px center;
-      background-repeat: no-repeat;
-      box-shadow: 4px 4px 0px 0px rgb(224, 32, 158);
-      padding: 56px 0px 23px;
-      height: 6.3rem;
-      width: 22.5rem;
-      max-width: 80vw;
-      color: rgb(224, 32, 158);
-      font-family: Prototype, sans-serif;
-      font-size: 16px;
-      letter-spacing: 1.5px;
-      text-align: center;
-      text-decoration: none;
-      text-transform: uppercase;
+      @include call-to-action-button(rgb(224, 32, 158), rgb(247, 243, 0)) {
+        font-size: 16px;
+        letter-spacing: 1.5px;
+        padding: 56px 0px 23px;
+        width: 22.5rem;
+        margin-bottom: 1rem;
+        align-items: center;
 
-      @include desktop-only {
-        font-size: 18px;
-        letter-spacing: 2px;
-        display: inline-block;
-        max-width: 360px;
-        margin-right: 10px;
+        @include desktop-only {
+          font-size: 18px;
+          letter-spacing: 2px;
+        }
       }
 
       &.twitter {
@@ -350,6 +340,144 @@ body {
 
   img {
     width: 246px;
+  }
+}
+
+.schedule {
+  margin-bottom: 4rem;
+  background: top -0.5rem left 17rem / 8rem no-repeat url(/assets/images/schedule-background.svg);
+
+  @include mobile-only {
+    background-position-x: 0;
+  }
+
+  .content {
+    width: 100vw;
+    color: rgb(255, 255, 255);
+
+    .title {
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+    }
+
+    .timetable {
+      margin: auto;
+      width: 80vw;
+
+      h5,
+      h6 {
+        text-align: center;
+      }
+
+      h5 {
+        color: #f7f300;
+        font-family: Prototype;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+        letter-spacing: 1.2px;
+        margin-bottom: 1rem;
+        font-weight: bold;
+        text-shadow: 0px 0px 10px #e0209e;
+      }
+
+      h6 {
+        color: rgb(255, 255, 255);
+        font-family: Roboto-Regular;
+        font-size: 1.1rem;
+        line-height: 2.5rem;
+        font-family: "Lato", sans-serif;
+        font-weight: bold;
+      }
+
+      a {
+        text-decoration: underline;
+        font-family: "Robot-Bold", serif;
+        font-weight: bold;
+        color: #f7f300;
+      }
+
+      table {
+        margin-top: 5rem;
+        width: 100%;
+
+        thead tr {
+          th {
+            padding-bottom: 7px;
+            font-weight: bold;
+            text-align: left;
+            font-size: 1.2rem;
+            font-family: "Lato", sans-serif;
+            text-transform: uppercase;
+
+            &.time {
+              width: 8rem;
+            }
+          }
+
+          th:first-child {
+            padding-left: 0;
+            width: 35%;
+          }
+        }
+
+        tbody tr {
+          border-top: 1px dotted #23be9b;
+          min-width: 100vw;
+
+          & > td:first-child {
+            padding-right: 0px;
+            color: #f7f300;
+            text-shadow: 0px 0px 10px #e0209e;
+            font-family: Prototype;
+            font-size: 18px;
+            letter-spacing: 0.9px;
+            text-transform: uppercase;
+          }
+
+          & > td:last-child {
+            padding-right: 26px;
+            @media only screen and (min-width: 576px) {
+              padding-right: 0;
+            }
+          }
+
+          &:last-child {
+            border-bottom: 1px dotted #23be9b;
+            min-width: 100%;
+          }
+        }
+
+        td {
+          font-size: 1rem;
+          text-align: left;
+          padding: 1.5rem 0 1.5rem 0;
+          vertical-align: top;
+
+          .speaker {
+            margin-top: 0.5rem;
+            display: block;
+            font-style: italic;
+            font-family: "Roboto-MediumItalic";
+          }
+        }
+      }
+
+      .full-schedule {
+        text-align: center;
+        margin-top: 4rem;
+        a {
+          @include call-to-action-button(rgb(224, 32, 158), rgb(247, 243, 0)) {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+
+    @media only screen and (min-width: 576px) {
+      .timetable {
+      }
+    }
   }
 }
 
