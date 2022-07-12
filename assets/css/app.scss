@@ -10,7 +10,7 @@ body {
   background: top center url(/assets/images/hero-background.jpg) #010101
     no-repeat;
 
-  @include desktop-only {
+  @include desktop-and-tablet-only {
     background-size: contain;
   }
 }
@@ -21,7 +21,7 @@ body {
   flex-direction: column;
   align-items: center;
 
-  @include desktop-only {
+  @include desktop-and-tablet-only {
     padding-bottom: 44px;
     padding-top: 250px;
   }
@@ -35,7 +35,7 @@ body {
       height: auto;
       margin-bottom: 36px;
 
-      @include desktop-only {
+      @include desktop-and-tablet-only {
         width: 75vw;
         max-width: 1068px;
         margin-bottom: 80px;
@@ -55,7 +55,7 @@ body {
     text-align: center;
     font-weight: normal;
 
-    @include desktop-only {
+    @include desktop-and-tablet-only {
       font-size: 40px;
       letter-spacing: 2px;
     }
@@ -68,7 +68,7 @@ body {
       box-shadow: 1px 1px 0px 0px rgb(224, 32, 158);
       padding: 2px 5px;
 
-      @include desktop-only {
+      @include desktop-and-tablet-only {
         border: 5px solid rgb(255, 255, 255);
       }
     }
@@ -95,7 +95,7 @@ body {
     text-transform: uppercase;
     border: none;
 
-    @include desktop-only {
+    @include desktop-and-tablet-only {
       font-size: 24px;
       letter-spacing: 2px;
     }
@@ -114,7 +114,7 @@ body {
     margin-bottom: 37px;
   }
 
-  @include desktop-only {
+  @include desktop-and-tablet-only {
     background: none;
 
     .title {
@@ -147,7 +147,7 @@ body {
     height: auto;
   }
 
-  @include desktop-only {
+  @include desktop-and-tablet-only {
     p {
       width: 50vw;
       min-width: 680px;
@@ -156,7 +156,7 @@ body {
 }
 
 .speak {
-  @include desktop-only {
+  @include desktop-and-tablet-only {
     margin-top: 10rem;
   }
 
@@ -197,13 +197,13 @@ body {
     text-decoration: none;
     transform: rotate(-4deg);
 
-    @include desktop-only {
+    @include desktop-and-tablet-only {
       font-size: 24px;
       letter-spacing: 2px;
     }
   }
 
-  @include desktop-only {
+  @include desktop-and-tablet-only {
     p {
       width: 50vw;
       min-width: 680px;
@@ -269,7 +269,7 @@ body {
     flex-direction: column;
     align-items: center;
 
-    @include desktop-only {
+    @include desktop-and-tablet-only {
       font-size: 24px;
       letter-spacing: 2px;
       flex-direction: row;
@@ -290,7 +290,7 @@ body {
       padding: 2px 5px;
       text-align: left;
 
-      @include desktop-only {
+      @include desktop-and-tablet-only {
         margin-top: 40px;
 
         &:nth-child(2n) {
@@ -304,7 +304,7 @@ body {
     }
   }
 
-  @include desktop-only {
+  @include desktop-and-tablet-only {
     p {
       width: 50vw;
       min-width: 680px;
@@ -320,7 +320,7 @@ body {
   flex-direction: column;
   align-items: center;
 
-  @include desktop-only {
+  @include desktop-and-tablet-only {
     background-position: top 50% right 10%;
   }
 
@@ -342,7 +342,7 @@ body {
       url(/assets/images/background-actions.png) no-repeat;
     height: 30rem;
 
-    @include desktop-only {
+    @include desktop-and-tablet-only {
       padding-top: 10rem;
     }
   }
@@ -372,7 +372,7 @@ body {
       text-decoration: none;
       text-transform: uppercase;
 
-      @include desktop-only {
+      @include desktop-and-tablet-only {
         font-size: 18px;
         letter-spacing: 2px;
         display: inline-block;
@@ -413,7 +413,7 @@ body {
 .generic-content {
   padding: 60px 16px;
 
-  @include desktop-only {
+  @include desktop-and-tablet-only {
     width: 50vw;
     min-width: 680px;
     margin: 0 auto;
@@ -447,7 +447,7 @@ footer {
   flex-direction: column;
   align-items: center;
 
-  @include desktop-only {
+  @include desktop-and-tablet-only {
     width: 95vw;
     min-width: 760px;
     max-width: 1340px;
@@ -478,7 +478,7 @@ footer {
       }
     }
 
-    @include desktop-only {
+    @include desktop-and-tablet-only {
       display: flex;
       width: 100%;
       align-items: baseline;
@@ -534,7 +534,7 @@ footer {
             content: "•";
             margin-right: 10px;
 
-            @include desktop-only {
+            @include desktop-and-tablet-only {
               display: none;
             }
           }
@@ -550,7 +550,7 @@ footer {
         margin-top: 18px;
       }
 
-      @include desktop-only {
+      @include desktop-and-tablet-only {
         flex-direction: row;
         align-items: start;
         justify-content: start;
@@ -572,7 +572,7 @@ footer {
       margin-top: 24px;
     }
 
-    @include desktop-only {
+    @include desktop-and-tablet-only {
       flex-direction: row;
 
       .social {
