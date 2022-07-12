@@ -381,7 +381,7 @@ body {
       }
 
       &.twitter {
-        background-image: url(/assets/images/twitter.svg);
+        background-image: url(/assets/images/icons/twitter.svg);
 
         @include mobile-only {
           margin-bottom: 40px;
@@ -389,7 +389,7 @@ body {
       }
 
       &.mailing-list {
-        background-image: url(/assets/images/mailing-list.svg);
+        background-image: url(/assets/images/icons/mailing-list.svg);
       }
     }
   }
