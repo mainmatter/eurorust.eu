@@ -362,6 +362,7 @@ body {
 
       table {
         margin-top: 5rem;
+        margin-bottom: 5rem;
         width: 100%;
 
         thead tr {
@@ -436,9 +437,57 @@ body {
         }
       }
     }
+  }
 
-    @media only screen and (min-width: 576px) {
-      .timetable {
+  &.full-schedule {
+    .content .timetable table {
+      td {
+        h3,
+        p {
+          @include desktop-and-tablet-only {
+            text-align: left;
+          }
+          margin-bottom: 2rem;
+        }
+      }
+
+      tbody tr {
+        @include mobile-only {
+          display: flex;
+          flex-direction: column;
+        }
+        min-width: auto;
+
+        & > td:last-child {
+          padding-right: 0;
+        }
+      }
+
+      .talk-info {
+        gap: 2rem;
+      }
+
+      .talk-info,
+      .speaker {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        p {
+          margin: 0;
+        }
+
+        img.photo {
+          border: #f7f300 6px solid;
+          display: inline-block;
+          height: 192px;
+          width: 192px;
+          border-radius: 50%;
+          @include mobile-only {
+            margin-bottom: 10px;
+          }
+        }
       }
     }
   }
