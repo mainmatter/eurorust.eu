@@ -395,6 +395,75 @@ body {
   }
 }
 
+.sponsors {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem;
+  background: linear-gradient(
+      -180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgb(255, 255, 255) 52%,
+      rgba(255, 255, 255, 0) 100%
+    )
+    rgb(247, 243, 0);
+  border-radius: 0px;
+  box-shadow: 4px 4px 0px 0px rgb(0, 0, 0);
+
+  .title {
+    color: rgb(2, 0, 46);
+    font-family: Prototype;
+    font-size: 40px;
+    letter-spacing: 2px;
+    line-height: 72px;
+    text-transform: uppercase;
+    text-shadow: none;
+  }
+
+  h1 {
+    margin-top: 8rem;
+  }
+
+  h2 {
+    margin-bottom: 8rem;
+  }
+
+  .sponsors-grid-container {
+    display: grid;
+    gap: 4rem;
+    gap: 8rem;
+    width: 80%;
+    padding: 1rem;
+    @include mobile-only {
+      width: auto;
+    }
+  }
+
+  .sponsors-grid {
+    display: flex;
+    gap: 4rem;
+    width: 100%;
+    justify-content: center;
+    flex-flow: row wrap;
+    justify-self: center;
+
+    &.premier-partners img {
+      height: 3rem;
+    }
+
+    &.partners img {
+      height: 2rem;
+    }
+
+    &.supporters {
+      width: 80%;
+      img {
+        height: 1rem;
+      }
+    }
+  }
+}
+
 .presented-by {
   display: flex;
   flex-direction: column;
