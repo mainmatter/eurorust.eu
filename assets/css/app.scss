@@ -331,6 +331,9 @@ body {
       h5,
       h6 {
         text-align: center;
+        &.timezone {
+          margin-bottom: 2rem;
+        }
       }
 
       h5 {
