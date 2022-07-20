@@ -64,12 +64,7 @@ title: EuroRust – October 13-14, Berlin and online
     </ul>
   </section>
 
-  <section class="presented-by">
-    <h2 class="title">Presented by</h2>
-    <a href="https://simplabs.com"
-      ><img src="/assets/images/simplabs-white.svg" alt="simplabs logo"
-    /></a>
-  </section>
+  {% if site.enable_sponsors %} {% include sponsors.html %} {% endif %}
 </main>
 
 {% include footer.html %}

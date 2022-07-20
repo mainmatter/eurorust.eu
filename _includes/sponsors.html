@@ -1,0 +1,26 @@
+<section class="sponsors">
+  <h1 class="title">
+    Presented by
+    <img src="/assets/images/simplabs.png" alt="simplabs logo" />
+  </h1>
+  <h2 class="title">with the help of our sponsors</h2>
+  <div class="sponsors-grid-container">
+    <div class="sponsors-grid premier-partners">
+      {% for premier_partner in site.data.sponsors.premier_partners %}
+      <img
+        src="/assets/images/sponsors/premier_partners/{{ premier_partner }}.png"
+      />
+      {% endfor %}
+    </div>
+    <div class="sponsors-grid partners">
+      {% for partner in site.data.sponsors.partners %}
+      <img src="/assets/images/sponsors/partners/{{ partner }}.png" />
+      {% endfor %}
+    </div>
+    <div class="sponsors-grid supporters">
+      {% for supporter in site.data.sponsors.supporters %}
+      <img src="/assets/images/sponsors/supporters/{{ supporter }}.png" />
+      {% endfor %}
+    </div>
+  </div>
+</section>
