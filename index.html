@@ -68,7 +68,13 @@ title: EuroRust – October 13-14, Berlin and online
     {% if site.enable_schedule %} {% include schedule.html %} {% endif %}
   </section>
 
-  {% if site.enable_sponsors %} {% include sponsors.html %} {% endif %}
+  {% if site.enable_venue or site.enable_dinner %}
+    {% include venue.html %}
+  {% endif %}
+  
+  {% if site.enable_sponsors %}
+    {% include sponsors.html %}
+  {% endif %}
 </main>
 
 {% include footer.html %}
