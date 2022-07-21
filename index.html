@@ -48,7 +48,7 @@ title: EuroRust – October 13-14, Berlin and online
     >
   </section>
 
-  <section class="talks">
+  <section class="talks our-speakers">
     <h2 class="title">The talks</h2>
     <p>
       Our speakers and schedule will be announced soon, but expect this year to
@@ -62,6 +62,10 @@ title: EuroRust – October 13-14, Berlin and online
       <li>Embedded Systems</li>
       <li>Rust case studies</li>
     </ul>
+
+    {% if site.enable_our_speakers %} {% include our_speakers.html %} {% endif %} 
+    
+    {% if site.enable_schedule %} {% include schedule.html %} {% endif %}
   </section>
 
   {% if site.enable_sponsors %} {% include sponsors.html %} {% endif %}
