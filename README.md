@@ -7,12 +7,17 @@ The source code for [https://eurorust.eu](https://eurorust.eu).
 ## Installation
 
 - `git clone <repository-url>` this repository
-- `bundle`
+- `zola build`
+
+### Install Zola
+[Zola](https://www.getzola.org) provides pre-built binaries for MacOS, Linux and Windows.
+
+You can visit their documentation page to see [install options](https://www.getzola.org/documentation/getting-started/installation/).
 
 ## Running / Development
 
-- `bundle exec jekyll serve --watch -H 0.0.0.0 --incremental`
-- open [http://localhost:4000](http://localhost:4000).
+- `zola serve` (Rebuild and reolad on change automatically)
+- open [http://localhost:1111](http://localhost:1111).
 
 ### Docker
 
