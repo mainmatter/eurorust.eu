@@ -1,7 +1,7 @@
 +++
 [extra]
-	enable_our_speakers=false
-	enable_schedule=false
+	enable_our_speakers=true
+	enable_schedule=true
 	enable_venue=true
 	enable_dinner=false
 	enable_sponsors=false
