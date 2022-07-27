@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<main>
+  <section class="about">
+    <h2 class="title">About EuroRust</h2>
+    <p>
+      EuroRust is a 2 day conference for the European Rust community. We cover
+      all things Rust: from Rust patterns and idioms to systems programming and
+      CLI tooling, servers WASM, and embedded systems.
+    </p>
+    <p class="rustfest">EuroRust is part of the RustFest family of events.</p>
+    <img src="/images/rustfest-logo.svg" alt="RustFest logo" class="rustfest-logo" />
+  </section>
+
+  <section class="get-involved">
+    <div class="container">
+      <h2 class="title">Get involved with EuroRust!</h2>
+      <div class="actions">
+        <a href="https://twitter.com/euro_rust" class="twitter">follow us on Twitter</a>
+        <a href="http://eepurl.com/h5i1k1" class="mailing-list">sign up to the mailing list</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="speak">
+    <h2 class="title">Want to be a speaker?</h2>
+    <p>
+      We are asking the community to submit proposals for talks! Do you have
+      some experience with Rust you would like to share in front of an
+      international audience of enthusiasts and experts? We don’t require prior
+      experience on talking on stage, just come as you are!
+    </p>
+    <a href="https://www.papercall.io/eurorust-2022" class="cfp">Submit a talk!</a>
+  </section>
+
+  <section class="talks our-speakers">
+    <h2 class="title">The talks</h2>
+    <p>
+      Our speakers and schedule will be announced soon, but expect this year to
+      be focused on all things Rust, covering:
+    </p>
+    <ul class="topics">
+      <li>Rust patterns & idioms</li>
+      <li>Distributed Systems</li>
+      <li>WASM</li>
+      <li>Servers</li>
+      <li>Embedded Systems</li>
+      <li>Rust case studies</li>
+    </ul>
+
+    {% if section.extra.enable_our_speakers %}
+    {% include "sections/our_speakers.html" %}
+    {% endif %}
+
+    {% if section.extra.enable_sponsors %}
+    {% include "sections/schedule.html" %}
+    {% endif %}
+
+
+  </section>
+
+  {% if section.extra.enable_venue or section.extra.enable_dinner %}
+  {% include "sections/venue.html" %}
+  {% endif %}
+
+  {% if section.extra.enable_sponsors %}
+  {% include "sections/sponsors.html" %}
+  {% endif %}
+
+</main>
+
+{% endblock content %}
