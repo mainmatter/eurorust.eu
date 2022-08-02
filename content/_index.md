@@ -8,33 +8,14 @@
 
 [extra.sponsors]
 	premier_partners=[
-		"simplabs",
-		"harvest",
-		"honeypot"
+
 	]
 
 	partners=[
-		"clark",
-		"triptyk",
-		"crowdstrike",
-		"kloeckner-i",
-		"redpencil",
-		"peopledoc"
-		,"addepar"
-		,"precisionnutrition"
-		,"cardstack"
-		,"prototypal"
-		,"tilde"
+
 	]
 	
 	supporters=[
-		"selleo",
-		"wyeworks",
-		"linkfire",
-		"linkedin",
-		"phorest",
-		"embermap",
-		"stickermule",
-		"embercheckup"
+
 	]
 +++
