@@ -9,17 +9,23 @@
 	<div class="sponsors-grid-container">
 		<div class="sponsors-grid premier-partners">
 			{% for premier_partner in section.extra.sponsors.premier_partners %}
-			<img src="/images/sponsors/premier_partners/{{ premier_partner }}.png" />
+			<a href="{{ premier_partner.link }}" alt="{{ premier_partner.title }}">
+				<img src="/images/sponsors/premier_partners/{{ premier_partner.title }}.png" />
+			</a>
 			{% endfor %}
 		</div>
 		<div class="sponsors-grid partners">
 			{% for partner in section.extra.sponsors.partners %}
-			<img src="/images/sponsors/partners/{{ partner }}.png" />
+			<a href="{{ partner.link }}" alt="{{ partner.title }}">
+				<img src="/images/sponsors/partners/{{ partner.title }}.png" />
+			</a>
 			{% endfor %}
 		</div>
 		<div class="sponsors-grid supporters">
 			{% for supporter in section.extra.sponsors.supporters %}
-			<img src="/images/sponsors/supporters/{{ supporter }}.png" />
+			<a href="{{ supporter.link }}" alt="{{ supporter.title }}">
+				<img src="/images/sponsors/supporters/{{ supporter.title }}.png" />
+			</a>
 			{% endfor %}
 		</div>
 	</div>

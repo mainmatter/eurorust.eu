@@ -7,15 +7,11 @@
 	enable_sponsors=true
 
 [extra.sponsors]
-	premier_partners=[
-		"rust_foundation"
-	]
+	partners=[]
+	supporters=[]
 
-	partners=[
+[[extra.sponsors.premier_partners]]
+	title="rust_foundation"
+	link="https://foundation.rust-lang.org/"
 
-	]
-	
-	supporters=[
-
-	]
 +++
