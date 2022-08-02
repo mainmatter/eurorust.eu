@@ -8,14 +8,33 @@
 
 [extra.sponsors]
 	premier_partners=[
-		"rust_foundation"
+		"rust_foundation",
+		"harvest",
+		"honeypot"
 	]
 
 	partners=[
-
+		"clark",
+		"triptyk",
+		"crowdstrike",
+		"kloeckner-i",
+		"redpencil",
+		"peopledoc"
+		,"addepar"
+		,"precisionnutrition"
+		,"cardstack"
+		,"prototypal"
+		,"tilde"
 	]
 	
 	supporters=[
-
+		"selleo",
+		"wyeworks",
+		"linkfire",
+		"linkedin",
+		"phorest",
+		"embermap",
+		"stickermule",
+		"embercheckup"
 	]
 +++
