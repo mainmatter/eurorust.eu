@@ -1,81 +1,18 @@
-{% if section.extra.enable_our_speakers %}
 <h2 class="title">Our speakers</h2>
 <p class="description">
-	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua.
+	The full conference schedule will be published soon but we're excited to announce some speakers already:
 </p>
 <ul class="speakers">
+	{% for speaker in section.extra.speakers %}
 	<li>
-		<a href="/speakers/melanie-sumner" alt="melanie sumner profile"><img src="/images/speakers/melanie-sumner.jpg"
+		<a href="#our-speakers" alt="{{ speaker.name }} profile"><img src="/images/speakers/{{speaker.image}}.jpeg"
 				class="photo" /></a>
-		<a href="/speakers/melanie-sumner" alt="melanie sumner profile">Melanie Sumner</a>
+		<a href="#our-speakers" alt="{{ speaker.name }} profile">{{ speaker.name }}</a>
+		<p class="talk-title">{{ speaker.talk }}</p>
 		<div class="links">
-			<a href="https://twitter.com/melaniersumner"><img src="/images/icons/twitter.svg" /></a>
-			<a href="https://www.linkedin.com/in/melaniesumner"><img src="/images/icons/external-link.svg" /></a>
+			<a href="https://twitter.com/{{ speaker.twitter }}"><img src="/images/icons/twitter.svg" /></a>
+			<a href="{{ speaker.web }}"><img src="/images/icons/external-link.svg" /></a>
 		</div>
 	</li>
-	<li>
-		<a href="/speakers/melanie-sumner" alt="melanie sumner profile"><img src="/images/speakers/melanie-sumner.jpg"
-				class="photo" /></a>
-		<a href="/speakers/melanie-sumner" alt="melanie sumner profile">Melanie Sumner</a>
-		<div class="links">
-			<a href="https://twitter.com/melaniersumner"><img src="/images/icons/twitter.svg" /></a>
-			<a href="https://www.linkedin.com/in/melaniesumner"><img src="/images/icons/external-link.svg" /></a>
-		</div>
-	</li>
-	<li>
-		<a href="/speakers/melanie-sumner" alt="melanie sumner profile"><img src="/images/speakers/melanie-sumner.jpg"
-				class="photo" /></a>
-		<a href="/speakers/melanie-sumner" alt="melanie sumner profile">Melanie Sumner</a>
-		<div class="links">
-			<a href="https://twitter.com/melaniersumner"><img src="/images/icons/twitter.svg" /></a>
-			<a href="https://www.linkedin.com/in/melaniesumner"><img src="/images/icons/external-link.svg" /></a>
-		</div>
-	</li>
-	<li>
-		<a href="/speakers/melanie-sumner" alt="melanie sumner profile"><img src="/images/speakers/melanie-sumner.jpg"
-				class="photo" /></a>
-		<a href="/speakers/melanie-sumner" alt="melanie sumner profile">Melanie Sumner</a>
-		<div class="links">
-			<a href="https://twitter.com/melaniersumner"><img src="/images/icons/twitter.svg" /></a>
-			<a href="https://www.linkedin.com/in/melaniesumner"><img src="/images/icons/external-link.svg" /></a>
-		</div>
-	</li>
-	<li>
-		<a href="/speakers/melanie-sumner" alt="melanie sumner profile"><img src="/images/speakers/melanie-sumner.jpg"
-				class="photo" /></a>
-		<a href="/speakers/melanie-sumner" alt="melanie sumner profile">Melanie Sumner</a>
-		<div class="links">
-			<a href="https://twitter.com/melaniersumner"><img src="/images/icons/twitter.svg" /></a>
-			<a href="https://www.linkedin.com/in/melaniesumner"><img src="/images/icons/external-link.svg" /></a>
-		</div>
-	</li>
-	<li>
-		<a href="/speakers/melanie-sumner" alt="melanie sumner profile"><img src="/images/speakers/melanie-sumner.jpg"
-				class="photo" /></a>
-		<a href="/speakers/melanie-sumner" alt="melanie sumner profile">Melanie Sumner</a>
-		<div class="links">
-			<a href="https://twitter.com/melaniersumner"><img src="/images/icons/twitter.svg" /></a>
-			<a href="https://www.linkedin.com/in/melaniesumner"><img src="/images/icons/external-link.svg" /></a>
-		</div>
-	</li>
-	<li>
-		<a href="/speakers/melanie-sumner" alt="melanie sumner profile"><img src="/images/speakers/melanie-sumner.jpg"
-				class="photo" /></a>
-		<a href="/speakers/melanie-sumner" alt="melanie sumner profile">Melanie Sumner</a>
-		<div class="links">
-			<a href="https://twitter.com/melaniersumner"><img src="/images/icons/twitter.svg" /></a>
-			<a href="https://www.linkedin.com/in/melaniesumner"><img src="/images/icons/external-link.svg" /></a>
-		</div>
-	</li>
-	<li>
-		<a href="/speakers/melanie-sumner" alt="melanie sumner profile"><img src="/images/speakers/melanie-sumner.jpg"
-				class="photo" /></a>
-		<a href="/speakers/melanie-sumner" alt="melanie sumner profile">Melanie Sumner</a>
-		<div class="links">
-			<a href="https://twitter.com/melaniersumner"><img src="/images/icons/twitter.svg" /></a>
-			<a href="https://www.linkedin.com/in/melaniesumner"><img src="/images/icons/external-link.svg" /></a>
-		</div>
-	</li>
+	{% endfor %}
 </ul>
-{% endif %}

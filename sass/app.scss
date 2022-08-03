@@ -256,19 +256,11 @@ body {
   }
 
   .topics {
-    list-style-type: none;
-    color: rgb(2, 0, 46);
-    font-family: Prototype, sans-serif;
-    font-size: 16px;
-    letter-spacing: 0.8px;
-    text-align: justify;
-    text-transform: uppercase;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     @include desktop-and-tablet-only {
-      font-size: 24px;
       letter-spacing: 2px;
       flex-direction: row;
       flex-wrap: wrap;
@@ -280,32 +272,19 @@ body {
     }
 
     li {
-      transform: rotate(-4deg);
-      display: inline-block;
-      background: rgb(255, 255, 255);
-      border: 1.5px solid rgb(255, 255, 255);
-      box-shadow: 1px 1px 0px 0px rgb(224, 32, 158);
-      padding: 2px 5px;
-      text-align: left;
-
-      @include desktop-and-tablet-only {
-        margin-top: 40px;
-
-        &:nth-child(2n) {
-          margin-top: 0;
+      @include talkTitle() {
+        @include desktop-and-tablet-only {
+          margin-top: 40px;
+  
+          &:nth-child(2n) {
+            margin-top: 0;
+          }
         }
       }
     }
 
     li + li {
       margin-top: 40px;
-    }
-  }
-
-  @include desktop-and-tablet-only {
-    p {
-      width: 50vw;
-      min-width: 680px;
     }
   }
 }
@@ -357,7 +336,7 @@ body {
 
   .speakers {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     /* This is better for small screens, once min() is better supported */
     /* grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); */
     gap: 64px;
@@ -365,7 +344,6 @@ body {
     @include desktop-only {
       max-width: 1000px;
     }
-    margin-top: 100px;
 
     li {
       display: flex;
@@ -389,7 +367,7 @@ body {
     p {
       color: rgb(253, 248, 244);
       font-family: Prototype, sans-serif;
-      font-size: 18px;
+      font-size: 1.2rem;
       letter-spacing: 0.9px;
       text-align: center;
       text-transform: uppercase;
@@ -397,6 +375,19 @@ body {
       @include mobile-only {
         margin-bottom: 10px;
       }
+
+      &.speaker {
+        margin-bottom: 0;
+      }
+
+      &.talk-title {
+        margin-top: 0;
+        font-size: 1rem;
+      }
+    }
+
+    p.talk-title {
+      @include talkTitle()
     }
 
     .links {
