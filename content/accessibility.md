@@ -24,7 +24,7 @@ If you need any help, please contact us at <a href="mailto:mail@eurorust.eu">mai
 <ul>
 	<li>All our venues are accessible by wheelchair.</li>
 	<li>Clear signage to, from and through the venue will be installed.</li>
-	<li>A quiet space will be provided for people with sensory issues, or simply in need of a break.</li>
+	<li>A quiet space will be provided for people who are prone to sensory overstimulation or simply in need of a break.</li>
 	<li>Non-gendered toilets will be available.</li>
 	<li>We'll serve a wide range of food, including vegan and vegetarian options.</li>
 </ul>
