@@ -5,9 +5,8 @@
 <ul class="speakers">
 	{% for speaker in section.extra.speakers %}
 	<li>
-		<a href="#our-speakers" alt="{{ speaker.name }} profile"><img src="/images/speakers/{{speaker.image}}.jpeg"
-				class="photo" /></a>
-		<a href="#our-speakers" alt="{{ speaker.name }} profile">{{ speaker.name }}</a>
+		<img src="/images/speakers/{{speaker.image}}.jpeg" class="photo" />
+		<p>{{ speaker.name }}</p>
 		<p class="talk-title">{{ speaker.talk }}</p>
 		<div class="links">
 			<a href="https://twitter.com/{{ speaker.twitter }}"><img src="/images/icons/twitter.svg" /></a>
