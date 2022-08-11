@@ -15,6 +15,15 @@
 	link="https://foundation.rust-lang.org/"
 
 [[extra.speakers]]
+	name="Daniel Stenberg"
+	company="wolfSSL"
+	job_title="Founder and lead developer of cURL and libcurl"
+	image="daniel-stenberg"
+	talk="curl with Rust"
+	twitter="bagder"
+	web="https://daniel.haxx.se/"
+
+[[extra.speakers]]
 	name="Ryan Levick"
 	company="Azure team, Microsoft"
 	job_title="Developer Advocate"
