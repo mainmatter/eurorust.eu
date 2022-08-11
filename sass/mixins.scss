@@ -90,3 +90,27 @@
 
   @content;
 }
+
+@mixin talkTitle() {
+  font-family: Prototype, sans-serif;
+  text-align: justify;
+  text-transform: uppercase;
+  color: rgb(2, 0, 46);
+  transform: rotate(-4deg);
+  display: inline-block;
+  background: rgb(255, 255, 255);
+  border: 1.5px solid rgb(255, 255, 255);
+  box-shadow: 1px 1px 0px 0px rgb(224, 32, 158);
+  text-align: left;
+  list-style-type: none;
+  letter-spacing: 0.8px;
+  padding: 2px 5px;
+  font-size: 16px;
+  line-height: 24px;
+  @include desktop-and-tablet-only {
+      font-size: 24px;
+      letter-spacing: 2px;
+  }
+
+  @content;
+}

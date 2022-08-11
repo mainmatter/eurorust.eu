@@ -5,7 +5,7 @@
 <main>
 	<section class="speaker-profile">
 		<img class="profile-image" alt="{{ page.extra.speaker_name }} profile picture"
-			src="/images/speakers/{{ page.extra.speaker_image }}.jpg" />
+			src="/images/speakers/{{ page.extra.speaker_image }}.jpeg" />
 		<div class="speaker-details">
 			<h2>{{ page.extra.speaker_name }}</h2>
 			<h3>
@@ -13,12 +13,14 @@
 				<span class="speaker-section_company">{{ page.extra.company }}</span>
 			</h3>
 			<p>
-				{{ page.extra.bio }}
+				{{ page.extra.bio | safe }}
 			</p>
 			<div class="talk">
 				<h2>Talk</h2>
 				<h3>{{ page.extra.talk }}</h3>
+				{% if page.extra.enable_talk_details %}
 				<a href="/schedule#{{ page.extra.speaker_image }}" alt="speaker talk details">See talk details</a>
+				{% endif %}
 			</div>
 			<h3>Social Media</h3>
 			<div class="links">
