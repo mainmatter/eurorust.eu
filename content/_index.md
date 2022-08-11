@@ -4,18 +4,14 @@
 	enable_schedule=false
 	enable_venue=true
 	enable_dinner=false
-	enable_sponsors=false
+	enable_sponsors=true
 
 [extra.sponsors]
-	premier_partners=[
+	partners=[]
+	supporters=[]
 
-	]
+[[extra.sponsors.premier_partners]]
+	title="rust_foundation"
+	link="https://foundation.rust-lang.org/"
 
-	partners=[
-
-	]
-	
-	supporters=[
-
-	]
 +++
