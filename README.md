@@ -27,6 +27,11 @@ To run the app via Docker, use the included setup with
 docker compose up
 ```
 
+### Deployment
+We use Netlify to deploy the website.
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/432a733d-01fd-432f-b6c8-ca501df19245/deploy-status)](https://app.netlify.com/sites/startling-centaur-29ca5a/deploys)
+
 ## Copyright
 
 Copyright &copy; 2022 simplabs GmbH (https://simplabs.com), released under the
