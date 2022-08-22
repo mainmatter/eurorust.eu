@@ -36,4 +36,12 @@
 	twitter="ryan_levick"
 	web="https://blog.ryanlevick.com/"
 
+[[extra.speakers]]
+	name="Nell Shamrell-Harrington"
+	company="Microsoft"
+	job_title="Principal Software Engineer"
+	image="nell-shamrell"
+	twitter="nellshamrell"
+	web="http://www.nellshamrell.com/"
+
 +++
