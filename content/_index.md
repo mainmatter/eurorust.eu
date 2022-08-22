@@ -3,7 +3,7 @@
 	enable_our_speakers=true
 	enable_schedule=false
 	enable_venue=true
-	enable_dinner=false
+	enable_dinner=true
 	enable_sponsors=true
 
 [extra.sponsors]
