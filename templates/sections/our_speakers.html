@@ -7,7 +7,9 @@
 	<li>
 		<img src="/images/speakers/{{speaker.image}}.jpeg" class="photo" />
 		<p>{{ speaker.name }}</p>
+		{% if speaker.talk %}
 		<p class="talk-title">{{ speaker.talk }}</p>
+		{% endif %}
 		<div class="links">
 			<a href="https://twitter.com/{{ speaker.twitter }}"><img src="/images/icons/twitter.svg" /></a>
 			<a href="{{ speaker.web }}"><img src="/images/icons/external-link.svg" /></a>

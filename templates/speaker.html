@@ -15,6 +15,7 @@
 			<p>
 				{{ page.extra.bio | safe }}
 			</p>
+			{% if page.extra.talk %}
 			<div class="talk">
 				<h2>Talk</h2>
 				<h3>{{ page.extra.talk }}</h3>
@@ -22,6 +23,7 @@
 				<a href="/schedule#{{ page.extra.speaker_image }}" alt="speaker talk details">See talk details</a>
 				{% endif %}
 			</div>
+			{% endif %}
 			<h3>Social Media</h3>
 			<div class="links">
 				<a href="https://twitter.com/{{ page.extra.twitter }}"><img src="/images/icons/twitter.svg"></a>
