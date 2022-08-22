@@ -14,6 +14,10 @@
 	title="rust_foundation"
 	link="https://foundation.rust-lang.org/"
 
+[[extra.sponsors.premier_partners]]
+	title="ada_core"
+	link="https://www.adacore.com/"
+
 [[extra.speakers]]
 	name="Daniel Stenberg"
 	company="wolfSSL"
