@@ -41,6 +41,7 @@
 	company="Microsoft"
 	job_title="Principal Software Engineer"
 	image="nell-shamrell"
+	talk="TBA"
 	twitter="nellshamrell"
 	web="http://www.nellshamrell.com/"
 
