@@ -10,6 +10,7 @@ The source code for [https://eurorust.eu](https://eurorust.eu).
 - `zola build`
 
 ### Install Zola
+
 [Zola](https://www.getzola.org) provides pre-built binaries for MacOS, Linux and Windows.
 
 You can visit their documentation page to see [install options](https://www.getzola.org/documentation/getting-started/installation/).
@@ -28,6 +29,7 @@ docker compose up
 ```
 
 ### Deployment
+
 We use Netlify to deploy the website.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/432a733d-01fd-432f-b6c8-ca501df19245/deploy-status)](https://app.netlify.com/sites/startling-centaur-29ca5a/deploys)

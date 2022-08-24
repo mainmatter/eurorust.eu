@@ -4,8 +4,7 @@
 @import "./mixins.scss";
 
 body {
-  background: top center url(/images/hero-background.jpg) #010101
-    no-repeat;
+  background: top center url(/images/hero-background.jpg) #010101 no-repeat;
 
   @include desktop-and-tablet-only {
     background-size: contain;
@@ -101,8 +100,7 @@ body {
 }
 
 .about {
-  background: top left 32px / 120px no-repeat
-    url(/images/about-background.svg);
+  background: top left 32px / 120px no-repeat url(/images/about-background.svg);
   padding: 100px 16px 80px;
   display: flex;
   flex-direction: column;
@@ -212,8 +210,7 @@ body {
 .talks {
   background: top 80px center / 100% no-repeat
       url(/images/talks-background-top.svg),
-    bottom 80px center / 100% no-repeat
-      url(/images/talks-background-bottom.svg);
+    bottom 80px center / 100% no-repeat url(/images/talks-background-bottom.svg);
   padding: 66vw 16px;
   display: flex;
   flex-direction: column;
@@ -275,7 +272,7 @@ body {
       @include talkTitle() {
         @include desktop-and-tablet-only {
           margin-top: 40px;
-  
+
           &:nth-child(2n) {
             margin-top: 0;
           }
@@ -387,7 +384,7 @@ body {
     }
 
     p.talk-title {
-      @include talkTitle()
+      @include talkTitle();
     }
 
     .links {
@@ -495,8 +492,8 @@ body {
   }
 
   .container {
-    background: center center / contain
-      url(/images/background-actions.png) no-repeat;
+    background: center center / contain url(/images/background-actions.png)
+      no-repeat;
     height: 30rem;
 
     @include desktop-and-tablet-only {
@@ -571,11 +568,11 @@ body {
     &.premier-partners {
       font-size: 2rem;
     }
-    
+
     &.partners {
       font-size: 1.75rem;
     }
-    
+
     &.supporters {
       font-size: 1.5rem;
     }
