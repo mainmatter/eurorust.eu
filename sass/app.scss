@@ -12,7 +12,8 @@ body {
 }
 
 .tickets button,
-.talk a {
+.talk a,
+.venue a {
   background: rgb(224, 32, 158);
   box-shadow: 4px 4px 0px 0px rgb(247, 243, 0);
   padding: 20px 44px;
@@ -902,6 +903,11 @@ body {
         @include desktop-only {
           text-align: start;
         }
+      }
+
+      a {
+        width: 80%;
+        align-self: center;
       }
 
       .map {
