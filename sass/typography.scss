@@ -1,6 +1,8 @@
 @import "./mixins.scss";
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: Prototype;
   text-transform: uppercase;
   text-align: center;
@@ -43,10 +45,11 @@ p {
     line-height: 40px;
   }
 
-  & + p, & + h3 {
+  & + p,
+  & + h3 {
     margin-top: 17px;
   }
-  
+
   &.note {
     font-style: italic;
   }
@@ -66,21 +69,23 @@ ul {
     line-height: 40px;
   }
 
-  p + &, h3 + & {
+  p + &,
+  h3 + & {
     margin-top: 17px;
   }
 
-  & + p, & + h3 {
+  & + p,
+  & + h3 {
     margin-top: 17px;
   }
 }
 
 a {
-   color: rgb(255, 255, 255);
-   transition: text-decoration-color .15s ease-out;
-   text-decoration-color: rgb(224, 32, 158);
+  color: rgb(255, 255, 255);
+  transition: text-decoration-color 0.15s ease-out;
+  text-decoration-color: rgb(224, 32, 158);
 
-   &:hover {
-     text-decoration-color: rgb(247, 243, 0);
-   }
- }
+  &:hover {
+    text-decoration-color: rgb(247, 243, 0);
+  }
+}

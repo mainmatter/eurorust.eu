@@ -1,19 +1,24 @@
 <h2 class="title">Our speakers</h2>
 <p class="description">
-	The full conference schedule will be published soon but we're excited to announce some speakers already:
+  The full conference schedule will be published soon but we're excited to
+  announce some speakers already:
 </p>
 <ul class="speakers">
-	{% for speaker in section.extra.speakers %}
-	<li>
-		<img src="/images/speakers/{{speaker.image}}.jpeg" class="photo" />
-		<p>{{ speaker.name }}</p>
-		{% if speaker.talk %}
-		<p class="talk-title">{{ speaker.talk }}</p>
-		{% endif %}
-		<div class="links">
-			<a href="https://twitter.com/{{ speaker.twitter }}"><img src="/images/icons/twitter.svg" /></a>
-			<a href="{{ speaker.web }}"><img src="/images/icons/external-link.svg" /></a>
-		</div>
-	</li>
-	{% endfor %}
+  {% for speaker in section.extra.speakers %}
+  <li>
+    <img src="/images/speakers/{{speaker.image}}.jpeg" class="photo" />
+    <p>{{ speaker.name }}</p>
+    {% if speaker.talk %}
+    <p class="talk-title">{{ speaker.talk }}</p>
+    {% endif %}
+    <div class="links">
+      <a href="https://twitter.com/{{ speaker.twitter }}"
+        ><img src="/images/icons/twitter.svg"
+      /></a>
+      <a href="{{ speaker.web }}"
+        ><img src="/images/icons/external-link.svg"
+      /></a>
+    </div>
+  </li>
+  {% endfor %}
 </ul>

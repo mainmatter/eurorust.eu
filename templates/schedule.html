@@ -1,54 +1,55 @@
-{% extends "base.html" %}
-
-{% block content %}
+{% extends "base.html" %} {% block content %}
 
 <section class="schedule full-schedule">
-	<div class="content">
-		<h3 class="title">Schedule</h3>
-		{% for conference_day in page.extra.days %}
-		<div class="timetable">
-			<h5>Day {{conference_day.day}}</h5>
-			<h6>{{ conference_day.date}}</h6>
-			<h6 class="timezone">(Times are local, CEST)</h6>
-			<table class="table schedule-table">
-				<thead>
-					<tr>
-						<th class="time">Schedule</th>
-					</tr>
-				</thead>
-				<tbody>
-					{% for talk in conference_day.talks %}
-					<tr>
-						<td>
-							<div class="talk-info">
-								<h3 class="time">{{ talk.time }}</h3>
-								<div id="{{ talk.id }}" class="speaker">
-									<a href="/speakers/{{ talk.id }}" alt="speaker profile">
-										<img class="photo" src="/images/speakers/{{ talk.id }}.jpeg" />
-									</a>
-									<a href="/speakers/{{ talk.id }}" alt="speaker profile" class="name">
-										{{ talk.speaker }}
-									</a>
-								</div>
-							</div>
-						</td>
-						<td class="schedule-table--timeslot">
-							<div class="talk">
-								<h3 class="talk-title">
-									{{ talk.title }}
-								</h3>
-								<p class="talk-description">
-									{{ talk.description }}
-								</p>
-							</div>
-						</td>
-					</tr>
-					{% endfor %}
-				</tbody>
-			</table>
-		</div>
-		{% endfor %}
-	</div>
+  <div class="content">
+    <h3 class="title">Schedule</h3>
+    {% for conference_day in page.extra.days %}
+    <div class="timetable">
+      <h5>Day {{conference_day.day}}</h5>
+      <h6>{{ conference_day.date}}</h6>
+      <h6 class="timezone">(Times are local, CEST)</h6>
+      <table class="table schedule-table">
+        <thead>
+          <tr>
+            <th class="time">Schedule</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for talk in conference_day.talks %}
+          <tr>
+            <td>
+              <div class="talk-info">
+                <h3 class="time">{{ talk.time }}</h3>
+                <div id="{{ talk.id }}" class="speaker">
+                  <a href="/speakers/{{ talk.id }}" alt="speaker profile">
+                    <img
+                      class="photo"
+                      src="/images/speakers/{{ talk.id }}.jpeg"
+                    />
+                  </a>
+                  <a
+                    href="/speakers/{{ talk.id }}"
+                    alt="speaker profile"
+                    class="name"
+                  >
+                    {{ talk.speaker }}
+                  </a>
+                </div>
+              </div>
+            </td>
+            <td class="schedule-table--timeslot">
+              <div class="talk">
+                <h3 class="talk-title">{{ talk.title }}</h3>
+                <p class="talk-description">{{ talk.description }}</p>
+              </div>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% endfor %}
+  </div>
 </section>
 
 {% endblock content %}

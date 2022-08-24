@@ -1,18 +1,18 @@
-version: '3.8'
+version: "3.8"
 
 services:
   zola:
     image: ghcr.io/getzola/zola:v0.16.0
     command:
-    - serve
-    - --interface
-    - 0.0.0.0
-    - --port
-    - '1111'
-    - --base-url
-    - localhost
+      - serve
+      - --interface
+      - 0.0.0.0
+      - --port
+      - "1111"
+      - --base-url
+      - localhost
     ports:
-    - 1111:1111
+      - 1111:1111
     volumes:
-    - $PWD:/app
+      - $PWD:/app
     working_dir: /app
