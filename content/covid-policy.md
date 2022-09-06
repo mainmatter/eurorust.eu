@@ -5,7 +5,7 @@ title = "Covid Safety Policy"
 <p>While we're all excited about connecting with the Rust community face-to-face in Berlin, we can't ignore the ongoing Covid pandemic. It is important to the organizers to ensure the event is accessible and attendees remain safe during the two days of the conference. The following safety policy applies to all on-site ticket holders, sponsors, speakers, service partners, etc. It is accurate as of September 6th. If it needs to be changed, we will update everyone via email.</p>
 <h3>General</h3>
 <ul>
-<li>First and foremost, <strong>if you feel sick or have tested positive, stay at home.</stong> On-Site Tickets allow access to the virtual part of the conference as well.</li>
+<li>First and foremost, <strong>if you feel sick or have tested positive, stay at home.</strong> On-Site Tickets allow access to the virtual part of the conference as well.</li>
 <li>Please keep in mind that some of our attendees may be vulnerable and not comfortable socializing as before. Please respect all attendees' individual wishes on social distancing.</li>
 </ul>
 <h3>Main Conference</h3>
