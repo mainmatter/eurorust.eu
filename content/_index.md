@@ -5,7 +5,7 @@
 	enable_venue=true
 	enable_dinner=true
 	enable_sponsors=true
-	enable_cfp_submission=true
+	enable_cfp_submission=false
 
 [extra.sponsors]
 	partners=[]
