@@ -971,7 +971,7 @@ footer {
   flex-direction: column;
   align-items: center;
 
-  @include desktop-and-tablet-only {
+  @include wide-desktop-only {
     width: 95vw;
     min-width: 760px;
     max-width: 1340px;
@@ -1002,7 +1002,7 @@ footer {
       }
     }
 
-    @include desktop-and-tablet-only {
+    @include wide-desktop-only {
       display: flex;
       width: 100%;
       align-items: baseline;
@@ -1074,7 +1074,7 @@ footer {
         margin-top: 18px;
       }
 
-      @include desktop-and-tablet-only {
+      @include wide-desktop-only {
         flex-direction: row;
         align-items: start;
         justify-content: start;
@@ -1096,7 +1096,7 @@ footer {
       margin-top: 24px;
     }
 
-    @include desktop-and-tablet-only {
+    @include wide-desktop-only {
       flex-direction: row;
 
       .social {
