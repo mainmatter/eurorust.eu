@@ -10,6 +10,12 @@
   }
 }
 
+@mixin wide-desktop-only {
+  @include min-screen-width(1100px) {
+    @content;
+  }
+}
+
 @mixin desktop-and-tablet-only {
   @include min-screen-width(768px) {
     @content;
