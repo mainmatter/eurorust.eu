@@ -1,11 +1,13 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %}
+{% block content %}
 
 <main>
   <section class="generic-content">
     <h2 class="title">{{ page.title }}</h2>
     {% if page.extra.subtitle %}
     <h3>{{ page.extra.subtitle }}</h3>
-    {% endif %} {{ page.content | safe }}
+    {% endif %}
+    {{ page.content | safe }}
   </section>
 </main>
 
