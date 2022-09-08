@@ -36,5 +36,5 @@ We use Netlify to deploy the website.
 
 ## Copyright
 
-Copyright &copy; 2022 simplabs GmbH (https://simplabs.com), released under the
+Copyright &copy; 2022 Events Matter UG, released under the
 [Creative Commons Attribution-NonCommercial 4.0 International license](https://creativecommons.org/licenses/by-nc/4.0/).
