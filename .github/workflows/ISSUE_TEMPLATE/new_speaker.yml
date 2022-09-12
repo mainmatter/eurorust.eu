@@ -1,7 +1,7 @@
 name: New Speaker
 description: Add a new speaker to the line up
 title: "[New Speaker]: "
-labels: ["bug", "triage"]
+labels: ["speaker"]
 assignees:
   - oscard0m
   - inesilva
