@@ -37,4 +37,13 @@
 	twitter="ryan_levick"
 	web="https://blog.ryanlevick.com/"
 
+[[extra.speakers]]
+	name="Aïssata Maiga"
+	company="Ferrous Systems"
+	job_title="Embedded Software Engineer"
+	image="aissata-maiga"
+	talk="TBA"
+	twitter="ai_maiga"
+	web="https://wronganswer.blog/"
+
 +++
