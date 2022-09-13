@@ -37,4 +37,13 @@
 	twitter="ryan_levick"
 	web="https://blog.ryanlevick.com/"
 
+[[extra.speakers]]
+	name="Sasha Pourcelot"
+	company="Sasha Pourcelot"
+	job_title="Computer Science Student and Software Engineer"
+	image="sasha-pourcelot"
+	talk="Parsing Rust Code Considered Harmful"
+	twitter="scrabsha"
+	web="https://scrabsha.github.io/"
+
 +++
