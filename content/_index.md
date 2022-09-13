@@ -37,4 +37,13 @@
 	twitter="ryan_levick"
 	web="https://blog.ryanlevick.com/"
 
+[[extra.speakers]]
+	name="Henrik Alsér"
+	company="UCS Group and We Lab You Sweden"
+	job_title="Fullstack engineer"
+	image="henrik-alser"
+	talk="TBA"
+	twitter="kalkylaudio"
+	web=""
+
 +++
