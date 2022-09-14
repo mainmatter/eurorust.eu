@@ -20,6 +20,7 @@
             <td>
               <div class="talk-info">
                 <h3 class="time">{{ talk.time }}</h3>
+                {% if not talk.isBreak %}
                 <div id="{{ talk.id }}" class="speaker">
                   <a href="/speakers/{{ talk.id }}" alt="speaker profile">
                     <img class="photo" src="/images/speakers/{{ talk.id }}.jpeg" />
@@ -28,12 +29,15 @@
                     {{ talk.speaker }}
                   </a>
                 </div>
+                {% endif %}
               </div>
             </td>
             <td class="schedule-table--timeslot">
               <div class="talk">
                 <h3 class="talk-title">{{ talk.title }}</h3>
+                {% if not talk.isBreak %}
                 <p class="talk-description">{{ talk.description }}</p>
+                {% endif %}
               </div>
             </td>
           </tr>
