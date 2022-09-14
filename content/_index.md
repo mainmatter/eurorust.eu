@@ -19,6 +19,10 @@
 	title="ada_core"
 	link="https://www.adacore.com/"
 
+[[extra.sponsors.partners]]
+	title="google"
+	link="https://about.google/"
+
 [[extra.speakers]]
 	name="Daniel Stenberg"
 	company="wolfSSL"
