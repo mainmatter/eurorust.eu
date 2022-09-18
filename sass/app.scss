@@ -566,8 +566,12 @@ body {
     width: 100%;
     text-align: center;
 
+    & img {
+      height: 2rem;
+    }
+
     &.premier-partners {
-      font-size: 2rem;
+      font-size: 2.3rem;
     }
 
     &.partners {
@@ -993,7 +997,7 @@ footer {
 
       a {
         line-height: 20px;
-        height: 20px;
+        height: 28px;
       }
 
       img {
