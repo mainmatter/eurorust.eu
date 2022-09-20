@@ -20,13 +20,23 @@
             <td>
               <div class="talk-info">
                 <h3 class="time">{{ talk.time }}</h3>
-                {% if not talk.isBreak %}
+                {% if not talk.isBreak and talk.id %}
                 <div id="{{ talk.id }}" class="speaker">
                   <a href="/speakers/{{ talk.id }}" alt="speaker profile">
                     <img class="photo" src="/images/speakers/{{ talk.id }}.jpeg" />
                   </a>
                   <a href="/speakers/{{ talk.id }}" alt="speaker profile" class="name">
                     {{ talk.speaker }}
+                  </a>
+                </div>
+                {% endif %}
+                {% if not talk.isBreak and talk.id2 %}
+                <div id="{{ talk.id2 }}" class="speaker">
+                  <a href="/speakers/{{ talk.id2 }}" alt="speaker profile">
+                    <img class="photo" src="/images/speakers/{{ talk.id2 }}.jpeg" />
+                  </a>
+                  <a href="/speakers/{{ talk.id2 }}" alt="speaker profile" class="name">
+                    {{ talk.speaker2 }}
                   </a>
                 </div>
                 {% endif %}
