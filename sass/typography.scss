@@ -55,6 +55,15 @@ p {
   }
 }
 
+ul {
+  list-style: inside;
+}
+
+ol {
+  list-style: decimal;
+  margin-left: 1.2rem;
+}
+
 ul,
 ol {
   color: rgb(255, 255, 255);
@@ -63,7 +72,6 @@ ol {
   font-weight: normal;
   line-height: 32px;
   text-align: center;
-  list-style: inside;
 
   @include desktop-only {
     font-size: 18px;
