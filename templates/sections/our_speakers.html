@@ -7,7 +7,7 @@
   {% for speaker in section.extra.speakers %}
   <li>
     <img src="/images/speakers/{{speaker.image}}.jpeg" class="photo" />
-    <p>{{ speaker.name }}</p>
+    <a href="/speakers/{{speaker.image}}">{{ speaker.name }}</a>
     {% if speaker.talk %}
     <p class="talk-title">{{ speaker.talk }}</p>
     {% endif %}
