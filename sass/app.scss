@@ -12,7 +12,6 @@ body {
 }
 
 .tickets button,
-.talk a,
 .venue a {
   background: rgb(224, 32, 158);
   box-shadow: 4px 4px 0px 0px rgb(247, 243, 0);
@@ -803,6 +802,18 @@ body {
 
       .talk-info {
         gap: 2rem;
+      }
+
+      .talk-description {
+        ul,
+        ol {
+          text-align: left;
+        }
+
+        code {
+          color: #f7f300;
+          background-color: #e0209e;
+        }
       }
 
       .talk-info,

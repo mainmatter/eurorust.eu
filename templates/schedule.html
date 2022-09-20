@@ -46,7 +46,7 @@
               <div class="talk">
                 <h3 class="talk-title">{{ talk.title }}</h3>
                 {% if not talk.isBreak %}
-                <p class="talk-description">{{ talk.description }}</p>
+                <div class="talk-description">{{ talk.description | safe }}</div>
                 {% endif %}
               </div>
             </td>
