@@ -118,6 +118,7 @@
 			"time": "11:30 - 12:00",
 			"id": "colin-finck",
 			"speaker": "Colin Finck",
+			"showLink": true,
 			"title": "Don't Use This Crate, ...unless you have to - Windows Linked Lists in safe and idiomatic Rust",
 			"description":"<p>Don’t Use This Crate, …unless you have to. Linked lists are inefficient with regard to caching and memory usage, and there is almost always a better tool for the job. Nevertheless, linked lists are also used in all major operating system kernels for decades and we can’t just forget about them.</p><p>I will present nt-list, my Rust crate to work with Windows Linked Lists in a safe and idiomatic fashion. Better known as <code>LIST_ENTRY</code> and <code>SINGLE_LIST_ENTRY</code>, they are used by the Windows kernel, drivers, and components influenced by Windows (e.g. UEFI) to uniformly handle linked lists. I will go into detail about differences between textbook linked lists and the Windows variant, various misuses of Windows linked lists I’ve seen in the past, and the challenges in coming up with a safe Rust implementation that makes these mistakes impossible.</p><p></p>"
 		},
