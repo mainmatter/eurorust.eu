@@ -19,6 +19,7 @@
 		{
 			"time": "10:45 - 11:15",
 			"id": "lukas-bergdoll",
+			"showLink": true,
 			"hideImage": true,
 			"speaker": "Lukas Bergdoll",
 			"title": "Optimising stable sort in Rust and mostly failing",
