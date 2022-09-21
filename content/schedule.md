@@ -14,9 +14,11 @@ template = "schedule.html"
 	speaker="Daniel Stenberg"
 	title="curl with Rust"
 	description="<p>TBD</p>"
+	showLink=true
 [[extra.days.talks]]
 	time="10:45 - 11:15"
 	id="lukas-bergdoll"
+	hideImage=true
 	speaker="Lukas Bergdoll"
 	title="Optimising stable sort in Rust and mostly failing"
 	description="""
@@ -132,6 +134,7 @@ template = "schedule.html"
 	time="10:00 - 10:30"
 	id="ryan-levick"
 	speaker="Ryan Levick"
+	showLink=true
 	title="Rust governance"
 	description="""
 	<p>The Rust project is a globally distributed collection of hundreds of individuals who all have different reasons for dedicating various amounts of time and energy in service of making Rust a great programming language. Despite (or maybe because of) this unique constellation of motivation, perspectives, and backgrounds, complex technical and organizational decisions get made every single day. But how is all of this coordinated?</p>
@@ -196,6 +199,7 @@ template = "schedule.html"
 [[extra.days.talks]]
 	time="15:30 - 16:00"
 	id="tobias-hunger"
+	hideImage=true
 	speaker="Tobias Hunger"
 	title="Rust and C++"
 	description="""
