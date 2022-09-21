@@ -157,7 +157,7 @@
 		{
 			"time": "15:30 - 16:00",
 			"id": "tobias-hunger",
-			"hideImage": true,
+			"showLink": true,
 			"speaker": "Tobias Hunger",
 			"title": "Rust and C++",
 			"description":"<p>Rust was designed to interoperate with other languages, but this interoperability is primarily based on C data structures and functions. This is limiting for C++ applications, because instances of C++ classes do not have a standardized representation in C. How can we expose Rust interfaces to C++ and the other way around?</p><p>At Slint we develop a UI toolkit in and for Rust. We also provide quality C++ bindings and integrate with existing C++ libraries. We do have to deal with interoperability issues on a regular basis. In this presentation we are going to review the crates we use to achieve interoperability, as well as the tricks we learned using C++ libraries and how we expose a modern C++ API to our Rust code, including a first-class CMake integration.</p>"
