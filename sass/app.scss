@@ -726,6 +726,10 @@ body {
           border-top: 1px dotted #23be9b;
           min-width: 100vw;
 
+          h3 {
+            text-align: left;
+          }
+
           & > td:first-child {
             padding-right: 0px;
             color: #f7f300;
