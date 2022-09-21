@@ -130,6 +130,7 @@
 		{
 			"time": "13:00 - 13:30",
 			"id": "raphael-gomes",
+			"showLink": true,
 			"speaker": "Raphaël Gomès",
 			"title": "Oxidizing Mercurial: the good and the less good",
 			"description":"<p>Mercurial is a 17 year-old, mainly Python codebase with a bit of C. There are lots of interesting and unexpected challenges that come with rewriting parts of any such software, and some unique to version control systems: from FFI overhead, not reintroducing bugs, testing, mixed encoding issues, to less technical issues like inexperience with Rust and a lack of reviewers, our journey with Rust has not been smooth sailing.</p><p>Nevertheless, Rust helps breathe new air into the Mercurial story by being a much better fit to develop a VCS in than Python. The speed improvements alone would be enough justification but the developer ergonomics are the real main selling point on a lot of levels.</p>"
