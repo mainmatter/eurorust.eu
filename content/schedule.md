@@ -60,6 +60,7 @@ template = "schedule.html"
 	id="rafael-epplee"
 	speaker="Rafael Epplée"
 	title="End-to-end Testing Your Rust Backend"
+	showLink=true
 	description="""
 	<p>More and more, Rust is used to write web backends. It has excellent testing support out of the box, but end-to-end testing web backends can bring new challenges. Database access needs to be isolated, leading to slow test suites. The sheer amount of features to test and Rust’s low-level style can make test code large and hard to read. In the relatively young ecosystem, there are no widely known patterns or libraries to address these problems.</p>
 
