@@ -1,9 +1,10 @@
 {% extends "base.html" %} {% block content %}
+{% set data = load_data(path="data/schedule.json") %}
 
 <section class="schedule full-schedule">
   <div class="content">
     <h3 class="title">Schedule</h3>
-    {% for conference_day in page.extra.days %}
+    {% for conference_day in data.days %}
     <div class="timetable">
       <h5>Day {{conference_day.day}}</h5>
       <h6>{{ conference_day.date}}</h6>
