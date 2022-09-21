@@ -13,7 +13,7 @@ template = "schedule.html"
 	id="daniel-stenberg"
 	speaker="Daniel Stenberg"
 	title="curl with Rust"
-	description="<p>TBD</p>"
+	description="<p>TBA</p>"
 	showLink=true
 [[extra.days.talks]]
 	time="10:45 - 11:15"
@@ -122,7 +122,7 @@ template = "schedule.html"
 	"""
 [[extra.days.talks]]
 	time="17:00 - 17:30"
-	title="Panel (Details tbd)"
+	title="Panel (Details TBA)"
 	description="""
 	"""
 
