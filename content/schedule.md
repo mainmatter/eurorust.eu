@@ -46,6 +46,7 @@ template = "schedule.html"
 	id="rainer-stropek"
 	speaker="Rainer Stropek"
 	title="Building Web APIs with Rust - State of the Union"
+	showLink=true
 	description="""
 	<p>Many people primarily see Rust as a platform for doing systems programming. It is great in that area, but you can do so much more with Rust. In this talk, Rainer will focus on how to build web APIs with Rust. Modern web APIs typically run in the cloud and Rust’s ability to produce small and blazingly fast apps is perfectly suited for keeping your cloud bills small.</p>
 

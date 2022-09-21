@@ -12,9 +12,7 @@
 				{{ page.extra.job_title }} at
 				<span class="speaker-section_company">{{ page.extra.company }}</span>
 			</h3>
-			<p>
-				{{ page.extra.bio | safe }}
-			</p>
+			{{ page.extra.bio | safe }}
 			{% if page.extra.talk %}
 			<div class="talk">
 				<h2>Talk</h2>
