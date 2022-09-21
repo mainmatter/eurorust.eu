@@ -69,6 +69,7 @@
 		{
 			"time": "15:30 - 16:00",
 			"id": "francois-mockers",
+			"showLink": true,
 			"speaker": "François Mockers",
 			"title": "Bevy, WASM and the browser",
 			"description": "<p><a href=\"https://bevyengine.org/\" alt=\"Bevy, a refreshingly simple data-driven game engine built in Rust Free and Open Source Forever!\">Bevy</a> is a game engine using an Entity - Component - System architecture and a modern renderer. One of its main goal is to be cross-platform, and that means supporting WASM running in the browser!</p><p>We’ll see how Bevy uses a few crates to interact with the browser:</p><ul><li><a href=\"https://crates.io/crates/winit\" alt=\"winit crate\">winit</a> to get a canvas and all the interactions</li><li><a href=\"https://wgpu.rs/\" alt=\"wgpu official page\">wgpu</a> to render, in WebGL2 for now, and soon WebGPU</li><li><a href=\"https://crates.io/crates/web-sys\" alt=\"web-sys create\">web-sys</a> (and <a href=\"https://crates.io/crates/js-sys\" alt=\"js-sys crate\">js-sys</a>) to handle some (light) multithreading and game assets access</li></ul><p>And the limitations, around multithreading, renderer, native library usage and networking.</p><p>We’ll finish with some patterns on how to interact between a Bevy game and the JS world of the browser.</p>"
