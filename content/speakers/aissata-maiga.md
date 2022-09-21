@@ -4,7 +4,7 @@ extra:
   speaker_image: "aissata-maiga"
   job_title: "Embedded Software Engineer"
   company: "Ferreous Systems"
-  bio: "<p></p>"
+  bio: "<p>TBA</p>"
   twitter: "ai_maiga"
   web: "https://wronganswer.blog/"
 ---
