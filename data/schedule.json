@@ -173,6 +173,7 @@
 		{
 			"time": "16:15 - 16:45",
 			"id": "dmitriy-kovalenko",
+			"showLink": true,
 			"speaker": "Dmitriy Kovalenko",
 			"title": "The art of programmatic videos with rust",
 			"description":"<p>This is going to be a release of https://fframes.studio. I’ve spend mostly 2 years to actually built it and dived into the video programming a lot. Videos are actually a sequence of images properly encoded. But how you can make your own video from scratch with only the code?</p><p>Here is a list of things you will know after attending this talk:</p><ol><li>How videos works under the hood? What are codecs and how they work?</li><li>How to make a video with a code?</li><li>Why using rust? 3.1 Interop with libav aka ffmpeg 3.2 Memory efficient frame rendering 3.3 GPU support</li><li>Rendering frames problem. Browser vs Rust in svg rendering</li><li>Audio creation remixing and blending</li><li>GPU for video rendering</li></ol><p>And also you will have everything to start making videos programatically with Rust. Gonna be 🔥</p>"
