@@ -4,7 +4,7 @@ extra:
   speaker_image: "henrik-alser"
   job_title: "Embedded Software Engineer"
   company: "Mindbite"
-  bio: "<p></p>"
+  bio: "<p>TBA</p>"
   twitter: "kalkylaudio"
   web: ""
 ---
