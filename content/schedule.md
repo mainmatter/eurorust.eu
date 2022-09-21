@@ -31,6 +31,7 @@ template = "schedule.html"
 	id="pietro-albini"
 	speaker="Pietro Albini"
 	title="The life of a Rust security vulnerability"
+	showLink=true
 	description="""
 	<p>The Rust Security Response WG is responsible for receiving reports about Rust vulnerabilities, disclosing the vulnerability to the public, and assisting the Rust project teams when developing the fix. The WG is crucial for the security of the Rust ecosystem, but most of its work has to be kept private to prevent vulnerabilities from leaking.</p>
 
