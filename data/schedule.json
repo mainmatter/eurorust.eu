@@ -57,6 +57,7 @@
 			"time": "14:30 - 15:00",
 			"id": "stefan-baumgartner",
 			"speaker": "Stefan Baumgartner",
+			"showLink": true,
 			"title": "Trials, Traits, and Tribulations",
 			"description":"<p>We have all been there: The sprint’s closing, a deadline is about to arrive, and our feature needs to be shipped. Our best intentions are thrown overboard and we’re done when the compiler is happy with our work. <i>Don’t panic!</i> – But let’s throw a little <code>unwrap</code> in there, what could go wrong? Famous last words.</p><p>Rinse and repeat, and you’ll end up with winding, unwieldy functions, and kitchen sink structs, that past you wrote, but future you will have a hard time understanding. Let’s help ourselves, and all our colleagues, and refactor to something better. All we need to do is to remember some unique features of Rust, and implement the right traits for the right structs.</p><p>In this talk, we will refactor a single function with hundreds of lines of code together. We will learn to leverage expressions, define clear error boundaries, and implement standard library traits that align our code with Rust’s broader ecosystem. The result will be expressive, clear, and hopefully nothing else but beautiful.</p>"
 		},
