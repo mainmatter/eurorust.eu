@@ -140,6 +140,7 @@
 		{
 			"time": "13:45 - 14:15",
 			"id": "bogdan-kolbik",
+			"showLink": true,
 			"speaker": "Bogdan Kolbik",
 			"title": "How to use a Rust library inside the JVM application",
 			"description": "<p>We managed to rewrite the core of a big Scala application in Rust while keeping all the supporting code untouched. This talk is about how we did it, what problems we faced and how we solved them. It involves JNI, Protobuf, Trojan horses, and a reference to The Hitchhiker’s Guide to the Galaxy.</p>"
