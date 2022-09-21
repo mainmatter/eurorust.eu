@@ -165,6 +165,7 @@
 		{
 			"time": "16:15 - 16:45",
 			"id": "sasha-pourcelot",
+			"showLink": true,
 			"speaker": "Sasha Pourcelot",
 			"title": "Parsing Rust Code Considered Harmful",
 			"description": "<p>I plan to discuss the different static analysis techniques that were used in the development of cargo-breaking.</p><p>We’ll start with basic Rust code parsers and show that, although being super simple, they require complex manipulations when it comes to import resolution and dependency handling.</p><p>Then we’ll use the Rust compiler as a library and dive deep in its internal API. While this approach allows us to capture all the subtilities of a Rust crate, we’ll show that it requires just too much maintenance and involves a huge complexity, potentially slowing down the development.</p><p>Once this is done, we’ll discuss how we can leverage rustdoc in order to extract the API of the crate and get a lot of super useful metadata in the process. This approach allowed us to do great process in the cargo-breaking development, as it allowed us to get all the data we needed while not being too complex to analyze.</p><p>At the end of the talk, we’ll allow ourselves to dream of the future. We could maybe add a plugin system to rust-analyzer and perform custom analysis in real time, so the diagnosis can be provided to the user after each key press.</p>"
