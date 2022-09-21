@@ -112,6 +112,7 @@
 			"speaker": "Aïssata Maiga",
 			"id2": "henrik-alser",
 			"speaker2": "Henrik Alsér",
+			"showLink": true,
 			"title": "Embed it yourself",
 			"description":"<p>This talk will provide you the resources you need to get started with embedded development in Rust, from home.</p><p>You will be presented an overview of the current landscape of embedded Rust - the community, ecosystem, open source tooling and some demonstrations of the powerful language features that makes embedded development in Rust performant yet portable, fun and approachable to anyone.</p><p>There will be blinky lights and real hardware.</p>"
 		},
