@@ -30,13 +30,36 @@ command = "zola build --base-url $DEPLOY_PRIME_URL"
 	# route1 audit will use the top level thresholds
 	[[plugins.inputs.audits]]
 		path = "schedule"
+	[plugins.inputs.audits.thresholds]
+		best-practices = 0.92
+		seo = 0.98
+
 	[[plugins.inputs.audits]]
 		path = "code-of-conduct"
+	[plugins.inputs.audits.thresholds]
+		best-practices = 0.92
+		seo = 0.94
+
 	[[plugins.inputs.audits]]
 		path = "cancellation"
+	[plugins.inputs.audits.thresholds]
+		best-practices = 0.92
+		seo = 0.94
+
 	[[plugins.inputs.audits]]
 		path = "accessibility"
+	[plugins.inputs.audits.thresholds]
+		best-practices = 0.92
+		seo = 0.94
+
 	[[plugins.inputs.audits]]
 		path = "covid-policy"
+	[plugins.inputs.audits.thresholds]
+		best-practices = 0.92
+		seo = 0.94
+
 	[[plugins.inputs.audits]]
 		path = "imprint"
+	[plugins.inputs.audits.thresholds]
+		best-practices = 0.92
+		seo = 0.94
