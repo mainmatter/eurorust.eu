@@ -25,7 +25,7 @@ command = "zola build --base-url $DEPLOY_PRIME_URL"
 	# optional, fails build when a category is below a threshold
 	[plugins.inputs.thresholds]
 		performance = 0.99
-		accessibility = 0.96
+		accessibility = 1
 		best-practices = 1
 		seo = 0.99
 
@@ -37,7 +37,6 @@ command = "zola build --base-url $DEPLOY_PRIME_URL"
 		path = "schedule"
 	[plugins.inputs.audits.thresholds]
 		performance = 1
-		accessibility = 1
 		best-practices = 0.92
 		seo = 0.98
 
@@ -45,6 +44,5 @@ command = "zola build --base-url $DEPLOY_PRIME_URL"
 		path = "covid-policy"
 	[plugins.inputs.audits.thresholds]
 		performance = 1
-		accessibility = 1
 		best-practices = 0.92
 		seo = 0.94
