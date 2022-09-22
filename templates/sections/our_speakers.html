@@ -6,14 +6,14 @@
 <ul class="speakers">
   {% for speaker in section.extra.speakers %}
   <li>
-    <img src="/images/speakers/{{speaker.image}}.jpeg" class="photo" />
+    <img alt="{{ speaker.name }} speaker profile photo" src="/images/speakers/{{speaker.image}}.jpeg" class="photo" />
     <a href="/speakers/{{speaker.image}}">{{ speaker.name }}</a>
     {% if speaker.talk %}
     <p class="talk-title">{{ speaker.talk }}</p>
     {% endif %}
     <div class="links">
-      <a href="https://twitter.com/{{ speaker.twitter }}"><img src="/images/icons/twitter.svg" /></a>
-      <a href="{{ speaker.web }}"><img src="/images/icons/external-link.svg" /></a>
+      <a href="https://twitter.com/{{ speaker.twitter }}"><img alt="twitter icon" src="/images/icons/twitter.svg" /></a>
+      <a href="{{ speaker.web }}"><img alt="external link icon" src="/images/icons/external-link.svg" /></a>
     </div>
   </li>
   {% endfor %}

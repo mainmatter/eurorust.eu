@@ -27,7 +27,8 @@
                   {% if not talk.hideLink %}
                   <a href="/speakers/{{ talk.id }}" alt="speaker profile">
                     {% endif %}
-                    <img class="photo" src="/images/speakers/{{ talk.id }}.jpeg" />
+                    <img alt="{{ talk.speaker }} speaker profile" class="photo"
+                      src="/images/speakers/{{ talk.id }}.jpeg" />
                     {% if not talk.hideLink %}
                   </a>
                   {% endif %}
@@ -47,7 +48,8 @@
                   {% if not talk.hideLink %}
                   <a href="/speakers/{{ talk.id2 }}" alt="speaker profile">
                     {% endif %}
-                    <img class="photo" src="/images/speakers/{{ talk.id2 }}.jpeg" />
+                    <img alt="{{ talk.speaker2 }} speaker profile" class="photo"
+                      src="/images/speakers/{{ talk.id2 }}.jpeg" />
                     {% if not talk.hideLink %}
                   </a>
                   {% endif %}
