@@ -2,7 +2,7 @@
   <h1 class="title">
     Presented by
     <a href="https://mainmatter.com" alt="Mainmatter website">
-      <img src="/images/mainmatter-logo.png" alt="Mainmatter logo" />
+      <img src="/images/mainmatter-logo.png" alt="Mainmatter logo" width="222px" height="32px" />
     </a>
   </h1>
   <h2 class="title">with the help of our sponsors</h2>
@@ -13,7 +13,8 @@
       {% for premier_partner in section.extra.sponsors.premier_partners %}
       <a href="{{ premier_partner.link }}" alt="{{ premier_partner.title }}">
         <img alt="{{ premier_partner.title }} logo"
-          src="/images/sponsors/premier_partners/{{ premier_partner.title }}.png" />
+          src="/images/sponsors/premier_partners/{{ premier_partner.title }}.png" height="{{ premier_partner.height }}"
+          width="{{ premier_partner.width }}" />
       </a>
       {% endfor %}
     </div>
@@ -22,7 +23,8 @@
       <h3 class="title partners">Partners</h3>
       {% for partner in section.extra.sponsors.partners %}
       <a href="{{ partner.link }}" alt="{{ partner.title }}">
-        <img alt="{{ partner.title }} logo" src="/images/sponsors/partners/{{ partner.title }}.png" />
+        <img alt="{{ partner.title }} logo" src="/images/sponsors/partners/{{ partner.title }}.png"
+          height="{{ partner.height }}" width="{{ partner.width }}" />
       </a>
       {% endfor %}
     </div>
@@ -31,7 +33,8 @@
       <h3 class="title supporters">Supporters</h3>
       {% for supporter in section.extra.sponsors.supporters %}
       <a href="{{ supporter.link }}" alt="{{ supporter.title }}">
-        <img alt="{{ supporter.title }} logo" src="/images/sponsors/supporters/{{ supporter.title }}.png" />
+        <img alt="{{ supporter.title }} logo" src="/images/sponsors/supporters/{{ supporter.title }}.png"
+          height="{{ supporter.height }}" width="{{ supporter.width }}" />
       </a>
       {% endfor %}
     </div>
