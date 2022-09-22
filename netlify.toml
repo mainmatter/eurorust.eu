@@ -15,3 +15,33 @@ ZOLA_VERSION = "0.16.0"
 
 [context.deploy-preview]
 command = "zola build --base-url $DEPLOY_PRIME_URL"
+
+[[plugins]]
+	package = "@netlify/plugin-lighthouse"
+
+	# optional, fails build when a category is below a threshold
+	[plugins.inputs.thresholds]
+		performance = 0.99
+		accessibility = 0.94
+		best-practices = 1
+		seo = 0.99
+
+	# to audit a sub path of the build directory
+	# route1 audit will use the top level thresholds
+	[[plugins.inputs.audits]]
+		path = "/"
+	[[plugins.inputs.audits]]
+		path = "schedule"
+	[plugins.inputs.audits.thresholds]
+		performance = 1
+		accessibility = 0.97
+		best-practices = 0.92
+		seo = 0.98
+
+	[[plugins.inputs.audits]]
+		path = "covid-policy"
+	[plugins.inputs.audits.thresholds]
+		performance = 1
+		accessibility = 1
+		best-practices = 0.92
+		seo = 0.94
