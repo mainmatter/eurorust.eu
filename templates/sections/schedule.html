@@ -5,26 +5,26 @@
     <div class="timetable">
       {% for conference_day in data.days %}
       <div class="timetable">
-        <h5>Day {{conference_day.day}}</h5>
-        <h6>{{ conference_day.date}}</h6>
-        <h6 class="timezone">(Times are local, CEST)</h6>
+        <h3 class="table-title">Day {{conference_day.day}}</h3>
+        <h4 class="table-subtitle">{{ conference_day.date}}</h4>
+        <h4 class="table-subtitle timezone">(Times are local, CEST)</h4>
         <table class="table schedule-table">
           {% for talk in conference_day.talks %}
           <tr>
             <td>
               <div class="talk-info">
-                <h3 class="time">{{ talk.time }}</h3>
+                <p class="h3 table-entry time">{{ talk.time }}</p>
               </div>
             </td>
             <td class="schedule-table--timeslot">
               <div class="talk">
-                <h3 class="talk-title">{{ talk.title }}</h3>
+                <p class="h3 table-entry talk-title">{{ talk.title }}</p>
                 {% if not talk.isBreak and talk.speaker %}
                 <div id="{{ talk.id }}" class="speaker">
                   {% if not talk.hideLink %}
                   <a href="/speakers/{{ talk.id }}" alt="speaker profile">
                     {% endif %}
-                    <h4 class="name">{{ talk.speaker }}</h4>
+                    <p class="table-entry name">{{ talk.speaker }}</p>
                     {% if not talk.hideLink %}
                   </a>
                   {% endif %}
