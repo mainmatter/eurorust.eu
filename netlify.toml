@@ -15,3 +15,13 @@ ZOLA_VERSION = "0.16.0"
 
 [context.deploy-preview]
 command = "zola build --base-url $DEPLOY_PRIME_URL"
+
+[[plugins]]
+	package = "@netlify/plugin-lighthouse"
+
+	# optional, fails build when a category is below a threshold
+	[plugins.inputs.thresholds]
+		performance = 0.98
+		accessibility = 0.94
+		best-practices = 1
+		seo = 0.99
