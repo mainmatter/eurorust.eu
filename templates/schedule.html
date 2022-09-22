@@ -24,19 +24,19 @@
                 {% if not talk.isBreak and talk.speaker %}
                 <div id="{{ talk.id }}" class="speaker">
                   {% if not talk.hideImage %}
-                  {% if talk.showLink %}
+                  {% if not talk.hideLink %}
                   <a href="/speakers/{{ talk.id }}" alt="speaker profile">
                     {% endif %}
                     <img class="photo" src="/images/speakers/{{ talk.id }}.jpeg" />
-                    {% if talk.showLink %}
+                    {% if not talk.hideLink %}
                   </a>
                   {% endif %}
                   {% endif %}
-                  {% if talk.showLink %}
+                  {% if not talk.hideLink %}
                   <a href="/speakers/{{ talk.id }}" alt="speaker profile">
                     {% endif %}
                     <h4 class="name">{{ talk.speaker }}</h4>
-                    {% if talk.showLink %}
+                    {% if not talk.hideLink %}
                   </a>
                   {% endif %}
                 </div>
@@ -44,19 +44,19 @@
                 {% if not talk.isBreak and talk.speaker2 %}
                 <div id="{{ talk.id2 }}" class="speaker">
                   {% if not talk.hideImage %}
-                  {% if talk.showLink %}
+                  {% if not talk.hideLink %}
                   <a href="/speakers/{{ talk.id2 }}" alt="speaker profile">
                     {% endif %}
                     <img class="photo" src="/images/speakers/{{ talk.id2 }}.jpeg" />
-                    {% if talk.showLink %}
+                    {% if not talk.hideLink %}
                   </a>
                   {% endif %}
                   {% endif %}
-                  {% if talk.showLink %}
+                  {% if not talk.hideLink %}
                   <a href="/speakers/{{ talk.id2 }}" alt="speaker profile" class="name">
                     {% endif %}
                     <h4 class="name">{{ talk.speaker2 }}</h4>
-                    {% if talk.showLink %}
+                    {% if not talk.hideLink %}
                   </a>
                   {% endif %}
                 </div>
