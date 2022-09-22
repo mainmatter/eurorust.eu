@@ -25,3 +25,18 @@ command = "zola build --base-url $DEPLOY_PRIME_URL"
 		accessibility = 0.94
 		best-practices = 1
 		seo = 0.99
+
+	# to audit a sub path of the build directory
+	# route1 audit will use the top level thresholds
+	[[plugins.inputs.audits]]
+		path = "schedule"
+	[[plugins.inputs.audits]]
+		path = "code-of-conduct"
+	[[plugins.inputs.audits]]
+		path = "cancellation"
+	[[plugins.inputs.audits]]
+		path = "accessibility"
+	[[plugins.inputs.audits]]
+		path = "covid-policy"
+	[[plugins.inputs.audits]]
+		path = "imprint"
