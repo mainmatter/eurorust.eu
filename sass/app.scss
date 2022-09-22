@@ -13,10 +13,10 @@ body {
 
 .tickets button,
 .venue a {
-  background: rgb(224, 32, 158);
-  box-shadow: 4px 4px 0px 0px rgb(247, 243, 0);
+  background: #d01b91;
+  box-shadow: 4px 4px 0px 0px #fffb3d;
   padding: 20px 44px;
-  color: rgb(247, 243, 0);
+  color: #fffb3d;
   font-family: Prototype, sans-serif;
   font-size: 18px;
   letter-spacing: 1.5px;
@@ -80,7 +80,7 @@ body {
       text-shadow: none;
       display: inline-block;
       border: 1.5px solid rgb(255, 255, 255);
-      box-shadow: 1px 1px 0px 0px rgb(224, 32, 158);
+      box-shadow: 1px 1px 0px 0px #d01b91;
       padding: 2px 5px;
 
       @include desktop-and-tablet-only {
@@ -162,7 +162,7 @@ body {
       rgb(255, 255, 255) 52%,
       rgba(255, 255, 255, 0) 100%
     )
-    rgb(247, 243, 0);
+    #fffb3d;
   padding: 80px 16px;
   display: flex;
   flex-direction: column;
@@ -181,10 +181,10 @@ body {
   }
 
   .cfp {
-    background: rgb(224, 32, 158);
+    background: #d01b91;
     box-shadow: 4px 4px 0px 0px rgb(2, 0, 46);
     padding: 23px 40px;
-    color: rgb(247, 243, 0);
+    color: #fffb3d;
     font-family: Prototype, sans-serif;
     font-size: 18px;
     letter-spacing: 1.5px;
@@ -511,7 +511,7 @@ body {
     }
 
     a {
-      @include call-to-action-button(rgb(224, 32, 158), rgb(247, 243, 0)) {
+      @include call-to-action-button(#d01b91, #fffb3d) {
         font-size: 16px;
         letter-spacing: 1.5px;
         padding: 56px 0px 23px;
@@ -551,7 +551,7 @@ body {
       rgb(255, 255, 255) 52%,
       rgba(255, 255, 255, 0) 100%
     )
-    rgb(247, 243, 0);
+    #fffb3d;
   border-radius: 0px;
   box-shadow: 4px 4px 0px 0px rgb(0, 0, 0);
 
@@ -779,7 +779,7 @@ body {
         text-align: center;
         margin-top: 4rem;
         a {
-          @include call-to-action-button(rgb(224, 32, 158), rgb(247, 243, 0)) {
+          @include call-to-action-button(#d01b91, #fffb3d) {
             font-size: 1.5rem;
           }
         }
@@ -965,7 +965,7 @@ body {
   }
 
   .title {
-    text-shadow: 0px 0px 10px rgb(224, 32, 158);
+    text-shadow: 0px 0px 10px #d01b91;
     color: rgb(255, 255, 255);
     font-size: 32px;
     letter-spacing: 1.6px;
@@ -1043,8 +1043,8 @@ footer {
 
   .copy,
   .presented {
-    text-shadow: 0px 0px 5px rgb(224, 32, 158);
-    color: rgb(224, 32, 158);
+    text-shadow: 0px 0px 5px #d01b91;
+    color: #d01b91;
     font-family: Prototype;
     font-size: 18px;
     letter-spacing: 0.9px;
