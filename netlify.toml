@@ -39,39 +39,7 @@ command = "zola build --base-url $DEPLOY_PRIME_URL"
 		seo = 0.98
 
 	[[plugins.inputs.audits]]
-		path = "code-of-conduct"
-	[plugins.inputs.audits.thresholds]
-		performance = 1
-		accessibility = 1
-		best-practices = 0.92
-		seo = 0.94
-
-	[[plugins.inputs.audits]]
-		path = "cancellation"
-	[plugins.inputs.audits.thresholds]
-		performance = 1
-		accessibility = 1
-		best-practices = 0.92
-		seo = 0.94
-
-	[[plugins.inputs.audits]]
-		path = "accessibility"
-	[plugins.inputs.audits.thresholds]
-		performance = 1
-		accessibility = 1
-		best-practices = 0.92
-		seo = 0.94
-
-	[[plugins.inputs.audits]]
 		path = "covid-policy"
-	[plugins.inputs.audits.thresholds]
-		performance = 1
-		accessibility = 1
-		best-practices = 0.92
-		seo = 0.94
-
-	[[plugins.inputs.audits]]
-		path = "imprint"
 	[plugins.inputs.audits.thresholds]
 		performance = 1
 		accessibility = 1
