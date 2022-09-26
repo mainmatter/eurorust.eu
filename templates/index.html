@@ -28,10 +28,12 @@
 
   <section class="talks our-speakers">
     <h2 class="title">The talks</h2>
+    {% if not section.extra.enable_schedule %}
     <p>
       Our speakers and schedule will be announced soon, but expect this year to
       be focused on all things Rust, covering:
     </p>
+    {% endif %}
     <ul class="topics">
       <li>Rust patterns & idioms</li>
       <li>Distributed Systems</li>
