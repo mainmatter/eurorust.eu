@@ -41,4 +41,22 @@
 	twitter="ryan_levick"
 	web="https://blog.ryanlevick.com/"
 
+[[extra.speakers]]
+	name="Aïssata Maiga"
+	company="Ferreous Systems"
+	job_title="Embedded Software Engineer"
+	image="aissata-maiga"
+	talk="Embed it yourself"
+	twitter="ai_maiga"
+	web="https://wronganswer.blog/"
+
+[[extra.speakers]]
+	name="Sasha Pourcelot"
+	company="TrustInSoft"
+	job_title="CS Student, Software Engineer"
+	image="sasha-pourcelot"
+	talk="Parsing Rust Code Considered Harmful"
+	twitter="scrabsha"
+	web="https://scrabsha.github.io"
+
 +++
