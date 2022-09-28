@@ -24,7 +24,7 @@ command = "zola build --base-url $DEPLOY_PRIME_URL"
 
 	# optional, fails build when a category is below a threshold
 	[plugins.inputs.thresholds]
-		performance = 0.99
+		performance = 0.98
 		accessibility = 1
 		best-practices = 1
 		seo = 0.99
