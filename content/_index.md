@@ -16,8 +16,8 @@
 	link="https://foundation.rust-lang.org/"
 
 [[extra.sponsors.premier_partners]]
-	title="ada_core"
-	link="https://www.adacore.com/"
+	title="ferrous_systems"
+	link="https://ferrous-systems.com/"
 
 [[extra.sponsors.partners]]
 	title="google"
