@@ -23,6 +23,10 @@
 	title="grafbase"
 	link="https://grafbase.com/"
 
+[[extra.sponsors.supporters]]
+	title="oxidos"
+	link="https://oxidos.io"
+
 [[extra.speakers]]
 	name="Daniel Stenberg"
 	company="wolfSSL"
