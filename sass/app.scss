@@ -608,20 +608,21 @@ body {
 
     --max-height-premier-partners: 8rem;
     --max-width-premier-partners: 16rem;
-    --sponsor-size-ratio: 1.6;
+    --partner-size-ratio: 1.6;
+    --supporter-size-ratio: 1.2;
 
     --max-height-partners: calc(
-      var(--max-height-premier-partners) / var(--sponsor-size-ratio)
+      var(--max-height-premier-partners) / var(--partner-size-ratio)
     );
     --max-width-partners: calc(
-      var(--max-width-premier-partners) / var(--sponsor-size-ratio)
+      var(--max-width-premier-partners) / var(--partner-size-ratio)
     );
 
     --max-height-supporters: calc(
-      var(--max-height-partners) / var(--sponsor-size-ratio)
+      var(--max-height-partners) / var(--supporter-size-ratio)
     );
     --max-width-supporters: calc(
-      var(--max-width-partners) / var(--sponsor-size-ratio)
+      var(--max-width-partners) / var(--supporter-size-ratio)
     );
 
     img {
