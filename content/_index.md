@@ -7,10 +7,6 @@
 	enable_sponsors=true
 	enable_cfp_submission=false
 
-[extra.sponsors]
-	partners=[]
-	supporters=[]
-
 [[extra.sponsors.premier_partners]]
 	title="rust_foundation"
 	link="https://foundation.rust-lang.org/"
@@ -22,6 +18,10 @@
 [[extra.sponsors.partners]]
 	title="google"
 	link="https://about.google/"
+
+[[extra.sponsors.supporters]]
+	title="grafbase"
+	link="https://grafbase.com/"
 
 [[extra.speakers]]
 	name="Daniel Stenberg"
