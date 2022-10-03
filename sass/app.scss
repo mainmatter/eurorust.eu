@@ -607,9 +607,9 @@ body {
     align-items: center;
 
     --max-height-premier-partners: 8rem;
-    --max-width-premier-partners: 16rem;
+    --max-width-premier-partners: 18rem;
     --partner-size-ratio: 1.6;
-    --supporter-size-ratio: 1.2;
+    --supporter-size-ratio: 1.4;
 
     --max-height-partners: calc(
       var(--max-height-premier-partners) / var(--partner-size-ratio)
