@@ -12,7 +12,7 @@
 	link="https://foundation.rust-lang.org/"
 
 [[extra.sponsors.premier_partners]]
-	title="ferrous_systems"
+	title="ferrocene"
 	link="https://ferrous-systems.com/"
 
 [[extra.sponsors.partners]]
