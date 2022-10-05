@@ -15,6 +15,10 @@
 	title="ferrocene"
 	link="https://ferrous-systems.com/"
 
+[[extra.sponsors.premier_partners]]
+	title="arm"
+	link="https://www.arm.com/"
+
 [[extra.sponsors.partners]]
 	title="google"
 	link="https://about.google/"
