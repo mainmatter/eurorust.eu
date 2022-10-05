@@ -13,7 +13,7 @@
       {% for premier_partner in section.extra.sponsors.premier_partners %}
       <a href="{{ premier_partner.link }}" alt="{{ premier_partner.title }}">
         <img alt="{{ premier_partner.title }} logo"
-          src="/images/sponsors/premier_partners/{{ premier_partner.title }}.png" />
+          src="/images/sponsors/premier_partners/{{ premier_partner.title }}.{{ premier_partner.image_format }}" />
       </a>
       {% endfor %}
     </div>
@@ -22,7 +22,8 @@
       <h3 class="title partners">Partners</h3>
       {% for partner in section.extra.sponsors.partners %}
       <a href="{{ partner.link }}" alt="{{ partner.title }}">
-        <img alt="{{ partner.title }} logo" src="/images/sponsors/partners/{{ partner.title }}.png" />
+        <img alt="{{ partner.title }} logo"
+          src="/images/sponsors/partners/{{ partner.title }}.{{ partner.image_format }}" />
       </a>
       {% endfor %}
     </div>
@@ -31,7 +32,8 @@
       <h3 class="title supporters">Supporters</h3>
       {% for supporter in section.extra.sponsors.supporters %}
       <a href="{{ supporter.link }}" alt="{{ supporter.title }}">
-        <img alt="{{ supporter.title }} logo" src="/images/sponsors/supporters/{{ supporter.title }}.png" />
+        <img alt="{{ supporter.title }} logo"
+          src="/images/sponsors/supporters/{{ supporter.title }}.{{ supporter.image_format }}" />
       </a>
       {% endfor %}
     </div>
