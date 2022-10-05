@@ -20,7 +20,7 @@
 [[extra.sponsors.premier_partners]]
 	title="arm"
 	link="https://www.arm.com/"
-	image_format="png"
+	image_format="svg"
 
 [[extra.sponsors.partners]]
 	title="google"
