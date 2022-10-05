@@ -606,21 +606,14 @@ body {
     justify-self: center;
     align-items: center;
 
-    --max-height-premier-partners: 8rem;
     --max-width-premier-partners: 18rem;
     --partner-size-ratio: 1.6;
     --supporter-size-ratio: 1.4;
 
-    --max-height-partners: calc(
-      var(--max-height-premier-partners) / var(--partner-size-ratio)
-    );
     --max-width-partners: calc(
       var(--max-width-premier-partners) / var(--partner-size-ratio)
     );
 
-    --max-height-supporters: calc(
-      var(--max-height-partners) / var(--supporter-size-ratio)
-    );
     --max-width-supporters: calc(
       var(--max-width-partners) / var(--supporter-size-ratio)
     );
@@ -630,17 +623,14 @@ body {
     }
 
     &.premier-partners img {
-      max-height: var(--max-height-premier-partners);
       max-width: var(--max-width-premier-partners);
     }
 
     &.partners img {
-      max-height: var(--max-height-partners);
       max-width: var(--max-width-partners);
     }
 
     &.supporters img {
-      max-height: var(--max-height-supporters);
       max-width: var(--max-width-supporters);
     }
   }
