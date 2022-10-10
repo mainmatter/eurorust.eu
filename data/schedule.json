@@ -18,7 +18,6 @@
 		{
 			"time": "10:45 - 11:15",
 			"id": "lukas-bergdoll",
-			"hideImage": true,
 			"speaker": "Lukas Bergdoll",
 			"title": "Optimising stable sort in Rust and mostly failing",
 			"description": "<p>Inspired by a promising C sort implementation, I set to porting it to Rust. Over the course of a couple months I build a suite of tests and benchmarks that helped me develop and validate improvements to the existing slice::sort implementation in the Rust standard library. Along this journey I made all kinds of different mistakes, ranging from basic implementation errors, to subtle test methodology issues, and even more subtle issues I’m not even sure are technically bugs but yielded very surprising results. I want to share my experiences and learnings.</p><p>This talk assumes basic Rust knowledge, and will touch on speculative execution and the effects it has on Instruction Level Parallelism (ILP). It does not require knowledge about sorting algorithms. The methods I used and mistakes I’ve made also apply to other fields of programming.</p>"
