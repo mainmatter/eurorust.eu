@@ -6,7 +6,7 @@
 	enable_dinner=true
 	enable_sponsors=true
 	enable_cfp_submission=false
-	enable_ticket_sale=true
+	enable_ticket_sale=false
 
 [[extra.sponsors.premier_partners]]
 	title="rust_foundation"
