@@ -18,11 +18,13 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/favicon-192x192.png" />
   <link rel="icon" type="image/png" sizes="256x256" href="/images/icons/favicon-256x256.png" />
+  {% if section.extra.enable_ticket_sale %}
   <link rel="stylesheet" href="https://css.tito.io/v1.1" />
   <script src="https://js.tito.io/v1" async></script>
   <script>
     TitoDevelopmentMode = window.location.hostname === "localhost";
   </script>
+  {% endif %}
 </head>
 
 <body>
