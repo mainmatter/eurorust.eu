@@ -1,5 +1,5 @@
 +++
-template = "generic-content.html"
+template = "2022/generic-content.html"
 title = "Conference Code of Conduct"
 +++
 

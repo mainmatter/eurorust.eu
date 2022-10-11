@@ -22,7 +22,7 @@
                 {% if not talk.isBreak and talk.speaker %}
                 <div id="{{ talk.id }}" class="speaker">
                   {% if not talk.hideLink %}
-                  <a href="/speakers/{{ talk.id }}" alt="speaker profile">
+                  <a href="speakers/{{ talk.id }}" alt="speaker profile">
                     {% endif %}
                     <p class="table-entry name">{{ talk.speaker }}</p>
                     {% if not talk.hideLink %}
@@ -33,7 +33,7 @@
                 {% if not talk.isBreak and talk.speaker2 %}
                 <div id="{{ talk.id2 }}" class="speaker">
                   {% if not talk.hideLink %}
-                  <a href="/speakers/{{ talk.id2 }}" alt="speaker profile" class="name">
+                  <a href="speakers/{{ talk.id2 }}" alt="speaker profile" class="name">
                     {% endif %}
                     <p class="table-entry name">{{ talk.speaker2 }}</p>
                     {% if not talk.hideLink %}
@@ -49,7 +49,7 @@
       </div>
       {% endfor %}
       <div class="full-schedule">
-        <a href="/schedule"> See full schedule </a>
+        <a href="schedule"> See full schedule </a>
       </div>
     </div>
   </div>

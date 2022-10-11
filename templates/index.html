@@ -23,17 +23,14 @@
   </section>
 
   {% if section.extra.enable_cfp_submission %}
-  {% include "sections/cfp_submission.html" %}
+  {% include "2022/sections/cfp_submission.html" %}
   {% endif %}
 
   <section class="talks our-speakers">
-    <h2 class="title">The talks</h2>
-    {% if not section.extra.enable_schedule %}
     <p>
       Our speakers and schedule will be announced soon, but expect this year to
       be focused on all things Rust, covering:
     </p>
-    {% endif %}
     <ul class="topics">
       <li>Rust patterns & idioms</li>
       <li>Distributed Systems</li>
@@ -44,20 +41,24 @@
     </ul>
 
     {% if section.extra.enable_our_speakers %}
-    {% include "sections/our_speakers.html" %}
+    {% include "2022/sections/our_speakers.html" %}
     {% endif %}
 
     {% if section.extra.enable_schedule %}
-    {% include "sections/schedule.html" %}
+    {% include "2022/sections/schedule.html" %}
     {% endif %}
   </section>
 
   {% if section.extra.enable_venue or section.extra.enable_dinner %}
-  {% include "sections/venue.html" %}
+  {% include "2022/sections/venue.html" %}
   {% endif %}
 
   {% if section.extra.enable_sponsors %}
+  {% if current_path == "/2022/" %}
+  {% include "2022/sections/sponsors.html" %}
+  {% else %}
   {% include "sections/sponsors.html" %}
+  {% endif %}
   {% endif %}
 </main>
 

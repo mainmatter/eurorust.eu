@@ -1,4 +1,4 @@
-<h2 class="title">Our speakers</h2>
+<h2 class="title">{{ section.extra.section.speakers.title }}</h2>
 {% if not section.extra.enable_schedule %}
 <p class="description">
   The full conference schedule will be published soon but we're excited to
@@ -9,7 +9,8 @@
   {% for speaker in section.extra.speakers %}
   <li>
     <img alt="{{ speaker.name }} speaker profile photo" src="/images/speakers/{{speaker.image}}.jpeg" class="photo" />
-    <a href="/speakers/{{speaker.image}}">{{ speaker.name }}</a>
+    {% if not speaker.hide_link %}<a href="speakers/{{speaker.image}}">{% endif %}{{ speaker.name }}{% if not
+      speaker.hide_link %}</a>{% endif %}
     {% if speaker.talk %}
     <p class="talk-title">{{ speaker.talk }}</p>
     {% endif %}
