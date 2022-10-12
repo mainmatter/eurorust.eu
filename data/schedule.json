@@ -39,7 +39,7 @@
 			"id": "benoit-petit",
 			"speaker": "Benoit Petit",
 			"title": "Rust and sustainable IT",
-			"description":"<p>TBA</p>"
+			"description":"<p>We know Rust is performant and can be used to build software that have a low footprint on IT resources. But how much does it relate to energy consumption? It this a crucial part of architectural choices for lighter applications (some would say \"greener\")?</p><p>How Rust could be used to assess the environmental impacts of ICT?</p><p>What are the environmental impacts of ICT anyway? Is electricity the only topic?</p><p>We’ll try to give decent answers to those questions and provide leads to dig deeper in those huge yet mostly unknown topics.</p>"
 		},
 		{
 			"time": "13:45 - 14:15",
