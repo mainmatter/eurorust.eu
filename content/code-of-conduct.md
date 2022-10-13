@@ -29,9 +29,12 @@ title = "Conference Code of Conduct"
       participants to help ensuring a safe environment for everybody.
     </p>
     <h3>Need Help?</h3>
-    <p>You have our contact details in the emails we've sent.</p>
+    <p>Contact us via Email or phone:</p>
     <p>
       Mail: <a href="mailto:coc@eurorust.eu">coc@eurorust.eu</a>
+    </p>
+    <p>
+      Phone: <a href="tel:+49 231 589 62 55">+49 231 589 62 55</a>
     </p>
     <h3>The Quick Version</h3>
     <p>
