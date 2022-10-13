@@ -27,10 +27,12 @@
   {% endif %}
 
   <section class="talks our-speakers">
+    {% if not section.extra.next_year and not section.extra.enable_our_speakers and not section.extra.enable_schedule %}
     <p>
       Our speakers and schedule will be announced soon, but expect this year to
       be focused on all things Rust, covering:
     </p>
+    {% endif %}
     <ul class="topics">
       <li>Rust patterns & idioms</li>
       <li>Distributed Systems</li>
