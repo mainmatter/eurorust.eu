@@ -1,5 +1,5 @@
 +++
-template = "generic-content.html"
+template = "2022/generic-content.html"
 title = "Cancellation Policy"
 [extra]
 	subtitle = "Up to 30 days before the start of the conference"

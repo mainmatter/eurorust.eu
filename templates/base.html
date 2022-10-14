@@ -10,7 +10,12 @@
   <meta name="language" content="en" />
   <meta name="content-language" content="en" />
   <meta name="publisher" content="EuroRust" />
+  {% if section.extra.next_year %}
+  <title>EuroRust – October 12-13, TBA and online</title>
+  {% else %}
+  October 13-14, 2022
   <title>EuroRust – October 13-14, Berlin and online</title>
+  {% endif %}
   <link rel="stylesheet" href="/app.css" />
   <link rel="icon" type="image/x-icon" href="/images/icons/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png" />
@@ -30,7 +35,11 @@
 <body>
   {% include "partials/main_header.html" %}
   {% block content %} {% endblock %}
+  {% if current_path == "/2022/" %}
+  {% include "2022/partials/footer.html" %}
+  {% else %}
   {% include "partials/footer.html" %}
+  {% endif %}
 </body>
 
 </html>

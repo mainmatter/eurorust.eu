@@ -1,7 +1,8 @@
 +++
-template = "generic-content.html"
+template = "2022/generic-content.html"
 title = "Covid Safety Policy"
 +++
+
 <p>While we're all excited about connecting with the Rust community face-to-face in Berlin, we can't ignore the ongoing Covid pandemic. It is important to the organizers to ensure the event is accessible and attendees remain safe during the two days of the conference. The following safety policy applies to all on-site ticket holders, sponsors, speakers, service partners, etc. It is accurate as of September 6th. If it needs to be changed, we will update everyone via email.</p>
 <h3>General</h3>
 <ul>

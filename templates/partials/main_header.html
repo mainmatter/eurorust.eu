@@ -3,7 +3,19 @@
     <a class="link" href="/"><img src="/images/logo.svg" alt="EuroRust logo" /></a>
   </h1>
   <h2 class="facts">
-    <span class="date">October 13-14, 2022</span><span class="location">Berlin & online</span>
+    <span class="date">
+      {% if section.extra.next_year %}
+      October 12-13, 2023
+      {% else %}
+      October 13-14, 2022
+      {% endif %}
+    </span><span class="location">
+      {% if section.extra.next_year %}
+      TBA & online
+      {% else %}
+      Berlin & online
+      {% endif %}
+    </span>
   </h2>
   {% if section.extra.enable_ticket_sale %}
   <tito-button event="simplabs/eurorust-2022" class="tickets">Get your ticket!</tito-button>
