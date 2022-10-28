@@ -1,5 +1,5 @@
 +++
-template="index.html"
+template="2022/index.html"
 
 [extra]
 	enable_our_speakers=true

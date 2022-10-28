@@ -7,7 +7,6 @@
 	enable_sponsors=true
 	enable_cfp_submission=false
 	enable_ticket_sale=false
-	next_year=true
 
 [extra.section.speakers]
 	title = "Past speakers"

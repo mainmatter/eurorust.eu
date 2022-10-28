@@ -1,5 +1,5 @@
-{% extends "base.html" %} {% block content %}
-
+{% extends "2022/base.html" %} {% block content %}
+2022!
 <main>
   <section class="about">
     <h2 class="title">About EuroRust</h2>
@@ -23,6 +23,12 @@
   </section>
 
   <section class="talks our-speakers">
+    {% if not section.extra.enable_our_speakers and not section.extra.enable_schedule %}
+    <p>
+      Our speakers and schedule will be announced soon, but expect this year to
+      be focused on all things Rust, covering:
+    </p>
+    {% endif %}
     <ul class="topics">
       <li>Rust patterns & idioms</li>
       <li>Distributed Systems</li>
@@ -33,12 +39,12 @@
     </ul>
 
     {% if section.extra.enable_our_speakers %}
-    {% include "sections/our_speakers.html" %}
+    {% include "2022/sections/our_speakers.html" %}
     {% endif %}
   </section>
 
   {% if section.extra.enable_sponsors %}
-  {% include "sections/sponsors.html" %}
+  {% include "2022/sections/sponsors.html" %}
   {% endif %}
 </main>
 
