@@ -23,12 +23,6 @@
   </section>
 
   <section class="talks our-speakers">
-    {% if not section.extra.enable_our_speakers and not section.extra.enable_schedule %}
-    <p>
-      Our speakers and schedule will be announced soon, but expect this year to
-      be focused on all things Rust, covering:
-    </p>
-    {% endif %}
     <ul class="topics">
       <li>Rust patterns & idioms</li>
       <li>Distributed Systems</li>
@@ -38,21 +32,13 @@
       <li>Rust case studies</li>
     </ul>
 
-    {% if section.extra.enable_our_speakers %}
     {% include "2022/sections/our_speakers.html" %}
-    {% endif %}
-    {% if section.extra.enable_schedule %}
     {% include "2022/sections/schedule.html" %}
-    {% endif %}
   </section>
 
-  {% if section.extra.enable_venue or section.extra.enable_dinner %}
   {% include "2022/sections/venue.html" %}
-  {% endif %}
 
-  {% if section.extra.enable_sponsors %}
   {% include "2022/sections/sponsors.html" %}
-  {% endif %}
 </main>
 
 {% endblock content %}

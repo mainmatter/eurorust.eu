@@ -1,13 +1,4 @@
 +++
-[extra]
-	enable_our_speakers=true
-	enable_schedule=false
-	enable_venue=false
-	enable_dinner=false
-	enable_sponsors=true
-	enable_cfp_submission=false
-	enable_ticket_sale=false
-
 [extra.section.speakers]
 	title = "Past speakers"
 

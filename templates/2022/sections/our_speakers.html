@@ -1,10 +1,4 @@
 <h2 class="title">{{ section.extra.section.speakers.title }}</h2>
-{% if not section.extra.enable_schedule %}
-<p class="description">
-  The full conference schedule will be published soon but we're excited to
-  announce some speakers already:
-</p>
-{% endif %}
 <ul class="speakers">
   {% for speaker in section.extra.speakers %}
   <li>

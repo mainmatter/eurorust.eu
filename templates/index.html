@@ -32,14 +32,10 @@
       <li>Rust case studies</li>
     </ul>
 
-    {% if section.extra.enable_our_speakers %}
-    {% include "sections/our_speakers.html" %}
-    {% endif %}
+    {% include "sections/past-speakers.html" %}
   </section>
 
-  {% if section.extra.enable_sponsors %}
-  {% include "sections/sponsors.html" %}
-  {% endif %}
+  {% include "sections/past-sponsors.html" %}
 </main>
 
 {% endblock content %}
