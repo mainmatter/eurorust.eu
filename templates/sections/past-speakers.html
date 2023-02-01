@@ -3,8 +3,7 @@
   {% for speaker in section.extra.speakers %}
   <li>
     <img alt="{{ speaker.name }} speaker profile photo" src="/images/speakers/{{speaker.image}}.jpeg" class="photo" />
-    {% if not speaker.hide_link %}<a href="/2022/speakers/{{speaker.image}}">{% endif %}{{ speaker.name }}{% if not
-      speaker.hide_link %}</a>{% endif %}
+    {{ speaker.name }}
     {% if speaker.talk %}
     <p class="talk-title">{{ speaker.talk }}</p>
     {% endif %}

@@ -34,14 +34,14 @@ command = "zola build --base-url $DEPLOY_PRIME_URL"
 	[[plugins.inputs.audits]]
 		path = "/"
 	[[plugins.inputs.audits]]
-		path = "schedule"
+		path = "/2022/schedule"
 	[plugins.inputs.audits.thresholds]
 		performance = 1
 		best-practices = 0.92
 		seo = 0.98
 
 	[[plugins.inputs.audits]]
-		path = "covid-policy"
+		path = "/2022/covid-policy"
 	[plugins.inputs.audits.thresholds]
 		performance = 1
 		best-practices = 0.92

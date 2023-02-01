@@ -1,14 +1,5 @@
 +++
-template="index.html"
-
-[extra]
-	enable_our_speakers=true
-	enable_schedule=true
-	enable_venue=true
-	enable_dinner=true
-	enable_sponsors=true
-	enable_cfp_submission=false
-	enable_ticket_sale=false
+template="2022/index.html"
 
 [extra.section.speakers]
 	title = "Our speakers"
