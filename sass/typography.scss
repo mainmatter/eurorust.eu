@@ -2,101 +2,22 @@
 
 h1,
 h2,
-h3,
-.h3 {
-  font-family: Prototype;
+h3 {
+  font-family: Poppins-Light-Italic;
   text-transform: uppercase;
   text-align: center;
 }
 
 h2 {
-  text-shadow: 0px 0px 10px #d01b91;
-  color: rgb(255, 255, 255);
-  font-size: 32px;
-  letter-spacing: 1.6px;
+  color: var(--white);
+  text-shadow: 1px 1px 0px var(--pink), -1px -1px 0px var(--pink),
+    1px -1px 0px var(--pink), -1px 1px 0px var(--pink), 0 4px 21px var(--pink);
+  letter-spacing: 0;
+  font-size: 35px;
+  line-height: 45px;
 
-  @include desktop-only {
-    font-size: 40px;
-    letter-spacing: 2px;
-  }
-}
-
-h3,
-.h3 {
-  text-shadow: 0px 0px 10px #d01b91;
-  color: rgb(255, 255, 255);
-  font-size: 24px;
-  letter-spacing: 1.6px;
-
-  @include desktop-only {
-    font-size: 32px;
-    letter-spacing: 2px;
-  }
-}
-
-p {
-  color: rgb(255, 255, 255);
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 32px;
-  text-align: center;
-
-  @include desktop-only {
-    font-size: 18px;
-    line-height: 40px;
-  }
-
-  & + p,
-  & + h3 {
-    margin-top: 17px;
-  }
-
-  &.note {
-    font-style: italic;
-  }
-}
-
-ul {
-  list-style: inside;
-}
-
-ol {
-  list-style: decimal;
-  margin-left: 1.2rem;
-}
-
-ul,
-ol {
-  color: rgb(255, 255, 255);
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 32px;
-  text-align: center;
-
-  @include desktop-only {
-    font-size: 18px;
-    line-height: 40px;
-  }
-
-  p + &,
-  h3 + & {
-    margin-top: 17px;
-  }
-
-  & + p,
-  & + h3 {
-    margin-top: 17px;
-  }
-}
-
-a {
-  color: rgb(255, 255, 255);
-  transition: text-decoration-color 0.15s ease-out;
-  text-decoration-color: #d01b91;
-
-  &:hover {
-    text-decoration-color: #fffb3d;
+  @include desktop-and-tablet-only {
+    font-size: 55px;
+    line-height: 65px;
   }
 }
