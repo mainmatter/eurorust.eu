@@ -6,6 +6,7 @@
 
 body {
   background-color: var(--black);
+  color: var(--white);
 }
 
 .hero {
@@ -28,11 +29,50 @@ body {
 
   .logo img {
     width: 320px;
-    margin-bottom: 36px;
 
     @include desktop-and-tablet-only {
       width: 477px;
       margin-bottom: 80px;
+    }
+  }
+}
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 70px;
+  margin: 0 auto 55px;
+
+  @include desktop-and-tablet-only {
+    grid-template-columns: 0.4fr 0.3fr;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 180px;
+  }
+
+  h3 {
+    text-align: center;
+    margin: 0px 20px;
+    @include desktop-and-tablet-only {
+      text-align: right;
+    }
+  }
+
+  .transparent-box {
+    letter-spacing: 0;
+    line-height: 24px;
+    background-color: var(--white);
+    background: var(--transparent-white);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 15px 25px;
+    margin: 0px 10px;
+    @include desktop-and-tablet-only {
+      border: 1px solid var(--gray);
+      padding: 18px 22px;
+      margin: 0px;
     }
   }
 }

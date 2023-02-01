@@ -3,15 +3,15 @@
 h1,
 h2,
 h3 {
-  font-family: Poppins-Light-Italic;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-h2 {
   color: var(--white);
   text-shadow: 1px 1px 0px var(--pink), -1px -1px 0px var(--pink),
     1px -1px 0px var(--pink), -1px 1px 0px var(--pink), 0 4px 21px var(--pink);
+}
+
+h2 {
+  font-family: Poppins-Light-Italic;
+  text-transform: uppercase;
+  text-align: center;
   letter-spacing: 0;
   font-size: 35px;
   line-height: 45px;
@@ -19,5 +19,29 @@ h2 {
   @include desktop-and-tablet-only {
     font-size: 55px;
     line-height: 65px;
+  }
+}
+
+h3 {
+  font-family: Poppins-SemiBoldItalic;
+  font-size: 40px;
+  line-height: 46px;
+
+  @include desktop-and-tablet-only {
+    font-size: 55px;
+    line-height: 65px;
+  }
+
+  text-align: right;
+}
+
+p {
+  font-family: Poppins-Regular;
+  font-size: 18px;
+  line-height: 24px;
+
+  @include desktop-and-tablet-only {
+    font-size: 22px;
+    line-height: 28px;
   }
 }
