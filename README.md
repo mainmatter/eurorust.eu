@@ -11,13 +11,13 @@ The source code for [https://eurorust.eu](https://eurorust.eu).
 
 ### Install Zola
 
-[Zola](https://www.getzola.org) provides pre-built binaries for MacOS, Linux and Windows.
+[Zola](https://www.getzola.org) provides pre-built binaries for MacOS, Linux, and Windows.
 
 You can visit their documentation page to see [install options](https://www.getzola.org/documentation/getting-started/installation/).
 
 ## Running / Development
 
-- `zola serve` (Rebuild and reolad on change automatically)
+- `zola serve` (Rebuild and reload on change automatically)
 - open [http://localhost:1111](http://localhost:1111).
 
 ### Docker
