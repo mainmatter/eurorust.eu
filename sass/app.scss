@@ -37,6 +37,11 @@ body {
   }
 }
 
+.sections {
+  display: flex;
+  flex-direction: column;
+}
+
 .about {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -44,7 +49,7 @@ body {
   margin: 0 auto 55px;
 
   @include desktop-and-tablet-only {
-    grid-template-columns: 0.4fr 0.3fr;
+    grid-template-columns: 0.45fr 0.35fr;
     gap: 60px;
     align-items: center;
     justify-content: center;
@@ -73,6 +78,126 @@ body {
       border: 1px solid var(--gray);
       padding: 18px 22px;
       margin: 0px;
+    }
+  }
+}
+
+.get-involved {
+  margin: auto;
+  .actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 0.9fr));
+    gap: 30px;
+    @include desktop-and-tablet-only {
+      grid-template-columns: 1fr 0.5fr 1fr;
+      gap: 80px;
+      margin-bottom: 100px;
+    }
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .social-link {
+    color: var(--white);
+    font-size: 18px;
+    @include desktop-and-tablet-only {
+      font-size: 22px;
+    }
+    font-family: Poppins-Light;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 56px;
+
+    border: 2px solid var(--white);
+    border-radius: 41px;
+
+    &.twitter {
+      padding: 0 2.5rem;
+    }
+
+    &.mailing-list {
+      padding: 0 1.5rem;
+    }
+
+    &.twitter:before,
+    &.mailing-list:before {
+      content: "";
+      display: block;
+      width: 27px;
+      height: 23px;
+      float: left;
+      margin: 17px 20px 0 0;
+    }
+
+    &.twitter:before {
+      background: url(/images/icons/twitter-white.svg) no-repeat;
+    }
+
+    &.mailing-list:before {
+      background: url(/images/icons/email-white.svg) no-repeat;
+      margin-right: 15px;
+    }
+  }
+
+  .book-ticket {
+    @include mobile-and-tablet-only {
+      justify-self: center;
+      margin-bottom: 20px;
+      order: -1;
+    }
+  }
+
+  .neon {
+    text-transform: uppercase;
+    border: 3.2px solid var(--pink);
+    box-shadow: 0 0 26px 0 var(--pink), 0 0 26px 0 var(--pink),
+      inset 0px 0 26px 0 var(--pink), inset 0px 0 26px 0 var(--pink);
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    font-family: Poppins-Light;
+    font-size: 40px;
+    color: var(--pink);
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 35px;
+    text-shadow: 0 0 8px var(--pink);
+    display: flex;
+    align-items: center;
+  }
+
+  .rustfest-promo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 0.8fr));
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px;
+
+    @include desktop-and-tablet-only {
+      grid-template-columns: 0.32fr 0.3fr;
+      gap: 40px;
+      margin-bottom: 200px;
+    }
+
+    p {
+      font-size: 18px;
+      color: var(--pink);
+      text-align: center;
+      @include desktop-and-tablet-only {
+        font-size: 22px;
+        text-align: right;
+      }
+    }
+
+    .rustfest-link {
+      @include mobile-only {
+        justify-self: center;
+      }
+      img {
+        width: 180px;
+      }
     }
   }
 }

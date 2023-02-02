@@ -28,6 +28,12 @@
   }
 }
 
+@mixin mobile-and-tablet-only {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
 @mixin call-to-action-button($color, $bgColor) {
   display: block;
   background: #fffb3d;
