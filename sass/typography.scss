@@ -3,9 +3,7 @@
 h1,
 h2,
 h3 {
-  color: var(--white);
-  text-shadow: 1px 1px 0px var(--pink), -1px -1px 0px var(--pink),
-    1px -1px 0px var(--pink), -1px 1px 0px var(--pink), 0 4px 21px var(--pink);
+  @include neon-text-style;
 }
 
 h2 {
