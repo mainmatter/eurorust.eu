@@ -19,5 +19,13 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(/fonts/Poppins.woff) format("woff");
+  src: url(/fonts/Poppins-Light.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Poppins-Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/Poppins-Regular.woff) format("woff");
 }

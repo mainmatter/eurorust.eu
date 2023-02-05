@@ -33,6 +33,21 @@ h3 {
   text-align: right;
 }
 
+h3.pill-title {
+  font-family: Poppins-Light;
+  background: var(--black);
+  border-radius: 41px;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 40px;
+  color: var(--white);
+  text-transform: uppercase;
+  text-shadow: none;
+  font-size: 32px;
+  box-shadow: var(--pink) 2px solid;
+  @include neon-border-style();
+}
+
 p {
   font-family: Poppins-Regular;
   font-size: 18px;
