@@ -1,3 +1,5 @@
+@import "./colors.scss";
+
 @mixin min-screen-width($width) {
   @media only screen and (min-width: $width) {
     @content;
@@ -58,5 +60,42 @@
       inset 0px 0 36px 0 var(--pink), inset 0px 0 36px 0 var(--pink);
   } @else {
     box-shadow: 0 0 26px 0 var(--pink);
+  }
+}
+
+@mixin pill-button($selector, $icon, $paddingIcon, $iconHeight: 23px) {
+  #{$selector} {
+    --font-size: 18px;
+    @include desktop-and-tablet-only {
+      --font-size: 22px;
+    }
+    color: var(--white);
+    font-size: var(--font-size);
+    font-family: Poppins-Light;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 56px;
+
+    border: 2px solid var(--white);
+    border-radius: 41px;
+    padding: 0 #{$paddingIcon};
+  }
+
+  #{$selector}:before {
+    content: "";
+    display: block;
+    width: 27px;
+    height: #{$iconHeight};
+    float: left;
+    // margin-top: calc(min(var(--font-size) - 4px, #{$iconHeight} - 6px));
+    margin-right: 20px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-top: if(
+      $iconHeight > 23px,
+      calc(var(--font-size) / 2),
+      $iconHeight - 6px
+    );
+    background: url(/images/icons/#{$icon}) no-repeat;
   }
 }

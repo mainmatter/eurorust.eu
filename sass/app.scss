@@ -58,7 +58,7 @@ body {
 
   h3 {
     text-align: center;
-    margin: 0px 20px;
+    margin: 0px 12px;
     @include desktop-and-tablet-only {
       text-align: right;
     }
@@ -98,47 +98,12 @@ body {
     justify-content: center;
   }
 
-  .social-link {
-    color: var(--white);
-    font-size: 18px;
-    @include desktop-and-tablet-only {
-      font-size: 22px;
-    }
-    font-family: Poppins-Light;
-    letter-spacing: 0;
-    text-align: center;
-    line-height: 56px;
-
-    border: 2px solid var(--white);
-    border-radius: 41px;
-
-    &.twitter {
-      padding: 0 2.5rem;
-    }
-
-    &.mailing-list {
-      padding: 0 1.5rem;
-    }
-
-    &.twitter:before,
-    &.mailing-list:before {
-      content: "";
-      display: block;
-      width: 27px;
-      height: 23px;
-      float: left;
-      margin: 17px 20px 0 0;
-    }
-
-    &.twitter:before {
-      background: url(/images/icons/twitter-white.svg) no-repeat;
-    }
-
-    &.mailing-list:before {
-      background: url(/images/icons/email-white.svg) no-repeat;
-      margin-right: 15px;
-    }
-  }
+  @include pill-button(".social-link.twitter", "twitter-white.svg", "2.5rem");
+  @include pill-button(
+    ".social-link.mailing-list",
+    "email-white.svg",
+    "1.5rem"
+  );
 
   .book-ticket {
     @include mobile-and-tablet-only {
@@ -361,6 +326,87 @@ body {
           width: 21px;
         }
       }
+    }
+  }
+}
+
+.venue {
+  display: grid;
+  text-align: center;
+  align-items: center;
+  grid-template-columns: 1fr;
+  row-gap: 40px;
+  column-gap: 66px;
+  margin: 0 35px 50px;
+  @include desktop-only {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 0.5fr auto;
+    text-align: left;
+    margin: 0 auto 235px;
+    max-width: 1100px;
+  }
+
+  --min-max-venue-column: 500px;
+
+  .image-venue-container {
+    width: auto;
+
+    @include desktop-only {
+      grid-column: 1;
+      grid-row: 1 / 4;
+    }
+
+    .image-venue {
+      --neon-padding: 8px;
+      @include desktop-only {
+        --neon-padding: 14px;
+      }
+      --max-width-venue-img: calc(
+        min(100% - (var(--neon-padding) * 2), var(--min-max-venue-column))
+      );
+      border-radius: 8px;
+      border: 3.2px solid var(--pink);
+      @include neon-border-style(true);
+      padding: var(--neon-padding);
+      max-width: var(--max-width-venue-img);
+    }
+  }
+
+  h3 {
+    letter-spacing: 0;
+    text-align: center;
+    width: calc(min(20rem, calc(100% - 35px * 2)));
+    margin: auto;
+    @include desktop-only {
+      margin: 0;
+      text-align: left;
+      grid-column: 2;
+      grid-row: 1;
+    }
+  }
+
+  p {
+    text-align: left;
+    @include mobile-only {
+      margin: auto 10px;
+    }
+    max-width: var(--min-max-venue-column);
+    justify-self: center;
+    @include desktop-only {
+      justify-self: auto;
+      grid-column: 2;
+      grid-row: 2;
+    }
+  }
+
+  @include pill-button(".map-link", "location.svg", 2.5rem, 35px);
+
+  a {
+    justify-self: center;
+    @include desktop-only {
+      justify-self: left;
+      grid-column: 2;
+      grid-row: 3;
     }
   }
 }
