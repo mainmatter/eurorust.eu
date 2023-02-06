@@ -1,34 +1,13 @@
 <section class="sponsors">
-  <h1 class="title">
-    Presented by
-    <a href="https://mainmatter.com" alt="Mainmatter website">
-      <img src="/images/mainmatter-logo.svg" alt="Mainmatter logo" />
-    </a>
-  </h1>
-  <h2 class="title">with the help of our sponsors</h2>
+  <p class="thanks_message">THANKS TO OUR PAST SPONSORS</p>
+  {% if section.extra.past_sponsors %}
   <div class="sponsors-grid-container">
-    {% if section.extra.sponsors.premier_partners or section.extra.sponsors.partners or
-    section.extra.sponsors.supporters %}
-    <div class="sponsors-grid partners">
-      {% for premier_partner in section.extra.sponsors.premier_partners %}
-      <a href="{{ premier_partner.link }}" alt="{{ premier_partner.title }}">
-        <img alt="{{ premier_partner.title }} logo"
-          src="/images/sponsors/premier_partners/{{ premier_partner.title }}.{{ premier_partner.image_format }}" />
-      </a>
-      {% endfor %}
-      {% for partner in section.extra.sponsors.partners %}
-      <a href="{{ partner.link }}" alt="{{ partner.title }}">
-        <img alt="{{ partner.title }} logo"
-          src="/images/sponsors/partners/{{ partner.title }}.{{ partner.image_format }}" />
-      </a>
-      {% endfor %}
-      {% for supporter in section.extra.sponsors.supporters %}
-      <a href="{{ supporter.link }}" alt="{{ supporter.title }}">
-        <img alt="{{ supporter.title }} logo"
-          src="/images/sponsors/supporters/{{ supporter.title }}.{{ supporter.image_format }}" />
-      </a>
-      {% endfor %}
-    </div>
-    {% endif %}
+    {% for sponsor in section.extra.past_sponsors %}
+    <a href="{{ sponsor.link }}" alt="{{ sponsor.title }}">
+      <img alt="{{ sponsor.title }} logo"
+        src="/images/sponsors/past_sponsors/{{ sponsor.title }}.{{ sponsor.image_format }}" />
+    </a>
+    {% endfor %}
   </div>
+  {% endif %}
 </section>

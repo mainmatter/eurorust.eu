@@ -433,3 +433,59 @@ body {
     }
   }
 }
+
+.sponsors {
+  display: grid;
+  gap: 30px;
+  @include desktop-and-tablet-only {
+    gap: 100px;
+  }
+  align-items: center;
+  margin-bottom: 80px;
+  @include desktop-and-tablet-only {
+    margin-bottom: 180px;
+  }
+  .sponsors-grid-container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    @include desktop-and-tablet-only {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    margin: 0 40px;
+    gap: 26px;
+    @include desktop-and-tablet-only {
+      margin: 0 10%;
+      gap: 60px;
+    }
+
+    a {
+      justify-self: center;
+    }
+    a:last-child {
+      justify-self: center;
+      @include mobile-only {
+        grid-column: 1/3;
+      }
+    }
+  }
+
+  .thanks_message {
+    font-family: Poppins-Light;
+    color: var(--pink);
+    text-align: center;
+    font-size: 25px;
+    max-width: 60%;
+    margin: auto;
+    line-height: 30px;
+    @include desktop-and-tablet-only {
+      font-size: 40px;
+      line-height: 50px;
+    }
+  }
+
+  img {
+    height: 2.5vw;
+    min-height: 30px;
+  }
+}
