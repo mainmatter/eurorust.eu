@@ -489,3 +489,39 @@ body {
     min-height: 30px;
   }
 }
+
+footer {
+  margin: 0 21px 40px;
+  @include desktop-and-tablet-only {
+    margin: 0 180px 64px;
+  }
+  p,
+  a {
+    font-family: Poppins-Light;
+    font-size: 15px;
+    @include desktop-and-tablet-only {
+      font-size: 18px;
+    }
+    color: var(--white);
+  }
+  .links {
+    display: grid;
+    grid-template-columns: 1fr 75px;
+    justify-content: center;
+    align-items: center;
+    a {
+      text-decoration: none;
+    }
+  }
+  .meta,
+  .pages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    grid-template-columns: repeat(3, auto);
+  }
+
+  .social {
+    justify-self: end;
+  }
+}
