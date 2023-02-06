@@ -3,19 +3,28 @@
 {% block content %}
 
 <main class="sections">
-  {% include "sections/about.html" %}
+  <div class="block1">
+    {% include "partials/main_header.html" %}
 
-  {% include "sections/get-involved.html" %}
+    {% include "sections/about.html" %}
 
-  {% include "sections/topics.html" %}
+    {% include "sections/get-involved.html" %}
+  </div>
 
-  {% include "sections/past-speakers.html" %}
+  <div class="block2">
+    {% include "sections/topics.html" %}
 
-  {% include "sections/venue.html" %}
+    {% include "sections/past-speakers.html" %}
 
-  {% include "sections/presented-by.html" %}
+    {% include "sections/venue.html" %}
+  </div>
 
-  {% include "sections/past-sponsors.html" %}
+  <div class="block3">
+    {% include "sections/presented-by.html" %}
+
+    {% include "sections/past-sponsors.html" %}
+
+    {% include "partials/footer.html" %}
+  </div>
 </main>
-
 {% endblock content %}

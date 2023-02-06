@@ -9,6 +9,36 @@ body {
   color: var(--white);
 }
 
+.block1 {
+  @include mobile-only {
+    background: url("/images/background-1-2-mobile.png") top -250px right no-repeat;
+    background-size: 190% 70%;
+  }
+
+  background: url("/images/background-1-2.png") top right no-repeat;
+  background-size: 100% 100%;
+}
+
+.block2 {
+  @include mobile-only {
+    background: url("/images/background-3-mobile.png") top right 90px no-repeat;
+    background-size: 100% 40%;
+  }
+  background: url("/images/background-3-4.png") top right no-repeat;
+  background-size: 100% 100%;
+}
+
+.block3 {
+  @include mobile-only {
+    background: url("/images/background-5-mobile.png") bottom -160px right -160px
+      no-repeat;
+    background-size: 188% 122%;
+  }
+
+  background: url("/images/background-5.png") bottom -1100px right no-repeat;
+  background-size: 100% 200%;
+}
+
 .hero {
   padding: 28px 0px 100px;
   display: flex;
@@ -49,6 +79,7 @@ body {
   margin: 0 auto 55px;
 
   @include desktop-and-tablet-only {
+    margin: 0 15% 55px;
     grid-template-columns: 0.45fr 0.35fr;
     gap: 60px;
     align-items: center;
@@ -84,6 +115,11 @@ body {
 
 .get-involved {
   margin: auto;
+  max-width: 1100px;
+  width: 95%;
+  @include desktop-and-tablet-only {
+    width: 90%;
+  }
   .actions {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 0.9fr));
@@ -209,7 +245,7 @@ body {
   justify-content: center;
   align-self: center;
   gap: 100px;
-  margin-bottom: 80px;
+  margin: 0 auto 80px;
   width: 90%;
   max-width: 1200px;
   @include desktop-and-tablet-only {
@@ -268,7 +304,6 @@ body {
     .photo {
       align-self: center;
       justify-self: center;
-      z-index: -1;
 
       display: inline-block;
       border: 2px solid var(--white);
@@ -490,7 +525,7 @@ body {
   }
 }
 
-footer {
+.footer {
   margin: 0 21px 40px;
   @include desktop-and-tablet-only {
     margin: 0 180px 64px;
