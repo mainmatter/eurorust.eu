@@ -631,6 +631,10 @@ header {
     }
   }
 
+  a {
+    text-decoration: underline;
+  }
+
   .box-title {
     display: flex;
     justify-content: space-between;
