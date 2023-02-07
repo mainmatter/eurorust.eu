@@ -134,12 +134,8 @@ body {
     justify-content: center;
   }
 
-  @include pill-button(".social-link.twitter", "twitter-white.svg", "2.5rem");
-  @include pill-button(
-    ".social-link.mailing-list",
-    "email-white.svg",
-    "1.5rem"
-  );
+  @include pill-button(".social-link.twitter", 2.5rem, "twitter-white.svg");
+  @include pill-button(".social-link.mailing-list", 1.5rem, "email-white.svg");
 
   .book-ticket {
     @include mobile-and-tablet-only {
@@ -436,7 +432,7 @@ body {
     }
   }
 
-  @include pill-button(".map-link", "location.svg", 2.5rem, 35px);
+  @include pill-button(".map-link", 2.5rem, "location.svg", 35px);
 
   a {
     justify-self: center;
@@ -602,11 +598,44 @@ header {
   }
   max-width: 90%;
 
+  ul {
+    list-style: disc;
+    margin-left: 30px;
+  }
+
+  .group-download {
+    margin-top: 80px;
+    @include desktop-and-tablet-only {
+      margin-top: 140px;
+    }
+  }
+
   h3 {
     text-align: left;
     margin-bottom: 20px;
     @include desktop-and-tablet-only {
       margin-bottom: 40px;
+    }
+  }
+
+  @include pill-button(".download", 3.5rem) {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  h5 {
+    text-align: center;
+    margin: 0 15px 80px;
+    @include desktop-and-tablet-only {
+      margin: 0 50px 180px;
+    }
+  }
+
+  .box-title {
+    display: flex;
+    justify-content: space-between;
+    h3 {
+      flex-basis: 75%;
     }
   }
 

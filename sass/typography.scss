@@ -31,6 +31,30 @@ h3 {
   }
 }
 
+h4,
+h5 {
+  font-family: Poppins-Light-Italic;
+  font-size: 35px;
+  line-height: 45px;
+
+  @include desktop-and-tablet-only {
+    font-size: 55px;
+    line-height: 65px;
+  }
+}
+
+h5 {
+  font-family: Poppins-Light;
+  color: var(--white);
+  font-size: 25px;
+  line-height: 30px;
+  @include desktop-and-tablet-only {
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: 55px;
+  }
+}
+
 h3.pill-title {
   font-family: Poppins-Light;
   background: var(--black);
@@ -68,4 +92,15 @@ a {
 
 .text-centered {
   text-align: center;
+}
+
+.group-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 80px;
+  @include desktop-and-tablet-only {
+    gap: 100px;
+  }
 }
