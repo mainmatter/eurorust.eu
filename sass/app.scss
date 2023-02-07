@@ -635,7 +635,10 @@ header {
     display: flex;
     justify-content: space-between;
     h3 {
-      flex-basis: 75%;
+      flex-basis: 70%;
+      @include desktop-and-tablet-only {
+        flex-basis: 75%;
+      }
     }
   }
 
