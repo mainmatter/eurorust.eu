@@ -1,18 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
 
-{% include "partials/header.html" %}
+<div class="block1 generic-block {{ page.title | replace(from=' ', to='_')  }}">
 
-<main>
-  <section class="generic-content">
-    <h3 class="title">{{ page.title }}</h3>
-    {% if page.extra.subtitle %}
-    <h3>{{ page.extra.subtitle }}</h3>
-    {% endif %}
-    {{ page.content | safe }}
-  </section>
-</main>
+  {% include "partials/header.html" %}
 
-{% include "partials/footer.html" %}
+  <main>
+    <section class="generic-content">
+      <h3 class="title">{{ page.title }}</h3>
+      {% if page.extra.subtitle %}
+      <h3>{{ page.extra.subtitle }}</h3>
+      {% endif %}
+      {{ page.content | safe }}
+    </section>
+  </main>
+
+  {% include "partials/footer.html" %}
+</div>
 
 {% endblock content %}

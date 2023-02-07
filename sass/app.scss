@@ -39,6 +39,36 @@ body {
   background-size: 100% 200%;
 }
 
+.generic-block {
+  &.conference_code_of_conduct,
+  &.sponsorships {
+    @include mobile-only {
+      background-position-y: -32rem;
+    }
+  }
+
+  &.conference_code_of_conduct {
+    background-size: 190% 30%;
+    @include mobile-only {
+      background-size: 190% 40%;
+    }
+  }
+
+  &.sponsorships {
+    background-size: 190% 25%;
+    @include mobile-only {
+      background-size: 190% 50%;
+    }
+  }
+
+  &.imprint {
+    background-size: 190% 75%;
+    @include mobile-only {
+      background-size: 190% 110%;
+    }
+  }
+}
+
 .hero {
   padding: 28px 0px 100px;
   display: flex;
@@ -562,10 +592,12 @@ header {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  margin: 20px auto 40px;
+  padding-top: 20px;
+  margin: 0px auto 40px;
   @include desktop-and-tablet-only {
     gap: 60px;
-    margin: 100px auto;
+    padding-top: 100px;
+    margin: 0px auto 100px;
   }
   max-width: 100%;
 
