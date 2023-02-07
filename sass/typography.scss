@@ -46,7 +46,8 @@ h3.pill-title {
   @include neon-border-style();
 }
 
-p {
+p,
+.generic-content .box a {
   font-family: Poppins-Regular;
   font-size: 18px;
   line-height: 24px;
@@ -59,4 +60,12 @@ p {
 
 a {
   text-decoration: none;
+}
+
+.generic-content .box a {
+  color: var(--neon-green);
+}
+
+.text-centered {
+  text-align: center;
 }

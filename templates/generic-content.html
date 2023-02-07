@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% include "partials/header.html" %}
+
+<main>
+  <section class="generic-content">
+    <h3 class="title">{{ page.title }}</h3>
+    {% if page.extra.subtitle %}
+    <h3>{{ page.extra.subtitle }}</h3>
+    {% endif %}
+    {{ page.content | safe }}
+  </section>
+</main>
+
+{% include "partials/footer.html" %}
+
+{% endblock content %}
