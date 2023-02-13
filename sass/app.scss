@@ -16,13 +16,15 @@ body {
   }
 
   background: url("/images/background-1-2.png") top right no-repeat;
-  background-size: 100% 100%;
+  background-size: 100% 94%;
 }
 
 .block2 {
   @include mobile-only {
-    background: url("/images/background-3-mobile.png") top right 90px no-repeat;
-    background-size: 100% 40%;
+    background: url("/images/background-3-mobile.png") top right 90px no-repeat,
+      url("/images/background-generic-mobile-3.png") bottom 210px right
+        no-repeat;
+    background-size: 100% 40%, 188% 27%;
   }
   background: url("/images/background-3-4.png") top right no-repeat;
   background-size: 100% 100%;
@@ -40,32 +42,44 @@ body {
 }
 
 .generic-block {
-  &.conference_code_of_conduct,
-  &.sponsorships {
-    @include mobile-only {
-      background-position-y: -32rem;
-    }
-  }
-
   &.conference_code_of_conduct {
-    background-size: 190% 30%;
     @include mobile-only {
-      background-size: 190% 40%;
+      background: url("/images/background-1-2-mobile.png") top -250px right no-repeat,
+        url("/images/background-generic-mobile-2.png") bottom left no-repeat,
+        url("/images/background-generic-mobile-3.png") bottom right no-repeat,
+        url("/images/background-generic-mobile-2.png") bottom left no-repeat;
+      background-position-y: -9rem, 65rem, 145rem, 215rem;
+      background-size: 190% 28%, 190% 28%, 190% 28%, 190% 35%;
     }
+
+    background: url("/images/background-generic-1.png") top -500px right no-repeat,
+      url("/images/background-generic-2.png") bottom left no-repeat;
+    background-size: 100% 60%, 100% 55%;
   }
 
   &.sponsorships {
-    background-size: 190% 25%;
     @include mobile-only {
-      background-size: 190% 50%;
+      background: url("/images/background-1-2-mobile.png") top -250px right no-repeat,
+        url("/images/background-generic-mobile-2.png") bottom left no-repeat,
+        url("/images/background-generic-mobile-3.png") bottom right no-repeat;
+      background-position-y: -7rem, 60rem, 127rem;
+      background-size: 190% 28%, 190% 35%, 190% 50%;
     }
+
+    background: url("/images/background-generic-1.png") top -500px right no-repeat,
+      url("/images/background-generic-2.png") bottom left no-repeat;
+    background-size: 100% 60%, 100% 55%;
   }
 
   &.imprint {
-    background-size: 190% 75%;
     @include mobile-only {
-      background-size: 190% 110%;
+      background: url("/images/background-1-2-mobile.png") top -250px right no-repeat;
+      background-position-y: -9rem;
+      background-size: 190% 100%;
     }
+
+    background: url("/images/background-generic-1.png") top -429px right no-repeat;
+    background-size: 100% 130%;
   }
 }
 
@@ -552,7 +566,8 @@ body {
 }
 
 .footer {
-  margin: 0 21px 40px;
+  // margin: 0 21px 40px;
+  padding: 0 21px 40px;
   @include desktop-and-tablet-only {
     margin: 0 180px 64px;
   }
