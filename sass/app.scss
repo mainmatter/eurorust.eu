@@ -58,20 +58,6 @@ body {
     background-size: 100% 60%, 100% 55%;
   }
 
-  &.sponsorships {
-    @include mobile-only {
-      background: url("/images/background-1-2-mobile.png") top -250px right no-repeat,
-        url("/images/background-generic-mobile-2.png") bottom left no-repeat,
-        url("/images/background-generic-mobile-3.png") bottom right no-repeat;
-      background-position-y: -7rem, 60rem, 127rem;
-      background-size: 190% 28%, 190% 35%, 190% 50%;
-    }
-
-    background: url("/images/background-generic-1.png") top -500px right no-repeat,
-      url("/images/background-generic-2.png") bottom left no-repeat;
-    background-size: 100% 60%, 100% 55%;
-  }
-
   &.imprint {
     @include mobile-only {
       background: url("/images/background-1-2-mobile.png") top -250px right no-repeat;
