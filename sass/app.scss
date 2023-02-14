@@ -580,7 +580,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    grid-template-columns: repeat(3, auto);
+    align-items: center;
   }
 
   .social {
