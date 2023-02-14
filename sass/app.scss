@@ -525,27 +525,15 @@ body {
     margin-bottom: 180px;
   }
   .sponsors-grid-container {
-    display: grid;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
     align-items: center;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    @include desktop-and-tablet-only {
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
     margin: 0 40px;
     gap: 26px;
     @include desktop-and-tablet-only {
       margin: 0 10%;
       gap: 60px;
-    }
-
-    a {
-      justify-self: center;
-    }
-    a:last-child {
-      justify-self: center;
-      @include mobile-only {
-        grid-column: 1/3;
-      }
     }
   }
 
