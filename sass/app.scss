@@ -33,7 +33,7 @@ body {
 
 .block3 {
   @include mobile-only {
-    background: url("/images/background-5-mobile.png") bottom -160px right -160px
+    background: url("/images/background-5-mobile.png") bottom -175px right -160px
       no-repeat;
     background-size: 188% 122%;
   }
@@ -581,6 +581,15 @@ body {
     flex-wrap: wrap;
     gap: 10px;
     align-items: center;
+    line-height: 30px;
+    @include desktop-and-tablet-only {
+      line-height: 35px;
+    }
+
+    li:nth-child(n + 2)::before {
+      content: "•";
+      margin-right: 10px;
+    }
   }
 
   .social {
