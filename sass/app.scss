@@ -11,9 +11,9 @@ body {
 
 .block1 {
   @include mobile-only {
-    background: url("/images/background-atomium-gradient.png") top right
-      no-repeat;
-    background-size: 95% 95%;
+    background: url("/images/background-atomium-gradient-mobile.png") top -136px
+      right -196px no-repeat;
+    background-size: 900px 1000px;
   }
 
   background: url("/images/background-atomium-gradient.png") top right no-repeat;
