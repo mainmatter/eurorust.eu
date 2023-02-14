@@ -263,9 +263,6 @@ body {
 
   h3 {
     text-align: center;
-    font-size: 35px;
-    letter-spacing: 0;
-    line-height: 45px;
     @include desktop-and-tablet-only {
       text-align: left;
     }
