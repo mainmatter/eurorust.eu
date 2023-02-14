@@ -162,17 +162,24 @@ body {
   margin: auto;
   max-width: 1100px;
   width: 95%;
-  @include desktop-and-tablet-only {
+  @include wide-desktop-only {
     width: 90%;
   }
   .actions {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 0.9fr));
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
     gap: 30px;
+    margin: auto;
     @include desktop-and-tablet-only {
-      grid-template-columns: 1fr 0.5fr 1fr;
       gap: 80px;
       margin-bottom: 100px;
+    }
+    max-width: 400px;
+    width: 100%;
+    @include wide-desktop-only {
+      max-width: 100%;
     }
     margin-bottom: 30px;
     align-items: center;
@@ -189,10 +196,12 @@ body {
   @include pill-button(".social-link.mailing-list", 1.5rem, "email-white.svg");
 
   .book-ticket {
-    @include mobile-and-tablet-only {
-      justify-self: center;
-      margin-bottom: 20px;
-      order: -1;
+    justify-self: center;
+    margin-bottom: 20px;
+    order: -1;
+    @include wide-desktop-only {
+      justify-self: auto;
+      order: 0;
     }
   }
 
