@@ -306,17 +306,15 @@ body {
 
   .speakers {
     display: grid;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
 
     gap: 32px;
-    grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
-
-    @include mobile-xl-only {
-      grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
-    }
 
     @include min-screen-width(640px) {
       gap: 55px;
-      grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
     }
 
     li {
@@ -558,7 +556,6 @@ body {
 }
 
 .footer {
-  // margin: 0 21px 40px;
   padding: 0 21px 40px;
   @include desktop-and-tablet-only {
     margin: 0 180px 64px;
