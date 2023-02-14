@@ -1,6 +1,6 @@
 +++
 template = "generic-content.html"
-title = "conference code of conduct"
+title = "Conference Code of Conduct"
 +++
 
 <div class="box">
@@ -31,7 +31,7 @@ title = "conference code of conduct"
     participants to help ensuring a safe environment for everybody.
   </p>
 </div>
-    <h3>need help?</h3>
+    <h3>Need Help?</h3>
     <div class="box text-centered">
     <p>Contact us via Email or phone:</p>
     <br>
@@ -42,7 +42,7 @@ title = "conference code of conduct"
     <a href="tel:+49 231 589 62 55">+49 231 589 62 55</a>
     </p>
     </div>
-    <h3>quick version</h3>
+    <h3>Quick Version</h3>
     <div class="box">
     <p>
       Our conference is dedicated to providing a harassment-free conference experience for everyone, regardless of
@@ -53,7 +53,7 @@ title = "conference code of conduct"
       sanctioned or expelled from the conference without a refund at the discretion of the conference organisers.
     </p>
     </div>
-    <h3>full version</h3>
+    <h3>Full Version</h3>
     <div class="box">
     <p>
       Harassment includes offensive verbal comments related to gender, gender identity and expression, age, sexual
