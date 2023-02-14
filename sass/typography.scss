@@ -70,6 +70,10 @@ h3.pill-title {
   @include neon-border-style();
 }
 
+p.light-font {
+  font-family: Poppins-Light;
+}
+
 p,
 .generic-content .box a {
   font-family: Poppins-Regular;
