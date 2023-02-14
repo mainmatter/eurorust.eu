@@ -81,6 +81,11 @@
     padding: 0 #{$paddingButton};
     @content;
   }
+
+  #{$selector}:hover {
+    background: var(--transparent-white);
+  }
+
   @if $icon {
     #{$selector}:before {
       content: "";
