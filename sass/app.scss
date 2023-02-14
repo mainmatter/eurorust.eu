@@ -11,17 +11,13 @@ body {
 
 .block1 {
   @include mobile-only {
-    background: linear-gradient(black 0%, transparent 10%),
-      url("/images/atomium.png") top center no-repeat,
-      url("/images/background-1-2-mobile.png") top -250px right no-repeat;
-    background-size: 100% 100%, 180% 45%, 190% 70%;
+    background: url("/images/background-atomium-gradient.png") top right
+      no-repeat;
+    background-size: 95% 95%;
   }
 
-  background: linear-gradient(black 0%, transparent 10%),
-    url("/images/atomium.png") top center no-repeat,
-    url("/images/background-1-2.png") top right no-repeat;
-  background-size: 100% 100%, 70% 55%, 100% 94%;
-  background-blend-mode: screen, normal, normal;
+  background: url("/images/background-atomium-gradient.png") top right no-repeat;
+  background-size: 95% 95%;
 }
 
 .block2 {
