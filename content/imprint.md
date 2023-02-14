@@ -1,6 +1,6 @@
 +++
 template = "generic-content.html"
-title = "imprint"
+title = "Imprint"
 +++
 
 <div class="box">
