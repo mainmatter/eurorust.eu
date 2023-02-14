@@ -63,18 +63,25 @@
   }
 }
 
-@mixin pill-button($selector, $paddingButton, $icon: false, $iconHeight: 23px) {
+@mixin pill-button(
+  $selector,
+  $paddingButton,
+  $icon: false,
+  $iconHeight: 20px,
+  $iconWidth: 27px
+) {
   #{$selector} {
     --font-size: 18px;
     @include desktop-and-tablet-only {
       --font-size: 22px;
     }
+    --line-height: 56px;
     color: var(--white);
     font-size: var(--font-size);
     font-family: Poppins-Light;
     letter-spacing: 0;
     text-align: center;
-    line-height: 56px;
+    line-height: var(--line-height);
 
     border: 2px solid var(--white);
     border-radius: 41px;
@@ -90,17 +97,17 @@
     #{$selector}:before {
       content: "";
       display: block;
-      width: 27px;
+      width: #{$iconWidth};
       height: #{$iconHeight};
       float: left;
-      margin-right: 10px;
       margin-bottom: 0px;
       margin-left: 0px;
-      margin-top: if(
-        $iconHeight > 23px,
-        calc(var(--font-size) / 2),
-        $iconHeight - 6px
-      );
+      margin-right: calc(#{$iconHeight} / 2.5);
+
+      --maxHeightInPill: max(#{$iconHeight}, var(--font-size));
+      --marginTopIcon: calc((var(--line-height) - var(--maxHeightInPill)) / 2);
+      margin-top: var(--marginTopIcon);
+
       background: url(/images/icons/#{$icon}) no-repeat;
     }
   }

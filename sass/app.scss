@@ -183,7 +183,13 @@ body {
     justify-content: center;
   }
 
-  @include pill-button(".social-link.twitter", 2.5rem, "twitter-white.svg");
+  @include pill-button(
+    ".social-link.twitter",
+    2.5rem,
+    "twitter-white.svg",
+    23px,
+    29px
+  );
   @include pill-button(".social-link.mailing-list", 1.5rem, "email-white.svg");
 
   .book-ticket {
