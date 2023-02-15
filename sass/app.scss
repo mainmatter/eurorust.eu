@@ -24,7 +24,7 @@ body {
 .block2 {
   @include mobile-only {
     background: url("/images/background-3-mobile.png") top right 90px no-repeat,
-      url("/images/background-generic-mobile-3.png") bottom 210px right
+      url("/images/background-generic-mobile-3.webp") bottom 210px right
         no-repeat;
     background-size: 100% 40%, 188% 27%;
   }
@@ -46,12 +46,13 @@ body {
 .generic-block {
   &.conference_code_of_conduct {
     @include mobile-only {
-      background: url("/images/background-1-2-mobile.png") top -250px right no-repeat,
-        url("/images/background-generic-mobile-2.png") bottom left no-repeat,
-        url("/images/background-generic-mobile-3.png") bottom right no-repeat,
-        url("/images/background-generic-mobile-2.png") bottom left no-repeat;
-      background-position-y: -9rem, 65rem, 145rem, 215rem;
-      background-size: 190% 28%, 190% 28%, 190% 28%, 190% 35%;
+      background: url("/images/background-generic-mobile-1.webp") top right
+          no-repeat,
+        url("/images/background-generic-mobile-2.webp") top left no-repeat,
+        url("/images/background-generic-mobile-3.webp") bottom right no-repeat,
+        url("/images/background-generic-mobile-2.webp") bottom left no-repeat;
+      background-position-y: 0, 65rem, 145rem, 215rem;
+      background-size: 100% auto, 100% auto, 100% auto, 100% auto;
     }
 
     background: url("/images/background-generic-1.webp") top right no-repeat,
@@ -61,9 +62,9 @@ body {
 
   &.imprint {
     @include mobile-only {
-      background: url("/images/background-1-2-mobile.png") top -250px right no-repeat;
-      background-position-y: -9rem;
-      background-size: 190% 100%;
+      background: url("/images/background-generic-mobile-1.webp") top right
+        no-repeat;
+      background-size: 100% auto;
     }
 
     background: url("/images/background-generic-1.webp") top right no-repeat;
