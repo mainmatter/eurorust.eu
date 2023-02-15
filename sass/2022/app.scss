@@ -4,7 +4,7 @@
 @import "./mixins.scss";
 
 body {
-  background: top center url(/images/hero-background.jpg) #010101 no-repeat;
+  background: top center url(/2022/images/hero-background.jpg) #010101 no-repeat;
 
   @include desktop-and-tablet-only {
     background-size: contain;
@@ -100,7 +100,8 @@ body {
 }
 
 .about {
-  background: top left 32px / 120px no-repeat url(/images/about-background.svg);
+  background: top left 32px / 120px no-repeat
+    url(/2022/images/about-background.svg);
   padding: 100px 16px 80px;
   display: flex;
   flex-direction: column;
@@ -121,7 +122,7 @@ body {
     .title:before {
       content: "";
       background: top left 32px / 120px no-repeat
-        url(/images/about-background.svg);
+        url(/2022/images/about-background.svg);
       width: 133px;
       height: 133px;
       margin-left: -133px;
@@ -209,8 +210,9 @@ body {
 
 .talks {
   background: top 80px center / 100% no-repeat
-      url(/images/talks-background-top.svg),
-    bottom 80px center / 100% no-repeat url(/images/talks-background-bottom.svg);
+      url(/2022/images/talks-background-top.svg),
+    bottom 80px center / 100% no-repeat
+      url(/2022/images/talks-background-bottom.svg);
   padding: 66vw 16px;
   display: flex;
   flex-direction: column;
@@ -233,7 +235,7 @@ body {
     &:before {
       content: "";
       display: inline-block;
-      background: center center / cover url(/images/yellow-diamond.svg);
+      background: center center / cover url(/2022/images/yellow-diamond.svg);
       height: 62px;
       width: 62px;
     }
@@ -241,7 +243,7 @@ body {
     &:after {
       content: "";
       display: inline-block;
-      background: center center / cover url(/images/yellow-diamond.svg);
+      background: center center / cover url(/2022/images/yellow-diamond.svg);
       height: 62px;
       width: 62px;
     }
@@ -310,7 +312,7 @@ body {
     &:before {
       content: "";
       display: inline-block;
-      background: center center / cover url(/images/yellow-diamond.svg);
+      background: center center / cover url(/2022/images/yellow-diamond.svg);
       height: 62px;
       width: 62px;
     }
@@ -318,7 +320,7 @@ body {
     &:after {
       content: "";
       display: inline-block;
-      background: center center / cover url(/images/yellow-diamond.svg);
+      background: center center / cover url(/2022/images/yellow-diamond.svg);
       height: 62px;
       width: 62px;
     }
@@ -469,7 +471,7 @@ body {
 
 .get-involved {
   background: bottom 80px center / 180px no-repeat
-    url(/images/get-involved-background-bottom.svg);
+    url(/2022/images/get-involved-background-bottom.svg);
   padding: 60px 16px 0;
   display: flex;
   flex-direction: column;
@@ -481,7 +483,7 @@ body {
 
   @include mobile-only {
     background: bottom 7rem center/100px no-repeat
-      url(/images/get-involved-background-bottom.svg);
+      url(/2022/images/get-involved-background-bottom.svg);
     padding-bottom: 200px;
   }
 
@@ -493,7 +495,7 @@ body {
   }
 
   .container {
-    background: center center / contain url(/images/background-actions.png)
+    background: center center / contain url(/2022/images/background-actions.png)
       no-repeat;
     height: 30rem;
 
@@ -526,7 +528,7 @@ body {
       }
 
       &.twitter {
-        background-image: url(/images/icons/twitter.svg);
+        background-image: url(/2022/images/icons/twitter.svg);
 
         @include mobile-only {
           margin-bottom: 40px;
@@ -534,7 +536,7 @@ body {
       }
 
       &.mailing-list {
-        background-image: url(/images/icons/mailing-list.svg);
+        background-image: url(/2022/images/icons/mailing-list.svg);
       }
     }
   }
@@ -654,7 +656,7 @@ body {
 .schedule {
   margin-top: 8rem;
   margin-bottom: 8rem;
-  background: top -0.5rem left 38% / 4rem no-repeat url(/images/schedule-background.svg);
+  background: top -0.5rem left 38% / 4rem no-repeat url(/2022/images/schedule-background.svg);
 
   @include mobile-only {
     background-position-x: 0;
@@ -891,7 +893,7 @@ body {
     &:first-child {
       @include desktop-and-tablet-only {
         background: calc(0% - 1em) 0%/10rem no-repeat
-          url(/images/venue-background-top.svg);
+          url(/2022/images/venue-background-top.svg);
       }
     }
 
@@ -900,7 +902,7 @@ body {
 
       @include desktop-only {
         background: calc(50% - 4em) calc(10% - 2rem) / 10rem no-repeat
-          url(/images/venue-background-bottom.svg);
+          url(/2022/images/venue-background-bottom.svg);
       }
     }
 
