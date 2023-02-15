@@ -255,8 +255,10 @@ body {
   margin: 0 auto 80px;
   align-items: center;
   justify-content: center;
+  max-width: 90%;
 
   @include desktop-and-tablet-only {
+    max-width: 1500px;
     gap: 72px;
     margin-bottom: 180px;
   }
