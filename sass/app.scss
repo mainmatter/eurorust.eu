@@ -54,8 +54,8 @@ body {
       background-size: 190% 28%, 190% 28%, 190% 28%, 190% 35%;
     }
 
-    background: url("/images/background-generic-1.png") top right no-repeat,
-      url("/images/background-generic-2.png") bottom left no-repeat;
+    background: url("/images/background-generic-1.webp") top right no-repeat,
+      url("/images/background-generic-2.webp") bottom left no-repeat;
     background-size: auto 50%, auto 50%;
   }
 
@@ -66,7 +66,7 @@ body {
       background-size: 190% 100%;
     }
 
-    background: url("/images/background-generic-1.png") top right no-repeat;
+    background: url("/images/background-generic-1.webp") top right no-repeat;
     background-size: auto 100%;
   }
 }
