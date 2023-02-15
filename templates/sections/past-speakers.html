@@ -4,8 +4,11 @@
     {% for speaker in section.extra.speakers %}
     <li>
       <div class="photo-container">
-        <img alt="{{ speaker.name }} speaker profile photo" src="/images/speakers/{{speaker.image}}.jpeg"
-          class="photo" />
+        <picture>
+          <source srcset="/images/speakers/mobile/{{speaker.image}}.webp" media="(max-width: 640px)" />
+          <img alt="{{ speaker.name }} speaker profile photo" src="/images/speakers/{{speaker.image}}.webp"
+            class="photo" />
+        </picture>
       </div>
       <p>{{ speaker.name }}</p>
       <div class="links">
