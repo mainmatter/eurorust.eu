@@ -10,14 +10,15 @@ body {
 }
 
 .block1 {
-  @include mobile-only {
-    background: url("/images/background-atomium-gradient-mobile.png") top -136px
-      right -196px no-repeat;
-    background-size: 900px 1000px;
-  }
+  background: url("/images/background-atomium-gradient-mobile.png") top -136px center
+    no-repeat;
+  background-size: auto 70%;
 
-  background: url("/images/background-atomium-gradient.png") top right no-repeat;
-  background-size: 95% 95%;
+  @include wide-desktop-only {
+    background: url("/images/background-atomium-gradient.png") top center
+      no-repeat;
+    background-size: 100% auto;
+  }
 }
 
 .block2 {
