@@ -9,9 +9,10 @@
       </div>
       <p>{{ speaker.name }}</p>
       <div class="links">
-        <a href="https://twitter.com/{{ speaker.twitter }}"><img alt="twitter icon"
-            src="/images/icons/twitter-white.svg" /></a>
-        <a href="{{ speaker.web }}"><img alt="external link icon" src="/images/icons/external-link-white.svg" /></a>
+        <a href="https://twitter.com/{{ speaker.twitter }}" target="_blank" rel="noopener noreferrer"><img
+            alt="twitter icon" src="/images/icons/twitter-white.svg" /></a>
+        <a href="{{ speaker.web }}" target="_blank" rel="noopener noreferrer"><img alt="external link icon"
+            src="/images/icons/external-link-white.svg" /></a>
       </div>
     </li>
     {% endfor %}

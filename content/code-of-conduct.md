@@ -6,24 +6,24 @@ title = "Conference Code of Conduct"
 <div class="box">
   <p>This Code of Conduct is also available in</p>
   <div class="languages">
-  <a href="https://confcodeofconduct.com/index-nl.html">Dutch</a> <a
-    href="https://confcodeofconduct.com/index-fr.html">French</a> <a
-    href="https://confcodeofconduct.com/index-de.html">German</a> <a
-    href="https://confcodeofconduct.com/index-it.html">Italian</a> <a
-    href="https://confcodeofconduct.com/index-no.html">Norwegian</a> <a
-    href="https://confcodeofconduct.com/index-pl.html">Polish</a> <a
-    href="https://confcodeofconduct.com/index-pt-br.html">Portuguese</a> <a
-    href="https://confcodeofconduct.com/index-ru.html">Russian</a> <a
-    href="https://confcodeofconduct.com/index-es.html">Spanish</a> <a
-    href="https://confcodeofconduct.com/index-ja.html">Japanese</a> <a
-    href="https://confcodeofconduct.com/index-he.html">Hebrew</a> <a
-    href="https://confcodeofconduct.com/index-tr.html">Turkish</a> <a
-    href="https://confcodeofconduct.com/index-tw.html">Chinese</a> <a
-    href="https://confcodeofconduct.com/index-cz.html">Czech</a> <a
-    href="https://confcodeofconduct.com/index-gr.html">Greek</a> <a
-    href="https://confcodeofconduct.com/index-id.html">Indonesian</a> <a
-    href="https://confcodeofconduct.com/index-kr.html">Korean</a> <a
-    href="https://confcodeofconduct.com/index-sv.html">Swedish</a>
+  <a href="https://confcodeofconduct.com/index-nl.html" target="_blank" rel="noopener noreferrer">Dutch</a>
+  <a href="https://confcodeofconduct.com/index-fr.html" target="_blank" rel="noopener noreferrer">French</a>
+  <a href="https://confcodeofconduct.com/index-de.html" target="_blank" rel="noopener noreferrer">German</a>
+  <a href="https://confcodeofconduct.com/index-it.html" target="_blank" rel="noopener noreferrer">Italian</a>
+  <a href="https://confcodeofconduct.com/index-no.html" target="_blank" rel="noopener noreferrer">Norwegian</a>
+  <a href="https://confcodeofconduct.com/index-pl.html" target="_blank" rel="noopener noreferrer">Polish</a>
+  <a href="https://confcodeofconduct.com/index-pt-br.html" target="_blank" rel="noopener noreferrer">Portuguese</a>
+  <a href="https://confcodeofconduct.com/index-ru.html" target="_blank" rel="noopener noreferrer">Russian</a>
+  <a href="https://confcodeofconduct.com/index-es.html" target="_blank" rel="noopener noreferrer">Spanish</a>
+  <a href="https://confcodeofconduct.com/index-ja.html" target="_blank" rel="noopener noreferrer">Japanese</a>
+  <a href="https://confcodeofconduct.com/index-he.html" target="_blank" rel="noopener noreferrer">Hebrew</a>
+  <a href="https://confcodeofconduct.com/index-tr.html" target="_blank" rel="noopener noreferrer">Turkish</a>
+  <a href="https://confcodeofconduct.com/index-tw.html" target="_blank" rel="noopener noreferrer">Chinese</a>
+  <a href="https://confcodeofconduct.com/index-cz.html" target="_blank" rel="noopener noreferrer">Czech</a>
+  <a href="https://confcodeofconduct.com/index-gr.html" target="_blank" rel="noopener noreferrer">Greek</a>
+  <a href="https://confcodeofconduct.com/index-id.html" target="_blank" rel="noopener noreferrer">Indonesian</a>
+  <a href="https://confcodeofconduct.com/index-kr.html" target="_blank" rel="noopener noreferrer">Korean</a>
+  <a href="https://confcodeofconduct.com/index-sv.html" target="_blank" rel="noopener noreferrer">Swedish</a>
   </div>
   <p>
     All attendees, speakers, sponsors and volunteers at our conference are required to agree with the following Code
@@ -36,7 +36,7 @@ title = "Conference Code of Conduct"
     <p>Contact us via Email or phone:</p>
     <br>
     <p>
-      <a href="mailto:coc@eurorust.eu">coc@eurorust.eu</a>
+      <a href="mailto:coc@eurorust.eu" target="_blank" rel="noopener noreferrer">coc@eurorust.eu</a>
     </p>
     <p>
     <a href="tel:+49 231 589 62 55">+49 231 589 62 55</a>
@@ -93,8 +93,8 @@ title = "Conference Code of Conduct"
     <p class="note">
       Original source and credit:
       <br>
-      <a href="http://2012.jsconf.us/#/about">2012.jsconf.us/#/about</a><br>& <a
-        href="http://geekfeminism.wikia.com/wiki/Conference_anti-harassment/Policy">The Ada Initiative</a>.
+      <a href="http://2012.jsconf.us/#/about" target="_blank" rel="noopener noreferrer">2012.jsconf.us/#/about</a><br>& <a
+        href="http://geekfeminism.wikia.com/wiki/Conference_anti-harassment/Policy" target="_blank" rel="noopener noreferrer">The Ada Initiative</a>.
     </p>
     <br>
     <p class="note">
@@ -103,7 +103,7 @@ title = "Conference Code of Conduct"
     </p>
     <!-- <br> -->
     <p class="note">
-      This work is licensed under <a href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons
+      This work is licensed under <a href="http://creativecommons.org/licenses/by/3.0/deed.en_US" target="_blank" rel="noopener noreferrer">Creative Commons
         Attribution 3.0 Unported License</a>.
     </p>
     </div>
