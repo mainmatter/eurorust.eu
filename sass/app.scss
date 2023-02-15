@@ -54,9 +54,9 @@ body {
       background-size: 190% 28%, 190% 28%, 190% 28%, 190% 35%;
     }
 
-    background: url("/images/background-generic-1.png") top -500px right no-repeat,
+    background: url("/images/background-generic-1.png") top right no-repeat,
       url("/images/background-generic-2.png") bottom left no-repeat;
-    background-size: 100% 60%, 100% 55%;
+    background-size: auto 50%, auto 50%;
   }
 
   &.imprint {
@@ -66,8 +66,8 @@ body {
       background-size: 190% 100%;
     }
 
-    background: url("/images/background-generic-1.png") top -429px right no-repeat;
-    background-size: 100% 130%;
+    background: url("/images/background-generic-1.png") top right no-repeat;
+    background-size: auto 100%;
   }
 }
 
