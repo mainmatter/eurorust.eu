@@ -38,13 +38,13 @@ h3 {
 
 h4,
 h5 {
-  font-family: Poppins-Light-Italic;
-  font-size: 35px;
-  line-height: 45px;
-
+  font-family: Poppins-Light;
+  font-size: 25px;
+  line-height: 28px;
+  color: var(--pink);
   @include desktop-and-tablet-only {
-    font-size: 55px;
-    line-height: 65px;
+    font-size: 40px;
+    line-height: 35px;
   }
 }
 

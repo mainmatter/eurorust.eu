@@ -278,6 +278,36 @@ body {
   }
 }
 
+.past-event-highlights {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 40px;
+  margin: 0 auto 80px;
+  align-items: center;
+  justify-content: center;
+
+  @include desktop-and-tablet-only {
+    gap: 80px;
+    margin-bottom: 180px;
+  }
+
+  video {
+    width: 100%;
+    @include desktop-and-tablet-only {
+      width: 90%;
+    }
+    max-width: 900px;
+  }
+
+  h4 {
+    text-align: center;
+    max-width: 80%;
+    @include desktop-and-tablet-only {
+      text-align: left;
+    }
+  }
+}
+
 .past-speakers {
   display: grid;
   grid-template-rows: auto 1fr;
