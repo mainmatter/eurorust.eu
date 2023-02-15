@@ -3,7 +3,7 @@
 {% block content %}
 
 <main class="sections">
-  <div class="block1">
+  <div class="top-block">
     {% include "partials/main_header.html" %}
 
     {% include "sections/about.html" %}
@@ -11,17 +11,17 @@
     {% include "sections/get-involved.html" %}
   </div>
 
-  <div class="block2">
+  <div class="middle-block">
     {% include "sections/topics.html" %}
 
     {% include "sections/past-event-highlights.html" %}
 
     {% include "sections/past-speakers.html" %}
-
-    {% include "sections/venue.html" %}
   </div>
 
-  <div class="block3">
+  <div class="end-block">
+    {% include "sections/venue.html" %}
+
     {% include "sections/presented-by.html" %}
 
     {% include "sections/past-sponsors.html" %}

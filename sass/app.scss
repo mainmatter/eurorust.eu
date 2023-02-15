@@ -9,38 +9,38 @@ body {
   color: var(--white);
 }
 
-.block1 {
+.top-block {
   background: url("/images/background-atomium-gradient-mobile.webp") top center
     no-repeat;
   background-size: auto 55%;
 
   @include wide-desktop-only {
-    background: url("/images/background-atomium-gradient.webp") top center
+    background: url("/images/background-atomium-gradient.webp") top right
       no-repeat;
-    background-size: 100% auto;
+    background-size: auto 100%;
   }
 }
 
-.block2 {
+.middle-block {
   @include mobile-only {
-    background: url("/images/background-3-mobile.png") top right 90px no-repeat,
-      url("/images/background-generic-mobile-3.webp") bottom 210px right
-        no-repeat;
-    background-size: 100% 40%, 188% 27%;
+    background: url("/images/background-middle-mobile.webp") top -2rem left no-repeat,
+      url("/images/background-generic-mobile-3.webp") top 36rem right no-repeat;
+    background-size: 70% auto, 100% auto;
   }
-  background: url("/images/background-3-4.png") top right no-repeat;
-  background-size: 100% 100%;
+  background: url("/images/background-middle.webp") top left no-repeat;
+  background-size: auto 100%;
 }
 
-.block3 {
+.end-block {
   @include mobile-only {
-    background: url("/images/background-5-mobile.png") bottom -175px right -160px
-      no-repeat;
-    background-size: 188% 122%;
+    background: url("/images/background-bottom-mobile.webp") bottom -13rem right
+        no-repeat,
+      url("/images/background-middle-mobile.webp") top -3rem left no-repeat;
+    background-size: 100% auto, 100% auto;
   }
 
-  background: url("/images/background-5.png") bottom -1100px right no-repeat;
-  background-size: 100% 200%;
+  background: url("/images/background-bottom.webp") bottom right no-repeat;
+  background-size: auto 100%;
 }
 
 .generic-block {
@@ -334,13 +334,12 @@ body {
   }
 
   .speakers {
-    display: grid;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
 
-    gap: 32px;
+    gap: 32px 25px;
 
     @include min-screen-width(640px) {
       gap: 55px;
@@ -566,7 +565,7 @@ body {
 
   .thanks_message {
     font-family: Poppins-Light;
-    color: var(--pink);
+    color: var(--white);
     text-align: center;
     font-size: 25px;
     max-width: 60%;
