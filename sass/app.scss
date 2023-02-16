@@ -9,15 +9,45 @@ body {
   color: var(--white);
 }
 
+$atomium-bg-width: 1429px;
+
 .top-block {
+  display: grid;
+  --element-width: min(1429px, 100vw);
+  grid-template-columns: auto var(--element-width) auto;
+}
+
+.background-container.center {
   background: url("/images/background-atomium-gradient-mobile.webp") top center
     no-repeat;
   background-size: auto 55%;
 
-  @include wide-desktop-only {
-    background: url("/images/background-atomium-gradient.webp") top right
-      no-repeat;
-    background-size: auto 100%;
+  @include desktop-and-tablet-only {
+    background: url("/images/dt_hero_1.jpg") top center no-repeat;
+    background-size: $atomium-bg-width auto;
+  }
+}
+
+.background-container.left {
+  background: url("/images/background-atomium-gradient-mobile.webp") top center
+    no-repeat;
+  background-size: auto 55%;
+
+  @include desktop-and-tablet-only {
+    background: url("/images/dt_hero_2.jpg") top left no-repeat;
+    background-size: $atomium-bg-width auto;
+  }
+}
+
+.background-container.right {
+  background: url("/images/background-atomium-gradient-mobile.webp") top center
+    no-repeat;
+  background-size: auto 55%;
+
+  @include desktop-and-tablet-only {
+    transform: scaleX(-1);
+    background: url("/images/dt_hero_2.jpg") top right no-repeat;
+    background-size: $atomium-bg-width auto;
   }
 }
 
@@ -80,7 +110,7 @@ body {
   align-items: center;
 
   @include desktop-and-tablet-only {
-    padding: 140px 44px;
+    padding: 100px 44px;
   }
 
   .location {
@@ -111,9 +141,9 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 70px;
   margin: 0 auto 55px;
+  max-width: 1300px;
 
   @include desktop-and-tablet-only {
-    margin: 0 15% 55px;
     grid-template-columns: 0.45fr 0.35fr;
     gap: 60px;
     align-items: center;

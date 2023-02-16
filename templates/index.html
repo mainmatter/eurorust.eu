@@ -1,14 +1,27 @@
 {% extends "base.html" %}
 
+{% block head %}
+
+<link rel="preload" as="image" href="/images/dt_hero_1.jpg">
+<link rel="preload" as="image" href="/images/dt_hero_2.jpg">
+
+{% endblock head %}
+
 {% block content %}
 
 <main class="sections">
   <div class="top-block">
-    {% include "partials/main_header.html" %}
+    <div class="background-container left">
+    </div>
+    <div class="background-container center">
+      {% include "partials/main_header.html" %}
 
-    {% include "sections/about.html" %}
+      {% include "sections/about.html" %}
 
-    {% include "sections/get-involved.html" %}
+      {% include "sections/get-involved.html" %}
+    </div>
+    <div class="background-container right">
+    </div>
   </div>
 
   <div class="middle-block">
