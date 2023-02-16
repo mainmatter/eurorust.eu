@@ -24,7 +24,8 @@ body {
 .middle-block {
   @include mobile-only {
     background: url("/images/background-middle-mobile.webp") top -2rem left no-repeat,
-      url("/images/background-generic-mobile-3.webp") top 36rem right no-repeat;
+      url("/images/background-generic-mobile-3.webp") top calc(458px + 30vh)
+        right no-repeat;
     background-size: 70% auto, 100% auto;
   }
   background: url("/images/background-middle.webp") top left no-repeat;
@@ -33,10 +34,10 @@ body {
 
 .end-block {
   @include mobile-only {
-    background: url("/images/background-bottom-mobile.webp") bottom -13rem right
+    background: url("/images/background-bottom-mobile.webp") bottom -23rem right
         no-repeat,
-      url("/images/background-middle-mobile.webp") top -3rem left no-repeat;
-    background-size: 100% auto, 100% auto;
+      url("/images/background-middle-mobile.webp") top left no-repeat;
+    background-size: 100% auto, 70% auto;
   }
 
   background: url("/images/background-bottom.webp") bottom right no-repeat;
