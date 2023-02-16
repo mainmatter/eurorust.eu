@@ -1,4 +1,9 @@
 {% extends "base.html" %}
+
+{% block head %}
+<link rel="preload" as="image" href="/images/background-generic-1.webp">
+{% endblock head %}
+
 {% block content %}
 
 <div class="generic-block {{ page.title | lower | replace(from=' ', to='_')  }}">
