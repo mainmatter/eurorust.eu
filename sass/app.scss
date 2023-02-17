@@ -51,8 +51,8 @@ $atomium-bg-width: 1429px;
         right no-repeat;
     background-size: 70% auto, 100% 50%;
   }
-  background: url("/images/background-middle.webp") top left no-repeat;
-  background-size: auto 100%;
+  background: url("/images/background-middle.webp") center left no-repeat;
+  background-size: 70% 100%;
 }
 
 .end-block {
@@ -329,7 +329,7 @@ $atomium-bg-width: 1429px;
     text-align: center;
     max-width: 80%;
     @include desktop-and-tablet-only {
-      text-align: left;
+      max-width: 50%;
     }
   }
 }
