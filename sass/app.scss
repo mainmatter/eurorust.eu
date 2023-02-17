@@ -216,7 +216,13 @@ $atomium-bg-width: 1429px;
     }
   }
 
-  .neon {
+  tito-button button {
+    background-color: initial;
+    border: initial;
+    cursor: pointer;
+  }
+
+  .neon span {
     text-transform: uppercase;
     border: 3.2px solid var(--pink);
     @include neon-border-style(true);
