@@ -25,7 +25,7 @@ $atomium-bg-width: 1429px;
   background-size: contain;
 
   @include desktop-and-tablet-only {
-    background: url("/images/dt_hero_1.jpg") top center no-repeat;
+    background: url("/images/dt_hero_1.webp") top center no-repeat;
     background-size: $atomium-bg-width auto;
   }
 }
@@ -39,8 +39,7 @@ $atomium-bg-width: 1429px;
 
 .background-container.right {
   @include desktop-and-tablet-only {
-    transform: scaleX(-1);
-    background: url("/images/dt_hero_2.jpg") top right no-repeat;
+    background: url("/images/dt_hero_2.webp") top left no-repeat;
     background-size: $atomium-bg-width auto;
   }
 }
