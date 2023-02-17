@@ -39,7 +39,7 @@ $atomium-bg-width: 1429px;
 
 .background-container.right {
   @include desktop-and-tablet-only {
-    background: url("/images/dt_hero_2.webp") top left no-repeat;
+    background: url("/images/dt_hero_3.jpg") top left no-repeat;
     background-size: $atomium-bg-width auto;
   }
 }
