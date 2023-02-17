@@ -18,7 +18,7 @@ $atomium-bg-width: 1429px;
 }
 
 .background-container.center {
-  background: url("/images/m_hero.jpg") top center no-repeat;
+  background: url("/images/m_hero.webp") top center no-repeat;
   @include mobile-only {
     background-size: auto 53.5rem;
   }
