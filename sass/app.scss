@@ -235,16 +235,26 @@ $atomium-bg-width: 1429px;
   }
 
   .rustfest-promo {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 0.8fr));
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     gap: 20px;
     align-items: center;
     justify-content: center;
     margin-bottom: 80px;
+    margin-top: 20px;
+    margin: 50px auto 80px;
+    width: 60%;
+    @include mobile-only {
+      max-width: 300px;
+    }
 
     @include desktop-and-tablet-only {
-      grid-template-columns: 0.32fr 0.3fr;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 40px;
+      margin: auto;
+      width: 60%;
       margin-bottom: 200px;
     }
 
