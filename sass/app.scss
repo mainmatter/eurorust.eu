@@ -260,7 +260,7 @@ $atomium-bg-width: 1429px;
     }
 
     .rustfest-link {
-      @include mobile-only {
+      @include mobile-and-tablet-only {
         justify-self: center;
       }
       img {
