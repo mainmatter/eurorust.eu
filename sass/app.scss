@@ -49,7 +49,7 @@ $atomium-bg-width: 1429px;
     background: url("/images/background-middle-mobile.webp") top -2rem left no-repeat,
       url("/images/background-generic-mobile-3.webp") top calc(458px + 30vh)
         right no-repeat;
-    background-size: 70% auto, 100% auto;
+    background-size: 70% auto, 100% 50%;
   }
   background: url("/images/background-middle.webp") top left no-repeat;
   background-size: auto 100%;
@@ -60,7 +60,7 @@ $atomium-bg-width: 1429px;
     background: url("/images/background-bottom-mobile.webp") bottom -23rem right
         no-repeat,
       url("/images/background-middle-mobile.webp") top left no-repeat;
-    background-size: 100% auto, 70% auto;
+    background-size: 100% 70%, 100% 50%;
   }
 
   background: url("/images/background-bottom.webp") bottom right no-repeat;
@@ -69,7 +69,11 @@ $atomium-bg-width: 1429px;
 
 .generic-block {
   &.conference_code_of_conduct {
-    @include mobile-only {
+    background: url("/images/background-generic-1.webp") top right no-repeat,
+      url("/images/background-generic-2.webp") bottom left no-repeat;
+    background-size: auto 50%, auto 50%;
+
+    @include mobile-xs-only {
       background: url("/images/background-generic-mobile-1.webp") top right
           no-repeat,
         url("/images/background-generic-mobile-2.webp") top left no-repeat,
@@ -78,21 +82,16 @@ $atomium-bg-width: 1429px;
       background-position-y: 0, 65rem, 145rem, 215rem;
       background-size: 100% auto, 100% auto, 100% auto, 100% auto;
     }
-
-    background: url("/images/background-generic-1.webp") top right no-repeat,
-      url("/images/background-generic-2.webp") bottom left no-repeat;
-    background-size: auto 50%, auto 50%;
   }
 
   &.imprint {
+    background: url("/images/background-generic-1.webp") top right no-repeat;
+    background-size: auto 100%;
     @include mobile-only {
       background: url("/images/background-generic-mobile-1.webp") top right
         no-repeat;
       background-size: 100% auto;
     }
-
-    background: url("/images/background-generic-1.webp") top right no-repeat;
-    background-size: auto 100%;
   }
 }
 
