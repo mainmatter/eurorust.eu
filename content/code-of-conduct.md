@@ -6,24 +6,26 @@ title = "Conference Code of Conduct"
 <div class="box">
   <p>This Code of Conduct is also available in</p>
   <div class="languages">
-  <a href="https://confcodeofconduct.com/index-nl.html" target="_blank" rel="noopener noreferrer">Dutch</a>
-  <a href="https://confcodeofconduct.com/index-fr.html" target="_blank" rel="noopener noreferrer">French</a>
-  <a href="https://confcodeofconduct.com/index-de.html" target="_blank" rel="noopener noreferrer">German</a>
-  <a href="https://confcodeofconduct.com/index-it.html" target="_blank" rel="noopener noreferrer">Italian</a>
-  <a href="https://confcodeofconduct.com/index-no.html" target="_blank" rel="noopener noreferrer">Norwegian</a>
-  <a href="https://confcodeofconduct.com/index-pl.html" target="_blank" rel="noopener noreferrer">Polish</a>
-  <a href="https://confcodeofconduct.com/index-pt-br.html" target="_blank" rel="noopener noreferrer">Portuguese</a>
-  <a href="https://confcodeofconduct.com/index-ru.html" target="_blank" rel="noopener noreferrer">Russian</a>
-  <a href="https://confcodeofconduct.com/index-es.html" target="_blank" rel="noopener noreferrer">Spanish</a>
-  <a href="https://confcodeofconduct.com/index-ja.html" target="_blank" rel="noopener noreferrer">Japanese</a>
-  <a href="https://confcodeofconduct.com/index-he.html" target="_blank" rel="noopener noreferrer">Hebrew</a>
-  <a href="https://confcodeofconduct.com/index-tr.html" target="_blank" rel="noopener noreferrer">Turkish</a>
-  <a href="https://confcodeofconduct.com/index-tw.html" target="_blank" rel="noopener noreferrer">Chinese</a>
-  <a href="https://confcodeofconduct.com/index-cz.html" target="_blank" rel="noopener noreferrer">Czech</a>
-  <a href="https://confcodeofconduct.com/index-gr.html" target="_blank" rel="noopener noreferrer">Greek</a>
-  <a href="https://confcodeofconduct.com/index-id.html" target="_blank" rel="noopener noreferrer">Indonesian</a>
-  <a href="https://confcodeofconduct.com/index-kr.html" target="_blank" rel="noopener noreferrer">Korean</a>
-  <a href="https://confcodeofconduct.com/index-sv.html" target="_blank" rel="noopener noreferrer">Swedish</a>
+  <a href="https://confcodeofconduct.com" target="_blank" rel="noopener noreferrer">English</a>
+  <a href="https://nl.confcodeofconduct.com" target="_blank" rel="noopener noreferrer">Dutch</a>
+  <a href="https://fr.confcodeofconduct.com" target="_blank" rel="noopener noreferrer">French</a>
+  <a href="https://de.confcodeofconduct.com" target="_blank" rel="noopener noreferrer">German</a>
+  <a href="https://it.confcodeofconduct.com" target="_blank" rel="noopener noreferrer">Italian</a>
+  <a href="https://no.confcodeofconduct.com" target="_blank" rel="noopener noreferrer">Norwegian</a>
+  <a href="https://pl.confcodeofconduct.com" target="_blank" rel="noopener noreferrer">Polish</a>
+  <a href="https://pt-br.confcodeofconduct.com" target="_blank" rel="noopener noreferrer">Portuguese</a>
+  <a href="https://ru.confcodeofconduct.com" target="_blank" rel="noopener noreferrer">Russian</a>
+  <a href="https://es.confcodeofconduct.com" target="_blank" rel="noopener noreferrer">Spanish</a>
+  <a href="https://ja.confcodeofconduct.com" target="_blank" rel="noopener noreferrer">Japanese</a>
+  <a href="https://he.confcodeofconduct.com" target="_blank" rel="noopener noreferrer">Hebrew</a>
+  <a href="https://tr.confcodeofconduct.com" target="_blank" rel="noopener noreferrer">Turkish</a>
+  <a href="https://tw.confcodeofconduct.com" target="_blank" rel="noopener noreferrer">Chinese</a>
+  <a href="https://cz.confcodeofconduct.com" target="_blank" rel="noopener noreferrer">Czech</a>
+  <a href="https://gr.confcodeofconduct.com" target="_blank" rel="noopener noreferrer">Greek</a>
+  <a href="https://id.confcodeofconduct.com" target="_blank" rel="noopener noreferrer">Indonesian</a>
+  <a href="https://kr.confcodeofconduct.com" target="_blank" rel="noopener noreferrer">Korean</a>
+  <a href="https://sv.confcodeofconduct.com" target="_blank" rel="noopener noreferrer">Swedish</a>
+  <a href="https://ca.confcodeofconduct.com" target="_blank" rel="noopener noreferrer">Catalan</a>
   </div>
   <p>
     All attendees, speakers, sponsors and volunteers at our conference are required to agree with the following Code
