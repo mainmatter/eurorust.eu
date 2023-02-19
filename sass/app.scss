@@ -223,6 +223,7 @@ $atomium-bg-width: 1429px;
   }
 
   .neon span {
+    margin: 16px;
     text-transform: uppercase;
     border: 3.2px solid var(--pink);
     @include neon-border-style(true);
