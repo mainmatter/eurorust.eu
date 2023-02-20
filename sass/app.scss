@@ -84,7 +84,7 @@ $atomium-bg-width: 1429px;
     }
   }
 
-  &.imprint {
+  &.imprint, &.cancellation_up_to_30_days_before_the_conference {
     background: url("/images/background-generic-1.webp") top right no-repeat;
     background-size: auto 100%;
     @include mobile-only {
