@@ -2,11 +2,11 @@
 
 {% block head %}
 
-<link rel="preload" as="image" href="/images/dt_hero_1.webp" media="(min-width: 640.1px)">
+<link rel="preload" as="image" href="/images/atomium.webp" media="(min-width: 640.1px)">
 <link rel="preload" as="image" href="/images/logo.webp" media="(min-width: 640.1px)">
 <link rel="preload" as="image" href="/images/logo-mobile.webp" media="(max-width: 640px)">
-<link rel="preload" as="image" href="/images/dt_hero_2.jpg" media="(min-width: 640.1px)">
-<link rel="preload" as="image" href="/images/dt_hero_3.webp" media="(min-width: 640.1px)">
+<link rel="preload" as="image" href="/images/hero_2.jpg" media="(min-width: 640.1px)">
+<link rel="preload" as="image" href="/images/background_2.jpg" media="(min-width: 640.1px)">
 <link rel="preload" as="image" href="/images/background-middle.webp" media="(min-width: 640.1px)">
 <link rel="preload" as="image" href="/images/background-middle-mobile.webp" media="(max-width: 640px)">
 <link rel="preload" as="image" href="/images/background-bottom.webp" media="(min-width: 640.1px)">
@@ -24,18 +24,14 @@
 
 <main class="sections">
   <div class="top-block">
-    <div class="background-container left">
-    </div>
-    <div class="background-container center">
-      {% include "partials/main_header.html" %}
+    {% include "partials/main_header.html" %}
 
-      {% include "sections/about.html" %}
+    {% include "sections/about.html" %}
 
-      {% include "sections/get-involved.html" %}
-    </div>
-    <div class="background-container right">
-    </div>
+    {% include "sections/get-involved.html" %}
   </div>
+  <div class="top-block-part-2"></div>
+  <div class="top-block-part-3"></div>
 
   <div class="middle-block">
     {% include "sections/topics.html" %}
