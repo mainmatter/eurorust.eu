@@ -2,101 +2,114 @@
 
 h1,
 h2,
-h3,
-.h3 {
-  font-family: Prototype;
-  text-transform: uppercase;
-  text-align: center;
+h3 {
+  @include neon-text-style;
 }
 
 h2 {
-  text-shadow: 0px 0px 10px #d01b91;
-  color: rgb(255, 255, 255);
-  font-size: 32px;
-  letter-spacing: 1.6px;
+  font-family: Poppins-Light-Italic;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0;
+  font-size: 35px;
+  line-height: 45px;
 
-  @include desktop-only {
+  @include desktop-and-tablet-only {
+    font-size: 55px;
+    line-height: 65px;
+  }
+}
+
+hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-family: Poppins-SemiBoldItalic;
+  font-size: 40px;
+  line-height: 46px;
+
+  @include desktop-and-tablet-only {
+    font-size: 55px;
+    line-height: 65px;
+  }
+}
+
+h4,
+h5 {
+  font-family: Poppins-Light;
+  font-size: 25px;
+  line-height: 28px;
+  color: var(--pink);
+  @include desktop-and-tablet-only {
     font-size: 40px;
-    letter-spacing: 2px;
+    line-height: 35px;
   }
 }
 
-h3,
-.h3 {
-  text-shadow: 0px 0px 10px #d01b91;
-  color: rgb(255, 255, 255);
-  font-size: 24px;
-  letter-spacing: 1.6px;
-
-  @include desktop-only {
-    font-size: 32px;
-    letter-spacing: 2px;
+h5 {
+  font-family: Poppins-Light;
+  color: var(--white);
+  font-size: 25px;
+  line-height: 30px;
+  @include desktop-and-tablet-only {
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: 55px;
   }
 }
 
-p {
-  color: rgb(255, 255, 255);
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 32px;
+h3.pill-title {
+  font-family: Poppins-Light;
+  background: var(--black);
+  border-radius: 41px;
+  letter-spacing: 0;
   text-align: center;
-
-  @include desktop-only {
-    font-size: 18px;
-    line-height: 40px;
-  }
-
-  & + p,
-  & + h3 {
-    margin-top: 17px;
-  }
-
-  &.note {
-    font-style: italic;
-  }
+  line-height: 40px;
+  color: var(--white);
+  text-transform: uppercase;
+  text-shadow: none;
+  font-size: 32px;
+  box-shadow: var(--pink) 2px solid;
+  @include neon-border-style();
 }
 
-ul {
-  list-style: inside;
+p.light-font {
+  font-family: Poppins-Light;
 }
 
-ol {
-  list-style: decimal;
-  margin-left: 1.2rem;
-}
+p,
+.generic-content .box a {
+  font-family: Poppins-Regular;
+  font-size: 18px;
+  line-height: 24px;
 
-ul,
-ol {
-  color: rgb(255, 255, 255);
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 32px;
-  text-align: center;
-
-  @include desktop-only {
-    font-size: 18px;
-    line-height: 40px;
-  }
-
-  p + &,
-  h3 + & {
-    margin-top: 17px;
-  }
-
-  & + p,
-  & + h3 {
-    margin-top: 17px;
+  @include desktop-and-tablet-only {
+    font-size: 22px;
+    line-height: 28px;
   }
 }
 
 a {
-  color: rgb(255, 255, 255);
-  transition: text-decoration-color 0.15s ease-out;
-  text-decoration-color: #d01b91;
+  text-decoration: none;
+}
 
-  &:hover {
-    text-decoration-color: #fffb3d;
+.generic-content .box a {
+  color: var(--neon-green);
+}
+
+.text-centered {
+  text-align: center;
+}
+
+.group-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 80px;
+  @include desktop-and-tablet-only {
+    gap: 100px;
   }
 }

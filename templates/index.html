@@ -1,41 +1,58 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %}
 
-<main>
-  <section class="about">
-    <h2 class="title">About EuroRust</h2>
-    <p>
-      EuroRust is a 2 day conference for the European Rust community. We cover
-      all things Rust: from Rust patterns and idioms to systems programming and
-      CLI tooling, servers WASM, and embedded systems.
-    </p>
-    <p class="rustfest">EuroRust is part of the RustFest family of events.</p>
-    <img src="/images/rustfest-logo.svg" alt="RustFest logo" class="rustfest-logo" />
-  </section>
+{% block head %}
 
-  <section class="get-involved">
-    <div class="container">
-      <h2 class="title">Get involved with EuroRust!</h2>
-      <div class="actions">
-        <a href="https://twitter.com/euro_rust" class="twitter">follow us on Twitter</a>
-        <a href="http://eepurl.com/h5i1k1" class="mailing-list">sign up to the mailing list</a>
-      </div>
+<link rel="preload" as="image" href="/images/dt_hero_1.webp" media="(min-width: 640.1px)">
+<link rel="preload" as="image" href="/images/logo.webp" media="(min-width: 640.1px)">
+<link rel="preload" as="image" href="/images/logo-mobile.webp" media="(max-width: 640px)">
+<link rel="preload" as="image" href="/images/dt_hero_2.jpg" media="(min-width: 640.1px)">
+<link rel="preload" as="image" href="/images/dt_hero_3.webp" media="(min-width: 640.1px)">
+<link rel="preload" as="image" href="/images/background-middle.webp" media="(min-width: 640.1px)">
+<link rel="preload" as="image" href="/images/background-middle-mobile.webp" media="(max-width: 640px)">
+<link rel="preload" as="image" href="/images/background-bottom.webp" media="(min-width: 640.1px)">
+<link rel="preload" as="image" href="/images/background-bottom-mobile.webp" media="(max-width: 640px)">
+<link rel="preload" as="image" href="/images/m_hero.webp" media="(max-width: 640px)">
+
+<script src='https://js.tito.io/v2' async></script>
+<script>
+  TitoDevelopmentMode = window.location.hostname === "localhost";
+</script>
+
+{% endblock head %}
+
+{% block content %}
+
+<main class="sections">
+  <div class="top-block">
+    <div class="background-container left">
     </div>
-  </section>
+    <div class="background-container center">
+      {% include "partials/main_header.html" %}
 
-  <section class="talks our-speakers">
-    <ul class="topics">
-      <li>Rust patterns & idioms</li>
-      <li>Distributed Systems</li>
-      <li>WASM</li>
-      <li>Servers</li>
-      <li>Embedded Systems</li>
-      <li>Rust case studies</li>
-    </ul>
+      {% include "sections/about.html" %}
+
+      {% include "sections/get-involved.html" %}
+    </div>
+    <div class="background-container right">
+    </div>
+  </div>
+
+  <div class="middle-block">
+    {% include "sections/topics.html" %}
+
+    {% include "sections/past-event-highlights.html" %}
 
     {% include "sections/past-speakers.html" %}
-  </section>
+  </div>
 
-  {% include "sections/past-sponsors.html" %}
+  <div class="end-block">
+    {% include "sections/venue.html" %}
+
+    {% include "sections/presented-by.html" %}
+
+    {% include "sections/past-sponsors.html" %}
+
+    {% include "partials/footer.html" %}
+  </div>
 </main>
-
 {% endblock content %}

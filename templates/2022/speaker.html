@@ -5,7 +5,7 @@
 <main>
 	<section class="speaker-profile">
 		<img class="profile-image" alt="{{ page.extra.speaker_name }} profile picture"
-			src="/images/speakers/{{ page.extra.speaker_image }}.jpeg" />
+			src="/2022/images/speakers/{{ page.extra.speaker_image }}.jpeg" />
 		<div class="speaker-details">
 			<h2>{{ page.extra.speaker_name }}</h2>
 			<h3>
@@ -24,10 +24,11 @@
 			<div class="links">
 				{% if page.extra.twitter %}
 				<a href="https://twitter.com/{{ page.extra.twitter }}"><img alt="twitter icon"
-						src="/images/icons/twitter.svg"></a>
+						src="/2022/images/icons/twitter.svg"></a>
 				{% endif %}
 				{% if page.extra.web %}
-				<a href="{{ page.extra.web }}"><img alt="external link icon" src="/images/icons/external-link.svg"></a>
+				<a href="{{ page.extra.web }}"><img alt="external link icon"
+						src="/2022/images/icons/external-link.svg"></a>
 				{% endif %}
 			</div>
 			{% endif %}

@@ -1,5 +1,13 @@
+@import "./colors.scss";
+
 @mixin min-screen-width($width) {
   @media only screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin min-max-screen-width($min-width, $max-width) {
+  @media only screen and (min-width: $min-width) and (max-width: $max-width) {
     @content;
   }
 }
@@ -22,101 +30,91 @@
   }
 }
 
+@mixin mobile-xl-only {
+  @include min-max-screen-width(480px, 640px) {
+    @content;
+  }
+}
+
 @mixin mobile-only {
   @media only screen and (max-width: 640px) {
     @content;
   }
 }
 
-@mixin call-to-action-button($color, $bgColor) {
-  display: block;
-  background: #fffb3d;
-  background-position: top 23px center;
-  background-repeat: no-repeat;
-  box-shadow: 4px 4px 0px 0px #d01b91;
-  max-width: 80vw;
-  padding: 1.2rem 2.2rem;
-  color: #d01b91;
-  font-family: Prototype, sans-serif;
-
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-
-  @include desktop-only {
-    display: inline-block;
-    max-width: 360px;
-    margin-right: 10px;
+@mixin mobile-xs-only {
+  @media only screen and (max-width: 480px) {
+    @content;
   }
-
-  @content;
 }
 
-@mixin hexagon($width, $height, $border, $borderColor) {
-  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-
-  position: relative;
-  width: $width;
-  height: $height;
-  background: $borderColor;
-
-  & > img {
-    position: absolute;
-    top: $border;
-    left: $border;
-    width: calc(#{$width} - #{$border} * 2); //25rem
-    height: calc(#{$height} - #{$border} * 2); //29rem
+@mixin mobile-and-tablet-only {
+  @media only screen and (max-width: 768px) {
+    @content;
   }
-
-  @content;
 }
 
-@mixin titlePill($mainColor, $secondaryColor) {
-  display: flex;
-  background-color: $mainColor;
-  color: $secondaryColor;
-  border: 0.3rem $mainColor solid;
-
-  h3 {
-    text-shadow: none;
-    align-self: center;
-    margin-left: 8px;
-    font-size: 1.5rem;
-  }
-
-  h3:first-child {
-    color: $secondaryColor; //rgb(2, 0, 46);
-  }
-
-  h3:nth-child(2) {
-    border: 0.5rem $secondaryColor solid;
-    background-color: $secondaryColor;
-    color: $mainColor;
-  }
-
-  @content;
+@mixin neon-text-style {
+  color: var(--white);
+  text-shadow: 1px 1px 0px var(--pink), -1px -1px 0px var(--pink),
+    1px -1px 0px var(--pink), -1px 1px 0px var(--pink), 0 4px 21px var(--pink);
 }
 
-@mixin talkTitle() {
-  font-family: Prototype, sans-serif;
-  text-align: justify;
-  text-transform: uppercase;
-  color: rgb(2, 0, 46);
-  transform: rotate(-4deg);
-  display: inline-block;
-  background: rgb(255, 255, 255);
-  border: 1.5px solid rgb(255, 255, 255);
-  box-shadow: 1px 1px 0px 0px #d01b91;
-  text-align: left;
-  list-style-type: none;
-  letter-spacing: 0.8px;
-  padding: 2px 5px;
-  font-size: 16px;
-  line-height: 24px;
-  @include desktop-and-tablet-only {
-    font-size: 24px;
-    letter-spacing: 2px;
+@mixin neon-border-style($intens: false) {
+  @if $intens {
+    box-shadow: 0 0 26px 0 var(--pink), 0 0 26px 0 var(--pink),
+      inset 0px 0 36px 0 var(--pink), inset 0px 0 36px 0 var(--pink);
+  } @else {
+    box-shadow: 0 0 26px 0 var(--pink);
+  }
+}
+
+@mixin pill-button(
+  $selector,
+  $paddingButton,
+  $icon: false,
+  $iconHeight: 20px,
+  $iconWidth: 27px
+) {
+  #{$selector} {
+    --font-size: 18px;
+    @include desktop-and-tablet-only {
+      --font-size: 22px;
+    }
+    --line-height: 56px;
+    color: var(--white);
+    font-size: var(--font-size);
+    font-family: Poppins-Light;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: var(--line-height);
+
+    border: 2px solid var(--white);
+    border-radius: 41px;
+    padding: 0 #{$paddingButton};
+    @content;
   }
 
-  @content;
+  #{$selector}:hover {
+    background: var(--transparent-white);
+  }
+
+  @if $icon {
+    #{$selector}:before {
+      content: "";
+      display: block;
+      width: #{$iconWidth};
+      height: #{$iconHeight};
+      float: left;
+      margin-bottom: 0px;
+      margin-left: 0px;
+      margin-right: calc(#{$iconHeight} / 2.5);
+
+      --maxHeightInPill: max(#{$iconHeight}, var(--font-size));
+      --marginTopIcon: calc((var(--line-height) - var(--maxHeightInPill)) / 2);
+      margin-top: var(--marginTopIcon);
+
+      background: url(/images/icons/#{$icon}) no-repeat;
+    }
+  }
 }

@@ -2,35 +2,30 @@
 [extra.section.speakers]
 	title = "Past speakers"
 
-[[extra.sponsors.premier_partners]]
+[[extra.past_sponsors]]
 	title="rust_foundation"
 	link="https://foundation.rust-lang.org/"
-	image_format="png"
+	image_format="svg"
 
-[[extra.sponsors.premier_partners]]
+[[extra.past_sponsors]]
 	title="ferrocene"
 	link="https://ferrous-systems.com/"
-	image_format="png"
+	image_format="svg"
 
-[[extra.sponsors.premier_partners]]
+[[extra.past_sponsors]]
 	title="arm"
 	link="https://www.arm.com/"
 	image_format="svg"
 
-[[extra.sponsors.partners]]
+[[extra.past_sponsors]]
 	title="google"
 	link="https://about.google/"
-	image_format="png"
+	image_format="svg"
 
-[[extra.sponsors.supporters]]
-	title="grafbase"
-	link="https://grafbase.com/"
-	image_format="png"
-
-[[extra.sponsors.supporters]]
+[[extra.past_sponsors]]
 	title="oxidos"
 	link="https://oxidos.io"
-	image_format="png"
+	image_format="svg"
 
 [[extra.speakers]]
 	name="Daniel Stenberg"
