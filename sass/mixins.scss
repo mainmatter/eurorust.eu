@@ -30,6 +30,18 @@
   }
 }
 
+@mixin mobile-xxs-only {
+  @media only screen and (orientation: portrait) and (max-width: 375px) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @include min-max-screen-width(640px, 768px) {
+    @content;
+  }
+}
+
 @mixin mobile-xl-only {
   @include min-max-screen-width(480px, 640px) {
     @content;

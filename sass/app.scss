@@ -18,25 +18,48 @@ $atomium-bg-width: 1429px;
   }
   background-size: contain;
 
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
   @include desktop-and-tablet-only {
-    height: 80vh;
-    background: url("/images/atomium.webp") top center no-repeat,
+    background: url("/images/atomium.webp") bottom center no-repeat,
       url("/images/hero_2.jpg") top center no-repeat;
-    background-size: contain, 100% 100%;
+    background-size: 90% auto, 100% 100%;
+    @media (orientation: portrait) or ((orientation: landscape) and (max-width: 1300px)) {
+      @media (orientation: portrait) and (min-height: 1300px) {
+        height: 80vh;
+      }
+      background: url("/images/atomium.webp") top center no-repeat,
+        url("/images/hero_2.jpg") top center no-repeat;
+      background-size: auto 100%, 100% 100%;
+    }
+    max-width: 100%;
   }
 }
 
 .top-block-part-2 {
-  z-index: -1;
-  transform: scale(-1);
-  background: url("/images/background_2.jpg") top left no-repeat;
-  background-size: 100% 100%;
-  height: 70vh;
+  @include mobile-xxs-only {
+    margin-top: 10rem;
+  }
+  @include desktop-and-tablet-only {
+    transform: scale(-1);
+    background: url("/images/background_2.jpg") top left no-repeat;
+    background-size: 100% 100%;
+    height: 70vh;
+    @media (orientation: portrait) {
+      height: 750px;
+    }
+  }
 }
 
 .top-block-part-3 {
-  z-index: -1;
-  height: 30vh;
+  @include desktop-and-tablet-only {
+    z-index: -1;
+    height: 30vh;
+    @media (orientation: portrait) {
+      height: 10vh;
+    }
+  }
 }
 
 .middle-block {
@@ -91,30 +114,30 @@ $atomium-bg-width: 1429px;
 }
 
 .hero {
-  padding: 28px 0px 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 60vh;
+  justify-content: space-around;
+  height: 100%;
 
-  @include desktop-and-tablet-only {
-    padding: 4rem 2.5rem 0;
+  @include mobile-xxs-only {
+    height: 130%;
   }
 
-  .location {
-    margin-bottom: 78px;
+  @include mobile-only {
+    margin-top: 2rem;
+    gap: 2.5rem;
+  }
 
-    @include desktop-and-tablet-only {
-      margin-bottom: 5rem;
-    }
+  h1 {
+    text-align: center;
   }
 
   .logo img {
     width: 320px;
 
     @include desktop-and-tablet-only {
-      width: 477px;
-      margin-bottom: 80px;
+      width: 70%;
     }
   }
 }
@@ -128,16 +151,14 @@ $atomium-bg-width: 1429px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 70px;
-  margin: 0 auto 55px;
-  max-width: 1300px;
 
   @include desktop-and-tablet-only {
+    max-width: 1300px;
     height: fit-content;
     grid-template-columns: 0.45fr 0.35fr;
     gap: 60px;
     align-items: center;
     justify-content: center;
-    margin-bottom: 180px;
   }
 
   h3 {
@@ -167,9 +188,17 @@ $atomium-bg-width: 1429px;
 }
 
 .get-involved {
+  @include desktop-and-tablet-only {
+    transform: scale(-1);
+  }
   margin: auto;
   max-width: 1100px;
   width: 95%;
+
+  @include min-max-screen-width(640px, 1099px) {
+    margin-top: -10%;
+  }
+
   @include wide-desktop-only {
     height: fit-content;
     width: 90%;
@@ -689,7 +718,6 @@ $atomium-bg-width: 1429px;
       display: flex;
     }
     grid-template-columns: 1fr 75px;
-    // justify-content: center;
     align-items: center;
     a {
       text-decoration: none;
