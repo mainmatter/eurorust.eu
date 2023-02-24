@@ -136,6 +136,14 @@ $atomium-bg-width: 1429px;
 }
 
 .generic-block {
+  background: url("/images/background-generic-1.webp") top right no-repeat;
+  background-size: auto 100%;
+  @include mobile-only {
+    background: url("/images/background-generic-mobile-1.webp") top right
+      no-repeat;
+    background-size: 100% auto;
+  }
+
   &.conference_code_of_conduct {
     background: url("/images/background-generic-1.webp") top right no-repeat,
       url("/images/background-generic-2.webp") bottom left no-repeat;
@@ -149,17 +157,6 @@ $atomium-bg-width: 1429px;
         url("/images/background-generic-mobile-2.webp") bottom left no-repeat;
       background-position-y: 0, 65rem, 145rem, 215rem;
       background-size: 100% auto, 100% auto, 100% auto, 100% auto;
-    }
-  }
-
-  &.imprint,
-  &.cancellation_up_to_30_days_before_the_conference {
-    background: url("/images/background-generic-1.webp") top right no-repeat;
-    background-size: auto 100%;
-    @include mobile-only {
-      background: url("/images/background-generic-mobile-1.webp") top right
-        no-repeat;
-      background-size: 100% auto;
     }
   }
 }
