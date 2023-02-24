@@ -33,20 +33,26 @@
 
   <div class="middle-block">
     {% include "sections/topics.html" %}
-
-    {% include "sections/past-event-highlights.html" %}
-
-    {% include "sections/past-speakers.html" %}
+    <div class="part-1">
+      {% include "sections/past-event-highlights.html" %}
+    </div>
+    <div class="part-2">
+      {% include "sections/past-speakers.html" %}
+    </div>
   </div>
 
   <div class="end-block">
-    {% include "sections/venue.html" %}
+    <div class="part-1">
+      {% include "sections/venue.html" %}
 
-    {% include "sections/presented-by.html" %}
+      {% include "sections/presented-by.html" %}
 
-    {% include "sections/past-sponsors.html" %}
+    </div>
+    <div class="part-2">
+      {% include "sections/past-sponsors.html" %}
 
-    {% include "partials/footer.html" %}
+      {% include "partials/footer.html" %}
+    </div>
   </div>
 </main>
 {% endblock content %}
