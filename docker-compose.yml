@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   zola:
-    image: ghcr.io/getzola/zola:v0.17.0
+    image: ghcr.io/getzola/zola:v0.17.1
     command:
       - serve
       - --interface
