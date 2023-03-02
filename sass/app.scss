@@ -12,62 +12,138 @@ body {
 $atomium-bg-width: 1429px;
 
 .top-block {
-  display: grid;
-  --element-width: min(1429px, 100vw);
-  grid-template-columns: auto var(--element-width) auto;
-}
-
-.background-container.center {
   background: url("/images/m_hero.webp") top center no-repeat;
   @include mobile-only {
     background-size: auto 53.5rem;
   }
   background-size: contain;
 
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
   @include desktop-and-tablet-only {
-    background: url("/images/dt_hero_1.webp") top center no-repeat;
-    background-size: $atomium-bg-width auto;
+    background: url("/images/atomium.webp") bottom center no-repeat,
+      url("/images/hero_2.jpg") top center no-repeat;
+    background-size: 90% auto, 100% 100%;
+    @media (orientation: portrait) or ((orientation: landscape) and (max-width: 1300px)) {
+      @media (orientation: portrait) and (min-height: 1300px) {
+        height: 80vh;
+      }
+      background: url("/images/atomium.webp") top center no-repeat,
+        url("/images/hero_2.jpg") top center no-repeat;
+      background-size: auto 100%, 100% 100%;
+    }
+    max-width: 100%;
   }
 }
 
-.background-container.left {
+.top-block-part-2 {
+  @include mobile-xxs-only {
+    margin-top: 10rem;
+  }
   @include desktop-and-tablet-only {
-    background: url("/images/dt_hero_2.jpg") top left no-repeat;
-    background-size: $atomium-bg-width auto;
+    transform: scale(-1);
+    background: url("/images/background_2.jpg") top left no-repeat;
+    background-size: 100% 100%;
+    height: 70vh;
+    @media (orientation: portrait) {
+      height: 750px;
+    }
   }
 }
 
-.background-container.right {
+.top-block-part-3 {
   @include desktop-and-tablet-only {
-    background: url("/images/dt_hero_3.webp") top left no-repeat;
-    background-size: $atomium-bg-width auto;
+    z-index: -1;
+    height: 30vh;
+    @media (orientation: portrait) {
+      height: 10vh;
+    }
   }
 }
 
 .middle-block {
-  @include mobile-only {
+  @include mobile-and-tablet-only {
     background: url("/images/background-middle-mobile.webp") top -2rem left no-repeat,
       url("/images/background-generic-mobile-3.webp") top calc(458px + 30vh)
         right no-repeat;
     background-size: 70% auto, 100% 50%;
   }
-  background: url("/images/background-middle.webp") center left no-repeat;
-  background-size: 70% 100%;
+  .part-1 {
+    @include desktop-and-tablet-only {
+      background: url("/images/background_2.jpg") top left no-repeat;
+      background-size: 100% 100%;
+      @media (orientation: portrait) {
+        height: 100%;
+      }
+    }
+  }
+  .part-2 {
+    @include desktop-and-tablet-only {
+      transform: scaleY(-1);
+      background: url("/images/background_2.jpg") top left no-repeat;
+      background-size: 100% 100%;
+      @media (orientation: portrait) {
+        height: 100%;
+      }
+      & > section {
+        transform: scaleY(-1);
+        padding-top: 10rem;
+      }
+    }
+  }
 }
 
 .end-block {
-  @include mobile-only {
+  @include mobile-and-tablet-only {
     background: url("/images/background-bottom-mobile.webp") bottom -23rem right
         no-repeat,
       url("/images/background-middle-mobile.webp") top left no-repeat;
     background-size: 100% 70%, 100% 50%;
   }
 
-  background: url("/images/background-bottom.webp") bottom right no-repeat;
-  background-size: auto 100%;
+  .part-1 {
+    @include desktop-and-tablet-only {
+      transform: scaleX(-1);
+      background: url("/images/background_2.jpg") top left no-repeat;
+      background-size: 100% 100%;
+      & > section,
+      & > div {
+        transform: scaleX(-1);
+      }
+    }
+  }
+  .part-2 {
+    @include desktop-and-tablet-only {
+      &::before {
+        content: "";
+        transform: scale(-1);
+        background: url("/images/background_2.jpg") top left no-repeat;
+        background-size: 100% 100%;
+        transform: scale(-1);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        max-height: 700px;
+        z-index: -1;
+      }
+      & > section,
+      & > div {
+        padding-top: 10rem;
+      }
+    }
+  }
 }
 
 .generic-block {
+  background: url("/images/background-generic-1.webp") top right no-repeat;
+  background-size: auto 100%;
+  @include mobile-only {
+    background: url("/images/background-generic-mobile-1.webp") top right
+      no-repeat;
+    background-size: 100% auto;
+  }
+
   &.conference_code_of_conduct {
     background: url("/images/background-generic-1.webp") top right no-repeat,
       url("/images/background-generic-2.webp") bottom left no-repeat;
@@ -83,42 +159,33 @@ $atomium-bg-width: 1429px;
       background-size: 100% auto, 100% auto, 100% auto, 100% auto;
     }
   }
-
-  &.imprint, &.cancellation_up_to_30_days_before_the_conference {
-    background: url("/images/background-generic-1.webp") top right no-repeat;
-    background-size: auto 100%;
-    @include mobile-only {
-      background: url("/images/background-generic-mobile-1.webp") top right
-        no-repeat;
-      background-size: 100% auto;
-    }
-  }
 }
 
 .hero {
-  padding: 28px 0px 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
+  height: 100%;
 
-  @include desktop-and-tablet-only {
-    padding: 100px 44px;
+  @include mobile-xxs-only {
+    height: 130%;
   }
 
-  .location {
-    margin-bottom: 78px;
+  @include mobile-only {
+    margin-top: 2rem;
+    gap: 2.5rem;
+  }
 
-    @include desktop-and-tablet-only {
-      margin-bottom: 120px;
-    }
+  h1 {
+    text-align: center;
   }
 
   .logo img {
     width: 320px;
 
     @include desktop-and-tablet-only {
-      width: 477px;
-      margin-bottom: 80px;
+      width: 70%;
     }
   }
 }
@@ -132,15 +199,14 @@ $atomium-bg-width: 1429px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 70px;
-  margin: 0 auto 55px;
-  max-width: 1300px;
 
   @include desktop-and-tablet-only {
+    max-width: 1300px;
+    height: fit-content;
     grid-template-columns: 0.45fr 0.35fr;
     gap: 60px;
     align-items: center;
     justify-content: center;
-    margin-bottom: 180px;
   }
 
   h3 {
@@ -170,10 +236,19 @@ $atomium-bg-width: 1429px;
 }
 
 .get-involved {
+  @include desktop-and-tablet-only {
+    transform: scale(-1);
+  }
   margin: auto;
   max-width: 1100px;
   width: 95%;
+
+  @include min-max-screen-width(640px, 1099px) {
+    margin-top: -10%;
+  }
+
   @include wide-desktop-only {
+    height: fit-content;
     width: 90%;
   }
   .actions {
@@ -332,7 +407,7 @@ $atomium-bg-width: 1429px;
 
   @include desktop-and-tablet-only {
     gap: 80px;
-    margin-bottom: 180px;
+    margin-bottom: 0;
   }
 
   video {
@@ -572,7 +647,7 @@ $atomium-bg-width: 1429px;
   max-width: 90%;
   @include desktop-and-tablet-only {
     gap: 80px;
-    margin-bottom: 235px;
+    margin-bottom: 0px;
   }
   img {
     height: 50px;
@@ -591,7 +666,7 @@ $atomium-bg-width: 1429px;
   align-items: center;
   margin-bottom: 80px;
   @include desktop-and-tablet-only {
-    margin-bottom: 180px;
+    margin-bottom: 0;
   }
   .sponsors-grid-container {
     display: flex;
@@ -691,7 +766,6 @@ $atomium-bg-width: 1429px;
       display: flex;
     }
     grid-template-columns: 1fr 75px;
-    // justify-content: center;
     align-items: center;
     a {
       text-decoration: none;
