@@ -7,7 +7,6 @@ on:
       - "**.jpg"
       - "**.jpeg"
       - "**.png"
-      - "**.webp"
 jobs:
   build:
     name: calibreapp/image-actions
