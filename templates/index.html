@@ -51,8 +51,11 @@
 
     </div>
     <div class="part-2">
+      {% if section.extra.enable_sponsors%}
+      {% include "sections/sponsors.html" %}
+      {% else %}
       {% include "sections/past-sponsors.html" %}
-
+      {% endif %}
       {% include "partials/footer.html" %}
     </div>
   </div>

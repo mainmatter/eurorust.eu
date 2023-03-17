@@ -1,6 +1,7 @@
 +++
 [extra]
 	enable_cfp=false
+	enable_sponsors=false
 
 [extra.cfp]
 	link="#"
@@ -31,6 +32,11 @@
 [[extra.past_sponsors]]
 	title="oxidos"
 	link="https://oxidos.io"
+	image_format="svg"
+
+[[extra.sponsors.head_partners]]
+	title="rust_foundation"
+	link="https://foundation.rust-lang.org/"
 	image_format="svg"
 
 [[extra.speakers]]
