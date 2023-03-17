@@ -92,6 +92,11 @@ $atomium-bg-width: 1429px;
       }
     }
   }
+  @include desktop-and-tablet-only {
+    & > *:last-child {
+      margin-bottom: 212px;
+    }
+  }
 }
 
 .end-block {
@@ -437,11 +442,11 @@ $atomium-bg-width: 1429px;
   align-self: center;
   gap: 100px;
   margin: 0 auto 80px;
+  @include mobile-only {
+    margin-bottom: 60px;
+  }
   width: 90%;
   max-width: 1200px;
-  @include desktop-and-tablet-only {
-    margin-bottom: 235px;
-  }
 
   h3 {
     display: flex;
@@ -551,6 +556,16 @@ $atomium-bg-width: 1429px;
       }
     }
   }
+}
+
+.cfp {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+  @include desktop-and-tablet-only {
+    padding-top: 1rem;
+  }
+  @include pill-button(".submit-a-talk-button", 2.5rem, "plus.svg", 27px);
 }
 
 .venue {
