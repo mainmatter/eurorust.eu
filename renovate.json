@@ -1,10 +1,15 @@
 {
   "extends": ["github>mainmatter/renovate-config:default.json5"],
-  "regexManagers": [{
-    "commitMessageTopic": "Netlify config {{depName}}",
-    "fileMatch": [
-      "(^|/)netlify\\.toml$"
-    ],
-    "versioning": "docker"
-  }]
+  "regexManagers": [
+    {
+      "description": "Update Zola version in Netlify config",
+      "fileMatch": [".toml$"],
+      "matchStrings": [
+        "ZOLA_VERSION = \"(?<currentValue>.*?)\""
+      ],
+      "depNameTemplate": "getzola/zola",
+      "datasourceTemplate": "github-releases"
+    }
+  ]
+
 }
