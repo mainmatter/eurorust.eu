@@ -1,5 +1,5 @@
 {
-  "extends": ["github>mainmatter/renovate-config:default.json5"],
+  "extends": ["github>mainmatter/renovate-config:default.json5", ":disableDependencyDashboard"],
   "regexManagers": [
     {
       "description": "Update Zola version in Netlify config",
