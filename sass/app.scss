@@ -593,7 +593,8 @@ $atomium-bg-width: 1429px;
 
     @include desktop-only {
       grid-column: 1;
-      grid-row: 1 / 4;
+      grid-row-start: 1;
+      grid-row-end: 4;
     }
 
     .image-venue {
@@ -749,19 +750,24 @@ $atomium-bg-width: 1429px;
       line-height: 35px;
     }
 
-    li:nth-child(n + 2)::before {
+    li:not(:last-child)::after {
       content: "·";
-      margin-right: 10px;
+      margin-left: 10px;
       font-family: Poppins-Light;
       font-size: 15px;
       @include desktop-and-tablet-only {
         font-size: 18px;
       }
     }
+
+    li > p {
+      display: inline-block;
+    }
   }
 
   .meta {
-    grid-column: 1 / 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
     @include mobile-only {
       grid-row: 1;
       grid-column: 1;
@@ -770,7 +776,8 @@ $atomium-bg-width: 1429px;
 
   hr {
     width: 100%;
-    grid-column: 1 / 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
     @include mobile-only {
       height: 0px;
       grid-row: 2;
@@ -798,7 +805,8 @@ $atomium-bg-width: 1429px;
     column-gap: 20px;
     @include mobile-only {
       display: grid;
-      grid-row: 1 / 4;
+      grid-row-start: 1;
+      grid-row-end: 4;
       gap: 10px;
     }
     justify-self: end;
