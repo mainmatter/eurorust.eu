@@ -1,6 +1,6 @@
 +++
 [extra]
-	enable_cfp=false
+	enable_cfp=true
 	enable_sponsors=true
 
 [extra.cfp]
