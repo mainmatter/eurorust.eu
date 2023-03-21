@@ -120,7 +120,7 @@
       float: left;
       margin-bottom: 0px;
       margin-left: 0px;
-      margin-right: calc(#{$iconHeight} / 2.5);
+      margin-right: 20px;
 
       --maxHeightInPill: max(#{$iconHeight}, var(--font-size));
       --marginTopIcon: calc((var(--line-height) - var(--maxHeightInPill)) / 2);
