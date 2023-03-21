@@ -9,6 +9,9 @@
   <hr>
   <div class="links">
     <ul class="pages">
+      {% if section.extra.enable_cfp %}
+      <li><a href="{{ section.extra.cfp.link }}" alt="Subtmit a talk">Submit a Talk</a></li>
+      {% endif %}
       <li><a href="/code-of-conduct">Code of Conduct</a></li>
       <li><a href="/cancellation">Cancellation Policy</a></li>
       <li><a href="/sponsorship-prospectus.pdf">Sponsorships</a></li>

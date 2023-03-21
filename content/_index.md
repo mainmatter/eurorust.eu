@@ -1,4 +1,10 @@
 +++
+[extra]
+	enable_cfp=false
+
+[extra.cfp]
+	link="#"
+
 [extra.section.speakers]
 	title = "Past speakers"
 
