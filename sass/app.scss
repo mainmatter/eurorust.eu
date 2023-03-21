@@ -750,8 +750,13 @@ $atomium-bg-width: 1429px;
     }
 
     li:nth-child(n + 2)::before {
-      content: "•";
+      content: "·";
       margin-right: 10px;
+      font-family: Poppins-Light;
+      font-size: 15px;
+      @include desktop-and-tablet-only {
+        font-size: 18px;
+      }
     }
   }
 
