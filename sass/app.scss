@@ -45,25 +45,27 @@ $atomium-bg-width: 1429px;
     transform: scale(-1);
     background: url("/images/background_2.jpg") top left no-repeat;
     background-size: 100% 100%;
-    height: auto;
-    max-height: 470px;
+    height: 70vh;
     @media (orientation: portrait) {
       height: 750px;
     }
-    & > *:first-child {
-      margin-bottom: 180px;
+  }
+}
+
+.top-block-part-3 {
+  @include desktop-and-tablet-only {
+    z-index: -1;
+    height: 30vh;
+    @media (orientation: portrait) {
+      height: 10vh;
     }
   }
 }
 
 .middle-block {
-  @include desktop-and-tablet-only {
-    margin-top: 400px;
-  }
-
   @include mobile-and-tablet-only {
     background: url("/images/background-middle-mobile.webp") top -2rem left no-repeat,
-      url("/images/background-generic-mobile-3.webp") top calc(458px + 200px)
+      url("/images/background-generic-mobile-3.webp") top calc(458px + 30vh)
         right no-repeat;
     background-size: 70% auto, 100% 50%;
   }
@@ -264,7 +266,6 @@ $atomium-bg-width: 1429px;
     @include desktop-and-tablet-only {
       gap: 80px;
       margin-bottom: 100px;
-      margin-top: -180px;
     }
     max-width: 400px;
     width: 100%;
@@ -341,6 +342,7 @@ $atomium-bg-width: 1429px;
       gap: 40px;
       margin: auto;
       width: 60%;
+      margin-bottom: 200px;
     }
 
     p {
