@@ -1,7 +1,7 @@
 +++
 [extra]
 	enable_cfp=false
-	enable_sponsors=false
+	enable_sponsors=true
 
 [extra.cfp]
 	link="#"
@@ -34,7 +34,70 @@
 	link="https://oxidos.io"
 	image_format="svg"
 
+[[extra.sponsors.premier_partners]]
+	title="rust_foundation"
+	link="https://foundation.rust-lang.org/"
+	image_format="svg"
+[[extra.sponsors.premier_partners]]
+	title="rust_foundation"
+	link="https://foundation.rust-lang.org/"
+	image_format="svg"
+[[extra.sponsors.premier_partners]]
+	title="rust_foundation"
+	link="https://foundation.rust-lang.org/"
+	image_format="svg"
+
 [[extra.sponsors.head_partners]]
+	title="rust_foundation"
+	link="https://foundation.rust-lang.org/"
+	image_format="svg"
+[[extra.sponsors.head_partners]]
+	title="rust_foundation"
+	link="https://foundation.rust-lang.org/"
+	image_format="svg"
+[[extra.sponsors.head_partners]]
+	title="rust_foundation"
+	link="https://foundation.rust-lang.org/"
+	image_format="svg"
+[[extra.sponsors.head_partners]]
+	title="rust_foundation"
+	link="https://foundation.rust-lang.org/"
+	image_format="svg"
+
+[[extra.sponsors.partners]]
+	title="rust_foundation"
+	link="https://foundation.rust-lang.org/"
+	image_format="svg"
+[[extra.sponsors.partners]]
+	title="rust_foundation"
+	link="https://foundation.rust-lang.org/"
+	image_format="svg"
+[[extra.sponsors.partners]]
+	title="rust_foundation"
+	link="https://foundation.rust-lang.org/"
+	image_format="svg"
+[[extra.sponsors.partners]]
+	title="rust_foundation"
+	link="https://foundation.rust-lang.org/"
+	image_format="svg"
+[[extra.sponsors.partners]]
+	title="rust_foundation"
+	link="https://foundation.rust-lang.org/"
+	image_format="svg"
+
+[[extra.sponsors.supporters]]
+	title="rust_foundation"
+	link="https://foundation.rust-lang.org/"
+	image_format="svg"
+[[extra.sponsors.supporters]]
+	title="rust_foundation"
+	link="https://foundation.rust-lang.org/"
+	image_format="svg"
+[[extra.sponsors.supporters]]
+	title="rust_foundation"
+	link="https://foundation.rust-lang.org/"
+	image_format="svg"
+[[extra.sponsors.supporters]]
 	title="rust_foundation"
 	link="https://foundation.rust-lang.org/"
 	image_format="svg"
