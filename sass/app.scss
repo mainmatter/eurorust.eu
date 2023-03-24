@@ -21,6 +21,7 @@ $atomium-bg-width: 1429px;
   display: flex;
   flex-direction: column;
   height: 100vh;
+  min-height: 850px;
   @include desktop-and-tablet-only {
     background: url("/images/atomium.webp") bottom center no-repeat,
       url("/images/hero_2.jpg") top center no-repeat;
@@ -169,8 +170,10 @@ $atomium-bg-width: 1429px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  margin-top: 120px;
+  justify-content: space-between;
   height: 100%;
+  gap: 30px;
 
   @include mobile-xxs-only {
     height: 130%;
