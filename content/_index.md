@@ -1,7 +1,7 @@
 +++
 [extra]
 	enable_cfp=false
-	enable_sponsors=false
+	enable_sponsors=true
 
 [extra.cfp]
 	link="#"
