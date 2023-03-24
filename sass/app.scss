@@ -42,7 +42,6 @@ $atomium-bg-width: 1429px;
     margin-top: 10rem;
   }
   @include desktop-and-tablet-only {
-    z-index: -1;
     transform: scale(-1);
     background: url("/images/background_2.jpg") top left no-repeat;
     background-size: 100% 100%;
@@ -52,7 +51,7 @@ $atomium-bg-width: 1429px;
       height: 750px;
     }
     & > *:first-child {
-      margin-bottom: 280px;
+      margin-bottom: 180px;
     }
   }
 }
@@ -265,7 +264,7 @@ $atomium-bg-width: 1429px;
     @include desktop-and-tablet-only {
       gap: 80px;
       margin-bottom: 100px;
-      margin-top: -280px;
+      margin-top: -180px;
     }
     max-width: 400px;
     width: 100%;
