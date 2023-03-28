@@ -39,6 +39,11 @@
 	link="https://foundation.rust-lang.org/"
 	image_format="svg"
 
+[[extra.sponsors.head_partners]]
+	title="realm_group"
+	link="https://www.realmgroup.io/"
+	image_format="svg"
+
 [[extra.speakers]]
 	name="Daniel Stenberg"
 	company="wolfSSL"
