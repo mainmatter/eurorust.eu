@@ -1,5 +1,3 @@
-@import "./colors.scss";
-
 @mixin min-screen-width($width) {
   @media only screen and (min-width: $width) {
     @content;
