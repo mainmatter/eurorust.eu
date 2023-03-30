@@ -19,18 +19,18 @@ body {
 
   .top-block {
     background: url(/images/top-background-desktop.webp) top right no-repeat;
-    background-size: 100% 100%;
+    background-size: auto 100%;
   }
 
   .middle-block {
     background: url(/images/background-generic-2.webp) top left no-repeat;
-    background-size: 100% 100%;
+    background-size: auto 100%;
   }
 
   .bottom-block {
     transform: scaleX(-1);
     background: url(/images/background-generic-2.webp) top left no-repeat;
-    background-size: 100% 100%;
+    background-size: auto 100%;
     .bottom-block-content {
       transform: scaleX(-1);
     }
