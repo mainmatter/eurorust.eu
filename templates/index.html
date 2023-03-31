@@ -1,17 +1,16 @@
 {% extends "base.html" %}
 
 {% block head %}
-
 <link rel="preload" as="image" href="/images/atomium.webp" media="(min-width: 640.1px)">
 <link rel="preload" as="image" href="/images/logo.webp" media="(min-width: 640.1px)">
 <link rel="preload" as="image" href="/images/logo-mobile.webp" media="(max-width: 640px)">
-<link rel="preload" as="image" href="/images/hero_2.jpg" media="(min-width: 640.1px)">
-<link rel="preload" as="image" href="/images/background_2.jpg" media="(min-width: 640.1px)">
+<link rel="preload" as="image" href="/images/top-background-desktop-with-atomium.webp" media="(min-width: 640.1px)">
+<link rel="preload" as="image" href="/images/background-generic-2.webp" media="(min-width: 640.1px)">
 <link rel="preload" as="image" href="/images/background-middle.webp" media="(min-width: 640.1px)">
 <link rel="preload" as="image" href="/images/background-middle-mobile.webp" media="(max-width: 640px)">
 <link rel="preload" as="image" href="/images/background-bottom.webp" media="(min-width: 640.1px)">
 <link rel="preload" as="image" href="/images/background-bottom-mobile.webp" media="(max-width: 640px)">
-<link rel="preload" as="image" href="/images/m_hero.webp" media="(max-width: 640px)">
+<link rel="preload" as="image" href="/images/atomium-mobile.webp" media="(max-width: 640px)">
 
 <script src='https://js.tito.io/v2' async></script>
 <script>
@@ -24,37 +23,25 @@
 
 <main class="sections">
   <div class="top-block">
-    {% include "partials/main_header.html" %}
-  </div>
-  <div class="top-block-part-2">
+    {% include "partials/main_header.html" %} 
     {% include "sections/get-involved.html" %}
   </div>
-
+  {% include "sections/topics.html" %}
   <div class="middle-block">
-    {% include "sections/topics.html" %}
-    <div class="part-1">
-      {% include "sections/past-event-highlights.html" %}
-    </div>
-    <div class="part-2">
-      {% include "sections/past-speakers.html" %}
-    </div>
+    {% include "sections/past-event-highlights.html" %}
+    {% include "sections/past-speakers.html" %}
     {% if section.extra.enable_cfp %}
-    {% include "sections/submit-a-talk.html" %}
+      {% include "sections/submit-a-talk.html" %}
     {% endif %}
   </div>
-
-  <div class="end-block">
-    <div class="part-1">
+  <div class="bottom-block">
+    <div class="bottom-block-content">
       {% include "sections/venue.html" %}
-
       {% include "sections/presented-by.html" %}
-
-    </div>
-    <div class="part-2">
       {% if section.extra.enable_sponsors%}
-      {% include "sections/sponsors.html" %}
+        {% include "sections/sponsors.html" %}
       {% else %}
-      {% include "sections/past-sponsors.html" %}
+        {% include "sections/past-sponsors.html" %}
       {% endif %}
       {% include "partials/footer.html" %}
     </div>
