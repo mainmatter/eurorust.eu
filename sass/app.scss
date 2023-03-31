@@ -324,7 +324,7 @@ body {
     }
   }
 
-  .past-speakers {
+  .speakers {
     display: grid;
     grid-template-rows: auto 1fr;
     grid-template-columns: 1fr;
@@ -353,7 +353,7 @@ body {
       margin: auto;
     }
 
-    .speakers {
+    .speakers-list {
       display: flex;
       flex-flow: row wrap;
       justify-content: space-evenly;
