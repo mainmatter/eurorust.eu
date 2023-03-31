@@ -61,5 +61,33 @@
 
 
 [[extra.speakers]]
+	name="Niko Matsakis"
+	company="AWS"
+	job_title="Senior Principal Engineer at AWS, Member of the Rust Compiler team"
+	image="niko-matsakis.png"
+	twitter="nikomatsakis"
+	web="https://nick.matsakis.net/"
+
+[[extra.speakers]]
+	name="Ashley Williams"
+	company="axo"
+	job_title="former Rust Core team member and Founding Executive Director of the Rust Foundation, Founder of axo"
+	image="ashley-williams.jpeg"
+	twitter="ag_dubs"
+	web="https://axo.dev/"
+
+[[extra.speakers]]
+	name="Armin Ronacher"
+	company="Sentry"
+	job_title="Principal Architect"
+	image="armin-ronacher.webp"
+	twitter="mitsuhiko"
+	web="https://lucumr.pocoo.org/"
+
+[[extra.speakers]]
+	name="Lisa Passing"
+	job_title="Creative Technologist"
+	image="lisa-passing.jpeg"
+	web="https://lislis.de/"
 
 +++
