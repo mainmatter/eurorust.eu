@@ -58,7 +58,7 @@
   }
 }
 
-@mixin mobile-and-tablet-only {
+@mixin mobile-and-phablet-only {
   @media only screen and (max-width: 768px) {
     @content;
   }

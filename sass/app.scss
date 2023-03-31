@@ -18,8 +18,13 @@ body {
   flex-direction: column;
 
   .top-block {
-    background: url(/images/top-background-desktop.webp) top right no-repeat;
-    background-size: 100% 100%;
+    @include min-screen-width(601px) {
+      background-image: url(/images/top-background-desktop-with-atomium.webp);
+      background-size: cover;
+      background-position: bottom center;
+      background-repeat: no-repeat;
+      padding-bottom: var(--margin-between-sections);
+    }
   }
 
   .middle-block {
@@ -40,8 +45,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url(/images/atomium.webp) top center no-repeat;
-    background-size: auto 100%;
+
+    @include min-max-screen-width(1px, 600px) {
+      background-image: url(/images/atomium-mobile.webp);
+      background-position: top center;
+      background-repeat: no-repeat;
+    }
 
     @include min-screen-width(500px) {
       justify-content: space-around;
@@ -52,11 +61,17 @@ body {
       min-height: 900px;
     }
 
+    & > div:first-child {
+      @include desktop-and-tablet-only {
+        margin-top: 50px;
+      }
+    }
+
     @include mobile-xxs-only {
       height: 130%;
     }
 
-    @include mobile-and-tablet-only {
+    @include mobile-and-phablet-only {
       padding-top: 2rem;
       gap: 2.5rem;
     }
@@ -232,7 +247,7 @@ body {
       }
 
       .rustfest-link {
-        @include mobile-and-tablet-only {
+        @include mobile-and-phablet-only {
           justify-self: center;
         }
         img {
@@ -256,7 +271,7 @@ body {
     @include desktop-and-tablet-only {
       max-width: 1500px;
       gap: 72px;
-      margin-top: var(--margin-between-sections);
+      // margin-top: var(--margin-between-sections);
       width: 90%;
     }
 
@@ -771,7 +786,7 @@ body {
   .links {
     display: grid;
     grid-column: 1;
-    @include mobile-and-tablet-only {
+    @include mobile-and-phablet-only {
       grid-row: 3;
       display: flex;
     }
