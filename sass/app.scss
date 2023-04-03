@@ -349,7 +349,10 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 6px 50px;
+      padding: 6px 0;
+      @include mobile-and-phablet-only {
+        padding: 6px 50px;
+      }
       margin: auto;
     }
 
