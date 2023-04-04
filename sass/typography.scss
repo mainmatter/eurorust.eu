@@ -73,6 +73,9 @@ h3.pill-title {
   font-size: 32px;
   box-shadow: var(--pink) 2px solid;
   @include neon-border-style();
+  @include desktop-and-tablet-only {
+    min-width: 340px;
+  }
 }
 
 p.light-font {
