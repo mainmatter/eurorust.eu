@@ -44,10 +44,16 @@
 	link="https://www.realmgroup.io/"
 	image_format="svg"
 
+[[extra.sponsors.head_partners]]
+	title="crabnebula"
+	link="https://crabnebula.dev/"
+	image_format="svg"
+
 [[extra.sponsors.supporters]]
 	title="google"
 	link="https://opensource.google/"
 	image_format="svg"
+
 
 [[extra.speakers]]
 	name="Daniel Stenberg"
