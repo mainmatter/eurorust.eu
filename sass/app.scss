@@ -692,9 +692,8 @@ body {
 
       &.partners {
         gap: 30px;
-        justify-content: left;
+        justify-content: center;
         @include desktop-and-tablet-only {
-          justify-content: center;
           gap: 46px;
         }
         img {
@@ -704,9 +703,8 @@ body {
 
       &.supporters {
         gap: 30px;
-        justify-content: left;
+        justify-content: center;
         @include desktop-and-tablet-only {
-          justify-content: center;
           gap: 46px;
         }
         img {
