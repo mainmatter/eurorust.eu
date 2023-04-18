@@ -44,6 +44,11 @@
 	link="https://www.realmgroup.io/"
 	image_format="svg"
 
+[[extra.sponsors.supporters]]
+	title="google"
+	link="https://opensource.google/"
+	image_format="svg"
+
 [[extra.speakers]]
 	name="Daniel Stenberg"
 	company="wolfSSL"
