@@ -46,7 +46,7 @@
 
 [[extra.sponsors.head_partners]]
 	title="crabnebula"
-	link="https://crabnebula.dev/"
+	link=" https://crabnebula.dev/?utm_campaign=eurorust23&utm_source=eurorust"
 	image_format="svg"
 
 [[extra.sponsors.supporters]]
