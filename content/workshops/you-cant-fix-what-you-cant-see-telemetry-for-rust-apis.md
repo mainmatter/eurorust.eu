@@ -18,22 +18,18 @@ This workshop is designed for developers who are operating Rust services in prod
 <ul>
 	<li>
 		<p>Structured logging (tracing)</p>
-		<br>
 		<p>An introduction to the `tracing` instrumentation library, covering both how to instrument your code (capturing fields, log levels, macros) and how to process the resulting telemetry data in your application (subscriber configuration, logging levels, log filtering).</p>
 	</li>
 	<li>
 		<p>Error handling</p>
-		<br>
 		<p>We will cover Rust’s `Error` trait, with a focus on the information that can be retrieved and recorded in your logs; we will also spend some time on logging patterns (e.g. when should an error be logged?) and relevant libraries for error handling (anyhow/thiserror).</p>
 	</li>
 	<li>
 		<p>Panic handling</p>
-		<br>
 		<p>You should always manage to capture details about what went wrong, even if it’s due to an uncaught panic rather than an error. We will review panic hooks and integrate them in our `tracing` setup.</p>
 	</li>
 	<li>
 		<p>Metrics, both for application and runtime (tokio-metrics)</p>
-		<br>
 		<p>Structured logs are important, but they don’t tell the full story. We will look at how to capture metric data using the `metrics` library, as a tool for designing alarms as well troubleshooting faulty behaviour. We will spend some time on `tokio-metrics` and how to interpret the data it shows with respect to your `tokio` runtime usage.</p>
 	</li>
 </ul>

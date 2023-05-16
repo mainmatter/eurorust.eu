@@ -18,22 +18,18 @@ This workshop is designed for software developers with little to no experience i
 <ul>
 	<li>
 		<p>Part 1: Getting Started</p>
-		<br>
 		<p>We will begin by creating a new project and writing our first lines of Rust code. You will become familiar with new syntax primitives, basic types, expressions, function signatures, and the async/await syntax. Additionally, you will learn how to work with Rust's tooling, such as Cargo and Rust Analyzer.</p>
 	</li>
 	<li>
 		<p>Part 2: Ownership and Borrowing</p>
-		<br>
 		<p>As we add more functionality to our application, we will explore Rust's unique approach to memory management: Ownership and Borrowing. We will delve into the intricacies of this system by examining common situations and understanding how it requires us to rethink application development.</p>
 	</li>
 	<li>
 		<p>Part 3: Shared Access in Concurrent Applications</p>
-		<br>
 		<p>Rust's memory management system is ideal for shared access to data in multi-threaded applications, as it forces us to reconsider how we handle shared memory. In this section, we will learn how to share state across threads, how synchronization primitives function, and the significant role ownership plays.</p>
 	</li>
 	<li>
 		<p>Part 4: Structs, Traits, Serializtion and Deserialization of Data</p>
-		<br>
 		<p>In the final part, we will gain insight into Rust's type system by exploring traits and their applications in serializing and deserializing requests and responses.</p>
 	</li>
 </ul>

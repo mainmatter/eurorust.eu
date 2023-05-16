@@ -20,7 +20,12 @@
         <div class="workshop box">
           {{ page.content | safe }}
           <div class="author-and-booking">
-            <img src="/images/workshops/{{ page.extra.avatar }}" alt="{{ page.extra.avatar_alt }}">
+            <div class="photo-container">
+              <img
+                class="photo"
+                src="/images/workshops/{{ page.extra.avatar }}"
+                alt="{{ page.extra.avatar_alt }}">
+            </div>
             <button class="book-your-ticket button">
               Book Your Ticket
             </button>

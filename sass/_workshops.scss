@@ -119,6 +119,13 @@
         }
       }
 
+      p + p {
+        margin-top: 24px;
+        @include desktop-and-tablet-only {
+          margin-top: 28px;
+        }
+      }
+
       .author-and-booking {
         display: flex;
         flex-direction: column;
@@ -130,7 +137,27 @@
         align-items: center;
         width: 100%;
 
-        img {
+        .photo,
+        .photo-container {
+          border-radius: 50%;
+        }
+
+        .photo-container {
+          border: 3.2px solid var(--pink);
+          @include neon-border-style(true);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .photo {
+          border: 2px solid var(--white);
+          -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+          margin: 15px;
+          @include mobile-only {
+            margin: 10px;
+          }
           max-height: 240px;
         }
       }
