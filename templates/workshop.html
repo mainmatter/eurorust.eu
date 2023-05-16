@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <div class="generic-block workshop {{ page.title | lower | replace(from=' ', to='_')  }}">
+
+    {% include "partials/header-workshops.html" %}
+
+    <main>
+      <section class="workshops workshop-details">
+        <div class="workshop-header">
+          <p class="workshop-date">{{ page.extra.date }}</p>
+          <h3 class="workshop-title">{{ page.title }}</h3>
+          <div class="sponsored-by">
+            <img alt="Mainmatter logo" src="/images/icons/mainmatter.svg" />
+            <p>Workshop run by Mainmatter</p>
+          </div>
+        </div>
+
+        <div class="workshop box">
+          {{ page.content | safe }}
+          <div class="author-and-booking">
+            <img src="/images/workshops/{{ page.extra.avatar }}" alt="{{ page.extra.avatar_alt }}">
+            <button class="book-your-ticket button">
+              Book Your Ticket
+            </button>
+          </div>
+        </div>
+
+      </section>
+    </main>
+
+    {% include "partials/footer.html" %}
+  </div>
+
+{% endblock content %}

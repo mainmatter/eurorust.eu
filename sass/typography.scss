@@ -100,10 +100,12 @@ a {
   text-decoration: none;
 }
 
-.generic-content {
+.generic-block {
   .box a,
   p {
-    font-size: 20px;
+    @include desktop-and-tablet-only {
+      font-size: 20px;
+    }
   }
 
   .box a {

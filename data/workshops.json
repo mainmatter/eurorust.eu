@@ -1,0 +1,12 @@
+[
+  {
+    "date": "Oct 11 2023, 10:00 - 16:00",
+    "title": "Introduction to Rust for Web Developers",
+    "description": "According to the Stack Overflow survey, Rust is one of the most beloved programming languages. In recent years, it has also gained popularity. There has never been a better time to become familiar with Rust! Learning a new programming language is always easier."
+  },
+  {
+    "date": "Oct 11 2023, 10:00 - 16:00",
+    "title": "You can't fix what you can't see: telemetry for Rust APIs",
+    "description": "Your Rust application has finally been deployed to production! Nice! But is it working? This workshop will introduce you to a comprehensive toolkit to detect, troubleshoot and resolve issues in your Rust APIs."
+  }
+]
