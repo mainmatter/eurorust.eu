@@ -12,9 +12,13 @@
 <link rel="preload" as="image" href="/images/background-bottom-mobile.webp" media="(max-width: 640px)">
 <link rel="preload" as="image" href="/images/atomium-mobile.webp" media="(max-width: 640px)">
 
-<script src='https://js.tito.io/v2' async></script>
 <script>
-  TitoDevelopmentMode = window.location.hostname === "localhost";
+  if(!window.tito) {
+    var script = document.createElement('script');
+    script.src = `https://js.tito.io/v2${['localhost', '127.0.0.1'].includes(window.location.hostname)? '/with/development_mode' : ''}`;
+    script.async = true;
+    document.head.appendChild(script);
+  }
 </script>
 
 {% endblock head %}
