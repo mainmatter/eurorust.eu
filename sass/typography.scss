@@ -89,8 +89,10 @@ p,
   line-height: 24px;
 
   @include desktop-and-tablet-only {
-    font-size: 22px;
-    line-height: 28px;
+    &:not(a) {
+      font-size: 22px;
+      line-height: 28px;
+    }
   }
 }
 
@@ -98,8 +100,15 @@ a {
   text-decoration: none;
 }
 
-.generic-content .box a {
-  color: var(--neon-green);
+.generic-content {
+  .box a,
+  p {
+    font-size: 20px;
+  }
+
+  .box a {
+    color: var(--neon-green);
+  }
 }
 
 .text-centered {
