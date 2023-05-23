@@ -1,5 +1,20 @@
 {% extends "base.html" %}
 
+{% block head %}
+  <script>
+    if (!window.tito) {
+      var script = document.createElement('script');
+      script.src = `https://js.tito.io/v2${
+        ['localhost', '127.0.0.1'].includes(window.location.hostname)
+          ? '/with/development_mode'
+          : ''
+        }`;
+      script.async = true;
+      document.head.appendChild(script);
+    }
+  </script>
+{% endblock head %}
+
 {% block content %}
 
   <div class="generic-block workshop {{ page.title | lower | replace(from=' ', to='_')  }}">
@@ -26,9 +41,8 @@
                 src="/images/workshops/{{ page.extra.avatar }}"
                 alt="{{ page.extra.avatar_alt }}">
             </div>
-            <button class="book-your-ticket button">
-              Book Your Ticket
-            </button>
+            <tito-button class="book-your-ticket button" event="events-matter/eurorust-2023">Book
+              Your Ticket</tito-button>
           </div>
         </div>
 

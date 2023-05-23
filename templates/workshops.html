@@ -1,5 +1,20 @@
 {% extends "base.html" %}
 
+{% block head %}
+  <script>
+    if (!window.tito) {
+      var script = document.createElement('script');
+      script.src = `https://js.tito.io/v2${
+        ['localhost', '127.0.0.1'].includes(window.location.hostname)
+          ? '/with/development_mode'
+          : ''
+        }`;
+      script.async = true;
+      document.head.appendChild(script);
+    }
+  </script>
+{% endblock head %}
+
 {% block content %}
 
   <div class="generic-block {{ page.title | lower | replace(from=' ', to='_')  }}">

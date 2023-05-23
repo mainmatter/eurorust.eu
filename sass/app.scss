@@ -4,6 +4,7 @@
 @import "./typography.scss";
 @import "./colors.scss";
 @import "./workshops.scss";
+@import "./tito-button.scss";
 
 body {
   background-color: var(--black);
@@ -187,12 +188,6 @@ body {
         justify-self: auto;
         order: 0;
       }
-    }
-
-    tito-button button {
-      background-color: initial;
-      border: initial;
-      cursor: pointer;
     }
 
     .neon span {
