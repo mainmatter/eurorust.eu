@@ -197,7 +197,7 @@ body {
     .neon span {
       margin: 16px;
       text-transform: uppercase;
-      border: 3.2px solid var(--pink);
+      border: 4.8px solid var(--pink);
       @include neon-border-style(true);
       border-radius: 50%;
       width: 200px;
@@ -376,13 +376,20 @@ body {
       }
 
       .photo,
-      .photo-container {
+      .photo-neon {
         border-radius: 50%;
       }
 
       .photo-container {
-        border: 3.2px solid var(--pink);
-        @include neon-border-style(true);
+        position: relative;
+        .photo-neon {
+          position: absolute;
+          z-index: 2;
+          border: 3.8px solid var(--pink);
+          @include neon-border-style(true);
+          width: 100%;
+          height: 100%;
+        }
         display: flex;
         align-items: center;
         justify-content: center;
@@ -495,6 +502,20 @@ body {
 
     .image-venue-container {
       width: auto;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .photo-neon {
+        position: absolute;
+        top: 0;
+        z-index: 2;
+        border: 3.8px solid var(--pink);
+        @include neon-border-style(true);
+        width: 100%;
+        height: 99%;
+        border-radius: 12px;
+      }
 
       @include desktop-only {
         grid-column: 1;
@@ -502,19 +523,27 @@ body {
         grid-row-end: 4;
       }
 
-      .image-venue {
-        --neon-padding: 8px;
-        @include desktop-only {
-          --neon-padding: 14px;
+      --neon-margin: 8px;
+      @include desktop-only {
+        --neon-margin: 10px;
+      }
+      --max-width-venue-img: calc(
+        min(100% - (var(--neon-margin) * 2), var(--min-max-venue-column))
+      );
+      max-width: var(--max-width-venue-img);
+      justify-self: center;
+
+      picture {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .image-venue {
+          border-radius: 8px;
+          border: 1px solid var(--white);
+          margin: var(--neon-margin);
+          max-width: var(--max-width-venue-img);
         }
-        --max-width-venue-img: calc(
-          min(100% - (var(--neon-padding) * 2), var(--min-max-venue-column))
-        );
-        border-radius: 8px;
-        border: 3.2px solid var(--pink);
-        @include neon-border-style(true);
-        padding: var(--neon-padding);
-        max-width: var(--max-width-venue-img);
       }
     }
 

@@ -72,8 +72,8 @@
 
 @mixin neon-border-style($intens: false) {
   @if $intens {
-    box-shadow: 0 0 26px 0 var(--pink), 0 0 26px 0 var(--pink),
-      inset 0px 0 36px 0 var(--pink), inset 0px 0 36px 0 var(--pink);
+    box-shadow: 0 0 26px 0 var(--pink), inset 0px 0 26px 0 var(--pink),
+      0 0 26px 0 var(--pink), inset 0px 0 26px 0 var(--pink);
   } @else {
     box-shadow: 0 0 26px 0 var(--pink);
   }
