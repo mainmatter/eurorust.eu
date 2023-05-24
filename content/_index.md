@@ -49,6 +49,11 @@
 	link="https://crabnebula.dev/?utm_campaign=eurorust23&utm_source=eurorust"
 	image_format="svg"
 
+[[extra.sponsors.partners]]
+	title="neo4j"
+	link="https://neo4j.com/"
+	image_format="svg"
+
 [[extra.sponsors.supporters]]
 	title="google"
 	link="https://opensource.google/"
