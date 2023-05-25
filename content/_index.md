@@ -34,6 +34,11 @@
 	link="https://oxidos.io"
 	image_format="svg"
 
+[[extra.sponsors.premier_partners]]
+	title="hightec_rt"
+	link="https://hightec-rt.com/en/"
+	image_format="svg"
+
 [[extra.sponsors.head_partners]]
 	title="rust_foundation"
 	link="https://foundation.rust-lang.org/"
