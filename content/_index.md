@@ -77,12 +77,12 @@
 	web="https://axo.dev/"
 
 [[extra.speakers]]
-	name="Armin Ronacher"
-	company="Sentry"
-	job_title="Principal Architect"
-	image="armin-ronacher.webp"
-	twitter="mitsuhiko"
-	web="https://lucumr.pocoo.org/"
+	name="Iryna Shestak"
+	company="Apollo GraphQL"
+	job_title="Senior Staff Rust Engineer"
+	image="iryna-shestak.jpeg"
+	twitter="_lrlna"
+	web="https://toot.cafe/@lrlna"
 
 [[extra.speakers]]
 	name="Lisa Passing"
