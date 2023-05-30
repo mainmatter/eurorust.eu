@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block head %}
+  <script>
+    if (!window.tito) {
+      var script = document.createElement('script');
+      script.src = `https://js.tito.io/v2${
+        ['localhost', '127.0.0.1'].includes(window.location.hostname)
+          ? '/with/development_mode'
+          : ''
+        }`;
+      script.async = true;
+      document.head.appendChild(script);
+    }
+  </script>
+{% endblock head %}
+
+{% block content %}
+
+  <div class="generic-block {{ page.title | lower | replace(from=' ', to='_')  }}">
+
+    {% include "partials/header-workshops.html" %}
+
+    <main>
+      <section class="workshops">
+        <h1 class="title">{{ page.title }}</h1>
+        <p class="entry-description">On-sight attendees have the chance to book Rust Workshops the day before EuroRust 2023 to learn more about Rust and prepare for the conference.</p>
+
+        {{ page.content | safe }}
+
+        {% set workshops = load_data(path = "data/workshops.json") %}
+
+        {% for workshop in workshops %}
+          <div class="workshop box">
+            <div class="workshop-header">
+              <p class="workshop-date">{{ workshop.date }}</p>
+              <h3 class="workshop-title">{{ workshop.title }}</h3>
+              <div class="sponsored-by">
+                <img alt="Mainmatter logo" src="/images/icons/mainmatter.svg" />
+                <p>Workshop run by Mainmatter</p>
+              </div>
+            </div>
+            <p class="workshop-description">{{ workshop.description }}</p>
+            <a
+              class="more-info button"
+              alt="more info"
+              href="/workshops/{{ workshop.title | lower | replace(from=' ', to='-') | replace(from=':', to='') | replace(from="'", to='') }}">More Info</a>
+          </div>
+        {% endfor %}
+      </section>
+    </main>
+
+    {% include "partials/footer.html" %}
+  </div>
+
+{% endblock content %}

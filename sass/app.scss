@@ -3,6 +3,8 @@
 @import "./fonts.scss";
 @import "./typography.scss";
 @import "./colors.scss";
+@import "./workshops.scss";
+@import "./tito-button.scss";
 
 body {
   background-color: var(--black);
@@ -186,12 +188,6 @@ body {
         justify-self: auto;
         order: 0;
       }
-    }
-
-    tito-button button {
-      background-color: initial;
-      border: initial;
-      cursor: pointer;
     }
 
     .neon span {
@@ -466,6 +462,61 @@ body {
       padding-top: 1rem;
     }
     @include pill-button(".submit-a-talk-button", 2.5rem, "plus.svg", 27px);
+  }
+
+  .workshops {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 30px;
+    @include desktop-and-tablet-only {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 60px;
+    }
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 35px 80px;
+    @include desktop-and-tablet-only {
+      margin: 100px auto 0;
+    }
+
+    h3 {
+      @include desktop-and-tablet-only {
+        grid-column: 1 / 3;
+      }
+      grid-row: 1;
+      text-align: center;
+    }
+
+    p {
+      font-size: 22px;
+      letter-spacing: 0;
+      line-height: 28px;
+      text-align: center;
+      @include desktop-and-tablet-only {
+        grid-column: 1;
+        grid-row: 2;
+        text-align: right;
+      }
+    }
+
+    @include pill-button(
+      ".link-to-workshops",
+      2.5rem,
+      "right_arrow.svg",
+      24px,
+      30px
+    );
+
+    a {
+      max-width: 216px;
+      margin: auto;
+      @include desktop-and-tablet-only {
+        margin: initial;
+        grid-column: 2;
+        grid-row: 2;
+      }
+    }
   }
 
   .venue {
@@ -822,10 +873,12 @@ body {
     background-size: 100% auto;
   }
 
-  &.conference_code_of_conduct {
+  &.conference_code_of_conduct,
+  &.workshop_schedule,
+  &.workshop {
     background: url("/images/background-generic-1.webp") top right no-repeat,
       url("/images/background-generic-2.webp") bottom left no-repeat;
-    background-size: auto 50%, auto 50%;
+    background-size: 100% 50%, 100% 50%;
 
     @include mobile-xs-only {
       background: url("/images/background-generic-mobile-1.webp") top right
@@ -872,7 +925,8 @@ body {
     }
   }
 
-  .generic-content {
+  .generic-content,
+  .workshops {
     margin: 0 auto 80px;
     @include desktop-and-tablet-only {
       max-width: 770px;
@@ -914,7 +968,7 @@ body {
       }
     }
 
-    a {
+    a:not(.button) {
       text-decoration: underline;
     }
 
