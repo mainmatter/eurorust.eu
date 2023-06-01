@@ -937,7 +937,12 @@ body {
 
     ul {
       list-style: disc;
-      margin-left: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+      @include mobile-and-phablet-only {
+        margin-left: 10px;
+      }
     }
 
     .group-download {
