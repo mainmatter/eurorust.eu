@@ -700,8 +700,8 @@ body {
 
       @include desktop-and-tablet-only {
         --max-width-premier-partners: 308px;
-        --head-partner-size-ratio: 1.25;
-        --partner-size-ratio: 1.25;
+        --head-partner-size-ratio: 1.5;
+        --partner-size-ratio: 1.5;
       }
 
       --max-width-head-partners: calc(
