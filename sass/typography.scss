@@ -27,7 +27,7 @@ hr {
 
 h3 {
   font-family: Poppins-SemiBoldItalic;
-  font-size: 40px;
+  font-size: calc(min(9vw, 40px));
   line-height: 46px;
 
   @include desktop-and-tablet-only {
@@ -115,6 +115,10 @@ a {
 
 .text-centered {
   text-align: center;
+}
+
+.highlight {
+  color: var(--neon-green);
 }
 
 .group-centered {

@@ -108,9 +108,7 @@
       }
 
       ul {
-        display: flex;
-        flex-direction: column;
-        gap: 26px;
+        margin-left: 30px;
         li {
           &::marker,
           & > p:first-child {
