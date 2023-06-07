@@ -68,7 +68,7 @@
 [[extra.speakers]]
 	name="Niko Matsakis"
 	company="AWS"
-	job_title="Senior Principal Engineer at AWS, Member of the Rust Compiler team"
+	job_title="Senior Principal Engineer at AWS, Co-Lead of the Rust Language Team"
 	image="niko-matsakis.png"
 	twitter="nikomatsakis"
 	web="http://smallcultfollowing.com/babysteps/about/"
