@@ -71,6 +71,6 @@
 	job_title="Senior Principal Engineer at AWS, Member of the Rust Compiler team"
 	image="niko-matsakis.png"
 	twitter="nikomatsakis"
-	web="https://nick.matsakis.net/"
+	web="http://smallcultfollowing.com/babysteps/about/"
 
 +++
