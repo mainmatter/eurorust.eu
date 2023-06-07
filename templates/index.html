@@ -1,55 +1,99 @@
 {% extends "base.html" %}
 
 {% block head %}
-<link rel="preload" as="image" href="/images/atomium.webp" media="(min-width: 640.1px)">
-<link rel="preload" as="image" href="/images/logo.webp" media="(min-width: 640.1px)">
-<link rel="preload" as="image" href="/images/logo-mobile.webp" media="(max-width: 640px)">
-<link rel="preload" as="image" href="/images/top-background-desktop-with-atomium.webp" media="(min-width: 640.1px)">
-<link rel="preload" as="image" href="/images/background-generic-2.webp" media="(min-width: 640.1px)">
-<link rel="preload" as="image" href="/images/background-middle.webp" media="(min-width: 640.1px)">
-<link rel="preload" as="image" href="/images/background-middle-mobile.webp" media="(max-width: 640px)">
-<link rel="preload" as="image" href="/images/background-bottom.webp" media="(min-width: 640.1px)">
-<link rel="preload" as="image" href="/images/background-bottom-mobile.webp" media="(max-width: 640px)">
-<link rel="preload" as="image" href="/images/atomium-mobile.webp" media="(max-width: 640px)">
+  <link
+    rel="preload"
+    as="image"
+    href="/images/atomium.webp"
+    media="(min-width: 640.1px)">
+  <link
+    rel="preload"
+    as="image"
+    href="/images/logo.webp"
+    media="(min-width: 640.1px)">
+  <link
+    rel="preload"
+    as="image"
+    href="/images/logo-mobile.webp"
+    media="(max-width: 640px)">
+  <link
+    rel="preload"
+    as="image"
+    href="/images/top-background-desktop-with-atomium.webp"
+    media="(min-width: 640.1px)">
+  <link
+    rel="preload"
+    as="image"
+    href="/images/background-generic-2.webp"
+    media="(min-width: 640.1px)">
+  <link
+    rel="preload"
+    as="image"
+    href="/images/background-middle.webp"
+    media="(min-width: 640.1px)">
+  <link
+    rel="preload"
+    as="image"
+    href="/images/background-middle-mobile.webp"
+    media="(max-width: 640px)">
+  <link
+    rel="preload"
+    as="image"
+    href="/images/background-bottom.webp"
+    media="(min-width: 640.1px)">
+  <link
+    rel="preload"
+    as="image"
+    href="/images/background-bottom-mobile.webp"
+    media="(max-width: 640px)">
+  <link
+    rel="preload"
+    as="image"
+    href="/images/atomium-mobile.webp"
+    media="(max-width: 640px)">
 
-<script>
-  if(!window.tito) {
-    var script = document.createElement('script');
-    script.src = `https://js.tito.io/v2${['localhost', '127.0.0.1'].includes(window.location.hostname)? '/with/development_mode' : ''}`;
-    script.async = true;
-    document.head.appendChild(script);
-  }
-</script>
+  <script>
+    if (!window.tito) {
+      var script = document.createElement('script');
+      script.src = `https://js.tito.io/v2${
+        ['localhost', '127.0.0.1'].includes(window.location.hostname)
+          ? '/with/development_mode'
+          : ''
+        }`;
+      script.async = true;
+      document.head.appendChild(script);
+    }
+  </script>
 
 {% endblock head %}
 
 {% block content %}
 
-<main class="sections">
-  <div class="top-block">
-    {% include "partials/main_header.html" %} 
-    {% include "sections/get-involved.html" %}
-  </div>
-  {% include "sections/topics.html" %}
-  <div class="middle-block">
-    {% include "sections/past-event-highlights.html" %}
-    {% include "sections/speakers.html" %}
-    {% if section.extra.enable_cfp %}
-      {% include "sections/submit-a-talk.html" %}
-    {% endif %}
-  </div>
-  <div class="bottom-block">
-    <div class="bottom-block-content">
-      {% include "sections/workshops.html" %}
-      {% include "sections/venue.html" %}
-      {% include "sections/presented-by.html" %}
-      {% if section.extra.enable_sponsors%}
-        {% include "sections/sponsors.html" %}
-      {% else %}
-        {% include "sections/past-sponsors.html" %}
-      {% endif %}
-      {% include "partials/footer.html" %}
+  <main class="sections">
+    <div class="top-block">
+      {% include "partials/main_header.html" %}
+      {% include "sections/get-involved.html" %}
     </div>
-  </div>
-</main>
+    {% include "sections/topics.html" %}
+    <div class="middle-block">
+      {% include "sections/past-event-highlights.html" %}
+      {% include "sections/speakers.html" %}
+      {% if section.extra.enable_cfp %}
+        {% include "sections/submit-a-talk.html" %}
+      {% endif %}
+    </div>
+    <div class="bottom-block">
+      <div class="bottom-block-content">
+        {% include "sections/workshops.html" %}
+        {% include "sections/venue.html" %}
+        {% include "sections/presented-by.html" %}
+        {% if section.extra.enable_sponsors %}
+          {% include "sections/sponsors.html" %}
+        {% else %}
+          {% include "sections/past-sponsors.html" %}
+        {% endif %}
+        {% include "partials/footer.html" %}
+      </div>
+    </div>
+  </main>
 {% endblock content %}

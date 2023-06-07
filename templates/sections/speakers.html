@@ -1,23 +1,32 @@
 <section class="speakers">
-  <h3 class="pill-title">{{ section.extra.section.speakers.title }}</h3>
+  <h3>{{ section.extra.section.speakers.title }}</h3>
   <ul class="speakers-list">
     {% for speaker in section.extra.speakers %}
-    <li>
-      <div class="photo-container">
-        <picture>
-          <source srcset="/images/speakers/mobile/{{speaker.image}}.webp" media="(max-width: 640px)" />
-          <img alt="{{ speaker.name }} speaker profile photo" src="/images/speakers/{{speaker.image}}.webp"
+      <li>
+        <div class="photo-container">
+          <img
+            alt="{{ speaker.name }} speaker profile photo"
+            src="/images/speakers/{{speaker.image}}"
             class="photo" />
-        </picture>
-      </div>
-      <p>{{ speaker.name }}</p>
-      <div class="links">
-        <a href="https://twitter.com/{{ speaker.twitter }}" target="_blank" rel="noopener noreferrer"><img
-            alt="twitter icon" src="/images/icons/twitter-white.svg" /></a>
-        <a href="{{ speaker.web }}" target="_blank" rel="noopener noreferrer"><img alt="external link icon"
-            src="/images/icons/external-link-white.svg" /></a>
-      </div>
-    </li>
+        </div>
+        <p>{{ speaker.name }}</p>
+        {% if speaker.twitter or speaker.web %}
+          <div class="links">
+            {% if speaker.twitter %}
+              <a
+                href="https://twitter.com/{{ speaker.twitter }}"
+                target="_blank"
+                rel="noopener noreferrer"><img alt="twitter icon" src="/images/icons/twitter-white.svg" /></a>
+            {% endif %}
+            {% if speaker.web %}
+              <a
+                href="{{ speaker.web }}"
+                target="_blank"
+                rel="noopener noreferrer"><img alt="external link icon" src="/images/icons/external-link-white.svg" /></a>
+            {% endif %}
+          </div>
+        {% endif %}
+      </li>
     {% endfor %}
   </ul>
 </section>

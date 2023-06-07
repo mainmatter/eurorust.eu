@@ -7,7 +7,7 @@
 	link="https://www.papercall.io/eurorust-2023"
 
 [extra.section.speakers]
-	title = "Past speakers"
+	title = "Speakers"
 
 [[extra.past_sponsors]]
 	title="rust_foundation"
@@ -66,39 +66,11 @@
 
 
 [[extra.speakers]]
-	name="Daniel Stenberg"
-	company="wolfSSL"
-	job_title="Founder and lead developer of cURL and libcurl"
-	image="daniel-stenberg"
-	twitter="bagder"
-	web="https://daniel.haxx.se/"
-	hide_link=true
-
-[[extra.speakers]]
-	name="Ryan Levick"
-	company="Azure team, Microsoft"
-	job_title="Developer Advocate"
-	image="ryan-levick"
-	twitter="ryan_levick"
-	web="https://blog.ryanlevick.com/"
-	hide_link=true
-
-[[extra.speakers]]
-	name="Aïssata Maiga"
-	company="Ferreous Systems"
-	job_title="Embedded Software Engineer"
-	image="aissata-maiga"
-	twitter="ai_maiga"
-	web="https://wronganswer.blog/"
-	hide_link=true
-
-[[extra.speakers]]
-	name="Sasha Pourcelot"
-	company="TrustInSoft"
-	job_title="CS Student, Software Engineer"
-	image="sasha-pourcelot"
-	twitter="scrabsha"
-	web="https://scrabsha.github.io"
-	hide_link=true
+	name="Niko Matsakis"
+	company="AWS"
+	job_title="Senior Principal Engineer at AWS, Member of the Rust Compiler team"
+	image="niko-matsakis.png"
+	twitter="nikomatsakis"
+	web="https://nick.matsakis.net/"
 
 +++

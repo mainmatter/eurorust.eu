@@ -320,7 +320,7 @@ body {
     }
   }
 
-  .speakers {
+  .speakers, .moderators {
     display: grid;
     grid-template-rows: auto 1fr;
     grid-template-columns: 1fr;
@@ -352,7 +352,7 @@ body {
       margin: auto;
     }
 
-    .speakers-list {
+    .speakers-list, .moderators-list {
       display: flex;
       flex-flow: row wrap;
       justify-content: space-evenly;
@@ -423,7 +423,7 @@ body {
           margin-bottom: 10px;
         }
 
-        &.speaker {
+        &.speaker, &.moderator {
           margin-bottom: 0;
         }
 
