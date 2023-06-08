@@ -79,4 +79,12 @@
 	image="lisa-passing.jpeg"
 	web="https://lislis.de/"
 
+[[extra.speakers]]
+	name="Iryna Shestak"
+	company="Apollo GraphQL"
+	job_title="Senior Staff Rust Engineer"
+	image="iryna-shestak.jpeg"
+	twitter="_lrlna"
+	web="https://toot.cafe/@lrlna"
+
 +++
