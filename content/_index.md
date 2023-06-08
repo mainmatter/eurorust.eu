@@ -73,4 +73,10 @@
 	twitter="nikomatsakis"
 	web="http://smallcultfollowing.com/babysteps/about/"
 
+[[extra.speakers]]
+	name="Lisa Passing"
+	job_title="Creative Technologist"
+	image="lisa-passing.jpeg"
+	web="https://lislis.de/"
+
 +++
