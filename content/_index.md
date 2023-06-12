@@ -87,4 +87,12 @@
 	twitter="_lrlna"
 	web="https://toot.cafe/@lrlna"
 
+[[extra.speakers]]
+	name="Ashley Williams"
+	company="axo"
+	job_title="former Rust Core team member and Founding Executive Director of the Rust Foundation, Founder of axo"
+	image="ashley-williams.jpeg"
+	twitter="ag_dubs"
+	web="https://axo.dev/"
+
 +++
