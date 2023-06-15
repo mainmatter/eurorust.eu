@@ -3,7 +3,7 @@ title = "Introduction to Rust for Web Developers"
 template = "workshop.html"
 [extra]
 	date = "Oct 11 2023, 10:00 - 16:00"
-	avatar = "stefan-baumgartner.webp"
+	avatar = "stefan-baumgartner.jpeg"
 	avatar_alt = "Stefan Baumgartner"
 +++
 
