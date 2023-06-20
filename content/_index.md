@@ -1,11 +1,4 @@
 +++
-[extra]
-	enable_cfp=true
-	enable_sponsors=true
-
-[extra.cfp]
-	link="https://www.papercall.io/eurorust-2023"
-
 [extra.section.speakers]
 	title = "Speakers"
 
