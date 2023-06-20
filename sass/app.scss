@@ -454,16 +454,6 @@ body {
     }
   }
 
-  .cfp {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 80px;
-    @include desktop-and-tablet-only {
-      padding-top: 1rem;
-    }
-    @include pill-button(".submit-a-talk-button", 2.5rem, "plus.svg", 27px);
-  }
-
   .workshops {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
