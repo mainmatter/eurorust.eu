@@ -1,4 +1,7 @@
 +++
+[extra]
+	enable_sponsors=true
+
 [extra.section.speakers]
 	title = "Speakers"
 
