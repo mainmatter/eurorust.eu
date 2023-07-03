@@ -39,8 +39,5 @@ This information will be provided closer to the workshop date.</p>
 <h4>About Luca Palmieri</h4>
 <p>Luca Palmieri builds technology products for a living, and has been doing so for a while. His current focus is on backend development, software architecture and the Rust programming language.</p>
 <p>
-Luca Palmieri builds technology products for a living, and has been doing so for a while. His current focus is on backend development, software architecture and the Rust programming language.
-</p>
-<p>
 When he is not coding, you’ll find him baking cakes or rolling pasta sheets.
 </p>
