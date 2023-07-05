@@ -55,6 +55,11 @@
 	link="https://neo4j.com/"
 	image_format="svg"
 
+[[extra.sponsors.partners]]
+	title="gensyn"
+	link="https://www.gensyn.ai/"
+	image_format="svg"
+
 [[extra.sponsors.supporters]]
 	title="google"
 	link="https://opensource.google/"
