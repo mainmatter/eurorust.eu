@@ -1,3 +1,16 @@
+.timezones-note {
+  font-family: Poppins-Light;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 15px;
+  line-height: 28px;
+  margin-bottom: 25px;
+  
+  @include desktop-and-tablet-only {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
 .schedule {
   margin: 0 10px;
 
@@ -39,19 +52,6 @@
         @include desktop-and-tablet-only {
           font-size: 40px;
           line-height: 50px;
-        }
-      }
-
-      .timezones-note {
-        font-family: Poppins-Light;
-        color: rgba(255, 255, 255, 0.5);
-        font-size: 15px;
-        line-height: 28px;
-        margin-bottom: 25px;
-        
-        @include desktop-and-tablet-only {
-          font-size: 18px;
-          line-height: 28px;
         }
       }
 
@@ -97,6 +97,225 @@
 
       @include desktop-only {
         margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@import "./mixins.scss";
+
+.generic-block.full-schedule {
+  @include pill-button(
+    ".book-your-ticket.button",
+    1.9rem,
+    "ticket.svg",
+    32px,
+    32px
+  );
+
+  @include pill-button(
+    ".link-to-other-day",
+    2.5rem,
+    false,
+    24px,
+    30px
+  );
+
+  .link-to-other-day {
+    display: inline-block;
+    text-wrap: nowrap;
+  }
+
+  .title > div {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .day {
+    margin-bottom: 20px;
+  }
+
+  .date {
+    color: #ffffff;
+    margin-bottom: 60px;
+  }
+
+  .book-your-ticket.button {
+    grid-row: 2;
+    grid-column: 1 / 4;
+    justify-self: center;
+    @include desktop-only {
+      grid-column: 2;
+    }
+    background-color: initial;
+  }
+
+  .schedule-main-header {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto auto;
+    align-items: center;
+    row-gap: 30px;
+    max-width: 85%;
+
+    .link {
+      grid-column: 1;
+      grid-row: 1;
+      @include desktop-only {
+        grid-row: 1 / 3;
+      }
+    }
+
+    div {
+      grid-column: 2 / 4;
+      @include desktop-only {
+      }
+
+      h2 {
+        text-align: left;
+      }
+    }
+  }
+
+  table {
+    font-family: Poppins-Light;
+
+    a {
+      color: #00ffc4;
+      text-decoration: underline;
+    }
+
+    tr {
+      padding: 20px;
+      margin-bottom: 30px;
+      background: var(--transparent-white);
+      border-radius: 10px;
+      letter-spacing: 0;
+      letter-spacing: 0;
+      word-break: break-word;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: start;
+
+      @include desktop-and-tablet-only {
+        padding: 40px;
+        gap: 40px;
+        flex-direction: row;
+      }
+      
+      @include pill-button(".more-info.button", 1.9rem, "plus.svg", 27px);
+
+      td {
+        font-size: 18px;
+        line-height: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items: start;
+        
+        @include desktop-and-tablet-only {
+          font-size: 22px;
+          line-height: 28px;
+        }
+      }
+      
+      .time {
+        text-align: center;
+        white-space: nowrap;
+        padding-right: 28px;
+      }
+
+      h4 {
+        color: var(--white);
+        text-transform: uppercase;
+      }
+      
+      h5 {
+        margin: 0;
+        text-align: left;
+        font-size: 32px;
+      }
+      
+      ul {
+        margin-left: 30px;
+        li {
+          &::marker,
+          & > p:first-child {
+            color: var(--neon-green);
+          }
+        }
+      }
+      
+      p + p {
+        margin-top: 24px;
+        @include desktop-and-tablet-only {
+          margin-top: 28px;
+        }
+      }
+      
+      .speaker {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        @include desktop-and-tablet-only {
+          gap: 50px;
+        }
+        align-items: center;
+        width: 100%;
+      
+        .photo,
+        .photo-container {
+          border-radius: 50%;
+        }
+      
+        .photo-container {
+          border: 3.2px solid var(--pink);
+          @include neon-border-style(true);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      
+        .photo {
+          border: 2px solid var(--white);
+          -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+          margin: 15px;
+          @include mobile-only {
+            margin: 10px;
+          }
+          max-height: 192px;
+        }
+
+        .speaker-info {
+          flex-direction: column;
+          display: flex;
+          align-items: flex-start;
+          gap: 20px;
+
+          .links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+          
+            a {
+              background-color: var(--transparent-gray);
+              border-radius: 50%;
+              width: 21px;
+              height: 21px;
+              padding: 10.5px;
+              img {
+                height: 21px;
+                width: 21px;
+              }
+            }
+          }
+        }
       }
     }
   }

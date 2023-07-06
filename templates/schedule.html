@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block head %}
+  <script>
+    if (!window.tito) {
+      var script = document.createElement('script');
+      script.src = `https://js.tito.io/v2${
+        ['localhost', '127.0.0.1'].includes(window.location.hostname)
+          ? '/with/development_mode'
+          : ''
+        }`;
+      script.async = true;
+      document.head.appendChild(script);
+    }
+  </script>
+{% endblock head %}
+
+{% block content %}
+  {% set schedule = load_data(path = "data/schedule.json") %}
+  {% set day = schedule[page.extra.day] %}
+
+  <div class="generic-block full-schedule">
+
+    {% include "partials/header-schedule.html" %}
+
+    <main>
+      <section class="full-schedule-day">
+        <div class="title">
+          <div>
+            <h3 class="day">Schedule Day {{ page.extra.day + 1 }}</h3>
+            <a class="link-to-other-day button" href="/schedule/day/{% if page.extra.day == 0 %}2{% else %}1{% endif %}" alt="See workshops">Day {% if page.extra.day == 0 %}2{% else %}1{% endif %}</a>
+          </div>
+          <h4 class="date">{{ page.extra.date }}</h4>
+        </div>
+        <p class="timezones-note">Times are local, CEST</p>
+        <table>
+          {% for talk in day.talks %}
+          <tr>
+            <td class="time">
+              {{talk.time}}
+            </td>
+            <td class="title">
+              <h4>{{talk.title | safe}}</h4>
+              {%if talk.description %}
+                {{talk.description | safe}}
+              {% endif %}
+              {%if talk.speaker %}
+                {% set path = "speakers/" ~ talk.speaker ~ ".md" %}
+                {% set speaker = get_page(path = path) %}
+                <div class="speaker">
+                  <div class="photo-container">
+                    {%if speaker.extra.image %}
+                      <img
+                        class="photo"
+                        src="{{ speaker.extra.image }}"
+                        alt="Photo of {{ speaker.extra.name }}">
+                    {% else %}
+                      <img
+                        class="photo"
+                        src="/images/speakers/placeholder.png">
+                    {% endif %}
+                  </div>
+                  <div class="speaker-info">
+                    <a href="{{speaker.path}}">{{speaker.extra.name}}</a>
+                    <div class="links">
+                      <div class="links">
+                        {%if speaker.extra.twitter %}
+                          <a href="https://twitter.com/{{speaker.extra.twitter}}" target="_blank" rel="noopener noreferrer"><img alt="twitter icon" src="/images/icons/twitter-white.svg"></a>
+                        {% endif %}
+                        {%if speaker.extra.url %}
+                          <a href="{{speaker.extra.url}}" target="_blank" rel="noopener noreferrer"><img alt="external link icon" src="/images/icons/external-link-white.svg"></a>
+                        {% endif %}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+      </section>
+    </main>
+
+    {% include "partials/footer.html" %}
+  </div>
+{% endblock content %}

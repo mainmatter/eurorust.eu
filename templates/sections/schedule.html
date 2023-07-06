@@ -5,7 +5,7 @@
       <div class="content">
         <h3>Day {{loop.index}}</h3>
         <h4>{{day.date}}</h4>
-        <p class="timezones-note">Time are local, CEST</p>
+        <p class="timezones-note">Times are local, CEST</p>
         <table>
           {% for talk in day.talks %}
           <tr>
@@ -13,9 +13,11 @@
               {{talk.time}}
             </td>
             <td class="title">
-              {{talk.title}}
+              {{talk.title | safe}}
               {% if talk.speaker %}
-                – <a href="">{{talk.speaker}}</a>
+                {% set path = "speakers/" ~ talk.speaker ~ ".md" %}
+                {% set speaker = get_page(path = path) %}
+                – <a href="{{speaker.path}}">{{speaker.extra.name}}</a>
               {% endif %}
             </td>
           </tr>

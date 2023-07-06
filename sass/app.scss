@@ -866,7 +866,8 @@ body {
 
   &.conference_code_of_conduct,
   &.workshop_schedule,
-  &.workshop {
+  &.workshop,
+  &.full-schedule {
     background: url("/images/background-generic-1.webp") top right no-repeat,
       url("/images/background-generic-2.webp") bottom left no-repeat;
     background-size: 100% 50%, 100% 50%;
@@ -917,7 +918,8 @@ body {
   }
 
   .generic-content,
-  .workshops {
+  .workshops,
+  .full-schedule-day {
     margin: 0 auto 80px;
     @include desktop-and-tablet-only {
       max-width: 770px;
