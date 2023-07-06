@@ -1,0 +1,103 @@
+.schedule {
+  margin: 0 10px;
+
+  @include desktop-only {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 10%;
+    gap: 66px;
+  }
+
+  .day {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+
+    .content {
+      display: flex;
+      flex-flow: column wrap;
+      background-color: var(--transparent-white);
+      border-radius: 10px;
+      padding: 20px 18px;
+      margin-bottom: 60px;
+
+      h3 {
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      h4 {
+        font-family: Poppins-Light;
+        color: var(--white);
+        text-align: center;
+        font-size: 25px;
+        margin: auto;
+        line-height: 30px;
+        margin-bottom: 40px;
+
+        @include desktop-and-tablet-only {
+          font-size: 40px;
+          line-height: 50px;
+        }
+      }
+
+      .timezones-note {
+        font-family: Poppins-Light;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 15px;
+        line-height: 28px;
+        margin-bottom: 25px;
+        
+        @include desktop-and-tablet-only {
+          font-size: 18px;
+          line-height: 28px;
+        }
+      }
+
+      table {
+        font-family: Poppins-Light;
+
+        td {
+          font-size: 18px;
+          line-height: 24px;
+          padding-bottom: 25px;
+          
+          @include desktop-and-tablet-only {
+            font-size: 22px;
+            line-height: 28px;
+          }
+        }
+
+        .time {
+          text-align: center;
+          white-space: nowrap;
+          padding-right: 28px;
+        }
+
+        .title {
+          a {
+            color: #00ffc4;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    @include pill-button(
+      ".full-schedule-link",
+      2.5rem,
+      false,
+      24px,
+      30px
+    );
+
+    .full-schedule-link {
+      margin-bottom: 60px;
+
+      @include desktop-only {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
