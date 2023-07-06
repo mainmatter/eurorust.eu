@@ -468,7 +468,7 @@ body {
     max-width: 1000px;
     margin: 0 35px 80px;
     @include desktop-and-tablet-only {
-      margin: 100px auto 0;
+      margin: 0 auto 100px;
     }
 
     h3 {
