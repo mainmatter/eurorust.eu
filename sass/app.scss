@@ -999,4 +999,10 @@ body {
       word-break: break-word;
     }
   }
+
+  .generic-content {
+    ul {
+      gap: 10px;
+    }
+  }
 }

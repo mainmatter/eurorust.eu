@@ -83,7 +83,8 @@ p.light-font {
 }
 
 p,
-.generic-content .box a {
+.generic-content .box a,
+.generic-content .box ul {
   font-family: Poppins-Regular;
   font-size: 18px;
   line-height: 24px;
@@ -94,6 +95,11 @@ p,
       line-height: 28px;
     }
   }
+}
+
+.generic-content .box p:not(:last-child),
+.generic-content .box ul:not(:last-child) {
+  margin-bottom: 28px;
 }
 
 a {
