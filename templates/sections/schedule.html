@@ -14,10 +14,12 @@
             </td>
             <td class="title">
               {{talk.title | safe}}
-              {% if talk.speaker %}
-                {% set path = "speakers/" ~ talk.speaker ~ ".md" %}
-                {% set speaker = get_page(path = path) %}
-                – <a href="{{speaker.path}}">{{speaker.extra.name}}</a>
+              {% if talk.speakers %}
+                {% for speaker in talk.speakers %}
+                  {% set path = "speakers/" ~ speaker ~ ".md" %}
+                  {% set speaker = get_page(path = path) %}
+                  – <a href="{{speaker.path}}">{{speaker.extra.name}}</a>
+                {% endfor %}
               {% endif %}
             </td>
           </tr>

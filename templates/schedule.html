@@ -44,36 +44,38 @@
               {%if talk.description %}
                 {{talk.description | safe}}
               {% endif %}
-              {%if talk.speaker %}
-                {% set path = "speakers/" ~ talk.speaker ~ ".md" %}
-                {% set speaker = get_page(path = path) %}
-                <div class="speaker">
-                  <div class="photo-container">
-                    {%if speaker.extra.image %}
-                      <img
-                        class="photo"
-                        src="{{ speaker.extra.image }}"
-                        alt="Photo of {{ speaker.extra.name }}">
-                    {% else %}
-                      <img
-                        class="photo"
-                        src="/images/speakers/placeholder.png">
-                    {% endif %}
-                  </div>
-                  <div class="speaker-info">
-                    <a href="{{speaker.path}}">{{speaker.extra.name}}</a>
-                    <div class="links">
+              {% if talk.speakers %}
+                {% for speaker in talk.speakers %}
+                  {% set path = "speakers/" ~ speaker ~ ".md" %}
+                  {% set speaker = get_page(path = path) %}
+                  <div class="speaker">
+                    <div class="photo-container">
+                      {%if speaker.extra.image %}
+                        <img
+                          class="photo"
+                          src="{{ speaker.extra.image }}"
+                          alt="Photo of {{ speaker.extra.name }}">
+                      {% else %}
+                        <img
+                          class="photo"
+                          src="/images/speakers/placeholder.png">
+                      {% endif %}
+                    </div>
+                    <div class="speaker-info">
+                      <a href="{{speaker.path}}">{{speaker.extra.name}}</a>
                       <div class="links">
-                        {%if speaker.extra.twitter %}
-                          <a href="https://twitter.com/{{speaker.extra.twitter}}" target="_blank" rel="noopener noreferrer"><img alt="twitter icon" src="/images/icons/twitter-white.svg"></a>
-                        {% endif %}
-                        {%if speaker.extra.url %}
-                          <a href="{{speaker.extra.url}}" target="_blank" rel="noopener noreferrer"><img alt="external link icon" src="/images/icons/external-link-white.svg"></a>
-                        {% endif %}
+                        <div class="links">
+                          {%if speaker.extra.twitter %}
+                            <a href="https://twitter.com/{{speaker.extra.twitter}}" target="_blank" rel="noopener noreferrer"><img alt="twitter icon" src="/images/icons/twitter-white.svg"></a>
+                          {% endif %}
+                          {%if speaker.extra.url %}
+                            <a href="{{speaker.extra.url}}" target="_blank" rel="noopener noreferrer"><img alt="external link icon" src="/images/icons/external-link-white.svg"></a>
+                          {% endif %}
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                {% endfor %}
               {% endif %}
             </td>
           </tr>
