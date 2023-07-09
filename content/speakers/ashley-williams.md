@@ -1,4 +1,6 @@
 +++
+template = "speaker.html"
+title = "Speaker: Ashley Williams"
 [extra]
   name = "Ashley Williams"
   image = "/images/speakers/ashley-williams.jpeg"

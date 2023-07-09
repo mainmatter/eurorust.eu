@@ -13,7 +13,6 @@
               {{talk.time}}
             </td>
             <td class="title">
-              {{talk.title | safe}}
               {% if talk.speakers %}
                 {% for speaker in talk.speakers %}
                   {% set path = "speakers/" ~ speaker ~ ".md" %}

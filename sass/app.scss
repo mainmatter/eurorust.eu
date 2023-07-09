@@ -5,6 +5,7 @@
 @import "./colors.scss";
 @import "./workshops.scss";
 @import "./schedule.scss";
+@import "./speaker.scss";
 @import "./tito-button.scss";
 
 body {
@@ -867,7 +868,8 @@ body {
   &.conference_code_of_conduct,
   &.workshop_schedule,
   &.workshop,
-  &.full-schedule {
+  &.full-schedule,
+  &.speaker {
     background: url("/images/background-generic-1.webp") top right no-repeat,
       url("/images/background-generic-2.webp") bottom left no-repeat;
     background-size: 100% 50%, 100% 50%;
@@ -919,7 +921,8 @@ body {
 
   .generic-content,
   .workshops,
-  .full-schedule-day {
+  .full-schedule-day,
+  .speaker-details {
     margin: 0 auto 80px;
     @include desktop-and-tablet-only {
       max-width: 770px;

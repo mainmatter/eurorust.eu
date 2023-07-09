@@ -40,7 +40,7 @@
               {{talk.time}}
             </td>
             <td class="title">
-              <h4>{{talk.title | safe}}</h4>
+              <h4><a id="{{talk.title | urlencode}}">{{talk.title | safe}}</a></h4>
               {%if talk.description %}
                 {{talk.description | safe}}
               {% endif %}

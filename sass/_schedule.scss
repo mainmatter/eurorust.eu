@@ -126,6 +126,15 @@
     text-wrap: nowrap;
   }
 
+  .title {
+    h4 {
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+
   .title > div {
     display: flex;
     flex-direction: row;
