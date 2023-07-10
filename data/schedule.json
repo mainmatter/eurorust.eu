@@ -70,7 +70,7 @@
 			"title": "Panel: Inside Rust",
 			"isPanel": true,
 			"speakers": ["mara-bos", "niko-matsakis", "jonathan-pallant"],
-			"description":"<p>TBA</p>"
+			"description":"<p>We talk to people that are actively involved with building Rust about their work. What are the inner workings of the project? What's coming in the 2024 edition? <a href=\"/speakers/luca-palmieri/\">Luca Palmieri</a> will talk about those and other questions with our panelists.</p>"
 		}
 	]
 },
