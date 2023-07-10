@@ -3,6 +3,7 @@ template = "speaker.html"
 title = "Speaker: Florian Gilcher"
 [extra]
   name = "Florian Gilcher"
+  twitter = "Argorak"
 +++
 Florian Gilcher is one of the co-founders and management directors of Ferrous Systems. Previously, he was part of the Rust project, as part of the community and core team, and a co-organiser of the Rust Berlin Meetup and the RustFest conference.
 
