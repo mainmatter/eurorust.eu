@@ -1,13 +1,13 @@
 .timezones-note {
   font-family: Poppins-Light;
   color: rgba(255, 255, 255, 0.5);
-  font-size: 15px;
-  line-height: 28px;
+  font-size: 15px !important;
+  line-height: 28px !important;
   margin-bottom: 25px;
   
   @include desktop-and-tablet-only {
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 18px !important;
+    line-height: 28px !important;
   }
 }
 
