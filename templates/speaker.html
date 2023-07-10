@@ -60,7 +60,7 @@
               {% if talk.speakers %}
                 {% for speaker in talk.speakers %}
                   {%if speaker == page.slug %}
-                    <a class="talk-link" href="/schedule/day/{{day_num}}#{{talk.title | urlencode}}">Speaker's Talk</a>
+                    <a class="talk-link" href="/schedule/day/{{day_num}}#{{talk.title | urlencode}}">{%if talk.isPanel %}Panel{% else %}Speaker's Talk{% endif %}</a>
                   {% endif %}
                 {% endfor %}
               {% endif %}
