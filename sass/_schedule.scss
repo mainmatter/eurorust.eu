@@ -75,6 +75,12 @@
           white-space: nowrap;
           padding-right: 28px;
           width: 10%;
+          font-size: 15px;
+          line-height: 24px;
+
+          @include desktop-and-tablet-only {
+            font-size: 18px;
+          }
         }
 
         .title {
@@ -238,6 +244,14 @@
         text-align: center;
         white-space: nowrap;
         padding-right: 28px;
+
+        font-size: 15px;
+        line-height: 24px;
+        
+        @include desktop-and-tablet-only {
+          font-size: 18px;
+          line-height: 35px;
+        }
       }
 
       h4 {
