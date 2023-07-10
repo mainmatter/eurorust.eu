@@ -133,7 +133,7 @@
   @include pill-button(
     ".link-to-other-day",
     2.5rem,
-    "right_arrow.svg",
+    false,
     24px,
     30px
   );
