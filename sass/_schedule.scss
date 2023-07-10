@@ -83,9 +83,15 @@
         }
 
         .title {
-          a {
+          a.speaker {
             color: #00ffc4;
             text-decoration: underline;
+            font-size: 15px;
+            line-height: 24px;
+            
+            @include desktop-and-tablet-only {
+              font-size: 18px;
+            }
           }
         }
       }
