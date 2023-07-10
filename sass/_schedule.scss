@@ -15,9 +15,9 @@
   margin: 0 10px;
 
   @include desktop-only {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 0 10%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
     gap: 66px;
   }
 
@@ -25,6 +25,10 @@
     display: flex;
     flex-flow: column wrap;
     align-items: center;
+
+    @include desktop-only {
+      max-width: 600px;
+    }
 
     .content {
       display: flex;
