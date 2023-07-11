@@ -265,6 +265,10 @@
 
       h4 {
         color: var(--white);
+
+        @include desktop-and-tablet-only {
+          line-height: 45px;
+        }
       }
       
       h5 {
