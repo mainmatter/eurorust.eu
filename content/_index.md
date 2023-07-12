@@ -65,6 +65,11 @@
 	link="https://www.arm.com/"
 	image="/images/sponsors/current_sponsors/arm.svg"
 
+[[extra.sponsors.partners]]
+	title="Ferrous Systems"
+	link="https://ferrous-systems.com/"
+	image="/images/sponsors/current_sponsors/ferrous.svg"
+
 [[extra.sponsors.supporters]]
 	title="Google"
 	link="https://opensource.google/"
