@@ -33,8 +33,8 @@
 		{
 			"time": "13:30 - 14:00",
 			"speakers": ["lisa-passing"],
-			"title": "TBA",
-			"description": "<p>TBA</p>"
+			"title": "alt.ctrl games w/ Rust",
+			"description": "<p>What if I told you there is a magical place where you can play videogames not just with a mouse+keyboard or gamepad but with, well, anything? Welcome to the alt.ctrl scene where anything can be used to control a videogame!</p><p>And what if I told you there is a magical programming language that supports you and your alt.ctrl game from hardware to GUI? Well, you're at a Rust conference so maybe you've guessed it.</p><p>In this talk we'll take a look at the many shapes of alt.ctrl games and how Rust is the perfect fit for creating them.</p>"
 		},
 		{
 			"time": "14:15 - 14:45",

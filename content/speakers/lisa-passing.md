@@ -6,3 +6,4 @@ title = "Speaker: Lisa Passing"
   image = "/images/speakers/lisa-passing.jpeg"
   url = "https://lislis.de/"
 +++
+Lisa is a Berlin-based creative technologist, artist, and researcher. Her main obsessions are playful interactions with computers and creative uses of civic tech and data.
