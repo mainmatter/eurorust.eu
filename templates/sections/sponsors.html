@@ -12,7 +12,7 @@
         <a href="{{ premier_partner.link }}" alt="{{ premier_partner.title }}">
           <img
             alt="{{ premier_partner.title }} logo"
-            src="/images/sponsors/current_sponsors/{{ premier_partner.title }}.{{ premier_partner.image_format }}"
+            src="{{ premier_partner.image }}"
           />
         </a>
         {% endfor %}
@@ -29,7 +29,7 @@
         <a href="{{ head_partner.link }}" alt="{{ head_partner.title }}">
           <img
             alt="{{ head_partner.title }} logo"
-            src="/images/sponsors/current_sponsors/{{ head_partner.title }}.{{ head_partner.image_format }}"
+            src="{{ head_partner.image }}"
           />
         </a>
         {% endfor %}
@@ -45,7 +45,7 @@
         <a href="{{ partner.link }}" alt="{{ partner.title }}">
           <img
             alt="{{ partner.title }} logo"
-            src="/images/sponsors/current_sponsors/{{ partner.title }}.{{ partner.image_format }}"
+            src="{{ partner.image }}"
           />
         </a>
         {% endfor %}
@@ -62,7 +62,7 @@
         <a href="{{ supporter.link }}" alt="{{ supporter.title }}">
           <img
             alt="{{ supporter.title }} logo"
-            src="/images/sponsors/current_sponsors/{{ supporter.title }}.{{ supporter.image_format }}"
+            src="{{ supporter.image }}"
           />
         </a>
         {% endfor %}

@@ -31,45 +31,44 @@
 	image_format="svg"
 
 [[extra.sponsors.premier_partners]]
-	title="hightec_rt"
+	title="HighTec EDV-Systeme"
 	link="https://hightec-rt.com/en/"
-	image_format="svg"
+	image="/images/sponsors/current_sponsors/hightec_rt.svg"
 
 [[extra.sponsors.head_partners]]
-	title="rust_foundation"
+	title="Rust Foundation"
 	link="https://foundation.rust-lang.org/"
-	image_format="svg"
+	image="/images/sponsors/current_sponsors/rust_foundation.svg"
 
 [[extra.sponsors.head_partners]]
-	title="realm_group"
+	title="realm group"
 	link="https://www.realmgroup.io/"
-	image_format="svg"
+	image="/images/sponsors/current_sponsors/realm_group.svg"
 
 [[extra.sponsors.head_partners]]
-	title="crabnebula"
+	title="CrabNebula"
 	link="https://crabnebula.dev/?utm_campaign=eurorust23&utm_source=eurorust"
-	image_format="svg"
+	image="/images/sponsors/current_sponsors/crabnebula.svg"
 
 [[extra.sponsors.partners]]
-	title="neo4j"
+	title="Neo4j"
 	link="https://neo4j.com/"
-	image_format="svg"
+	image="/images/sponsors/current_sponsors/neo4j.svg"
 
 [[extra.sponsors.partners]]
-	title="gensyn"
+	title="Gensyn"
 	link="https://www.gensyn.ai/"
-	image_format="svg"
+	image="/images/sponsors/current_sponsors/gensyn.svg"
 
 [[extra.sponsors.partners]]
 	title="arm"
 	link="https://www.arm.com/"
-	image_format="svg"
+	image="/images/sponsors/current_sponsors/arm.svg"
 
 [[extra.sponsors.supporters]]
-	title="google"
+	title="Google"
 	link="https://opensource.google/"
-	image_format="svg"
-
+	image="/images/sponsors/current_sponsors/google.svg"
 
 [[extra.speakers]]
 	name="Niko Matsakis"
