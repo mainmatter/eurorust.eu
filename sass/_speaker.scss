@@ -141,9 +141,10 @@
 
     .links {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       gap: 10px;
+      flex-wrap: wrap;
     
       a {
         background-color: var(--transparent-gray);
@@ -157,7 +158,7 @@
         }
       }
 
-      @include pill-button(".talk-link", 1.9rem, "right_arrow.svg", 27px);
+      @include pill-button(".talk-link", 1.9rem, "right_arrow.svg", 27px, 36px);
 
       .talk-link {
         width: unset;
@@ -165,9 +166,6 @@
         text-decoration: none;
       }
 
-      a + .talk-link {
-        margin-left: 20px;
-      }
     }
   }
 }
