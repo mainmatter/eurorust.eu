@@ -18,6 +18,23 @@
         {% endfor %}
       </div>
     </div>
+    {% endif %} {% if section.extra.sponsors.live_stream_partners %}
+    <div>
+      <p>
+        Live Stream Partner{% if section.extra.sponsors.live_stream_partners | length >
+        1 %}s{% endif %}
+      </p>
+      <div class="sponsors-grid premier-partners">
+        {% for live_stream_partner in section.extra.sponsors.live_stream_partners %}
+        <a href="{{ live_stream_partner.link }}" alt="{{ live_stream_partner.title }}">
+          <img
+            alt="{{ live_stream_partner.title }} logo"
+            src="{{ live_stream_partner.image }}"
+          />
+        </a>
+        {% endfor %}
+      </div>
+    </div>
     {% endif %} {% if section.extra.sponsors.head_partners %}
     <div>
       <p>
