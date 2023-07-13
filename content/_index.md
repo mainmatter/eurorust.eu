@@ -75,6 +75,11 @@
 	link="https://opensource.google/"
 	image="/images/sponsors/current_sponsors/google.svg"
 
+[[extra.sponsors.supporters]]
+	title="Trail of Bits"
+	link="https://www.trailofbits.com"
+	image="/images/sponsors/current_sponsors/trail-of-bits.svg"
+
 [[extra.speakers]]
 	name="Niko Matsakis"
 	company="AWS"
