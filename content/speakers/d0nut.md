@@ -1,6 +1,6 @@
 +++
 template = "speaker.html"
-title = "Speaker: d0nut"
+title = "Speaker: Nathanial Lattimer"
 [extra]
   name = "Nathanial Lattimer"
   title = "Senior Security Engineer at Robinhood"
