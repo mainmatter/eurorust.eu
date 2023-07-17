@@ -1,6 +1,6 @@
 [{
 	"day": "1",
-	"date":"October, 13 - Thursday",
+	"date":"October, 12 - Thursday",
 	"talks": [
 		{
 			"time":"9:00 - 10:00",
@@ -76,7 +76,7 @@
 },
 {
 	"day": "2",
-	"date": "October, 14 - Friday",
+	"date": "October, 13 - Friday",
 	"talks": [
 		{
 			"time": "9:00 - 10:00",
