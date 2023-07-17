@@ -1,33 +1,29 @@
-{
-"days": [{
+[{
 	"day": "1",
 	"date":"October, 13 - Thursday",
 	"talks": [
 		{
-			"time":"9:00 -  10:00",
+			"time":"9:00 - 10:00",
 			"title":"Doors open & Breakfast",
 			"isBreak": true
 		},
 		{
 			"time": "10:00 - 10:30",
-			"id": "daniel-stenberg",
-			"speaker": "Daniel Stenberg",
-			"title": "curl with Rust",
-			"description": "<p>TBA</p>"
+			"speakers": ["niko-matsakis"],
+			"title": "When the details matter",
+			"description": "<p>In the 8 years since Rust went 1.0, it has spread from a curiosity to a foundational technology used everywhere from kernels to spacecraft to cloud data centers. What is it that has made Rust successful, and what are the next big challenges for us to overcome? As Rust (and its community) grows, how do we stay true to our mission of empowering people to build everyone to build reliable and efficient software? </p>"
 		},
 		{
 			"time": "10:45 - 11:15",
-			"id": "lukas-bergdoll",
-			"speaker": "Lukas Bergdoll",
-			"title": "Optimising stable sort in Rust and mostly failing",
-			"description": "<p>Inspired by a promising C sort implementation, I set to porting it to Rust. Over the course of a couple months I build a suite of tests and benchmarks that helped me develop and validate improvements to the existing slice::sort implementation in the Rust standard library. Along this journey I made all kinds of different mistakes, ranging from basic implementation errors, to subtle test methodology issues, and even more subtle issues I’m not even sure are technically bugs but yielded very surprising results. I want to share my experiences and learnings.</p><p>This talk assumes basic Rust knowledge, and will touch on speculative execution and the effects it has on Instruction Level Parallelism (ILP). It does not require knowledge about sorting algorithms. The methods I used and mistakes I’ve made also apply to other fields of programming.</p>"
+			"speakers": ["arpad-borsos"],
+			"title": "<code>async fn</code> from Editor to Executable",
+			"description": "<p>An <code>async fn</code> that you write goes through different compiler stages, from Editor -> AST -> HIR -> MIR -> Executable. This process is complex and changing all the time. My contribution to this was removing the <code>GenFuture</code> type, which used to be an implementation detail of async Rust. I will give a deep dive into what this was, why it had to go, and the struggles from a contributor perspective in making it go away. A journey through different workarounds that existed temporarily, and are still existing today.</p><p>Apart from this, I will also highlight some very common problems that developers may run into when developing async Rust. Why the difference between <code>async fn</code> and <code>fn -> impl Future</code> matters a lot. Why the <code>mem::size_of</code> of Futures is currently a great concern, how to work around that, as well as an outlook on the Future (pun intended) when the compiler will improve and make manual workarounds unnecessary.</p>"
 		},
 		{
 			"time": "11:30 - 12:00",
-			"id": "pietro-albini",
-			"speaker": "Pietro Albini",
-			"title": "The life of a Rust security vulnerability",
-			"description": "<p>The Rust Security Response WG is responsible for receiving reports about Rust vulnerabilities, disclosing the vulnerability to the public, and assisting the Rust project teams when developing the fix. The WG is crucial for the security of the Rust ecosystem, but most of its work has to be kept private to prevent vulnerabilities from leaking.</p><p>In this talk, a member of the WG explains how it operates and handles vulnerabilities. During the talk we’ll walk through <a href=\"https://blog.rust-lang.org/2022/01/20/cve-2022-21658.html\" alt=\"Security advisory for the standard library (CVE-2022-21658)\">CVE-2022-21658 (race condition in std::fs::remove_dir_all)</a>, from the moment we received the report to the public disclosure.</p>"
+			"speakers": ["stefan-baumgartner"],
+			"title": "Designing for Ownership",
+			"description":"<p>Sometimes it’s nice to channel our inner Monica Geller and keep everything neat in our codebase. It’s zen coding when you do some spring cleaning, and it’s good for your team when things are clear and expressive. So you brush up on your tests (or maybe you don’t) and start with some recreational refactoring in Rust.</p><p>But suddenly, all your textbook refactoring techniques fail! You move code around, extract methods or change coupling, and the borrow checker tells you that everything you want to access has already been used somewhere else. Sorry, Mario, but the Princess is in another castle!</p><p>In this talk, we will see how we can refactor with ownership in mind. We will learn more about the differences as well as commonalities of pointer types, we will look at how references work when being used in a struct, and we will evaluate what techniques work best. Throughout, we will critically assess whether these changes are worthwhile or if cheating our way around with shortcuts is a better approach.</p>"
 		},
 		{
 			"time": "12:00 - 13:30",
@@ -36,24 +32,21 @@
 		},
 		{
 			"time": "13:30 - 14:00",
-			"id": "benoit-petit",
-			"speaker": "Benoit Petit",
-			"title": "Rust and sustainable IT",
-			"description":"<p>We know Rust is performant and can be used to build software that have a low footprint on IT resources. But how much does it relate to energy consumption? It this a crucial part of architectural choices for lighter applications (some would say \"greener\")?</p><p>How Rust could be used to assess the environmental impacts of ICT?</p><p>What are the environmental impacts of ICT anyway? Is electricity the only topic?</p><p>We’ll try to give decent answers to those questions and provide leads to dig deeper in those huge yet mostly unknown topics.</p>"
+			"speakers": ["lisa-passing"],
+			"title": "alt.ctrl games w/ Rust",
+			"description": "<p>What if I told you there is a magical place where you can play videogames not just with a mouse+keyboard or gamepad but with, well, anything? Welcome to the alt.ctrl scene where anything can be used to control a videogame!</p><p>And what if I told you there is a magical programming language that supports you and your alt.ctrl game from hardware to GUI? Well, you're at a Rust conference so maybe you've guessed it.</p><p>In this talk we'll take a look at the many shapes of alt.ctrl games and how Rust is the perfect fit for creating them.</p>"
 		},
 		{
 			"time": "14:15 - 14:45",
-			"id": "rafael-epplee",
-			"speaker": "Rafael Epplée",
-			"title": "End-to-end Testing Your Rust Backend",
-			"description": "<p>More and more, Rust is used to write web backends. It has excellent testing support out of the box, but end-to-end testing web backends can bring new challenges. Database access needs to be isolated, leading to slow test suites. The sheer amount of features to test and Rust’s low-level style can make test code large and hard to read. In the relatively young ecosystem, there are no widely known patterns or libraries to address these problems.</p><p>We’ll look at approaches to improving test performance and developer experience around end-to-end tests for Rust web backend applications:</p><ul><li>Various techniques for managing and isolating requests to SQL databases without sacrificing parallel test execution</li><li>Building domain-specific tools to simplify test code and automatically provide tests for new features</li><li>Using the <a href=\"https://crates.io/crates/rstest\" alt=\"rstest crate\">rstest crate</a> to simplify test setup and fixtures</li></ul><p>The content is suited for beginning and intermediate backend developers looking for ideas to increase the robustness of their web applications through easy and enjoyable testing. Due to Rust’s focus on correctness, testing for web applications has received less attention than it deserves, so I hope this talk will also spark some discussion around this topic.</p>"
+			"speakers": ["liv"],
+			"title": "Lessons Learned from Teaching Rust",
+			"description": "<p>Rust is a language that’s usually described as hard to learn, so let’s shine some light on how people do learn it! I’ve been maintaining Rust learning materials for about 5 years, and through shepherding hundreds of community contributions, I’ve gleaned some interesting things about how people approach learning this language, which parts they find difficult, and what we as teachers (be it through learning materials, documentation or otherwise) can do better. Join me in this journey through a less-talked about facet of the project!</p>"
 		},
 		{
 			"time": "15:00 - 15:30",
-			"id": "stefan-baumgartner",
-			"speaker": "Stefan Baumgartner",
-			"title": "Trials, Traits, and Tribulations",
-			"description":"<p>We have all been there: The sprint’s closing, a deadline is about to arrive, and our feature needs to be shipped. Our best intentions are thrown overboard and we’re done when the compiler is happy with our work. <i>Don’t panic!</i> – But let’s throw a little <code>unwrap</code> in there, what could go wrong? Famous last words.</p><p>Rinse and repeat, and you’ll end up with winding, unwieldy functions, and kitchen sink structs, that past you wrote, but future you will have a hard time understanding. Let’s help ourselves, and all our colleagues, and refactor to something better. All we need to do is to remember some unique features of Rust, and implement the right traits for the right structs.</p><p>In this talk, we will refactor a single function with hundreds of lines of code together. We will learn to leverage expressions, define clear error boundaries, and implement standard library traits that align our code with Rust’s broader ecosystem. The result will be expressive, clear, and hopefully nothing else but beautiful.</p>"
+			"speakers": ["nikolai-vazquez"],
+			"title": "Publishing High-Quality Crates",
+			"description":"<p>Cargo makes it easy to publish a crate, but there’s a lot of work to be done between <code>cargo new and cargo publish</code>. This talk will cover the many ways to take a crate from good to great.</p>"
 		},
 		{
 			"time": "15:30 - 16:00",
@@ -62,24 +55,22 @@
 		},
 		{
 			"time": "16:00 - 16:30",
-			"id": "francois-mockers",
-			"speaker": "François Mockers",
-			"title": "Bevy, WASM and the browser",
-			"description": "<p><a href=\"https://bevyengine.org/\" alt=\"Bevy, a refreshingly simple data-driven game engine built in Rust Free and Open Source Forever!\">Bevy</a> is a game engine using an Entity - Component - System architecture and a modern renderer. One of its main goal is to be cross-platform, and that means supporting WASM running in the browser!</p><p>We’ll see how Bevy uses a few crates to interact with the browser:</p><ul><li><a href=\"https://crates.io/crates/winit\" alt=\"winit crate\">winit</a> to get a canvas and all the interactions</li><li><a href=\"https://wgpu.rs/\" alt=\"wgpu official page\">wgpu</a> to render, in WebGL2 for now, and soon WebGPU</li><li><a href=\"https://crates.io/crates/web-sys\" alt=\"web-sys create\">web-sys</a> (and <a href=\"https://crates.io/crates/js-sys\" alt=\"js-sys crate\">js-sys</a>) to handle some (light) multithreading and game assets access</li></ul><p>And the limitations, around multithreading, renderer, native library usage and networking.</p><p>We’ll finish with some patterns on how to interact between a Bevy game and the JS world of the browser.</p>"
+			"speakers": ["aleksandr-petrosyan"],
+			"title": "Reinforcement learning as a testing methodology",
+			"description": "<p>Apply machine learning to help foresee, find and fix heisenbugs. More realistic than Fuzz testing, more comprehensive than property based testing, reinforcement learning can find more bugs than you thought possible.</p>"
 		},
 		{
 			"time": "16:45 - 17:15",
-			"id": "alberto-schiabel",
-			"speaker": "Alberto Schiabel",
-			"title": "No free lunch: limits of Wasm as a bridge from Rust to JS",
-			"description":"<p>Traditionally, Node.js has delegated the task of writing complex CPU-intensive logic to C++, but the increasing adoption of Rust and WebAssembly has led to a paradigm shift. In fact, Rust code can be compiled to WASM and be imported in a JavaScript (or even TypeScript) source file - for instance, <a href=\"https://github.com/seed-rs/seed\" alt=\"seed-rs official repository\">Seed</a> and <a href=\"https://github.com/prisma/prisma\" alt=\"Prisma Official repository\">Prisma</a> follow this approach -, but that doesn’t come without limitations and gotchas, even for relatively small projects that abide to standard Rust patterns. From silenced warnings and obfuscated panic errors to structs that cannot be serialized and typed automatically, the path of porting Rust code to a JS app in production is a steep one, even when we don’t consider the I/O limitations that WASI should address.</p><p>In this presentation, we will look at a language parser written in Rust, compiled with <a href=\"https://github.com/rustwasm/wasm-bindgen\" alt=\"wasm-bindgen official repository\">wasm-bindgen</a> and interpreted by Node.js, observing some limitations for production use cases and discussing alternatives. There’s no free lunch: WebAssembly - albeit useful - comes with its own set of challenges, and I trust this talk will help you navigate potential issues before they impact your deadlines.</p>"
+			"speakers": ["d0nut"],
+			"title": "Rust, but Verify - Compile-Time Authorization",
+			"description":"<p>Authorization is the number one security risk in the OWASP Top 10. But does it have to be? In this talk we’ll explore application security, unstable rust, and typestates to address one of the most prevalent vulnerability classes in modern software.</p>"
 		},
 		{
 			"time": "17:30 - 18:00",
-			"id": "rebecca-rumbul",
-			"title": "Panel: Rust in Reality",
-			"speaker": "Rebecca Rumbul",
-			"description": "<p>Rebecca Rumbul will talk with representatives of companies that bet on Rust about their motivations to choose Rust, as well as challenges they are facing and ways in which they benefit from their decisions.</p><p>Panelists:</p><ul><li><a href=\"https://developers.facebook.com/blog/post/2021/04/22/meet-rustaceans-chris-konstad/\" alt=\"Meet the Rustaceans: Chris Konstad\">Chris Konstad</a>, Production Engineer from <a href=\"https://about.meta.com/\" alt=\"About Meta\">Meta</a></li><li><a href=\"https://twitter.com/mitsuhiko/\" alt=\"Armin Ronacher's Twitter\">Armin Ronacher</a>, Principal Architect at <a href=\"https://sentry.io/welcome/\" alt=\"Sentry website\">Sentry</a></li><li><a href=\"https://twitter.com/algo_luca/\" alt=\"Luca Palmieri's Twitter\">Luca Palmieri</a>, Senior Software Engineer at <a href=\"http://aws.amazon.com\" alt=\"AWS website\">Amazon Web Services (AWS)</a></li><li><a href=\"https://twitter.com/argorak/\" alt=\"Florian Gilcher's Twitter\">Florian Gilcher</a>, Managing Director at <a href=\"http://ferrous-systems.com\" alt=\"Ferrous Systems website\">Ferrous Systems</a></li></ul>"
+			"title": "Panel: Inside Rust",
+			"isPanel": true,
+			"speakers": ["mara-bos", "niko-matsakis", "jonathan-pallant"],
+			"description":"<p>We talk to people that are actively involved with building Rust about their work. What are the inner workings of the project? What's coming in the 2024 edition? <a href=\"/speakers/luca-palmieri/\">Luca Palmieri</a> will talk about those and other questions with our panelists.</p>"
 		}
 	]
 },
@@ -94,84 +85,71 @@
 		},
 		{
 			"time": "10:00 - 10:30",
-			"id": "ryan-levick",
-			"speaker": "Ryan Levick",
-			"title": "Rust governance",
-			"description":"<p>The Rust project is a globally distributed collection of hundreds of individuals who all have different reasons for dedicating various amounts of time and energy in service of making Rust a great programming language. Despite (or maybe because of) this unique constellation of motivation, perspectives, and backgrounds, complex technical and organizational decisions get made every single day. But how is all of this coordinated?</p><p>In this talk, we’ll explore the inner workings of Rust project governance. We’ll dive into the unique features and challenges associated with Rust’s distributed and consensus oriented decision-making process, and we’ll try to form an understanding of what makes one of the largest and most complex open-source projects tick. By the end, you’ll have a better understanding of what makes open source at scale so challenging, and you’ll be better prepared to engage meaningfully in discussions about how the Rust project can and should be run in the future.</p>"
+			"speakers": ["ashley-williams"],
+			"title": "TBA",
+			"description": "<p>TBA</p>"
 		},
 		{
 			"time": "10:45 - 11:15",
-			"id": "aissata-maiga",
-			"speaker": "Aïssata Maiga",
-			"id2": "henrik-alser",
-			"speaker2": "Henrik Alsér",
-			"title": "Embed it yourself",
-			"description":"<p>This talk will provide you the resources you need to get started with embedded development in Rust, from home.</p><p>You will be presented an overview of the current landscape of embedded Rust - the community, ecosystem, open source tooling and some demonstrations of the powerful language features that makes embedded development in Rust performant yet portable, fun and approachable to anyone.</p><p>There will be blinky lights and real hardware.</p>"
+			"speakers": ["arthur-cohen"],
+			"title": "The road to compiling the standard library with gccrs",
+			"description": "<p>gccrs is an alternative compiler implementation of the Rust Programming Language, which aims at adding support for the language to the GNU Compiler Collection, GCC. For now, the project targets Rust version 1.49, and plans to catch up once that milestone is reached.</p><p>But what does “targeting a Rust version” mean? Our goal is for gccrs to eventually become an authentic Rust compiler, which passes the rustc testsuite and contains the same behavior, same bugs, and same language guarantees. But passing a testsuite is only half of the story, and the compiler needs to be useful for Rust users. This means compiling user crates and projects, which most often depend on one of the most complex pieces of Rust code available: the Rust standard library.</p><p>The standard library provides functions, types and traits that Rust programmers interface with on a daily basis. Think Option, Result, println!(), assert!(), unwrap(), clone()… It is made of multiple crates, of which the most crucial are core and alloc: core contains code usable even in the most restricted embedded contexts, while alloc offers types and abstractions relying on dynamic memory: Vec, Box, String… Some of these abstractions are implemented within the compiler (complex macros such as asm!(), some architecture-specific functions…), but most are written directly in Rust.</p><p>They are often made of very complex code, utilizing Rust’s powerful type system and macro expansion to avoid boilerplate and ensure soundness - but this weighs heavily on the compiler, which needs to understand and implement these constructs properly to handle this code!</p><p>This talk will dive into some of the work that was necessary for gccrs to understand and compile Rust’s 1.49 standard library: All of the interesting features, horrible hacks and lawless restrictions we have had to put in the compiler: All of the hurdles, horrors and hoops we’ve had to jump through, and all of the ugly code we’ve had to write!</p><p>We will focus this talk on the Rust side of things, and take a look at what is necessary for supporting some of the more complex parts of the standard library. We will dive into the rustc 1.49 implementation of the compiler, and compare it to gccrs, highlighting our shortcomings and the evolution of both compilers. You will learn a lot about the language, and discover just how complex the implementation of simple Rust types really is.</p>"
 		},
 		{
 			"time": "11:30 - 12:00",
-			"id": "colin-finck",
-			"speaker": "Colin Finck",
-			"title": "Don't Use This Crate, ...unless you have to - Windows Linked Lists in safe and idiomatic Rust",
-			"description":"<p>Don’t Use This Crate, …unless you have to. Linked lists are inefficient with regard to caching and memory usage, and there is almost always a better tool for the job. Nevertheless, linked lists are also used in all major operating system kernels for decades and we can’t just forget about them.</p><p>I will present nt-list, my Rust crate to work with Windows Linked Lists in a safe and idiomatic fashion. Better known as <code>LIST_ENTRY</code> and <code>SINGLE_LIST_ENTRY</code>, they are used by the Windows kernel, drivers, and components influenced by Windows (e.g. UEFI) to uniformly handle linked lists. I will go into detail about differences between textbook linked lists and the Windows variant, various misuses of Windows linked lists I’ve seen in the past, and the challenges in coming up with a safe Rust implementation that makes these mistakes impossible.</p><p></p>"
+			"speakers": ["alberto-schiabel"],
+			"title": "Underrated gems of Rust & WebAssembly: Errors, Async, I/O",
+			"description":"<p>WebAssembly has revolutionised cross-platform development, enabling developers to compile their code just once, regardless of the runtime operating system or CPU architecture. While Rust boasts the best language support for WebAssembly through the <a href=\"https://github.com/rustwasm/wasm-bindgen\">wasm-bindgen</a> tool, developers often encounter unexpected challenges and differences in execution models. Similarly to <code>no_std</code>, not every Rust code can be compiled to Wasm out of the box.</p><p>For example, in a Rust library compiled to Wasm, panics cannot be unwinded (and their stacktrace location is lost), and <code>async</code> functions <em>à la</em> <a href=\"https://github.com/tokio-rs/tokio\">tokio</a> cannot be <code>await</code>ed. Moreover, no I/O operation can be performed in WebAssembly: that means no network connections nor file handles can be opened. The <a href=\"https://wasi.dev\">WASI</a> specification partially overcomes this limitation, but that’s still unstable and doesn’t cover network sockets.</p><p>What if you wanted to write a production async Rust library that needs both robust error handling and I/O, and you needed to run it in JavaScript runtimes like Node.js?</p><p>In this talk, we will explore uncharted territories in Wasm land, where you’ll learn how to confidently integrate your familiar Rust patterns with powerful - but fragile - WebAssembly runtimes. As a motivating example, we will present a database query engine prototype written in Rust+Wasm that accepts a JSON query, parses it into an equivalent SQL query, runs such query asynchronously and returns the results to the caller.</p><p>Just like pirates in a sea of compilation errors, we will bend the rules to conquer new horizons in the realm of truly cross-platform Rust libraries!</p>"
 		},
 		{
-			"time": "12:00 - 13:00",
+			"time": "12:00 - 13:30",
 			"title": "Lunch",
 			"isBreak": true
 		},
 		{
-			"time": "13:00 - 13:30",
-			"id": "raphael-gomes",
-			"speaker": "Raphaël Gomès",
-			"title": "Oxidizing Mercurial: the good and the less good",
-			"description":"<p>Mercurial is a 17 year-old, mainly Python codebase with a bit of C. There are lots of interesting and unexpected challenges that come with rewriting parts of any such software, and some unique to version control systems: from FFI overhead, not reintroducing bugs, testing, mixed encoding issues, to less technical issues like inexperience with Rust and a lack of reviewers, our journey with Rust has not been smooth sailing.</p><p>Nevertheless, Rust helps breathe new air into the Mercurial story by being a much better fit to develop a VCS in than Python. The speed improvements alone would be enough justification but the developer ergonomics are the real main selling point on a lot of levels.</p>"
+			"time": "13:30 - 14:00",
+			"speakers": ["luca-palmieri"],
+			"title": "TBA",
+			"description": "<p>TBA</p>"
 		},
 		{
-			"time": "13:45 - 14:15",
-			"id": "bogdan-kolbik",
-			"speaker": "Bogdan Kolbik",
-			"title": "How to use a Rust library inside the JVM application",
-			"description": "<p>We managed to rewrite the core of a big Scala application in Rust while keeping all the supporting code untouched. This talk is about how we did it, what problems we faced and how we solved them. It involves JNI, Protobuf, Trojan horses, and a reference to The Hitchhiker’s Guide to the Galaxy.</p>"
-		},
-		{
-			"time": "14:30 - 15:00",
-			"id": "rainer-stropek",
-			"speaker": "Rainer Stropek",
-			"title": "Building Web APIs with Rust - State of the Union",
-			"description": "<p>Many people primarily see Rust as a platform for doing systems programming. It is great in that area, but you can do so much more with Rust. In this talk, Rainer will focus on how to build web APIs with Rust. Modern web APIs typically run in the cloud and Rust’s ability to produce small and blazingly fast apps is perfectly suited for keeping your cloud bills small.</p><p>In his talk, Rainer will do a high-level comparison of frameworks like Actix, Rocket, Warp, Axum, and/or Tide. How does typical API code look like in these frameworks? What are the most fundamental abstractions in them? How active and mature are they? Rainer will prepare a sample and use it to show similarities and differences. In addition to traditional frameworks, Rainer will also speak about Wasm-based options like WAGI and Spin and put them in perspective.</p><p>The session will be code-heavy. The audience should have a solid understanding of the Rust programming language. However, people attending this session do not need to be Rust experts with years of practical experience. The general messages of the talk should be understandable for people who want to build web APIs and are in the process of evaluating whether they should invest more time in learning Rust.</p>"
+			"time": "14:15 - 14:45",
+			"speakers": ["max-ammann"],
+			"title": "World in Vectors - Map rendering using WebGPU and WASM",
+			"description":"<p>Digital maps are ubiquitous tools in our everyday life. In the early 90s the idea of browsing the whole world and visiting any place was breathtaking. The first solution to this problem is called “TerraVision” and was groundbreaking. Today the idea of exploring your surroundings using digital maps has become normal.</p><h5>What is the talk about?</h5><p>But how do these maps work? In this talk I want to provide an overview of the foundations of digital mapping solutions. Differences between maps which use vector data and rasterized satellite imaginary will be outlined. These discussions will be accompanied by discussions about the Rust ecosystem and how it enables cross-platform rendering of geographic data on the GPU. A new and open-source map renderer will be presented, which is created using Rust and modern web technologies like WebAssembly and WebGPU.</p><p>I want to dive into the technical details of the WebGPU specification and how it was implemented by the known wgpu project. I will also present the state of GPU support in Rust in general.</p><p>Furthermore, I want to prove a good understanding of the WASM technology and why it is so interesting in the context of Rust and computer graphics.</p><h5>How did this project came into existence?</h5><p>Last year I had a lot of spare time and decided to kickstart a project which combines different areas of interest: Rust, 3D Rendering, Maps. The result is a cross-platform map renderer, nowadays officially supported by the MapLibre organization. The project showed me the complexity of mapping solutions. It takes a lot of steps until edits from OpenStreetMap contributors are finally rendered in consumer applications. With this task I want to take listeners on a journey from drawing changes in the OpenStreetMap editor all the way until vectors are uploaded to from memory to GPUs.</p>"
 		},
 		{
 			"time": "15:00 - 15:30",
+			"speakers": ["ayaz-hafiz"],
+			"title": "Wrangling memory leaks where you thought they could never happen",
+			"description":"<p>You’ve just launched your Rust app and everything seems perfect, until you notice your application’s memory usage skyrocketing. With Rust’s scoping rules and GC-less memory model, memory leaks seem impossible. So what’s going on? The OOM killer is lurking around the corner, and it’s time to take action.</p><p>While Rust’s powerful safety features and RAII enforcement mitigate common memory leak sources found in other languages, memory allocation challenges can still arise from subtle interactions between programming patterns and an underlying memory allocator. Join us in uncovering patterns that can lead to heap fragmentation and memory leaks, and idiomatic techniques for mitigating these issues in your Rust applications. We’ll learn to evaluate different memory allocators and learn how to harness powerful profiling tools to understand and optimize your Rust apps, from simple command-line tools to high-performance async web servers.</p>"
+		},
+		{
+			"time": "15:30 - 16:00",
 			"title": "Snack Break",
 			"isBreak": true
 		},
 		{
-			"time": "15:30 - 16:00",
-			"id": "tobias-hunger",
-			"speaker": "Tobias Hunger",
-			"title": "Rust and C++",
-			"description":"<p>Rust was designed to interoperate with other languages, but this interoperability is primarily based on C data structures and functions. This is limiting for C++ applications, because instances of C++ classes do not have a standardized representation in C. How can we expose Rust interfaces to C++ and the other way around?</p><p>At Slint we develop a UI toolkit in and for Rust. We also provide quality C++ bindings and integrate with existing C++ libraries. We do have to deal with interoperability issues on a regular basis. In this presentation we are going to review the crates we use to achieve interoperability, as well as the tricks we learned using C++ libraries and how we expose a modern C++ API to our Rust code, including a first-class CMake integration.</p>"
+			"time": "16:00 - 16:30",
+			"speakers": ["iryna-shestak"],
+			"title": "TBA",
+			"description":"<p>TBA</p>"
 		},
 		{
-			"time": "16:15 - 16:45",
-			"id": "sasha-pourcelot",
-			"speaker": "Sasha Pourcelot",
-			"title": "Parsing Rust Code Considered Harmful",
-			"description": "<p>I plan to discuss the different static analysis techniques that were used in the development of cargo-breaking.</p><p>We’ll start with basic Rust code parsers and show that, although being super simple, they require complex manipulations when it comes to import resolution and dependency handling.</p><p>Then we’ll use the Rust compiler as a library and dive deep in its internal API. While this approach allows us to capture all the subtilities of a Rust crate, we’ll show that it requires just too much maintenance and involves a huge complexity, potentially slowing down the development.</p><p>Once this is done, we’ll discuss how we can leverage rustdoc in order to extract the API of the crate and get a lot of super useful metadata in the process. This approach allowed us to do great process in the cargo-breaking development, as it allowed us to get all the data we needed while not being too complex to analyze.</p><p>At the end of the talk, we’ll allow ourselves to dream of the future. We could maybe add a plugin system to rust-analyzer and perform custom analysis in real time, so the diagnosis can be provided to the user after each key press.</p>"
+			"time": "16:45 - 17:15",
+			"title": "TBA",
+			"description":"<p>TBA</p>"
 		},
 		{
-			"time": "17:00 - 17:30",
-			"id": "dmitriy-kovalenko",
-			"speaker": "Dmitriy Kovalenko",
-			"title": "The art of programmatic videos with rust",
-			"description":"<p>This is going to be a release of https://fframes.studio. I’ve spend mostly 2 years to actually built it and dived into the video programming a lot. Videos are actually a sequence of images properly encoded. But how you can make your own video from scratch with only the code?</p><p>Here is a list of things you will know after attending this talk:</p><ol><li>How videos works under the hood? What are codecs and how they work?</li><li>How to make a video with a code?</li><li>Why using rust? 3.1 Interop with libav aka ffmpeg 3.2 Memory efficient frame rendering 3.3 GPU support</li><li>Rendering frames problem. Browser vs Rust in svg rendering</li><li>Audio creation remixing and blending</li><li>GPU for video rendering</li></ol><p>And also you will have everything to start making videos programatically with Rust. Gonna be 🔥</p>"
+			"time": "17:30 - 18:00",
+			"speakers": ["florian-gilcher"],
+			"title": "Communities, Organisations, Relationships, Conflict and Hope",
+			"description": "<p>The Rust environment has seen a lot of growth in all areas. It lead to visible friction and public conflict that may be hard to understand for people, particularly those that are new to Rust.</p><p>That begs a number of questions: Is this normal? Is this special to Rust? Just growth pain? Or something deeper? And whatever the answers are - to which level should individual community members care?</p><p>This talk sums up many discussions of worry and hope I had over the last months. It acts a both a summary of the past, but above all make you more competent for the conversations about the future of Rust that are ahead of us.</p>"
 		},
 		{
-			"time": "19:00 - 00:00",
-			"title": "Closing Dinner",
+			"time": "18:00 - 22:00",
+			"title": "Closing Party",
 			"isBreak": true
 		}
 	]
-}
-]}
+}]

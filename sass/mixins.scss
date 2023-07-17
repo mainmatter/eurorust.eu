@@ -91,17 +91,19 @@
     @include desktop-and-tablet-only {
       --font-size: 22px;
     }
-    --line-height: 56px;
+    --line-height: 32px;
     color: var(--white);
     font-size: var(--font-size);
     font-family: Poppins-Light;
     letter-spacing: 0;
     text-align: center;
     line-height: var(--line-height);
+    display: flex;
+    align-items: center;
 
     border: 2px solid var(--white);
     border-radius: 41px;
-    padding: 0 #{$paddingButton};
+    padding: 0.75rem #{$paddingButton};
     @content;
   }
 
