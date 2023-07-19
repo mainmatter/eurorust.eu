@@ -132,8 +132,8 @@
 		{
 			"time": "16:00 - 16:30",
 			"speakers": ["iryna-shestak"],
-			"title": "TBA",
-			"description":"<p>TBA</p>"
+			"title": "Hop in, everyone, we are speedrunning writing a compiler!",
+			"description":"<p>Player: lrlna#3475q9 Run Date: Oct 12, 2023 Run Time: 28m 49s</p><p>Premise: a completely nonsensical language, entirely made up by yours truly, needs us to design a compiler in order to reach its true potential. The problem? We only got 30 minutes, and the clock is ticking! In this talk, be prepared to glitch our way through a gibberish language to a gibberish language we can compile. There will be quests (token creation), mini bosses (lexer, parser), and in the end, we'll brave ourselves to take the final boss (... semantic analysis!).</p>"
 		},
 		{
 			"time": "16:45 - 17:15",
