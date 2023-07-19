@@ -133,6 +133,10 @@
     }
 
     .bio {
+      p + p {
+        margin-top: 40px;
+      }
+
       a {
         color: #00ffc4;
         text-decoration: underline;
