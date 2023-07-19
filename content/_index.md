@@ -87,12 +87,14 @@
 	image="niko-matsakis.png"
 	twitter="nikomatsakis"
 	web="http://smallcultfollowing.com/babysteps/about/"
+	link="/speakers/niko-matsakis"
 
 [[extra.speakers]]
 	name="Lisa Passing"
 	job_title="Creative Technologist"
 	image="lisa-passing.jpeg"
 	web="https://lislis.de/"
+	link="/speakers/lisa-passing"
 
 [[extra.speakers]]
 	name="Iryna Shestak"
@@ -101,6 +103,7 @@
 	image="iryna-shestak.jpeg"
 	twitter="_lrlna"
 	web="https://toot.cafe/@lrlna"
+	link="/speakers/iryna-shestak"
 
 [[extra.speakers]]
 	name="Ashley Williams"
@@ -109,5 +112,6 @@
 	image="ashley-williams.jpeg"
 	twitter="ag_dubs"
 	web="https://axo.dev/"
+	link="/speakers/ashley-williams"
 
 +++

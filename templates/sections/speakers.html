@@ -9,7 +9,9 @@
             src="/images/speakers/{{speaker.image}}"
             class="photo" />
         </div>
-        <p>{{ speaker.name }}</p>
+        <a href="{{ speaker.link }}" alt="{{ speaker.name }}">
+          {{ speaker.name }}
+        </a>
         {% if speaker.twitter or speaker.web %}
           <div class="links">
             {% if speaker.twitter %}

@@ -322,7 +322,8 @@ body {
     }
   }
 
-  .speakers, .moderators {
+  .speakers,
+  .moderators {
     display: grid;
     grid-template-rows: auto 1fr;
     grid-template-columns: 1fr;
@@ -354,7 +355,8 @@ body {
       margin: auto;
     }
 
-    .speakers-list, .moderators-list {
+    .speakers-list,
+    .moderators-list {
       display: flex;
       flex-flow: row wrap;
       justify-content: space-evenly;
@@ -425,7 +427,8 @@ body {
           margin-bottom: 10px;
         }
 
-        &.speaker, &.moderator {
+        &.speaker,
+        &.moderator {
           margin-bottom: 0;
         }
 
@@ -433,6 +436,9 @@ body {
           margin-top: 0;
           font-size: 1rem;
         }
+      }
+      a {
+        text-decoration: underline;
       }
 
       .links {
