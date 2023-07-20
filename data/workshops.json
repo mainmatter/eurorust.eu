@@ -1,8 +1,8 @@
 [
   {
     "date": "Oct 11 2023, 10:00 - 16:00",
-    "title": "Introduction to Rust for Web Developers",
-    "description": "According to the Stack Overflow survey, Rust is one of the most beloved programming languages. In recent years, it has also gained popularity. There has never been a better time to become familiar with Rust! Learning a new programming language is always easier."
+    "title": "Refactoring Rust",
+    "description": "Rust is undeniably syntax-heavy. There’s a lot of intent to express, and Rust wants you to be explicit. All the extra effort can result in bloated code and hard-to-use APIs. Especially features like the trait system, error handling, and ownership add another layer of complexity that can't be controlled by the usual refactoring techniques we have been teaching for the last decades."
   },
   {
     "date": "Oct 11 2023, 10:00 - 16:00",
