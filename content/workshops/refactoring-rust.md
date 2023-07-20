@@ -20,28 +20,20 @@ This workshop is designed for developers who are working on Rust codebases alrea
 <h4>Contents</h4>
 <ul>
 	<li>
-		<p>Part 1: Effective use of syntax and built-in methods</p>
-		<p>…</p>
+		<p>Part 1: Readable Code</p>
+		<p>Rust is a modern, expressive language. We look at tooling, formatting, and naming conventions and see the effective use of existing syntax. Often times there are shortcuts that make things a lot easier! We also see which possibilities exist for polymorphism.</p>
 	</li>
 	<li>
-		<p>Part 2: Error handling, error boundaries, and happy path programming </p>
-		<p>…</p>
+		<p>Part 2: Structs and Error Handling</p>
+		<p>Rust’s error handling makes programming a lot of fun and fantastically safe if you know all the possibilities that they offer. We learn about proper error handling, happy path programming, and learn about the most useful methods of <code>Result</code> and <code>Option</code>.</p>
 	</li>
 	<li>
-		<p>Part 3: Abstracting with traits</p>
-		<p>…</p>
+		<p>Part 3: Traits</p>
+		<p>Traits are our main access for abstraction. We look at conversion traits, the most important derivable traits, and how to connect your application to the existing Rust ecosystem.</p>
 	</li>
 	<li>
-		<p>Part 4: Possibilities for polymorphism: Generics, trait objects, enums</p>
-		<p>…</p>
-	</li>
-	<li>
-		<p>Part 5: How type inference for `Default::default()`, `Into::into()` works - Working with Iterators</p>
-		<p>…</p>
-	</li>
-	<li>
-		<p>Part 6: Designing for Ownership</p>
-		<p>…</p>
+		<p>Part 4: Design Patterns</p>
+		<p>Finally, we see which design patterns exist in the world of Rust and how we can apply them. We learn about extension traits, and the builder pattern, and see how ownership changes our API design.</p>
 	</li>
 </ul>
 <h4>Prerequisites</h4>
