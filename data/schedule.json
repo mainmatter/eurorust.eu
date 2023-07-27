@@ -137,8 +137,9 @@
 		},
 		{
 			"time": "16:45 - 17:15",
+			"speakers": ["armin-ronacher"],
 			"title": "TBA",
-			"description":"<p>TBA</p>"
+			"description": "<p>TBA</p>"
 		},
 		{
 			"time": "17:30 - 18:00",
