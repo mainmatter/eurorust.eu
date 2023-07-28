@@ -10,6 +10,7 @@ template = "workshop.html"
 <p>
 	Your Rust application has finally been deployed to production! Nice! But is it working? This workshop will introduce you to a comprehensive toolkit to detect, troubleshoot and resolve issues in your Rust APIs.
 </p>
+<p>All workshop participants will receive a free 3 month <a href="https://www.jetbrains.com/clion/" target="_blank">CLion</a> license valid for personal use from our friends at JetBrains.</p>
 <h4>Target Audience</h4>
 <p>
 This workshop is designed for developers who are operating Rust services in production-like environments, or are preparing to do so.
