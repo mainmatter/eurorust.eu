@@ -35,10 +35,12 @@
             <div class="workshop-header">
               <p class="workshop-date">{{ workshop.date }}</p>
               <h3 class="workshop-title">{{ workshop.title }}</h3>
-              <div class="sponsored-by">
-                <img alt="Mainmatter logo" src="/images/icons/mainmatter.svg" />
-                <p>Workshop run by Mainmatter</p>
-              </div>
+              {% if workshop.sponsor == "mainmatter" %}
+                <div class="sponsored-by">
+                  <img alt="Mainmatter logo" src="/images/icons/mainmatter.svg" />
+                  <p>Workshop run by Mainmatter</p>
+                </div>
+              {% endif %}
             </div>
             <p class="workshop-description">{{ workshop.description }}</p>
             <a
