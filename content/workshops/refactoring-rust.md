@@ -5,6 +5,7 @@ template = "workshop.html"
 	date = "Oct 11 2023, 10:00 - 16:00"
 	avatar = "stefan-baumgartner.jpeg"
 	avatar_alt = "Stefan Baumgartner"
+	sponsor = "mainmatter"
 +++
 
 <p>

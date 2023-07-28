@@ -5,6 +5,7 @@ template = "workshop.html"
 	date = "Oct 11 2023, 10:00 - 16:00"
 	avatar = "luca-palmieri.webp"
 	avatar_alt = "Luca Palmieri"
+	sponsor = "mainmatter"
 +++
 
 <p>
