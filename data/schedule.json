@@ -138,8 +138,8 @@
 		{
 			"time": "16:45 - 17:15",
 			"speakers": ["armin-ronacher"],
-			"title": "TBA",
-			"description": "<p>TBA</p>"
+			"title": "Rust at Sentry: 7 Years Later",
+			"description": "<p>After 7 years of Rust at Sentry it's time to revisit our decisions. What would we do different? What worked well? How do you onboard engineers into a language that is not known for being easy to get started? How do you end up more productive? This talk also incorporates experience with some of the libraries and ecosystems we use.</p>"
 		},
 		{
 			"time": "17:30 - 18:00",
