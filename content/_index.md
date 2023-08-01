@@ -35,6 +35,11 @@
 	link="https://hightec-rt.com/en/"
 	image="/images/sponsors/current_sponsors/hightec_rt.svg"
 
+[[extra.sponsors.live_stream_partners]]
+	title="Huawei"
+	link="https://www.huawei.com/"
+	image="/images/sponsors/current_sponsors/huawei.png"
+
 [[extra.sponsors.head_partners]]
 	title="Rust Foundation"
 	link="https://foundation.rust-lang.org/"
