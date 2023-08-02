@@ -26,10 +26,12 @@
         <div class="workshop-header">
           <p class="workshop-date">{{ page.extra.date }}</p>
           <h3 class="workshop-title">{{ page.title }}</h3>
-          <div class="sponsored-by">
-            <img alt="Mainmatter logo" src="/images/icons/mainmatter.svg" />
-            <p>Workshop run by Mainmatter</p>
-          </div>
+          {% if page.extra.sponsor == "mainmatter" %}
+            <div class="sponsored-by">
+              <img alt="Mainmatter logo" src="/images/icons/mainmatter.svg" />
+              <p>Workshop run by Mainmatter</p>
+            </div>
+          {% endif %}
         </div>
 
         <div class="workshop box">

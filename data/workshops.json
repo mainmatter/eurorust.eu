@@ -2,11 +2,19 @@
   {
     "date": "Oct 11 2023, 10:00 - 16:00",
     "title": "Refactoring Rust",
-    "description": "Rust is undeniably syntax-heavy. There’s a lot of intent to express, and Rust wants you to be explicit. All the extra effort can result in bloated code and hard-to-use APIs. Especially features like the trait system, error handling, and ownership add another layer of complexity that can't be controlled by the usual refactoring techniques we have been teaching for the last decades."
+    "description": "Rust is undeniably syntax-heavy. There’s a lot of intent to express, and Rust wants you to be explicit. All the extra effort can result in bloated code and hard-to-use APIs. Especially features like the trait system, error handling, and ownership add another layer of complexity that can't be controlled by the usual refactoring techniques we have been teaching for the last decades.",
+    "sponsor": "mainmatter"
   },
   {
     "date": "Oct 11 2023, 10:00 - 16:00",
     "title": "You can't fix what you can't see: telemetry for Rust APIs",
-    "description": "Your Rust application has finally been deployed to production! Nice! But is it working? This workshop will introduce you to a comprehensive toolkit to detect, troubleshoot and resolve issues in your Rust APIs."
+    "description": "Your Rust application has finally been deployed to production! Nice! But is it working? This workshop will introduce you to a comprehensive toolkit to detect, troubleshoot and resolve issues in your Rust APIs.",
+    "sponsor": "mainmatter"
+  },
+  {
+    "date": "Oct 11 2023, 10:00 - 16:00",
+    "title": "RustBridge",
+    "description": "In this hands-on workshop, we will learn the basics of the Rust programming language and then apply that knowledge to building a CLI tool in Rust. By the end of this workshop you should have a working knowledge of the language and tooling ecosystem and be ready to tackle projects on your own.",
+    "sponsor": "null"
   }
 ]
