@@ -3,6 +3,8 @@ title = "Why your Car should Rust – Rust for safety critical systems"
 template = "workshop.html"
 [extra]
   date = "Oct 11 2023, 10:00 - 16:00"
+  avatar = "daniel-frassinelli.jpeg"
+  avatar_alt = "Daniel Frassinelli"
   sponsor = "hightec"
 +++
 
@@ -32,3 +34,13 @@ This workshop is designed for a broad spectrum of Rust enthusiasts with an incli
 </ul>
 <h4>Prerequisites</h4>
 <p>We will send a comprehensive set of preparatory instructions. This information will be provided closer to the workshop date. While this detailed instructions are on its way, we encourage those who are new to embedded Rust to get a head start by exploring the "Embedded Rust collection" (<a href="https://github.com/rust-embedded/awesome-embedded-rust" target="_blank">https://github.com/rust-embedded/awesome-embedded-rust</a>) This will provide an excellent introduction and familiarize you with some of the concepts we will be discussing in the workshop.</p>
+<h4>Mario Cupelli</h4>
+<div class="author-and-booking">
+  <div class="photo-container">
+    <img
+      class="photo"
+      src="/images/speakers/mario-cupelli.jpeg"
+      alt="Mario Cupelli">
+  </div>
+</div>
+<h4>Daniel Frassinelli</h4>
