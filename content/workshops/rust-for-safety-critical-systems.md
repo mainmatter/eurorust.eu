@@ -35,6 +35,11 @@ This workshop is designed for a broad spectrum of Rust enthusiasts with an incli
 <h4>Prerequisites</h4>
 <p>We will send a comprehensive set of preparatory instructions. This information will be provided closer to the workshop date. While this detailed instructions are on its way, we encourage those who are new to embedded Rust to get a head start by exploring the "Embedded Rust collection" (<a href="https://github.com/rust-embedded/awesome-embedded-rust" target="_blank">https://github.com/rust-embedded/awesome-embedded-rust</a>) This will provide an excellent introduction and familiarize you with some of the concepts we will be discussing in the workshop.</p>
 <h4>Mario Cupelli</h4>
+<p>Mario Cupelli is the CTO of HighTec EDV-Systeme GmbH a world-leading provider of safety
+  qualified compilers based on LLVM technology, a modern embedded multicore real-time
+  operating system PXROS-HR and offers ISO 26262 ASIL D qualified tools for embedded
+  software development. As a CTO of HighTec, he continues to drive the company’s business
+  strategy and advocate for open-source tools in embedded development.</p>
 <div class="author-and-booking">
   <div class="photo-container">
     <img
@@ -44,3 +49,6 @@ This workshop is designed for a broad spectrum of Rust enthusiasts with an incli
   </div>
 </div>
 <h4>Daniel Frassinelli</h4>
+<p>Daniel Frassinelli is a developer and co-founder of Veecle, based in Berlin. He comes with a
+  strong security background and is now leading the development of a Rust operating system
+  and middleware for automotive usage.</p>
