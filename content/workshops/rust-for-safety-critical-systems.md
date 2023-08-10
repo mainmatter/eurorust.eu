@@ -33,7 +33,7 @@ This workshop is designed for a broad spectrum of Rust enthusiasts with an incli
   </li>
 </ul>
 <h4>Prerequisites</h4>
-<p>We will send a comprehensive set of preparatory instructions. This information will be provided closer to the workshop date. While this detailed instructions are on its way, we encourage those who are new to embedded Rust to get a head start by exploring the "Embedded Rust collection" (<a href="https://github.com/rust-embedded/awesome-embedded-rust" target="_blank">https://github.com/rust-embedded/awesome-embedded-rust</a>) This will provide an excellent introduction and familiarize you with some of the concepts we will be discussing in the workshop.</p>
+<p>We will send a comprehensive set of preparatory instructions. This information will be provided closer to the workshop date. While this detailed instructions are on its way, we encourage those who are new to embedded Rust to get a head start by exploring the "Embedded Rust collection" (<a href="https://github.com/rust-embedded/awesome-embedded-rust" target="_blank">https://github.com/rust-embedded/awesome-embedded-rust</a>). This will provide an excellent introduction and familiarize you with some of the concepts we will be discussing in the workshop.</p>
 <h4>Mario Cupelli</h4>
 <p>Mario Cupelli is the CTO of HighTec EDV-Systeme GmbH a world-leading provider of safety
   qualified compilers based on LLVM technology, a modern embedded multicore real-time
