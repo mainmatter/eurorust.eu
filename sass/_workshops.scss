@@ -91,6 +91,11 @@
       .sponsored-by {
         display: flex;
         gap: 15px;
+
+        img {
+          max-width: 30px;
+          max-height: 30px;
+        }
       }
     }
 

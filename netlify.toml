@@ -15,3 +15,7 @@ ZOLA_VERSION = "v0.17.2"
 
 [context.deploy-preview]
 command = "zola build --base-url $DEPLOY_PRIME_URL"
+
+[[redirects]]
+  from = "/workshops/you-cant-fix-what-you-cant-see-telemetry-for-rust-apis/"
+  to = "/workshops/telemetry-for-rust-apis"

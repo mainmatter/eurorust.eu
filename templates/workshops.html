@@ -40,13 +40,19 @@
                   <img alt="Mainmatter logo" src="/images/icons/mainmatter.svg" />
                   <p>Workshop run by Mainmatter</p>
                 </div>
+              {% elif workshop.sponsor == "hightec" %}
+                <div class="sponsored-by">
+                  <img alt="HighTec logo" src="/images/icons/hightec.png" />
+                  <img alt="HighTec logo" src="/images/icons/veecle.png" />
+                  <p>Workshop run by HighTec in collaboration with Veecle</p>
+                </div>
               {% endif %}
             </div>
             <p class="workshop-description">{{ workshop.description }}</p>
             <a
               class="more-info button"
               alt="more info"
-              href="/workshops/{{ workshop.title | lower | replace(from=' ', to='-') | replace(from=':', to='') | replace(from="'", to='') }}">More Info</a>
+              href="/workshops/{{ workshop.slug }}">More Info</a>
           </div>
         {% endfor %}
       </section>

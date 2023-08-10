@@ -31,18 +31,26 @@
               <img alt="Mainmatter logo" src="/images/icons/mainmatter.svg" />
               <p>Workshop run by Mainmatter</p>
             </div>
+          {% elif page.extra.sponsor == "hightec" %}
+            <div class="sponsored-by">
+              <img alt="HighTec logo" src="/images/icons/hightec.png" />
+              <img alt="HighTec logo" src="/images/icons/veecle.png" />
+              <p>Workshop run by HighTec in collaboration with Veecle</p>
+            </div>
           {% endif %}
         </div>
 
         <div class="workshop box">
           {{ page.content | safe }}
           <div class="author-and-booking">
-            <div class="photo-container">
-              <img
-                class="photo"
-                src="/images/workshops/{{ page.extra.avatar }}"
-                alt="{{ page.extra.avatar_alt }}">
-            </div>
+            {% if page.extra.avatar %}
+              <div class="photo-container">
+                <img
+                  class="photo"
+                  src="/images/workshops/{{ page.extra.avatar }}"
+                  alt="{{ page.extra.avatar_alt }}">
+              </div>
+            {% endif %}
             <tito-button class="book-your-ticket button" event="events-matter/eurorust-2023">Book
               Your Ticket</tito-button>
           </div>
