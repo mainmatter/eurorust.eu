@@ -69,6 +69,10 @@
     .entry-description {
       text-align: center;
       max-width: 664px;
+
+      a {
+        color: var(--white);
+      }
     }
 
     .workshop-header {
