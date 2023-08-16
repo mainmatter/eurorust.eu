@@ -55,6 +55,11 @@
 	link="https://crabnebula.dev/?utm_campaign=eurorust23&utm_source=eurorust"
 	image="/images/sponsors/current_sponsors/crabnebula.svg"
 
+[[extra.sponsors.head_partners]]
+	title="JetBrains"
+	link="https://jetbrains.com"
+	image="/images/sponsors/current_sponsors/jetbrains.svg"
+
 [[extra.sponsors.partners]]
 	title="Neo4j"
 	link="https://neo4j.com/"
