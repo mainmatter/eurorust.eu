@@ -517,95 +517,6 @@ body {
     }
   }
 
-  .venue {
-    display: grid;
-    text-align: center;
-    align-items: center;
-    grid-template-columns: 1fr;
-    row-gap: 40px;
-    column-gap: 66px;
-    margin: 0 35px 80px;
-
-    @include desktop-only {
-      row-gap: 0;
-    }
-    @include desktop-and-tablet-only {
-      margin: var(--margin-between-sections) auto 0;
-    }
-    @include desktop-only {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-      text-align: left;
-      max-width: 1100px;
-      width: 80%;
-    }
-
-    --min-max-venue-column: 500px;
-
-    .image-venue-container {
-      width: auto;
-
-      @include desktop-only {
-        grid-column: 1;
-        grid-row-start: 1;
-        grid-row-end: 4;
-      }
-
-      .image-venue {
-        --neon-padding: 8px;
-        @include desktop-only {
-          --neon-padding: 14px;
-        }
-        --max-width-venue-img: calc(
-          min(100% - (var(--neon-padding) * 2), var(--min-max-venue-column))
-        );
-        border-radius: 8px;
-        border: 3.2px solid var(--pink);
-        @include neon-border-style(true);
-        padding: var(--neon-padding);
-        max-width: var(--max-width-venue-img);
-      }
-    }
-
-    h3 {
-      letter-spacing: 0;
-      text-align: center;
-      width: calc(min(20rem, calc(100% - 35px * 2)));
-      margin: auto;
-      @include desktop-only {
-        margin: 0;
-        text-align: left;
-        grid-column: 2;
-        grid-row: 1;
-      }
-    }
-
-    p {
-      text-align: left;
-      @include mobile-only {
-        margin: auto 10px;
-      }
-      max-width: var(--min-max-venue-column);
-      justify-self: center;
-      @include desktop-only {
-        justify-self: auto;
-        grid-column: 2;
-        grid-row: 2;
-      }
-    }
-
-    @include pill-button(".map-link", 2.5rem, "location.svg", 35px);
-
-    a {
-      justify-self: center;
-      @include desktop-only {
-        justify-self: left;
-        grid-column: 2;
-        grid-row: 3;
-      }
-    }
-  }
-
   .presented-by {
     display: flex;
     align-content: space-around;
@@ -761,6 +672,95 @@ body {
           max-width: var(--max-width-supporters);
         }
       }
+    }
+  }
+}
+
+.venue, .workshop-venue {
+  display: grid;
+  text-align: center;
+  align-items: center;
+  grid-template-columns: 1fr;
+  row-gap: 40px;
+  column-gap: 66px;
+  margin: 0 35px 80px;
+
+  @include desktop-only {
+    row-gap: 0;
+  }
+  @include desktop-and-tablet-only {
+    margin: var(--margin-between-sections) auto 0;
+  }
+  @include desktop-only {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    text-align: left;
+    max-width: 1100px;
+    width: 80%;
+  }
+
+  --min-max-venue-column: 500px;
+
+  .image-venue-container {
+    width: auto;
+
+    @include desktop-only {
+      grid-column: 1;
+      grid-row-start: 1;
+      grid-row-end: 4;
+    }
+
+    .image-venue {
+      --neon-padding: 8px;
+      @include desktop-only {
+        --neon-padding: 14px;
+      }
+      --max-width-venue-img: calc(
+        min(100% - (var(--neon-padding) * 2), var(--min-max-venue-column))
+      );
+      border-radius: 8px;
+      border: 3.2px solid var(--pink);
+      @include neon-border-style(true);
+      padding: var(--neon-padding);
+      max-width: var(--max-width-venue-img);
+    }
+  }
+
+  h3 {
+    letter-spacing: 0;
+    text-align: center;
+    width: calc(min(20rem, calc(100% - 35px * 2)));
+    margin: auto;
+    @include desktop-only {
+      margin: 0;
+      text-align: left;
+      grid-column: 2;
+      grid-row: 1;
+    }
+  }
+
+  p {
+    text-align: left;
+    @include mobile-only {
+      margin: auto 10px;
+    }
+    max-width: var(--min-max-venue-column);
+    justify-self: center;
+    @include desktop-only {
+      justify-self: auto;
+      grid-column: 2;
+      grid-row: 2;
+    }
+  }
+
+  @include pill-button(".map-link", 2.5rem, "location.svg", 35px);
+
+  a {
+    justify-self: center;
+    @include desktop-only {
+      justify-self: left;
+      grid-column: 2;
+      grid-row: 3;
     }
   }
 }
