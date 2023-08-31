@@ -2,89 +2,93 @@
   <p class="thanks_message">THANKS TO OUR SPONSORS</p>
   <div class="sponsors-grid-container">
     {% if section.extra.sponsors.premier_partners %}
-    <div>
-      <p>
-        Premier Partner{% if section.extra.sponsors.premier_partners | length >
-        1 %}s{% endif %}
-      </p>
-      <div class="sponsors-grid premier-partners">
-        {% for premier_partner in section.extra.sponsors.premier_partners %}
-        <a href="{{ premier_partner.link }}" alt="{{ premier_partner.title }}">
-          <img
-            alt="{{ premier_partner.title }} logo"
-            src="{{ premier_partner.image }}"
-          />
-        </a>
-        {% endfor %}
+      <div>
+        <p>
+          Premier Partner{% if section.extra.sponsors.premier_partners | length > 
+ 1 %}s{% endif %}
+        </p>
+        <div class="sponsors-grid premier-partners">
+          {% for premier_partner in section.extra.sponsors.premier_partners %}
+            <a href="{{ premier_partner.link }}" alt="{{ premier_partner.title }}">
+              <img
+                class="{{ premier_partner.title | lower | replace(from=' ', to='_') }}"
+                alt="{{ premier_partner.title }} logo"
+                src="{{ premier_partner.image }}" />
+            </a>
+          {% endfor %}
+        </div>
       </div>
-    </div>
-    {% endif %} {% if section.extra.sponsors.live_stream_partners %}
-    <div>
-      <p>
-        Live Stream Partner{% if section.extra.sponsors.live_stream_partners | length >
-        1 %}s{% endif %}
-      </p>
-      <div class="sponsors-grid premier-partners">
-        {% for live_stream_partner in section.extra.sponsors.live_stream_partners %}
-        <a href="{{ live_stream_partner.link }}" alt="{{ live_stream_partner.title }}">
-          <img
-            alt="{{ live_stream_partner.title }} logo"
-            src="{{ live_stream_partner.image }}"
-          />
-        </a>
-        {% endfor %}
+    {% endif %}
+    {% if section.extra.sponsors.live_stream_partners %}
+      <div>
+        <p>
+          Live Stream Partner{% if section.extra.sponsors.live_stream_partners | length > 
+ 1 %}s{% endif %}
+        </p>
+        <div class="sponsors-grid premier-partners">
+          {% for live_stream_partner in section.extra.sponsors.live_stream_partners %}
+            <a href="{{ live_stream_partner.link }}" alt="{{ live_stream_partner.title }}">
+              <img
+                class="{{ live_stream_partner.title | lower | replace(from=' ', to='_') }}"
+                alt="{{ live_stream_partner.title }} logo"
+                src="{{ live_stream_partner.image }}" />
+            </a>
+          {% endfor %}
+        </div>
       </div>
-    </div>
-    {% endif %} {% if section.extra.sponsors.head_partners %}
-    <div>
-      <p>
-        Head Partner{% if section.extra.sponsors.head_partners | length > 1
-        %}s{% endif %}
-      </p>
-      <div class="sponsors-grid head-partners">
-        {% for head_partner in section.extra.sponsors.head_partners %}
-        <a href="{{ head_partner.link }}" alt="{{ head_partner.title }}">
-          <img
-            alt="{{ head_partner.title }} logo"
-            src="{{ head_partner.image }}"
-          />
-        </a>
-        {% endfor %}
+    {% endif %}
+    {% if section.extra.sponsors.head_partners %}
+      <div>
+        <p>
+          Head Partner{% if section.extra.sponsors.head_partners | length > 1
+ %}s{% endif %}
+        </p>
+        <div class="sponsors-grid head-partners">
+          {% for head_partner in section.extra.sponsors.head_partners %}
+            <a href="{{ head_partner.link }}" alt="{{ head_partner.title }}">
+              <img
+                class="{{ head_partner.title | lower | replace(from=' ', to='_') }}"
+                alt="{{ head_partner.title }} logo"
+                src="{{ head_partner.image }}" />
+            </a>
+          {% endfor %}
+        </div>
       </div>
-    </div>
-    {% endif %} {% if section.extra.sponsors.partners %}
-    <div>
-      <p>
-        Partner{% if section.extra.sponsors.partners | length > 1 %}s{% endif %}
-      </p>
-      <div class="sponsors-grid partners">
-        {% for partner in section.extra.sponsors.partners %}
-        <a href="{{ partner.link }}" alt="{{ partner.title }}">
-          <img
-            alt="{{ partner.title }} logo"
-            src="{{ partner.image }}"
-          />
-        </a>
-        {% endfor %}
+    {% endif %}
+    {% if section.extra.sponsors.partners %}
+      <div>
+        <p>
+          Partner{% if section.extra.sponsors.partners | length > 1 %}s{% endif %}
+        </p>
+        <div class="sponsors-grid partners">
+          {% for partner in section.extra.sponsors.partners %}
+            <a href="{{ partner.link }}" alt="{{ partner.title }}">
+              <img
+                class="{{ partner.title | lower | replace(from=' ', to='_') }}"
+                alt="{{ partner.title }} logo"
+                src="{{ partner.image }}" />
+            </a>
+          {% endfor %}
+        </div>
       </div>
-    </div>
-    {% endif %} {% if section.extra.sponsors.supporters %}
-    <div>
-      <p>
-        Supporter{% if section.extra.sponsors.supporters | length > 1 %}s{%
-        endif %}
-      </p>
-      <div class="sponsors-grid supporters">
-        {% for supporter in section.extra.sponsors.supporters %}
-        <a href="{{ supporter.link }}" alt="{{ supporter.title }}">
-          <img
-            alt="{{ supporter.title }} logo"
-            src="{{ supporter.image }}"
-          />
-        </a>
-        {% endfor %}
+    {% endif %}
+    {% if section.extra.sponsors.supporters %}
+      <div>
+        <p>
+          Supporter{% if section.extra.sponsors.supporters | length > 1 %}s{% 
+ endif %}
+        </p>
+        <div class="sponsors-grid supporters">
+          {% for supporter in section.extra.sponsors.supporters %}
+            <a href="{{ supporter.link }}" alt="{{ supporter.title }}">
+              <img
+                class="{{ supporter.title | lower | replace(from=' ', to='_') }}"
+                alt="{{ supporter.title }} logo"
+                src="{{ supporter.image }}" />
+            </a>
+          {% endfor %}
+        </div>
       </div>
-    </div>
     {% endif %}
   </div>
 </section>
