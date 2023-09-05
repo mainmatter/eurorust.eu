@@ -631,6 +631,13 @@ body {
         display: block;
       }
 
+      img.gensyn {
+        @include desktop-and-tablet-only {
+          height: 57px;
+        }
+        height: 48px;
+      }
+
       &.premier-partners {
         gap: 39px;
         @include desktop-and-tablet-only {
@@ -676,7 +683,8 @@ body {
   }
 }
 
-.venue, .workshop-venue {
+.venue,
+.workshop-venue {
   display: grid;
   text-align: center;
   align-items: center;
