@@ -109,8 +109,8 @@
 		{
 			"time": "13:30 - 14:00",
 			"speakers": ["luca-palmieri"],
-			"title": "TBA",
-			"description": "<p>TBA</p>"
+			"title": "Reasoning about Rust: an introduction to Rustdoc's JSON format",
+			"description": "<p>Macros are the primary mechanism for metaprogramming in Rust, either to perform code generation or enforce constraints at compile-time that are not easily captured by the type system (e.g. sqlx).</p><p>Macros are also limited: their input is a stream of tokens, with no type-level information.</p><p>Up until last year, you had to hook directly into the compiler internals to get a more featureful representation. This is no longer the case, thanks to Rustdoc's JSON format: an information-rich representation of your Rust API in a machine-parsable format (with a versioned schema!).</p><p>We will introduce the feature, look at the structure of the data and cover a few of the usecases where it shines. You will leave the talk with a basic understanding of the format and ideas on how you could leverage it to build tools that enhance your own Rust workflows.</p>"
 		},
 		{
 			"time": "14:15 - 14:45",
@@ -131,9 +131,9 @@
 		},
 		{
 			"time": "16:00 - 16:30",
-			"speakers": ["iryna-shestak"],
-			"title": "Hop in, everyone, we are speedrunning writing a compiler!",
-			"description":"<p>Player: lrlna#3475q9 Run Date: Oct 12, 2023 Run Time: 28m 49s</p><p>Premise: a completely nonsensical language, entirely made up by yours truly, needs us to design a compiler in order to reach its true potential. The problem? We only got 30 minutes, and the clock is ticking! In this talk, be prepared to glitch our way through a gibberish language to a gibberish language we can compile. There will be quests (token creation), mini bosses (lexer, parser), and in the end, we'll brave ourselves to take the final boss (... semantic analysis!).</p>"
+			"speakers": ["jonathan-pallant"],
+			"title": "The Neotron Saga - throwing your project in the bin and starting again",
+			"description":"<p>Back in 2019 I had an fun embedded project, and it worked quite well. I even got a couple of talks out of it. But it was built as a series of tech demos, one feature piled on top of another. There were no sound software engineering principles behind it. And so I thought, now is the time to start over and Do It Right this time.</p><p>Jump forward four years, two job changes, one global pandemic and one new CPU, and here we are. I now have a one dead project and one gargantuan monster of a project I can never realistically complete or even keep control of. And the latter still isn’t as fully featured as the former even after so much effort. But it’s probably… better?</p><p>Here is a a tale of caution should you ever be tempted to do a “big bang” reboot. But it also has some discussion on Rust FFI, a bit of electronics design, some computer history and maybe a neat Embedded Rust demo.</p><p>This talk is laid out chronologically, starting an outline of my previous project with its conference runs in 2018/2019. I talk about the new project, and why I felt the need to start from scratch. I talk about its inspiration, looking at milestones in computer history. I talk about the big changes during the project (the RP2040 microcontroller came out, we had a pandemic, I changed jobs twice, I got some grant money, Twitter did the whole waves hands) and talk about where the new project is at right now. There are no hard and fast answers to “Should I start again on my project?” but we’ll hopefully finish with some neat demos of Rust running on embedded hardware paid for by the Rust Foundation.</p>"
 		},
 		{
 			"time": "16:45 - 17:15",
