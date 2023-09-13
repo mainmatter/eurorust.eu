@@ -107,15 +107,6 @@
 	link="/speakers/lisa-passing"
 
 [[extra.speakers]]
-	name="Iryna Shestak"
-	company="Apollo GraphQL"
-	job_title="Senior Staff Rust Engineer"
-	image="iryna-shestak.jpeg"
-	twitter="_lrlna"
-	web="https://toot.cafe/@lrlna"
-	link="/speakers/iryna-shestak"
-
-[[extra.speakers]]
 	name="Ashley Williams"
 	company="axo"
 	job_title="former Rust Core team member and Founding Executive Director of the Rust Foundation, Founder of axo"
