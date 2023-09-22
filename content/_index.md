@@ -90,6 +90,11 @@
 	link="https://www.trailofbits.com"
 	image="/images/sponsors/current_sponsors/trail-of-bits.svg"
 
+[[extra.sponsors.supporters]]
+	title="Sentry"
+	link="https://sentry.io"
+	image="/images/sponsors/current_sponsors/sentry.svg"
+
 [[extra.speakers]]
 	name="Niko Matsakis"
 	company="AWS"
