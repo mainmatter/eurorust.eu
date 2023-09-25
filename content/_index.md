@@ -95,6 +95,11 @@
 	link="https://sentry.io"
 	image="/images/sponsors/current_sponsors/sentry.svg"
 
+[[extra.sponsors.supporters]]
+	title="NoStarch"
+	link="https://nostarch.com/"
+	image="/images/sponsors/current_sponsors/no_starch.svg"
+
 [[extra.speakers]]
 	name="Niko Matsakis"
 	company="AWS"
