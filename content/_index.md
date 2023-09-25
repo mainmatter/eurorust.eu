@@ -91,6 +91,11 @@
 	image="/images/sponsors/current_sponsors/trail-of-bits.svg"
 
 [[extra.sponsors.supporters]]
+	title="Sentry"
+	link="https://sentry.io"
+	image="/images/sponsors/current_sponsors/sentry.svg"
+
+[[extra.sponsors.supporters]]
 	title="NoStarch"
 	link="https://nostarch.com/"
 	image="/images/sponsors/current_sponsors/no_starch.svg"
