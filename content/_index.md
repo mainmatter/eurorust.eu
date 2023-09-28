@@ -100,6 +100,11 @@
 	link="https://nostarch.com/"
 	image="/images/sponsors/current_sponsors/no_starch.svg"
 
+[[extra.sponsors.supporters]]
+	title="O'Reilly"
+	link="https://www.oreilly.com/"
+	image="/images/sponsors/current_sponsors/oreilly.svg"
+
 [[extra.speakers]]
 	name="Niko Matsakis"
 	company="AWS"
