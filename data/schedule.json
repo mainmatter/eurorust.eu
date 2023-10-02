@@ -86,8 +86,8 @@
 		{
 			"time": "10:00 - 10:30",
 			"speakers": ["ashley-williams"],
-			"title": "TBA",
-			"description": "<p>TBA</p>"
+			"title": "It's all in the delivery",
+			"description": "<p>There's a famous saying that goes \"It's not what you say, but how you say it\" that you'll often hear from someone who is likely about to offer you some constructive criticism on your communication. In this talk, I'll be offering you the same commentary, but on a form of communication that may be totally off of your radar: software distribution, \"It's not the software you write, but how you deliver it.\"</p><p>Rust is well-known for its notoriously steep learning curve, but Rust's release and distribution strategies have eliminated whole portions of the \"new language\" learning process, a boon that we all implicitly enjoy but rarely note or reflect on. In this talk, I'll explore the history of Rust delivery and all the lessons it learned from projects that came before it. We'll talk about the current process and the effect it has on learning materials, the tooling ecosystem, and end-user adoption and provide concrete tips on how you can implement these strategies in your own projects and tools. We'll also explore future growth opportunities for both Rust and the ecosystem and how to get involved in these efforts. By the end of this talk, you'll have a greater appreciation for Rust and its infrastructure, and also have concrete ideas for how you can improve the developer experience of your own projects by focusing, not on your software itself, but on how you deliver it.</p>"
 		},
 		{
 			"time": "10:45 - 11:15",
