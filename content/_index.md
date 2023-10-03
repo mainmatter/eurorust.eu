@@ -60,11 +60,6 @@
 	link="https://jetbrains.com"
 	image="/images/sponsors/current_sponsors/jetbrains.svg"
 
-[[extra.sponsors.head_partners]]
-	title="axo"
-	link="https://axo.dev"
-	image="/images/sponsors/current_sponsors/axo.svg"
-
 [[extra.sponsors.partners]]
 	title="Neo4j"
 	link="https://neo4j.com/"
