@@ -110,6 +110,11 @@
 	link="https://www.oreilly.com/"
 	image="/images/sponsors/current_sponsors/oreilly.svg"
 
+[[extra.sponsors.supporters]]
+	title="Embecosm"
+	link="https://www.embecosm.com/"
+	image="/images/sponsors/current_sponsors/embecosm.svg"
+
 [[extra.speakers]]
 	name="Niko Matsakis"
 	company="AWS"
