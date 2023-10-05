@@ -1,0 +1,33 @@
+{% set schedule = load_data(path = "data/2023/schedule.json") %}
+<section class="schedule">
+  {% for day in schedule %}
+    <div class="day">
+      <div class="content">
+        <h3>Day {{loop.index}}</h3>
+        <h4>{{day.date}}</h4>
+        <p class="timezones-note">Times are local, CEST</p>
+        <table>
+          {% for talk in day.talks %}
+          <tr>
+            <td class="time">
+              {{talk.time}}
+            </td>
+            <td class="title">
+              {{talk.title | safe}}
+              {% if talk.speakers %}
+                – 
+                {% for speaker in talk.speakers %}
+                  {% set path = "2023/speakers/" ~ speaker ~ ".md" %}
+                  {% set speaker = get_page(path = path) %}
+                  <a href="{{speaker.path}}" class="speaker">{{speaker.extra.name}}</a>
+                {% endfor %}
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+      <a class="full-schedule-link" href="/2023/schedule/day/{{loop.index}}">See Full Schedule</a>
+    </div>
+  {% endfor %}
+</section>
