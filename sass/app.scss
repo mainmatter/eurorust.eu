@@ -23,7 +23,7 @@ body {
 
   .top-block {
     @include min-screen-width(601px) {
-      background-image: url(/images/top-background-desktop-with-atomium.webp);
+      background-image: url(/images/background-generic-1.webp);
       background-size: cover;
       background-position: bottom center;
       background-repeat: no-repeat;
@@ -550,13 +550,18 @@ body {
     @include desktop-and-tablet-only {
       margin-bottom: 0;
     }
+    img {
+      max-width: 200px;
+      max-height: 75px;
+    }
     .sponsors-grid-container {
       display: flex;
       flex-flow: row wrap;
       justify-content: space-evenly;
       align-items: center;
       margin: 0 10px;
-      row-gap: 20px;
+      row-gap: 40px;
+      column-gap: 60px;
       @include desktop-and-tablet-only {
         margin: 0 10%;
       }

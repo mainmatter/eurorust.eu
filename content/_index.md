@@ -1,9 +1,9 @@
 +++
 [extra]
-	enable_sponsors=true
+	enable_sponsors=false
 
 [extra.section.speakers]
-	title = "Speakers"
+	title = "Past Speakers"
 
 [[extra.past_sponsors]]
 	title="rust_foundation"
@@ -29,6 +29,66 @@
 	title="oxidos"
 	link="https://oxidos.io"
 	image_format="svg"
+
+[[extra.past_sponsors]]
+	title="hightec_rt"
+	link="https://hightec-rt.com/en/"
+	image_format="svg"
+
+[[extra.past_sponsors]]
+	title="huawei"
+	link="https://www.huawei.com/"
+	image_format="png"
+
+[[extra.past_sponsors]]
+	title="realm_group"
+	link="https://www.realmgroup.io/"
+	image_format="svg"
+
+[[extra.past_sponsors]]
+	title="crabnebula"
+	link="https://crabnebula.dev/?utm_campaign=eurorust23&utm_source=eurorust"
+	image_format="svg"
+
+[[extra.past_sponsors]]
+	title="jetbrains"
+	link="https://jetbrains.com"
+	image_format="svg"
+[[extra.past_sponsors]]
+	title="axodotdev"
+	link="https://www.axo.dev/"
+	image_format="svg"
+
+[[extra.past_sponsors]]
+	title="neo4j"
+	link="https://neo4j.com/"
+	image_format="svg"
+
+[[extra.past_sponsors]]
+	title="gensyn"
+	link="https://www.gensyn.ai/"
+	image_format="svg"
+
+[[extra.past_sponsors]]
+	title="trail-of-bits"
+	link="https://www.trailofbits.com"
+	image_format="svg"
+
+[[extra.past_sponsors]]
+	title="sentry"
+	link="https://sentry.io"
+	image_format="svg"
+
+[[extra.past_sponsors]]
+	title="no_starch"
+	link="https://nostarch.com/"
+	image_format="svg"
+
+[[extra.past_sponsors]]
+	title="oreilly"
+	link="https://www.oreilly.com/"
+	image_format="svg"
+
 
 [[extra.sponsors.premier_partners]]
 	title="HighTec EDV-Systeme"
@@ -134,5 +194,15 @@
 	twitter="ag_dubs"
 	web="https://axo.dev/"
 	link="/speakers/ashley-williams"
+
+[[extra.speakers]]
+	name="Luca Palmieri"
+	company="Mainmatter"
+	job_title="Principal Engineering Consultant at Mainmatter"
+	image="luca.jpg"
+	twitter="algo_luca"
+	web="https://www.lpalmieri.com"
+	link="/speakers/luca-palmieri"
+	
 
 +++

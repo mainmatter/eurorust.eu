@@ -77,13 +77,9 @@
     {% include "sections/topics.html" %}
     <div class="middle-block">
       {% include "sections/speakers.html" %}
-      {% include "sections/moderators.html" %}
     </div>
     <div class="bottom-block">
       <div class="bottom-block-content">
-        {% include "sections/workshops.html" %}
-        {% include "sections/schedule.html" %}
-        {% include "sections/venue.html" %}
         {% include "sections/presented-by.html" %}
         {% if section.extra.enable_sponsors %}
           {% include "sections/sponsors.html" %}

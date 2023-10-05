@@ -12,22 +12,6 @@
         <a href="{{ speaker.link }}" alt="{{ speaker.name }}">
           {{ speaker.name }}
         </a>
-        {% if speaker.twitter or speaker.web %}
-          <div class="links">
-            {% if speaker.twitter %}
-              <a
-                href="https://twitter.com/{{ speaker.twitter }}"
-                target="_blank"
-                rel="noopener noreferrer"><img alt="twitter icon" src="/images/icons/twitter-white.svg" /></a>
-            {% endif %}
-            {% if speaker.web %}
-              <a
-                href="{{ speaker.web }}"
-                target="_blank"
-                rel="noopener noreferrer"><img alt="external link icon" src="/images/icons/external-link-white.svg" /></a>
-            {% endif %}
-          </div>
-        {% endif %}
       </li>
     {% endfor %}
   </ul>

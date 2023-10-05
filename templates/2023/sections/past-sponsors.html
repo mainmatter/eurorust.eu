@@ -1,0 +1,13 @@
+<section class="sponsors">
+  <p class="thanks_message">THANKS TO OUR PAST SPONSORS</p>
+  {% if section.extra.past_sponsors %}
+  <div class="sponsors-grid-container">
+    {% for sponsor in section.extra.past_sponsors %}
+    <a href="{{ sponsor.link }}" alt="{{ sponsor.title }}" target="_blank" rel="noopener noreferrer">
+      <img alt="{{ sponsor.title }} logo"
+        src="/2023/images/sponsors/past_sponsors/{{ sponsor.title }}.{{ sponsor.image_format }}" />
+    </a>
+    {% endfor %}
+  </div>
+  {% endif %}
+</section>
