@@ -140,4 +140,10 @@
 	web="https://axo.dev/"
 	link="/speakers/ashley-williams"
 
+[[extra.speakers]]
+	name="Florian Gilcher"
+	image="florian.jpg"
+	twitter="Argorak"
+	link="/speakers/florian-gilcher"
+
 +++
