@@ -54,6 +54,7 @@
 	title="jetbrains"
 	link="https://jetbrains.com"
 	image_format="svg"
+
 [[extra.past_sponsors]]
 	title="axodotdev"
 	link="https://www.axo.dev/"
@@ -87,6 +88,11 @@
 [[extra.past_sponsors]]
 	title="oreilly"
 	link="https://www.oreilly.com/"
+	image_format="svg"
+
+[[extra.past_sponsors]]
+	title="keyrock"
+	link="https://keyrock.eu/"
 	image_format="svg"
 
 
