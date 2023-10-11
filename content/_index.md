@@ -38,7 +38,7 @@
 [[extra.past_sponsors]]
 	title="huawei"
 	link="https://www.huawei.com/"
-	image_format="png"
+	image_format="svg"
 
 [[extra.past_sponsors]]
 	title="realm_group"
