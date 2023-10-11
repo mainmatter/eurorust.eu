@@ -131,6 +131,11 @@
 	link="https://www.axo.dev/"
 	image="/images/sponsors/current_sponsors/axodotdev.svg"
 
+[[extra.sponsors.head_partners]]
+	title="Keyrock"
+	link="https://keyrock.eu/"
+	image="/images/sponsors/current_sponsors/keyrock.svg"
+
 [[extra.sponsors.partners]]
 	title="Neo4j"
 	link="https://neo4j.com/"
@@ -175,6 +180,11 @@
 	title="O'Reilly"
 	link="https://www.oreilly.com/"
 	image="/images/sponsors/current_sponsors/oreilly.svg"
+
+[[extra.sponsors.supporters]]
+	title="Embecosm"
+	link="https://www.embecosm.com/"
+	image="/images/sponsors/current_sponsors/embecosm.svg"
 
 [[extra.speakers]]
 	name="Niko Matsakis"
