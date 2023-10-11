@@ -1,6 +1,6 @@
 +++
 title = "Refactoring Rust"
-template = "workshop.html"
+template = "2023/workshop.html"
 [extra]
 	date = "Oct 11 2023, 10:00 - 16:00"
 	avatar = "stefan-baumgartner.jpeg"

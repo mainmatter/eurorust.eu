@@ -1,6 +1,6 @@
 +++
 title = "You can't fix what you can't see: telemetry for Rust APIs"
-template = "workshop.html"
+template = "2023/workshop.html"
 slug = "telemetry-for-rust-apis"
 [extra]
 	date = "Oct 11 2023, 10:00 - 16:00"

@@ -1,11 +1,11 @@
 +++
-template = "speaker.html"
+template = "2023/speaker.html"
 title = "Speaker: Max Ammann"
 [extra]
   name = "Max Ammann"
   title = "Security Engineer at Trail of Bits"
   twitter = "maxammann_"
-  image = "/images/speakers/max.jpg"
+  image = "/2023/images/speakers/max.jpg"
 +++
 I’m an open-source developer and currently work at Trail of Bits as a Security Engineer. This talk is about side project of me, but ToB supports me in talking at EuroRust. At Trail of Bits I audit Rust code on a daily basis.
 

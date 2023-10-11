@@ -1,4 +1,4 @@
 +++
 title = "Workshop Schedule"
-template = "workshops.html"
+template = "2023/workshops.html"
 +++

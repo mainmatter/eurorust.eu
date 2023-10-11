@@ -1,10 +1,10 @@
 +++
-template = "speaker.html"
+template = "2023/speaker.html"
 title = "Speaker: Arthur Cohen"
 [extra]
   name = "Arthur Cohen"
   title = "Compiler Engineer at Embecosm"
-  image = "/images/speakers/arthur-cohen.jpg"
+  image = "/2023/images/speakers/arthur-cohen.jpg"
   twitter = "CohenArthurDev"
   url = "https://cohenarthur.github.io"
 +++

@@ -1,9 +1,9 @@
 +++
-template = "speaker.html"
+template = "2023/speaker.html"
 title = "Speaker: Niko Matsakis"
 [extra]
   name = "Niko Matsakis"
-  image = "/images/speakers/niko-matsakis.png"
+  image = "/2023/images/speakers/niko-matsakis.png"
   twitter = "nikomatsakis"
   url = "https://smallcultfollowing.com/babysteps/about/"
 +++

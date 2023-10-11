@@ -1,6 +1,6 @@
 +++
 title = "RustBridge"
-template = "workshop.html"
+template = "2023/workshop.html"
 [extra]
   date = "Oct 11 2023, 10:00 - 16:00"
   avatar = "liv.jpg"
@@ -38,7 +38,7 @@ This workshop is designed for developers who have little to no Rust experience b
   <div class="photo-container">
     <img
       class="photo"
-      src="/images/speakers/ashley-williams.jpeg"
+      src="/2023/images/speakers/ashley-williams.jpeg"
       alt="Ashley Williams">
   </div>
 </div>

@@ -1,6 +1,6 @@
 +++
 title = "Why your Car should Rust – Rust for safety critical systems"
-template = "workshop.html"
+template = "2023/workshop.html"
 [extra]
   date = "Oct 11 2023, 10:00 - 16:00"
   avatar = "daniel-frassinelli.jpeg"
@@ -44,7 +44,7 @@ This workshop is designed for a broad spectrum of Rust enthusiasts with an incli
   <div class="photo-container">
     <img
       class="photo"
-      src="/images/workshops/mario-cupelli.jpeg"
+      src="/2023/images/workshops/mario-cupelli.jpeg"
       alt="Mario Cupelli">
   </div>
 </div>

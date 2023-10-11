@@ -1,5 +1,5 @@
 +++
-template = "generic-content.html"
+template = "2023/generic-content.html"
 title = "Covid Safety Policy"
 +++
 

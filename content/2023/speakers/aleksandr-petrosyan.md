@@ -1,5 +1,5 @@
 +++
-template = "speaker.html"
+template = "2023/speaker.html"
 title = "Speaker: Aleksandr Petrosyan"
 [extra]
   name = "Aleksandr Petrosyan"

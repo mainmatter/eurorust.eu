@@ -1,12 +1,12 @@
 +++
-template = "speaker.html"
+template = "2023/speaker.html"
 title = "Speaker: Luca Palmieri"
 [extra]
   name = "Luca Palmieri"
   title = "Principal Engineering Consultant at Mainmatter"
   twitter = "algo_luca"
   url = "https://www.lpalmieri.com"
-  image = "/images/speakers/luca.jpg"
+  image = "/2023/images/speakers/luca.jpg"
 +++
 Luca Palmieri builds technology products for a living. His current focus is on backend development, software architecture and the Rust programming language.
 

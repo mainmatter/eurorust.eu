@@ -1,10 +1,10 @@
 +++
-template = "speaker.html"
+template = "2023/speaker.html"
 title = "Speaker: Nathanial Lattimer"
 [extra]
   name = "Nathanial Lattimer"
   title = "Senior Security Engineer at Robinhood"
-  image = "/images/speakers/d0nut.jpg"
+  image = "/2023/images/speakers/d0nut.jpg"
   twitter = "d0nutptr"
   url = "https://d0nut.dev"
 +++

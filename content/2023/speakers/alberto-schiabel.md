@@ -1,10 +1,10 @@
 +++
-template = "speaker.html"
+template = "2023/speaker.html"
 title = "Speaker: Alberto Schiabel 🦀"
 [extra]
   name = "Alberto Schiabel 🦀"
   title = "Open-Source Engineer at Prisma"
-  image = "/images/speakers/alberto-schiabel.jpg"
+  image = "/2023/images/speakers/alberto-schiabel.jpg"
   twitter = "jkomyno"
   url = "https://github.com/jkomyno"
 +++
