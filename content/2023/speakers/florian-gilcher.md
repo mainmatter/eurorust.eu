@@ -5,7 +5,7 @@ title = "Speaker: Florian Gilcher"
   name = "Florian Gilcher"
   title = "Rust Community Elder"
   twitter = "Argorak"
-  image = "2023/images/speakers/florian.jpg"
+  image = "/2023/images/speakers/florian.jpg"
 +++
 Florian Gilcher is one of the co-founders and management directors of Ferrous Systems. Previously, he was part of the Rust project, as part of the community and core team, and a co-organiser of the Rust Berlin Meetup and the RustFest conference.
 

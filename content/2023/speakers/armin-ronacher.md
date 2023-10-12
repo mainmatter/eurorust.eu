@@ -3,7 +3,7 @@ template = "2023/speaker.html"
 title = "Speaker: Armin Ronacher"
 [extra]
   name = "Armin Ronacher"
-  image = "2023/images/speakers/armin.png"
+  image = "/2023/images/speakers/armin.png"
   twitter = "mitsuhiko"
   url = "https://mitsuhiko.at/"
 +++
