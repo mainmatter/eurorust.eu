@@ -1,0 +1,34 @@
+<section class="speakers">
+  <h3>{{ section.extra.section.speakers.title }}</h3>
+  <ul class="speakers-list">
+    {% for speaker in section.extra.speakers %}
+      <li>
+        <div class="photo-container">
+          <img
+            alt="{{ speaker.name }} speaker profile photo"
+            src="/2023/images/speakers/{{speaker.image}}"
+            class="photo" />
+        </div>
+        <a href="{{ speaker.link }}" alt="{{ speaker.name }}">
+          {{ speaker.name }}
+        </a>
+        {% if speaker.twitter or speaker.web %}
+          <div class="links">
+            {% if speaker.twitter %}
+              <a
+                href="https://twitter.com/{{ speaker.twitter }}"
+                target="_blank"
+                rel="noopener noreferrer"><img alt="twitter icon" src="/2023/images/icons/twitter-white.svg" /></a>
+            {% endif %}
+            {% if speaker.web %}
+              <a
+                href="{{ speaker.web }}"
+                target="_blank"
+                rel="noopener noreferrer"><img alt="external link icon" src="/2023/images/icons/external-link-white.svg" /></a>
+            {% endif %}
+          </div>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</section>

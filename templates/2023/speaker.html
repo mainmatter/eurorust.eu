@@ -1,0 +1,76 @@
+{% extends "2023/base.html" %}
+
+{% block head %}
+  <script>
+    if (!window.tito) {
+      var script = document.createElement('script');
+      script.src = `https://js.tito.io/v2${
+        ['localhost', '127.0.0.1'].includes(window.location.hostname)
+          ? '/with/development_mode'
+          : ''
+        }`;
+      script.async = true;
+      document.head.appendChild(script);
+    }
+  </script>
+{% endblock head %}
+
+{% block content %}
+
+  <div class="generic-block speaker">
+
+    {% include "2023/partials/header-speaker.html" %}
+
+    <main>
+      <section class="speaker-details">
+        <div class="title">
+          <div class="photo-container">
+            {%if page.extra.image %}
+              <img
+                class="photo"
+                src="{{ page.extra.image }}"
+                alt="Photo of {{ page.extra.name }}">
+            {% else %}
+              <img
+                class="photo"
+                src="/2023/images/speakers/placeholder.png">
+            {% endif %}
+          </div>
+          <div class="speaker-info">
+            <h3>{{page.extra.name}}</h3>
+            {%if page.extra.title %}
+              <h4>{{page.extra.title}}</h4>
+            {% endif %}
+          </div>
+        </div>
+        <div class="bio">
+          {{ page.content | safe }}
+        </div>
+        <div class="links">
+          {%if page.extra.twitter %}
+            <a href="https://twitter.com/{{page.extra.twitter}}" target="_blank" rel="noopener noreferrer"><img alt="twitter icon" src="/2023/images/icons/twitter-white.svg"></a>
+          {% endif %}
+          {%if page.extra.url %}
+            <a href="{{page.extra.url}}" target="_blank" rel="noopener noreferrer"><img alt="external link icon" src="/2023/images/icons/external-link-white.svg"></a>
+          {% endif %}
+          {% set schedule = load_data(path = "data/2023/schedule.json") %}
+          {% for day in schedule %}
+            {% set day_num = loop.index %}
+            {% for talk in day.talks %}
+              {% if talk.speakers %}
+                {% for speaker in talk.speakers %}
+                  {%if speaker == page.slug %}
+                    <a class="talk-link" href="/2023/schedule/day/{{day_num}}#{{talk.title | urlencode}}">{%if talk.isPanel %}Panel{% else %}Speaker's Talk{% endif %}</a>
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+        </div>
+      </section>
+    </main>
+
+    {% include "2023/partials/footer.html" %}
+  </div>
+
+{% endblock content %}

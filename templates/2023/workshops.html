@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block head %}
+  <script>
+    if (!window.tito) {
+      var script = document.createElement('script');
+      script.src = `https://js.tito.io/v2${
+        ['localhost', '127.0.0.1'].includes(window.location.hostname)
+          ? '/with/development_mode'
+          : ''
+        }`;
+      script.async = true;
+      document.head.appendChild(script);
+    }
+  </script>
+{% endblock head %}
+
+{% block content %}
+
+  <div class="generic-block {{ page.title | lower | replace(from=' ', to='_')  }}">
+
+    {% include "2023/partials/header-workshops.html" %}
+
+    <main>
+      <section class="workshops">
+        <h1 class="title">{{ page.title }}</h1>
+        <p class="entry-description">On-site attendees have the chance to book Rust Workshops the day before EuroRust 2023 to learn more about Rust and prepare for the conference.</p>
+        <p class="entry-description">The workshops will take place in a <a href="#workshop-venue">separate venue in the city center</a>!</p>
+
+        {{ page.content | safe }}
+
+        {% set workshops = load_data(path = "data/workshops.json") %}
+
+        {% for workshop in workshops %}
+          <div class="workshop box">
+            <div class="workshop-header">
+              <p class="workshop-date">{{ workshop.date }}</p>
+              <h3 class="workshop-title">{{ workshop.title }}</h3>
+              {% if workshop.sponsor == "mainmatter" %}
+                <div class="sponsored-by">
+                  <img alt="Mainmatter logo" src="/2023/images/icons/mainmatter.svg" />
+                  <p>Workshop run by Mainmatter</p>
+                </div>
+              {% elif workshop.sponsor == "hightec" %}
+                <div class="sponsored-by">
+                  <img alt="HighTec logo" src="/2023/images/icons/hightec.png" />
+                  <p>Workshop run by HighTec in collaboration with Veecle</p>
+                </div>
+              {% endif %}
+            </div>
+            <p class="workshop-description">{{ workshop.description }}</p>
+            <a
+              class="more-info button plausible-event-name=workshop-{{workshop.slug}}"
+              alt="more info"
+              href="/2023/workshops/{{ workshop.slug }}">More Info</a>
+          </div>
+        {% endfor %}
+      </section>
+
+      {% include "2023/partials/workshop-venue.html" %}
+    </main>
+
+    {% include "2023/partials/footer.html" %}
+  </div>
+
+{% endblock content %}

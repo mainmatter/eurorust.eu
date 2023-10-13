@@ -1,0 +1,37 @@
+[
+  {
+    "date": "Oct 11 2023, 10:00 - 16:00",
+    "title": "Refactoring Rust",
+    "description": "Rust is undeniably syntax-heavy. There’s a lot of intent to express, and Rust wants you to be explicit. All the extra effort can result in bloated code and hard-to-use APIs. Especially features like the trait system, error handling, and ownership add another layer of complexity that can't be controlled by the usual refactoring techniques we have been teaching for the last decades.",
+    "sponsor": "mainmatter",
+    "slug": "refactoring-rust"
+  },
+  {
+    "date": "Oct 11 2023, 10:00 - 16:00",
+    "title": "You can't fix what you can't see: telemetry for Rust APIs",
+    "description": "Your Rust application has finally been deployed to production! Nice! But is it working? This workshop will introduce you to a comprehensive toolkit to detect, troubleshoot and resolve issues in your Rust APIs.",
+    "sponsor": "mainmatter",
+    "slug": "telemetry-for-rust-apis"
+  },
+  {
+    "date": "Oct 11 2023, 10:00 - 16:00",
+    "title": "RustBridge",
+    "description": "In this hands-on workshop, we will learn the basics of the Rust programming language and then apply that knowledge to building a CLI tool in Rust. By the end of this workshop you should have a working knowledge of the language and tooling ecosystem and be ready to tackle projects on your own.",
+    "sponsor": null,
+    "slug": "rustbridge"
+  },
+  {
+    "date": "Oct 11 2023, 10:00 - 16:00",
+    "title": "Why your Car should Rust – Rust for safety critical systems",
+    "description": "The software in automotive applications has emerged as a vital component that is continuously growing in complexity, safety, and security. One of the fundamental decisions that a developer makes is the choice of a programming language. Rust, with its capabilities in terms of memory safety and security without risking performance, has emerged as a powerful contender for safety critical applications. Rust by its capabilities is progressively being recognized as a viable supplement or even a potential replacement for traditional C/C++. This transitional shift is supported by the continuous maturation and enhancement of the Rust ecosystem within the automotive industry.",
+    "sponsor": "hightec",
+    "slug": "rust-for-safety-critical-systems"
+  },
+  {
+    "date": "Oct 11 2023, 10:00 - 16:00",
+    "title": "impl Room",
+    "description": "A space for Rustaceans who want to contribute to the Rust project or to other crates in the Rust ecosystem. If you're a maintainer, it's an opportunity to mentor new contributors and help them get started with your project. If you're a Rustacean, it's an opportunity to get help with your first OSS contribution or to find a project to contribute to.",
+    "sponsor": null,
+    "slug": "impl-room"
+  }
+]
