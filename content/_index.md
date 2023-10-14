@@ -95,6 +95,11 @@
 	link="https://keyrock.eu/"
 	image_format="svg"
 
+[[extra.past_sponsors]]
+	title="Grafbase"
+	link="https://grafbase.com/"
+	image_format="png"
+
 [[extra.sponsors.premier_partners]]
 	title="HighTec EDV-Systeme"
 	link="https://hightec-rt.com/en/"
