@@ -95,7 +95,6 @@
 	link="https://keyrock.eu/"
 	image_format="svg"
 
-
 [[extra.sponsors.premier_partners]]
 	title="HighTec EDV-Systeme"
 	link="https://hightec-rt.com/en/"
@@ -219,6 +218,4 @@
 	twitter="algo_luca"
 	web="https://www.lpalmieri.com"
 	link="/speakers/luca-palmieri"
-	
-
 +++
