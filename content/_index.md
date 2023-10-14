@@ -61,6 +61,11 @@
 	image_format="svg"
 
 [[extra.past_sponsors]]
+	title="Ferrous"
+	link="https://ferrous-systems.com/"
+	image_format="svg"
+
+[[extra.past_sponsors]]
 	title="neo4j"
 	link="https://neo4j.com/"
 	image_format="svg"
