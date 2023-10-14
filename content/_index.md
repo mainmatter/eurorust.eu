@@ -61,6 +61,11 @@
 	image_format="svg"
 
 [[extra.past_sponsors]]
+	title="Ferrous"
+	link="https://ferrous-systems.com/"
+	image_format="svg"
+
+[[extra.past_sponsors]]
 	title="neo4j"
 	link="https://neo4j.com/"
 	image_format="svg"
@@ -95,6 +100,10 @@
 	link="https://keyrock.eu/"
 	image_format="svg"
 
+[[extra.past_sponsors]]
+	title="Grafbase"
+	link="https://grafbase.com/"
+	image_format="png"
 
 [[extra.sponsors.premier_partners]]
 	title="HighTec EDV-Systeme"
@@ -188,37 +197,17 @@
 
 [[extra.speakers]]
 	name="Niko Matsakis"
-	company="AWS"
-	job_title="Senior Principal Engineer at AWS, Co-Lead of the Rust Language Team"
 	image="niko-matsakis.png"
-	twitter="nikomatsakis"
-	web="http://smallcultfollowing.com/babysteps/about/"
-	link="/speakers/niko-matsakis"
 
 [[extra.speakers]]
 	name="Lisa Passing"
-	job_title="Creative Technologist"
 	image="lisa-passing.jpeg"
-	web="https://lislis.de/"
-	link="/speakers/lisa-passing"
 
 [[extra.speakers]]
 	name="Ashley Williams"
-	company="axo"
-	job_title="former Rust Core team member and Founding Executive Director of the Rust Foundation, Founder of axo"
 	image="ashley-williams.jpeg"
-	twitter="ag_dubs"
-	web="https://axo.dev/"
-	link="/speakers/ashley-williams"
 
 [[extra.speakers]]
 	name="Luca Palmieri"
-	company="Mainmatter"
-	job_title="Principal Engineering Consultant at Mainmatter"
 	image="luca.jpg"
-	twitter="algo_luca"
-	web="https://www.lpalmieri.com"
-	link="/speakers/luca-palmieri"
-	
-
 +++
