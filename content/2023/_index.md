@@ -66,6 +66,11 @@ template="2023/index.html"
 	link="https://www.axo.dev/"
 	image="/2023/images/sponsors/current_sponsors/axodotdev.svg"
 
+[[extra.sponsors.head_partners]]
+	title="Keyrock"
+	link="https://keyrock.eu/"
+	image="/images/sponsors/current_sponsors/keyrock.svg"
+
 [[extra.sponsors.partners]]
 	title="Neo4j"
 	link="https://neo4j.com/"
