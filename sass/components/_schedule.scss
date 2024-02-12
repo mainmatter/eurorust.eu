@@ -1,0 +1,31 @@
+.schedule__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.schedule__main-stage {
+    padding-right: 5rem;
+}
+
+.schedule__side-track {
+    padding-left: 5rem;
+}
+
+@media (max-width: 60rem) {
+
+    .schedule__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .schedule__main-stage {
+        padding-right: 0;
+        margin-bottom: 5rem;
+    }
+
+    .schedule__side-track {
+        padding-left: 0;
+    }
+
+
+}

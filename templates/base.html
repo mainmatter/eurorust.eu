@@ -12,6 +12,14 @@
   <meta name="publisher" content="EuroRust" />
   <title>EuroRust 2023, October 12–13, Brussels & online</title>
   <link rel="stylesheet" href="/app.css" />
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.161.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.161.0/examples/jsm/"
+    }
+  }
+</script>
   <link rel="icon" type="image/x-icon" href="/images/icons/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png" />
@@ -38,6 +46,7 @@
 
   {% block head %} {% endblock %}
   <script defer data-domain="eurorust.eu" src="https://plausible.io/js/script.tagged-events.outbound-links.js"></script>
+  <script type="module" src="/js/script.js"></script>
 </head>
 
 <body>

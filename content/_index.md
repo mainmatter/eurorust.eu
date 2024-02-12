@@ -210,4 +210,5 @@
 [[extra.speakers]]
 	name="Luca Palmieri"
 	image="luca.jpg"
+	
 +++

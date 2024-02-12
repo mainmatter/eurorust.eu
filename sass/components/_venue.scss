@@ -1,0 +1,23 @@
+.venue__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.venue__wrapper-image {
+    max-width: 100%;
+
+    img {
+        width: 100%;
+
+    }
+}
+
+@media (max-width: 60rem) {
+
+    .venue__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+}

@@ -7,6 +7,16 @@
 @import "./schedule.scss";
 @import "./speaker.scss";
 @import "./tito-button.scss";
+@import "./utility";
+@import "components/hero";
+@import "components/nav";
+@import "components/rustfest";
+@import "components/topics";
+@import "components/speakers";
+@import "components/schedule";
+@import "components/venue";
+@import "components/footer";
+
 
 body {
   background-color: var(--black);

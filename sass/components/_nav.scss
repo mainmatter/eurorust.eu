@@ -1,0 +1,11 @@
+nav {
+    position: fixed;
+    background-color: var(--black);
+    width: 100%;
+    z-index: 50;
+}
+
+.nav__wrapper {
+    display: flex;
+    justify-content: space-between;
+}

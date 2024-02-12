@@ -1,0 +1,28 @@
+.hero__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.hero__wrapper-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.webgl {
+    width: 560px;
+    height: 560px;
+    outline: none;
+    z-index: -1;
+}
+
+@media (max-width: 60rem) {
+  .hero__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .hero__wrapper-meta {
+    position: relative;
+  }
+}
