@@ -49,3 +49,11 @@
     }
 
 }
+
+@media (max-width: 60rem) {
+    .speakers-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5rem;
+    }
+}
