@@ -1,14 +1,7 @@
 import * as THREE from 'three'
 
-/**
- * Debug
- */
-
-/**
- * Base
- */
 // Canvas
-const canvas = document.querySelector('canvas.webgl')
+const canvas = document.querySelector('canvas.canvas__hero')
 
 // Scene
 const scene = new THREE.Scene()
@@ -20,19 +13,11 @@ const sphere = new THREE.Mesh(sphereGeometry, material)
 
 scene.add(sphere);
 
-
-
-/**
- * Sizes
- */
 const sizes = {
     width: 560,
     height: 560
 }
 
-/**
- * Camera
- */
 // Base camera
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height)
 camera.position.x = 0
@@ -70,3 +55,6 @@ const tick = () =>
 }
 
 tick()
+
+
+
