@@ -9,11 +9,12 @@
   align-items: start;
 }
 
-.webgl {
-    width: 560px;
-    height: 560px;
-    outline: none;
-    z-index: -1;
+.canvas__hero {
+  position: fixed;
+  top: 0;
+  left: 0;
+  outline: none;
+  z-index: -1;
 }
 
 @media (max-width: 60rem) {
