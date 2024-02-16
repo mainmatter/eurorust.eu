@@ -1,131 +1,117 @@
-import * as THREE from 'three'
+import * as THREE from "three";
 
 // Canvas
-const canvas = document.querySelector('canvas.canvas__hero')
+const canvas = document.querySelector("canvas.canvas__hero");
 
 // Scene
-const scene = new THREE.Scene()
+const scene = new THREE.Scene();
 
-const material = new THREE.MeshNormalMaterial()
+const material = new THREE.MeshNormalMaterial();
 
 // Objects
-const objectsDistance = 4
-const mesh1 = new THREE.Mesh(
-    new THREE.TorusGeometry(1, 0.4, 16, 60),
-    material
-)
+const objectsDistance = 4;
+const mesh1 = new THREE.Mesh(new THREE.TorusGeometry(0.75, 0.3, 8, 60), material);
 
 const mesh2 = new THREE.Mesh(
-    new THREE.TorusKnotGeometry(0.8, 0.35, 100, 16),
-    material
-)
-
-mesh1.position.x = - 2
-mesh2.position.x = 2
-
-mesh1.position.y = - objectsDistance * 0.25
-mesh2.position.y = - objectsDistance * 1.75
-
-
-
-scene.add(mesh1, mesh2)
-
-const sectionMeshes = [ mesh1, mesh2 ]
+  new THREE.TorusKnotGeometry(0.8, 0.35, 100, 16),
+  material
+);
 
 const sizes = {
-    width: window.innerWidth,
-    height: window.innerHeight
-}
+  width: document.getElementById('hero').offsetWidth,
+  height: document.getElementById('hero').offsetHeight
+};
 
-window.addEventListener('resize', () =>
-{
-    // Update sizes
-    sizes.width = window.innerWidth
-    sizes.height = window.innerHeight
+mesh1.position.x = -2;
 
-    // Update camera
-    camera.aspect = sizes.width / sizes.height
-    camera.updateProjectionMatrix()
+mesh1.position.y = -objectsDistance * 0.125;
 
-    // Update renderer
-    renderer.setSize(sizes.width, sizes.height)
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-})
+
+
+scene.add(mesh1);
+
+const sectionMeshes = [mesh1];
+
+window.addEventListener("resize", () => {
+  // Update sizes
+  sizes.width = document.getElementById('hero').offsetWidth,
+  sizes.height = document.getElementById('hero').offsetHeight
+
+  // Update camera
+  camera.aspect = sizes.width / sizes.height;
+  camera.updateProjectionMatrix();
+
+  // Update renderer
+  renderer.setSize(sizes.width, sizes.height);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+});
 
 // Base camera
-const cameraGroup = new THREE.Group()
-scene.add(cameraGroup)
+const cameraGroup = new THREE.Group();
+scene.add(cameraGroup);
 
 // Base camera
-const camera = new THREE.PerspectiveCamera(35, sizes.width / sizes.height, 0.1, 100)
-camera.position.z = 6
-cameraGroup.add(camera)
-
+const camera = new THREE.PerspectiveCamera(
+  35,
+  sizes.width / sizes.height,
+  0.1,
+  100
+);
+camera.position.z = 6;
+cameraGroup.add(camera);
 
 /**
  * Renderer
  */
 const renderer = new THREE.WebGLRenderer({
-    canvas: canvas,
-    alpha: true
-})
-renderer.setSize(sizes.width, sizes.height)
-renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+  canvas: canvas,
+  alpha: true,
+});
+renderer.setSize(sizes.width, sizes.height);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-let scrollY = window.scrollY
-let currentSection = 0
+let scrollY = window.scrollY;
+let currentSection = 0;
 
-window.addEventListener('scroll', () =>
-{
-    scrollY = window.scrollY
-    const newSection = Math.round(scrollY / sizes.height)
+window.addEventListener("scroll", () => {
+  scrollY = window.scrollY;
+  const newSection = Math.round(scrollY / sizes.height);
 
-    if(newSection != currentSection)
-    {
-        currentSection = newSection
+  if (newSection != currentSection) {
+    currentSection = newSection;
 
-        gsap.to(
-            sectionMeshes[currentSection].position,
-            {
-                duration: 1.5,
-                ease: 'ease',
-                z: '+1'
-                
-            }
-        )
-    }
-})
+    gsap.to(sectionMeshes[currentSection].position, {
+      duration: 1.5,
+      ease: "ease",
+      z: "+0.25",
+    });
+  }
+});
 /**
  * Animate
  */
-const clock = new THREE.Clock()
-let previousTime = 0
+const clock = new THREE.Clock();
+let previousTime = 0;
 
-const tick = () =>
-{
-    const elapsedTime = clock.getElapsedTime()
-    const deltaTime = elapsedTime - previousTime
-    previousTime = elapsedTime
+const tick = () => {
+  const elapsedTime = clock.getElapsedTime();
+  const deltaTime = elapsedTime - previousTime;
+  previousTime = elapsedTime;
 
-    // Animate camera
-    camera.position.y = - scrollY / sizes.height * objectsDistance
+  // Animate camera
+  camera.position.y = (-scrollY / sizes.height) * objectsDistance;
 
+  // Animate meshes
+  for (const mesh of sectionMeshes) {
+    mesh.rotation.x += deltaTime * 0.1;
+    mesh.rotation.y += deltaTime * 0.12;
+  }
 
-    // Animate meshes
-    for(const mesh of sectionMeshes)
-    {
-        mesh.rotation.x += deltaTime * 0.1
-        mesh.rotation.y += deltaTime * 0.12
-    }
+  // Render
+  renderer.render(scene, camera);
 
-    // Render
-    renderer.render(scene, camera)
+  // Call tick again on the next frame
+  window.requestAnimationFrame(tick);
+};
 
-    // Call tick again on the next frame
-    window.requestAnimationFrame(tick)
-}
-
-tick()
-
-
-
+tick();
