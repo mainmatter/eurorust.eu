@@ -1,9 +1,22 @@
-.meta, .pages, .social {
-    display: flex;
-    gap: 1.5rem;
+.meta,
+.pages,
+.social {
+  display: flex;
+  gap: 1.5rem;
 }
 
 .footer-bottom {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 60rem) {
+  .meta, .footer-bottom, .pages {
+    flex-direction: column;
+  }
+
+  .footer-bottom {
+    gap: 2rem; 
+  }
+
 }

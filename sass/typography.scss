@@ -99,6 +99,7 @@ a {
   position: relative;
   display: block;
   overflow: hidden;
+  line-height: 0;
 }
 
 .btn__icon::after {
@@ -110,6 +111,7 @@ a {
   height: 100%;
   background-color: #de59cc;
   mix-blend-mode: overlay;
+  clip-path: circle();
   opacity: 0;
 }
 
