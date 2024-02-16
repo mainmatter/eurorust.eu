@@ -11,10 +11,10 @@
 
 <div class="generic-block {{ page.title | lower | replace(from=' ', to='_')  }}">
 
-  {% include "partials/header.html" %}
+  {% include "sections/nav.html" %}
 
   <main>
-    <section class="generic-content">
+    <section class="generic-content container py-5">
       <h3 class="title">{{ page.title }}</h3>
       {% if page.extra.subtitle %}
       <h3>{{ page.extra.subtitle }}</h3>
