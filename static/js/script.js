@@ -13,7 +13,7 @@ const objectsDistance = 4;
 const mesh1 = new THREE.Mesh(new THREE.TorusGeometry(0.75, 0.3, 8, 60), material);
 
 const mesh2 = new THREE.Mesh(
-  new THREE.TorusKnotGeometry(0.8, 0.35, 100, 16),
+  new THREE.TorusKnotGeometry(0.6, 0.25, 100, 16),
   material
 );
 
@@ -23,14 +23,16 @@ const sizes = {
 };
 
 mesh1.position.x = -2;
+mesh2.position.x = 2;
 
 mesh1.position.y = -objectsDistance * 0.125;
+mesh2.position.y = -objectsDistance * 1.3;
 
 
 
-scene.add(mesh1);
+scene.add(mesh1, mesh2);
 
-const sectionMeshes = [mesh1];
+const sectionMeshes = [mesh1, mesh2];
 
 window.addEventListener("resize", () => {
   // Update sizes
