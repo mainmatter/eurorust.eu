@@ -14,7 +14,7 @@ template = "2023/workshop.html"
 <p>
 	In this hands-on workshop, we refactor a Rust program that has just left the prototyping stage into code that is a delight to read and follow, easy to use, easy to maintain, and that plays along nicely with the ecosystem. We take a real-world program and refactor it piece by piece. As a last step, we will write a new feature for both the original and the refactored version. The comparison will amaze you!
 </p>
-<p>All workshop participants will receive a free 3 month <a href="https://www.jetbrains.com/clion/" target="_blank">CLion</a> license valid for personal use from our friends at JetBrains.</p>
+<p>All workshop participants will receive a free 3 month <a href="https://www.jetbrains.com/clion/?utm_source=eurorust" target="_blank">CLion</a> license valid for personal use from our friends at JetBrains.</p>
 <h4>Target Audience</h4>
 <p>
 This workshop is designed for developers who are working on Rust codebases already and are looking to level up their skills.
