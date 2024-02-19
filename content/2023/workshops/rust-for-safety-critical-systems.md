@@ -11,7 +11,7 @@ template = "2023/workshop.html"
 <p>
   The software in automotive applications has emerged as a vital component that is continuously growing in complexity, safety, and security. One of the fundamental decisions that a developer makes is the choice of a programming language. Rust, with its capabilities in terms of memory safety and security without risking performance, has emerged as a powerful contender for safety critical applications. Rust by its capabilities is progressively being recognized as a viable supplement or even a potential replacement for traditional C/C++. This transitional shift is supported by the continuous maturation and enhancement of the Rust ecosystem within the automotive industry.
 </p>
-<p>All workshop participants will receive a free 3 month <a href="https://www.jetbrains.com/clion/" target="_blank">CLion</a> license valid for personal use from our friends at JetBrains.</p>
+<p>All workshop participants will receive a free 3 month <a href="https://www.jetbrains.com/clion/?utm_source=eurorust" target="_blank">CLion</a> license valid for personal use from our friends at JetBrains.</p>
 <h4>Target Audience</h4>
 <p>
 This workshop is designed for a broad spectrum of Rust enthusiasts with an inclination towards embedded systems, from beginners with initial bases up to experts. This workshop is for you if you already understand the major benefits of using Rust over C.

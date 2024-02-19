@@ -6,5 +6,5 @@ extra:
   company: "Ferreous Systems"
   bio: "<p>TBA</p>"
   twitter: "ai_maiga"
-  web: "https://wronganswer.blog/"
+  web: "https://wronganswer.blog/?utm_source=eurorust"
 ---

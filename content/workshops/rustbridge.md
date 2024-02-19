@@ -11,7 +11,7 @@ template = "workshop.html"
 <p>
   In this hands-on workshop, we will learn the basics of the Rust programming language and then apply that knowledge to building a CLI tool in Rust. By the end of this workshop you should have a working knowledge of the language and tooling ecosystem and be ready to tackle projects on your own.
 </p>
-<p>All workshop participants will receive a free 3 month <a href="https://www.jetbrains.com/clion/" target="_blank">CLion</a> license valid for personal use from our friends at JetBrains.</p>
+<p>All workshop participants will receive a free 3 month <a href="https://www.jetbrains.com/clion/?utm_source=eurorust" target="_blank">CLion</a> license valid for personal use from our friends at JetBrains.</p>
 <h4>Target Audience</h4>
 <p>
 This workshop is designed for developers who have little to no Rust experience but do have some programming experience in another language, such as Python or JavaScript. We have had folks with no prior programming experience participate in RustBridge but caution folks that it’ll be particularly challenging for that audience. Similarly, we have had folks with very advanced programming knowledge or some knowledge participate – it will likely be too easy for you, but can be a great way to reinforce your skills by helping your fellow students.
