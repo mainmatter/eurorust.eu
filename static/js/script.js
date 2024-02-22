@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
 // Canvas
 const canvas = document.querySelector("canvas.canvas__hero");
@@ -10,54 +10,43 @@ const scene = new THREE.Scene();
 const material = new THREE.MeshNormalMaterial();
 
 const sizes = {
-  width: document.getElementById('hero').offsetWidth,
-  height: document.getElementById('hero').offsetHeight
+  width: document.getElementById("hero").offsetWidth,
+  height: document.getElementById("hero").offsetHeight,
 };
 /**
  * Models
  */
 const objectsDistance = 4;
 
-
-const gltfLoader = new GLTFLoader()
+const gltfLoader = new GLTFLoader();
 let model = new THREE.Object3D();
 let ferris = new THREE.Object3D();
 
-
-gltfLoader.load(
-    '/js/model/ferris.glb',
-    (gltf) =>
-    {
-        model = gltf.scene
-        ferris = gltf.scene.children[0]
-        ferris.scale.set(1.5, 1.5, 1.5)
-        ferris.position.x = -1.25
-        ferris.position.y = -1
-        ferris.rotation.set(0, 0, 0)
-        ferris.material = material
-        ferris.children.forEach(element => {
-          element.material = material
-        model.name = model
-        ferris.name = ferris
-        });
-        scene.add(gltf.scene.children[0])
-    }
-)
-
-
-
-
+gltfLoader.load("/js/model/ferris.glb", (gltf) => {
+  model = gltf.scene;
+  ferris = gltf.scene.children[0];
+  ferris.scale.set(1.5, 1.5, 1.5);
+  ferris.position.x = -1.25;
+  ferris.position.y = -1;
+  ferris.rotation.set(0, 0, 0);
+  ferris.material = material;
+  ferris.children.forEach((element) => {
+    element.material = material;
+    model.name = model;
+    ferris.name = ferris;
+  });
+  scene.add(gltf.scene.children[0]);
+});
 
 // Objects
 
-
-const ambientLight = new THREE.AmbientLight(0xffffff, 2.4)
-scene.add(ambientLight)
+const ambientLight = new THREE.AmbientLight(0xffffff, 2.4);
+scene.add(ambientLight);
 
 window.addEventListener("resize", () => {
   // Update sizes
-  sizes.width = document.getElementById('hero').offsetWidth,
-  sizes.height = document.getElementById('hero').offsetHeight
+  (sizes.width = document.getElementById("hero").offsetWidth),
+    (sizes.height = document.getElementById("hero").offsetHeight);
 
   // Update camera
   camera.aspect = sizes.width / sizes.height;
@@ -95,15 +84,14 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 let scrollY = window.scrollY;
 let currentSection = 0;
 
- window.addEventListener("scroll", () => {
+window.addEventListener("scroll", () => {
   scrollY = window.scrollY;
   const newSection = Math.round(scrollY / sizes.height);
 
   if (newSection != currentSection) {
     currentSection = newSection;
-    
   }
-}); 
+});
 /**
  * Animate
  */
@@ -115,16 +103,11 @@ const tick = () => {
   const deltaTime = elapsedTime - previousTime;
   previousTime = elapsedTime;
 
+  // Animate meshes
 
- // Animate meshes
-
-    if (ferris) {
-
+  if (ferris) {
     ferris.rotation.y += deltaTime * 0.05;
   }
-
-
-  
 
   // Render
   renderer.render(scene, camera);
