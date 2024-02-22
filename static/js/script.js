@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
 
 // Canvas
 const canvas = document.querySelector("canvas.canvas__hero");
@@ -8,31 +9,73 @@ const scene = new THREE.Scene();
 
 const material = new THREE.MeshNormalMaterial();
 
-// Objects
-const objectsDistance = 4;
-const mesh1 = new THREE.Mesh(new THREE.TorusGeometry(0.75, 0.3, 8, 60), material);
-
-const mesh2 = new THREE.Mesh(
-  new THREE.TorusKnotGeometry(0.6, 0.25, 100, 16),
-  material
-);
-
 const sizes = {
   width: document.getElementById('hero').offsetWidth,
   height: document.getElementById('hero').offsetHeight
 };
-
-mesh1.position.x = -2;
-mesh2.position.x = 2;
-
-mesh1.position.y = -objectsDistance * 0.125;
-mesh2.position.y = -objectsDistance * 1.3;
+/**
+ * Models
+ */
+const objectsDistance = 4;
 
 
+const gltfLoader = new GLTFLoader()
+let model = new THREE.Object3D();
+let ferris = new THREE.Object3D();
+let model2 = new THREE.Object3D();
+let rust = new THREE.Object3D();
 
-scene.add(mesh1, mesh2);
+gltfLoader.load(
+    '/js/model/ferris.glb',
+    (gltf) =>
+    {
+        model = gltf.scene
+        ferris = gltf.scene.children[0]
+        ferris.scale.set(2, 2, 2)
+        ferris.position.x = -1.25
+        ferris.position.y = -objectsDistance * 0.15
+        ferris.rotation.set(0, 0, 0)
+        ferris.material = material
+        ferris.children.forEach(element => {
+          element.material = material
+        model.name = model
+        ferris.name = ferris
+        });
+        scene.add(gltf.scene.children[0])
+    }
+)
 
-const sectionMeshes = [mesh1, mesh2];
+gltfLoader.load(
+  '/js/model/rust.glb',
+  (gltf) =>
+  {
+      model2 = gltf.scene
+      rust = gltf.scene.children[0]
+      rust.scale.set(50, 50, 50)
+      rust.position.x = 0.5
+      rust.position.y = -objectsDistance * 1.125
+      rust.rotation.set(360, 0, 0)
+      rust.material = material
+      rust.children.forEach(element => {
+        element.material = material
+      model2.name = model2
+      rust.name = rust
+      });
+      scene.add(gltf.scene.children[0])
+  }
+)
+
+
+
+// Objects
+
+
+
+const sectionMeshes = [ ferris ]; 
+
+
+const ambientLight = new THREE.AmbientLight(0xffffff, 2.4)
+scene.add(ambientLight)
 
 window.addEventListener("resize", () => {
   // Update sizes
@@ -75,20 +118,15 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 let scrollY = window.scrollY;
 let currentSection = 0;
 
-window.addEventListener("scroll", () => {
+ window.addEventListener("scroll", () => {
   scrollY = window.scrollY;
   const newSection = Math.round(scrollY / sizes.height);
 
   if (newSection != currentSection) {
     currentSection = newSection;
-
-    gsap.to(sectionMeshes[currentSection].position, {
-      duration: 1.5,
-      ease: "ease",
-      z: "+0.25",
-    });
+    
   }
-});
+}); 
 /**
  * Animate
  */
@@ -103,11 +141,18 @@ const tick = () => {
   // Animate camera
   camera.position.y = (-scrollY / sizes.height) * objectsDistance;
 
-  // Animate meshes
-  for (const mesh of sectionMeshes) {
-    mesh.rotation.x += deltaTime * 0.1;
-    mesh.rotation.y += deltaTime * 0.12;
+ // Animate meshes
+
+    if (ferris) {
+
+    ferris.rotation.y += deltaTime * 0.05;
   }
+
+  if (rust) {
+    rust.rotation.y += deltaTime * 0.05;
+
+  }
+  
 
   // Render
   renderer.render(scene, camera);
