@@ -22,8 +22,7 @@ const objectsDistance = 4;
 const gltfLoader = new GLTFLoader()
 let model = new THREE.Object3D();
 let ferris = new THREE.Object3D();
-let model2 = new THREE.Object3D();
-let rust = new THREE.Object3D();
+
 
 gltfLoader.load(
     '/js/model/ferris.glb',
@@ -31,9 +30,9 @@ gltfLoader.load(
     {
         model = gltf.scene
         ferris = gltf.scene.children[0]
-        ferris.scale.set(2, 2, 2)
+        ferris.scale.set(1.5, 1.5, 1.5)
         ferris.position.x = -1.25
-        ferris.position.y = -objectsDistance * 0.15
+        ferris.position.y = -1
         ferris.rotation.set(0, 0, 0)
         ferris.material = material
         ferris.children.forEach(element => {
@@ -45,33 +44,11 @@ gltfLoader.load(
     }
 )
 
-gltfLoader.load(
-  '/js/model/rust.glb',
-  (gltf) =>
-  {
-      model2 = gltf.scene
-      rust = gltf.scene.children[0]
-      rust.scale.set(50, 50, 50)
-      rust.position.x = 0.5
-      rust.position.y = -objectsDistance * 1.125
-      rust.rotation.set(360, 0, 0)
-      rust.material = material
-      rust.children.forEach(element => {
-        element.material = material
-      model2.name = model2
-      rust.name = rust
-      });
-      scene.add(gltf.scene.children[0])
-  }
-)
+
 
 
 
 // Objects
-
-
-
-const sectionMeshes = [ ferris ]; 
 
 
 const ambientLight = new THREE.AmbientLight(0xffffff, 2.4)
@@ -138,8 +115,6 @@ const tick = () => {
   const deltaTime = elapsedTime - previousTime;
   previousTime = elapsedTime;
 
-  // Animate camera
-  camera.position.y = (-scrollY / sizes.height) * objectsDistance;
 
  // Animate meshes
 
@@ -148,10 +123,7 @@ const tick = () => {
     ferris.rotation.y += deltaTime * 0.05;
   }
 
-  if (rust) {
-    rust.rotation.y += deltaTime * 0.05;
 
-  }
   
 
   // Render
