@@ -105,9 +105,10 @@ const tick = () => {
 
   // Animate meshes
 
-  if (ferris) {
-    ferris.rotation.y += deltaTime * 0.05;
-  }
+  camera.position.x = Math.cos(elapsedTime)
+  camera.position.y = Math.sin(elapsedTime)
+
+  camera.lookAt(model.position)
 
   // Render
   renderer.render(scene, camera);
