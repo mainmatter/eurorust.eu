@@ -8,5 +8,5 @@ extra:
   <p>Rainer is recognized as an expert concerning .NET development, software architecture and databases. He has written numerous books and articles on C#, Go, Rust, database development, Microsoft Azure, XAML, and web development. Additionally he regularly speaks at conferences, workshops and trainings in Europe and the US. In 2010 Rainer has become one of the first MVPs for the Microsoft Azure platform. In 2015, Rainer also became a Microsoft Regional Director. 2016, Rainer also got the MVP award for Visual Studio and Developer Technologies.</p>
   <p>Rainer graduated the Higher Technical School Leonding (AT) for MIS with honors and holds a BSc (Hons) Computer Studies of the University of Derby (UK).</p>"
   twitter: "rstropek"
-  web: "https://rainerstropek.me/"
+  web: "https://rainerstropek.me/?utm_source=eurorust"
 ---

@@ -11,7 +11,7 @@ template = "workshop.html"
 <p>
   The software in automotive applications has emerged as a vital component that is continuously growing in complexity, safety, and security. One of the fundamental decisions that a developer makes is the choice of a programming language. Rust, with its capabilities in terms of memory safety and security without risking performance, has emerged as a powerful contender for safety critical applications. Rust by its capabilities is progressively being recognized as a viable supplement or even a potential replacement for traditional C/C++. This transitional shift is supported by the continuous maturation and enhancement of the Rust ecosystem within the automotive industry.
 </p>
-<p>All workshop participants will receive a free 3 month <a href="https://www.jetbrains.com/clion/" target="_blank">CLion</a> license valid for personal use from our friends at JetBrains.</p>
+<p>All workshop participants will receive a free 3 month <a href="https://www.jetbrains.com/clion/?utm_source=eurorust" target="_blank">CLion</a> license valid for personal use from our friends at JetBrains.</p>
 <h4>Target Audience</h4>
 <p>
 This workshop is designed for a broad spectrum of Rust enthusiasts with an inclination towards embedded systems, from beginners with initial bases up to experts. This workshop is for you if you already understand the major benefits of using Rust over C.
@@ -33,7 +33,7 @@ This workshop is designed for a broad spectrum of Rust enthusiasts with an incli
   </li>
 </ul>
 <h4>Prerequisites</h4>
-<p>We will send a comprehensive set of preparatory instructions. This information will be provided closer to the workshop date. While this detailed instructions are on its way, we encourage those who are new to embedded Rust to get a head start by exploring the "Embedded Rust collection" (<a href="https://github.com/rust-embedded/awesome-embedded-rust" target="_blank">https://github.com/rust-embedded/awesome-embedded-rust</a>). This will provide an excellent introduction and familiarize you with some of the concepts we will be discussing in the workshop.</p>
+<p>We will send a comprehensive set of preparatory instructions. This information will be provided closer to the workshop date. While this detailed instructions are on its way, we encourage those who are new to embedded Rust to get a head start by exploring the "Embedded Rust collection" (<a href="https://github.com/rust-embedded/awesome-embedded-rust/?utm_source=eurorust" target="_blank">https://github.com/rust-embedded/awesome-embedded-rust</a>). This will provide an excellent introduction and familiarize you with some of the concepts we will be discussing in the workshop.</p>
 <h4>Mario Cupelli</h4>
 <p>Mario Cupelli is the CTO of HighTec EDV-Systeme GmbH a world-leading provider of safety
   qualified compilers based on LLVM technology, a modern embedded multicore real-time

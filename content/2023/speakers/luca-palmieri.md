@@ -5,7 +5,7 @@ title = "Speaker: Luca Palmieri"
   name = "Luca Palmieri"
   title = "Principal Engineering Consultant at Mainmatter"
   twitter = "algo_luca"
-  url = "https://www.lpalmieri.com"
+  url = "https://www.lpalmieri.com/?utm_source=eurorust"
   image = "/2023/images/speakers/luca.jpg"
 +++
 Luca Palmieri builds technology products for a living. His current focus is on backend development, software architecture and the Rust programming language.

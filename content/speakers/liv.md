@@ -5,7 +5,7 @@ title = "Speaker: Liv"
   name = "Liv"
   title = "Software Developer at axo"
   twitter = "dog_awoo"
-  url = "https://shadows.with.al"
+  url = "https://shadows.with.al/?utm_source=eurorust"
   image = "/images/speakers/liv.jpg"
 +++
 salaried software developer
