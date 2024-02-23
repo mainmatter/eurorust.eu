@@ -3,7 +3,7 @@ template = "generic-content.html"
 title = "Conference Code of Conduct"
 +++
 
-<div class="box">
+<div class="box mb-7">
   <p>This Code of Conduct is also available in</p>
   <div class="languages">
   <a href="https://confcodeofconduct.com" target="_blank" rel="noopener noreferrer">English</a>
@@ -33,7 +33,7 @@ title = "Conference Code of Conduct"
     participants to help ensuring a safe environment for everybody.
   </p>
 </div>
-    <h3>Need Help?</h3>
+    <h3 class="mb-3 mt-7">Need Help?</h3>
     <div class="box text-centered">
     <p>Contact us via Email or phone:</p>
     <br>
@@ -44,7 +44,7 @@ title = "Conference Code of Conduct"
     <a href="tel:+49 231 589 62 55">+49 231 589 62 55</a>
     </p>
     </div>
-    <h3>Quick Version</h3>
+    <h3 class="mb-3 mt-7">Quick Version</h3>
     <div class="box">
     <p>
       Our conference is dedicated to providing a harassment-free conference experience for everyone, regardless of
@@ -55,7 +55,7 @@ title = "Conference Code of Conduct"
       sanctioned or expelled from the conference without a refund at the discretion of the conference organisers.
     </p>
     </div>
-    <h3>Full Version</h3>
+    <h3 class="mb-3 mt-7">Full Version</h3>
     <div class="box">
     <p>
       Harassment includes offensive verbal comments related to gender, gender identity and expression, age, sexual
@@ -96,7 +96,8 @@ title = "Conference Code of Conduct"
       Original source and credit:
       <br>
       <a href="http://2012.jsconf.us/#/about" target="_blank" rel="noopener noreferrer">2012.jsconf.us/#/about</a><br>& <a
-        href="http://geekfeminism.wikia.com/wiki/Conference_anti-harassment/Policy" target="_blank" rel="noopener noreferrer">The Ada Initiative</a>.
+        href="http://geekfeminism.wikia.com/wiki/Conference_anti-harassment/Policy" target="_blank" rel="noopener noreferrer">The Ada Initiative</a>.<br>
+      <a href="https://github.com/RayMarch/ferris3d" target="_blank" rel="noopener noreferrer">Thanks to RayMarch for creating 3D Ferris!</a>
     </p>
     <br>
     <p class="note">
