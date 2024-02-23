@@ -84,8 +84,14 @@
   }
 
   .logo-wrapper {
+  
     .logo {
-      mix-blend-mode: normal;
+      transform: translate3d(0,0,0) translateY(0rem);
+    }
+  
+    .logo-white {
+      transform: translateY(0rem);
     }
   }
+
 }
