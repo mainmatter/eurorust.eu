@@ -12,7 +12,7 @@ template = "2023/workshop.html"
   If you're a contributor, you can use this room to get help with your first contribution or to find a project to contribute to.  
 </p>
 <p>
-  All participants will receive a free 3 month <a href="https://www.jetbrains.com/clion/" target="_blank">CLion</a> license valid for personal use from our friends at JetBrains.
+  All participants will receive a free 3 month <a href="https://www.jetbrains.com/clion/?utm_source=eurorust" target="_blank">CLion</a> license valid for personal use from our friends at JetBrains.
 </p>
 <h4>Prerequisites</h4>
 <p>

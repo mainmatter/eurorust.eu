@@ -10,5 +10,5 @@ extra:
 
   <p>He also co-founded Boavizta, to make actors from the public and the private sector of ICT, to work together on open data, methodologies and open-source tools to better and more transparently evaluation its impact on the environment.</p>"
   twitter: "bpetit_"
-  web: "https://bpetit.nce.re/"
+  web: "https://bpetit.nce.re/?utm_source=eurorust"
 ---

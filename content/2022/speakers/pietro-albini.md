@@ -6,5 +6,5 @@ extra:
   company: "Ferrous Systems"
   bio: "<p>Pietro is a member of the Rust Security Response WG and Release Team, and the lead of the Rust Infrastructure Team. During the week he works at Ferrous Systems on Ferrocene, a distribution of the Rust toolchain qualified for safety-critical use.</p>"
   twitter: "pietroalbini"
-  web: "https://www.pietroalbini.org"
+  web: "https://www.pietroalbini.org/?utm_source=eurorust"
 ---

@@ -6,5 +6,5 @@ extra:
   company: "Talend"
   bio: "<p>TBA</p>"
   twitter: "FrancoisMockers"
-  web: "https://vleue.com"
+  web: "https://vleue.com/?utm_source=eurorust"
 ---
