@@ -78,16 +78,26 @@ $spacers: (
     border: none;
     border-right: 2px solid var(--white);
     border-left: 2px solid var(--white);
+    @media (max-width: 60rem) {
+      border-right: 0;
+      border-left: 0;
+    }
   }
 
   &-r {
     border: none;
     border-right: 2px solid var(--white);
+    @media (max-width: 60rem) {
+      border-right: 0;
+    }
   }
 
   &-l {
     border: none;
     border-left: 2px solid var(--white);
+    @media (max-width: 60rem) {
+      border-left: 0;
+    }
   }
 
   &-t {
