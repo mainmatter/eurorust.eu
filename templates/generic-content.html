@@ -11,19 +11,19 @@
 
 <div class="generic-block {{ page.title | lower | replace(from=' ', to='_')  }}">
 
-  {% include "partials/header.html" %}
+  {% include "sections/nav.html" %}
 
-  <main>
-    <section class="generic-content">
-      <h3 class="title">{{ page.title }}</h3>
+  <main class="mb-10">
+    <section class="generic-content container py-5">
+      <h3 class="title mb-5">{{ page.title }}</h3>
       {% if page.extra.subtitle %}
-      <h3>{{ page.extra.subtitle }}</h3>
+      <h3 class="mb-3">{{ page.extra.subtitle }}</h3>
       {% endif %}
       {{ page.content | safe }}
     </section>
   </main>
 
-  {% include "partials/footer.html" %}
+  {% include "sections/footer.html" %}
 </div>
 
 {% endblock content %}

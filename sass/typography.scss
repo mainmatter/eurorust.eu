@@ -1,139 +1,217 @@
 @import "./mixins.scss";
 
+@mixin base-typo {
+  font-family: "Courier Prime", "Courier New", Courier, monospace;
+  font-weight: 400;
+}
+
 h1,
+.h1 {
+  @include base-typo;
+  font-size: 5rem;
+  line-height: 1;
+}
+
 h2,
-h3 {
-  @include neon-text-style;
+.h2 {
+  @include base-typo;
+  font-size: 4rem;
+  line-height: 1.2;
 }
 
-h2 {
-  font-family: Poppins-Light-Italic;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 0;
-  font-size: 35px;
-  line-height: 45px;
-
-  @include desktop-and-tablet-only {
-    font-size: 55px;
-    line-height: 65px;
-  }
-}
-
-hr {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-h3 {
-  font-family: Poppins-SemiBoldItalic;
-  font-size: calc(min(9vw, 40px));
-  line-height: 46px;
-
-  @include desktop-and-tablet-only {
-    font-size: 55px;
-    line-height: 65px;
-  }
+h3,
+.h3 {
+  @include base-typo;
+  font-size: 3rem;
+  line-height: 1.2;
 }
 
 h4,
-h5 {
-  font-family: Poppins-Light;
-  font-size: 25px;
-  line-height: 28px;
-  color: var(--pink);
-  @include desktop-and-tablet-only {
-    font-size: 40px;
-    line-height: 35px;
+.h4 {
+  @include base-typo;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+h5,
+.h5 {
+  @include base-typo;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+body {
+  @include base-typo;
+  font-size: 1.25;
+  line-height: 1.5;
+}
+
+.large {
+  @include base-typo;
+  font-size: 1.75rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 60rem) {
+  h1,
+  .h1 {
+    font-size: 3rem;
   }
-}
 
-h5 {
-  font-family: Poppins-Light;
-  color: var(--white);
-  font-size: 25px;
-  line-height: 30px;
-  @include desktop-and-tablet-only {
-    font-size: 40px;
-    letter-spacing: 0;
-    line-height: 55px;
+  h2,
+  .h2 {
+    font-size: 2.75rem;
   }
-}
 
-h3.pill-title {
-  font-family: Poppins-Light;
-  background: var(--black);
-  border-radius: 41px;
-  letter-spacing: 0;
-  text-align: center;
-  line-height: 40px;
-  color: var(--white);
-  text-transform: uppercase;
-  text-shadow: none;
-  font-size: 32px;
-  box-shadow: var(--pink) 2px solid;
-  @include neon-border-style();
-  @include desktop-and-tablet-only {
-    min-width: 340px;
+  h3,
+  .h3 {
+    font-size: 2.5rem;
   }
-}
-
-p.light-font {
-  font-family: Poppins-Light;
-}
-
-p,
-.generic-content .box a,
-.generic-content .box ul {
-  font-family: Poppins-Regular;
-  font-size: 18px;
-  line-height: 24px;
-
-  @include desktop-and-tablet-only {
-    &:not(a) {
-      font-size: 22px;
-      line-height: 28px;
-    }
-  }
-}
-
-.generic-content .box p:not(:last-child),
-.generic-content .box ul:not(:last-child) {
-  margin-bottom: 28px;
 }
 
 a {
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 0.125rem;
+  text-underline-offset: 4px;
+  -webkit-text-fill-color: rgba(255, 255, 255, 1);
+
+  &:hover {
+    text-decoration-color: #fff;
+    background-repeat: no-repeat;
+    background: -webkit-linear-gradient(
+      65deg,
+      #59decb 0%,
+      #3b63e7 30%,
+      #de59cc 70%,
+      #59decb 100%,
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation-name: btnText;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+  }
+}
+
+.btn__secondary,
+.btn__secondary button {
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 0.125rem;
+  text-underline-offset: 4px;
+  -webkit-text-fill-color: rgba(255, 255, 255, 1);
+
+  &:hover {
+    text-decoration-color: #fff;
+    background-repeat: no-repeat;
+    background: -webkit-linear-gradient(
+      65deg,
+      #59decb 0%,
+      #3b63e7 30%,
+      #de59cc 70%,
+      #59decb 100%,
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation-name: btnText;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+  }
+}
+
+.btn__icon,
+.btn__primary--link {
   text-decoration: none;
 }
 
-.generic-block {
-  .box a,
-  p {
-    @include desktop-and-tablet-only {
-      font-size: 20px;
+.btn__icon {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.btn__icon::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #de59cc;
+  mix-blend-mode: overlay;
+  clip-path: circle();
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.btn__icon:hover::after {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.btn__primary--link {
+  position: relative;
+  border: 2px solid var(--white);
+  border-image-slice: 1;
+  border-image-source: linear-gradient(65deg, #fff 0%, #fff 60%, #fff 100%);
+  padding: 2rem 2.5rem 1.25rem 3.25rem;
+  font-weight: 700;
+  cursor: pointer;
+
+  button {
+    padding: 2rem 2.5rem 1.25rem 3.25rem;
+    margin: -2rem -2.5rem -1.25rem -3.25rem;
+    font-weight: 700;
+    text-decoration-thickness: 0.125rem;
+    text-underline-offset: 4px;
+    -webkit-text-fill-color: rgba(255, 255, 255, 1);
+
+    &:hover span {
+      text-decoration-color: #fff;
+      background-repeat: no-repeat;
+      background: -webkit-linear-gradient(
+        65deg,
+        #59decb 0%,
+        #3b63e7 30%,
+        #de59cc 70%,
+        #59decb 100%,
+      );
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation-name: btnText;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in;
     }
   }
 
-  .box a {
-    color: var(--neon-green);
+  &:hover {
+    animation-name: btnHover;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
   }
-}
 
-.text-centered {
-  text-align: center;
-}
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translate(0.75rem, 0.75rem);
+    border: 2px solid var(--white);
+    pointer-events: none;
+  }
 
-.highlight {
-  color: var(--neon-green);
-}
-
-.group-centered {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 80px;
-  @include desktop-and-tablet-only {
-    gap: 100px;
+  &:hover::after {
+    animation-name: btnHover;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
   }
 }

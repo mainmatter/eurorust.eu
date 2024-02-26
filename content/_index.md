@@ -210,4 +210,13 @@
 [[extra.speakers]]
 	name="Luca Palmieri"
 	image="luca.jpg"
+
+[[extra.speakers]]
+	name="Jonathan Pallant"
+	image="jonathan.jpg"
+
+[[extra.speakers]]
+	name="Alberto Schiabel"
+	image="alberto-schiabel.jpg"
+	
 +++
