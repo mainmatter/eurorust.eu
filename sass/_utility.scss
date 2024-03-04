@@ -117,14 +117,17 @@ $spacers: (
 }
 
 .mw {
-
   &-70 {
     max-width: 30rem;
   }
 }
 
-@media (max-width: 96rem) {
+.center {
+  display: flex;
+  justify-content: center;
+}
 
+@media (max-width: 96rem) {
   .container {
   margin: 0 5%;
   }
