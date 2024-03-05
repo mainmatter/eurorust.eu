@@ -5,7 +5,7 @@ title = "Health & Safety Policy"
 
 <div class="box mb-7">
   <p>
-    While we're all excited about connecting with the Rust community face-to-face in Brussels, we want to ensure that the event is accessible and attendees remain safe during the two days of the conference. The following safety policy applies to all on-site ticket holders, sponsors, speakers, service partners, etc. If it needs to be changed, we will update everyone via email.
+    While we're all excited about connecting with the Rust community face-to-face in Vienna, we want to ensure that the event is accessible and attendees remain safe during the two days of the conference. The following safety policy applies to all on-site ticket holders, sponsors, speakers, service partners, etc. If it needs to be changed, we will update everyone via email.
   </p>
 </div>
 <h3 class="mb-3 mt-7">General Recommendations</h3>
