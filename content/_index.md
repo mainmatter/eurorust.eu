@@ -110,6 +110,11 @@
 	link="https://hightec-rt.com/en/?utm_source=eurorust"
 	image="/images/sponsors/current_sponsors/hightec_rt.svg"
 
+[[extra.sponsors.closing_party_partners]]
+	title="Huawei"
+	link="https://www.huawei.com/?utm_source=eurorust"
+	image="/images/sponsors/current_sponsors/huawei.png"
+
 [[extra.sponsors.live_stream_partners]]
 	title="Huawei"
 	link="https://www.huawei.com/?utm_source=eurorust"
@@ -144,6 +149,37 @@
 	title="Keyrock"
 	link="https://keyrock.eu/?utm_source=eurorust"
 	image="/images/sponsors/current_sponsors/keyrock.svg"
+
+[[extra.sponsors.head_partners_plus]]
+	title="Rust Foundation"
+	link="https://foundation.rust-lang.org/?utm_source=eurorust"
+	image="/images/sponsors/current_sponsors/rust_foundation.svg"
+
+[[extra.sponsors.head_partners_plus]]
+	title="realm group"
+	link="https://www.realmgroup.io/?utm_source=eurorust"
+	image="/images/sponsors/current_sponsors/realm_group.svg"
+
+[[extra.sponsors.head_partners_plus]]
+	title="CrabNebula"
+	link="https://crabnebula.dev/?utm_campaign=eurorust23&utm_source=eurorust"
+	image="/images/sponsors/current_sponsors/crabnebula.svg"
+
+[[extra.sponsors.head_partners_plus]]
+	title="JetBrains"
+	link="https://jetbrains.com/?utm_source=eurorust"
+	image="/images/sponsors/current_sponsors/jetbrains.svg"
+
+[[extra.sponsors.head_partners_plus]]
+	title="Axodev"
+	link="https://www.axo.dev/?utm_source=eurorust"
+	image="/images/sponsors/current_sponsors/axodotdev.svg"
+
+[[extra.sponsors.head_partners_plus]]
+	title="Keyrock"
+	link="https://keyrock.eu/?utm_source=eurorust"
+	image="/images/sponsors/current_sponsors/keyrock.svg"
+
 
 [[extra.sponsors.partners]]
 	title="Neo4j"
