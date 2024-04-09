@@ -639,8 +639,43 @@ title = "Privacy Policy"
     https://www.intuit.com/privacy/statement/.
   </p>
 </div>
+
+<h3 class="mb-3 mt-7">12. Data protection provisions about the application and use of Tito</h3>
+<div class="box privacy text-centered">
+  <p>
+    On this website, the controller has integrated components of the enterprise Tito.
+    Tito is software which gives you the ability to register for events, make payments for those registrations and get notified about relevant news regarding the event.
+  </p>
+  <br>
+  <p>
+    The operating company of Tito is Team Tito Limited of Unit 2, 64 Dame Street, Dublin 2, Ireland.
+  </p>
+  <br>
+  <p>
+    We collect personal information from users that register for the EuroRust conference. The personal information we collect includes:
+  </p>
+  <br>
+  <ul>
+    <li>Name</li>
+    <li>Email address</li>
+    <li>Company name</li>
+    <li>VAT ID</li>
+    <li>Billing address</li>
+    <li>Order date and time</li>
+  </ul>
+  <br>
+  <p>
+    Tito collects more information about its users. This information isn’t passed on to us,
+    however, we suggest reading Tito’s privacy policy to see how it uses that information.
+  </p>
+  <br>
+  <p>
+    The applicable data protection provisions of Tito may be accessed under
+    https://ti.to/privacy.
+  </p>
+</div>
   
-<h3 class="mb-3 mt-7">12. Data protection provisions about the application and use of LinkedIn</h3>
+<h3 class="mb-3 mt-7">13. Data protection provisions about the application and use of LinkedIn</h3>
 <div class="box privacy text-centered">
   <p>
     The controller has integrated components of the LinkedIn Corporation on this website. LinkedIn
@@ -697,7 +732,7 @@ title = "Privacy Policy"
   </p>
 </div>
   
-<h3 class="mb-3 mt-7">13. Data protection provisions about the application and use of Twitter</h3>
+<h3 class="mb-3 mt-7">14. Data protection provisions about the application and use of Twitter</h3>
 <div class="box privacy text-centered">
   <p>
     On this website, the controller has integrated components of Twitter. Twitter is a
@@ -751,7 +786,7 @@ title = "Privacy Policy"
   </p>
 </div>
   
-<h3 class="mb-3 mt-7">14. Legal basis for the processing</h3>
+<h3 class="mb-3 mt-7">15. Legal basis for the processing</h3>
 <div class="box privacy text-centered">
   <p>
     Art. 6(1) lit. a GDPR serves as the legal basis for processing operations for which we obtain
@@ -779,7 +814,7 @@ title = "Privacy Policy"
   </p>
 </div>
   
-<h3 class="mb-3 mt-7">15. The legitimate interests pursued by the controller or by a third party</h3>
+<h3 class="mb-3 mt-7">16. The legitimate interests pursued by the controller or by a third party</h3>
 <div class="box privacy text-centered">
   <p>
     Where the processing of personal data is based on Article 6(1) lit. f GDPR our legitimate
@@ -788,7 +823,7 @@ title = "Privacy Policy"
   </p>
 </div>
   
-<h3 class="mb-3 mt-7">16. Period for which the personal data will be stored</h3>
+<h3 class="mb-3 mt-7">17. Period for which the personal data will be stored</h3>
 <div class="box privacy text-centered">
   <p>
     The criteria used to determine the period of storage of personal data is the respective
@@ -799,7 +834,7 @@ title = "Privacy Policy"
 </div>
   
 <h3 class="mb-3 mt-7">
-  17. Provision of personal data as statutory or contractual requirement; Requirement necessary
+  18. Provision of personal data as statutory or contractual requirement; Requirement necessary
   to enter into a contract; Obligation of the data subject to provide the personal data;
   possible consequences of failure to provide such data
 </h3>
@@ -819,7 +854,7 @@ title = "Privacy Policy"
   </p>
 </div>
   
-<h3 class="mb-3 mt-7">18. Existence of automated decision-making</h3>
+<h3 class="mb-3 mt-7">19. Existence of automated decision-making</h3>
 <div class="box privacy text-centered">
   <p>As a responsible company, we do not use automatic decision-making or profiling.</p>
 </div>
