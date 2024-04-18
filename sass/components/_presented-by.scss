@@ -4,6 +4,13 @@
     align-items: center;
 
     img {
-        width: 20rem;
+        width: 40rem;
+    }
+
+    @media (max-width: 60rem) {
+
+        img {
+            width: 20rem;
+        }
     }
 }

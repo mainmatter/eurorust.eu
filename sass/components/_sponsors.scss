@@ -6,7 +6,7 @@
 
     .sponsors-grid-container {
       display: flex;
-      flex-flow: row wrap;
+      flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
       margin: 0 10px;
