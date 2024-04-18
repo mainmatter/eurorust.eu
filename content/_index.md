@@ -1,9 +1,9 @@
 +++
 [extra]
-	enable_sponsors=false
+	enable_sponsors=true
 
 [extra.section.speakers]
-	title = "Past Speakers"
+	title = "Speakers"
 
 [[extra.past_sponsors]]
 	title="rust_foundation"
@@ -116,27 +116,10 @@
 	image="/images/sponsors/current_sponsors/sentry.svg"
 
 [[extra.speakers]]
-	name="Niko Matsakis"
-	image="niko-matsakis.png"
+	name="Charlie Marsh"
+	image="charlie.jpg"
+	job_title="Founder of Astral"
+	twitter="charliermarsh"
+	web="https://astral.sh/?utm_source=eurorust"
 
-[[extra.speakers]]
-	name="Lisa Passing"
-	image="lisa-passing.jpeg"
-
-[[extra.speakers]]
-	name="Ashley Williams"
-	image="ashley-williams.jpeg"
-
-[[extra.speakers]]
-	name="Luca Palmieri"
-	image="luca.jpg"
-
-[[extra.speakers]]
-	name="Jonathan Pallant"
-	image="jonathan.jpg"
-
-[[extra.speakers]]
-	name="Alberto Schiabel"
-	image="alberto-schiabel.jpg"
-	
 +++

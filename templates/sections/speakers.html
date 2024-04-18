@@ -1,18 +1,32 @@
 <section class="speakers">
-  <h3>{{ section.extra.section.speakers.title }}</h3>
-  <ul class="speakers-list">
-    {% for speaker in section.extra.speakers %}
-      <li>
-        <div class="photo-container">
-          <img
+    <div class="container py-10">
+    {% if section.extra.speakers %}
+        <h2 class="mb-9">{{ section.extra.section.speakers.title }}</h2>
+        <ul class="speakers-list">
+            {% for speaker in section.extra.speakers %}
+                <li>
+                    <div class="photo-container">
+                        <div class="photo-container-overlay">
+                        </div>
+                        <img
             alt="{{ speaker.name }} speaker profile photo"
             src="/images/speakers/{{speaker.image}}"
-            class="photo" />
+            class="photo"/>
+                    </div>
+                    <p class="large mt-4">
+                        {{ speaker.name }}
+                    </p>
+                    <p class="">
+                        {{ speaker.name }}
+                    </p>
+                </li>
+            {% endfor %}
+        </ul>
+        <div class="center mt-10">
+            <div class="btn__primary">
+                <a href="https://www.papercall.io/events/6500" target="_blank" rel="noopener noreferrer" class="btn__primary--link">Submit a talk</a>
+            </div>
         </div>
-        <p>
-          {{ speaker.name }}
-        </p>
-      </li>
-    {% endfor %}
-  </ul>
+      {% endif %}
+    </div>
 </section>
