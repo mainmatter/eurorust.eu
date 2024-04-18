@@ -117,9 +117,10 @@
 
 [[extra.speakers]]
 	name="Charlie Marsh"
-	image="charlie.jpg"
+	image="charlie.webp"
 	job_title="Founder of Astral"
 	twitter="charliermarsh"
 	web="https://astral.sh/?utm_source=eurorust"
+	link="/speakers/charlie-marsh"
 
 +++
