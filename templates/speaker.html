@@ -5,12 +5,13 @@
     if (!window.tito) {
       var script = document.createElement('script');
       script.src = `https://js.tito.io/v2${
-        ['localhost', '127.0.0.1'].includes(window.location.hostname)
-          ? '/with/development_mode'
-          : ''
-        }`;
+      ['localhost', '127.0.0.1'].includes(window.location.hostname)
+        ? '/with/development_mode'
+        : ''}`;
       script.async = true;
-      document.head.appendChild(script);
+      document
+        .head
+        .appendChild(script);
     }
   </script>
 {% endblock head %}
@@ -19,12 +20,14 @@
 
   <div class="generic-block speaker">
 
-    {% include "partials/header-speaker.html" %}
+    {% include "sections/nav.html" %}
 
-    <main>
-      <section class="speaker-details">
+    <main class="mt-5 mb-10">
+      <section class="speaker-details container py-5">
         <div class="title">
           <div class="photo-container">
+
+            <div class="photo-container-overlay"></div>
             {%if page.extra.image %}
               <img
                 class="photo"
@@ -36,36 +39,35 @@
                 src="/images/speakers/placeholder.png">
             {% endif %}
           </div>
-          <div class="speaker-info">
+          <div class="speaker-info mt-9">
             <h3>{{page.extra.name}}</h3>
             {%if page.extra.title %}
               <h4>{{page.extra.title}}</h4>
             {% endif %}
           </div>
         </div>
-        <div class="bio">
+        <div class="bio mt-3">
           {{ page.content | safe }}
         </div>
-        <div class="links">
-          {%if page.extra.twitter %}
-            <a href="https://twitter.com/{{page.extra.twitter}}" target="_blank" rel="noopener noreferrer"><img alt="twitter icon" src="/images/icons/twitter-white.svg"></a>
-          {% endif %}
-          {%if page.extra.url %}
-            <a href="{{page.extra.url}}" target="_blank" rel="noopener noreferrer"><img alt="external link icon" src="/images/icons/external-link-white.svg"></a>
-          {% endif %}
-          {% set schedule = load_data(path = "data/schedule.json") %}
-          {% for day in schedule %}
-            {% set day_num = loop.index %}
-            {% for talk in day.talks %}
-              {% if talk.speakers %}
-                {% for speaker in talk.speakers %}
-                  {%if speaker == page.slug %}
-                    <a class="talk-link" href="/schedule/day/{{day_num}}#{{talk.title | urlencode}}">{%if talk.isPanel %}Panel{% else %}Speaker's Talk{% endif %}</a>
-                  {% endif %}
-                {% endfor %}
-              {% endif %}
-            {% endfor %}
-          {% endfor %}
+        <div class="links mt-5">
+          <ul class="social mt-3">
+{%if page.extra.twitter %}
+            <li>
+              <a
+        href="https://twitter.com/{{ page.extra.twitter }}"
+        target="_blank"
+        rel="noopener noreferrer" class="btn__icon"><img src="/images/icons/twitter-footer-white.svg" alt="Twitter icon"/></a>
+            </li>
+            {% endif %}
+            {%if page.extra.url%}
+            <li>
+              <a
+        href="{{ page.extra.url }}"
+        target="_blank"
+        rel="noopener noreferrer" class="btn__icon"><img src="/images/icons/external-link-white.svg" alt="email icon"/></a>
+            </li>
+{% endif %}
+          </ul>
         </div>
       </section>
     </main>
