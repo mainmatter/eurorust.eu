@@ -11,6 +11,10 @@ template = "workshop.html"
   url= "https://github.com/weiznich"
 +++
 
+
+<meta property="og:image" content="/images/workshops/og-images/og-image-diesel.png" />
+
+
 <p class="large">
   Diesel is a performant and type-safe query builder and ORM for Rust. This workshop teaches how to build performant applications using Diesel. It starts with the basics and goes all the way to advanced use-cases. 
   After this workshop you will be well equipped to fully use Diesel’s features.

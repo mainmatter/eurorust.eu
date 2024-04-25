@@ -12,6 +12,10 @@ template = "workshop.html"
   twitter = "conradludgate"
 +++
 
+
+<meta property="og:image" content="/images/workshops/og-images/og-image-async.png" />
+
+
 <p class="large">
   Async Rust is a very powerful abstraction for concurrent systems. 
 It is being used extensively in web development for its ability to handle many thousands of concurrent requests at a time. As an abstraction, though, async Rust is quite a brittle one. Many of its footguns and complications often need to be learned the hard way. 
