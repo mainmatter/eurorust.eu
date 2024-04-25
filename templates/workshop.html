@@ -5,12 +5,13 @@
     if (!window.tito) {
       var script = document.createElement('script');
       script.src = `https://js.tito.io/v2${
-        ['localhost', '127.0.0.1'].includes(window.location.hostname)
-          ? '/with/development_mode'
-          : ''
-        }`;
+      ['localhost', '127.0.0.1'].includes(window.location.hostname)
+        ? '/with/development_mode'
+        : ''}`;
       script.async = true;
-      document.head.appendChild(script);
+      document
+        .head
+        .appendChild(script);
     }
   </script>
 {% endblock head %}
@@ -19,44 +20,77 @@
 
   <div class="generic-block workshop {{ page.title | lower | replace(from=' ', to='_')  }}">
 
-    {% include "partials/header-workshops.html" %}
+    {% include "sections/nav.html" %}
 
     <main>
-      <section class="workshops workshop-details">
+      <section class="workshops workshop-details py-8 container">
         <div class="workshop-header">
-          <p class="workshop-date">{{ page.extra.date }}</p>
-          <h3 class="workshop-title">{{ page.title }}</h3>
+          <p class="workshop-date mb-3">{{ page.extra.date }}</p>
+          <h1 class="workshop-title mb-7">{{ page.title }}</h1>
           {% if page.extra.sponsor == "mainmatter" %}
             <div class="sponsored-by">
-              <img alt="Mainmatter logo" src="/images/icons/mainmatter.svg" />
+              <img alt="Mainmatter logo" src="/images/icons/mainmatter.svg"/>
               <p>Workshop run by Mainmatter</p>
             </div>
           {% elif page.extra.sponsor == "hightec" %}
             <div class="sponsored-by">
-              <img alt="HighTec logo" src="/images/icons/hightec.png" />
+              <img alt="HighTec logo" src="/images/icons/hightec.png"/>
               <p>Workshop run by HighTec in collaboration with Veecle</p>
             </div>
           {% endif %}
         </div>
 
-        <div class="workshop box">
+        <div class="workshop">
           {{ page.content | safe }}
-          <div class="author-and-booking">
+        </div>
+        <div class="btn__primary mt-8 mb-10">
+          <tito-button event="events-matter/eurorust-2024" save-metadata-parameters="utm_*" class="btn__primary--link">Get your ticket</tito-button>
+        </div>
+        <div class="author-and-booking">
+          <div class="mentor__grid">
+            {% if page.extra.bio %}
+              <div class="mentor__wrapper-content">
+                <h5 class="mb-4">Mentor</h5>
+                <h2 class="mb-4">{{ page.extra.mentor }}</h2>
+                <p class="">{{ page.extra.bio | safe }}</p>
+                <div class="links mt-5">
+                  <ul class="social mt-3">
+                    {%if page.extra.twitter %}
+                      <li>
+                        <a
+        href="https://twitter.com/{{ page.extra.twitter }}"
+        target="_blank"
+        rel="noopener noreferrer" class="btn__icon"><img src="/images/icons/twitter-footer-white.svg" alt="Twitter icon"/></a>
+                      </li>
+                    {% endif %}
+                    {%if page.extra.url%}
+                      <li>
+                        <a
+        href="{{ page.extra.url }}"
+        target="_blank"
+        rel="noopener noreferrer" class="btn__icon"><img src="/images/icons/external-link-white.svg" alt="email icon"/></a>
+                      </li>
+                    {% endif %}
+                  </ul>
+                </div>
+
+              </div>
+            {% endif %}
             {% if page.extra.avatar %}
-              <div class="photo-container">
+              <div class="photo-container mentor__wrapper-image">
+                <div class="photo-container-overlay"></div>
                 <img
                   class="photo"
                   src="/images/workshops/{{ page.extra.avatar }}"
                   alt="{{ page.extra.avatar_alt }}">
               </div>
             {% endif %}
-            <tito-button class="book-your-ticket button" event="events-matter/eurorust-2023">Book
-              Your Ticket</tito-button>
           </div>
         </div>
+
       </section>
 
-      {% include "partials/workshop-venue.html" %}
+      {% include "sections/workshop-venue.html" %}
     </main>
 
     {% include "sections/footer.html" %}

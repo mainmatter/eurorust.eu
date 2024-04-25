@@ -29,7 +29,7 @@
 
         {{ page.content | safe }}
 
-        {% set workshops = load_data(path = "data/workshops.json") %}
+        {% set workshops = load_data(path = "/data/2023/workshops.json") %}
 
         {% for workshop in workshops %}
           <div class="workshop box">

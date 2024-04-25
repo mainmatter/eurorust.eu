@@ -3,8 +3,17 @@
     <h5 class="mb-4">Schedule</h5>
     <h2 class="mb-7">This is your EuroRust experience</h2>
     <div class="workshops mb-9">
+    {% set workshops = load_data(path = "data/workshops.json") %}
       <h4 class="mb-4">Workshop Day - Oct. 9th, 2024</h4>
-      <p>On the day before the main conference, we'll be running workshops again. Details about the workshops will be announced soon so stay tuned and make sure to plan your travel accordingly!</p>
+      <p class="mb-3">The EuroRust workshops will take place in a separate venue in the city center – details to be announced soon.</p>
+      <ol>
+        {% for workshop in workshops %}
+          <li class="mb-3">
+            <p class="large">{{ workshop.time }}</p>
+            <p><a href="/workshops/{{ workshop.slug }}">{{ workshop.title }}</a></p>
+          </li>
+        {% endfor %}
+        </ol>
     </div>
     <div class="conference mb-7">
       <h4>Conference Days - Oct. 10th + 11th, 2024</h4>
