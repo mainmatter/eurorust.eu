@@ -1,0 +1,25 @@
+<section class="schedule border-t py-10">
+  <div class="container">
+    <h5 class="mb-4">Workshops</h5>
+    <h2 class="mb-4">Experience Rust in action</h2>
+    <div class="workshops mb-9">
+    {% set workshops = load_data(path = "data/workshops.json") %}
+      <p class="mb-5 mw-70">The EuroRust workshops will take place in a separate venue in the city center – details to be announced soon.</p>
+      <ol>
+        {% for workshop in workshops %}
+          <li class="mb-7 border">
+            <h4 class="p-4 border-b">{{ workshop.title }}</h4>
+            <div class="p-4">
+              <p>{{ workshop.date }}, {{ workshop.time }}</p>
+              <p>This workshop is instructed by {{ workshop.mentor}}</p>
+              <p class="mt-3"><a href="/workshops/{{ workshop.slug }}">More information</a></p>
+            </div>
+          </li>
+        {% endfor %}
+        </ol>
+    </div>
+
+    <div class="workshops__image mt-10">
+				<img class="image-oval" src="/images/oval.png" alt=""/>
+		</div>
+  </section>

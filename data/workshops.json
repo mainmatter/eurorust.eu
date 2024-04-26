@@ -5,7 +5,8 @@
     "title": "Rediscovering the Future. A deep dive into the development of async Rust.",
     "description": "Async Rust is a very powerful abstraction for concurrent systems. It is being used extensively in web development for its ability to handle many thousands of concurrent requests at a time. As an abstraction, though, async Rust is quite a brittle one. Many of its footguns and complications often need to be learned the hard way.",
     "slug": "async-rust",
-    "sponsor": null
+    "sponsor": null,
+    "mentor": "Conrad Ludgate"
   },
   {
     "date": "Oct 09 2024",
@@ -13,7 +14,8 @@
     "title": "Testing in Rust: going beyond the basics",
     "description": "No application is an island: you need to interact with third-party APIs, databases and who knows what else. Testing those interactions is tricky, to say the least! This workshop will focus on expanding your Rust testing toolkit, going beyond the basic techniques you're already familiar with. At the end of the session, you'll have a strategy to test most of the scenarios that are relevant for a complex Rust application.",
     "slug": "testing-in-rust",
-    "sponsor": null
+    "sponsor": null,
+    "mentor": "Luca Palmieri"
   },
   {
     "date": "Oct 09 2024",
@@ -21,6 +23,7 @@
     "title": "Introduction to Diesel - Basic and advanced concepts in practice",
     "description": "Diesel is a performant and type-safe query builder and ORM for Rust. This workshop teaches how to build performant applications using Diesel. It starts with the basics and goes all the way to advanced use-cases. ",
     "slug": "diesel",
-    "sponsor": null
+    "sponsor": null,
+    "mentor": "Georg Semmler"
   }
 ]
