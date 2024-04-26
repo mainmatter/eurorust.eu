@@ -2,7 +2,7 @@
   {
     "date": "Oct 09 2024",
     "time": "10:00 - 16:00",
-    "title": "Rediscovering the Future. A deep dive into the development of async Rust.",
+    "title": "Rediscovering the Future: a deep dive into the development of async Rust.",
     "description": "Async Rust is a very powerful abstraction for concurrent systems. It is being used extensively in web development for its ability to handle many thousands of concurrent requests at a time. As an abstraction, though, async Rust is quite a brittle one. Many of its footguns and complications often need to be learned the hard way.",
     "slug": "async-rust",
     "sponsor": null,
@@ -20,7 +20,7 @@
   {
     "date": "Oct 09 2024",
     "time": "10:00 - 16:00",
-    "title": "Introduction to Diesel - Basic and advanced concepts in practice",
+    "title": "Introduction to Diesel: basic and advanced concepts in practice",
     "description": "Diesel is a performant and type-safe query builder and ORM for Rust. This workshop teaches how to build performant applications using Diesel. It starts with the basics and goes all the way to advanced use-cases. ",
     "slug": "diesel",
     "sponsor": null,

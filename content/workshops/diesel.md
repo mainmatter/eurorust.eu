@@ -1,5 +1,5 @@
 +++
-title = "Introduction to Diesel - Basic and advanced concepts in practice"
+title = "Introduction to Diesel: basic and advanced concepts in practice"
 template = "workshop.html"
 [extra]
   date = "Oct. 9th, 2024, 10:00 - 16:00"
