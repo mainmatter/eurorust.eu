@@ -3,7 +3,7 @@ title = "Testing in Rust: going beyond the basics"
 template = "workshop.html"
 [extra]
   date = "Oct. 9th, 2024, 10:00 - 16:00"
-  sponsor = ""
+  sponsor = "Mainmatter"
   mentor = "Luca Palmieri"
   avatar = "luca.png"
   avatar_alt = "Luca Palmieri"
