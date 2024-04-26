@@ -1,5 +1,5 @@
 +++
-title = "Rediscovering the Future: a deep dive into the development of async Rust"
+title = "Rediscovering the Future: a deep dive into async Rust"
 template = "workshop.html"
 [extra]
   date = "Oct. 9th, 2024, 10:00 - 16:00"
