@@ -283,8 +283,24 @@ title = "Privacy Policy"
     may be terminated at any time.
   </p>
 </div>
-  
-<h3 class="mb-3 mt-7">8. Routine erasure and blocking of personal data</h3>
+
+<h3 class="mb-3 mt-7">8. Information sharing via QR code</h3>
+<div class="box privacy text-centered">
+  <p>
+    Events Matter UG provides attendees with the option to add a QR code sticker to their conference badge during check-in for the purpose of making connections with other attendees. The QR code encodes a vCard that contains personal information provided during registration via Tito:
+  </p>
+<ul>
+  <li>attendee’s name</li>
+  <li>attendee’s email address</li>
+  <li>attendee’s company name</li>
+</ul>
+  <br>
+  <p>
+    The QR code scanning functionality on the Event badge is not activated by default. Conference attendees can opt in to it by applying the sticker to their badge. If they do not opt-in, their sticker will be destroyed. Attendees can provide their profile information to other attendees and partners by allowing them to scan the QR code on their event badge at the event.
+  </p>
+</div>
+
+<h3 class="mb-3 mt-7">9. Routine erasure and blocking of personal data</h3>
 <div class="box privacy text-centered">
   <p>
     The data controller shall process and store the personal data of the data subject only for the
@@ -300,7 +316,7 @@ title = "Privacy Policy"
   </p>
 </div>
 
-<h3 class="mb-3 mt-7">9. Rights of the data subject</h3>
+<h3 class="mb-3 mt-7">10. Rights of the data subject</h3>
 <div class="box privacy text-centered">
   <ul class="none">
     <li>
@@ -569,7 +585,7 @@ title = "Privacy Policy"
   </ul>
 </div>
 
-<h3 class="mb-3 mt-7">10. Data protection provisions about the application and use of Plausible</h3>
+<h3 class="mb-3 mt-7">11. Data protection provisions about the application and use of Plausible</h3>
 <div class="box privacy text-centered">
   <p>
     On this website, the controller has integrated components of the enterprise Plausible.
@@ -606,7 +622,7 @@ title = "Privacy Policy"
   </p>
 </div>
   
-<h3 class="mb-3 mt-7">11. Data protection provisions about the application and use of Mailchimp</h3>
+<h3 class="mb-3 mt-7">12. Data protection provisions about the application and use of Mailchimp</h3>
 <div class="box privacy text-centered">
   <p>
     On this website, the controller has integrated components of the enterprise Mailchimp.
@@ -640,7 +656,7 @@ title = "Privacy Policy"
   </p>
 </div>
 
-<h3 class="mb-3 mt-7">12. Data protection provisions about the application and use of Tito</h3>
+<h3 class="mb-3 mt-7">13. Data protection provisions about the application and use of Tito</h3>
 <div class="box privacy text-centered">
   <p>
     On this website, the controller has integrated components of the enterprise Tito.
@@ -675,7 +691,7 @@ title = "Privacy Policy"
   </p>
 </div>
   
-<h3 class="mb-3 mt-7">13. Data protection provisions about the application and use of LinkedIn</h3>
+<h3 class="mb-3 mt-7">14. Data protection provisions about the application and use of LinkedIn</h3>
 <div class="box privacy text-centered">
   <p>
     The controller has integrated components of the LinkedIn Corporation on this website. LinkedIn
@@ -732,7 +748,7 @@ title = "Privacy Policy"
   </p>
 </div>
   
-<h3 class="mb-3 mt-7">14. Data protection provisions about the application and use of Twitter</h3>
+<h3 class="mb-3 mt-7">15. Data protection provisions about the application and use of Twitter</h3>
 <div class="box privacy text-centered">
   <p>
     On this website, the controller has integrated components of Twitter. Twitter is a
@@ -786,7 +802,7 @@ title = "Privacy Policy"
   </p>
 </div>
   
-<h3 class="mb-3 mt-7">15. Legal basis for the processing</h3>
+<h3 class="mb-3 mt-7">16. Legal basis for the processing</h3>
 <div class="box privacy text-centered">
   <p>
     Art. 6(1) lit. a GDPR serves as the legal basis for processing operations for which we obtain
@@ -814,7 +830,7 @@ title = "Privacy Policy"
   </p>
 </div>
   
-<h3 class="mb-3 mt-7">16. The legitimate interests pursued by the controller or by a third party</h3>
+<h3 class="mb-3 mt-7">17. The legitimate interests pursued by the controller or by a third party</h3>
 <div class="box privacy text-centered">
   <p>
     Where the processing of personal data is based on Article 6(1) lit. f GDPR our legitimate
@@ -823,7 +839,7 @@ title = "Privacy Policy"
   </p>
 </div>
   
-<h3 class="mb-3 mt-7">17. Period for which the personal data will be stored</h3>
+<h3 class="mb-3 mt-7">18. Period for which the personal data will be stored</h3>
 <div class="box privacy text-centered">
   <p>
     The criteria used to determine the period of storage of personal data is the respective
@@ -834,7 +850,7 @@ title = "Privacy Policy"
 </div>
   
 <h3 class="mb-3 mt-7">
-  18. Provision of personal data as statutory or contractual requirement; Requirement necessary
+  19. Provision of personal data as statutory or contractual requirement; Requirement necessary
   to enter into a contract; Obligation of the data subject to provide the personal data;
   possible consequences of failure to provide such data
 </h3>
@@ -854,7 +870,7 @@ title = "Privacy Policy"
   </p>
 </div>
   
-<h3 class="mb-3 mt-7">19. Existence of automated decision-making</h3>
+<h3 class="mb-3 mt-7">20. Existence of automated decision-making</h3>
 <div class="box privacy text-centered">
   <p>As a responsible company, we do not use automatic decision-making or profiling.</p>
 </div>
