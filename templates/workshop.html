@@ -23,29 +23,38 @@
     {% include "sections/nav.html" %}
 
     <main>
-      <section class="workshops workshop-details py-8 container">
-        <div class="workshop-header">
-          <p class="workshop-date mb-3">{{ page.extra.date }}</p>
-          <h1 class="workshop-title mb-7">{{ page.title }}</h1>
-          {% if page.extra.sponsor == "mainmatter" %}
-            <div class="sponsored-by">
-              <img alt="Mainmatter logo" src="/images/icons/mainmatter.svg"/>
-              <p>Workshop run by Mainmatter</p>
+      <section class="hero pb-10 border-b" id="">
+        <div class="container">
+          <div class="my-7">
+            <p class="large">
+                October 9th 2024
+            </p>
+          </div>
+
+          <div class="">
+            <div class="wrapper-content">
+              <div class="h1 pb-7">
+                {{ page.title | safe }}
+              </div>
+              {% if page.extra.abstract %}
+                <p class="pb-8 mw-70">
+                  {{ page.extra.abstract | safe }}
+                </p>
+              {% endif %}
+              <div class="btn__primary">
+                <tito-button event="events-matter/eurorust-2024" save-metadata-parameters="utm_*" class="btn__primary--link">Get your ticket</tito-button>
+              </div>
             </div>
-          {% elif page.extra.sponsor == "hightec" %}
-            <div class="sponsored-by">
-              <img alt="HighTec logo" src="/images/icons/hightec.png"/>
-              <p>Workshop run by HighTec in collaboration with Veecle</p>
-            </div>
-          {% endif %}
+          </div>
         </div>
+
+      </section>
+      <section class="workshops workshop-details py-8 container">
 
         <div class="workshop">
           {{ page.content | safe }}
         </div>
-        <div class="btn__primary mt-8 mb-10">
-          <tito-button event="events-matter/eurorust-2024" save-metadata-parameters="utm_*" class="btn__primary--link">Get your ticket</tito-button>
-        </div>
+
         <div class="author-and-booking">
           <div class="mentor__grid">
             {% if page.extra.bio %}
