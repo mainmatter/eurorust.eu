@@ -11,9 +11,5 @@ template = "workshop.html"
   abstract = "Async Rust is a very powerful abstraction for concurrent systems. <br>It is being used extensively in web development for its ability to handle many thousands of concurrent requests at a time. As an abstraction, though, async Rust is quite a brittle one. Many of its footguns and complications often need to be learned the hard way. <br>In this workshop, we will be practising the hard way—you will redesign async Rust from the ground up. The outcome of this exercise will give you a much better understanding of the abstractions you use on a daily basis, learn the exact reasons behind some of the quirks, and develop your own workarounds for such problems. It will also teach you how to build your own inter-task concurrency mechanisms and even your own specialised async runtimes, should you need it."
   url = "https://conradludgate.com/"
   twitter = "conradludgate"
+  ogimage = "/images/workshops/og-images/og-image-async.png"
 +++
-
-
-<meta property="og:image" content="/images/workshops/og-images/og-image-async.png" />
-
-
