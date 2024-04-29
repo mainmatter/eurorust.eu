@@ -19,23 +19,25 @@
 
   <div class="generic-block {{ page.title | lower | replace(from=' ', to='_')  }}">
 
-    {% include "partials/header-workshops.html" %}
+    {% include "sections/nav.html" %}
 
     <main>
       <section class="workshops">
-        <h1 class="title">{{ page.title }}</h1>
-        <p class="entry-description">On-site attendees have the chance to book Rust Workshops the day before EuroRust 2023 to learn more about Rust and prepare for the conference.</p>
-        <p class="entry-description">The workshops will take place in a <a href="#workshop-venue">separate venue in the city center</a>!</p>
+        <div class="workshops-intro container">
+        <h1 class="title mt-8">{{ page.title }}</h1>
+        <p class="entry-description">On-site attendees have the chance to book Rust Workshops the day before EuroRust 2024 to learn more about Rust and prepare for the conference.</p>
+        </div>
 
         {{ page.content | safe }}
 
         {% set workshops = load_data(path = "data/workshops.json") %}
 
         {% for workshop in workshops %}
-          <div class="workshop box">
+          <div class="workshop my-5 py-7 border-b">
+          <div class="workshop-container container">
             <div class="workshop-header">
-              <p class="workshop-date">{{ workshop.date }}</p>
-              <h3 class="workshop-title">{{ workshop.title }}</h3>
+              <p class="workshop-date mb-3">{{ workshop.date }}</p>
+              <h3 class="workshop-title mb-3">{{ workshop.title }}</h3>
               {% if workshop.sponsor == "mainmatter" %}
                 <div class="sponsored-by">
                   <img alt="Mainmatter logo" src="/images/icons/mainmatter.svg" />
@@ -48,16 +50,17 @@
                 </div>
               {% endif %}
             </div>
-            <p class="workshop-description">{{ workshop.description }}</p>
+            <p class="workshop-description mb-3">{{ workshop.description }}</p>
             <a
               class="more-info button plausible-event-name=workshop-{{workshop.slug}}"
               alt="more info"
               href="/workshops/{{ workshop.slug }}">More Info</a>
           </div>
+          </div>
         {% endfor %}
       </section>
 
-      {% include "partials/workshop-venue.html" %}
+      {% include "sections/workshop-venue.html" %}
     </main>
 
     {% include "sections/footer.html" %}

@@ -1,0 +1,26 @@
+.mentor__grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    align-items: center;
+}
+
+.mentor__wrapper-image {
+    margin-left: 4rem;
+
+}
+
+
+@media (max-width: 60rem) {
+
+    .mentor__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .mentor__wrapper-image {
+        margin-bottom: 4rem;
+        grid-row: 1;
+
+    }
+
+}

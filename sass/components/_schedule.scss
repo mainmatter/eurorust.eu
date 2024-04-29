@@ -11,6 +11,16 @@
     padding-left: 5rem;
 }
 
+.workshops__image {
+    display: flex;
+    justify-content: center;
+
+    img {
+        max-width: 100%;
+    }
+}
+
+
 .closing-party__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
