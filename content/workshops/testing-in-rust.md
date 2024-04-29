@@ -13,7 +13,9 @@ template = "workshop.html"
   abstract = "No application is an island: you need to interact with third-party APIs, databases and who knows what else. Testing those interactions is tricky, to say the least! This workshop will focus on expanding your Rust testing toolkit, going beyond the basic techniques you're already familiar with. At the end of the session, you'll have a strategy to test most of the scenarios that are relevant for a complex Rust application."
 +++
 
-<meta property="og:image" content="/images/workshops/og-images/og-image-testing.png" />
+<script>
+    document.querySelector('meta[property="og:image"]').setAttribute("content", "/images/workshops/og-images/og-image-testing.png");
+</script>
 
 <div class="syllabus mb-10">
   <h2 class="my-7">Syllabus</h2>

@@ -12,8 +12,9 @@ template = "workshop.html"
   abstract= "Diesel is a performant and type-safe query builder and ORM for Rust. This workshop teaches how to build performant applications using Diesel. It starts with the basics and goes all the way to advanced use-cases. After this workshop you will be well equipped to fully use Diesel’s features.*"
 +++
 
-
-<meta property="og:image" content="/images/workshops/og-images/og-image-diesel.png" />
+<script>
+    document.querySelector('meta[property="og:image"]').setAttribute("content", "/images/workshops/og-images/og-image-diesel.png");
+</script>
 
 <div class="syllabus mb-10">
   <h2 class="my-7">Syllabus</h2>

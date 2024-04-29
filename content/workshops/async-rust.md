@@ -13,7 +13,8 @@ template = "workshop.html"
   twitter = "conradludgate"
 +++
 
-
-<meta property="og:image" content="/images/workshops/og-images/og-image-async.png" />
+<script>
+    document.querySelector('meta[property="og:image"]').setAttribute("content", "/images/workshops/og-images/og-image-async.png");
+</script>
 
 
