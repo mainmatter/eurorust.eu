@@ -11,9 +11,8 @@ template = "workshop.html"
   url = "https://www.lpalmieri.com/"
   twitter = "algo_luca"
   abstract = "No application is an island: you need to interact with third-party APIs, databases and who knows what else. Testing those interactions is tricky, to say the least! This workshop will focus on expanding your Rust testing toolkit, going beyond the basic techniques you're already familiar with. At the end of the session, you'll have a strategy to test most of the scenarios that are relevant for a complex Rust application."
+  ogimage = "/images/workshops/og-images/og-image-testing.png"
 +++
-
-<meta property="og:image" content="/images/workshops/og-images/og-image-testing.png" />
 
 <div class="syllabus mb-10">
   <h2 class="my-7">Syllabus</h2>

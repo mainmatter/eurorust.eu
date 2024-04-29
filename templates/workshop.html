@@ -1,4 +1,8 @@
 {% extends "base.html" %}
+{% block og_image %}
+  <meta property="og:image" content="{{ page.extra.ogimage | safe }}" />
+  <meta name="twitter:image" content="{{ page.extra.ogimage | safe }}">
+{% endblock %}
 
 {% block head %}
   <script>

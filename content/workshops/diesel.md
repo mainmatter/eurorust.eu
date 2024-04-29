@@ -10,10 +10,8 @@ template = "workshop.html"
   bio = "Georg has been working on open-source software for over a decade, with a focus on Rust’s database ecosystem in recent years. As a maintainer of Diesel ORM, he has contributed to its development and helped users solve complex problems. Georg contributes to the Rust compiler to improve the compilation error reporting story for trait-heavy crates.<br> He is a researcher and software developer at GiGa infosystems, where he uses Rust to develop a database system for managing large amounts of geoscientific data. Georg is passionate about sharing his knowledge and experience with the Rust community and helping others improve their programming skills."
   url= "https://github.com/weiznich"
   abstract= "Diesel is a performant and type-safe query builder and ORM for Rust. This workshop teaches how to build performant applications using Diesel. It starts with the basics and goes all the way to advanced use-cases. After this workshop you will be well equipped to fully use Diesel’s features.*"
+  ogimage = "/images/workshops/og-images/og-image-diesel.png"
 +++
-
-
-<meta property="og:image" content="/images/workshops/og-images/og-image-diesel.png" />
 
 <div class="syllabus mb-10">
   <h2 class="my-7">Syllabus</h2>
