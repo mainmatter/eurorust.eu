@@ -110,6 +110,11 @@
 	link="https://foundation.rust-lang.org/?utm_source=eurorust"
 	image="/images/sponsors/current_sponsors/rust_foundation.svg"
 
+[[extra.sponsors.partners]]
+	title="Astral"
+	link="https://astral.sh/?utm_source=eurorust"
+	image="/images/sponsors/current_sponsors/astral.svg"
+
 [[extra.sponsors.head_partners]]
 	title="Sentry"
 	link="https://sentry.io/?utm_source=eurorust"
