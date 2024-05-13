@@ -19,18 +19,21 @@
               {{ speaker.job_title }}
             </p>
             <ul class="social mt-3">
+              {% if speaker.twitter %}
               <li>
                 <a
         href="https://twitter.com/{{ speaker.twitter }}"
         target="_blank"
-        rel="noopener noreferrer" class="btn__icon"><img src="/images/icons/twitter-footer-white.svg" alt="Twitter icon"/></a>
+        rel="noopener noreferrer" class="btn__icon"><img src="/images/icons/twitter-footer-white.svg" alt="Twitter icon"/></a> 
               </li>
+              {% endif %}
+              {% if speaker.web %}
               <li>
                 <a
         href="{{ speaker.web }}"
         target="_blank"
-        rel="noopener noreferrer" class="btn__icon"><img src="/images/icons/external-link-white.svg" alt="email icon"/></a>
-              </li>
+        rel="noopener noreferrer" class="btn__icon"><img src="/images/icons/external-link-white.svg" alt="email icon"/></a> 
+              </li>{% endif %}
 
             </ul>
           </li>
