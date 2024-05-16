@@ -128,4 +128,11 @@
 	web="https://astral.sh/?utm_source=eurorust"
 	link="/speakers/charlie-marsh"
 
+[[extra.speakers]]
+	name="Aida Getoeva"
+	image="aida.jpg"
+	job_title="Software Engineer at Meta"
+	link="/speakers/aida-getoeva"
+
+
 +++
