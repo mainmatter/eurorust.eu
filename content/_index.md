@@ -134,5 +134,12 @@
 	job_title="Software Engineer at Meta"
 	link="/speakers/aida-getoeva"
 
+[[extra.speakers]]
+	name="Jon Gjengset"
+	image="jon.jpg"
+	job_title="Principal Engineer at Helsing and Author of Rust for Rustaceans"
+	twitter="jonhoo"
+	link="/speakers/jon-gjengset"
+
 
 +++
