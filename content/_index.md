@@ -5,6 +5,9 @@
 [extra.section.speakers]
 	title = "Speakers"
 
+[extra.section.moderators]
+	title = "Moderators"
+
 [[extra.past_sponsors]]
 	title="rust_foundation"
 	link="https://foundation.rust-lang.org/?utm_source=eurorust"
@@ -140,6 +143,16 @@
 	job_title="Principal Engineer at Helsing and Author of Rust for Rustaceans"
 	twitter="jonhoo"
 	link="/speakers/jon-gjengset"
+
+[[extra.moderators]]
+	name="Ciara"
+	image="ciara.jpg"
+	twitter="Ciara0x1F973"
+
+[[extra.moderators]]
+	name="Stefan Baumgartner"
+	image="stefan.jpg"
+	twitter="ddprrt"
 
 
 +++
