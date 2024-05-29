@@ -89,11 +89,12 @@
   display: flex;
   .bmw-and-mini-logo {
     display: flex;
+    align-items: start;
     .bmw-logo {
       width: 60px;
     }
     .mini-logo {
-      width: 70px;
+      width: 110px;
     }
   }
 }
