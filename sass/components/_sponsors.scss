@@ -1,91 +1,99 @@
 .sponsors {
-    display: grid;
-    gap: 30px;
-    align-items: center;
-    margin-bottom: 80px;
+  display: grid;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 80px;
 
-    .sponsors-grid-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      align-items: center;
-      margin: 0 10px;
-      row-gap: 20px;
+  .sponsors-grid-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 10px;
+    row-gap: 20px;
+  }
+
+  .sponsors-grid {
+    display: flex;
+    width: auto;
+    justify-content: center;
+    flex-flow: row wrap;
+    justify-self: center;
+    align-items: center;
+    background-color: var(--transparent-white);
+    border-radius: 10px;
+    padding: 20px 18px;
+
+    --max-width-premier-partners: 270px;
+    --head-partner-size-ratio: 1.2;
+    --partner-size-ratio: 1.6;
+    --supporter-size-ratio: 1;
+
+    --max-width-head-partners: calc(
+      var(--max-width-premier-partners) / var(--head-partner-size-ratio)
+    );
+
+    --max-width-partners: calc(
+      var(--max-width-head-partners) / var(--partner-size-ratio)
+    );
+
+    --max-width-supporters: calc(
+      var(--max-width-partners) / var(--supporter-size-ratio)
+    );
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
-    .sponsors-grid {
-      display: flex;
-      width: auto;
-      justify-content: center;
-      flex-flow: row wrap;
-      justify-self: center;
-      align-items: center;
-      background-color: var(--transparent-white);
-      border-radius: 10px;
-      padding: 20px 18px;
-
-
-      --max-width-premier-partners: 270px;
-      --head-partner-size-ratio: 1.20;
-      --partner-size-ratio: 1.6;
-      --supporter-size-ratio: 1;
-
-
-
-      --max-width-head-partners: calc(
-        var(--max-width-premier-partners) / var(--head-partner-size-ratio)
-      );
-
-      --max-width-partners: calc(
-        var(--max-width-head-partners) / var(--partner-size-ratio)
-      );
-
-      --max-width-supporters: calc(
-        var(--max-width-partners) / var(--supporter-size-ratio)
-      );
+    &.premier-partners {
+      gap: 39px;
 
       img {
-        width: 100%;
-        height: auto;
-        display: block;
+        max-width: var(--max-width-premier-partners);
       }
+    }
 
+    &.head-partners {
+      gap: 30px;
 
-
-      &.premier-partners {
-        gap: 39px;
-
-        img {
-          max-width: var(--max-width-premier-partners);
-        }
+      img {
+        max-width: var(--max-width-head-partners);
+        max-height: 75px;
       }
+    }
 
-      &.head-partners {
-        gap: 30px;
+    &.partners {
+      gap: 30px;
+      justify-content: center;
 
-        img {
-          max-width: var(--max-width-head-partners);
-          max-height: 75px;
-        }
+      img {
+        max-width: var(--max-width-partners);
       }
+    }
 
-      &.partners {
-        gap: 30px;
-        justify-content: center;
+    &.supporters {
+      gap: 30px;
+      justify-content: center;
 
-        img {
-          max-width: var(--max-width-partners);
-        }
-      }
-
-      &.supporters {
-        gap: 30px;
-        justify-content: center;
-
-        img {
-          max-width: var(--max-width-supporters);
-          max-height: 80px;
-        }
+      img {
+        max-width: var(--max-width-supporters);
+        max-height: 80px;
       }
     }
   }
+}
+
+.bmw-logos {
+  display: flex;
+  .bmw-and-mini-logo {
+    display: flex;
+    .bmw-logo {
+      width: 60px;
+    }
+    .mini-logo {
+      width: 70px;
+    }
+  }
+}
