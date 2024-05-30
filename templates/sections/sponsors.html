@@ -93,12 +93,33 @@
         </h5>
         <div class="sponsors-grid partners">
           {% for partner in section.extra.sponsors.partners %}
+          {% if partner.title == 'BMW Car IT' %}
+          <a href="{{ partner.link }}" alt="{{ partner.title }}">
+            <div class="bmw-logos">
+              <img
+              class="{{ partner.title | lower | replace(from=' ', to='_') }}"
+              alt="{{ partner.title }} logo"
+              src="{{ partner.image }}" />
+              <div class="bmw-and-mini-logo">
+                <img
+                class="bmw-logo"
+                alt="bmw logo"
+                src="/images/sponsors/current_sponsors/bmw.svg" />
+                <img
+                class="mini-logo"
+                alt="mini logo"
+                src="/images/sponsors/current_sponsors/mini.svg" />
+              </div>
+            </div>
+          </a>
+          {% else %}
             <a href="{{ partner.link }}" alt="{{ partner.title }}">
               <img
                 class="{{ partner.title | lower | replace(from=' ', to='_') }}"
                 alt="{{ partner.title }} logo"
                 src="{{ partner.image }}" />
             </a>
+          {% endif %}
           {% endfor %}
         </div>
       </div>

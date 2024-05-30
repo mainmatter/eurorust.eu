@@ -118,6 +118,11 @@
 	link="https://astral.sh/?utm_source=eurorust"
 	image="/images/sponsors/current_sponsors/astral.svg"
 
+[[extra.sponsors.partners]]
+	title="BMW Car IT"
+	link="https://www.bmw-carit.de/en.html"
+	image="/images/sponsors/current_sponsors/bmw_car_it.svg"
+
 [[extra.sponsors.head_partners]]
 	title="Sentry"
 	link="https://sentry.io/?utm_source=eurorust"
