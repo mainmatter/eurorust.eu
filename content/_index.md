@@ -159,5 +159,12 @@
 	image="stefan.jpg"
 	twitter="ddprrt"
 
+[[extra.speakers]]
+	name="Scott Chacon"
+	image="scott.jpg"
+	job_title="Co-Founder and CEO of GitButler"
+	twitter="chacon"
+	web="https://github.com/schacon"
+	link="/speakers/scott-chacon"
 
 +++
