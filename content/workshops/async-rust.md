@@ -45,6 +45,26 @@ template = "workshop.html"
     </li>
   </ol>
   <p class="p-4">
-  *Attendees should be familiar with basic Rust constructs. No prior experience with Diesel is required nor assumed. Attendees should bring their own laptop, with Rust and their favourite IDE installed.
+  Equipment
+  <ol>A working laptop:
+  <li>Running a modern OS (with Tier 1 or Tier 2 "with Host Tools" support for rustc)</li>
+  <li>Windows 10+</li>
+  <li>Linux 3.2+ (preferably 5.0+)</li>
+  <li>macOS 10.12+ (preferably 12.0+)</li>
+  <li>With an up-to-date rust toolchain (Either use rustup or ensure you have the latest stable compiler)</li>
+  <p>Before coming to the session, clone the tokio repository and try run the examples. (https://github.com/tokio-rs/tokio/blob/master/examples/echo.rs)</p>
+  </ol>
+  Knowledge
+  <ol>Attendees should already be comfortable using Rust.
+  <li>Must be comfortable with rust memory management and the borrow checker.</li>
+  <li>Must be comfortable with traits.</li>
+  <li>Good to know some knowledge of Sync concepts.</li>
+  <li>Good to be comfortable with writing some async Rust.</li>
+  </ol>
+  <ol>Attendees do not need to be experts of Rust
+  <li>Do not need to be comfortable using unsafe or the Rust memory models.</li>
+  <li>Do not need to understand how the synchronisation primitives (Mutex, Channel) are implemented.</li>
+  <li>Do not need to know how to use async kernel APIs like epoll or kqueue.</li>
+  </ol>
 </p>
 </div>
