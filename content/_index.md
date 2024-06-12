@@ -123,6 +123,11 @@
 	link="https://www.bmw-carit.de/en.html"
 	image="/images/sponsors/current_sponsors/bmw_car_it.svg"
 
+[[extra.sponsors.partners]]
+	title="WyeWorks LLC"
+	link="https://www.wyeworks.com/"
+	image="/images/sponsors/current_sponsors/wyeworks.png"
+
 [[extra.sponsors.head_partners]]
 	title="Sentry"
 	link="https://sentry.io/?utm_source=eurorust"
