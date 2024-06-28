@@ -34,7 +34,7 @@
           {% endfor %}
         </div>
       </div>
-    {% endif %}   
+    {% endif %}
     {% if section.extra.sponsors.closing_party_partners %}
       <div class="mb-4">
         <h5 class="center mb-2">
@@ -100,16 +100,14 @@
               class="{{ partner.title | lower | replace(from=' ', to='_') }}"
               alt="{{ partner.title }} logo"
               src="{{ partner.image }}" />
-              <div class="bmw-and-mini-logo">
-                <img
-                class="bmw-logo"
-                alt="bmw logo"
-                src="/images/sponsors/current_sponsors/bmw.svg" />
-                <img
-                class="mini-logo"
-                alt="mini logo"
-                src="/images/sponsors/current_sponsors/mini.svg" />
-              </div>
+              <img
+              class="bmw-logo"
+              alt="bmw logo"
+              src="/images/sponsors/current_sponsors/bmw.svg" />
+              <img
+              class="mini-logo"
+              alt="mini logo"
+              src="/images/sponsors/current_sponsors/mini.svg" />
             </div>
           </a>
           {% else %}

@@ -24,7 +24,7 @@
     border-radius: 10px;
     padding: 20px 18px;
 
-    --max-width-premier-partners: 270px;
+    --max-width-premier-partners: 25rem;
     --head-partner-size-ratio: 1.2;
     --partner-size-ratio: 1.6;
     --supporter-size-ratio: 1;
@@ -45,56 +45,56 @@
       width: 100%;
       height: auto;
       display: block;
+      max-width: var(--max-width)
     }
 
     &.premier-partners {
       gap: 39px;
-
-      img {
-        max-width: var(--max-width-premier-partners);
-      }
+      --max-width: var(--max-width-premier-partners);
     }
 
     &.head-partners {
       gap: 30px;
-
-      img {
-        max-width: var(--max-width-head-partners);
-        max-height: 75px;
-      }
+      --max-width: max-width: var(--max-width-head-partners);
+      max-height: 8rem;
     }
 
     &.partners {
       gap: 30px;
       justify-content: center;
-
-      img {
-        max-width: var(--max-width-partners);
-      }
+      --max-width: var(--max-width-partners);
     }
 
     &.supporters {
       gap: 30px;
       justify-content: center;
-
-      img {
-        max-width: var(--max-width-supporters);
-        max-height: 80px;
-      }
+      --max-width:  var(--max-width-supporters);
+      max-height: 5rem;
     }
   }
 }
 
 .bmw-logos {
   display: flex;
-  .bmw-and-mini-logo {
-    display: flex;
-    align-items: start;
-    .bmw-logo {
-      width: 60px;
-    }
-    .mini-logo {
-      width: 110px;
-    }
+  align-items: flex-start;
+  max-width: 100%;
+  max-width: var(--max-width);
+
+  & > * {
+    display: block;
+    flex: 1 1 var(--max-width);
+    min-width: 0;
+  }
+
+  .bmw_car_it {
+    flex: 1 1 auto;
+  }
+
+  .bmw-logo {
+    --max-width: 3.75rem;
+  }
+
+  .mini-logo {
+    --max-width: 6.875rem;
   }
 }
