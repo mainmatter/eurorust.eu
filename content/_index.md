@@ -124,6 +124,11 @@
 	image="/images/sponsors/current_sponsors/bmw_car_it.svg"
 
 [[extra.sponsors.partners]]
+	title="Veecle GmbH"
+	link="https://veecle.io"
+	image="/images/sponsors/current_sponsors/veecle.png"
+
+[[extra.sponsors.partners]]
 	title="WyeWorks LLC"
 	link="https://www.wyeworks.com/"
 	image="/images/sponsors/current_sponsors/wyeworks.png"
