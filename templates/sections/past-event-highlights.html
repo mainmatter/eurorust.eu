@@ -1,7 +1,13 @@
-<section class="past-event-highlights">
-	<h4>EURORUST 2022 HIGHLIGHTS</h4>
-	<video preload="none" controls poster="/images/highlights-poster.webp">
-		<source src="/videos/eurorust-2022.webm" type="video/webm">
-		<source src="/videos/eurorust-2022.mp4" type="video/mp4">
-	</video>
+{% block head %}
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lite-youtube-embed/0.3.2/lite-yt-embed.min.js" integrity="sha512-h9EJXfmlmVdpFZ29kqabqCKeTizzs6ZPILjcJnGptrcYy6WUgMovQRca2KQE93Yp3MDRZoHr2L8GzKkOjQ57eg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lite-youtube-embed/0.3.2/lite-yt-embed.min.css" integrity="sha512-jGFXuWMxJUKzdfBmoyqCXz9k2AU3Z/ZNoayoUPEBAtJZjHbTbw50AxTR1ICVPQJbSamH9ny1JwOur0x4WOdcWQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+{% endblock head %}
+
+<section class="past-event-highlights container pb-10">
+	<h2 class="mb-4">Eurorust 2023 Highlights</h2>
+	<lite-youtube videoid="qeWBH4lkNDI" style="background-image: url('https://i.ytimg.com/vi/qeWBH4lkNDI/hqdefault.jpg');">
+    <a href="https://youtube.com/watch?v=qeWBH4lkNDI" class="lty-playbtn" title="Play Video">
+      <span class="lyt-visually-hidden">Play Video: Keynote (Google I/O '18)</span>
+    </a>
+  </lite-youtube>
 </section>
