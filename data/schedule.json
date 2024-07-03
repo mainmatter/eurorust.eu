@@ -1,7 +1,7 @@
 [{
 	"day": "1",
-	"date":"October, 12 - Thursday",
-	"talks": [
+	"date":"Oct. 10th, Thursday",
+	"mainStage": [
 		{
 			"time":"9:00 - 10:00",
 			"title":"Doors open & Breakfast",
@@ -9,20 +9,20 @@
 		},
 		{
 			"time": "10:00 - 10:30",
-			"speakers": ["niko-matsakis"],
-			"title": "When the details matter",
-			"description": "<p>In the 8 years since Rust went 1.0, it has spread from a curiosity to a foundational technology used everywhere from kernels to spacecraft to cloud data centers. What is it that has made Rust successful, and what are the next big challenges for us to overcome? As Rust (and its community) grows, how do we stay true to our mission of empowering people to build everyone to build reliable and efficient software? </p>"
+			"speakers": ["jon-gjengset"],
+			"title": "TBA",
+			"description": ""
 		},
 		{
 			"time": "10:45 - 11:15",
-			"speakers": ["arpad-borsos"],
-			"title": "<code>async fn</code> from Editor to Executable",
+			"speakers": ["predrag-gruevski"],
+			"title": "Build bigger in less time: code testing beyond the basics",
 			"description": "<p>An <code>async fn</code> that you write goes through different compiler stages, from Editor -> AST -> HIR -> MIR -> Executable. This process is complex and changing all the time. My contribution to this was removing the <code>GenFuture</code> type, which used to be an implementation detail of async Rust. I will give a deep dive into what this was, why it had to go, and the struggles from a contributor perspective in making it go away. A journey through different workarounds that existed temporarily, and are still existing today.</p><p>Apart from this, I will also highlight some very common problems that developers may run into when developing async Rust. Why the difference between <code>async fn</code> and <code>fn -> impl Future</code> matters a lot. Why the <code>mem::size_of</code> of Futures is currently a great concern, how to work around that, as well as an outlook on the Future (pun intended) when the compiler will improve and make manual workarounds unnecessary.</p>"
 		},
 		{
 			"time": "11:30 - 12:00",
-			"speakers": ["stefan-baumgartner"],
-			"title": "Designing for Ownership",
+			"speakers": ["sam-van-overmeire"],
+			"title": "A gentle introduction to procedural macros",
 			"description":"<p>Sometimes it’s nice to channel our inner Monica Geller and keep everything neat in our codebase. It’s zen coding when you do some spring cleaning, and it’s good for your team when things are clear and expressive. So you brush up on your tests (or maybe you don’t) and start with some recreational refactoring in Rust.</p><p>But suddenly, all your textbook refactoring techniques fail! You move code around, extract methods or change coupling, and the borrow checker tells you that everything you want to access has already been used somewhere else. Sorry, Mario, but the Princess is in another castle!</p><p>In this talk, we will see how we can refactor with ownership in mind. We will learn more about the differences as well as commonalities of pointer types, we will look at how references work when being used in a struct, and we will evaluate what techniques work best. Throughout, we will critically assess whether these changes are worthwhile or if cheating our way around with shortcuts is a better approach.</p>"
 		},
 		{
@@ -32,20 +32,20 @@
 		},
 		{
 			"time": "13:30 - 14:00",
-			"speakers": ["lisa-passing"],
-			"title": "alt.ctrl games w/ Rust",
+			"speakers": ["attila-haraszti"],
+			"title": "Practical Rust for Web Audio",
 			"description": "<p>What if I told you there is a magical place where you can play videogames not just with a mouse+keyboard or gamepad but with, well, anything? Welcome to the alt.ctrl scene where anything can be used to control a videogame!</p><p>And what if I told you there is a magical programming language that supports you and your alt.ctrl game from hardware to GUI? Well, you're at a Rust conference so maybe you've guessed it.</p><p>In this talk we'll take a look at the many shapes of alt.ctrl games and how Rust is the perfect fit for creating them.</p>"
 		},
 		{
 			"time": "14:15 - 14:45",
-			"speakers": ["liv"],
-			"title": "Lessons Learned from Teaching Rust",
+			"speakers": ["francois-mockers"],
+			"title": "Augmented docs: a love letter to rustdoc and docs.rs",
 			"description": "<p>Rust is a language that’s usually described as hard to learn, so let’s shine some light on how people do learn it! I’ve been maintaining Rust learning materials for about 5 years, and through shepherding hundreds of community contributions, I’ve gleaned some interesting things about how people approach learning this language, which parts they find difficult, and what we as teachers (be it through learning materials, documentation or otherwise) can do better. Join me in this journey through a less-talked about facet of the project!</p>"
 		},
 		{
 			"time": "15:00 - 15:30",
-			"speakers": ["nikolai-vazquez"],
-			"title": "Publishing High-Quality Crates",
+			"speakers": ["arthur-pastel"],
+			"title": "The Impact of Memory Allocators on Performance: A Deep Dive",
 			"description":"<p>Cargo makes it easy to publish a crate, but there’s a lot of work to be done between <code>cargo new and cargo publish</code>. This talk will cover the many ways to take a crate from good to great.</p>"
 		},
 		{
@@ -55,51 +55,46 @@
 		},
 		{
 			"time": "16:00 - 16:30",
-			"speakers": ["aleksandr-petrosyan"],
-			"title": "Reinforcement learning as a testing methodology",
+			"speakers": ["victor-ciura"],
+			"title": "Unleashing 🦀 The Ferris Within",
 			"description": "<p>Apply machine learning to help foresee, find and fix heisenbugs. More realistic than Fuzz testing, more comprehensive than property based testing, reinforcement learning can find more bugs than you thought possible.</p>"
 		},
 		{
 			"time": "16:45 - 17:15",
-			"speakers": ["d0nut"],
-			"title": "Rust, but Verify - Compile-Time Authorization",
+			"speakers": ["niklas-korz"],
+			"title": "Runtime Scripting for Rust Applications",
 			"description":"<p>Authorization is the number one security risk in the OWASP Top 10. But does it have to be? In this talk we’ll explore application security, unstable rust, and typestates to address one of the most prevalent vulnerability classes in modern software.</p>"
 		},
 		{
 			"time": "17:30 - 18:00",
-			"title": "Panel: Inside Rust",
-			"isPanel": true,
-			"speakers": ["mara-bos", "niko-matsakis", "jonathan-pallant"],
+			"title": "TBA",
+			"speakers": ["aida-getoeva"],
 			"description":"<p>We talk to people that are actively involved with building Rust about their work. What are the inner workings of the project? What's coming in the 2024 edition? <a href=\"/speakers/luca-palmieri/\">Luca Palmieri</a> will talk about those and other questions with our panelists.</p>"
 		}
-	]
-},
-{
-	"day": "2",
-	"date": "October, 13 - Friday",
-	"talks": [
+	],
+  "side": [
 		{
-			"time": "9:00 - 10:00",
-			"title": "Doors Open & Breakfast",
+			"time":"9:00 - 10:00",
+			"title":"Doors open & Breakfast",
 			"isBreak": true
 		},
 		{
 			"time": "10:00 - 10:30",
-			"speakers": ["ashley-williams"],
-			"title": "It's all in the delivery",
-			"description": "<p>There's a famous saying that goes \"It's not what you say, but how you say it\" that you'll often hear from someone who is likely about to offer you some constructive criticism on your communication. In this talk, I'll be offering you the same commentary, but on a form of communication that may be totally off of your radar: software distribution, \"It's not the software you write, but how you deliver it.\"</p><p>Rust is well-known for its notoriously steep learning curve, but Rust's release and distribution strategies have eliminated whole portions of the \"new language\" learning process, a boon that we all implicitly enjoy but rarely note or reflect on. In this talk, I'll explore the history of Rust delivery and all the lessons it learned from projects that came before it. We'll talk about the current process and the effect it has on learning materials, the tooling ecosystem, and end-user adoption and provide concrete tips on how you can implement these strategies in your own projects and tools. We'll also explore future growth opportunities for both Rust and the ecosystem and how to get involved in these efforts. By the end of this talk, you'll have a greater appreciation for Rust and its infrastructure, and also have concrete ideas for how you can improve the developer experience of your own projects by focusing, not on your software itself, but on how you deliver it.</p>"
+			"speakers": [],
+			"title": "TBA",
+			"description": ""
 		},
 		{
 			"time": "10:45 - 11:15",
-			"speakers": ["arthur-cohen"],
-			"title": "The road to compiling the standard library with gccrs",
-			"description": "<p>gccrs is an alternative compiler implementation of the Rust Programming Language, which aims at adding support for the language to the GNU Compiler Collection, GCC. For now, the project targets Rust version 1.49, and plans to catch up once that milestone is reached.</p><p>But what does “targeting a Rust version” mean? Our goal is for gccrs to eventually become an authentic Rust compiler, which passes the rustc testsuite and contains the same behavior, same bugs, and same language guarantees. But passing a testsuite is only half of the story, and the compiler needs to be useful for Rust users. This means compiling user crates and projects, which most often depend on one of the most complex pieces of Rust code available: the Rust standard library.</p><p>The standard library provides functions, types and traits that Rust programmers interface with on a daily basis. Think Option, Result, println!(), assert!(), unwrap(), clone()… It is made of multiple crates, of which the most crucial are core and alloc: core contains code usable even in the most restricted embedded contexts, while alloc offers types and abstractions relying on dynamic memory: Vec, Box, String… Some of these abstractions are implemented within the compiler (complex macros such as asm!(), some architecture-specific functions…), but most are written directly in Rust.</p><p>They are often made of very complex code, utilizing Rust’s powerful type system and macro expansion to avoid boilerplate and ensure soundness - but this weighs heavily on the compiler, which needs to understand and implement these constructs properly to handle this code!</p><p>This talk will dive into some of the work that was necessary for gccrs to understand and compile Rust’s 1.49 standard library: All of the interesting features, horrible hacks and lawless restrictions we have had to put in the compiler: All of the hurdles, horrors and hoops we’ve had to jump through, and all of the ugly code we’ve had to write!</p><p>We will focus this talk on the Rust side of things, and take a look at what is necessary for supporting some of the more complex parts of the standard library. We will dive into the rustc 1.49 implementation of the compiler, and compare it to gccrs, highlighting our shortcomings and the evolution of both compilers. You will learn a lot about the language, and discover just how complex the implementation of simple Rust types really is.</p>"
+			"speakers": [],
+			"title": "TBA",
+			"description": ""
 		},
 		{
 			"time": "11:30 - 12:00",
-			"speakers": ["alberto-schiabel"],
-			"title": "Underrated gems of Rust & WebAssembly: Errors, Async, I/O",
-			"description":"<p>WebAssembly has revolutionised cross-platform development, enabling developers to compile their code just once, regardless of the runtime operating system or CPU architecture. While Rust boasts the best language support for WebAssembly through the <a href=\"https://github.com/rustwasm/wasm-bindgen\">wasm-bindgen</a> tool, developers often encounter unexpected challenges and differences in execution models. Similarly to <code>no_std</code>, not every Rust code can be compiled to Wasm out of the box.</p><p>For example, in a Rust library compiled to Wasm, panics cannot be unwinded (and their stacktrace location is lost), and <code>async</code> functions <em>à la</em> <a href=\"https://github.com/tokio-rs/tokio\">tokio</a> cannot be <code>await</code>ed. Moreover, no I/O operation can be performed in WebAssembly: that means no network connections nor file handles can be opened. The <a href=\"https://wasi.dev\">WASI</a> specification partially overcomes this limitation, but that’s still unstable and doesn’t cover network sockets.</p><p>What if you wanted to write a production async Rust library that needs both robust error handling and I/O, and you needed to run it in JavaScript runtimes like Node.js?</p><p>In this talk, we will explore uncharted territories in Wasm land, where you’ll learn how to confidently integrate your familiar Rust patterns with powerful - but fragile - WebAssembly runtimes. As a motivating example, we will present a database query engine prototype written in Rust+Wasm that accepts a JSON query, parses it into an equivalent SQL query, runs such query asynchronously and returns the results to the caller.</p><p>Just like pirates in a sea of compilation errors, we will bend the rules to conquer new horizons in the realm of truly cross-platform Rust libraries!</p>"
+			"speakers": [],
+			"title": "TBA",
+			"description":""
 		},
 		{
 			"time": "12:00 - 13:30",
@@ -108,21 +103,21 @@
 		},
 		{
 			"time": "13:30 - 14:00",
-			"speakers": ["luca-palmieri"],
-			"title": "Reasoning about Rust: an introduction to Rustdoc's JSON format",
-			"description": "<p>Macros are the primary mechanism for metaprogramming in Rust, either to perform code generation or enforce constraints at compile-time that are not easily captured by the type system (e.g. sqlx).</p><p>Macros are also limited: their input is a stream of tokens, with no type-level information.</p><p>Up until last year, you had to hook directly into the compiler internals to get a more featureful representation. This is no longer the case, thanks to Rustdoc's JSON format: an information-rich representation of your Rust API in a machine-parsable format (with a versioned schema!).</p><p>We will introduce the feature, look at the structure of the data and cover a few of the usecases where it shines. You will leave the talk with a basic understanding of the format and ideas on how you could leverage it to build tools that enhance your own Rust workflows.</p>"
+			"speakers": ["sasha-pourcelot"],
+			"title": "Proving macro expansion with expandable",
+			"description": ""
 		},
 		{
 			"time": "14:15 - 14:45",
-			"speakers": ["max-ammann"],
-			"title": "World in Vectors - Map rendering using WebGPU and WASM",
-			"description":"<p>Digital maps are ubiquitous tools in our everyday life. In the early 90s the idea of browsing the whole world and visiting any place was breathtaking. The first solution to this problem is called “TerraVision” and was groundbreaking. Today the idea of exploring your surroundings using digital maps has become normal.</p><h5>What is the talk about?</h5><p>But how do these maps work? In this talk I want to provide an overview of the foundations of digital mapping solutions. Differences between maps which use vector data and rasterized satellite imaginary will be outlined. These discussions will be accompanied by discussions about the Rust ecosystem and how it enables cross-platform rendering of geographic data on the GPU. A new and open-source map renderer will be presented, which is created using Rust and modern web technologies like WebAssembly and WebGPU.</p><p>I want to dive into the technical details of the WebGPU specification and how it was implemented by the known wgpu project. I will also present the state of GPU support in Rust in general.</p><p>Furthermore, I want to prove a good understanding of the WASM technology and why it is so interesting in the context of Rust and computer graphics.</p><h5>How did this project came into existence?</h5><p>Last year I had a lot of spare time and decided to kickstart a project which combines different areas of interest: Rust, 3D Rendering, Maps. The result is a cross-platform map renderer, nowadays officially supported by the MapLibre organization. The project showed me the complexity of mapping solutions. It takes a lot of steps until edits from OpenStreetMap contributors are finally rendered in consumer applications. With this task I want to take listeners on a journey from drawing changes in the OpenStreetMap editor all the way until vectors are uploaded to from memory to GPUs.</p>"
+			"speakers": ["lukas-wirth"],
+			"title": "Powerful Macros, Good IDE Support, No Headaches. Choose Two. ",
+			"description": "<p>Rust is a language that’s usually described as hard to learn, so let’s shine some light on how people do learn it! I’ve been maintaining Rust learning materials for about 5 years, and through shepherding hundreds of community contributions, I’ve gleaned some interesting things about how people approach learning this language, which parts they find difficult, and what we as teachers (be it through learning materials, documentation or otherwise) can do better. Join me in this journey through a less-talked about facet of the project!</p>"
 		},
 		{
 			"time": "15:00 - 15:30",
-			"speakers": ["ayaz-hafiz"],
-			"title": "Wrangling memory leaks where you thought they could never happen",
-			"description":"<p>You’ve just launched your Rust app and everything seems perfect, until you notice your application’s memory usage skyrocketing. With Rust’s scoping rules and GC-less memory model, memory leaks seem impossible. So what’s going on? The OOM killer is lurking around the corner, and it’s time to take action.</p><p>While Rust’s powerful safety features and RAII enforcement mitigate common memory leak sources found in other languages, memory allocation challenges can still arise from subtle interactions between programming patterns and an underlying memory allocator. Join us in uncovering patterns that can lead to heap fragmentation and memory leaks, and idiomatic techniques for mitigating these issues in your Rust applications. We’ll learn to evaluate different memory allocators and learn how to harness powerful profiling tools to understand and optimize your Rust apps, from simple command-line tools to high-performance async web servers.</p>"
+			"speakers": ["bjorn-wieczoreck"],
+			"title": "Generating ergonomic C++ APIs using Rustdoc, procedural macros, and Serde",
+			"description":"<p>Cargo makes it easy to publish a crate, but there’s a lot of work to be done between <code>cargo new and cargo publish</code>. This talk will cover the many ways to take a crate from good to great.</p>"
 		},
 		{
 			"time": "15:30 - 16:00",
@@ -131,26 +126,167 @@
 		},
 		{
 			"time": "16:00 - 16:30",
-			"speakers": ["jonathan-pallant"],
-			"title": "The Neotron Saga - throwing your project in the bin and starting again",
-			"description":"<p>Back in 2019 I had an fun embedded project, and it worked quite well. I even got a couple of talks out of it. But it was built as a series of tech demos, one feature piled on top of another. There were no sound software engineering principles behind it. And so I thought, now is the time to start over and Do It Right this time.</p><p>Jump forward four years, two job changes, one global pandemic and one new CPU, and here we are. I now have a one dead project and one gargantuan monster of a project I can never realistically complete or even keep control of. And the latter still isn’t as fully featured as the former even after so much effort. But it’s probably… better?</p><p>Here is a a tale of caution should you ever be tempted to do a “big bang” reboot. But it also has some discussion on Rust FFI, a bit of electronics design, some computer history and maybe a neat Embedded Rust demo.</p><p>This talk is laid out chronologically, starting an outline of my previous project with its conference runs in 2018/2019. I talk about the new project, and why I felt the need to start from scratch. I talk about its inspiration, looking at milestones in computer history. I talk about the big changes during the project (the RP2040 microcontroller came out, we had a pandemic, I changed jobs twice, I got some grant money, Twitter did the whole waves hands) and talk about where the new project is at right now. There are no hard and fast answers to “Should I start again on my project?” but we’ll hopefully finish with some neat demos of Rust running on embedded hardware paid for by the Rust Foundation.</p>"
+			"speakers": [],
+			"title": "TBA",
+			"description": "<p>Apply machine learning to help foresee, find and fix heisenbugs. More realistic than Fuzz testing, more comprehensive than property based testing, reinforcement learning can find more bugs than you thought possible.</p>"
 		},
 		{
 			"time": "16:45 - 17:15",
-			"speakers": ["armin-ronacher"],
-			"title": "Rust at Sentry: 7 Years Later",
-			"description": "<p>After 7 years of Rust at Sentry it's time to revisit our decisions. What would we do different? What worked well? How do you onboard engineers into a language that is not known for being easy to get started? How do you end up more productive? This talk also incorporates experience with some of the libraries and ecosystems we use.</p>"
+			"speakers": [],
+			"title": "TBA",
+			"description":"<p>Authorization is the number one security risk in the OWASP Top 10. But does it have to be? In this talk we’ll explore application security, unstable rust, and typestates to address one of the most prevalent vulnerability classes in modern software.</p>"
 		},
 		{
 			"time": "17:30 - 18:00",
-			"speakers": ["florian-gilcher"],
-			"title": "Communities, Organisations, Relationships, Conflict and Hope",
-			"description": "<p>The Rust environment has seen a lot of growth in all areas. It lead to visible friction and public conflict that may be hard to understand for people, particularly those that are new to Rust.</p><p>That begs a number of questions: Is this normal? Is this special to Rust? Just growth pain? Or something deeper? And whatever the answers are - to which level should individual community members care?</p><p>This talk sums up many discussions of worry and hope I had over the last months. It acts a both a summary of the past, but above all make you more competent for the conversations about the future of Rust that are ahead of us.</p>"
+			"title": "TBA",
+			"speakers": [],
+			"description":"<p>We talk to people that are actively involved with building Rust about their work. What are the inner workings of the project? What's coming in the 2024 edition? <a href=\"/speakers/luca-palmieri/\">Luca Palmieri</a> will talk about those and other questions with our panelists.</p>"
+		}
+	]
+},
+{
+	"day": "2",
+	"date": "Oct. 11th, Friday",
+  "mainStage": [
+		{
+			"time":"9:00 - 10:00",
+			"title":"Doors open & Breakfast",
+			"isBreak": true
 		},
 		{
-			"time": "18:00 - 22:00",
-			"title": "Closing Party",
+			"time": "10:00 - 10:30",
+			"speakers": [],
+			"title": "",
+			"description": ""
+		},
+		{
+			"time": "10:45 - 11:15",
+			"speakers": ["boxy-uwu"],
+			"title": "Non-binary Rust: Between Safe and Unsafe",
+			"description": "<p>An <code>async fn</code> that you write goes through different compiler stages, from Editor -> AST -> HIR -> MIR -> Executable. This process is complex and changing all the time. My contribution to this was removing the <code>GenFuture</code> type, which used to be an implementation detail of async Rust. I will give a deep dive into what this was, why it had to go, and the struggles from a contributor perspective in making it go away. A journey through different workarounds that existed temporarily, and are still existing today.</p><p>Apart from this, I will also highlight some very common problems that developers may run into when developing async Rust. Why the difference between <code>async fn</code> and <code>fn -> impl Future</code> matters a lot. Why the <code>mem::size_of</code> of Futures is currently a great concern, how to work around that, as well as an outlook on the Future (pun intended) when the compiler will improve and make manual workarounds unnecessary.</p>"
+		},
+		{
+			"time": "11:30 - 12:00",
+			"speakers": ["jonathan-pallant"],
+			"title": "Writing a SD Card driver in Rust",
+			"description":"<p>Sometimes it’s nice to channel our inner Monica Geller and keep everything neat in our codebase. It’s zen coding when you do some spring cleaning, and it’s good for your team when things are clear and expressive. So you brush up on your tests (or maybe you don’t) and start with some recreational refactoring in Rust.</p><p>But suddenly, all your textbook refactoring techniques fail! You move code around, extract methods or change coupling, and the borrow checker tells you that everything you want to access has already been used somewhere else. Sorry, Mario, but the Princess is in another castle!</p><p>In this talk, we will see how we can refactor with ownership in mind. We will learn more about the differences as well as commonalities of pointer types, we will look at how references work when being used in a struct, and we will evaluate what techniques work best. Throughout, we will critically assess whether these changes are worthwhile or if cheating our way around with shortcuts is a better approach.</p>"
+		},
+		{
+			"time": "12:00 - 13:30",
+			"title": "Lunch",
 			"isBreak": true
+		},
+		{
+			"time": "13:30 - 14:00",
+			"speakers": ["david-peherstorfer"],
+			"title": "My Journey from WebDev to Medical Visualization Rustacea",
+			"description": "<p>What if I told you there is a magical place where you can play videogames not just with a mouse+keyboard or gamepad but with, well, anything? Welcome to the alt.ctrl scene where anything can be used to control a videogame!</p><p>And what if I told you there is a magical programming language that supports you and your alt.ctrl game from hardware to GUI? Well, you're at a Rust conference so maybe you've guessed it.</p><p>In this talk we'll take a look at the many shapes of alt.ctrl games and how Rust is the perfect fit for creating them.</p>"
+		},
+		{
+			"time": "14:15 - 14:45",
+			"speakers": ["orhun-parmaksiz"],
+			"title": "Renaissance of Terminal User Interfaces with Rust",
+			"description": "<p>Rust is a language that’s usually described as hard to learn, so let’s shine some light on how people do learn it! I’ve been maintaining Rust learning materials for about 5 years, and through shepherding hundreds of community contributions, I’ve gleaned some interesting things about how people approach learning this language, which parts they find difficult, and what we as teachers (be it through learning materials, documentation or otherwise) can do better. Join me in this journey through a less-talked about facet of the project!</p>"
+		},
+		{
+			"time": "15:00 - 15:30",
+			"speakers": ["adam-chalmers"],
+			"title": "Code to contract to code: making ironclad APIs",
+			"description":"<p>Cargo makes it easy to publish a crate, but there’s a lot of work to be done between <code>cargo new and cargo publish</code>. This talk will cover the many ways to take a crate from good to great.</p>"
+		},
+		{
+			"time": "15:30 - 16:00",
+			"title": "Snack Break",
+			"isBreak": true
+		},
+		{
+			"time": "16:00 - 16:30",
+			"speakers": ["scott-chacon"],
+			"title": "TBA",
+			"description": "<p>Apply machine learning to help foresee, find and fix heisenbugs. More realistic than Fuzz testing, more comprehensive than property based testing, reinforcement learning can find more bugs than you thought possible.</p>"
+		},
+		{
+			"time": "16:45 - 17:15",
+			"speakers": ["samuel-moelius"],
+			"title": "Linting with Dylint",
+			"description":"<p>Authorization is the number one security risk in the OWASP Top 10. But does it have to be? In this talk we’ll explore application security, unstable rust, and typestates to address one of the most prevalent vulnerability classes in modern software.</p>"
+		},
+		{
+			"time": "17:30 - 18:00",
+			"title": "TBA",
+			"speakers": ["charlie-marsh"],
+			"description":"<p>We talk to people that are actively involved with building Rust about their work. What are the inner workings of the project? What's coming in the 2024 edition? <a href=\"/speakers/luca-palmieri/\">Luca Palmieri</a> will talk about those and other questions with our panelists.</p>"
+		}
+	],
+  "side": [
+		{
+			"time":"9:00 - 10:00",
+			"title":"Doors open & Breakfast",
+			"isBreak": true
+		},
+		{
+			"time": "10:00 - 10:30",
+			"speakers": [],
+			"title": "TBA",
+			"description": ""
+		},
+		{
+			"time": "10:45 - 11:15",
+			"speakers": [],
+			"title": "TBA",
+			"description": ""
+		},
+		{
+			"time": "11:30 - 12:00",
+			"speakers": [],
+			"title": "TBA",
+			"description":""
+		},
+		{
+			"time": "12:00 - 13:30",
+			"title": "Lunch",
+			"isBreak": true
+		},
+		{
+			"time": "13:30 - 14:00",
+			"speakers": ["vitaly-bragilevsky"],
+			"title": "I/O in Rust: the whole story",
+			"description": ""
+		},
+		{
+			"time": "14:15 - 14:45",
+			"speakers": ["nikita-lapkov"],
+			"title": "Fast and efficient network protocols in Rust",
+			"description": ""
+		},
+		{
+			"time": "15:00 - 15:30",
+			"speakers": ["matthias-heiden"],
+			"title": "Windows Kernel Programming with Rust ",
+			"description":"<p>Cargo makes it easy to publish a crate, but there’s a lot of work to be done between <code>cargo new and cargo publish</code>. This talk will cover the many ways to take a crate from good to great.</p>"
+		},
+		{
+			"time": "15:30 - 16:00",
+			"title": "Snack Break",
+			"isBreak": true
+		},
+		{
+			"time": "16:00 - 16:30",
+			"speakers": [],
+			"title": "TBA",
+			"description": "<p>Apply machine learning to help foresee, find and fix heisenbugs. More realistic than Fuzz testing, more comprehensive than property based testing, reinforcement learning can find more bugs than you thought possible.</p>"
+		},
+		{
+			"time": "16:45 - 17:15",
+			"speakers": [],
+			"title": "TBA",
+			"description":"<p>Authorization is the number one security risk in the OWASP Top 10. But does it have to be? In this talk we’ll explore application security, unstable rust, and typestates to address one of the most prevalent vulnerability classes in modern software.</p>"
+		},
+		{
+			"time": "17:30 - 18:00",
+			"title": "TBA",
+			"speakers": [],
+			"description":"<p>We talk to people that are actively involved with building Rust about their work. What are the inner workings of the project? What's coming in the 2024 edition? <a href=\"/speakers/luca-palmieri/\">Luca Palmieri</a> will talk about those and other questions with our panelists.</p>"
 		}
 	]
 }]
