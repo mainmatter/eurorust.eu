@@ -22,7 +22,7 @@
 
     {% include "sections/nav.html" %}
 
-    <main class="mt-5 mb-10">
+    <main tabindex="-1" id="main" class="mt-5 mb-10">
       <section class="speaker-details container py-5">
         <div class="title">
           <div class="photo-container">
@@ -43,9 +43,9 @@
         </div>
         <div>
           <div class="speaker-info">
-            <h3>{{page.extra.name}}</h3>
+            <h1 class="h3">{{page.extra.name}}</h1>
             {%if page.extra.title %}
-              <h4>{{page.extra.title}}</h4>
+              <p class="h4">{{page.extra.title}}</p>
             {% endif %}
           </div>
           <div class="bio mt-3">

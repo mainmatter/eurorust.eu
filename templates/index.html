@@ -19,9 +19,10 @@
 
 {% block content %}
 
-  <main class="sections">
+{% include "sections/nav.html" %}
 
-    {% include "sections/nav.html" %}
+  <main tabindex="-1" id="main" class="sections">
+
 
     {% include "sections/hero.html" %}
 
