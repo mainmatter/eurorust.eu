@@ -28,7 +28,7 @@
           <div class="photo-container">
 
             <div class="photo-container-overlay"></div>
-            {%if page.extra.image %}
+            {%if page.extra.image and not page.extra.image is containing("/.")  %}
               <img
                 class="photo"
                 src="{{ page.extra.image }}"
@@ -36,38 +36,41 @@
             {% else %}
               <img
                 class="photo"
-                src="/images/speakers/placeholder.png">
+                src="/images/speakers/placeholder.png"
+                alt="">
             {% endif %}
           </div>
-          <div class="speaker-info mt-9">
+        </div>
+        <div>
+          <div class="speaker-info">
             <h3>{{page.extra.name}}</h3>
             {%if page.extra.title %}
               <h4>{{page.extra.title}}</h4>
             {% endif %}
           </div>
-        </div>
-        <div class="bio mt-3">
-          {{ page.content | safe }}
-        </div>
-        <div class="links mt-5">
-          <ul class="social mt-3">
-{%if page.extra.twitter %}
-            <li>
-              <a
-        href="https://twitter.com/{{ page.extra.twitter }}"
-        target="_blank"
-        rel="noopener noreferrer" class="btn__icon"><img src="/images/icons/twitter-footer-white.svg" alt="Twitter icon"/></a>
-            </li>
-            {% endif %}
-            {%if page.extra.url%}
-            <li>
-              <a
-        href="{{ page.extra.url }}"
-        target="_blank"
-        rel="noopener noreferrer" class="btn__icon"><img src="/images/icons/external-link-white.svg" alt="email icon"/></a>
-            </li>
-{% endif %}
-          </ul>
+          <div class="bio mt-3">
+            {{ page.content | safe }}
+          </div>
+          <div class="links mt-5">
+            <ul class="social mt-3">
+  {%if page.extra.twitter %}
+              <li>
+                <a
+          href="https://twitter.com/{{ page.extra.twitter }}"
+          target="_blank"
+          rel="noopener noreferrer" class="btn__icon"><img src="/images/icons/twitter-footer-white.svg" alt="Twitter icon"/></a>
+              </li>
+              {% endif %}
+              {%if page.extra.url%}
+              <li>
+                <a
+          href="{{ page.extra.url }}"
+          target="_blank"
+          rel="noopener noreferrer" class="btn__icon"><img src="/images/icons/external-link-white.svg" alt="email icon"/></a>
+              </li>
+  {% endif %}
+            </ul>
+          </div>
         </div>
       </section>
     </main>
