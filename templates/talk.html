@@ -33,19 +33,19 @@
         <div class="container">
           <div class="my-7">
             <p class="large">
-                October 9th 2024
+              {{ page.extra.date }} - {{ page.extra.time }}
             </p>
           </div>
 
           <div class="">
             <div class="wrapper-content">
-              <div class="h1 pb-7">
+              <h1 class="h1 pb-7">
                 {{ page.title | safe }}
-              </div>
-              {% if page.extra.abstract %}
-                <p class="pb-8 mw-70">
-                  {{ page.extra.abstract | safe }}
-                </p>
+              </h1>
+              {% if page.extra.description %}
+                <div class="pb-8 mw-70">
+                  {{ page.extra.description | safe }}
+                </div>
               {% endif %}
               <div class="btn__primary">
                 <tito-button event="events-matter/eurorust-2024" save-metadata-parameters="utm_*" class="btn__primary--link">Get your ticket</tito-button>
@@ -57,31 +57,31 @@
       </section>
       <section class="workshops workshop-details py-8 container">
 
-        <div class="workshop">
-          {{ page.content | safe }}
-        </div>
-
-        <div class="author-and-booking">
-          <div class="mentor__grid">
-            {% if page.extra.bio %}
+        {% for speaker in page.extra.speakers %}
+          {% set path = "speakers/" ~ speaker ~ ".md" %}
+          {% set speaker = get_page(path = path) %}
+          <div class="author-and-booking">
+            <div class="mentor__grid">
               <div class="mentor__wrapper-content">
-                <h5 class="mb-4">Mentor</h5>
-                <h2 class="mb-4">{{ page.extra.mentor }}</h2>
-                <p class="">{{ page.extra.bio | safe }}</p>
+                <p class="h5 mb-4">Speaker</p>
+                <h2 class="mb-4">{{ speaker.extra.name }}</h2>
+                {% if speaker.extra.bio %}
+                  <p class="">{{ speaker.extra.bio | safe }}</p>
+                {% endif %}
                 <div class="links mt-5">
                   <ul class="social mt-3">
-                    {%if page.extra.twitter %}
+                    {%if speaker.extra.twitter %}
                       <li>
                         <a
-        href="https://twitter.com/{{ page.extra.twitter }}"
+        href="https://twitter.com/{{ speaker.extra.twitter }}"
         target="_blank"
         rel="noopener noreferrer" class="btn__icon"><img src="/images/icons/twitter-footer-white.svg" alt="Twitter icon"/></a>
                       </li>
                     {% endif %}
-                    {%if page.extra.url%}
+                    {%if speaker.extra.url%}
                       <li>
                         <a
-        href="{{ page.extra.url }}"
+        href="{{ speaker.extra.url }}"
         target="_blank"
         rel="noopener noreferrer" class="btn__icon"><img src="/images/icons/external-link-white.svg" alt="email icon"/></a>
                       </li>
@@ -90,22 +90,27 @@
                 </div>
 
               </div>
-            {% endif %}
-            {% if page.extra.avatar %}
               <div class="photo-container mentor__wrapper-image">
                 <div class="photo-container-overlay"></div>
-                <img
-                  class="photo"
-                  src="/images/workshops/{{ page.extra.avatar }}"
-                  alt="{{ page.extra.avatar_alt }}">
+                  {%if speaker.extra.image and not speaker.extra.image is containing("/.")  %}
+                    <img
+                      class="photo"
+                      src="{{ speaker.extra.image }}"
+                      alt="{{ speaker.extra.name }}">
+                  {% else %}
+                    <img
+                      class="photo"
+                      src="/images/speakers/placeholder.png"
+                      alt="">
+                  {% endif %}
+                </div>
               </div>
-            {% endif %}
+            </div>
           </div>
-        </div>
+        {% endfor %}
 
       </section>
 
-      {% include "sections/workshop-venue.html" %}
     </main>
 
     {% include "sections/footer.html" %}
