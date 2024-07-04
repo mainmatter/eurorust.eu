@@ -5,18 +5,20 @@
     <a class="activity-card__link" href="{{talk.path}}">
       <span class="visually-hidden">{{ talk.title }}</span>
     </a>
-    <p class="large">{{ activity.time }}</p>
-    <p aria-hidden="true" href="{{talk.path}}">{{ talk.title }}</a>
-    </p>
-    <p>
-      {% if talk.extra.speakers %}
-        {% for speaker in talk.extra.speakers %}
-          {% set path = "speakers/" ~ speaker ~ ".md" %}
-          {% set speaker = get_page(path = path) %}
-          <a href="{{speaker.path}}" class="speaker">{{speaker.extra.name}}</a>
-        {% endfor %}
-      {% endif %}
-    </p>
+    <div class="activity-card__content">
+      <p class="large">{{ activity.time }}</p>
+      <p aria-hidden="true" href="{{talk.path}}">{{ talk.title }}</a>
+      </p>
+      <p>
+        {% if talk.extra.speakers %}
+          {% for speaker in talk.extra.speakers %}
+            {% set path = "speakers/" ~ speaker ~ ".md" %}
+            {% set speaker = get_page(path = path) %}
+            <a href="{{speaker.path}}" class="speaker">{{speaker.extra.name}}</a>
+          {% endfor %}
+        {% endif %}
+      </p>
+    </div>
   {% elif activity.title %}
     <p class="large">{{ activity.time }}</p>
     <p>{{ activity.title }}</p>
