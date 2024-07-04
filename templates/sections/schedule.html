@@ -30,41 +30,17 @@
         <div class="schedule__grid day-one mb-10">
           <div class="schedule__main-stage border-r">
             <h4 class="mb-4">Main stage</h4>
-            <ol>
-              {% for talk in day.mainStage %}
-                <li class="mb-4">
-                  <p class="large">{{ talk.time }}</p>
-                  <p>{{ talk.title }}</p>
-                  <p>
-                    {% if talk.speakers %}
-                      {% for speaker in talk.speakers %}
-                        {% set path = "speakers/" ~ speaker ~ ".md" %}
-                        {% set speaker = get_page(path = path) %}
-                        <a href="{{speaker.path}}" class="speaker">{{speaker.extra.name}}</a>
-                      {% endfor %}
-                    {% endif %}
-                  </p>
-                </li>
+            <ol class="schedule__list">
+              {% for activity in day.mainStage %}
+                {% include "partials/activity-card.html" %}
               {% endfor %}
             </ol>
           </div>
           <div class="schedule__side-track">
             <h4 class="mb-4">Side track</h4>
-            <ol>
-              {% for talk in day.side %}
-                <li class="mb-4">
-                  <p class="large">{{ talk.time }}</p>
-                  <p>{{ talk.title }}</p>
-                  <p>
-                    {% if talk.speakers %}
-                      {% for speaker in talk.speakers %}
-                        {% set path = "speakers/" ~ speaker ~ ".md" %}
-                        {% set speaker = get_page(path = path) %}
-                        <a href="{{speaker.path}}" class="speaker">{{speaker.extra.name}}</a>
-                      {% endfor %}
-                    {% endif %}
-                  </p>
-                </li>
+            <ol class="schedule__list">
+              {% for activity in day.side %}
+                {% include "partials/activity-card.html" %}
               {% endfor %}
             </ol>
           </div>
