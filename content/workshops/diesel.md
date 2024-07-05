@@ -49,7 +49,7 @@ template = "workshop.html"
     <li class="mb-7 border">
       <h4 class="p-4 border-b">6. Custom Connection/Backend implementation</h4>
       <div class="p-4 mw-80">
-        <p>We will show how Diesel works internally. We will demonstrate how the compile time guarantees offered by Diesel are implemented to explain various restrictions in the API.</p>
+        <p>Finally, we will give a short overview how Diesel can be extended to support otherwise unsupported database backends or provide custom connection implementations. This includes information on when this might be a viable option.</p>
       </div>
     </li>
   </ol>
