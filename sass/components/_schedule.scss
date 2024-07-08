@@ -3,6 +3,14 @@
     grid-template-columns: repeat(2, 1fr);
 }
 
+.schedule__shared {
+    grid-column: 1 / -1;
+}
+
+.schedule__track {
+  font-weight: 700;
+}
+
 .schedule__main-stage {
     padding-right: 5rem;
 }
@@ -28,7 +36,7 @@
 
 .closing-party__grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 33%;
     align-items: center;
 }
 
@@ -79,8 +87,7 @@
     }
 
     .closing-party__image {
-        margin-bottom: 2rem;
+        margin-top: 2rem;
         margin-left: 0;
-        grid-row: 1;
     }
 }

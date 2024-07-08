@@ -3,11 +3,6 @@
     "day": "1",
     "date": "Oct. 10th, Thursday",
     "mainStage": [
-      {
-        "time": "9:00 - 10:00",
-        "title": "Doors open & Breakfast",
-        "isBreak": true
-      },
       { "time": "10:00 - 10:30", "talk": "" },
       {
         "time": "10:45 - 11:15",
@@ -36,14 +31,7 @@
       { "time": "17:30 - 18:00", "talk": "" }
     ],
     "side": [
-      {
-        "time": "9:00 - 10:00",
-        "title": "Doors open & Breakfast",
-        "isBreak": true
-      },
-      { "time": "10:00 - 10:30", "talk": "" },
-      { "time": "10:45 - 11:15", "talk": "" },
-      { "time": "11:30 - 12:00", "talk": "" },
+      { "time": "10:00 - 12:00", "talk": "" },
       { "time": "12:00 - 13:30", "title": "Lunch", "isBreak": true },
       {
         "time": "13:30 - 14:00",
@@ -58,20 +46,13 @@
         "talk": "generating-ergonomic-c-apis-using-rustdoc-procedural-macros-and-serde"
       },
       { "time": "15:30 - 16:00", "title": "Snack Break", "isBreak": true },
-      { "time": "16:00 - 16:30", "talk": "" },
-      { "time": "16:45 - 17:15", "talk": "" },
-      { "time": "17:30 - 18:00", "talk": "" }
+      { "time": "16:00 - 18:00", "talk": "" }
     ]
   },
   {
     "day": "2",
     "date": "Oct. 11th, Friday",
     "mainStage": [
-      {
-        "time": "9:00 - 10:00",
-        "title": "Doors open & Breakfast",
-        "isBreak": true
-      },
       { "time": "10:00 - 10:30", "talk": "" },
       {
         "time": "10:45 - 11:15",
@@ -97,14 +78,7 @@
       { "time": "17:30 - 18:00", "talk": "" }
     ],
     "side": [
-      {
-        "time": "9:00 - 10:00",
-        "title": "Doors open & Breakfast",
-        "isBreak": true
-      },
-      { "time": "10:00 - 10:30", "talk": "" },
-      { "time": "10:45 - 11:15", "talk": "" },
-      { "time": "11:30 - 12:00", "talk": "" },
+      { "time": "10:00 - 12:00", "talk": "" },
       { "time": "12:00 - 13:30", "title": "Lunch", "isBreak": true },
       { "time": "13:30 - 14:00", "talk": "io-in-rust-the-whole-story" },
       {
@@ -116,9 +90,7 @@
         "talk": "windows-kernel-programming-with-rust"
       },
       { "time": "15:30 - 16:00", "title": "Snack Break", "isBreak": true },
-      { "time": "16:00 - 16:30", "talk": "" },
-      { "time": "16:45 - 17:15", "talk": "" },
-      { "time": "17:30 - 18:00", "talk": "" }
+      { "time": "16:00 - 18:00", "talk": "" }
     ]
   }
 ]
