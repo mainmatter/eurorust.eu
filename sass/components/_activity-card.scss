@@ -7,6 +7,14 @@
   &--workshop {
     width: fit-content;
     margin-inline-start: calc(var(--activity-card-padding) * -1);
+
+    .mentor {
+      font-weight: 700;
+      text-decoration: underline;
+      text-decoration-thickness: 0.125rem;
+      text-underline-offset: 4px;
+      -webkit-text-fill-color: rgba(255, 255, 255, 1);
+    }
   }
 
   & a:not(.activity-card__link) {

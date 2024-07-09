@@ -18,10 +18,10 @@
               <div class="activity-card__content">
                 <p class="large">{{ workshop.time }}</p>
                 <p aria-hidden="true">{{ workshop.title }}</p>
-                <p>This workshop is instructed by {{ workshop.mentor }}.</p>
                 {% if workshop.sponsor %}
                   <p>This workshop is sponsored by {{ workshop.sponsor }}.</p>
                 {% endif %}
+                <p class="mentor">{{ workshop.mentor }}</p>
               </div>
             </div>
           </li>
