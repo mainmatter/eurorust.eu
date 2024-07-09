@@ -78,6 +78,14 @@
         rel="noopener noreferrer" class="btn__icon"><img src="/images/icons/twitter-footer-white.svg" alt="Twitter icon"/></a>
                       </li>
                     {% endif %}
+                    {% if speaker.extra.mastodon %}
+                                  <li>
+                                    <a
+                    href="{{ speaker.extra.mastodon }}"
+                    target="_blank"
+                    rel="noopener noreferrer" class="btn__icon"><img src="/images/icons/mastodon.svg" alt="Mastodon icon"/></a>
+                                  </li>
+                    {% endif %}
                     {%if speaker.extra.url%}
                       <li>
                         <a
