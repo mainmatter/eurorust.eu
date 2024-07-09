@@ -1,4 +1,4 @@
-<li class="activity-card">
+<div class="activity-card">
   {% if activity.talk %}
     {% set path = "talks/" ~ activity.talk ~ ".md" %}
     {% set talk = get_page(path = path) %}
@@ -25,4 +25,4 @@
     <p class="large">{{ activity.time }}</p>
     <p>TBA</p>
   {% endif %}
-</li>
+  </div>
