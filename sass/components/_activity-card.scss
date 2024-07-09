@@ -1,8 +1,13 @@
 .activity-card {
   position: relative;
   margin: 0 0 0.25rem;
-  padding: 0.75rem;
+  padding: var(--activity-card-padding);
   border: 0.125rem solid transparent;
+
+  &--workshop {
+    width: fit-content;
+    margin-inline-start: calc(var(--activity-card-padding) * -1);
+  }
 
   & a:not(.activity-card__link) {
     position: relative;

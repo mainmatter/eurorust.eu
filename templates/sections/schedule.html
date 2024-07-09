@@ -9,8 +9,21 @@
       <ol>
         {% for workshop in workshops %}
           <li class="mb-4">
-            <p class="large">{{ workshop.time}}</p>
-            <p>{{ workshop.title }}</p>
+            <div class="activity-card activity-card--workshop">
+              {% set path = "workshops/" ~ workshop.slug~ ".md" %}
+              {% set workshopData = get_page(path = path) %}
+              <a class="activity-card__link" href="{{workshopData.path}}">
+                <span class="visually-hidden">{{ workshop.title }}</span>
+              </a>
+              <div class="activity-card__content">
+                <p class="large">{{ workshop.time }}</p>
+                <p aria-hidden="true">{{ workshop.title }}</p>
+                <p>This workshop is instructed by {{ workshop.mentor }}.</p>
+                {% if workshop.sponsor %}
+                  <p>This workshop is sponsored by {{ workshop.sponsor }}.</p>
+                {% endif %}
+              </div>
+            </div>
           </li>
         {% endfor %}
         <li class="mb-4">

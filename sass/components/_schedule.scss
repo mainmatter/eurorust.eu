@@ -77,15 +77,16 @@
 
 .desktop-schedule {
   position: relative;
-  margin: 0 -0.75rem 10rem;
+  margin: 0 calc(var(--activity-card-padding) * -1) 10rem;
   --border: 1px solid var(--white);
+  --padding-inline: 3rem;
 
   td {
     width: 50%;
     padding-block: 2rem;
 
     &:last-child:not(:nth-child(2)) {
-      padding-inline-start: 3rem;
+      padding-inline-start: var(--padding-inline);
     }
   }
 
@@ -100,7 +101,7 @@
     }
 
     &:nth-child(2) {
-      padding-inline-end: 3rem;
+      padding-inline-end: var(--padding-inline);
     }
 
 
@@ -124,7 +125,7 @@
     text-align: left;
 
     &:last-child {
-      padding-left: 5.75rem
+      padding-left: calc(var(--padding-inline) + var(--activity-card-padding));
     }
   }
 }
