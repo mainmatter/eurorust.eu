@@ -40,6 +40,10 @@ h5,
   line-height: 1.2;
 }
 
+p + p, p + ul, ul + p {
+  margin-top: 1rem;
+}
+
 body {
   @include base-typo;
   font-size: 1.25;

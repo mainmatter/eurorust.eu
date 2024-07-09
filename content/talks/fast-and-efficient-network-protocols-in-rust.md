@@ -5,5 +5,5 @@ template = "talk.html"
   date = "Oct. 11th, Friday"
   time = "14:15 - 14:45"
   speakers = ["nikita-lapkov"]
-  description = "<p></p>"
+  description = "<p>Elfo is an actor system which can send messages between nodes. For this to work, we implemented a custom networking protocol entirely in Rust with support for compression and TCP-style flow control. We will dive deep into all the technical details and challenges we faced along the road. Strap in!</p>"
 +++

@@ -5,5 +5,5 @@ template = "talk.html"
   date = "Oct. 10th, Thursday"
   time = "11:30 - 12:00"
   speakers = ["sam-van-overmeire"]
-  description = "<p>In the 8 years since Rust went 1.0, it has spread from a curiosity to a foundational technology used everywhere from kernels to spacecraft to cloud data centers. What is it that has made Rust successful, and what are the next big challenges for us to overcome? As Rust (and its community) grows, how do we stay true to our mission of empowering people to build everyone to build reliable and efficient software? </p>"
+  description = "<p>Procedural macros are often seen as one of the most challenging things to learn in Rust. At the same time, they have immense utility and are ubiquitous in the language and crates, making basic familiarity with them very desirable. This talk presents the outlines of what these macros are, the different types, how they work, when to use them, and how to write your own. After a bit of theory and a lot of talking, we will do some live coding and write a derive macro that simplifies working with (AWS) SQS.</p>"
 +++

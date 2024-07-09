@@ -4,7 +4,7 @@
     "date": "Oct. 10th, Thursday",
     "mainStage": [
       { "time": "9:00 - 10:00", "title": "Doors open & breakfast" , "isBreak": true},
-      { "time": "10:00 - 10:30", "talk": "" },
+      { "time": "10:00 - 10:30", "talk": "through-the-fire-and-the-flames" },
       {
         "time": "10:45 - 11:15",
         "talk": "build-bigger-in-less-time-code-testing-beyond-the-basics"
@@ -29,7 +29,7 @@
         "time": "16:45 - 17:15",
         "talk": "runtime-scripting-for-rust-applications"
       },
-      { "time": "17:30 - 18:00", "talk": "" }
+      { "time": "17:30 - 18:00", "talk": "tba-aida" }
     ],
     "side": [
       { "time": "9:00 - 10:00", "title": "Doors open & breakfast" , "isBreak": true},
@@ -76,9 +76,9 @@
         "talk": "code-to-contract-to-code-making-ironclad-apis"
       },
       { "time": "15:30 - 16:00", "title": "Snack Break", "isBreak": true },
-      { "time": "16:00 - 16:30", "talk": "" },
+      { "time": "16:00 - 16:30", "talk": "tba-scott-chacon" },
       { "time": "16:45 - 17:15", "talk": "linting-with-dylint" },
-      { "time": "17:30 - 18:00", "talk": "" }
+      { "time": "17:30 - 18:00", "talk": "tba-charlie-marsh" }
     ],
     "side": [
       { "time": "9:00 - 10:00", "title": "Doors open & breakfast" , "isBreak": true},

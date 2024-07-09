@@ -49,7 +49,9 @@
             {% endif %}
           </div>
           <div class="bio mt-3">
-            {{ page.content | safe }}
+            {%if page.extra.bio %}
+              {{ page.extra.bio | safe }}
+            {% endif %}
           </div>
           <div class="links mt-5">
             <ul class="social mt-3">
