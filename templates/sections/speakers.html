@@ -4,17 +4,17 @@
       <h2 class="mb-9">{{ section.extra.section.speakers.title }}</h2>
       <ul class="speakers-list">
         {% for speaker in section.extra.speakers %}
-          <li>
+          <li class="speakers-list__speaker">
+            <a href="{{ speaker.link }}" class="speakers-list__link"></a>
             <div class="photo-container">
               <div class="photo-container-overlay"></div>
-              <a href="{{ speaker.link }}" class="speaker_link-image"></a><img
+                <span class="visually-hidden">{{speaker.name}}</span>
+              <img
             alt="{{ speaker.name }} speaker profile photo"
             src="/images/speakers/{{speaker.image}}"
             class="photo"/>
             </div>
-            <p class="large mt-4">
-              <a href="{{ speaker.link }}" class="speaker_link">{{ speaker.name }}</a>
-            </p>
+            <p class="large mt-4 speakers-list__name">{{ speaker.name }}</p>
             <p class="">
               {{ speaker.job_title }}
             </p>
@@ -24,7 +24,7 @@
                 <a
         href="https://twitter.com/{{ speaker.twitter }}"
         target="_blank"
-        rel="noopener noreferrer" class="btn__icon"><img src="/images/icons/twitter-footer-white.svg" alt="Twitter icon"/></a> 
+        rel="noopener noreferrer" class="btn__icon"><img src="/images/icons/twitter-footer-white.svg" alt="Twitter icon"/></a>
               </li>
               {% endif %}
               {% if speaker.web %}
@@ -32,7 +32,7 @@
                 <a
         href="{{ speaker.web }}"
         target="_blank"
-        rel="noopener noreferrer" class="btn__icon"><img src="/images/icons/external-link-white.svg" alt="email icon"/></a> 
+        rel="noopener noreferrer" class="btn__icon"><img src="/images/icons/external-link-white.svg" alt="email icon"/></a>
               </li>{% endif %}
 
             </ul>

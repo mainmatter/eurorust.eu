@@ -23,7 +23,7 @@
 
     {% include "partials/header-schedule.html" %}
 
-    <main>
+    <main tabindex="-1" id="main">
       <section class="full-schedule-day">
         <div class="title">
           <div>
@@ -34,48 +34,55 @@
         </div>
         <p class="timezones-note">Times are local, CEST</p>
         <table>
-          {% for talk in day.talks %}
+          {% for activity in day.mainStage %}
           <tr>
             <td class="time">
-              {{talk.time}}
+              {{activity.time}}
             </td>
+
             <td class="title">
-              <h4><a id="{{talk.title | urlencode}}">{{talk.title | safe}}</a></h4>
-              {%if talk.description %}
-                {{talk.description | safe}}
-              {% endif %}
-              {% if talk.speakers %}
-                {% for speaker in talk.speakers %}
-                  {% set path = "speakers/" ~ speaker ~ ".md" %}
-                  {% set speaker = get_page(path = path) %}
-                  <div class="speaker">
-                    <div class="photo-container">
-                      {%if speaker.extra.image %}
-                        <img
-                          class="photo"
-                          src="{{ speaker.extra.image }}"
-                          alt="Photo of {{ speaker.extra.name }}">
-                      {% else %}
-                        <img
-                          class="photo"
-                          src="/images/speakers/placeholder.png">
-                      {% endif %}
-                    </div>
-                    <div class="speaker-info">
-                      <a href="{{speaker.path}}">{{speaker.extra.name}}</a>
-                      <div class="links">
+              {% if activity.talk %}
+                {% set path = "talks/" ~ activity.talk ~ ".md" %}
+                {% set talk = get_page(path = path) %}
+                <h4><a id="{{talk.title | urlencode}}">{{talk.title | safe}}</a></h4>
+                {%if talk.description %}
+                  {{talk.description | safe}}
+                {% endif %}
+                {% if talk.speakers %}
+                  {% for speaker in talk.speakers %}
+                    {% set path = "speakers/" ~ speaker ~ ".md" %}
+                    {% set speaker = get_page(path = path) %}
+                    <div class="speaker">
+                      <div class="photo-container">
+                        {%if speaker.extra.image %}
+                          <img
+                            class="photo"
+                            src="{{ speaker.extra.image }}"
+                            alt="Photo of {{ speaker.extra.name }}">
+                        {% else %}
+                          <img
+                            class="photo"
+                            src="/images/speakers/placeholder.png">
+                        {% endif %}
+                      </div>
+                      <div class="speaker-info">
+                        <a href="{{speaker.path}}">{{speaker.extra.name}}</a>
                         <div class="links">
-                          {%if speaker.extra.twitter %}
-                            <a href="https://twitter.com/{{speaker.extra.twitter}}" target="_blank" rel="noopener noreferrer"><img alt="twitter icon" src="/images/icons/twitter-white.svg"></a>
-                          {% endif %}
-                          {%if speaker.extra.url %}
-                            <a href="{{speaker.extra.url}}" target="_blank" rel="noopener noreferrer"><img alt="external link icon" src="/images/icons/external-link-white.svg"></a>
-                          {% endif %}
+                          <div class="links">
+                            {%if speaker.extra.twitter %}
+                              <a href="https://twitter.com/{{speaker.extra.twitter}}" target="_blank" rel="noopener noreferrer"><img alt="twitter icon" src="/images/icons/twitter-white.svg"></a>
+                            {% endif %}
+                            {%if speaker.extra.url %}
+                              <a href="{{speaker.extra.url}}" target="_blank" rel="noopener noreferrer"><img alt="external link icon" src="/images/icons/external-link-white.svg"></a>
+                            {% endif %}
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                {% endfor %}
+                  {% endfor %}
+                {% endif %}
+              {% elif activity.title %}
+                {{ activity.title | safe }}
               {% endif %}
             </td>
           </tr>
