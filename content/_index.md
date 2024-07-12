@@ -144,20 +144,20 @@
 	job_title="Founder of Astral"
 	twitter="charliermarsh"
 	web="https://astral.sh/?utm_source=eurorust"
-	link="/speakers/charlie-marsh"
+	link="/talks/tba-charlie-marsh/"
 
 [[extra.speakers]]
 	name="Aida Getoeva"
 	image="aida.jpg"
 	job_title="Software Engineer at Meta"
-	link="/speakers/aida-getoeva"
+	link="/talks/tba-aida/"
 
 [[extra.speakers]]
 	name="Jon Gjengset"
 	image="jon.jpg"
 	job_title="Principal Engineer at Helsing and Author of Rust for Rustaceans"
 	twitter="jonhoo"
-	link="/speakers/jon-gjengset"
+	link="/talks/through-the-fire-and-the-flames/"
 
 [[extra.moderators]]
 	name="Ciara"
@@ -175,6 +175,6 @@
 	job_title="Co-Founder and CEO of GitButler"
 	twitter="chacon"
 	web="https://github.com/schacon"
-	link="/speakers/scott-chacon"
+	link="/talks/tba-scott-chacon/"
 
 +++
