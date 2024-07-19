@@ -30,6 +30,10 @@
           <p class="large">12:00 - 14:00</p>
           <p>Vienna walking tour: take a guided (in English) tour through Vienna to discover the city and main sights.</p>
         </li>
+        <li class="mb-4">
+          <p class="large">14:00 - 16:00</p>
+          <p>Vienna "Apfelstrudel" boat tour: go on a boat trip along the Danube and enjoy an <a href="https://en.wikipedia.org/wiki/Apple_strudel" target="_blank">apple strudel</a> on board.</p>
+        </li>
       </ol>
     </div>
 
@@ -38,6 +42,7 @@
     {% set_global currentRowspan = 0 %}
     {% set_global sideRow = 0 %}
     {% for day in schedule %}
+      {% set is_day1 = loop.first %}
       <div>
         <div class="conference mb-7">
           <h3 class="h3">Conference Day {{ day.day }} - {{ day.date }}</h3>
@@ -62,6 +67,18 @@
             <ol class="schedule__list">
               {% for activity in day.side %}
                 {% include "partials/activity-card.html" %}
+                {% if is_day1 and loop.last %}
+                  <div class="closing-party closing-party__grid schedule__shared">
+                    <div class="closing-party__content">
+                      <h3 class="large mb-2">19:00 - Karaoke – let's sing!</h3>
+                      <p>The EuroRust team reserved 30 spots at the Karaoke bar <a href="https://www.babuders.at" target="_blank">Babuder's</a> for Rustaceans who like to sing after the first conference day 🧑‍🎤.</p>
+                    </div>
+                    <div class="closing-party__image">
+                      <div class="closing-party__image-overlay"></div>
+                      <img class="image-party" src="/images/karaoke.jpg" alt="boy singing into a microphone"/>
+                    </div>
+                  </div>
+                {% endif %}
               {% endfor %}
             </ol>
           </div>
@@ -116,6 +133,23 @@
                   {% endif %}
                   {% set_global sideCount = sideCount + 1 %}
               </tr>
+              {% if is_day1 and loop.last %}
+                <tr>
+                  <td class="visually-hidden">19:00</td>
+                  <td colspan="2">
+                    <div class="closing-party closing-party__grid schedule__shared">
+                      <div class="closing-party__content">
+                        <h3 class="large mb-2">19:00 Karaoke – let's sing!</h3>
+                        <p>The EuroRust team reserved 30 spots at the Karaoke bar <a href="https://www.babuders.at" target="_blank">Babuder's</a> for Rustaceans who like to sing after the first conference day 🧑‍🎤.</p>
+                      </div>
+                      <div class="closing-party__image">
+                        <div class="closing-party__image-overlay"></div>
+                        <img class="image-party" src="/images/karaoke.jpg" alt="boy singing into a microphone"/>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              {% endif %}
             {% endfor %}
             {% if loop.last %}
               <tr>
