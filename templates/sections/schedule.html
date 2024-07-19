@@ -1,33 +1,186 @@
-{% set schedule = load_data(path = "data/schedule.json") %}
-<section class="schedule">
-  {% for day in schedule %}
-    <div class="day">
-      <div class="content">
-        <h3>Day {{loop.index}}</h3>
-        <h4>{{day.date}}</h4>
-        <p class="timezones-note">Times are local, CEST</p>
-        <table>
-          {% for talk in day.talks %}
-          <tr>
-            <td class="time">
-              {{talk.time}}
-            </td>
-            <td class="title">
-              {{talk.title | safe}}
-              {% if talk.speakers %}
-                – 
-                {% for speaker in talk.speakers %}
-                  {% set path = "speakers/" ~ speaker ~ ".md" %}
-                  {% set speaker = get_page(path = path) %}
-                  <a href="{{speaker.path}}" class="speaker">{{speaker.extra.name}}</a>
-                {% endfor %}
-              {% endif %}
-            </td>
-          </tr>
-          {% endfor %}
-        </table>
-      </div>
-      <a class="full-schedule-link" href="/schedule/day/{{loop.index}}">See Full Schedule</a>
+<section class="schedule border-t py-10">
+  <div class="container">
+    <h2 class="mb-4 h5" id="schedule">Schedule</h2>
+    <p class="mb-7 h2">This is your EuroRust experience</p>
+    <div class="workshops mb-9">
+    {% set workshops = load_data(path = "data/workshops.json") %}
+      <h3 class="h3 mb-4">Pre Conference Day - Oct. 9th, 2024</h3>
+      <p class="mb-3">The EuroRust workshops will take place in a separate venue in the city center.</p>
+      <ol>
+        {% for workshop in workshops %}
+          <li class="mb-4">
+            <div class="activity-card activity-card--workshop">
+              {% set path = "workshops/" ~ workshop.slug~ ".md" %}
+              {% set workshopData = get_page(path = path) %}
+              <a class="activity-card__link" href="{{workshopData.path}}">
+                <span class="visually-hidden">{{ workshop.title }}</span>
+              </a>
+              <div class="activity-card__content">
+                <p class="large">{{ workshop.time }}</p>
+                <p aria-hidden="true">{{ workshop.title }}</p>
+                {% if workshop.sponsor %}
+                  <p>This workshop is sponsored by {{ workshop.sponsor }}.</p>
+                {% endif %}
+                <p class="mentor">{{ workshop.mentor }}</p>
+              </div>
+            </div>
+          </li>
+        {% endfor %}
+        <li class="mb-4">
+          <p class="large">12:00 - 14:00</p>
+          <p>Vienna walking tour: take a guided (in English) tour through Vienna to discover the city and main sights.</p>
+        </li>
+        <li class="mb-4">
+          <p class="large">14:00 - 16:00</p>
+          <p>Vienna "Apfelstrudel" boat tour: go on a boat trip along the Danube and enjoy an <a href="https://en.wikipedia.org/wiki/Apple_strudel" target="_blank">apple strudel</a> on board.</p>
+        </li>
+      </ol>
     </div>
-  {% endfor %}
+
+    {% set schedule = load_data(path = "data/schedule.json") %}
+    {% set_global sideCount = 0 %}
+    {% set_global currentRowspan = 0 %}
+    {% set_global sideRow = 0 %}
+    {% for day in schedule %}
+      {% set is_day1 = loop.first %}
+      <div>
+        <div class="conference mb-7">
+          <h3 class="h3">Conference Day {{ day.day }} - {{ day.date }}</h3>
+        </div>
+        <div class="mobile-schedule schedule__grid day-one mb-10">
+          <div class="schedule__shared mb-5">
+            <p class="large">9:00 - 10:00</p>
+            <p>Doors open & breakfast</p>
+          </div>
+          <div class="schedule__main-stage border-r">
+            <h4 class="schedule__track mb-4">Main stage</h4>
+            <ol class="schedule__list">
+              {% for activity in day.mainStage %}
+                <li>
+                  {% include "partials/activity-card.html" %}
+                </li>
+              {% endfor %}
+            </ol>
+          </div>
+          <div class="schedule__side-track">
+            <h4 class="schedule__track mb-4">Side track</h4>
+            <ol class="schedule__list">
+              {% for activity in day.side %}
+                {% include "partials/activity-card.html" %}
+                {% if is_day1 and loop.last %}
+                  <div class="closing-party closing-party__grid schedule__shared">
+                    <div class="closing-party__content">
+                      <h3 class="large mb-2">19:00 - Karaoke – let's sing!</h3>
+                      <p>The EuroRust team reserved 30 spots at the Karaoke bar <a href="https://www.babuders.at" target="_blank">Babuder's</a> for Rustaceans who like to sing after the first conference day 🧑‍🎤.</p>
+                    </div>
+                    <div class="closing-party__image">
+                      <div class="closing-party__image-overlay"></div>
+                      <img class="image-party" src="/images/karaoke.jpg" alt="boy singing into a microphone"/>
+                    </div>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </ol>
+          </div>
+          {% if loop.last %}
+            <div class="closing-party closing-party__grid schedule__shared">
+              <div class="closing-party__content">
+                <h3 class="large mb-2">18:00 - Closing Party</h3>
+                <p>Like every year, we'll be ending the conference with a closing party – at the conference venue, right after the closing talk on Friday, 11th around 18:00.</p>
+              </div>
+              <div class="closing-party__image">
+                <div class="closing-party__image-overlay"></div>
+                <img class="image-party" src="/images/closingparty2023.jpg" alt="closing party at eurorust 2023"/>
+              </div>
+            </div>
+          {% endif %}
+        </div>
+        <div class="desktop-schedule">
+          <table class="schedule__table">
+            <tr class="schedule__track h4">
+              <th scope="col" class="visually-hidden">Time</th>
+              <th scope="col">Main Stage</th>
+              <th scope="col" class="schedule__table-side">Side track</th>
+            </tr>
+            {% set_global sideCount = 1 %}
+            {% set_global currentRowspan = 0 %}
+            {% set_global sideRow = 0 %}
+            {% for activity in day.mainStage %}
+              <tr>
+                <td scope="row" class="visually-hidden">{{activity.time}}</td>
+                <td {% if activity.isBreak %}colspan="2" class="schedule{% endif %}>
+                  <!-- siderow: {{ sideRow }} count: {{ sideCount }} currentRowSpan {{ currentRowspan }} -->
+                  {% include "partials/activity-card.html" %}
+                </td>
+                  {% if currentRowspan and sideCount - sideRow < currentRowspan %}
+                  {% else %}
+                    {% if day.side[sideRow] %}
+                      {% if day.side[sideRow].rowspan %}
+                        {% set activity = day.side[sideRow] %}
+                        {% set_global currentRowspan = activity.rowspan %}
+                      {% else %}
+                        {% set_global currentRowspan = 0 %}
+                      {% endif %}
+                      {% if not activity.isBreak %}
+                        {% set activity = false %}
+                        {% set activity = day.side[sideRow] %}
+                        <td class="schedule__table-side" {% if activity.rowspan %}rowspan="{{ activity.rowspan }}"{% endif %}>
+                          {% include "partials/activity-card.html" %}
+                        </td>
+                      {% endif %}
+                      {% set_global sideRow = sideRow + 1 %}
+                    {% endif %}
+                  {% endif %}
+                  {% set_global sideCount = sideCount + 1 %}
+              </tr>
+              {% if is_day1 and loop.last %}
+                <tr>
+                  <td class="visually-hidden">19:00</td>
+                  <td colspan="2">
+                    <div class="closing-party closing-party__grid schedule__shared">
+                      <div class="closing-party__content">
+                        <h3 class="large mb-2">19:00 Karaoke – let's sing!</h3>
+                        <p>The EuroRust team reserved 30 spots at the Karaoke bar <a href="https://www.babuders.at" target="_blank">Babuder's</a> for Rustaceans who like to sing after the first conference day 🧑‍🎤.</p>
+                      </div>
+                      <div class="closing-party__image">
+                        <div class="closing-party__image-overlay"></div>
+                        <img class="image-party" src="/images/karaoke.jpg" alt="boy singing into a microphone"/>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              {% endif %}
+            {% endfor %}
+            {% if loop.last %}
+              <tr>
+                <td class="visually-hidden">18:00</td>
+                <td colspan="2">
+                  <div class="closing-party closing-party__grid schedule__shared">
+                    <div class="closing-party__content">
+                      <h3 class="large mb-2">18:00 - Closing Party</h3>
+                      <p>Like every year, we'll be ending the conference with a closing party – at the conference venue, right after the closing talk on Friday, 11th around 18:00.</p>
+                    </div>
+                    <div class="closing-party__image">
+                      <div class="closing-party__image-overlay"></div>
+                      <img class="image-party" src="/images/closingparty2023.jpg" alt="closing party at eurorust 2023"/>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            {% endif %}
+          </table>
+        </div>
+      </div>
+    {% endfor %}
+
+    <div class="mb-9">
+      <h3 class="h3 mb-4">Post Conference Day - Oct. 12th, 2024</h3>
+      <ol>
+        <li class="mb-4">
+          <p class="large">12:00 - 14:00</p>
+          <p>Vienna walking tour: take a guided (in English) tour through Vienna to discover the city and main sights.</p>
+        </li>
+      </ol>
+    </div>
+  </div>
 </section>

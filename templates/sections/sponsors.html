@@ -1,11 +1,11 @@
 <section class="sponsors container pb-10">
-  <h3 class="center">Thanks to our sponsors</h3>
+  <h2 class="h3 center text-centered">Thanks to our sponsors</h2>
   <div class="sponsors-grid-container">
     {% if section.extra.sponsors.premier_partners %}
       <div class="mb-4">
-        <h5 class="center mb-2">
+        <h3 class="center mb-2 h5">
           Premier Partner{% if section.extra.sponsors.premier_partners | length > 1 %}s{% endif %}
-        </h5>
+        </h3>
         <div class="sponsors-grid premier-partners">
           {% for premier_partner in section.extra.sponsors.premier_partners %}
             <a href="{{ premier_partner.link }}" alt="{{ premier_partner.title }}">
@@ -20,9 +20,9 @@
     {% endif %}
     {% if section.extra.sponsors.live_stream_partners %}
       <div class="mb-4">
-        <h5 class="center mb-2">
+        <h3 class="center mb-2 h5">
           Live Stream Partner{% if section.extra.sponsors.live_stream_partners | length > 1 %}s{% endif %}
-        </h5>
+        </h3>
         <div class="sponsors-grid premier-partners">
           {% for live_stream_partner in section.extra.sponsors.live_stream_partners %}
             <a href="{{ live_stream_partner.link }}" alt="{{ live_stream_partner.title }}">
@@ -37,9 +37,9 @@
     {% endif %}
     {% if section.extra.sponsors.closing_party_partners %}
       <div class="mb-4">
-        <h5 class="center mb-2">
+        <h3 class="center mb-2 h5">
           Closing Party Partner{% if section.extra.sponsors.closing_party_partners | length > 1 %}s{% endif %}
-        </h5>
+        </h3>
         <div class="sponsors-grid premier-partners">
           {% for closing_party_partner in section.extra.sponsors.closing_party_partners %}
             <a href="{{ closing_party_partner.link }}" alt="{{ closing_party_partner.title }}">
@@ -71,9 +71,9 @@
     {% endif %}
     {% if section.extra.sponsors.head_partners %}
       <div class="mb-4">
-        <h5 class="center mb-2">
+        <h3 class="center mb-2 h5">
           Head Partner{% if section.extra.sponsors.head_partners | length > 1 %}s{% endif %}
-        </h5>
+        </h3>
         <div class="sponsors-grid head-partners">
           {% for head_partner in section.extra.sponsors.head_partners %}
             <a href="{{ head_partner.link }}" alt="{{ head_partner.title }}">
@@ -88,9 +88,9 @@
     {% endif %}
     {% if section.extra.sponsors.partners %}
       <div class="mb-4">
-        <h5 class="center mb-2">
+        <h3 class="center mb-2 h5">
           Partner{% if section.extra.sponsors.partners | length > 1 %}s{% endif %}
-        </h5>
+        </h3>
         <div class="sponsors-grid partners">
           {% for partner in section.extra.sponsors.partners %}
           {% if partner.title == 'BMW Car IT' %}
@@ -124,9 +124,9 @@
     {% endif %}
     {% if section.extra.sponsors.supporters %}
       <div class="mb-4">
-        <h5 class="center mb-2">
+        <h3 class="center mb-2 h5">
           Supporter{% if section.extra.sponsors.supporters | length > 1 %}s{% endif %}
-        </h5>
+        </h3>
         <div class="sponsors-grid supporters">
           {% for supporter in section.extra.sponsors.supporters %}
             <a href="{{ supporter.link }}" alt="{{ supporter.title }}">

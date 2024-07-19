@@ -16,14 +16,14 @@
 {% endblock head %}
 
 {% block content %}
-  {% set schedule = load_data(path = "data/schedule.json") %}
+  {% set schedule = load_data(path = "data/2023/schedule.json") %}
   {% set day = schedule[page.extra.day] %}
 
   <div class="generic-block full-schedule">
 
     {% include "2023/partials/header-schedule.html" %}
 
-    <main>
+    <main tabindex="-1" id="main">
       <section class="full-schedule-day">
         <div class="title">
           <div>

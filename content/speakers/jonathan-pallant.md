@@ -4,7 +4,9 @@ title = "Panelist: Jonathan Pallant"
 [extra]
   name = "Jonathan Pallant"
   title = "Senior Engineer at Ferrous Systems"
-  url = "https://hachyderm.io/@thejpster"
+  url = "https://www.thejpster.org.uk/"
   image = "/images/speakers/jonathan.jpg"
+  twitter = "therealjpster"
+  mastodon = "https://hachyderm.io/@thejpster"
+  bio = "My name is Jonathan, or JP to my friends. I’m @thejpster most places, except where I was late to the party and had to settle for @therealjpster. I’ve been doing Embedded Rust since 2016 and embedded systems since the mid-90s, when I stripped a Commodore 64 and turned it into a line-following robot. These days I am with Ferrous Systems, teaching Rust and offering consulting. Someone once asked me what I’d do if I won a million pounds and I said, uh, probably exactly the same thing I do now really."
 +++
-Rust programmer since 2016. Member of the Rust Leadership Council. Co-founder of the Rust Embedded Working Group. Full-time Rust consultant and trainer. Part-time writer/designer of a home-brew open source Operating System in Rust and the open-source computer it runs on. Can be blamed for Rust support for: PS/2 Keyboards, SD Cards on microcontrollers, several RTOSes, the RP2040 microcontroller, the BeagleBoard X15, the Nordic nRF9160, and probably more I’ve forgotten.

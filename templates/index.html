@@ -19,13 +19,14 @@
 
 {% block content %}
 
-  <main class="sections">
+{% include "sections/nav.html" %}
 
-    {% include "sections/nav.html" %}
+  <main tabindex="-1" id="main" class="sections">
+
 
     {% include "sections/hero.html" %}
 
-     {% include "sections/get-involved.html" %}
+    {% include "sections/get-involved.html" %}
 
     {% include "sections/rustfest.html" %}
 
@@ -35,11 +36,15 @@
 
     {% include "sections/moderators.html" %}
 
-    {% include "sections/workshop-schedule.html" %}
-    
-    {% include "sections/schedule-temp.html" %}
+    <div class="workshops__image mb-10">
+      <img class="image-oval" src="/images/oval.png" alt=""/>
+    </div>
+
+    {% include "sections/schedule.html" %}
 
     {% include "sections/venue.html" %}
+
+    {% include "sections/past-event-highlights.html" %}
 
     {% include "sections/presented-by.html" %}
 
