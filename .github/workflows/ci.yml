@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request: {}
+  schedule:
+    - cron:  '0 3 * * *' # daily, at 3am
+
+jobs:
+  gravity:
+    name: 'Gravity'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: install @gravityci/cli
+        run: npm i -g @gravityci/cli
+
+      - name: Build
+        uses: shalzz/zola-deploy-action@v0.19.1
+        env:
+          BUILD_ONLY: true
+
+      - name: Run Gravity
+        run: gravityci "public/**/*"
+        env:
+          GRAVITY_TOKEN: ${{ secrets.GRAVITY_TOKEN }}
+          GRAVITY_HOST: ${{ vars.GRAVITY_HOST }}
