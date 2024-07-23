@@ -1,5 +1,5 @@
 +++
-title = "My Journey from WebDev to Medical Visualization Rustacea"
+title = "My Journey from WebDev to Medical Visualization Rustacean"
 template = "talk.html"
 [extra]
   date = "Oct. 11th, Friday"
