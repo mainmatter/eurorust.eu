@@ -56,7 +56,9 @@
     &.head-partners {
       gap: 30px;
       --max-width: max-width: var(--max-width-head-partners);
-      max-height: 8rem;
+      a {
+        max-height: 8rem;
+      }
     }
 
     &.partners {
