@@ -71,7 +71,9 @@
       gap: 30px;
       justify-content: center;
       --max-width:  var(--max-width-supporters);
-      max-height: 5rem;
+      a {
+        max-height: 5rem;
+      }
     }
   }
 }
