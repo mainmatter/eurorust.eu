@@ -134,6 +134,11 @@
 	image="/images/sponsors/current_sponsors/wyeworks.png"
 
 [[extra.sponsors.head_partners]]
+	title="Helsing"
+	link="https://helsing.ai/?utm_source=eurorust"
+	image="/images/sponsors/current_sponsors/helsing.png"
+
+[[extra.sponsors.head_partners]]
 	title="Sentry"
 	link="https://sentry.io/?utm_source=eurorust"
 	image="/images/sponsors/current_sponsors/sentry.svg"

@@ -56,7 +56,9 @@
     &.head-partners {
       gap: 30px;
       --max-width: max-width: var(--max-width-head-partners);
-      max-height: 8rem;
+      a {
+        max-height: 8rem;
+      }
     }
 
     &.partners {
@@ -69,7 +71,9 @@
       gap: 30px;
       justify-content: center;
       --max-width:  var(--max-width-supporters);
-      max-height: 5rem;
+      a {
+        max-height: 5rem;
+      }
     }
   }
 }
