@@ -67,21 +67,31 @@
             <ol class="schedule__list">
               {% for activity in day.side %}
                 {% include "partials/activity-card.html" %}
-                {% if is_day1 and loop.last %}
-                  <div class="closing-party closing-party__grid schedule__shared">
-                    <div class="closing-party__content">
-                      <h3 class="large mb-2">19:00 - Karaoke – let's sing!</h3>
-                      <p>The EuroRust team reserved 30 spots at the Karaoke bar <a href="https://www.babuders.at" target="_blank">Babuder's</a> for Rustaceans who like to sing after the first conference day 🧑‍🎤.</p>
-                    </div>
-                    <div class="closing-party__image">
-                      <div class="closing-party__image-overlay"></div>
-                      <img class="image-party" src="/images/karaoke.jpg" alt="boy singing into a microphone"/>
-                    </div>
-                  </div>
-                {% endif %}
               {% endfor %}
             </ol>
           </div>
+          {% if loop.first %}
+            <div class="closing-party closing-party__grid schedule__shared">
+              <div class="closing-party__content">
+                <h3 class="large mb-2">19:00: Karaoke – let's sing!</h3>
+                <p>The EuroRust team reserved 30 spots at the Karaoke bar <a href="https://www.babuders.at" target="_blank">Babuder's</a> for Rustaceans who like to sing after the first conference day 🧑‍🎤.</p>
+              </div>
+              <div class="closing-party__image">
+                <div class="closing-party__image-overlay"></div>
+                <img class="image-party" src="/images/karaoke.jpg" alt="boy singing into a microphone"/>
+              </div>
+            </div>
+            <div class="closing-party closing-party__grid schedule__shared">
+              <div class="closing-party__content">
+                <h3 class="large mb-2">19:30: Group Dinners – Meet & Eat!</h3>
+                <p>We have reservations at various local restaurants in Vienna. Sign up a the conference venue to join fellow Rustaceans for dinner at your choice! 🍕🥗🍲</p>
+              </div>
+              <div class="closing-party__image">
+                <div class="closing-party__image-overlay"></div>
+                <img class="image-party" src="/images/diner.jpg" alt="boy singing into a microphone"/>
+              </div>
+            </div>
+          {% endif %}
           {% if loop.last %}
             <div class="closing-party closing-party__grid schedule__shared">
               <div class="closing-party__content">
@@ -139,12 +149,27 @@
                   <td colspan="2">
                     <div class="closing-party closing-party__grid schedule__shared">
                       <div class="closing-party__content">
-                        <h3 class="large mb-2">19:00 Karaoke – let's sing!</h3>
+                        <h3 class="large mb-2">19:00: Karaoke – let's sing!</h3>
                         <p>The EuroRust team reserved 30 spots at the Karaoke bar <a href="https://www.babuders.at" target="_blank">Babuder's</a> for Rustaceans who like to sing after the first conference day 🧑‍🎤.</p>
                       </div>
                       <div class="closing-party__image">
                         <div class="closing-party__image-overlay"></div>
                         <img class="image-party" src="/images/karaoke.jpg" alt="boy singing into a microphone"/>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="visually-hidden">19:00</td>
+                  <td colspan="2">
+                    <div class="closing-party closing-party__grid schedule__shared">
+                      <div class="closing-party__content">
+                        <h3 class="large mb-2">19:30: Group Dinners – Meet & Eat!</h3>
+                        <p>We have reservations at various local restaurants in Vienna. Sign up a the conference venue to join fellow Rustaceans for dinner at your choice! 🍕🥗🍲</p>
+                      </div>
+                      <div class="closing-party__image">
+                        <div class="closing-party__image-overlay"></div>
+                        <img class="image-party" src="/images/diner.jpg" alt="boy singing into a microphone"/>
                       </div>
                     </div>
                   </td>
