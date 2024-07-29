@@ -48,7 +48,7 @@
         "talk": "generating-ergonomic-c-apis-using-rustdoc-procedural-macros-and-serde"
       },
       { "time": "15:30 - 16:00", "title": "Snack Break", "isBreak": true },
-      { "time": "16:00 - 18:00", "talk": "", "rowspan": 3 }
+      { "time": "16:00 - 17:30", "talk": "impl-room-1", "rowspan": 3 }
     ]
   },
   {
@@ -94,7 +94,7 @@
         "talk": "windows-kernel-programming-with-rust"
       },
       { "time": "15:30 - 16:00", "title": "Snack Break", "isBreak": true },
-      { "time": "16:00 - 18:00", "talk": "", "rowspan": 3 }
+      { "time": "16:00 - 17:30", "talk": "impl-room-2", "rowspan": 3 }
     ]
   }
 ]
