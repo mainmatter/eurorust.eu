@@ -118,6 +118,11 @@
 	link="https://www.trailofbits.com/?utm_source=eurorust"
 	image="/2023/images/sponsors/current_sponsors/trail-of-bits.svg"
 
+[[extra.sponsors.supporters]]
+	title="GiGa infosystems GmbH"
+	link="https://giga-infosystems.com/?utm_source=eurorust"
+	image="/images/sponsors/current_sponsors/giga.svg"
+
 [[extra.sponsors.partners]]
 	title="Astral"
 	link="https://astral.sh/?utm_source=eurorust"
