@@ -159,13 +159,13 @@
 	job_title="Founder of Astral"
 	twitter="charliermarsh"
 	web="https://astral.sh/?utm_source=eurorust"
-	link="/talks/tba-charlie-marsh/"
+	link="/talks/building-an-extremely-fast-python-package-manager-in-rust/"
 
 [[extra.speakers]]
 	name="Aida Getoeva"
 	image="aida.jpg"
 	job_title="Software Engineer at Meta"
-	link="/talks/tba-aida/"
+	link="/talks/navigating-async-heavy-rust/"
 
 [[extra.speakers]]
 	name="Jon Gjengset"
@@ -173,6 +173,14 @@
 	job_title="Principal Engineer at Helsing and Author of Rust for Rustaceans"
 	twitter="jonhoo"
 	link="/talks/through-the-fire-and-the-flames/"
+
+[[extra.speakers]]
+    name="Amanda Stjerna"
+    image="amanda.jpg"
+    job_title="PhD student in Web security at Uppsala university"
+    mastodon = "https://social.spejset.org/@amanda"
+    web = "https://github.com/amandasystems"
+    link="/talks/tba-amanda/"
 
 [[extra.moderators]]
 	name="Ciara"
