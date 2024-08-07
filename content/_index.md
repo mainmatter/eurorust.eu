@@ -139,6 +139,11 @@
 	image="/images/sponsors/current_sponsors/wyeworks.png"
 
 [[extra.sponsors.head_partners]]
+	title="CodSpeed"
+	link="https://codspeed.io/?utm_source=eurorust"
+	image="/images/sponsors/current_sponsors/codspeed.png"
+
+[[extra.sponsors.head_partners]]
 	title="Helsing"
 	link="https://helsing.ai/?utm_source=eurorust"
 	image="/images/sponsors/current_sponsors/helsing.png"
