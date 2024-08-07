@@ -76,7 +76,7 @@
         "talk": "code-to-contract-to-code-making-ironclad-apis"
       },
       { "time": "15:30 - 16:00", "title": "Snack Break", "isBreak": true },
-      { "time": "16:00 - 16:30", "talk": "", "title": "TBA" },
+      { "time": "16:00 - 16:30", "talk": "tba-henk", "title": "TBA" },
       { "time": "16:45 - 17:15", "talk": "linting-with-dylint" },
       { "time": "17:30 - 18:00", "talk": "building-an-extremely-fast-python-package-manager-in-rust" }
     ],
