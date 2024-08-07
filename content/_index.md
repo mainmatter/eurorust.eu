@@ -175,6 +175,7 @@
     job_title="PhD student in Web security at Uppsala university"
     mastodon = "https://social.spejset.org/@amanda"
     web = "https://github.com/amandasystems"
+    link="/talks/tba-amanda/"
 
 [[extra.moderators]]
 	name="Ciara"
