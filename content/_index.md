@@ -185,7 +185,7 @@
     job_title="PhD student in Web security at Uppsala university"
     mastodon = "https://social.spejset.org/@amanda"
     web = "https://github.com/amandasystems"
-    link="/talks/tba-amanda/"
+    link="/talks/the-first-six-years-in-the-development-of-polonius/"
 
 [[extra.moderators]]
 	name="Ciara"
