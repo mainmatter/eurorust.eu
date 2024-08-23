@@ -123,6 +123,11 @@
 	link="https://giga-infosystems.com/?utm_source=eurorust"
 	image="/images/sponsors/current_sponsors/giga.svg"
 
+[[extra.sponsors.supporters]]
+	title="JetBrains"
+	link="https://www.jetbrains.com/?utm_source=eurorust"
+	image="/images/sponsors/current_sponsors/jetbrains.svg"
+
 [[extra.sponsors.partners]]
 	title="Astral"
 	link="https://astral.sh/?utm_source=eurorust"
@@ -142,6 +147,11 @@
 	title="WyeWorks LLC"
 	link="https://www.wyeworks.com/"
 	image="/images/sponsors/current_sponsors/wyeworks.png"
+
+[[extra.sponsors.partners]]
+	title="hightec_rt"
+	link="https://hightec-rt.com/en/?utm_source=eurorust"
+	image="/images/sponsors/current_sponsors/hightec_rt.svg"
 
 [[extra.sponsors.head_partners]]
 	title="CodSpeed"
