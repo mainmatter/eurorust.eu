@@ -6,11 +6,11 @@ on:
       - main
   pull_request: {}
   schedule:
-    - cron:  '0 3 * * *' # daily, at 3am
+    - cron: "0 3 * * *" # daily, at 3am
 
 jobs:
   gravity:
-    name: 'Gravity'
+    name: "Gravity"
     runs-on: ubuntu-latest
 
     steps:
@@ -19,7 +19,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha }}
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
 
       - name: install @gravityci/cli
         run: npm i -g @gravityci/cli
@@ -33,4 +33,3 @@ jobs:
         run: gravityci "public/**/*"
         env:
           GRAVITY_TOKEN: ${{ secrets.GRAVITY_TOKEN }}
-          GRAVITY_HOST: ${{ vars.GRAVITY_HOST }}
