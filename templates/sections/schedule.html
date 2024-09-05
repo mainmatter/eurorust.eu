@@ -5,7 +5,9 @@
     <div class="workshops mb-9">
     {% set workshops = load_data(path = "data/workshops.json") %}
       <h3 class="h3 mb-4">Pre Conference Day - Oct. 9th, 2024</h3>
-      <p class="mb-3">The EuroRust workshops will take place in a separate venue in the city center.</p>
+      <p class="mb-3">The EuroRust workshops will take place in WEXELERATE, located at Praterstrasse 1, 1020 Vienna, Austria.</p>
+      <a class="btn__secondary" href="https://maps.app.goo.gl/APG7SV8pm7qkycPV6" alt="Google Maps for workshop venue address"
+				target="_blank" rel="noopener noreferrer">Workshop Venue on the Map</a>
       <ol>
         {% for workshop in workshops %}
           <li class="mb-4">
@@ -48,11 +50,17 @@
           <h3 class="h3">Conference Day {{ day.day }} - {{ day.date }}</h3>
         </div>
         <div class="mobile-schedule schedule__grid day-one mb-10">
-          <div class="schedule__shared mb-5">
-            <p class="large">9:00 - 10:00</p>
-            <p>Doors open & breakfast</p>
-          </div>
-          <div class="schedule__main-stage border-r">
+            <div class="closing-party closing-party__grid schedule__shared">
+              <div class="closing-party__content">
+                <h3 class="large mb-2">Meet the Rust-programmed robo-soccer team!</h3>
+                    <p>The HULKs RoboCup SPL Team is coming to EuroRust. Don’t miss their live demos, code showcases, and debugging tool sessions. 🤖</p>
+              </div>
+              <div class="closing-party__image">
+                <div class="closing-party__image-overlay"></div>
+                <img class="image-party" src="/images/robots.jpg" alt="robot playing soccer"/>
+              </div>
+            </div>
+            <div class="schedule__main-stage border-r">
             <h4 class="schedule__track mb-4">Main stage</h4>
             <ol class="schedule__list">
               {% for activity in day.mainStage %}
@@ -116,6 +124,24 @@
             {% set_global currentRowspan = 0 %}
             {% set_global sideRow = 0 %}
             {% for activity in day.mainStage %}
+            {% if loop.first %}
+              <tr>
+                <td class="visually-hidden">18:00</td>
+                <td colspan="2">
+                  <div class="closing-party closing-party__grid schedule__shared">
+                    <div class="closing-party__content">
+                      <h3 class="large mb-2">Meet the Rust-programmed robo-soccer team!</h3>
+                      <p>The HULKs RoboCup SPL Team is coming to EuroRust. Don’t miss their live demos, code showcases, and debugging tool sessions. 🤖
+                      </p>
+                    </div>
+                    <div class="closing-party__image">
+                      <div class="closing-party__image-overlay"></div>
+                      <img class="image-party" src="/images/robots.jpg" alt="robot playing soccer"/>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            {% endif %}
               <tr>
                 <td scope="row" class="visually-hidden">{{activity.time}}</td>
                 <td {% if activity.isBreak %}colspan="2" class="schedule{% endif %}>
