@@ -4,7 +4,8 @@
     <p class="h2 mb-4">Deepen your Rust skills hands-on!</p>
     <div class="workshops mb-9">
     {% set workshops = load_data(path = "data/workshops.json") %}
-      <p class="mb-5 mw-70">The EuroRust workshops will take place in WEXELERATE, located at Praterstrasse 1, 1020 Vienna, Austria.</p>
+      <p class="mb-5 mw-70">The EuroRust workshops will take place in WEXELERATE, located at <a class="btn__secondary" href="https://maps.app.goo.gl/APG7SV8pm7qkycPV6" alt="Google Maps for workshop venue address"
+				target="_blank" rel="noopener noreferrer">Praterstrasse 1, 1020 Vienna, Austria.</a></p>
       <ol>
         {% for workshop in workshops %}
           <li class="mb-7 border">
