@@ -49,16 +49,6 @@
           <h3 class="h3">Conference Day {{ day.day }} - {{ day.date }}</h3>
         </div>
         <div class="mobile-schedule schedule__grid day-one mb-10">
-            <div class="closing-party closing-party__grid schedule__shared">
-              <div class="closing-party__content">
-                <h3 class="large mb-2">Meet the Rust-programmed robo-soccer team!</h3>
-                    <p>The HULKs RoboCup SPL Team is coming to EuroRust. They'll be showing their robots, code showcases, as well as debugging tools and more during both conference days. 🤖</p>
-              </div>
-              <div class="closing-party__image">
-                <div class="closing-party__image-overlay"></div>
-                <img class="image-party" src="/images/robots.jpg" alt="robot playing soccer"/>
-              </div>
-            </div>
             <div class="schedule__main-stage border-r">
             <h4 class="schedule__track mb-4">Main stage</h4>
             <ol class="schedule__list">
@@ -76,6 +66,16 @@
                 {% include "partials/activity-card.html" %}
               {% endfor %}
             </ol>
+          </div>
+          <div class="closing-party closing-party__grid schedule__shared">
+            <div class="closing-party__content">
+              <h3 class="large mb-2">Meet the Rust-programmed robo-soccer team!</h3>
+                  <p>The HULKs RoboCup SPL Team is coming to EuroRust. They'll be showing their robots, code showcases, as well as debugging tools and more during both conference days. 🤖</p>
+            </div>
+            <div class="closing-party__image">
+              <div class="closing-party__image-overlay"></div>
+              <img class="image-party" src="/images/robots.jpg" alt="robot playing soccer"/>
+            </div>
           </div>
           {% if loop.first %}
             <div class="closing-party closing-party__grid schedule__shared">
@@ -123,24 +123,6 @@
             {% set_global currentRowspan = 0 %}
             {% set_global sideRow = 0 %}
             {% for activity in day.mainStage %}
-            {% if loop.first %}
-              <tr>
-                <td class="visually-hidden">18:00</td>
-                <td colspan="2">
-                  <div class="closing-party closing-party__grid schedule__shared">
-                    <div class="closing-party__content">
-                      <h3 class="large mb-2">Meet the Rust-programmed robo-soccer team!</h3>
-<p>The HULKs RoboCup SPL Team is coming to EuroRust. They'll be showing their robots, code showcases, as well as debugging tools and more during both conference days. 🤖</p>
-                      </p>
-                    </div>
-                    <div class="closing-party__image">
-                      <div class="closing-party__image-overlay"></div>
-                      <img class="image-party" src="/images/robots.jpg" alt="robot playing soccer"/>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-            {% endif %}
               <tr>
                 <td scope="row" class="visually-hidden">{{activity.time}}</td>
                 <td {% if activity.isBreak %}colspan="2" class="schedule{% endif %}>
@@ -168,6 +150,24 @@
                   {% endif %}
                   {% set_global sideCount = sideCount + 1 %}
               </tr>
+              {% if loop.last %}
+                <tr>
+                  <td class="visually-hidden">&nbsp;</td>
+                  <td colspan="2">
+                    <div class="closing-party closing-party__grid schedule__shared">
+                      <div class="closing-party__content">
+                        <h3 class="large mb-2">Meet the Rust-programmed robo-soccer team!</h3>
+  <p>The HULKs RoboCup SPL Team is coming to EuroRust. They'll be showing their robots, code showcases, as well as debugging tools and more during both conference days. 🤖</p>
+                        </p>
+                      </div>
+                      <div class="closing-party__image">
+                        <div class="closing-party__image-overlay"></div>
+                        <img class="image-party" src="/images/robots.jpg" alt="robot playing soccer"/>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              {% endif %}
               {% if is_day1 and loop.last %}
                 <tr>
                   <td class="visually-hidden">19:00</td>
