@@ -155,7 +155,7 @@
 
 [[extra.sponsors.partners]]
 	title="Polkadot Blockchain Academy"
-	link="http://polkadot.academy/"
+	link="https://polkadot.academy/"
 	image="/images/sponsors/current_sponsors/polkadot_logo.svg"
 
 [[extra.sponsors.head_partners]]
