@@ -19,3 +19,15 @@ command = "zola build --base-url $DEPLOY_PRIME_URL"
 [[redirects]]
   from = "/workshops/you-cant-fix-what-you-cant-see-telemetry-for-rust-apis/"
   to = "/workshops/telemetry-for-rust-apis"
+
+[[redirects]]
+  from = "/schedule/day/1/"
+  to = "/"
+
+[[redirects]]
+  from = "/schedule/day/2/"
+  to = "/"
+
+[[redirects]]
+  from = "/workshops/"
+  to = "/"
