@@ -139,5 +139,22 @@
         </div>
       </div>
     {% endif %}
+    {% if section.extra.sponsors.media_partners %}
+      <div class="mb-4 mt-6">
+        <h3 class="center mb-2 h5">
+          Media Partner{% if section.extra.sponsors.media_partners | length > 1 %}s{% endif %}
+        </h3>
+        <div class="sponsors-grid media-partners">
+          {% for media_partner in section.extra.sponsors.media_partners %}
+            <a href="{{ media_partner.link }}" alt="{{ media_partner.title }}">
+              <img
+                class="{{ media_partner.title | lower | replace(from=' ', to='_') }}"
+                alt="{{ media_partner.title }} logo"
+                src="{{ media_partner.image }}" />
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
   </div>
 </section>

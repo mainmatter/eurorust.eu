@@ -28,6 +28,7 @@
     --head-partner-size-ratio: 1.2;
     --partner-size-ratio: 1.6;
     --supporter-size-ratio: 1;
+    --media-partner-size-ratio:1.8;
 
     --max-width-head-partners: calc(
       var(--max-width-premier-partners) / var(--head-partner-size-ratio)
@@ -40,6 +41,19 @@
     --max-width-supporters: calc(
       var(--max-width-partners) / var(--supporter-size-ratio)
     );
+
+    --max-width-media-partners: calc(
+      var(--max-width-partners) / var(--media-partner-size-ratio)
+    );
+
+
+    .rust_meetup_linz {
+      width:60%;
+
+      @media only screen and (max-width:514px) {
+      margin:0 auto; 
+      }
+    }
 
     img {
       width: 100%;
@@ -79,6 +93,15 @@
       --max-width:  var(--max-width-supporters);
       a {
         max-height: 5rem;
+      }
+    }
+
+    &.media-partners {
+      gap: 30px;
+      justify-content: center;
+      --max-width:  var(--max-width-media-partners);
+      a {
+        max-height: 3rem;
       }
     }
   }
