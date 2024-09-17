@@ -33,7 +33,7 @@
     ],
     "side": [
       { "time": "9:00 - 10:00", "title": "Doors open & breakfast" , "isBreak": true},
-      { "time": "10:00 - 12:00", "talk": "", "rowspan": 3},
+      { "time": "10:00 - 12:00", "talk": "impl-room-1", "rowspan": 3 },
       { "time": "12:00 - 13:30", "title": "Lunch", "isBreak": true },
       {
         "time": "13:30 - 14:00",
@@ -48,7 +48,7 @@
         "talk": "generating-ergonomic-c-apis-using-rustdoc-procedural-macros-and-serde"
       },
       { "time": "15:30 - 16:00", "title": "Snack Break", "isBreak": true },
-      { "time": "16:00 - 17:30", "talk": "impl-room-1", "rowspan": 3 }
+      { "time": "16:00 - 17:30", "talk": "impl-room-2", "rowspan": 3 }
     ]
   },
   {
@@ -82,7 +82,7 @@
     ],
     "side": [
       { "time": "9:00 - 10:00", "title": "Doors open & breakfast" , "isBreak": true},
-      { "time": "10:00 - 12:00", "talk": "", "rowspan": 3 },
+      { "time": "10:00 - 12:00", "talk": "impl-room-3", "rowspan": 3 },
       { "time": "12:00 - 13:30", "title": "Lunch", "isBreak": true },
       { "time": "13:30 - 14:00", "talk": "io-in-rust-the-whole-story" },
       {
@@ -94,7 +94,7 @@
         "talk": "windows-kernel-programming-with-rust"
       },
       { "time": "15:30 - 16:00", "title": "Snack Break", "isBreak": true },
-      { "time": "16:00 - 17:30", "talk": "impl-room-2", "rowspan": 3 }
+      { "time": "16:00 - 17:30", "talk": "impl-room-4", "rowspan": 3 }
     ]
   }
 ]
