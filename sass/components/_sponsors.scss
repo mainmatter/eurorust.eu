@@ -65,6 +65,12 @@
       gap: 30px;
       justify-content: center;
       --max-width: var(--max-width-partners);
+      width: --max-width;
+
+      @media (min-width:1293px) and (max-width:1538px) {
+        width: 800px;
+      }
+
     }
 
     &.supporters {
