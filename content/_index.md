@@ -153,6 +153,11 @@
 	link="https://hightec-rt.com/en/?utm_source=eurorust"
 	image="/images/sponsors/current_sponsors/hightec_rt.svg"
 
+[[extra.sponsors.partners]]
+	title="Polkadot Blockchain Academy"
+	link="https://polkadot.academy/"
+	image="/images/sponsors/current_sponsors/polkadot_logo.svg"
+
 [[extra.sponsors.head_partners]]
 	title="CodSpeed"
 	link="https://codspeed.io/?utm_source=eurorust"
