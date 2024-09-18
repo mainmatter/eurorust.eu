@@ -108,6 +108,21 @@
 	link="https://grafbase.com/?utm_source=eurorust"
 	image_format="png"
 
+[[extra.sponsors.media_partners]]
+	title="DevITjobs"
+	link="https://devitjobs.uk/"
+	image="/images/sponsors/current_sponsors/devit-jobs-logo.png"
+
+[[extra.sponsors.media_partners]]
+	title="Women in Tech Germany"
+	link="https://women-in-tech.org/gr/"
+	image="/images/sponsors/current_sponsors/women-in-tech-logo.png"
+
+[[extra.sponsors.media_partners]]
+	title="Rust Meetup Linz"
+	link="https://rust-linz.at/"
+	image="/images/sponsors/current_sponsors/rustlinz-logo.svg"
+
 [[extra.sponsors.supporters]]
 	title="Rust Foundation"
 	link="https://foundation.rust-lang.org/?utm_source=eurorust"
