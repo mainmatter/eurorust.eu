@@ -5,7 +5,8 @@ template = "workshop.html"
   date = "Oct. 9th, 2024, 10:00 - 16:00"
   sponsor = "Mainmatter"
   mentors = [
-    { name = "Luca Palmieri", avatar = "luca.png", avatar_alt = "Luca Palmieri",  bio = "Luca Palmieri works as a Principal Engineering Consultant for Mainmatter. Luca Palmieri builds technology products for a living. His current focus is on backend development, software architecture and the Rust programming language. He is the author of 'Zero to Production in Rust'.",  url = "https://www.lpalmieri.com/",  twitter = "algo_luca" }
+    { name = "Luca Palmieri", avatar = "luca.png", avatar_alt = "Luca Palmieri",  bio = "Luca Palmieri works as a Principal Engineering Consultant for Mainmatter. Luca Palmieri builds technology products for a living. His current focus is on backend development, software architecture and the Rust programming language. He is the author of 'Zero to Production in Rust'.",  url = "https://www.lpalmieri.com/",  twitter = "algo_luca" },
+    { name = "Luca Palmieri2", avatar = "luca.png", avatar_alt = "Luca Palmieri",  bio = "Luca Palmieri works as a Principal Engineering Consultant for Mainmatter. Luca Palmieri builds technology products for a living. His current focus is on backend development, software architecture and the Rust programming language. He is the author of 'Zero to Production in Rust'.",  url = "https://www.lpalmieri.com/",  twitter = "algo_luca" },
   ]
   abstract = "No application is an island: you need to interact with third-party APIs, databases and who knows what else. Testing those interactions is tricky, to say the least! This workshop will focus on expanding your Rust testing toolkit, going beyond the basic techniques you're already familiar with. At the end of the session, you'll have a strategy to test most of the scenarios that are relevant for a complex Rust application."
   ogimage = "/images/workshops/og-images/og-image-testing.png"
