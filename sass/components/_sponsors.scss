@@ -24,14 +24,15 @@
     border-radius: 10px;
     padding: 20px 18px;
 
-    --max-width-premier-partners: 25rem;
+    --max-width-premier-partners: 8rem;
+    --max-width-partner-section: 25rem;
     --head-partner-size-ratio: 1.2;
     --partner-size-ratio: 1.6;
     --supporter-size-ratio: 1;
     --media-partner-size-ratio:1.8;
 
     --max-width-head-partners: calc(
-      var(--max-width-premier-partners) / var(--head-partner-size-ratio)
+      var(--max-width-partner-section) / var(--head-partner-size-ratio)
     );
 
     --max-width-partners: calc(
