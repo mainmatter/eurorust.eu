@@ -22,7 +22,9 @@
                 {% if workshop.sponsor %}
                   <p>This workshop is sponsored by {{ workshop.sponsor }}.</p>
                 {% endif %}
-                <p class="mentor">{{ workshop.mentor }}</p>
+                {%for mentor in workshop.mentors %}
+                  <p class="mentor">{{ mentor }}</p>
+                {% endfor %}
               </div>
             </div>
           </li>
