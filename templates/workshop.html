@@ -60,26 +60,27 @@
         </div>
 
         <div class="author-and-booking">
+          {% for mentor in page.extra.mentors %}
           <div class="mentor__grid">
-            {% if page.extra.bio %}
+            {% if mentor.bio %}
               <div class="mentor__wrapper-content">
                 <h5 class="mb-4">Mentor</h5>
-                <h2 class="mb-4">{{ page.extra.mentor }}</h2>
-                <p class="">{{ page.extra.bio | safe }}</p>
+                <h2 class="mb-4">{{ mentor.name }}</h2>
+                <p class="">{{ mentor.bio | safe }}</p>
                 <div class="links mt-5">
                   <ul class="social mt-3">
-                    {%if page.extra.twitter %}
+                    {%if mentor.twitter %}
                       <li>
                         <a
-        href="https://twitter.com/{{ page.extra.twitter }}"
+        href="https://twitter.com/{{ mentor.twitter }}"
         target="_blank"
         rel="noopener noreferrer" class="btn__icon"><img src="/images/icons/twitter-footer-white.svg" alt="Twitter icon"/></a>
                       </li>
                     {% endif %}
-                    {%if page.extra.url%}
+                    {%if mentor.url%}
                       <li>
                         <a
-        href="{{ page.extra.url }}"
+        href="{{ mentor.url }}"
         target="_blank"
         rel="noopener noreferrer" class="btn__icon"><img src="/images/icons/external-link-white.svg" alt="email icon"/></a>
                       </li>
@@ -89,16 +90,17 @@
 
               </div>
             {% endif %}
-            {% if page.extra.avatar %}
+            {% if mentor.avatar %}
               <div class="photo-container mentor__wrapper-image">
                 <div class="photo-container-overlay"></div>
                 <img
                   class="photo"
-                  src="/images/workshops/{{ page.extra.avatar }}"
-                  alt="{{ page.extra.avatar_alt }}">
+                  src="/images/workshops/{{ mentor.avatar }}"
+                  alt="{{ mentor.avatar_alt }}">
               </div>
             {% endif %}
           </div>
+          {% endfor %}
         </div>
 
       </section>
