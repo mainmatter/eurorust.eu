@@ -4,10 +4,13 @@ template = "workshop.html"
 [extra]
   date = "Oct. 9th, 2024, 10:00 - 16:00"
   sponsor = "Helsing"
-  mentor = "Omar Essaid"
-  avatar = "omar.jpg"
-  avatar_alt = "Omar Essaid"
-  bio = "Software Engineer at Helsing"
+  mentors = [
+    { name= "Robert Fink", avatar = "robert.jpg", avatar_alt = "Robert Fink", bio = "CTO at Helsing" },
+    { name= "Jon Gjengset", avatar = "jon.jpg", avatar_alt = "Jon Gjengset", bio = "Principal Engineer at Helsing" },
+    { name= "Cécile Allano-Chevalier", avatar = "cecile.jpg", avatar_alt = "Cécile Allano-Chevalier", bio = "Software Engineer at Helsing" },
+    { name= "Omar Essaid", avatar = "omar.jpg", avatar_alt = "Omar Essaid", bio = "Software Engineer at Helsing" }
+  ]
+  
   abstract = "In this workshop/hackathon, you will work in small teams to build a control system (eg, think PID controller) for navigating a virtual quad copter. Each team builds a stand-alone Rust application that interfaces with the simulation server over RPC; a live leaderboard indicates how well you are doing compared to the other teams. The are, of course, no limits to algorithm creativity… or maybe you want to build your own simulator and train a genetic algorithm or reinforcement learning agent? Join the workshop and show us what you got!"
   url = "https://helsing.ai/?utm_source=eurorust"
   twitter = ""

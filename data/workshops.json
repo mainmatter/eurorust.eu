@@ -6,7 +6,7 @@
     "description": "In this workshop/hackathon, you will work in small teams to build a control system (eg, think PID controller) for navigating a virtual quad copter.",
     "slug": "hackathon",
     "sponsor": "Helsing",
-    "mentor": "Robert Fink, Jon Gjengset, Cécile Allano-Chevalier and Omar Essaid"
+    "mentors": ["Robert Fink", "Jon Gjengset", "Cécile Allano-Chevalier", "Omar Essaid"]
   },
   {
     "date": "Oct 09 2024",

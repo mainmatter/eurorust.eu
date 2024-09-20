@@ -1,12 +1,21 @@
 .mentor__grid {
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, 70% 30%);
     align-items: center;
+    justify-content: space-between;
+    padding-bottom:8em;
+    
+    &:only-child, &:last-child {
+        padding-bottom:0;
+    }
 }
 
 .mentor__wrapper-image {
-    margin-left: 4rem;
+    margin-left: 0;
+}
 
+.mentor__wrapper-content {
+    padding-right: 4rem;
 }
 
 
@@ -15,6 +24,11 @@
     .mentor__grid {
         display: grid;
         grid-template-columns: 1fr;
+        padding-bottom:5em;
+
+        &:only-child, &:last-child {
+            padding-bottom:0;
+        }
     }
 
     .mentor__wrapper-image {
