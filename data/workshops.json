@@ -2,6 +2,15 @@
   {
     "date": "Oct 09 2024",
     "time": "10:00 - 16:00",
+    "title": "Competitive control systems hackathon",
+    "description": "In this workshop/hackathon, you will work in small teams to build a control system (eg, think PID controller) for navigating a virtual quad copter.",
+    "slug": "hackathon",
+    "sponsor": "Helsing",
+    "mentors": ["Robert Fink", "Jon Gjengset", "Cécile Allano-Chevalier", "Omar Essaid"]
+  },
+  {
+    "date": "Oct 09 2024",
+    "time": "10:00 - 16:00",
     "title": "Rediscovering the Future: a deep dive into async Rust",
     "description": "Async Rust is a very powerful abstraction for concurrent systems. It is being used extensively in web development for its ability to handle many thousands of concurrent requests at a time. As an abstraction, though, async Rust is quite a brittle one. Many of its footguns and complications often need to be learned the hard way.",
     "slug": "async-rust",
