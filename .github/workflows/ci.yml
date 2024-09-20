@@ -30,6 +30,6 @@ jobs:
           BUILD_ONLY: true
 
       - name: Run Gravity
-        run: gravityci "public/**/*"
+        run: gravityci "public/**/!(*.pdf|*.mp4|*.webm)"
         env:
           GRAVITY_TOKEN: ${{ secrets.GRAVITY_TOKEN }}
