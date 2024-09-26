@@ -183,6 +183,11 @@
 	link="https://sentry.io/?utm_source=eurorust"
 	image="/images/sponsors/current_sponsors/sentry.svg"
 
+[[extra.sponsors.live_stream_partners]]
+	title="Huawei"
+	link="https://www.huawei.com/en/?ic_medium=direct&ic_source=surlent&utm_source=eurorust"
+	image="/images/sponsors/current_sponsors/huawei.png"
+
 [[extra.sponsors.premier_partners]]
 	title="Helsing"
 	link="https://helsing.ai/?utm_source=eurorust"

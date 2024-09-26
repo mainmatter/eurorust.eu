@@ -23,7 +23,7 @@
         <h3 class="center mb-2 h5">
           Live Stream Partner{% if section.extra.sponsors.live_stream_partners | length > 1 %}s{% endif %}
         </h3>
-        <div class="sponsors-grid premier-partners">
+        <div class="sponsors-grid live-stream-partners">
           {% for live_stream_partner in section.extra.sponsors.live_stream_partners %}
             <a href="{{ live_stream_partner.link }}" alt="{{ live_stream_partner.title }}">
               <img

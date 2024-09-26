@@ -39,6 +39,10 @@
       var(--max-width-head-partners) / var(--partner-size-ratio)
     );
 
+    --max-width-live-stream-partners: calc(
+      var(--max-width-head-partners) * 1.3
+    );
+
     --max-width-supporters: calc(
       var(--max-width-partners) / var(--supporter-size-ratio)
     );
@@ -66,6 +70,10 @@
     &.premier-partners {
       gap: 39px;
       --max-width: var(--max-width-premier-partners);
+    }
+
+    &.live-stream-partners {
+      --max-width: var(--max-width-live-stream-partners);
     }
 
     &.head-partners {
