@@ -190,7 +190,7 @@
 
 [[extra.sponsors.premier_partners]]
 	title="Helsing"
-	link="https://helsing.ai/?utm_source=eurorust"
+	link="/helsing"
 	image="/images/sponsors/current_sponsors/helsing-logo.svg"
 
 

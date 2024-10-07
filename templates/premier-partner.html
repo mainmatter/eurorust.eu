@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+
+{% block head %}
+  <script>
+    if (!window.tito) {
+      var script = document.createElement('script');
+      script.src = `https://js.tito.io/v2${
+      ['localhost', '127.0.0.1'].includes(window.location.hostname)
+        ? '/with/development_mode'
+        : ''}`;
+      script.async = true;
+      document
+        .head
+        .appendChild(script);
+    }
+  </script>
+
+{% endblock head %}
+
+{% block content %}
+
+{% include "sections/nav.html" %}
+
+  <main tabindex="-1" id="main" class="sections">
+    <section class="hero premier" id="hero">
+      <div class="hero__grid container">
+          <div class="hero__grid-element">
+              <div class="hero__wrapper-meta">
+                  <p class="large">
+                  October 10th and 11th 2024
+              </p>
+                  <p class="large">
+                  Vienna and online
+              </p>
+              </div>
+              <div class="hero__wrapper-graphic">
+                  <div class="logo-wrapper">
+                  <img class="logo" alt="logo helsing" src="/images/helsing-premier.png">
+                  <img class="logo-white" alt="logo helsing" src="/images/helsing-premier.png">
+                  </div>
+              </div>
+          </div>
+          <div class="hero__grid-element">
+              <div class="hero__wrapper-content">
+                  <h1 class="h1 pb-7">
+                Helsing - The Premier Partner of EuroRust 2024
+              </h1>
+                  <p class="pb-8 mw-70">
+                    Helsing is a new type of defence AI company. We believe that software, in particular artificial intelligence, will be the key to protecting our democracies.
+              </p>
+                  <div class="btn__primary">
+                      <a href="https:///www.helsing.ai?utm_source=eurorust" target="_blank" class="btn__primary--link">Visit Helsing’s website</a>
+                  </div>
+              </div>
+          </div>
+      </div>  
+  </section>
+  <section class="schedule border-t py-10">
+    <div class="container">
+      <h2 class="mb-4 h5" id="schedule">October 9th and 10th, 2024</h2>
+      <p class="mb-7 h2">Helsing Lounge</p>
+      <p>You’ll find us in the Helsing Lounge at the exhibition hall. Stop by and make a friend!</p>
+    </div>
+  </section>
+
+  <section class="hero pb-10 border-t" id="">
+    <div class="container">
+      <div class="my-7">
+        <p class="large">
+            October 9th 2024
+        </p>
+      </div>
+
+      <div class="">
+        <div class="wrapper-content">
+          <div class="h1 pb-7">
+            Competitive control systems hackathon
+          </div>
+              <p class="pb-8 mw-70">
+                In this workshop/hackathon, you will work in small teams to build a control system (eg, think PID controller) for navigating a virtual quad copter. Each team builds a stand-alone Rust application that interfaces with the simulation server over RPC; a live leaderboard indicates how well you are doing compared to the other teams. The are, of course, no limits to algorithm creativity… or maybe you want to build your own simulator and train a genetic algorithm or reinforcement learning agent? Join the workshop and show us what you got!
+            </p>
+          <div class="btn__primary">
+            <tito-button event="events-matter/eurorust-2024" save-metadata-parameters="utm_*" class="btn__primary--link">Get your ticket</tito-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container pt-2 pb-10 premier">
+    <h2 class="mb-9">Moderators</h2>
+    <ul class="speakers-list">
+      <li class="speakers-list__speaker">
+        <div class="photo-container">
+          <div class="photo-container-overlay"></div>
+            <span class="visually-hidden">Robert Fink</span>
+          <img
+        alt="Robert Fink's profile photo"
+        src="/images/workshops/robert.jpg"
+        class="photo"/>
+        </div>
+        <p class="large mt-4 speakers-list__name">Robert Fink</p>
+        <p class="">
+          CTO
+        </p>
+      </li>
+      <li class="speakers-list__speaker">
+        <div class="photo-container">
+          <div class="photo-container-overlay"></div>
+            <span class="visually-hidden">Jon Gjengset</span>
+          <img
+        alt="Jon Gjengset's speaker profile photo"
+        src="/images/workshops/jon.jpg"
+        class="photo"/>
+        </div>
+        <p class="large mt-4 speakers-list__name">Jon Gjengset</p>
+        <p class="">
+          Principal Engineer
+        </p>
+      </li>
+      <li class="speakers-list__speaker">
+        <div class="photo-container">
+          <div class="photo-container-overlay"></div>
+            <span class="visually-hidden">Cécile Allano-Chevalier</span>
+          <img
+        alt="Cécile Allano-Chevalier's speaker profile photo"
+        src="/images/workshops/cecile.jpg"
+        class="photo"/>
+        </div>
+        <p class="large mt-4 speakers-list__name">Cécile Allano-Chevalier</p>
+        <p class="">
+          Software Engineer
+        </p>
+      </li>
+      <li class="speakers-list__speaker">
+        <div class="photo-container">
+          <div class="photo-container-overlay"></div>
+            <span class="visually-hidden">Omar Essaid</span>
+          <img
+        alt="Omar Essaid's speaker profile photo"
+        src="/images/workshops/omar.jpg"
+        class="photo"/>
+        </div>
+        <p class="large mt-4 speakers-list__name">Omar Essaid</p>
+        <p class="">
+          Software Engineer
+        </p>
+      </li>
+    
+      
+    </ul>
+  </section>
+
+
+
+    {% include "sections/footer.html" %}
+
+  </main>
+{% endblock content %}
