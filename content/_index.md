@@ -119,6 +119,11 @@
 	image="/images/sponsors/current_sponsors/women-in-tech-logo.png"
 
 [[extra.sponsors.media_partners]]
+	title="Rust Vienna"
+	link="https://www.meetup.com/rust-vienna/"
+	image="/images/sponsors/current_sponsors/rustvienna-logo.svg"
+
+[[extra.sponsors.media_partners]]
 	title="Rust Meetup Linz"
 	link="https://rust-linz.at/"
 	image="/images/sponsors/current_sponsors/rustlinz-logo.svg"
