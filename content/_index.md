@@ -208,12 +208,6 @@
 	link="/talks/building-an-extremely-fast-python-package-manager-in-rust/"
 
 [[extra.speakers]]
-	name="Aida Getoeva"
-	image="aida.jpg"
-	job_title="Software Engineer at Meta"
-	link="/talks/navigating-async-heavy-rust/"
-
-[[extra.speakers]]
 	name="Jon Gjengset"
 	image="jon.jpg"
 	job_title="Principal Engineer at Helsing and Author of Rust for Rustaceans"

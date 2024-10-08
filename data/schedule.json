@@ -24,21 +24,18 @@
         "talk": "the-impact-of-memory-allocators-on-performance-a-deep-dive"
       },
       { "time": "15:30 - 16:00", "title": "Snack Break", "isBreak": true },
-      { "time": "16:00 - 16:30", "talk": "unleashing-rust-the-ferris-within" },
+      { "time": "16:00 - 16:30", "talk": "proving-macro-expansion-with-expandable" },
       {
         "time": "16:45 - 17:15",
         "talk": "runtime-scripting-for-rust-applications"
       },
-      { "time": "17:30 - 18:00", "talk": "navigating-async-heavy-rust" }
+      { "time": "17:30 - 18:00", "talk": "unleashing-rust-the-ferris-within" }
     ],
     "side": [
       { "time": "9:00 - 10:00", "title": "Doors open & breakfast" , "isBreak": true},
       { "time": "10:00 - 12:00", "talk": "impl-room-1", "rowspan": 3 },
       { "time": "12:00 - 13:30", "title": "Lunch", "isBreak": true },
-      {
-        "time": "13:30 - 14:00",
-        "talk": "proving-macro-expansion-with-expandable"
-      },
+      { "time": "13:30 - 14:00", "talk": "impl-room-1" },
       {
         "time": "14:15 - 14:45",
         "talk": "powerful-macros-good-ide-support-no-headaches-choose-two"
