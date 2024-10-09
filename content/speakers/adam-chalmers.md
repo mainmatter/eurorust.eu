@@ -3,7 +3,7 @@ template = "speaker.html"
 title = "Speaker: Adam Chalmers"
 [extra]
   name = "Adam Chalmers"
-  image = "/images/speakers/.jpeg"
+  image = "images/speakers/.jpeg"
   twitter = "adam_chal"
   url = "https://adamchalmers.com/"
   mastodon = "https://hachyderm.io/@adam_chal"

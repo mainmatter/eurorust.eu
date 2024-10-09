@@ -1,0 +1,142 @@
+.sponsors {
+  display: grid;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 80px;
+
+  .sponsors-grid-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 10px;
+    row-gap: 20px;
+  }
+
+  .sponsors-grid {
+    display: flex;
+    width: auto;
+    justify-content: center;
+    flex-flow: row wrap;
+    justify-self: center;
+    align-items: center;
+    background-color: var(--transparent-white);
+    border-radius: 10px;
+    padding: 20px 18px;
+
+    --max-width-premier-partners: 8rem;
+    --max-width-partner-section: 25rem;
+    --head-partner-size-ratio: 1.2;
+    --partner-size-ratio: 1.6;
+    --supporter-size-ratio: 1;
+    --media-partner-size-ratio:1.8;
+
+    --max-width-head-partners: calc(
+      var(--max-width-partner-section) / var(--head-partner-size-ratio)
+    );
+
+    --max-width-partners: calc(
+      var(--max-width-head-partners) / var(--partner-size-ratio)
+    );
+
+    --max-width-live-stream-partners: calc(
+      var(--max-width-head-partners) * 1.3
+    );
+
+    --max-width-supporters: calc(
+      var(--max-width-partners) / var(--supporter-size-ratio)
+    );
+
+    --max-width-media-partners: calc(
+      var(--max-width-partners) / var(--media-partner-size-ratio)
+    );
+
+
+    .rust_meetup_linz {
+      width:60%;
+
+      @media only screen and (max-width:514px) {
+      margin:0 auto; 
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-width: var(--max-width)
+    }
+
+    &.premier-partners {
+      gap: 39px;
+      --max-width: var(--max-width-premier-partners);
+    }
+
+    &.live-stream-partners {
+      --max-width: var(--max-width-live-stream-partners);
+    }
+
+    &.head-partners {
+      gap: 30px;
+      --max-width: max-width: var(--max-width-head-partners);
+      a {
+        max-height: 8rem;
+      }
+    }
+
+    &.partners {
+      gap: 30px;
+      justify-content: center;
+      --max-width: var(--max-width-partners);
+      width: --max-width;
+
+      @media (min-width:1293px) and (max-width:1538px) {
+        width: 800px;
+      }
+
+    }
+
+    &.supporters {
+      gap: 30px;
+      justify-content: center;
+      --max-width:  var(--max-width-supporters);
+      a {
+        max-height: 5rem;
+      }
+    }
+
+    &.media-partners {
+      gap: 30px;
+      justify-content: center;
+      --max-width:  var(--max-width-media-partners);
+      a {
+        max-height: 3rem;
+      }
+    }
+  }
+}
+
+.bmw-logos {
+  display: flex;
+  align-items: flex-start;
+  max-width: 100%;
+  max-width: var(--max-width);
+
+  & > * {
+    display: block;
+    flex: 1 1 var(--max-width);
+    min-width: 0;
+  }
+
+  .bmw_car_it {
+    flex: 1 1 auto;
+  }
+
+  .bmw-logo {
+    --max-width: 3.75rem;
+  }
+
+  .mini-logo {
+    --max-width: 6.875rem;
+  }
+}

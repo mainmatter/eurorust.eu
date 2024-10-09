@@ -1,0 +1,114 @@
+{% extends "2024/base.html" %}
+{% block og_image %}
+  <meta property="og:image" content="{{ page.extra.ogimage | safe }}" />
+  <meta name="twitter:image" content="{{ page.extra.ogimage | safe }}">
+{% endblock %}
+
+{% block head %}
+  <script>
+    if (!window.tito) {
+      var script = document.createElement('script');
+      script.src = `https://js.tito.io/v2${
+      ['localhost', '127.0.0.1'].includes(window.location.hostname)
+        ? '/with/development_mode'
+        : ''}`;
+      script.async = true;
+      document
+        .head
+        .appendChild(script);
+    }
+  </script>
+{% endblock head %}
+
+{% block content %}
+
+  <div class="generic-block workshop {{ page.title | lower | replace(from=' ', to='_')  }}">
+
+    {% include "sections/nav.html" %}
+
+    <main tabindex="-1" id="main">
+      <section class="hero pb-10 border-b" id="">
+        <div class="container">
+          <div class="my-7">
+            <p class="large">
+                October 9th 2024
+            </p>
+          </div>
+
+          <div class="">
+            <div class="wrapper-content">
+              <div class="h1 pb-7">
+                {{ page.title | safe }}
+              </div>
+              {% if page.extra.abstract %}
+                <p class="pb-8 mw-70">
+                  {{ page.extra.abstract | safe }}
+                </p>
+              {% endif %}
+              <div class="btn__primary">
+                <tito-button event="events-matter/eurorust-2024" save-metadata-parameters="utm_*" class="btn__primary--link">Get your ticket</tito-button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <section class="workshops workshop-details py-8 container">
+
+        <div class="workshop">
+          {{ page.content | safe }}
+        </div>
+
+        <div class="author-and-booking">
+          {% for mentor in page.extra.mentors %}
+          <div class="mentor__grid">
+            {% if mentor.bio %}
+              <div class="mentor__wrapper-content">
+                <h5 class="mb-4">Mentor</h5>
+                <h2 class="mb-4">{{ mentor.name }}</h2>
+                <p class="">{{ mentor.bio | safe }}</p>
+                <div class="links mt-5">
+                  <ul class="social mt-3">
+                    {%if mentor.twitter %}
+                      <li>
+                        <a
+        href="https://twitter.com/{{ mentor.twitter }}"
+        target="_blank"
+        rel="noopener noreferrer" class="btn__icon"><img src="/2024/images/icons/twitter-footer-white.svg" alt="Twitter icon"/></a>
+                      </li>
+                    {% endif %}
+                    {%if mentor.url%}
+                      <li>
+                        <a
+        href="{{ mentor.url }}"
+        target="_blank"
+        rel="noopener noreferrer" class="btn__icon"><img src="/2024/images/icons/external-link-white.svg" alt="email icon"/></a>
+                      </li>
+                    {% endif %}
+                  </ul>
+                </div>
+
+              </div>
+            {% endif %}
+            {% if mentor.avatar %}
+              <div class="photo-container mentor__wrapper-image">
+                <div class="photo-container-overlay"></div>
+                <img
+                  class="photo"
+                  src="/2024/images/workshops/{{ mentor.avatar }}"
+                  alt="{{ mentor.avatar_alt }}">
+              </div>
+            {% endif %}
+          </div>
+          {% endfor %}
+        </div>
+
+      </section>
+
+      {% include "sections/workshop-venue.html" %}
+    </main>
+
+    {% include "sections/footer.html" %}
+  </div>
+
+{% endblock content %}
