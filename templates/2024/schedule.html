@@ -47,7 +47,7 @@
             <ol class="schedule__list">
               {% for activity in day.mainStage %}
                 <li>
-                  {% include "partials/activity-card.html" %}
+                  {% include "2024/partials/activity-card.html" %}
                 </li>
               {% endfor %}
             </ol>
@@ -56,7 +56,7 @@
             <h4 class="schedule__track mb-4">Side track</h4>
             <ol class="schedule__list">
               {% for activity in day.side %}
-                {% include "partials/activity-card.html" %}
+                {% include "2024/partials/activity-card.html" %}
               {% endfor %}
             </ol>
           </div>
@@ -120,7 +120,7 @@
                 <td scope="row" class="visually-hidden">{{activity.time}}</td>
                 <td {% if activity.isBreak %}colspan="2" class="schedule{% endif %}>
                   <!-- siderow: {{ sideRow }} count: {{ sideCount }} currentRowSpan {{ currentRowspan }} -->
-                  {% include "partials/activity-card.html" %}
+                  {% include "2024/partials/activity-card.html" %}
                 </td>
                   {% if currentRowspan and sideCount - sideRow < currentRowspan %}
                   {% else %}
@@ -135,7 +135,7 @@
                         {% set activity = false %}
                         {% set activity = day.side[sideRow] %}
                         <td class="schedule__table-side" {% if activity.rowspan %}rowspan="{{ activity.rowspan }}"{% endif %}>
-                          {% include "partials/activity-card.html" %}
+                          {% include "2024/partials/activity-card.html" %}
                         </td>
                       {% endif %}
                       {% set_global sideRow = sideRow + 1 %}

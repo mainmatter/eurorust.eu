@@ -1,6 +1,6 @@
 <div class="activity-card">
   {% if activity.talk %}
-    {% set path = "talks/" ~ activity.talk ~ ".md" %}
+    {% set path = "2024/talks/" ~ activity.talk ~ ".md" %}
     {% set talk = get_page(path = path) %}
     <a class="activity-card__link" href="{{talk.path}}">
       <span class="visually-hidden">{{ talk.title }}</span>
@@ -13,7 +13,7 @@
           {% for speaker in talk.extra.speakers %}
             {% set path = "speakers/" ~ speaker ~ ".md" %}
             {% set speaker = get_page(path = path) %}
-            <a href="{{talk.path}}" class="speaker">{{speaker.extra.name}}</a>
+            <a href="2024/{{talk.path}}" class="speaker">{{speaker.extra.name}}</a>
           {% endfor %}
         {% endif %}
       </p>

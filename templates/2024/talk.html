@@ -47,9 +47,9 @@
                   {{ page.extra.description | safe }}
                 </div>
               {% endif %}
-              <div class="btn__primary">
+              {# <div class="btn__primary">
                 <tito-button event="events-matter/eurorust-2024" save-metadata-parameters="utm_*" class="btn__primary--link">Get your ticket</tito-button>
-              </div>
+              </div> #}
             </div>
           </div>
         </div>
@@ -103,7 +103,7 @@
                   {%if speaker.extra.image and not speaker.extra.image is containing("/.")  %}
                     <img
                       class="photo"
-                      src="{{ speaker.extra.image }}"
+                      src="/2024{{ speaker.extra.image }}"
                       alt="{{ speaker.extra.name }}">
                   {% else %}
                     <img

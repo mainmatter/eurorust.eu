@@ -11,7 +11,7 @@
         {% for workshop in workshops %}
           <li class="mb-4">
             <div class="activity-card activity-card--workshop">
-              {% set path = "workshops/" ~ workshop.slug~ ".md" %}
+              {% set path = "2024/workshops/" ~ workshop.slug~ ".md" %}
               {% set workshopData = get_page(path = path) %}
               <a class="activity-card__link" href="{{workshopData.path}}">
                 <span class="visually-hidden">{{ workshop.title }}</span>
@@ -37,7 +37,6 @@
           <p class="large">19:00 - Rust Vienna Get-Together at Centimeter Rathaus!</p>
           <p>Rust Vienna has partnered up with EuroRust and will host a special get-together for all Rustaceans the evening before the conference! Join in on the 9th of October at 7 PM at Centimeter Rathaus, Lenaugasse 11, 1080 Wien to connect with other Rust enthusiasts over ample food and drink. The community of Rust Vienna is looking forward to seeing you there!</p>
           <br/>
-          <a href="https://ti.to/events-matter/eurorust-2024/with/rust-vienna-get-together-at-centimeter-rathaus" target="_blank">Register here</a>
         </li>
       </ol>
     </div>
@@ -58,7 +57,7 @@
             <ol class="schedule__list">
               {% for activity in day.mainStage %}
                 <li>
-                  {% include "partials/activity-card.html" %}
+                  {% include "2024/partials/activity-card.html" %}
                 </li>
               {% endfor %}
             </ol>
@@ -67,7 +66,7 @@
             <h4 class="schedule__track mb-4">Side track</h4>
             <ol class="schedule__list">
               {% for activity in day.side %}
-                {% include "partials/activity-card.html" %}
+                {% include "2024/partials/activity-card.html" %}
               {% endfor %}
             </ol>
           </div>
@@ -131,7 +130,7 @@
                 <td scope="row" class="visually-hidden">{{activity.time}}</td>
                 <td {% if activity.isBreak %}colspan="2" class="schedule{% endif %}>
                   <!-- siderow: {{ sideRow }} count: {{ sideCount }} currentRowSpan {{ currentRowspan }} -->
-                  {% include "partials/activity-card.html" %}
+                  {% include "2024/partials/activity-card.html" %}
                 </td>
                   {% if currentRowspan and sideCount - sideRow < currentRowspan %}
                   {% else %}
@@ -146,7 +145,7 @@
                         {% set activity = false %}
                         {% set activity = day.side[sideRow] %}
                         <td class="schedule__table-side" {% if activity.rowspan %}rowspan="{{ activity.rowspan }}"{% endif %}>
-                          {% include "partials/activity-card.html" %}
+                          {% include "2024/partials/activity-card.html" %}
                         </td>
                       {% endif %}
                       {% set_global sideRow = sideRow + 1 %}
