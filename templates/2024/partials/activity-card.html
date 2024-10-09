@@ -11,7 +11,7 @@
       <p>
         {% if talk.extra.speakers %}
           {% for speaker in talk.extra.speakers %}
-            {% set path = "speakers/" ~ speaker ~ ".md" %}
+            {% set path = "2024/speakers/" ~ speaker ~ ".md" %}
             {% set speaker = get_page(path = path) %}
             <a href="2024/{{talk.path}}" class="speaker">{{speaker.extra.name}}</a>
           {% endfor %}

@@ -58,7 +58,7 @@
       <section class="workshops workshop-details py-8 container">
 
         {% for speaker in page.extra.speakers %}
-          {% set path = "speakers/" ~ speaker ~ ".md" %}
+          {% set path = "2024/speakers/" ~ speaker ~ ".md" %}
           {% set speaker = get_page(path = path) %}
           <div class="author-and-booking">
             <div class="mentor__grid">
