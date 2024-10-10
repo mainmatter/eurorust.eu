@@ -1,0 +1,27 @@
+footer ul {
+  list-style: none;
+}
+
+.meta,
+.pages,
+.social {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+@media (max-width: 60rem) {
+  .meta, .footer-bottom, .pages {
+    flex-direction: column;
+  }
+
+  .footer-bottom {
+    gap: 2rem; 
+  }
+
+}

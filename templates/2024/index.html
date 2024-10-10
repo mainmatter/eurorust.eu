@@ -1,0 +1,39 @@
+{% extends "2024/base.html" %}
+
+{% block content %}
+
+{% include "2024/sections/nav.html" %}
+
+  <main tabindex="-1" id="main" class="sections">
+
+
+    {% include "2024/sections/hero.html" %}
+
+    {% include "2024/sections/get-involved.html" %}
+
+    {% include "2024/sections/rustfest.html" %}
+
+    {% include "2024/sections/topics.html" %}
+
+    {% include "2024/sections/speakers.html" %}
+
+    {% include "2024/sections/moderators.html" %}
+
+    <div class="workshops__image mb-10">
+      <img class="image-oval" src="/2024/images/oval.png" alt=""/>
+    </div>
+
+    {% include "2024/sections/schedule.html" %}
+
+    {% include "2024/sections/venue.html" %}
+
+    {% include "2024/sections/past-event-highlights.html" %}
+
+    {% include "2024/sections/presented-by.html" %}
+
+    {% include "2024/sections/sponsors.html" %}
+
+    {% include "2024/sections/footer.html" %}
+
+  </main>
+{% endblock content %}

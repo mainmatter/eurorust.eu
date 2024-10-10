@@ -2,11 +2,15 @@
 [extra]
 	enable_sponsors=true
 
-[extra.section.speakers]
-	title = "Speakers"
+[[extra.past_sponsors]]
+	title="helsing"
+	link="https://helsing.ai/?utm_source=eurorust"
+	image_format="svg"
 
-[extra.section.moderators]
-	title = "Moderators"
+[[extra.past_sponsors]]
+	title="codspeed"
+	link="https://codspeed.io/?utm_source=eurorust"
+	image_format="png"
 
 [[extra.past_sponsors]]
 	title="rust_foundation"
@@ -205,14 +209,12 @@
 	job_title="Founder of Astral"
 	twitter="charliermarsh"
 	web="https://astral.sh/?utm_source=eurorust"
-	link="/talks/building-an-extremely-fast-python-package-manager-in-rust/"
 
 [[extra.speakers]]
 	name="Jon Gjengset"
 	image="jon.jpg"
 	job_title="Principal Engineer at Helsing and Author of Rust for Rustaceans"
 	twitter="jonhoo"
-	link="/talks/through-the-fire-and-the-flames/"
 
 [[extra.speakers]]
     name="Amanda Stjerna"
@@ -220,16 +222,20 @@
     job_title="PhD student in Web security at Uppsala university"
     mastodon = "https://social.spejset.org/@amanda"
     web = "https://github.com/amandasystems"
-    link="/talks/the-first-six-years-in-the-development-of-polonius/"
 
-[[extra.moderators]]
-	name="Ciara"
-	image="ciara.jpg"
-	twitter="Ciara0x1F973"
+[[extra.speakers]]
+    name="Niko Matsakis"
+    image="niko-matsakis.png"
+	job_title=""
 
-[[extra.moderators]]
-	name="Stefan Baumgartner"
-	image="stefan.jpg"
-	twitter="ddprrt"
+[[extra.speakers]]
+    name="Lisa Passing"
+    image="lisa-passing.jpeg"
+	job_title=""
+
+[[extra.speakers]]
+    name="Ashley Williams"
+    image="ashley-williams.jpeg"
+	job_title=""
 
 +++

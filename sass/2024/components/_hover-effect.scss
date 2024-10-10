@@ -1,0 +1,33 @@
+@keyframes btnHover {
+  0% {
+    border-image-slice: 1;
+    border-image-source: linear-gradient(65deg, #fff 0%, #fff 60%, #fff 100%);
+  }
+  30% {
+    border-image-slice: 1;
+    border-image-source: linear-gradient(65deg, #fff 0%, #59decb 100%);
+  }
+  70% {
+    border-image-slice: 1;
+    border-image-source: linear-gradient(65deg, #59decb 0%, #3b63e7 100%);
+  }
+  100% {
+    border-image-slice: 1;
+    border-image-source: linear-gradient(
+      65deg,
+      #59decb 0%,
+      #3b63e7 60%,
+      #de59cc 100%
+    );
+  }
+}
+
+@keyframes btnText {
+  0% {
+    background-position-x: -4rem;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
