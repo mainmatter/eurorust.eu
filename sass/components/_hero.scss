@@ -9,6 +9,11 @@
   padding-top: 10rem;
   align-items: center;
   padding-bottom: 15rem;
+
+  @media screen and (max-width:960px) {
+    padding-bottom: 2rem;
+    
+  }
 }
 
 .hero__wrapper-content {

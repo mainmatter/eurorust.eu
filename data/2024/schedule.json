@@ -1,0 +1,97 @@
+[
+  {
+    "day": "1",
+    "date": "Oct. 10th, Thursday",
+    "mainStage": [
+      { "time": "9:00 - 10:00", "title": "Doors open & breakfast" , "isBreak": true},
+      { "time": "10:00 - 10:30", "talk": "through-the-fire-and-the-flames" },
+      {
+        "time": "10:45 - 11:15",
+        "talk": "build-bigger-in-less-time-code-testing-beyond-the-basics"
+      },
+      {
+        "time": "11:30 - 12:00",
+        "talk": "a-gentle-introduction-to-procedural-macros"
+      },
+      { "time": "12:00 - 13:30", "title": "Lunch", "isBreak": true },
+      { "time": "13:30 - 14:00", "talk": "practical-rust-for-web-audio" },
+      {
+        "time": "14:15 - 14:45",
+        "talk": "augmented-docs-a-love-letter-to-rustdoc-and-docsrs"
+      },
+      {
+        "time": "15:00 - 15:30",
+        "talk": "the-impact-of-memory-allocators-on-performance-a-deep-dive"
+      },
+      { "time": "15:30 - 16:00", "title": "Snack Break", "isBreak": true },
+      { "time": "16:00 - 16:30", "talk": "proving-macro-expansion-with-expandable" },
+      {
+        "time": "16:45 - 17:15",
+        "talk": "runtime-scripting-for-rust-applications"
+      },
+      { "time": "17:30 - 18:00", "talk": "unleashing-rust-the-ferris-within" }
+    ],
+    "side": [
+      { "time": "9:00 - 10:00", "title": "Doors open & breakfast" , "isBreak": true},
+      { "time": "10:00 - 12:00", "talk": "impl-room-1", "rowspan": 3 },
+      { "time": "12:00 - 13:30", "title": "Lunch", "isBreak": true },
+      { "time": "13:30 - 14:00", "talk": "impl-room-1" },
+      {
+        "time": "14:15 - 14:45",
+        "talk": "powerful-macros-good-ide-support-no-headaches-choose-two"
+      },
+      {
+        "time": "15:00 - 15:30",
+        "talk": "generating-ergonomic-c-apis-using-rustdoc-procedural-macros-and-serde"
+      },
+      { "time": "15:30 - 16:00", "title": "Snack Break", "isBreak": true },
+      { "time": "16:00 - 17:30", "talk": "impl-room-2", "rowspan": 3 }
+    ]
+  },
+  {
+    "day": "2",
+    "date": "Oct. 11th, Friday",
+    "mainStage": [
+      { "time": "9:00 - 10:00", "title": "Doors open & breakfast" , "isBreak": true},
+      { "time": "10:00 - 10:30", "talk": "the-first-six-years-in-the-development-of-polonius" },
+      {
+        "time": "10:45 - 11:15",
+        "talk": "non-binary-rust-between-safe-and-unsafe"
+      },
+      { "time": "11:30 - 12:00", "talk": "writing-a-sd-card-driver-in-rust" },
+      { "time": "12:00 - 13:30", "title": "Lunch", "isBreak": true },
+      {
+        "time": "13:30 - 14:00",
+        "talk": "my-journey-from-webdev-to-medical-visualization-rustacea"
+      },
+      {
+        "time": "14:15 - 14:45",
+        "talk": "renaissance-of-terminal-user-interfaces-with-rust"
+      },
+      {
+        "time": "15:00 - 15:30",
+        "talk": "code-to-contract-to-code-making-ironclad-apis"
+      },
+      { "time": "15:30 - 16:00", "title": "Snack Break", "isBreak": true },
+      { "time": "16:00 - 16:30", "talk": "rust-irgendwie-irgendwo-irgendwann", "title": "TBA" },
+      { "time": "16:45 - 17:15", "talk": "linting-with-dylint" },
+      { "time": "17:30 - 18:00", "talk": "building-an-extremely-fast-python-package-manager-in-rust" }
+    ],
+    "side": [
+      { "time": "9:00 - 10:00", "title": "Doors open & breakfast" , "isBreak": true},
+      { "time": "10:00 - 12:00", "talk": "impl-room-3", "rowspan": 3 },
+      { "time": "12:00 - 13:30", "title": "Lunch", "isBreak": true },
+      { "time": "13:30 - 14:00", "talk": "io-in-rust-the-whole-story" },
+      {
+        "time": "14:15 - 14:45",
+        "talk": "fast-and-efficient-network-protocols-in-rust"
+      },
+      {
+        "time": "15:00 - 15:30",
+        "talk": "windows-kernel-programming-with-rust"
+      },
+      { "time": "15:30 - 16:00", "title": "Snack Break", "isBreak": true },
+      { "time": "16:00 - 17:30", "talk": "impl-room-4", "rowspan": 3 }
+    ]
+  }
+]
