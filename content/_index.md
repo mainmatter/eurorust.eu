@@ -8,13 +8,68 @@
 	image_format="svg"
 
 [[extra.past_sponsors]]
+	title="huawei"
+	link="https://www.huawei.com/?utm_source=eurorust"
+	image_format="svg"
+
+[[extra.past_sponsors]]
 	title="codspeed"
 	link="https://codspeed.io/?utm_source=eurorust"
 	image_format="png"
 
 [[extra.past_sponsors]]
+	title="sentry"
+	link="https://sentry.io/?utm_source=eurorust"
+	image_format="svg"
+
+[[extra.past_sponsors]]
+	title="Astral"
+	link="https://astral.sh/?utm_source=eurorust"
+	image_format="svg"
+
+[[extra.past_sponsors]]
+	title="bmw-car-it"
+	link="https://www.bmw-carit.de/en.html"
+	image_format="png"
+
+[[extra.past_sponsors]]
+	title="Veecle"
+	link="https://veecle.io"
+	image_format="png"
+
+[[extra.past_sponsors]]
+	title="wyeworks"
+	link="https://www.wyeworks.com/"
+	image_format="png"
+
+[[extra.past_sponsors]]
+	title="hightec_rt"
+	link="https://hightec-rt.com/en/?utm_source=eurorust"
+	image_format="svg"
+
+[[extra.past_sponsors]]
+	title="polkadot"
+	link="https://polkadot.academy/"
+	image_format="svg"	
+
+[[extra.past_sponsors]]
 	title="rust_foundation"
 	link="https://foundation.rust-lang.org/?utm_source=eurorust"
+	image_format="svg"
+
+[[extra.past_sponsors]]
+	title="trail-of-bits"
+	link="https://www.trailofbits.com/?utm_source=eurorust"
+	image_format="svg"
+
+[[extra.past_sponsors]]
+	title="giga"
+	link="https://giga-infosystems.com/?utm_source=eurorust"
+	image_format="svg"
+
+[[extra.past_sponsors]]
+	title="jetbrains"
+	link="https://jetbrains.com/?utm_source=eurorust"
 	image_format="svg"
 
 [[extra.past_sponsors]]
@@ -38,16 +93,6 @@
 	image_format="svg"
 
 [[extra.past_sponsors]]
-	title="hightec_rt"
-	link="https://hightec-rt.com/en/?utm_source=eurorust"
-	image_format="svg"
-
-[[extra.past_sponsors]]
-	title="huawei"
-	link="https://www.huawei.com/?utm_source=eurorust"
-	image_format="svg"
-
-[[extra.past_sponsors]]
 	title="realm_group"
 	link="https://www.realmgroup.io/?utm_source=eurorust"
 	image_format="svg"
@@ -55,11 +100,6 @@
 [[extra.past_sponsors]]
 	title="crabnebula"
 	link="https://crabnebula.dev/?utm_campaign=eurorust23&utm_source=eurorust"
-	image_format="svg"
-
-[[extra.past_sponsors]]
-	title="jetbrains"
-	link="https://jetbrains.com/?utm_source=eurorust"
 	image_format="svg"
 
 [[extra.past_sponsors]]
@@ -80,16 +120,6 @@
 [[extra.past_sponsors]]
 	title="gensyn"
 	link="https://www.gensyn.ai/?utm_source=eurorust"
-	image_format="svg"
-
-[[extra.past_sponsors]]
-	title="trail-of-bits"
-	link="https://www.trailofbits.com/?utm_source=eurorust"
-	image_format="svg"
-
-[[extra.past_sponsors]]
-	title="sentry"
-	link="https://sentry.io/?utm_source=eurorust"
 	image_format="svg"
 
 [[extra.past_sponsors]]
