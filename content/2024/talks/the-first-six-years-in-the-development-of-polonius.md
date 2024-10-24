@@ -1,6 +1,6 @@
 +++
 title = "The first six years in the development of Polonius, an improved borrow checker"
-template = "talk.html"
+template = "2024/talk.html"
 [extra]
   date = "Oct. 11th, Thursday"
   time = "10:00 - 10:30"

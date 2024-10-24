@@ -31,3 +31,143 @@ command = "zola build --base-url $DEPLOY_PRIME_URL"
 [[redirects]]
   from = "/workshops/"
   to = "/"
+
+# the old speaker pages no longer exist in the root (and not at all for 2024)
+
+[[redirects]]
+  from = "/speakers/*"
+  to = "/"
+
+# 2024 sponsor
+  
+[[redirects]]
+  from = "/helsing/"
+  to = "/2024/helsing/"
+
+# 2024 workshops
+
+[[redirects]]
+  from = "/workshops/hackathon/"
+  to = "/2024/workshops/hackathon/"
+
+[[redirects]]
+  from = "/workshops/async-rust/"
+  to = "/2024/workshops/async-rust/"
+
+[[redirects]]
+  from = "/workshops/testing-in-rust/"
+  to = "/2024/workshops/testing-in-rust/"
+
+[[redirects]]
+  from = "/workshops/diesel/"
+  to = "/2024/workshops/diesel/"
+
+# 2024 talks
+
+[[redirects]]
+  from = "/talks/through-the-fire-and-the-flames/"
+  to = "/2024/talks/through-the-fire-and-the-flames/"
+
+[[redirects]]
+  from = "/talks/build-bigger-in-less-time-code-testing-beyond-the-basics/"
+  to = "/2024/talks/build-bigger-in-less-time-code-testing-beyond-the-basics/"
+
+[[redirects]]
+  from = "/talks/a-gentle-introduction-to-procedural-macros/"
+  to = "/2024/talks/a-gentle-introduction-to-procedural-macros/"
+
+[[redirects]]
+  from = "/talks/practical-rust-for-web-audio/"
+  to = "/2024/talks/practical-rust-for-web-audio/"
+
+[[redirects]]
+  from = "/talks/impl-room-1/"
+  to = "/2024/talks/impl-room-1/"
+
+[[redirects]]
+  from = "/talks/impl-room-2/"
+  to = "/2024/talks/impl-room-2/"
+
+[[redirects]]
+  from = "/talks/impl-room-3/"
+  to = "/2024/talks/impl-room-3/"
+
+[[redirects]]
+  from = "/talks/impl-room-4/"
+  to = "/2024/talks/impl-room-4/"
+
+[[redirects]]
+  from = "/talks/augmented-docs-a-love-letter-to-rustdoc-and-docsrs/"
+  to = "/2024/talks/augmented-docs-a-love-letter-to-rustdoc-and-docsrs/"
+
+[[redirects]]
+  from = "/talks/powerful-macros-good-ide-support-no-headaches-choose-two/"
+  to = "/2024/talks/powerful-macros-good-ide-support-no-headaches-choose-two/"
+
+[[redirects]]
+  from = "/talks/the-impact-of-memory-allocators-on-performance-a-deep-dive/"
+  to = "/2024/talks/the-impact-of-memory-allocators-on-performance-a-deep-dive/"
+
+[[redirects]]
+  from = "/talks/generating-ergonomic-c-apis-using-rustdoc-procedural-macros-and-serde/"
+  to = "/2024/talks/generating-ergonomic-c-apis-using-rustdoc-procedural-macros-and-serde/"
+
+[[redirects]]
+  from = "/talks/proving-macro-expansion-with-expandable/"
+  to = "/2024/talks/proving-macro-expansion-with-expandable/"
+
+[[redirects]]
+  from = "/talks/runtime-scripting-for-rust-applications/"
+  to = "/2024/talks/runtime-scripting-for-rust-applications/"
+
+[[redirects]]
+  from = "/talks/unleashing-rust-the-ferris-within/"
+  to = "/2024/talks/unleashing-rust-the-ferris-within/"
+
+[[redirects]]
+  from = "/talks/the-first-six-years-in-the-development-of-polonius/"
+  to = "/2024/talks/the-first-six-years-in-the-development-of-polonius/"
+
+[[redirects]]
+  from = "/talks/non-binary-rust-between-safe-and-unsafe/"
+  to = "/2024/talks/non-binary-rust-between-safe-and-unsafe/"
+
+[[redirects]]
+  from = "/talks/writing-a-sd-card-driver-in-rust/"
+  to = "/2024/talks/writing-a-sd-card-driver-in-rust/"
+
+[[redirects]]
+  from = "/talks/my-journey-from-webdev-to-medical-visualization-rustacea/"
+  to = "/2024/talks/my-journey-from-webdev-to-medical-visualization-rustacea/"
+
+[[redirects]]
+  from = "/talks/io-in-rust-the-whole-story/"
+  to = "/2024/talks/io-in-rust-the-whole-story/"
+
+[[redirects]]
+  from = "/talks/fast-and-efficient-network-protocols-in-rust/"
+  to = "/2024/talks/fast-and-efficient-network-protocols-in-rust/"
+
+[[redirects]]
+  from = "/talks/code-to-contract-to-code-making-ironclad-apis/"
+  to = "/2024/talks/code-to-contract-to-code-making-ironclad-apis/"
+
+[[redirects]]
+  from = "/talks/windows-kernel-programming-with-rust/"
+  to = "/2024/talks/windows-kernel-programming-with-rust/"
+
+[[redirects]]
+  from = "/talks/rust-irgendwie-irgendwo-irgendwann/"
+  to = "/2024/talks/rust-irgendwie-irgendwo-irgendwann/"
+
+[[redirects]]
+  from = "/talks/linting-with-dylint/"
+  to = "/2024/talks/linting-with-dylint/"
+
+[[redirects]]
+  from = "/talks/building-an-extremely-fast-python-package-manager-in-rust/"
+  to = "/2024/talks/building-an-extremely-fast-python-package-manager-in-rust/"
+
+[[redirects]]
+  from = "/talks/building-an-extremely-fast-python-package-manager-in-rust/"
+  to = "/2024/talks/building-an-extremely-fast-python-package-manager-in-rust/"
