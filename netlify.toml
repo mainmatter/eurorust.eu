@@ -21,18 +21,42 @@ command = "zola build --base-url $DEPLOY_PRIME_URL"
   to = "/workshops/telemetry-for-rust-apis"
 
 [[redirects]]
-  from = "/schedule/day/1/"
-  to = "/"
-
-[[redirects]]
-  from = "/schedule/day/2/"
+  from = "/schedule/*"
   to = "/"
 
 [[redirects]]
   from = "/workshops/"
   to = "/"
 
-# the old speaker pages no longer exist in the root (and not at all for 2024)
+[[redirects]]
+  from = "/health-safety-policy/"
+  to = "/"
+
+[[redirects]]
+  from = "/sponsorship-prospectus.pdf"
+  to = "/sponsorship-prospectus-2025.pdf"
+
+[[redirects]]
+  from = "/travel/"
+  to = "/2024/travel/"
+
+[[redirects]]
+  from = "/cancellation/"
+  to = "/"
+
+[[redirects]]
+  from = "/accessibility"
+  to = "/"
+
+[[redirects]]
+  from = "/health-safety-policy"
+  to = "/"
+
+# the old speaker and moderator pages no longer exist in the root (and not at all for 2024)
+
+[[redirects]]
+  from = "/moderators/*"
+  to = "/"
 
 [[redirects]]
   from = "/speakers/*"
@@ -158,6 +182,10 @@ command = "zola build --base-url $DEPLOY_PRIME_URL"
 
 [[redirects]]
   from = "/talks/rust-irgendwie-irgendwo-irgendwann/"
+  to = "/2024/talks/rust-irgendwie-irgendwo-irgendwann/"
+
+[[redirects]]
+  from = "/talks/tba-henk/"
   to = "/2024/talks/rust-irgendwie-irgendwo-irgendwann/"
 
 [[redirects]]
