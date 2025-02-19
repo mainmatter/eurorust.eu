@@ -146,8 +146,9 @@ $spacers: (
   position: absolute;
   background-color: var(--black);
   color: var(--white);
-  padding: 0.5rem;
   opacity: 0;
+  top: 0;
+  left: 0;
 
   &:focus {
     opacity: 1;

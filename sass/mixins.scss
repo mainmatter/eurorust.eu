@@ -1,7 +1,37 @@
+@mixin button {
+  display: inline-flex;
+  padding: 5px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
 
+@mixin btn__secondary {
+  @include button;
 
+  border-radius: 100px;
+  border: 3px solid #1D113F;
+  color: #1D113F;  
+  font-family: Strenuous;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
 
+@mixin btn__primary {
+  @include button;
 
-
-
-
+  border-radius: 45px;
+  border: 2px solid #2A2848;
+  background: linear-gradient(90deg, #FEC976 0%, #CADE39 100%);
+  box-shadow: 0px 0px 100px 0px #FEC976;
+  color: #2A2848;
+  font-family: Strenuous;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 4.5px;
+}
