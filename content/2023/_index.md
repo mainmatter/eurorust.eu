@@ -69,7 +69,7 @@ template="2023/index.html"
 [[extra.sponsors.head_partners]]
 	title="Keyrock"
 	link="https://keyrock.eu/?utm_source=eurorust"
-	image="/images/sponsors/current_sponsors/keyrock.svg"
+	image="/2023/images/sponsors/current_sponsors/keyrock.svg"
 
 [[extra.sponsors.partners]]
 	title="Neo4j"
