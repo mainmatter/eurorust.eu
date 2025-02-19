@@ -126,7 +126,7 @@
       --marginTopIcon: calc((var(--line-height) - var(--maxHeightInPill)) / 2);
       margin-top: var(--marginTopIcon);
 
-      background: url(/images/icons/#{$icon}) no-repeat;
+      background: url(/2023/images/icons/#{$icon}) no-repeat;
     }
   }
 }
