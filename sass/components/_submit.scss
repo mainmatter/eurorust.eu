@@ -1,0 +1,9 @@
+.submit {
+  margin: 4rem 0;
+  display: flex;
+  justify-content: center;
+
+  .submit-button {
+    @include btn__primary;
+  }
+}
