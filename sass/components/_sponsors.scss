@@ -1,142 +1,93 @@
 .sponsors {
-  display: grid;
-  gap: 30px;
-  align-items: center;
-  margin-bottom: 80px;
+  margin: 4rem auto;
 
-  .sponsors-grid-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 0 10px;
-    row-gap: 20px;
+  h3, h4 {
+    text-align: center;
+  }
+
+  h3 {
+    margin-bottom: 4rem;
+  }
+
+  h4 {
+    margin-bottom: 2rem;
   }
 
   .sponsors-grid {
+    max-width: 1024px;
+    margin: 0 auto;
     display: flex;
-    width: auto;
-    justify-content: center;
-    flex-flow: row wrap;
-    justify-self: center;
+    flex-direction: column;
     align-items: center;
-    background-color: var(--transparent-white);
-    border-radius: 10px;
-    padding: 20px 18px;
+    justify-content: space-between;
 
-    --max-width-premier-partners: 8rem;
-    --max-width-partner-section: 25rem;
-    --head-partner-size-ratio: 1.2;
-    --partner-size-ratio: 1.6;
-    --supporter-size-ratio: 1;
-    --media-partner-size-ratio:1.8;
-
-    --max-width-head-partners: calc(
-      var(--max-width-partner-section) / var(--head-partner-size-ratio)
-    );
-
-    --max-width-partners: calc(
-      var(--max-width-head-partners) / var(--partner-size-ratio)
-    );
-
-    --max-width-live-stream-partners: calc(
-      var(--max-width-head-partners) * 1.3
-    );
-
-    --max-width-supporters: calc(
-      var(--max-width-partners) / var(--supporter-size-ratio)
-    );
-
-    --max-width-media-partners: calc(
-      var(--max-width-partners) / var(--media-partner-size-ratio)
-    );
-
-
-    .rust_meetup_linz {
-      width:60%;
-
-      @media only screen and (max-width:514px) {
-      margin:0 auto; 
-      }
+    > div + div {
+      padding-top: 4rem;
     }
 
-    img {
-      width: 100%;
-      height: auto;
-      display: block;
-      max-width: var(--max-width)
-    }
+    .sponsors-grid--main_partners, .sponsors-grid--premier_partners, .sponsors-grid--lounge_partners, .sponsors-grid--live_stream_partners, .sponsors-grid--closing_party_partners, .sponsors-grid--impl_room_partners, .sponsors-grid--head_partners, .sponsors-grid--partners, .sponsors-grid--supporters {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-    &.premier-partners {
-      gap: 39px;
-      --max-width: var(--max-width-premier-partners);
-    }
-
-    &.live-stream-partners {
-      --max-width: var(--max-width-live-stream-partners);
-    }
-
-    &.head-partners {
-      gap: 30px;
-      --max-width: max-width: var(--max-width-head-partners);
       a {
-        max-height: 8rem;
+        display: flex;
+        background: #E8EAE7;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
       }
     }
 
-    &.partners {
-      gap: 30px;
-      justify-content: center;
-      --max-width: var(--max-width-partners);
-      width: --max-width;
+    .sponsors-grid--main_partners a, .sponsors-grid--premier_partners a, .sponsors-grid--lounge_partners a, .sponsors-grid--live_stream_partners a, .sponsors-grid--closing_party_partners a, .sponsors-grid--impl_room_partners a, .sponsors-grid--head_partners a {
+      aspect-ratio: 3/1;
+      line-height: 6rem;
+      border-radius: 6rem;
 
-      @media (min-width:1293px) and (max-width:1538px) {
-        width: 800px;
+      img {
+        max-height: 6rem;
       }
-
     }
 
-    &.supporters {
-      gap: 30px;
-      justify-content: center;
-      --max-width:  var(--max-width-supporters);
+    .sponsors-grid--partners, .sponsors-grid--supporters {
+      div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+      }
+
       a {
-        max-height: 5rem;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
       }
     }
 
-    &.media-partners {
-      gap: 30px;
-      justify-content: center;
-      --max-width:  var(--max-width-media-partners);
+    .sponsors-grid--partners {
+      div {
+        gap: 4rem;
+      }
+
       a {
-        max-height: 3rem;
+        max-height: 6rem;
+
+        img {
+          max-height: 6rem;
+        }
       }
     }
-  }
-}
 
-.bmw-logos {
-  display: flex;
-  align-items: flex-start;
-  max-width: 100%;
-  max-width: var(--max-width);
+    .sponsors-grid--supporters {
+      div {
+        gap: 2rem;
+      }
 
-  & > * {
-    display: block;
-    flex: 1 1 var(--max-width);
-    min-width: 0;
-  }
+      a {
+        max-height: 4rem;
 
-  .bmw_car_it {
-    flex: 1 1 auto;
-  }
-
-  .bmw-logo {
-    --max-width: 3.75rem;
-  }
-
-  .mini-logo {
-    --max-width: 6.875rem;
+        img {
+          max-height: 4rem;
+        }
+      }
+    }
   }
 }

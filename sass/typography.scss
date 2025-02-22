@@ -12,8 +12,7 @@ h1,
   line-height: 1;
 }
 
-h2,
-.h2 {
+h2, .h2, h3, .h3 {
   @include base-typo;
   color: #8DD7FF;
   
@@ -28,18 +27,19 @@ h2,
   line-height: 45px;
 }
 
-h3,
-.h3 {
+h4, .h4 {
   @include base-typo;
-  font-size: 3rem;
-  line-height: 1.2;
-}
-
-h4,
-.h4 {
-  @include base-typo;
-  font-size: 2rem;
-  line-height: 1.2;
+  color: #8DD7FF;
+  
+  font-feature-settings: "liga" off, "clig" off;
+  text-shadow: 10px 10px 20px #2880FF;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #FFF;
+  font-family: Strenuous;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
 }
 
 h5,
