@@ -1,25 +1,7 @@
 {% extends "base.html" %}
 
-{% block head %}
-  <script>
-    if (!window.tito) {
-      var script = document.createElement('script');
-      script.src = `https://js.tito.io/v2${
-      ['localhost', '127.0.0.1'].includes(window.location.hostname)
-        ? '/with/development_mode'
-        : ''}`;
-      script.async = true;
-      document
-        .head
-        .appendChild(script);
-    }
-  </script>
-
-{% endblock head %}
-
 {% block content %}
-
-{% include "sections/nav.html" %}
+  {% include "sections/nav.html" %}
   <main tabindex="-1" id="main" class="sections">
     {% include "sections/hero.html" %}
     <!-- TODO: RustFest -->
@@ -31,6 +13,5 @@
     {% include "sections/presented-by.html" %}
     {% include "sections/sponsors.html" %}
   </main>
-
   {% include "sections/footer.html" %}
 {% endblock content %}
