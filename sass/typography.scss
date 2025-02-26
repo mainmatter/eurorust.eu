@@ -1,9 +1,17 @@
 @import "./mixins.scss";
 
+body {
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: "Panel Mono", monospace;
+  font-weight: 500;
+  line-height: 180%;
+}
+
 @mixin base-typo {
   font-feature-settings: 'liga' off, 'clig' off;
   font-family: "Panel Mono", monospace;
   font-weight: 500;
+  line-height: 180%;
 }
 
 h1,
@@ -90,10 +98,9 @@ body {
 
 p, a {
   color: #E8EAE7;
-  font-size: 14px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: normal;
 }
 
 a {
