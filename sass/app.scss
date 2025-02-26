@@ -38,9 +38,9 @@ body {
 }
 
 main {
-  background: url(images/space-station.png);
-  background-position: bottom center;
-  background-size: 75vw;
-  background-repeat: no-repeat;
+  background: url(images/space-station.png), url(/images/background.jpg);
+  background-position: bottom center, top left;
+  background-size: 75vw, 100vw;
+  background-repeat: no-repeat, repeat-y;
   padding-bottom: 100vh;
 }

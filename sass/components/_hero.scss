@@ -1,8 +1,8 @@
 .hero {
   min-height: 100vh;
-  background: url(/images/sparkle.png), url(/images/sparkle.png), url(/images/planet.png), url(/images/background.jpg);
-  background-size: 4rem, 4rem, 4rem, cover;
-  background-position: 0 50vh, 75vw 0, right 6rem, top left;
+  background: url(/images/sparkle.png), url(/images/sparkle.png), url(/images/planet.png);
+  background-size: 4rem, 4rem, 4rem;
+  background-position: 0 50vh, 75vw 0, right 6rem;
   background-repeat: no-repeat;
 }
 
