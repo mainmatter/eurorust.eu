@@ -20,13 +20,15 @@
 }
 
 .hero__grid-meta {
-  .hero__grid-meta-dates, .hero__grid-meta-location {
+  .hero__grid-meta-info {
     color: #FFF;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
     letter-spacing: 2px;
+    line-height: 140%;
+    margin-bottom: 2rem;
   }
 
   .hero__grid-canvas {
