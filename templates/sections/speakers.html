@@ -51,6 +51,15 @@
               ><img src="/images/icons/web.svg" alt="Internet icon"/></a>
             </li>
           {% endif %}
+          {% if speaker.github %}
+            <li>
+              <a
+                href="{{speaker.github}}"
+                target="_blank"
+                rel="noopener noreferrer"
+              ><img src="/images/icons/github.svg" alt="GitHub icon"/></a>
+            </li>
+          {% endif %}
         </ul>
       </li>
     {% endfor %}

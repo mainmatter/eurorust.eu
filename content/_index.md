@@ -108,6 +108,7 @@
   linkedin="https://zed.dev"
   mastodon="https://zed.dev"
   web="https://zed.dev"
+  github="https://zed.dev"
 
 [[extra.speakers]]
   name="Conrad Irwin"
@@ -118,4 +119,5 @@
   linkedin="https://zed.dev"
   mastodon="https://zed.dev"
   web="https://zed.dev"
+  github="https://zed.dev"
 +++
