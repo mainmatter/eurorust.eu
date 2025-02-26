@@ -2,14 +2,14 @@
 
 body {
   font-feature-settings: 'liga' off, 'clig' off;
-  font-family: "Panel Mono", monospace;
+  font-family: "Panel-Mono", monospace;
   font-weight: 500;
   line-height: 180%;
 }
 
 @mixin base-typo {
   font-feature-settings: 'liga' off, 'clig' off;
-  font-family: "Panel Mono", monospace;
+  font-family: "Panel-Mono", monospace;
   font-weight: 500;
   line-height: 180%;
 }
