@@ -3,6 +3,19 @@ nav {
   background: linear-gradient(90deg, #FEC976 0%, #C0CFFA 47%, #C0CFFA 97%);
   padding: 14px 16px;
   border-bottom: 1px solid #C0F7FA;
+
+  .skip-link {
+    position: absolute;
+    background-color: var(--black);
+    color: var(--white);
+    opacity: 0;
+    top: 0;
+    left: 0;
+  
+    &:focus {
+      opacity: 1;
+    }
+  }
 }
 
 .nav__logo {
