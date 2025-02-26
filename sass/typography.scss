@@ -51,49 +51,8 @@ h4, .h4 {
   line-height: 32px;
 }
 
-h5,
-.h5 {
-  @include base-typo;
-  font-size: 1.5rem;
-  line-height: 1.2;
-}
-
 p + p, p + ul, ul + p, h2 +p {
   margin-top: 1rem;
-}
-
-body {
-  @include base-typo;
-  font-size: 1.25;
-  line-height: 1.5;
-}
-
-.large {
-  @include base-typo;
-  font-size: 1.75rem;
-  line-height: 1.5;
-}
-
-.base {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-@media (max-width: 60rem) {
-  h1,
-  .h1 {
-    font-size: 3rem;
-  }
-
-  h2,
-  .h2 {
-    font-size: 2.75rem;
-  }
-
-  h3,
-  .h3 {
-    font-size: 2.5rem;
-  }
 }
 
 p, a {

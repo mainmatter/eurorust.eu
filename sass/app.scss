@@ -1,7 +1,7 @@
 @import "./reset.scss";
 @import "./mixins.scss";
 @import "./typography.scss";
-@import "./tito-button.scss";
+@import "components/tito-button.scss";
 @import "components/hero";
 @import "components/nav";
 @import "components/rustfest";
@@ -17,10 +17,6 @@
 body {
   background-color: var(--black);
   color: var(--white);
-}
-
-:root {
-  --activity-card-padding: 0.75rem;
 }
 
 main {
