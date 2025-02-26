@@ -50,6 +50,10 @@
     }
 
     .sponsors-grid--partners, .sponsors-grid--supporters {
+      img {
+        max-width: 6rem;
+      }
+
       div {
         display: flex;
         flex-wrap: wrap;

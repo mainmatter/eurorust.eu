@@ -1,81 +1,99 @@
 <section class="sponsors">
   <h3>Sponsors</h3>
   <div class="sponsors-grid">
-    <div class="sponsors-grid--main_partners">
-      <h4>Main Partner</h4>
-      {% for sponsor in section.extra.main_partner_sponsors %}
-        <a href="{{ sponsor.link }}" alt="{{ sponsor.title }}" target="_blank" rel="noopener noreferrer">
-          <img alt="{{ sponsor.title }} logo" src="{{ sponsor.image }}" />
-        </a>
-      {% endfor %}
-    </div>
-    <div class="sponsors-grid--premier_partners">
-      <h4>Premier Partner</h4>
-      {% for sponsor in section.extra.premier_partner_sponsors %}
-        <a href="{{ sponsor.link }}" alt="{{ sponsor.title }}" target="_blank" rel="noopener noreferrer">
-          <img alt="{{ sponsor.title }} logo" src="{{ sponsor.image }}" />
-        </a>
-      {% endfor %}
-    </div>
-    <div class="sponsors-grid--lounge_partners">
-      <h4>Lounge Partner</h4>
-      {% for sponsor in section.extra.lounge_partner_sponsors %}
-        <a href="{{ sponsor.link }}" alt="{{ sponsor.title }}" target="_blank" rel="noopener noreferrer">
-          <img alt="{{ sponsor.title }} logo" src="{{ sponsor.image }}" />
-        </a>
-      {% endfor %}
-    </div>
-    <div class="sponsors-grid--live_stream_partners">
-      <h4>Live Stream Partner</h4>
-      {% for sponsor in section.extra.live_stream_partner_sponsors %}
-        <a href="{{ sponsor.link }}" alt="{{ sponsor.title }}" target="_blank" rel="noopener noreferrer">
-          <img alt="{{ sponsor.title }} logo" src="{{ sponsor.image }}" />
-        </a>
-      {% endfor %}
-    </div>
-    <div class="sponsors-grid--closing_party_partners">
-      <h4>Closing Party Partner</h4>
-      {% for sponsor in section.extra.closing_party_partner_sponsors %}
-        <a href="{{ sponsor.link }}" alt="{{ sponsor.title }}" target="_blank" rel="noopener noreferrer">
-          <img alt="{{ sponsor.title }} logo" src="{{ sponsor.image }}" />
-        </a>
-      {% endfor %}
-    </div>
-    <div class="sponsors-grid--impl_room_partners">
-      <h4>Impl Room Partner</h4>
-      {% for sponsor in section.extra.impl_room_partner_sponsors %}
-        <a href="{{ sponsor.link }}" alt="{{ sponsor.title }}" target="_blank" rel="noopener noreferrer">
-          <img alt="{{ sponsor.title }} logo" src="{{ sponsor.image }}" />
-        </a>
-      {% endfor %}
-    </div>
-    <div class="sponsors-grid--head_partners">
-      <h4>Head Partner</h4>
-      {% for sponsor in section.extra.head_partner_sponsors %}
-        <a href="{{ sponsor.link }}" alt="{{ sponsor.title }}" target="_blank" rel="noopener noreferrer">
-          <img alt="{{ sponsor.title }} logo" src="{{ sponsor.image }}" />
-        </a>
-      {% endfor %}
-    </div>
-    <div class="sponsors-grid--partners">
-      <h4>Partners</h4>
-      <div>
-        {% for sponsor in section.extra.partner_sponsors %}
+    {% if section.extra.main_partner_sponsors %}
+      <div class="sponsors-grid--main_partners">
+        <h4>Main Partner</h4>
+        {% for sponsor in section.extra.main_partner_sponsors %}
           <a href="{{ sponsor.link }}" alt="{{ sponsor.title }}" target="_blank" rel="noopener noreferrer">
             <img alt="{{ sponsor.title }} logo" src="{{ sponsor.image }}" />
           </a>
         {% endfor %}
       </div>
-    </div>
-    <div class="sponsors-grid--supporters">
-      <h4>Supporters</h4>
-      <div>
-        {% for sponsor in section.extra.supporter_sponsors %}
+    {% endif %}
+    {% if section.extra.premier_partner_sponsors %}
+      <div class="sponsors-grid--premier_partners">
+        <h4>Premier Partner</h4>
+        {% for sponsor in section.extra.premier_partner_sponsors %}
           <a href="{{ sponsor.link }}" alt="{{ sponsor.title }}" target="_blank" rel="noopener noreferrer">
             <img alt="{{ sponsor.title }} logo" src="{{ sponsor.image }}" />
           </a>
         {% endfor %}
       </div>
-    </div>
+    {% endif %}
+    {% if section.extra.lounge_partner_sponsors %}
+      <div class="sponsors-grid--lounge_partners">
+        <h4>Lounge Partner</h4>
+        {% for sponsor in section.extra.lounge_partner_sponsors %}
+          <a href="{{ sponsor.link }}" alt="{{ sponsor.title }}" target="_blank" rel="noopener noreferrer">
+            <img alt="{{ sponsor.title }} logo" src="{{ sponsor.image }}" />
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% if section.extra.live_stream_partner_sponsors %}
+      <div class="sponsors-grid--live_stream_partners">
+        <h4>Live Stream Partner</h4>
+        {% for sponsor in section.extra.live_stream_partner_sponsors %}
+          <a href="{{ sponsor.link }}" alt="{{ sponsor.title }}" target="_blank" rel="noopener noreferrer">
+            <img alt="{{ sponsor.title }} logo" src="{{ sponsor.image }}" />
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% if section.extra.closing_party_partner_sponsors %}
+      <div class="sponsors-grid--closing_party_partners">
+        <h4>Closing Party Partner</h4>
+        {% for sponsor in section.extra.closing_party_partner_sponsors %}
+          <a href="{{ sponsor.link }}" alt="{{ sponsor.title }}" target="_blank" rel="noopener noreferrer">
+            <img alt="{{ sponsor.title }} logo" src="{{ sponsor.image }}" />
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% if section.extra.impl_room_partner_sponsors %}
+      <div class="sponsors-grid--impl_room_partners">
+        <h4>Impl Room Partner</h4>
+        {% for sponsor in section.extra.impl_room_partner_sponsors %}
+          <a href="{{ sponsor.link }}" alt="{{ sponsor.title }}" target="_blank" rel="noopener noreferrer">
+            <img alt="{{ sponsor.title }} logo" src="{{ sponsor.image }}" />
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% if section.extra.head_partner_sponsors %}
+      <div class="sponsors-grid--head_partners">
+        <h4>Head Partner</h4>
+        {% for sponsor in section.extra.head_partner_sponsors %}
+          <a href="{{ sponsor.link }}" alt="{{ sponsor.title }}" target="_blank" rel="noopener noreferrer">
+            <img alt="{{ sponsor.title }} logo" src="{{ sponsor.image }}" />
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% if section.extra.partner_sponsors %}
+      <div class="sponsors-grid--partners">
+        <h4>Partners</h4>
+        <div>
+          {% for sponsor in section.extra.partner_sponsors %}
+            <a href="{{ sponsor.link }}" alt="{{ sponsor.title }}" target="_blank" rel="noopener noreferrer">
+              <img alt="{{ sponsor.title }} logo" src="{{ sponsor.image }}" />
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+    {% if section.extra.supporter_sponsors %}
+      <div class="sponsors-grid--supporters">
+        <h4>Supporters</h4>
+        <div>
+          {% for sponsor in section.extra.supporter_sponsors %}
+            <a href="{{ sponsor.link }}" alt="{{ sponsor.title }}" target="_blank" rel="noopener noreferrer">
+              <img alt="{{ sponsor.title }} logo" src="{{ sponsor.image }}" />
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
   </div>
 </section>
