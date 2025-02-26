@@ -1,27 +1,20 @@
-footer ul {
-  list-style: none;
-}
+footer {
+  background: linear-gradient(to bottom, #0E1025, #0E1024) no-repeat 3rem 3rem;
+  padding-bottom: 2rem;
 
-.meta,
-.pages,
-.social {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  gap: 1.5rem;
-}
-
-@media (max-width: 60rem) {
-  .meta, .footer-bottom, .pages {
-    flex-direction: column;
+  .footer__meta-links, .footer__meta-pages, .footer__meta-social {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    padding: 1rem;
   }
 
-  .footer-bottom {
-    gap: 2rem; 
+  .footer__meta-links {
+    margin-top: -3rem;
   }
 
+  a {
+    display: block;
+  }
 }

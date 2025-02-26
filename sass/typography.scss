@@ -1,6 +1,7 @@
 @import "./mixins.scss";
 
 @mixin base-typo {
+  font-feature-settings: 'liga' off, 'clig' off;
   font-family: "Panel Mono", monospace;
   font-weight: 500;
 }
@@ -87,153 +88,20 @@ body {
   }
 }
 
+p, a {
+  color: #E8EAE7;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
 a {
-  font-weight: 700;
-  text-decoration: underline;
-  text-decoration-thickness: 0.125rem;
-  text-underline-offset: 4px;
-  -webkit-text-fill-color: rgba(255, 255, 255, 1);
-
-  &:hover {
-    text-decoration-color: #fff;
-    background-repeat: no-repeat;
-    background: -webkit-linear-gradient(
-      65deg,
-      #59decb 0%,
-      #3b63e7 30%,
-      #de59cc 70%,
-      #59decb 100%
-    );
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation-name: btnText;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in;
-  }
-}
-
-.btn__secondary,
-.btn__secondary button {
-  font-weight: 700;
-  text-decoration: underline;
-  text-decoration-thickness: 0.125rem;
-  text-underline-offset: 4px;
-  -webkit-text-fill-color: rgba(255, 255, 255, 1);
-
-  &:hover {
-    text-decoration-color: #fff;
-    background-repeat: no-repeat;
-    background: -webkit-linear-gradient(
-      65deg,
-      #59decb 0%,
-      #3b63e7 30%,
-      #de59cc 70%,
-      #59decb 100%
-    );
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation-name: btnText;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in;
-  }
-}
-
-.btn__icon,
-.btn__primary--link {
-  text-decoration: none;
-}
-
-.btn__icon {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.btn__icon::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #de59cc;
-  mix-blend-mode: overlay;
-  clip-path: circle();
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.btn__icon:hover::after {
-  opacity: 1;
-  transition: opacity 0.5s ease;
-}
-
-.btn__primary--link {
-  position: relative;
-  border: 2px solid var(--white);
-  border-image-slice: 1;
-  border-image-source: linear-gradient(65deg, #fff 0%, #fff 60%, #fff 100%);
-  padding: 2rem 2.5rem 1.25rem 3.25rem;
-  font-weight: 700;
-  cursor: pointer;
-
-  button {
-    padding: 2rem 2.5rem 1.25rem 3.25rem;
-    margin: -2rem -2.5rem -1.25rem -3.25rem;
-    font-weight: 700;
-    text-decoration-thickness: 0.125rem;
-    text-underline-offset: 4px;
-    -webkit-text-fill-color: rgba(255, 255, 255, 1);
-
-    &:hover span {
-      text-decoration-color: #fff;
-      background-repeat: no-repeat;
-      background: -webkit-linear-gradient(
-        65deg,
-        #59decb 0%,
-        #3b63e7 30%,
-        #de59cc 70%,
-        #59decb 100%
-      );
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation-name: btnText;
-      animation-duration: 1s;
-      animation-fill-mode: forwards;
-      animation-timing-function: ease-in;
-    }
-  }
-
-  &:hover {
-    animation-name: btnHover;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in;
-  }
-
-  &::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: translate(0.75rem, 0.75rem);
-    border: 2px solid var(--white);
-    pointer-events: none;
-  }
-
-  &:hover::after {
-    animation-name: btnHover;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in;
-  }
-}
-
-ul {
-  list-style: outside;
+  color: #8DD7FF;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
 }
