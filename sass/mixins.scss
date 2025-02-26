@@ -37,3 +37,32 @@
   letter-spacing: 4.5px;
   text-decoration: none;
 }
+
+@mixin dashed-border-with-corners() {
+  outline: 1px dashed #B3E4FF;
+  outline-offset: -10px;
+  
+  background-image: 
+    url(/images/util/corner-top-left.svg),
+    url(/images/util/corner-top-right.svg),
+    url(/images/util/corner-bottom-right.svg),
+    url(/images/util/corner-bottom-left.svg);
+  background-position:
+    top left,
+    top right,
+    bottom right,
+    bottom left;
+  background-repeat:
+    no-repeat;
+    background-size: .5rem;
+  
+  transition: background .25s ease-in-out;
+  
+  &:hover {
+    background-position:
+    top calc(.5rem + 1px) left calc(.5rem + 1px),
+    top calc(.5rem + 1px) right calc(.5rem + 1px),
+    bottom calc(.5rem + 1px) right calc(.5rem + 1px),
+    bottom calc(.5rem + 1px) left calc(.5rem + 1px);
+  }
+}

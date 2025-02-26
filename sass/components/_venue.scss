@@ -19,6 +19,7 @@
   }
 
   .venue__description {
+    @include dashed-border-with-corners;
     max-width: calc(1024px - 4rem);
     width: calc(66vw - 4rem);
     display: flex;

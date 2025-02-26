@@ -45,23 +45,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  outline: 1px dashed #B3E4FF;
   padding: 2rem;
-  outline-offset: -10px;
-
-  background-image: 
-    url(/images/util/corner-top-left.svg),
-    url(/images/util/corner-top-right.svg),
-    url(/images/util/corner-bottom-right.svg),
-    url(/images/util/corner-bottom-left.svg);
-  background-position:
-    top left,
-    top right,
-    bottom right,
-    bottom left;
-  background-repeat:
-    no-repeat;
-    background-size: .5rem;
+  @include dashed-border-with-corners;
 
   .hero__grid-content-about {
     color: #B3E4FF;
