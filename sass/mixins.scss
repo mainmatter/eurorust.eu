@@ -7,31 +7,33 @@
   cursor: pointer;
 }
 
-@mixin btn__secondary {
+@mixin btn__secondary($color: #1D113F) {
   @include button;
 
   border-radius: 100px;
-  border: 3px solid #1D113F;
-  color: #1D113F;  
+  border: 3px solid $color;
+  color: $color;  
   font-family: Strenuous;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  text-decoration: none;
 }
 
-@mixin btn__primary {
+@mixin btn__primary($color: #2A2848) {
   @include button;
 
   border-radius: 45px;
-  border: 2px solid #2A2848;
+  border: 2px solid $color;
   background: linear-gradient(90deg, #FEC976 0%, #CADE39 100%);
   box-shadow: 0px 0px 100px 0px #FEC976;
-  color: #2A2848;
+  color: $color;
   font-family: Strenuous;
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
   line-height: 48px;
   letter-spacing: 4.5px;
+  text-decoration: none;
 }
