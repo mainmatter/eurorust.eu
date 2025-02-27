@@ -10,8 +10,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
-  padding: 5rem 2rem;;
-  max-width: 1024px;
+  padding: 4rem 2rem;;
+  width: 85%;
+  max-width:1600px;
   margin: 0 auto;
 
   @media screen and (max-width:960px) {
@@ -20,15 +21,15 @@
 }
 
 .hero__grid-meta {
+  padding-top: .75rem;
+  width:35vw;
+
   .hero__grid-meta-info {
-    color: #FFF;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: 2px;
+    color: var(--beige);
+    letter-spacing: 1px;
     line-height: 140%;
     margin-bottom: 2rem;
+    padding-left:20px;
   }
 
   .hero__grid-canvas {
@@ -41,16 +42,13 @@
 }
 
 .hero__grid-content {
+  width:40vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 4vw;
   @include dashed-border-with-corners;
-
-  .hero__grid-content-about {
-    color: #B3E4FF;
-  }
 
   .hero__grid-content-ticket-button {
     margin-top: 1rem;

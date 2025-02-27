@@ -14,40 +14,36 @@ body {
   line-height: 180%;
 }
 
-h1,
-.h1 {
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   @include base-typo;
-  font-size: 5rem;
-  line-height: 1;
-}
-
-h2, .h2, h3, .h3 {
-  @include base-typo;
-  color: #8DD7FF;
-  
+  color: var(--blue-light);
   font-feature-settings: "liga" off, "clig" off;
   text-shadow: 10px 10px 20px #2880FF;
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #FFF;
+  -webkit-text-stroke-color: var(--beige);
   font-family: Strenuous;
-  font-size: 36px;
-  font-style: normal;
   font-weight: 700;
+  font-style:normal;
+  text-transform:lowercase;
+  letter-spacing: 3px;
+}
+
+
+h1,
+.h1 {
+  
+  font-size: clamp(20px, 3.65vw, 70px);
+  line-height: clamp(26px, 4.67vw, 90px);
+}
+
+h2, .h2, h3, .h3 {
+  font-size: 36px;
   line-height: 45px;
 }
 
 h4, .h4 {
-  @include base-typo;
-  color: #8DD7FF;
-  
-  font-feature-settings: "liga" off, "clig" off;
-  text-shadow: 10px 10px 20px #2880FF;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #FFF;
-  font-family: Strenuous;
+
   font-size: 26px;
-  font-style: normal;
-  font-weight: 700;
   line-height: 32px;
 }
 
@@ -56,14 +52,15 @@ p + p, p + ul, ul + p, h2 +p {
 }
 
 p, a {
-  color: #E8EAE7;
-  font-size: 16px;
+  color: var(--blue-light);
+  font-size: clamp(8px, 1.4vw, 27px);
+  line-height:clamp(14.8px, 2.6vw, 50px);
   font-style: normal;
   font-weight: 500;
 }
 
 a {
-  color: #8DD7FF;
+  color: var(--blue-light);
   text-decoration-line: underline;
   text-decoration-style: solid;
   text-decoration-skip-ink: none;

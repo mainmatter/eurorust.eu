@@ -11,7 +11,7 @@
   @include button;
 
   border-radius: 100px;
-  border: 3px solid $color;
+  border: 2px solid $color;
   color: $color;  
   font-family: Strenuous;
   font-size: 20px;
@@ -39,8 +39,8 @@
 }
 
 @mixin dashed-border-with-corners() {
-  outline: 1px dashed #B3E4FF;
-  outline-offset: -10px;
+  outline: 2px dotted #B3E4FF;
+  outline-offset: -15px;
   
   background-image: 
     url(/images/util/corner-top-left.svg),
@@ -54,15 +54,15 @@
     bottom left;
   background-repeat:
     no-repeat;
-    background-size: .5rem;
+    background-size: .75rem;
   
   transition: background .25s ease-in-out;
   
   &:hover {
     background-position:
-    top calc(.5rem + 1px) left calc(.5rem + 1px),
-    top calc(.5rem + 1px) right calc(.5rem + 1px),
-    bottom calc(.5rem + 1px) right calc(.5rem + 1px),
-    bottom calc(.5rem + 1px) left calc(.5rem + 1px);
+    top calc(.75rem + 1px) left calc(.75rem + 1px),
+    top calc(.75rem + 1px) right calc(.75rem + 1px),
+    bottom calc(.75rem + 1px) right calc(.75rem + 1px),
+    bottom calc(.75rem + 1px) left calc(.75rem + 1px);
   }
 }
