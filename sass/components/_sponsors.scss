@@ -1,4 +1,6 @@
 .sponsors {
+  padding-bottom:15rem;
+  
   h1, h2 {
     text-align: center;
   }
@@ -26,7 +28,7 @@
 
       a {
         display: flex;
-        background: #E8EAE7;
+        background: var(--beige);
         align-items: center;
         justify-content: center;
         padding: 1rem;
