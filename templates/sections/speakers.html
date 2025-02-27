@@ -1,9 +1,9 @@
-<section class="speakers">
-  <h3>Speakers</h3>
+<section class="speakers py-6">
+  <h1 class="pb-8">Speakers</h1>
   <ul>
     {% for speaker in section.extra.speakers %}
       <li>
-        <img alt="{{ speaker.name }}" src="{{ speaker.image }}" />
+        <img class="speaker__portrait" alt="{{ speaker.name }}" src="{{ speaker.image }}" />
         <p>{{speaker.name}}{% if speaker.company %}, {{speaker.company}}{% endif%}
         <ul class="speaker__socials">
           {% if speaker.twitter %}
