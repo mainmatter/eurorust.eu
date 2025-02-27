@@ -36,7 +36,11 @@ h1,
   line-height: clamp(26px, 4.67vw, 90px);
 }
 
-h2, .h2, h3, .h3 {
+h2, .h2 {
+  font-size: clamp(14px, 2.55vw, 50px);
+}
+
+h3, .h3 {
   font-size: 36px;
   line-height: 45px;
 }
