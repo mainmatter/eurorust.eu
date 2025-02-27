@@ -1,2 +1,36 @@
 .past-event-highlights {
-}
+    text-align: center;
+  
+    lite-youtube {
+      margin: 0 auto;
+    }
+  }
+  
+  .lty-playbtn:hover {
+    animation: none;
+  }
+
+  .past-event-highlights__grid {
+    display: grid;
+    grid-template-columns: 13% 70% 13%;
+    gap:2vw;
+    justify-content: stretch;
+  }
+
+  .past-event-highlights__image {
+    width: 13vw;
+  }
+  
+  .past-event-highlights__video {
+    background-image: url("/images/backgrounds/frame-full.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;  
+    padding: 2vw 5vw;
+    margin:0 1vw;
+    align-content:center;
+  }
+
+  .past-event-highlights__image:first-child {
+    transform: rotateY(180deg);
+  }
