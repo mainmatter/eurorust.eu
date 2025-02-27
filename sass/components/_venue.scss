@@ -4,12 +4,8 @@
   flex-direction: column;
   align-items: center;
 
-  h3 {
+  h1 {
     text-align: center;
-  }
-
-  h3 {
-    margin-bottom: 4rem;
   }
 
   img {
@@ -26,35 +22,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    outline: 1px dashed #B3E4FF;
     padding: 2rem 3rem;
-    outline-offset: -10px;
-  
-    background-image: 
-      url(/images/util/corner-top-left.svg),
-      url(/images/util/corner-top-right.svg),
-      url(/images/util/corner-bottom-right.svg),
-      url(/images/util/corner-bottom-left.svg);
-    background-position:
-      top left,
-      top right,
-      bottom right,
-      bottom left;
-    background-repeat:
-      no-repeat;
-      background-size: .5rem;
   }
 
   p {
-    margin: 0 auto;
-    color: #B3E4FF;
-    font-size: 16px;
-    line-height: 180%;
     text-align: center;
   }
 
   p + a {
-    margin-top: 2rem;
     @include btn__secondary(#B3E4FF);
   }
 }
