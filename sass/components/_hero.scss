@@ -5,7 +5,17 @@
   background-position: 0 50vh, 75vw 0, right 6rem;
   background-repeat: no-repeat;
 }
-
+.canvas__hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  outline: none;
+  z-index: 1;
+  margin-left: auto; 
+  margin-right: auto;
+  width: 1440px;
+}
 .hero__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -42,6 +52,7 @@
 }
 
 .hero__grid-content {
+  z-index:2;
   width:40vw;
   display: flex;
   flex-direction: column;

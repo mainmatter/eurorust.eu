@@ -7,17 +7,8 @@ const canvas = document.querySelector("canvas.canvas__hero");
 // Scene
 const scene = new THREE.Scene();
 
-const material = new THREE.MeshNormalMaterial();
-
-const sizes = {
-  width: document.getElementById("hero").offsetWidth,
-  height: document.getElementById("hero").offsetHeight,
-};
-/**
- * Models
- */
-const objectsDistance = 4;
-
+//Loaders
+//GLTFLoader
 const gltfLoader = new GLTFLoader();
 let model = new THREE.Object3D();
 let ferris = new THREE.Object3D();
@@ -38,10 +29,39 @@ gltfLoader.load("/js/model/ferris.glb", (gltf) => {
   scene.add(gltf.scene.children[0]);
 });
 
-// Objects
+//CubeLoader
+const cubeTextureLoader = new THREE.CubeTextureLoader();
 
-const ambientLight = new THREE.AmbientLight(0xffffff, 2.4);
+// LDR cube texture
+const environmentMap = cubeTextureLoader.load([
+  '/js/environmentMaps/px.png',
+  '/js/environmentMaps/nx.png',
+  '/js/environmentMaps/py.png',
+  '/js/environmentMaps/ny.png',
+  '/js/environmentMaps/pz.png',
+  '/js/environmentMaps/nz.png'
+])
+
+//Material
+const material = new THREE.MeshStandardMaterial({color: 0xCEE7F5, roughness:0, metalness:1, envMap: environmentMap, envMapIntensity: 1});
+
+
+const sizes = {
+  width: document.getElementById("hero").offsetWidth,
+  height: document.getElementById("hero").offsetHeight,
+};
+
+const objectsDistance = 4;
+
+
+
+// Light
+const ambientLight = new THREE.AmbientLight(0xffffff, 1);
 scene.add(ambientLight);
+
+const directionalLight = new THREE.DirectionalLight(0xFFFFFF, 1);
+  directionalLight.position.set(0, 1, 1);
+  scene.add(directionalLight);
 
 window.addEventListener("resize", () => {
   // Update sizes
