@@ -1,10 +1,16 @@
 @mixin button {
   display: inline-flex;
-  padding: 5px 20px;
+  padding: 15px 40px;
   justify-content: center;
   align-items: center;
   gap: 10px;
   cursor: pointer;
+  transition: all 0.4s;
+
+  &:hover, &:active {
+		scale: 1.05;
+		transition: all 0.2s ease-in-out;
+	}
 }
 
 @mixin btn__secondary($color: #1D113F) {
@@ -21,25 +27,29 @@
   text-decoration: none;
 }
 
-@mixin btn__primary($color: #2A2848) {
+@mixin btn__primary {
   @include button;
-
   border-radius: 45px;
-  border: 2px solid $color;
+  border: 2px solid var(--blue-dark);
   background: linear-gradient(90deg, #FEC976 0%, #CADE39 100%);
   box-shadow: 0px 0px 100px 0px #FEC976;
-  color: $color;
+  color: var(--blue-dark);
   font-family: Strenuous;
-  font-size: 32px;
+  font-size: clamp(32px, 2.9vw, 55px);
   font-style: normal;
   font-weight: 700;
   line-height: 48px;
-  letter-spacing: 4.5px;
+  letter-spacing: .3vw;
   text-decoration: none;
+
+  &:hover, &:active {
+    box-shadow: 0px 0px 50px 0px var(--blue);
+    background: linear-gradient(90deg, #CADE39 0%, #FEC976 100%);
+	}
 }
 
 @mixin dashed-border-with-corners() {
-  outline: 2px dotted #B3E4FF;
+  outline: 2px dotted var(--blue-light);
   outline-offset: -15px;
   
   background-image: 
