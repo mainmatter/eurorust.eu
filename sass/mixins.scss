@@ -6,10 +6,17 @@
   gap: 10px;
   cursor: pointer;
   transition: all 0.4s;
+  width: auto;
+  
   &:hover, &:active {
 		scale: 1.05;
 		transition: all 0.2s ease-in-out;
 	};
+
+  @media (max-width: 60rem) {
+    padding: 8px;
+    width: 75vw;
+  }
 }
 
 @mixin btn__secondary($color: #1D113F) {
@@ -23,6 +30,11 @@
   font-weight: 700;
   line-height: normal;
   text-decoration: none;
+
+  @media (max-width: 60rem) {
+    font-size: 15px;
+    width:auto;
+    }
 }
 
 @mixin btn__primary {
@@ -72,5 +84,13 @@
     top calc(.75rem + 1px) right calc(.75rem + 1px),
     bottom calc(.75rem + 1px) right calc(.75rem + 1px),
     bottom calc(.75rem + 1px) left calc(.75rem + 1px);
+  }
+
+  @media screen and (max-width: 60rem) {
+    outline: none;
+    outline-offset: none;
+  
+    background-image: none;
+    background-position: none;
   }
 }

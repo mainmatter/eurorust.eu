@@ -31,9 +31,13 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 
 h1,
 .h1 {
-  
   font-size: clamp(20px, 3.65vw, 70px);
   line-height: clamp(26px, 4.67vw, 90px);
+
+  @media screen and (max-width: 60rem) {
+    font-size: clamp(30px, 4.5vw, 36px);
+    line-height: 42px;
+  }
 }
 
 h2, .h2 {
@@ -61,6 +65,11 @@ p, a {
   line-height:clamp(14.8px, 2.6vw, 50px);
   font-style: normal;
   font-weight: 500;
+
+  @media screen and (max-width: 60rem) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 a {

@@ -5,6 +5,7 @@
   background-position: 0 50vh, 75vw 0, right 6rem;
   background-repeat: no-repeat;
 }
+
 .canvas__hero {
   position: absolute;
   top: 0;
@@ -15,24 +16,38 @@
   margin-left: auto; 
   margin-right: auto;
   width: 1440px;
+
+  @media screen and (max-width:60rem) {
+    display: none;
+  }
 }
+
 .hero__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: none;
   gap: 5rem;
   padding: 4rem 2rem;;
   width: 85%;
   max-width:1600px;
   margin: 0 auto;
 
-  @media screen and (max-width:960px) {
+  @media screen and (max-width: 60rem) {
+    grid-template-rows: auto;
+    grid-template-columns: none;
     padding-bottom: 2rem;
+    gap: 1rem;
   }
 }
 
 .hero__grid-meta {
   padding-top: .75rem;
   width:35vw;
+  margin:0 auto;
+
+  @media screen and (max-width: 60rem) {
+    width:80vw;
+  }
 
   .hero__grid-meta-info {
     color: var(--beige);
@@ -40,6 +55,11 @@
     line-height: 140%;
     margin-bottom: 2rem;
     padding-left:20px;
+    text-align:left;
+
+    @media screen and (max-width: 60rem) {
+      text-align:center;
+    }
   }
 
   .hero__grid-canvas {
@@ -60,6 +80,10 @@
   justify-content: space-between;
   padding: 4vw;
   @include dashed-border-with-corners;
+
+  @media screen and (max-width:60rem) {
+    width:80vw;
+  }
 
   .hero__grid-content-ticket-button {
     margin-top: 1rem;

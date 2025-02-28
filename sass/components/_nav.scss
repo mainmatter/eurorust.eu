@@ -24,6 +24,12 @@ nav {
   }
   .logo {
     height: 20px;
+    padding-bottom: 0;
+    
+    @media screen and (max-width: 60rem) {
+      width:30vw;
+      padding-bottom: 0.75rem;
+    }
   }
 }
 
@@ -37,7 +43,7 @@ nav {
   align-items: center;
 }
 
-@media (max-width: 60rem) {
+@media screen and (max-width: 60rem) {
   .nav {
     position: static;
   }
