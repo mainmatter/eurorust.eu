@@ -15,10 +15,20 @@
     grid-template-columns: 13% 70% 13%;
     gap:2vw;
     justify-content: stretch;
+
+    @media screen and (max-width: 60rem) {
+      display: block;
+      width:90vw;
+      margin:0 auto;
+    }
   }
 
   .past-event-highlights__image {
     width: 13vw;
+
+    @media screen and (max-width: 60rem) {
+      display:none;
+    }
   }
   
   .past-event-highlights__video {
@@ -29,6 +39,10 @@
     padding: 2vw 5vw;
     margin:0 1vw;
     align-content:center;
+
+    @media screen and (max-width: 60rem) {
+      padding:10vw;
+    }
   }
 
   .past-event-highlights__image:first-child {
