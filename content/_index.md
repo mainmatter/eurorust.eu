@@ -19,7 +19,7 @@
   company="Zed"
   image="/images/speakers/conrad-irwin.png"
   twitter="https://x.com/ConradIrwin"
-  linkedin="https://zed.dev"
-  web="https://www.linkedin.com/in/conradirwin/"
+  web="https://zed.dev"
+  linkedin="https://www.linkedin.com/in/conradirwin/"
   github="https://github.com/conradirwin"
 +++

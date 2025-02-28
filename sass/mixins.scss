@@ -29,8 +29,8 @@
   @include button;
   border-radius: 45px;
   border: 2px solid var(--blue-dark);
-  background: linear-gradient(90deg, #FEC976 0%, #CADE39 100%);
-  box-shadow: 0px 0px 100px 0px #FEC976;
+  background: linear-gradient(90deg, var(--yellow) 0%, var(--green) 100%);
+  box-shadow: 0px 0px 100px 0px var(--yellow);
   color: var(--blue-dark);
   font-family: Strenuous;
   font-size: clamp(32px, 2.9vw, 55px);
