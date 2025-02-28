@@ -42,7 +42,7 @@
 
   &:hover, &:active {
     box-shadow: 0px 0px 50px 0px var(--blue);
-    background: linear-gradient(90deg, #FEC976 0%, #FEC976 100%);
+    background: linear-gradient(90deg, var(--green) 0%, #F6D2D7 80%);
 	}
 }
 
