@@ -23,6 +23,10 @@ footer {
   color: var(--beige);
 }
 
+p, a {
+  font-size: clamp(8px, 1vw, 18px);
+}
+
   a {
     display: block;
   /*TO DO: move a style to body */

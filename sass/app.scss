@@ -16,10 +16,11 @@
 @import "components/topics";
 @import "components/past-event-highlights";
 @import "components/hover-effect";
+@import "components/generic-content";
 
 body {
   background: var(--blue-dark);
-  color: var(--white);
+  color: var(--blue-light);
 }
 
 main {
