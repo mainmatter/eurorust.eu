@@ -18,7 +18,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   @include base-typo;
   color: var(--blue-light);
   font-feature-settings: "liga" off, "clig" off;
-  text-shadow: 10px 10px 20px #2880FF;
+  text-shadow: 10px 10px 20px var(--blue);
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: var(--beige);
   font-family: Strenuous;
@@ -64,11 +64,12 @@ p, a {
 }
 
 a {
-  color: var(--blue-light);
   text-decoration-line: underline;
   text-decoration-style: solid;
   text-decoration-skip-ink: none;
   text-decoration-thickness: auto;
   text-underline-offset: auto;
   text-underline-position: from-font;
+  font-weight:700;
+  -webkit-text-fill-color: var(--blue-dark);
 }
