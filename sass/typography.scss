@@ -42,6 +42,10 @@ h1,
 
 h2, .h2 {
   font-size: clamp(14px, 2.55vw, 50px);
+
+  @media screen and (max-width: 60rem) {
+    font-size: clamp(24px, 3.3vw, 30px);
+  }
 }
 
 h3, .h3 {

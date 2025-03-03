@@ -1,4 +1,10 @@
 .speakers {
+  margin: 8rem auto;
+
+  @media screen and (max-width: 60rem) {
+    margin: 4rem auto;
+  }
+
   img.speaker__portrait {
     width:30vw;
     max-width:400px;

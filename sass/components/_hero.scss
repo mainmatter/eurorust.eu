@@ -4,6 +4,10 @@
   background-size: 4rem, 4rem, 4rem;
   background-position: 0 50vh, 75vw 0, right 6rem;
   background-repeat: no-repeat;
+
+  @media screen and (max-width: 60rem) {
+    min-height: auto;
+  }
 }
 
 .canvas__hero {

@@ -1,6 +1,13 @@
 .sponsors {
+  margin: 8rem auto;
   padding-bottom:15rem;
   
+  
+  @media screen and (max-width: 60rem) {
+    margin: 4rem auto;
+    padding-bottom: 4rem;
+  }
+
   h1, h2 {
     text-align: center;
   }

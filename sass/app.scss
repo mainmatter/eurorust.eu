@@ -31,6 +31,8 @@ main {
   padding-bottom: 100vh;
 
   @media screen and (max-width: 60rem) {
+    background-position: bottom 10vw center, top left;
     background-size: 75vw, 140vw;
+    padding-bottom: 60vw;
   }
 }

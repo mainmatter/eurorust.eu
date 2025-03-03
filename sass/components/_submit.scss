@@ -1,7 +1,11 @@
 .submit {
-  margin: 4rem 0;
+  margin: 8rem auto;
   display: flex;
   justify-content: center;
+
+  @media screen and (max-width: 60rem) {
+    margin: 6rem auto;
+  }
 
   .submit-button {
     @include btn__primary;

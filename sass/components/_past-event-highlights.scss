@@ -1,4 +1,10 @@
 .past-event-highlights {
+  margin: 8rem auto;
+
+  @media screen and (max-width: 60rem) {
+    margin: 4rem auto;
+  }
+
     text-align: center;
   
     lite-youtube {

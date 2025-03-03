@@ -1,6 +1,11 @@
 .rustfest {
-    text-align:center;
+  margin: 8rem auto;
+  text-align:center;
 
+  @media screen and (max-width: 60rem) {
+    margin: 4rem auto;
+  }
+  
     p {
         font-size: clamp(16px, 1vw, 20px);
         color: var(--beige);
