@@ -18,9 +18,8 @@
 
   .past-event-highlights__grid {
     display: grid;
-    grid-template-columns: 13% 70% 13%;
-    gap:2vw;
-    justify-content: stretch;
+    grid-template-columns: 14% 70% 14%;
+    justify-content: space-between;
 
     @media screen and (max-width: 60rem) {
       display: block;
@@ -31,6 +30,7 @@
 
   .past-event-highlights__image {
     width: 13vw;
+    justify-self: end;
 
     @media screen and (max-width: 60rem) {
       display:none;
@@ -53,4 +53,5 @@
 
   .past-event-highlights__image:first-child {
     transform: rotateY(180deg);
+    justify-self: start;
   }
