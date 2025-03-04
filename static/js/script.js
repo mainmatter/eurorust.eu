@@ -1,24 +1,35 @@
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
+function debounce(callback, wait) {
+  let to = null;
+  return (...args) => {
+    clearTimeout(to);
+    to = window.setTimeout(() => {
+      callback(...args);
+    }, wait);
+  };
+}
+
 // Canvas
-const canvas = document.querySelector("canvas.canvas__hero");
+const canvas = document.querySelector(".hero__canvas canvas");
 
 // Scene
 const scene = new THREE.Scene();
 
-//Loaders
-//GLTFLoader
+// Loaders
+// GLTFLoader
 const gltfLoader = new GLTFLoader();
 let model = new THREE.Object3D();
 let ferris = new THREE.Object3D();
+let scale = 2.8;
 
 gltfLoader.load("/js/model/ferris.glb", (gltf) => {
   model = gltf.scene;
   ferris = gltf.scene.children[0];
-  ferris.scale.set(1.5, 1.5, 1.5);
-  ferris.position.x = -1.25;
-  ferris.position.y = -1;
+  ferris.scale.set(scale, scale, scale);
+  ferris.position.x = 0;
+  ferris.position.y = -0.4;
   ferris.rotation.set(0, 0, 0);
   ferris.material = material;
   ferris.children.forEach((element) => {
@@ -29,7 +40,7 @@ gltfLoader.load("/js/model/ferris.glb", (gltf) => {
   scene.add(gltf.scene.children[0]);
 });
 
-//CubeLoader
+// CubeLoader
 const cubeTextureLoader = new THREE.CubeTextureLoader();
 
 // LDR cube texture
@@ -42,31 +53,38 @@ const environmentMap = cubeTextureLoader.load([
   '/js/environmentMaps/nz.png'
 ])
 
-//Material
-const material = new THREE.MeshStandardMaterial({color: 0xCEE7F5, roughness:0, metalness:1, envMap: environmentMap, envMapIntensity: 1});
-
+// Material
+const material = new THREE.MeshStandardMaterial({
+  color: 0xCEE7F5,
+  roughness: 0,
+  metalness: 1,
+  envMap: environmentMap,
+  envMapIntensity: 1,
+});
 
 const sizes = {
-  width: document.getElementById("hero").offsetWidth,
-  height: document.getElementById("hero").offsetHeight,
+  width: canvas.offsetWidth,
+  height: canvas.offsetHeight,
 };
-
-const objectsDistance = 4;
-
-
 
 // Light
 const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+
 scene.add(ambientLight);
 
 const directionalLight = new THREE.DirectionalLight(0xFFFFFF, 1);
-  directionalLight.position.set(0, 1, 1);
-  scene.add(directionalLight);
 
-window.addEventListener("resize", () => {
+directionalLight.position.set(0, 1, 1);
+scene.add(directionalLight);
+
+window.addEventListener("resize", debounce(() => {
+  if (canvas.offsetWidth <= 0) {
+    return;
+  }
+  
   // Update sizes
-  (sizes.width = document.getElementById("hero").offsetWidth),
-    (sizes.height = document.getElementById("hero").offsetHeight);
+  sizes.width = canvas.parentNode.offsetWidth;
+  sizes.height = canvas.parentNode.offsetWidth;
 
   // Update camera
   camera.aspect = sizes.width / sizes.height;
@@ -75,7 +93,7 @@ window.addEventListener("resize", () => {
   // Update renderer
   renderer.setSize(sizes.width, sizes.height);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-});
+}), 100);
 
 // Base camera
 const cameraGroup = new THREE.Group();
@@ -88,6 +106,7 @@ const camera = new THREE.PerspectiveCamera(
   0.1,
   100
 );
+
 camera.position.z = 6;
 cameraGroup.add(camera);
 
@@ -105,19 +124,15 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
  * Animate
  */
 const clock = new THREE.Clock();
-let previousTime = 0;
+const q = 1.5;
 
 const tick = () => {
   const elapsedTime = clock.getElapsedTime();
-  const deltaTime = elapsedTime - previousTime;
-  previousTime = elapsedTime;
 
   // Animate meshes
-
-  camera.position.x = Math.cos(elapsedTime)
-  camera.position.y = Math.sin(elapsedTime)
-
-  camera.lookAt(model.position)
+  camera.position.x = Math.cos(elapsedTime) * q;
+  camera.position.y = Math.sin(elapsedTime) * q;
+  camera.lookAt(model.position);
 
   // Render
   renderer.render(scene, camera);
@@ -126,4 +141,4 @@ const tick = () => {
   window.requestAnimationFrame(tick);
 };
 
-tick();
+window.requestAnimationFrame(tick);
