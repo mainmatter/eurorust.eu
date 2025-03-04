@@ -44,54 +44,15 @@ footer {
     }
   }
 
-.footer__meta-non-link p {
-  color: var(--beige);
-}
-
-p, a {
-  font-size: clamp(14px, 1vw, 18px);
-
-  @media screen and (max-width: 60rem) {
-    font-size:1rem;
-  }
-}
-
-  a {
-    display: block;
-  /*TO DO: move <a> style to body */
-    -webkit-text-fill-color: var(--blue-light);
-
-  &:hover {
-    text-decoration-color: transparent; 
-    background-repeat: no-repeat;
-    background: -webkit-linear-gradient(
-      65deg,
-      var(--blue-light) 0%,
-      var(--yellow) 30%,
-      var(--green) 70%,
-      var(--blue) 100%
-    );
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation-name: btnText;
-    animation-duration: 0.4s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-  }
-  &:visited {
-    text-decoration-color: var(--blue-light); 
-  }
-}
-
-@keyframes btnText {
-  0% {
-    background-position-x: -4rem;
+  .footer__meta-non-link p {
+    color: var(--beige);
   }
 
-  100% {
-    background-position: 0 0;
+  p, a {
+    font-size: clamp(14px, 1vw, 18px);
+
+    @media screen and (max-width: 60rem) {
+      font-size:1rem;
+    }
   }
 }
-}
-
-
