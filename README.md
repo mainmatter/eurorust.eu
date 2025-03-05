@@ -8,13 +8,18 @@ The source code for [https://eurorust.eu](https://eurorust.eu).
 
 - Zola
 - [Node](https://nodejs.org/en)
-- [pnpm](https://pnpm.io) 
+- [pnpm](https://pnpm.io)
 
 ### Install Zola
 
 [Zola](https://www.getzola.org) provides pre-built binaries for MacOS, Linux, and Windows.
 
 You can visit their documentation page to see [install options](https://www.getzola.org/documentation/getting-started/installation/).
+
+## Linting
+
+- `pnpm lint` to check for linter errors
+- `pnpm lint:fix` to autofix linter errors (where possible)
 
 ## Setup
 
