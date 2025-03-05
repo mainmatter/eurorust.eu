@@ -2,7 +2,8 @@
 
 {% block content %}
   {% include "sections/nav.html" %}
-  <main tabindex="-1" id="main" class="sections">
+  <div class="main sections">
+    <a id="main"></a>
     {% include "sections/hero.html" %}
     {% include "sections/rustfest.html" %}
     {% include "sections/about.html" %}
@@ -12,6 +13,8 @@
     {% include "sections/past-event-highlights.html" %}
     {% include "sections/presented-by.html" %}
     {% include "sections/sponsors.html" %}
-  </main>
+
+    <img class="main__station" src="images/space-station.png" alt="" role="presentation" loading="lazy">
+  </div>
   {% include "sections/footer.html" %}
 {% endblock content %}

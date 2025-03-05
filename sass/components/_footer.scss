@@ -1,67 +1,69 @@
-footer {
-  .footer__container {
-    @media screen and (max-width: 60rem) {
-      margin: 0 5%;
-    }
-  }
+.end {
+  background-color: var(--blue-dark);
+}
 
-  .footer__meta-container {
-    padding-top: 1rem;
+.footer__container {
+  @media screen and (max-width: 60rem) {
+    margin: 0 5%;
+  }
+}
+
+.footer__meta-container {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  background: var(--blue-dark);
+}
+
+.footer__meta-links, .footer__meta-pages, .footer__meta-social {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.footer__meta-links, .footer__meta-pages {
+  @media screen and (max-width: 60rem) {
+    flex-direction: column;
+  }
+}
+
+.footer__meta-social {
+  @media screen and (max-width: 60rem) {
+    gap: 1rem;
+    justify-content: left;
+  }
+}
+
+.footer__meta-links {
+  margin-top: -5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 0;
+
+  @media screen and (max-width: 60rem) {
+    margin-top: 2rem;
     padding-bottom: 2rem;
-    background: var(--blue-dark);
+    margin-bottom: 0;
+    border-bottom: solid 1px var(--beige);
   }
+}
 
-  .footer__meta-links, .footer__meta-pages, .footer__meta-social {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
+.footer__meta-non-link p {
+  color: var(--beige);
+}
+
+p, a {
+  font-size: clamp(14px, 1vw, 18px);
+
+  @media screen and (max-width: 60rem) {
+    font-size:1rem;
   }
+}
 
-  .footer__meta-links, .footer__meta-pages {
-    @media screen and (max-width: 60rem) {
-      flex-direction: column;
-    }
-  }
+.footer__meta-rust {
+  color: var(--beige);
+  text-align: center;
 
-  .footer__meta-social {
-    @media screen and (max-width: 60rem) {
-      gap: 1rem;
-      justify-content: left;
-    }
-  }
-
-  .footer__meta-links {
-    margin-top: -5rem;
-    margin-bottom: 2rem;
-    padding-bottom: 0;
-
-    @media screen and (max-width: 60rem) {
-      margin-top: 2rem;
-      padding-bottom: 2rem;
-      margin-bottom: 0;
-      border-bottom: solid 1px var(--beige);
-    }
-  }
-
-  .footer__meta-non-link p {
-    color: var(--beige);
-  }
-
-  p, a {
-    font-size: clamp(14px, 1vw, 18px);
-
-    @media screen and (max-width: 60rem) {
-      font-size:1rem;
-    }
-  }
-
-  .footer__meta-rust {
-    color: var(--beige);
-    text-align: center;
-
-    @media screen and (max-width: 60rem) {
-      text-align: left;
-    }
+  @media screen and (max-width: 60rem) {
+    text-align: left;
   }
 }

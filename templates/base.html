@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+{% set build_mode = get_env(name="BUILD_MODE", default="development") %}
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,16 +10,9 @@
   <meta name="language" content="en" />
   <meta name="content-language" content="en" />
   <meta name="publisher" content="EuroRust" />
+  <link rel="preconnect" href="https://p.typekit.net">
   <title>EuroRust 2025, October 9 & 10, Paris & online</title>
   <link rel="stylesheet" href="/app.css" />
-  <script type="importmap">
-  {
-    "imports": {
-      "three": "https://unpkg.com/three@0.161.0/build/three.module.js",
-      "three/addons/": "https://unpkg.com/three@0.161.0/examples/jsm/"
-    }
-  }
-  </script>
   <link rel="stylesheet" href="https://use.typekit.net/pbo6lnh.css">
   <link rel="icon" type="image/x-icon" href="/images/icons/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png" />
@@ -49,12 +42,20 @@
   <meta name="fediverse:creator" content="@eurorust@fosstodon.org" />
 
   {% block head %} {% endblock %}
+  {% if build_mode == "production" %}
   <script defer data-domain="eurorust.eu" src="https://plausible.io/js/script.tagged-events.outbound-links.js"></script>
-  <script type="module" src="/js/script.js"></script>
+  {% endif %}
 </head>
 
 <body>
   {% block content %} {% endblock %}
-</body>
 
+  {% if build_mode == "production" %}
+    {% set manifest = load_data(path="static/bundle/manifest.json") %}
+    <script defer type="module" src='bundle/{{ manifest["src/main.js"]["file"] }}'></script>
+  {% else %}
+    <script defer type="module" src="http://localhost:5173/@vite/client"></script>
+    <script defer type="module" src="http://localhost:5173/src/main.js"></script>
+  {% endif %}
+</body>
 </html>

@@ -3,7 +3,7 @@
   <ul>
     {% for speaker in section.extra.speakers %}
       <li>
-        <img class="speaker__portrait" alt="{{ speaker.name }}" src="{{ speaker.image }}" />
+        <img class="speaker__portrait" alt="{{ speaker.name }}" src="{{ speaker.image }}" width="809" height="736" />
         <p>{{speaker.name}}{% if speaker.company %}, {{speaker.company}}{% endif%}
         <ul class="speaker__socials">
           {% if speaker.twitter %}
@@ -13,7 +13,7 @@
                 href="{{speaker.twitter}}"
                 target="_blank"
                 rel="noopener noreferrer"
-              ><img src="/images/icons/twitter.svg" alt="X icon"/></a>
+              ><img src="/images/icons/twitter.svg" alt="X" width="42" height="42"></a>
             </li>
           {% endif %}
           {% if speaker.bsky %}
@@ -23,7 +23,7 @@
                 href="{{speaker.bsky}}"
                 target="_blank"
                 rel="noopener noreferrer"
-              ><img src="/images/icons/bluesky.svg" alt="Bluesky icon"/></a>
+              ><img src="/images/icons/bluesky.svg" alt="Bluesky" width="42" height="42"></a>
             </li>
           {% endif %}
           {% if speaker.mastodon %}
@@ -33,7 +33,7 @@
                 href="{{speaker.mastodon}}"
                 target="_blank"
                 rel="noopener noreferrer"
-              ><img src="/images/icons/mastodon.svg" alt="Mastodon icon"/></a>
+              ><img src="/images/icons/mastodon.svg" alt="Mastodon" width="42" height="42"></a>
             </li>
           {% endif %}
           {% if speaker.linkedin %}
@@ -43,7 +43,7 @@
                 href="{{speaker.linkedin}}"
                 target="_blank"
                 rel="noopener noreferrer"
-              ><img src="/images/icons/linkedin.svg" alt="LinkedIn icon"/></a>
+              ><img src="/images/icons/linkedin.svg" alt="LinkedIn" width="42" height="42"></a>
             </li>
           {% endif %}
           {% if speaker.web %}
@@ -53,7 +53,7 @@
                 href="{{speaker.web}}"
                 target="_blank"
                 rel="noopener noreferrer"
-              ><img src="/images/icons/web.svg" alt="Internet icon"/></a>
+              ><img src="/images/icons/web.svg" alt="Internet" width="42" height="42"></a>
             </li>
           {% endif %}
           {% if speaker.github %}
@@ -63,7 +63,7 @@
                 href="{{speaker.github}}"
                 target="_blank"
                 rel="noopener noreferrer"
-              ><img src="/images/icons/github.svg" alt="GitHub icon"/></a>
+              ><img src="/images/icons/github.svg" alt="GitHub" width="42" height="42"></a>
             </li>
           {% endif %}
         </ul>
