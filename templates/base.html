@@ -1,61 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-{% set build_mode = get_env(name="BUILD_MODE", default="development") %}
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="EuroRust is a 2 day conference for the European Rust community – October 9 & 10, 2025 – in Paris & online" />
-  <meta name="keywords" content="" />
-  <meta name="language" content="en" />
-  <meta name="content-language" content="en" />
-  <meta name="publisher" content="EuroRust" />
-  <link rel="preconnect" href="https://p.typekit.net">
-  <title>EuroRust 2025, October 9 & 10, Paris & online</title>
-  <link rel="stylesheet" href="/app.css" />
-  <link rel="stylesheet" href="https://use.typekit.net/pbo6lnh.css">
-  <link rel="icon" type="image/x-icon" href="/images/icons/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/favicon-192x192.png" />
-  <link rel="icon" type="image/png" sizes="256x256" href="/images/icons/favicon-256x256.png" />
-  <!--  Essential META Tags -->
-  <meta property="og:title" content="EuroRust 2025 – October 9 & 10, Paris & online" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="/" />
-  {% block og_image %}
-    <meta property="og:image" content="/images/og-image.png" />
-    <meta name="twitter:image" content="/images/og-image.png">
-  {% endblock %}
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="EuroRust 2025 – October 9 & 10, Paris & online">
-  <meta name="twitter:description" content="EuroRust is a 2 day conference for the European Rust community – October 9 & 10, 2025 – in Paris & online">
+  {% set build_mode = get_env(name="BUILD_MODE", default="development") %}
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="EuroRust is a 2 day conference for the European Rust community – October 9 & 10, 2025 – in Paris & online"
+    />
+    <meta name="keywords" content="" />
+    <meta name="language" content="en" />
+    <meta name="content-language" content="en" />
+    <meta name="publisher" content="EuroRust" />
+    <link rel="preconnect" href="https://p.typekit.net" />
+    <title>EuroRust 2025, October 9 & 10, Paris & online</title>
+    <link rel="stylesheet" href="/app.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/pbo6lnh.css" />
+    <link rel="icon" type="image/x-icon" href="/images/icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/favicon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="256x256" href="/images/icons/favicon-256x256.png" />
+    <!--  Essential META Tags -->
+    <meta property="og:title" content="EuroRust 2025 – October 9 & 10, Paris & online" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/" />
+    {% block og_image %}
+      <meta property="og:image" content="/images/og-image.png" />
+      <meta name="twitter:image" content="/images/og-image.png" />
+    {% endblock %}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="EuroRust 2025 – October 9 & 10, Paris & online" />
+    <meta
+      name="twitter:description"
+      content="EuroRust is a 2 day conference for the European Rust community – October 9 & 10, 2025 – in Paris & online"
+    />
 
-  <!--  Non-Essential, But Recommended -->
-  <meta property="og:description" content="EuroRust is a 2 day conference for the European Rust community – October 9 & 10, 2025 – in Paris & online">
-  <meta property="og:site_name" content="EuroRust">
-  <meta name="twitter:image:alt" content="EuroRust 2025">
+    <!--  Non-Essential, But Recommended -->
+    <meta
+      property="og:description"
+      content="EuroRust is a 2 day conference for the European Rust community – October 9 & 10, 2025 – in Paris & online"
+    />
+    <meta property="og:site_name" content="EuroRust" />
+    <meta name="twitter:image:alt" content="EuroRust 2025" />
 
-  <!--  Non-Essential, But Required for Analytics -->
-  <meta name="twitter:site" content="@euro_rust">
-  <meta name="fediverse:creator" content="@eurorust@fosstodon.org" />
+    <!--  Non-Essential, But Required for Analytics -->
+    <meta name="twitter:site" content="@euro_rust" />
+    <meta name="fediverse:creator" content="@eurorust@fosstodon.org" />
 
-  {% block head %} {% endblock %}
-  {% if build_mode == "production" %}
-  <script defer data-domain="eurorust.eu" src="https://plausible.io/js/script.tagged-events.outbound-links.js"></script>
-  {% endif %}
-</head>
+    {% block head %}{% endblock %}
+    {% if build_mode == "production" %}
+      <script
+        defer
+        data-domain="eurorust.eu"
+        src="https://plausible.io/js/script.tagged-events.outbound-links.js"
+      ></script>
+    {% endif %}
+  </head>
 
-<body>
-  {% block content %} {% endblock %}
+  <body>
+    {% block content %}{% endblock %}
 
-  {% if build_mode == "production" %}
-    {% set manifest = load_data(path="static/bundle/manifest.json") %}
-    <script defer type="module" src='bundle/{{ manifest["src/main.js"]["file"] }}'></script>
-  {% else %}
-    <script defer type="module" src="http://localhost:5173/@vite/client"></script>
-    <script defer type="module" src="http://localhost:5173/src/main.js"></script>
-  {% endif %}
-</body>
+    {% if build_mode == "production" %}
+      {% set manifest = load_data(path="static/bundle/manifest.json") %}
+      <script defer type="module" src='bundle/{{ manifest["src/main.js"]["file"] }}'></script>
+    {% else %}
+      <script defer type="module" src="http://localhost:5173/@vite/client"></script>
+      <script defer type="module" src="http://localhost:5173/src/main.js"></script>
+    {% endif %}
+  </body>
 </html>
