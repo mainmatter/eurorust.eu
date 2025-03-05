@@ -14,14 +14,17 @@
   background: var(--blue-dark);
 }
 
-.footer__meta-links, .footer__meta-pages, .footer__meta-social {
+.footer__meta-links,
+.footer__meta-pages,
+.footer__meta-social {
   list-style: none;
   display: flex;
   gap: 2rem;
   justify-content: center;
 }
 
-.footer__meta-links, .footer__meta-pages {
+.footer__meta-links,
+.footer__meta-pages {
   @media screen and (max-width: 60rem) {
     flex-direction: column;
   }
@@ -51,11 +54,12 @@
   color: var(--beige);
 }
 
-p, a {
+p,
+a {
   font-size: clamp(14px, 1vw, 18px);
 
   @media screen and (max-width: 60rem) {
-    font-size:1rem;
+    font-size: 1rem;
   }
 }
 

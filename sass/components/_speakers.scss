@@ -6,23 +6,23 @@
   }
 
   img.speaker__portrait {
-    width:30vw;
-    max-width:400px;
+    width: 30vw;
+    max-width: 400px;
 
     @media screen and (max-width: 60rem) {
-      width:75vw;
+      width: 75vw;
     }
   }
 
-
-  h1, h4 {
+  h1,
+  h4 {
     text-align: center;
   }
-  
+
   h4 {
     margin-bottom: 2rem;
   }
-  
+
   ul {
     list-style: none;
     max-width: 1024px;

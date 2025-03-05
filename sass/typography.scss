@@ -1,33 +1,45 @@
 @import "./mixins.scss";
 
 body {
-  font-feature-settings: 'liga' off, 'clig' off;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
   font-family: "Panel-Mono", monospace;
   font-weight: 500;
   line-height: 180%;
 }
 
 @mixin base-typo {
-  font-feature-settings: 'liga' off, 'clig' off;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
   font-family: "Panel-Mono", monospace;
   font-weight: 500;
   line-height: 180%;
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
   @include base-typo;
   color: var(--blue-light);
-  font-feature-settings: "liga" off, "clig" off;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
   text-shadow: 10px 10px 20px var(--blue);
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: var(--beige);
   font-family: Strenuous;
   font-weight: 700;
-  font-style:normal;
-  text-transform:lowercase;
+  font-style: normal;
+  text-transform: lowercase;
   letter-spacing: 3px;
 }
-
 
 h1,
 .h1 {
@@ -40,7 +52,8 @@ h1,
   }
 }
 
-h2, .h2 {
+h2,
+.h2 {
   font-size: clamp(14px, 2.55vw, 50px);
 
   @media screen and (max-width: 60rem) {
@@ -48,25 +61,30 @@ h2, .h2 {
   }
 }
 
-h3, .h3 {
+h3,
+.h3 {
   font-size: 36px;
   line-height: 45px;
 }
 
-h4, .h4 {
-
+h4,
+.h4 {
   font-size: 26px;
   line-height: 32px;
 }
 
-p + p, p + ul, ul + p, h2 +p {
+p + p,
+p + ul,
+ul + p,
+h2 + p {
   margin-top: 1rem;
 }
 
-p, a {
+p,
+a {
   color: var(--blue-light);
   font-size: clamp(8px, 1.4vw, 27px);
-  line-height:clamp(14.8px, 2.6vw, 50px);
+  line-height: clamp(14.8px, 2.6vw, 50px);
   font-style: normal;
   font-weight: 500;
 
@@ -83,7 +101,7 @@ a {
   text-decoration-thickness: auto;
   text-underline-offset: auto;
   text-underline-position: from-font;
-  font-weight:700;
+  font-weight: 700;
 }
 
 @keyframes btnText {
@@ -102,7 +120,7 @@ a:not([class]) {
   -webkit-text-fill-color: var(--blue-light);
 
   &:hover {
-    text-decoration-color: transparent; 
+    text-decoration-color: transparent;
     background-repeat: no-repeat;
     background: -webkit-linear-gradient(
       65deg,
@@ -118,8 +136,8 @@ a:not([class]) {
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
   }
-  
+
   &:visited {
-    text-decoration-color: var(--blue-light); 
+    text-decoration-color: var(--blue-light);
   }
 }

@@ -2,7 +2,10 @@
   padding: 4rem 2rem;
   background: url(/images/sparkle.png), url(/images/sparkle.png), url(/images/planet.webp);
   background-size: 4rem, 4rem, 4rem;
-  background-position: 0 50vh, 75vw 0, right 6rem;
+  background-position:
+    0 50vh,
+    75vw 0,
+    right 6rem;
   background-repeat: no-repeat;
 
   @media screen and (max-width: 60rem) {
@@ -19,7 +22,7 @@
 .hero__grid {
   display: grid;
   grid-template:
-    "meta content" auto
+    'meta content' auto
     / auto max(50%, 26rem);
 
   gap: 5rem;
@@ -28,8 +31,8 @@
 
   @media screen and (max-width: 60rem) {
     grid-template:
-      "meta" auto
-      "content" auto
+      'meta' auto
+      'content' auto
       / 1fr;
     padding-bottom: 2rem;
     gap: 1rem;
@@ -54,12 +57,12 @@
 
 .hero__grid-meta {
   grid-area: meta;
-  padding-top: .75rem;
-  width:35vw;
-  margin:0 auto;
+  padding-top: 0.75rem;
+  width: 35vw;
+  margin: 0 auto;
 
   @media screen and (max-width: 60rem) {
-    width:80vw;
+    width: 80vw;
   }
 
   .hero__grid-meta-info {

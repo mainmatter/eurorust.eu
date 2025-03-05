@@ -1,7 +1,7 @@
 nav {
   z-index: 50;
-  position:relative;
-  background: linear-gradient(90deg, #FEC976 0%, #C0CFFA 47%, #C0CFFA 97%);
+  position: relative;
+  background: linear-gradient(90deg, #fec976 0%, #c0cffa 47%, #c0cffa 97%);
   padding: 14px 16px;
 
   .skip-link {
@@ -11,7 +11,7 @@ nav {
     opacity: 0;
     top: 0;
     left: 0;
-  
+
     &:focus {
       opacity: 1;
     }
@@ -20,14 +20,14 @@ nav {
 
 .nav__logo {
   .link {
-    display: flex
+    display: flex;
   }
   .logo {
     height: 20px;
     padding-bottom: 0;
-    
+
     @media screen and (max-width: 60rem) {
-      width:30vw;
+      width: 30vw;
       padding-bottom: 0.75rem;
     }
   }
