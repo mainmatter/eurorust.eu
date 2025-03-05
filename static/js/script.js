@@ -14,53 +14,50 @@ function debounce(callback, wait) {
 // Canvas
 const canvas = document.querySelector(".hero__canvas canvas");
 
-// Scene
-const scene = new THREE.Scene();
-
 // Loaders
-// GLTFLoader
-const gltfLoader = new GLTFLoader();
-let model = new THREE.Object3D();
-let ferris = new THREE.Object3D();
-let scale = 2.8;
+const textureLoader = new THREE.CubeTextureLoader();
+const meshLoader = new GLTFLoader();
 
-gltfLoader.load("/js/model/ferris.glb", (gltf) => {
-  model = gltf.scene;
-  ferris = gltf.scene.children[0];
-  ferris.scale.set(scale, scale, scale);
-  ferris.position.x = 0;
-  ferris.position.y = -0.4;
-  ferris.rotation.set(0, 0, 0);
-  ferris.material = material;
-  ferris.children.forEach((element) => {
-    element.material = material;
-    model.name = model;
-    ferris.name = ferris;
-  });
-  scene.add(gltf.scene.children[0]);
-});
+const meshPromise = meshLoader.loadAsync("/js/model/ferris.glb");
+const texturePromise = textureLoader.loadAsync([
+  '/js/environmentMaps/px.webp',
+  '/js/environmentMaps/nx.webp',
+  '/js/environmentMaps/py.webp',
+  '/js/environmentMaps/ny.webp',
+  '/js/environmentMaps/pz.webp',
+  '/js/environmentMaps/nz.webp'
+]);
 
-// CubeLoader
-const cubeTextureLoader = new THREE.CubeTextureLoader();
-
-// LDR cube texture
-const environmentMap = cubeTextureLoader.load([
-  '/js/environmentMaps/px.png',
-  '/js/environmentMaps/nx.png',
-  '/js/environmentMaps/py.png',
-  '/js/environmentMaps/ny.png',
-  '/js/environmentMaps/pz.png',
-  '/js/environmentMaps/nz.png'
-])
+const [envMap, mesh] = await Promise.all([texturePromise, meshPromise]);
 
 // Material
 const material = new THREE.MeshStandardMaterial({
   color: 0xCEE7F5,
   roughness: 0,
   metalness: 1,
-  envMap: environmentMap,
+  envMap,
   envMapIntensity: 1,
 });
+
+// Build scene
+const scale = 2.8;
+const scene = new THREE.Scene();
+const model = mesh.scene;
+const ferris = mesh.scene.children[0];
+
+ferris.scale.set(scale, scale, scale);
+ferris.position.x = 0;
+ferris.position.y = -0.4;
+ferris.rotation.set(0, 0, 0);
+ferris.material = material;
+
+ferris.children.forEach((element) => {
+  element.material = material;
+  model.name = model;
+  ferris.name = ferris;
+});
+
+scene.add(ferris);
 
 const sizes = {
   width: canvas.offsetWidth,
