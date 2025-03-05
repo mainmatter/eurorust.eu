@@ -3,7 +3,7 @@
     "day": "1",
     "date": "Oct. 10th, Thursday",
     "mainStage": [
-      { "time": "9:00 - 10:00", "title": "Doors open & breakfast" , "isBreak": true},
+      { "time": "9:00 - 10:00", "title": "Doors open & breakfast", "isBreak": true },
       { "time": "10:00 - 10:30", "talk": "through-the-fire-and-the-flames" },
       {
         "time": "10:45 - 11:15",
@@ -32,7 +32,7 @@
       { "time": "17:30 - 18:00", "talk": "unleashing-rust-the-ferris-within" }
     ],
     "side": [
-      { "time": "9:00 - 10:00", "title": "Doors open & breakfast" , "isBreak": true},
+      { "time": "9:00 - 10:00", "title": "Doors open & breakfast", "isBreak": true },
       { "time": "10:00 - 12:00", "talk": "impl-room-1", "rowspan": 3 },
       { "time": "12:00 - 13:30", "title": "Lunch", "isBreak": true },
       { "time": "13:30 - 14:00", "talk": "impl-room-1" },
@@ -52,7 +52,7 @@
     "day": "2",
     "date": "Oct. 11th, Friday",
     "mainStage": [
-      { "time": "9:00 - 10:00", "title": "Doors open & breakfast" , "isBreak": true},
+      { "time": "9:00 - 10:00", "title": "Doors open & breakfast", "isBreak": true },
       { "time": "10:00 - 10:30", "talk": "the-first-six-years-in-the-development-of-polonius" },
       {
         "time": "10:45 - 11:15",
@@ -75,10 +75,13 @@
       { "time": "15:30 - 16:00", "title": "Snack Break", "isBreak": true },
       { "time": "16:00 - 16:30", "talk": "rust-irgendwie-irgendwo-irgendwann", "title": "TBA" },
       { "time": "16:45 - 17:15", "talk": "linting-with-dylint" },
-      { "time": "17:30 - 18:00", "talk": "building-an-extremely-fast-python-package-manager-in-rust" }
+      {
+        "time": "17:30 - 18:00",
+        "talk": "building-an-extremely-fast-python-package-manager-in-rust"
+      }
     ],
     "side": [
-      { "time": "9:00 - 10:00", "title": "Doors open & breakfast" , "isBreak": true},
+      { "time": "9:00 - 10:00", "title": "Doors open & breakfast", "isBreak": true },
       { "time": "10:00 - 12:00", "talk": "impl-room-3", "rowspan": 3 },
       { "time": "12:00 - 13:30", "title": "Lunch", "isBreak": true },
       { "time": "13:30 - 14:00", "talk": "io-in-rust-the-whole-story" },
