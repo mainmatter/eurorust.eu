@@ -13,16 +13,15 @@
     background-size: cover;
     background-repeat: no-repeat;
     padding-bottom: 30rem;
+    background-position: center center;
 
 
     @media screen and (max-width: 60rem) {
-      background: url(images/about-mobile.png);
-      width: 100%;
-      height: 100%;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: 130% 100%;
-      padding-bottom: 5rem;
+      background-size: 100% 100%;
+      padding-bottom: 53vw;
+      padding-top: 53vw;
+      margin-top: -53vw;
+      margin-bottom: -53vw;
     }
   }
 
