@@ -18,7 +18,7 @@ title = "Traveling to Vienna and the Venue"
   <br>
   <p>The venue is located at <a href="https://maps.app.goo.gl/pM1kFhCqWGrSyvaF9" target="_blank">2. Haidequerstraße 1–3, 1110 Wien</a>. Once you're there, enter the area via the main gate and follow the EuroRust signs to the conference venue:</p>
   <br>
-  <img src="/images/entrance.jpg" class="venue-entry">
+  <img src="/2024/images/entrance.jpg" class="venue-entry">
 </div>
 
 <h3 class="mb-3 mt-7">Assistance, Questions, Visas</h3>
