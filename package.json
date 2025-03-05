@@ -6,9 +6,9 @@
   "scripts": {
     "lint": "prettier --check **/*.{html,scss,js,json,yml,yaml,md}",
     "lint:fix": "prettier --write **/*.{html,scss,js,json,yml,yaml,md}",
-    "build:vite": "vite build",
-    "build:zola": "zola build",
-    "build": "cross-env BUILD_MODE=production concurrently --max-processes 1 \"pnpm:build:vite\" \"pnpm:build:zola\"",
+    "build:vite": "cross-env BUILD_MODE=production vite build",
+    "build:zola": "cross-env BUILD_MODE=production zola build",
+    "build": "concurrently --max-processes 1 \"pnpm:build:vite\" \"pnpm:build:zola\"",
     "dev": "concurrently -c magenta,cyan \"pnpm:serve:*\"",
     "serve:vite": "vite serve",
     "serve:zola": "zola serve"

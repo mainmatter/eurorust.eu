@@ -8,6 +8,7 @@ command = "pnpm build"
 # Set the version name that you want to use and Netlify will automatically use it.
 ZOLA_VERSION = "v0.19.2"
 NODE_VERSION = "22"
+BUILD_MODE = "production"
 
 # The magic for deploying previews of branches.
 # We need to override the base url with whatever url Netlify assigns to our
@@ -15,7 +16,7 @@ NODE_VERSION = "22"
 # `$DEPLOY_PRIME_URL`.
 
 [context.deploy-preview]
-command = "zola build --base-url $DEPLOY_PRIME_URL"
+command = "vite build && zola build --base-url $DEPLOY_PRIME_URL"
 
 [[redirects]]
   from = "/workshops/you-cant-fix-what-you-cant-see-telemetry-for-rust-apis/"
