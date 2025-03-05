@@ -4,10 +4,11 @@ The source code for [https://eurorust.eu](https://eurorust.eu).
 
 ![EuroRust logo](./static/images/eurorust-logo-light.png)
 
-## Installation
+## Requirements
 
-- `git clone <repository-url>` this repository
-- `zola build`
+- Zola
+- [Node](https://nodejs.org/en)
+- [pnpm](https://pnpm.io) 
 
 ### Install Zola
 
@@ -15,9 +16,14 @@ The source code for [https://eurorust.eu](https://eurorust.eu).
 
 You can visit their documentation page to see [install options](https://www.getzola.org/documentation/getting-started/installation/).
 
-## Running / Development
+## Setup
 
-- `zola serve` (Rebuild and reload on change automatically)
+- `git clone <repository-url>` this repository
+- `pnpm install`
+
+### Running / Development
+
+- `pnpm dev` (Rebuild and reload on change automatically)
 - open [http://localhost:1111](http://localhost:1111).
 
 ### Docker
