@@ -63,6 +63,8 @@
 
       img {
         max-height: 6rem;
+        height: unset;
+        width: auto;
       }
     }
 
@@ -108,6 +110,8 @@
 
         img {
           max-height: 4rem;
+          height: unset;
+          width: auto;
         }
       }
     }

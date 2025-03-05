@@ -52,6 +52,7 @@ body {
   bottom: max(15rem, 10vw);
   width: 60vw;
   display: block;
+  z-index: -1;
 }
 
 img {

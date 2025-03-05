@@ -11,7 +11,8 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img alt="{{ sponsor.title }}" src="{{ sponsor.image }}" />
+            {% set meta = get_image_metadata(path=sponsor.image) %}
+            <img alt="{{ sponsor.title }}" src="{{ sponsor.image }}" width="{{ meta.width }}" height="{{ meta.height }}" loading="lazy" />
           </a>
         {% endfor %}
       </div>
@@ -26,7 +27,8 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img alt="{{ sponsor.title }}" src="{{ sponsor.image }}" />
+            {% set meta = get_image_metadata(path=sponsor.image) %}
+            <img alt="{{ sponsor.title }}" src="{{ sponsor.image }}" width="{{ meta.width }}" height="{{ meta.height }}" loading="lazy" />
           </a>
         {% endfor %}
       </div>
@@ -41,7 +43,8 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img alt="{{ sponsor.title }}" src="{{ sponsor.image }}" />
+            {% set meta = get_image_metadata(path=sponsor.image) %}
+            <img alt="{{ sponsor.title }}" src="{{ sponsor.image }}" width="{{ meta.width }}" height="{{ meta.height }}" loading="lazy" />
           </a>
         {% endfor %}
       </div>
@@ -56,7 +59,8 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img alt="{{ sponsor.title }}" src="{{ sponsor.image }}" />
+            {% set meta = get_image_metadata(path=sponsor.image) %}
+            <img alt="{{ sponsor.title }}" src="{{ sponsor.image }}" width="{{ meta.width }}" height="{{ meta.height }}" loading="lazy" />
           </a>
         {% endfor %}
       </div>
@@ -71,7 +75,8 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img alt="{{ sponsor.title }}" src="{{ sponsor.image }}" />
+          {% set meta = get_image_metadata(path=sponsor.image) %}
+            <img alt="{{ sponsor.title }}" src="{{ sponsor.image }}" width="{{ meta.width }}" height="{{ meta.height }}" loading="lazy" />
           </a>
         {% endfor %}
       </div>
@@ -86,7 +91,8 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img alt="{{ sponsor.title }}" src="{{ sponsor.image }}" />
+          {% set meta = get_image_metadata(path=sponsor.image) %}
+            <img alt="{{ sponsor.title }}" src="{{ sponsor.image }}" width="{{ meta.width }}" height="{{ meta.height }}" loading="lazy" />
           </a>
         {% endfor %}
       </div>
@@ -101,7 +107,8 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img alt="{{ sponsor.title }}" src="{{ sponsor.image }}" />
+          {% set meta = get_image_metadata(path=sponsor.image) %}
+            <img alt="{{ sponsor.title }}" src="{{ sponsor.image }}" width="{{ meta.width }}" height="{{ meta.height }}" loading="lazy" />
           </a>
         {% endfor %}
       </div>
@@ -117,7 +124,8 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img alt="{{ sponsor.title }}" src="{{ sponsor.image }}" />
+            {% set meta = get_image_metadata(path=sponsor.image) %}
+            <img alt="{{ sponsor.title }}" src="{{ sponsor.image }}" width="{{ meta.width }}" height="{{ meta.height }}" loading="lazy" />
             </a>
           {% endfor %}
         </div>
@@ -134,7 +142,8 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img alt="{{ sponsor.title }}" src="{{ sponsor.image }}" />
+            {% set meta = get_image_metadata(path=sponsor.image) %}
+            <img alt="{{ sponsor.title }}" src="{{ sponsor.image }}" width="{{ meta.width }}" height="{{ meta.height }}" loading="lazy" />
             </a>
           {% endfor %}
         </div>
