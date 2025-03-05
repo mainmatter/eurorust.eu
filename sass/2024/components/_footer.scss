@@ -9,6 +9,10 @@ footer ul {
   gap: 1.5rem;
 }
 
+.footer-rust {
+  text-align: center;
+}
+
 .footer-bottom {
   display: flex;
   justify-content: space-between;
@@ -18,6 +22,10 @@ footer ul {
 @media (max-width: 60rem) {
   .meta, .footer-bottom, .pages {
     flex-direction: column;
+  }
+
+  .footer-rust {
+    text-align: left;
   }
 
   .footer-bottom {
