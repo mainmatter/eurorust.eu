@@ -1,0 +1,153 @@
+<section class="sponsors">
+  <h1 class="pb-6">Sponsors</h1>
+  <div class="sponsors-grid">
+    {% if section.extra.main_partner_sponsors %}
+      <div class="sponsors-grid--main_partners">
+        <h2>Main Partner</h2>
+        {% for sponsor in section.extra.main_partner_sponsors %}
+          <a
+            href="{{ sponsor.link }}"
+            aria-label="{{ sponsor.title }}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {% set meta = get_image_metadata(path=sponsor.image) %}
+            <img alt="{{ sponsor.title }}" src="{{ sponsor.image }}" width="{{ meta.width }}" height="{{ meta.height }}" loading="lazy" />
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% if section.extra.premier_partner_sponsors %}
+      <div class="sponsors-grid--premier_partners">
+        <h2>Premier Partner</h2>
+        {% for sponsor in section.extra.premier_partner_sponsors %}
+          <a
+            href="{{ sponsor.link }}"
+            aria-label="{{ sponsor.title }}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {% set meta = get_image_metadata(path=sponsor.image) %}
+            <img alt="{{ sponsor.title }}" src="{{ sponsor.image }}" width="{{ meta.width }}" height="{{ meta.height }}" loading="lazy" />
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% if section.extra.lounge_partner_sponsors %}
+      <div class="sponsors-grid--lounge_partners">
+        <h2>Lounge Partner</h2>
+        {% for sponsor in section.extra.lounge_partner_sponsors %}
+          <a
+            href="{{ sponsor.link }}"
+            aria-label="{{ sponsor.title }}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {% set meta = get_image_metadata(path=sponsor.image) %}
+            <img alt="{{ sponsor.title }}" src="{{ sponsor.image }}" width="{{ meta.width }}" height="{{ meta.height }}" loading="lazy" />
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% if section.extra.live_stream_partner_sponsors %}
+      <div class="sponsors-grid--live_stream_partners">
+        <h2>Live Stream Partner</h2>
+        {% for sponsor in section.extra.live_stream_partner_sponsors %}
+          <a
+            href="{{ sponsor.link }}"
+            aria-label="{{ sponsor.title }}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {% set meta = get_image_metadata(path=sponsor.image) %}
+            <img alt="{{ sponsor.title }}" src="{{ sponsor.image }}" width="{{ meta.width }}" height="{{ meta.height }}" loading="lazy" />
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% if section.extra.closing_party_partner_sponsors %}
+      <div class="sponsors-grid--closing_party_partners">
+        <h2>Closing Party Partner</h2>
+        {% for sponsor in section.extra.closing_party_partner_sponsors %}
+          <a
+            href="{{ sponsor.link }}"
+            aria-label="{{ sponsor.title }}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+          {% set meta = get_image_metadata(path=sponsor.image) %}
+            <img alt="{{ sponsor.title }}" src="{{ sponsor.image }}" width="{{ meta.width }}" height="{{ meta.height }}" loading="lazy" />
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% if section.extra.impl_room_partner_sponsors %}
+      <div class="sponsors-grid--impl_room_partners">
+        <h2>Impl Room Partner</h2>
+        {% for sponsor in section.extra.impl_room_partner_sponsors %}
+          <a
+            href="{{ sponsor.link }}"
+            aria-label="{{ sponsor.title }}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+          {% set meta = get_image_metadata(path=sponsor.image) %}
+            <img alt="{{ sponsor.title }}" src="{{ sponsor.image }}" width="{{ meta.width }}" height="{{ meta.height }}" loading="lazy" />
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% if section.extra.head_partner_sponsors %}
+      <div class="sponsors-grid--head_partners">
+        <h2>Head Partner</h2>
+        {% for sponsor in section.extra.head_partner_sponsors %}
+          <a
+            href="{{ sponsor.link }}"
+            aria-label="{{ sponsor.title }}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+          {% set meta = get_image_metadata(path=sponsor.image) %}
+            <img alt="{{ sponsor.title }}" src="{{ sponsor.image }}" width="{{ meta.width }}" height="{{ meta.height }}" loading="lazy" />
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% if section.extra.partner_sponsors %}
+      <div class="sponsors-grid--partners">
+        <h2>Partners</h2>
+        <div>
+          {% for sponsor in section.extra.partner_sponsors %}
+            <a
+              href="{{ sponsor.link }}"
+              aria-label="{{ sponsor.title }}"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+            {% set meta = get_image_metadata(path=sponsor.image) %}
+            <img alt="{{ sponsor.title }}" src="{{ sponsor.image }}" width="{{ meta.width }}" height="{{ meta.height }}" loading="lazy" />
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+    {% if section.extra.supporter_sponsors %}
+      <div class="sponsors-grid--supporters">
+        <h2>Supporters</h2>
+        <div>
+          {% for sponsor in section.extra.supporter_sponsors %}
+            <a
+              href="{{ sponsor.link }}"
+              aria-label="{{ sponsor.title }}"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+            {% set meta = get_image_metadata(path=sponsor.image) %}
+            <img alt="{{ sponsor.title }}" src="{{ sponsor.image }}" width="{{ meta.width }}" height="{{ meta.height }}" loading="lazy" />
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</section>

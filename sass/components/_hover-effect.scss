@@ -1,33 +1,34 @@
-@keyframes btnHover {
-  0% {
-    border-image-slice: 1;
-    border-image-source: linear-gradient(65deg, #fff 0%, #fff 60%, #fff 100%);
-  }
-  30% {
-    border-image-slice: 1;
-    border-image-source: linear-gradient(65deg, #fff 0%, #59decb 100%);
-  }
-  70% {
-    border-image-slice: 1;
-    border-image-source: linear-gradient(65deg, #59decb 0%, #3b63e7 100%);
-  }
-  100% {
-    border-image-slice: 1;
-    border-image-source: linear-gradient(
-      65deg,
-      #59decb 0%,
-      #3b63e7 60%,
-      #de59cc 100%
-    );
+.btn__icon {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  line-height: 0;
+  scale: 1;
+  transition: all 0.2s ease-in-out;
+
+  &:hover,
+  &:active {
+    scale: 1.15;
+    transition: all 0.2s ease-in-out;
   }
 }
 
-@keyframes btnText {
-  0% {
-    background-position-x: -4rem;
-  }
+.btn__icon::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  mix-blend-mode: overlay;
+  clip-path: circle();
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
 
-  100% {
-    background-position: 0 0;
-  }
+.btn__icon:hover::after {
+  background: linear-gradient(90deg, var(--blue) 50%, var(--green) 100%);
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
 }

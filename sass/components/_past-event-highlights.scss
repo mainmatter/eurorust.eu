@@ -1,4 +1,10 @@
 .past-event-highlights {
+  margin: 8rem auto;
+
+  @media screen and (max-width: 60rem) {
+    margin: 4rem auto;
+  }
+
   text-align: center;
 
   lite-youtube {
@@ -8,4 +14,44 @@
 
 .lty-playbtn:hover {
   animation: none;
+}
+
+.past-event-highlights__grid {
+  display: grid;
+  grid-template-columns: 14% 70% 14%;
+  justify-content: space-between;
+
+  @media screen and (max-width: 60rem) {
+    display: block;
+    width: 90vw;
+    margin: 0 auto;
+  }
+}
+
+.past-event-highlights__image {
+  width: 13vw;
+  justify-self: end;
+
+  @media screen and (max-width: 60rem) {
+    display: none;
+  }
+}
+
+.past-event-highlights__video {
+  background-image: url('/images/backgrounds/frame-full.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 2vw 5vw;
+  margin: 0 1vw;
+  align-content: center;
+
+  @media screen and (max-width: 60rem) {
+    padding: 10vw;
+  }
+}
+
+.past-event-highlights__image:first-child {
+  transform: rotateY(180deg);
+  justify-self: start;
 }

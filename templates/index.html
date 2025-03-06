@@ -1,44 +1,20 @@
 {% extends "base.html" %}
 
-{% block head %}
-  <script>
-    if (!window.tito) {
-      var script = document.createElement('script');
-      script.src = `https://js.tito.io/v2${
-      ['localhost', '127.0.0.1'].includes(window.location.hostname)
-        ? '/with/development_mode'
-        : ''}`;
-      script.async = true;
-      document
-        .head
-        .appendChild(script);
-    }
-  </script>
-
-{% endblock head %}
-
 {% block content %}
-
-{% include "sections/nav.html" %}
-
-  <main tabindex="-1" id="main" class="sections">
-
-
+  {% include "sections/nav.html" %}
+  <div class="main sections">
+    <a id="main"></a>
     {% include "sections/hero.html" %}
-
-    {% include "sections/get-involved.html" %}
-
     {% include "sections/rustfest.html" %}
-
-    {% include "sections/topics.html" %}
-
-    {% include "sections/past-speakers.html" %}
-
+    {% include "sections/about.html" %}
+    {% include "sections/speakers.html" %}
+    {% include "sections/submit.html" %}
+    {% include "sections/venue.html" %}
+    {% include "sections/past-event-highlights.html" %}
     {% include "sections/presented-by.html" %}
+    {% include "sections/sponsors.html" %}
 
-    {% include "sections/past-sponsors.html" %}
-
-    {% include "sections/footer.html" %}
-
-  </main>
+    <img class="main__station" src="images/space-station.png" alt="" role="presentation" loading="lazy" />
+  </div>
+  {% include "sections/footer.html" %}
 {% endblock content %}

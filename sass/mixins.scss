@@ -1,7 +1,87 @@
+@mixin button {
+  display: inline-flex;
+  padding: 15px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.4s;
+  width: auto;
 
+  &:hover,
+  &:active {
+    scale: 1.05;
+    transition: all 0.2s ease-in-out;
+  }
 
+  @media (max-width: 60rem) {
+    padding: 8px;
+    width: 70vw;
+  }
+}
 
+@mixin btn__secondary($color: #1d113f) {
+  @include button;
+  border-radius: 100px;
+  border: 2px solid $color;
+  color: $color;
+  font-family: Strenuous;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
 
+  @media (max-width: 60rem) {
+    font-size: 15px;
+    width: auto;
+  }
+}
 
+@mixin btn__primary {
+  @include button;
+  border-radius: 45px;
+  border: 2px solid var(--blue-dark);
+  background: linear-gradient(90deg, var(--yellow) 0%, var(--green) 100%);
+  box-shadow: 0px 0px 100px 0px var(--yellow);
+  color: var(--blue-dark);
+  font-family: Strenuous;
+  font-size: clamp(32px, 2.9vw, 55px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 0.3vw;
+  text-decoration: none;
 
+  &:hover,
+  &:active {
+    box-shadow: 0px 0px 50px 0px var(--blue);
+    background: linear-gradient(90deg, var(--green) 0%, #f6d2d7 80%);
+  }
+}
 
+@mixin dashed-border-with-corners() {
+  outline: 2px dotted var(--blue-light);
+  outline-offset: -15px;
+
+  background-image:
+    url(/images/util/corner-top-left.svg), url(/images/util/corner-top-right.svg),
+    url(/images/util/corner-bottom-right.svg), url(/images/util/corner-bottom-left.svg);
+  background-position:
+    top left,
+    top right,
+    bottom right,
+    bottom left;
+  background-repeat: no-repeat;
+  background-size: 0.75rem;
+
+  transition: background 0.25s ease-in-out;
+
+  &:hover {
+    background-position:
+      top calc(0.75rem + 1px) left calc(0.75rem + 1px),
+      top calc(0.75rem + 1px) right calc(0.75rem + 1px),
+      bottom calc(0.75rem + 1px) right calc(0.75rem + 1px),
+      bottom calc(0.75rem + 1px) left calc(0.75rem + 1px);
+  }
+}

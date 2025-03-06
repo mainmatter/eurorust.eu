@@ -1,0 +1,29 @@
+{
+  "name": "eurorust.eu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "prettier --check **/*.{html,scss,js,json,yml,yaml,md}",
+    "lint:fix": "prettier --write **/*.{html,scss,js,json,yml,yaml,md}",
+    "build:vite": "cross-env BUILD_MODE=production vite build",
+    "build:zola": "cross-env BUILD_MODE=production zola build",
+    "build": "concurrently --max-processes 1 \"pnpm:build:vite\" \"pnpm:build:zola\"",
+    "dev": "concurrently -c magenta,cyan \"pnpm:serve:*\"",
+    "serve:vite": "vite serve",
+    "serve:zola": "zola serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.5.2",
+  "type": "module",
+  "dependencies": {
+    "concurrently": "^9.1.2",
+    "cross-env": "^7.0.3",
+    "prettier": "^3.5.3",
+    "prettier-plugin-jinja-template": "^2.0.0",
+    "three": "^0.174.0",
+    "vite": "^6.2.0"
+  }
+}

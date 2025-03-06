@@ -1,230 +1,143 @@
 @import "./mixins.scss";
 
+body {
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  font-family: "Panel-Mono", monospace;
+  font-weight: 500;
+  line-height: 180%;
+}
+
 @mixin base-typo {
-  font-family: "Courier Prime", "Courier New", Courier, monospace;
-  font-weight: 400;
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  font-family: "Panel-Mono", monospace;
+  font-weight: 500;
+  line-height: 180%;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+  @include base-typo;
+  color: var(--blue-light);
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  text-shadow: 10px 10px 20px var(--blue);
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--beige);
+  font-family: Strenuous;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: lowercase;
+  letter-spacing: 3px;
 }
 
 h1,
 .h1 {
-  @include base-typo;
-  font-size: 5rem;
-  line-height: 1;
+  font-size: clamp(20px, 3.65vw, 70px);
+  line-height: clamp(26px, 4.67vw, 90px);
+
+  @media screen and (max-width: 60rem) {
+    font-size: clamp(30px, 4.5vw, 36px);
+    line-height: 42px;
+  }
 }
 
 h2,
 .h2 {
-  @include base-typo;
-  font-size: 4rem;
-  line-height: 1.2;
+  font-size: clamp(14px, 2.55vw, 50px);
+
+  @media screen and (max-width: 60rem) {
+    font-size: clamp(24px, 3.3vw, 30px);
+  }
 }
 
 h3,
 .h3 {
-  @include base-typo;
-  font-size: 3rem;
-  line-height: 1.2;
+  font-size: 36px;
+  line-height: 45px;
 }
 
 h4,
 .h4 {
-  @include base-typo;
-  font-size: 2rem;
-  line-height: 1.2;
+  font-size: 26px;
+  line-height: 32px;
 }
 
-h5,
-.h5 {
-  @include base-typo;
-  font-size: 1.5rem;
-  line-height: 1.2;
-}
-
-p + p, p + ul, ul + p {
+p + p,
+p + ul,
+ul + p,
+h2 + p {
   margin-top: 1rem;
 }
 
-body {
-  @include base-typo;
-  font-size: 1.25;
-  line-height: 1.5;
-}
+p,
+a {
+  color: var(--blue-light);
+  font-size: clamp(8px, 1.4vw, 27px);
+  line-height: clamp(14.8px, 2.6vw, 50px);
+  font-style: normal;
+  font-weight: 500;
 
-.large {
-  @include base-typo;
-  font-size: 1.75rem;
-  line-height: 1.5;
-}
-
-.base {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-@media (max-width: 60rem) {
-  h1,
-  .h1 {
-    font-size: 3rem;
-  }
-
-  h2,
-  .h2 {
-    font-size: 2.75rem;
-  }
-
-  h3,
-  .h3 {
-    font-size: 2.5rem;
+  @media screen and (max-width: 60rem) {
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
 a {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
   font-weight: 700;
-  text-decoration: underline;
-  text-decoration-thickness: 0.125rem;
-  text-underline-offset: 4px;
-  -webkit-text-fill-color: rgba(255, 255, 255, 1);
+}
 
-  &:hover {
-    text-decoration-color: #fff;
-    background-repeat: no-repeat;
-    background: -webkit-linear-gradient(
-      65deg,
-      #59decb 0%,
-      #3b63e7 30%,
-      #de59cc 70%,
-      #59decb 100%
-    );
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation-name: btnText;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in;
+@keyframes btnText {
+  0% {
+    background-position-x: -4rem;
+  }
+
+  100% {
+    background-position: 0 0;
   }
 }
 
-.btn__secondary,
-.btn__secondary button {
-  font-weight: 700;
-  text-decoration: underline;
-  text-decoration-thickness: 0.125rem;
-  text-underline-offset: 4px;
-  -webkit-text-fill-color: rgba(255, 255, 255, 1);
-
-  &:hover {
-    text-decoration-color: #fff;
-    background-repeat: no-repeat;
-    background: -webkit-linear-gradient(
-      65deg,
-      #59decb 0%,
-      #3b63e7 30%,
-      #de59cc 70%,
-      #59decb 100%
-    );
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation-name: btnText;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in;
-  }
-}
-
-.btn__icon,
-.btn__primary--link {
-  text-decoration: none;
-}
-
-.btn__icon {
-  position: relative;
+a:not([class]) {
   display: block;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.btn__icon::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #de59cc;
-  mix-blend-mode: overlay;
-  clip-path: circle();
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.btn__icon:hover::after {
-  opacity: 1;
-  transition: opacity 0.5s ease;
-}
-
-.btn__primary--link {
-  position: relative;
-  border: 2px solid var(--white);
-  border-image-slice: 1;
-  border-image-source: linear-gradient(65deg, #fff 0%, #fff 60%, #fff 100%);
-  padding: 2rem 2.5rem 1.25rem 3.25rem;
-  font-weight: 700;
-  cursor: pointer;
-
-  button {
-    padding: 2rem 2.5rem 1.25rem 3.25rem;
-    margin: -2rem -2.5rem -1.25rem -3.25rem;
-    font-weight: 700;
-    text-decoration-thickness: 0.125rem;
-    text-underline-offset: 4px;
-    -webkit-text-fill-color: rgba(255, 255, 255, 1);
-
-    &:hover span {
-      text-decoration-color: #fff;
-      background-repeat: no-repeat;
-      background: -webkit-linear-gradient(
-        65deg,
-        #59decb 0%,
-        #3b63e7 30%,
-        #de59cc 70%,
-        #59decb 100%
-      );
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation-name: btnText;
-      animation-duration: 1s;
-      animation-fill-mode: forwards;
-      animation-timing-function: ease-in;
-    }
-  }
+  /*TO DO: move <a> style to body */
+  -webkit-text-fill-color: var(--blue-light);
 
   &:hover {
-    animation-name: btnHover;
-    animation-duration: 0.5s;
+    text-decoration-color: transparent;
+    background-repeat: no-repeat;
+    background: -webkit-linear-gradient(
+      65deg,
+      var(--blue-light) 0%,
+      var(--yellow) 30%,
+      var(--green) 70%,
+      var(--blue) 100%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation-name: btnText;
+    animation-duration: 0.4s;
     animation-fill-mode: forwards;
-    animation-timing-function: ease-in;
+    animation-timing-function: ease-in-out;
   }
 
-  &::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: translate(0.75rem, 0.75rem);
-    border: 2px solid var(--white);
-    pointer-events: none;
+  &:visited {
+    text-decoration-color: var(--blue-light);
   }
-
-  &:hover::after {
-    animation-name: btnHover;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in;
-  }
-}
-
-ul {
-  list-style: outside;
 }

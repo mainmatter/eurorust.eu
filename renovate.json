@@ -4,12 +4,9 @@
     {
       "description": "Update Zola version in Netlify config",
       "fileMatch": [".toml$"],
-      "matchStrings": [
-        "ZOLA_VERSION = \"(?<currentValue>.*?)\""
-      ],
+      "matchStrings": ["ZOLA_VERSION = \"(?<currentValue>.*?)\""],
       "depNameTemplate": "getzola/zola",
       "datasourceTemplate": "github-releases"
     }
   ]
-
 }

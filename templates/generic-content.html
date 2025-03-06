@@ -1,29 +1,19 @@
 {% extends "base.html" %}
 
-{% block head %}
-<link rel="preload" as="image" href="/images/background-generic-1.webp" media="(min-width: 640.1px)">
-<link rel="preload" as="image" href="/images/background-generic-mobile-1.webp" media="(max-width: 640px)">
-<link rel="preload" as="image" href="/images/logo-mobile.webp" media="(min-width: 640.1px)">
-<link rel="preload" as="image" href="/images/logo-compact.webp" media="(max-width: 640px)">
-{% endblock head %}
-
 {% block content %}
+  <div class="generic-block {{ page.title | lower | replace(from=' ', to='_') }}">
+    {% include "sections/nav.html" %}
 
-<div class="generic-block {{ page.title | lower | replace(from=' ', to='_')  }}">
+    <main tabindex="-1" id="main">
+      <section class="generic-content container py-8">
+        <h1 class="title pb-6">{{ page.title }}</h1>
+        {% if page.extra.subtitle %}
+          <h3 class="mb-3">{{ page.extra.subtitle }}</h3>
+        {% endif %}
+        {{ page.content | safe }}
+      </section>
+    </main>
 
-  {% include "sections/nav.html" %}
-
-  <main tabindex="-1" id="main" class="mb-10">
-    <section class="generic-content container py-5">
-      <h3 class="title mb-5">{{ page.title }}</h3>
-      {% if page.extra.subtitle %}
-      <h3 class="mb-3">{{ page.extra.subtitle }}</h3>
-      {% endif %}
-      {{ page.content | safe }}
-    </section>
-  </main>
-
-  {% include "sections/footer.html" %}
-</div>
-
+    {% include "sections/footer.html" %}
+  </div>
 {% endblock content %}
