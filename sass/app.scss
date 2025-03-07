@@ -38,7 +38,7 @@ body {
 
 .main {
   position: relative;
-  padding-bottom: 100vh;
+  padding-bottom: 70vh;
 
   @media screen and (max-width: 60rem) {
     padding-bottom: 60vw;
@@ -53,6 +53,7 @@ body {
   width: 60vw;
   display: block;
   z-index: -1;
+  pointer-events: none;
 }
 
 img {
