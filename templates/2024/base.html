@@ -31,8 +31,8 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="/" />
   {% block og_image %}
-    <meta property="og:image" content="/2024//images/og-image.png" />
-    <meta name="twitter:image" content="/2024//images/og-image.png">
+    <meta property="og:image" content="{{ config.base_url | safe }}/2024/images/og-image.png" />
+    <meta name="twitter:image" content="{{ config.base_url | safe }}/2024/images/og-image.png">
   {% endblock %}
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="EuroRust 2024 – October 10th & 11th, Vienna & online">
