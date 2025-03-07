@@ -1,7 +1,7 @@
 {% extends "2024/base.html" %}
 {% block og_image %}
-  <meta property="og:image" content="{{ page.extra.ogimage | safe }}" />
-  <meta name="twitter:image" content="{{ page.extra.ogimage | safe }}">
+  <meta property="og:image" content="{{ config.base_url | safe }}{{ page.extra.ogimage | safe }}" />
+  <meta name="twitter:image" content="{{ config.base_url | safe }}{{ page.extra.ogimage | safe }}">
 {% endblock %}
 
 {% block head %}
