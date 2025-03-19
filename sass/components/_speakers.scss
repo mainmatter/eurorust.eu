@@ -29,9 +29,15 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
+    display: flex;
+    text-align: center; 
+
+    @media screen and (max-width: 60rem) {
+      display: grid;
+      gap: 5rem;
+    }
 
     p {
-      text-align: center;
       margin: 1rem 0;
       color: var(--beige);
     }
