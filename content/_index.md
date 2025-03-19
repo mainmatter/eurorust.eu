@@ -22,4 +22,11 @@
   web="https://zed.dev"
   linkedin="https://www.linkedin.com/in/conradirwin/"
   github="https://github.com/conradirwin"
+
+  [[extra.speakers]]
+  name="Victoria Brekenfeld"
+  company="System76"
+  job_title="Engineer working on COSMIC"
+  image="/images/speakers/victoria-brekenfeld.png"
+  github="https://github.com/Drakulix"
 +++
