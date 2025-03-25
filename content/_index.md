@@ -25,6 +25,7 @@
 
   [[extra.speakers]]
   name="Victoria Brekenfeld"
+  mastodon="https://fosstodon.org/@drakulix@dreampi.es"
   company="System76"
   job_title="Engineer working on COSMIC"
   image="/images/speakers/victoria-brekenfeld.png"
