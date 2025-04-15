@@ -1,4 +1,9 @@
 +++
+[[extra.premier_partner_sponsors]]
+  title="Polar Signals"
+  link="https://www.polarsignals.com//"
+  image="/images/sponsors/polar-signals.svg"
+
 [[extra.lounge_partner_sponsors]]
   title="Helsing"
   link="https://helsing.ai/"
