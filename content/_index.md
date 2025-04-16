@@ -1,4 +1,9 @@
 +++
+[[extra.premier_partner_sponsors]]
+  title="Polar Signals"
+  link="https://www.polarsignals.com//"
+  image="/images/sponsors/polar-signals.svg"
+
 [[extra.lounge_partner_sponsors]]
   title="Helsing"
   link="https://helsing.ai/"
@@ -14,6 +19,19 @@
   link="https://rustfoundation.org"
   image="/images/sponsors/rust-foundation.svg"
 
+[[extra.moderators]]
+  name="Ciara"
+  image="/images/moderators/ciara.png"
+	twitter="https://x.com/Ciara0x1F973"
+
+[[extra.moderators]]
+  name="Stefan Baumgartner"
+  image="/images/moderators/stefan-baumgartner.png"
+  bsky="https://bsky.app/profile/deadparrot.dev"
+  web="https://fettblog.eu/?utm_source=eurorust"
+  github="https://github.com/ddprrt"
+  mastodon="https://mastodon.social/@deadparrot"
+
 [[extra.speakers]]
   name="Conrad Irwin"
   company="Zed"
@@ -23,7 +41,7 @@
   linkedin="https://www.linkedin.com/in/conradirwin/"
   github="https://github.com/conradirwin"
 
-  [[extra.speakers]]
+[[extra.speakers]]
   name="Victoria Brekenfeld"
   mastodon="https://fosstodon.org/@drakulix@dreampi.es"
   company="System76"
