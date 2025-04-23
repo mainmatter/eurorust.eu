@@ -21,8 +21,8 @@ importers:
         specifier: ^2.0.0
         version: 2.1.0(prettier@3.5.3)
       three:
-        specifier: ^0.175.0
-        version: 0.175.0
+        specifier: ^0.176.0
+        version: 0.176.0
       vite:
         specifier: ^6.2.0
         version: 6.3.2
@@ -436,8 +436,8 @@ packages:
     resolution: {integrity: sha512-MpUEN2OodtUzxvKQl72cUF7RQ5EiHsGvSsVG0ia9c5RbWGL2CI4C7EpPS8UTBIplnlzZiNuV56w+FuNxy3ty2Q==}
     engines: {node: '>=10'}
 
-  three@0.175.0:
-    resolution: {integrity: sha512-nNE3pnTHxXN/Phw768u0Grr7W4+rumGg/H6PgeseNJojkJtmeHJfZWi41Gp2mpXl1pg1pf1zjwR4McM1jTqkpg==}
+  three@0.176.0:
+    resolution: {integrity: sha512-PWRKYWQo23ojf9oZSlRGH8K09q7nRSWx6LY/HF/UUrMdYgN9i1e2OwJYHoQjwc6HF/4lvvYLC5YC1X8UJL2ZpA==}
 
   tinyglobby@0.2.13:
     resolution: {integrity: sha512-mEwzpUgrLySlveBwEVDMKk5B57bhLPYovRfPAXD5gA/98Opn0rCDj3GtLwFvCvH5RK9uPCExUROW5NjDwvqkxw==}
@@ -822,7 +822,7 @@ snapshots:
     dependencies:
       has-flag: 4.0.0
 
-  three@0.175.0: {}
+  three@0.176.0: {}
 
   tinyglobby@0.2.13:
     dependencies:
