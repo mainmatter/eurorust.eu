@@ -14,6 +14,11 @@
   link="https://opensrcsec.com"
   image="/images/sponsors/oss.svg"
 
+[[extra.partner_sponsors]]
+  title="Mullvad VPN AB"
+  link="https://mullvad.net/en"
+  image="/images/sponsors/mullvad.svg"
+
 [[extra.supporter_sponsors]]
   title="Rust Foundation"
   link="https://rustfoundation.org"
