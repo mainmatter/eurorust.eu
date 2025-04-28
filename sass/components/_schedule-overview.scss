@@ -1,0 +1,158 @@
+.workshops,
+.desktop-schedule {
+  @include dashed-border-with-corners;
+  width: clamp(20px, 75vw, 1440px);
+  margin: 2rem auto;
+}
+
+.schedule__table {
+  display: flex;
+  flex-direction: row;
+
+  @media screen and (max-width: 60rem) {
+    flex-direction: column;
+  }
+
+  & > div {
+    flex-grow: 1;
+  }
+}
+
+.schedule__table-side {
+  border-left: 2px dotted var(--blue-light);
+  border-top: none;
+
+  @media screen and (max-width: 60rem) {
+    border-top: 2px dotted var(--blue-light);
+    border-left: none;
+  }
+}
+
+.schedule-overview {
+  text-align: center;
+
+  & ul li::before {
+    content: "\00BB";
+  }
+
+  & ul li {
+    padding-bottom: 1rem;
+    color: var(--beige);
+  }
+}
+
+.schedule__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.schedule__shared {
+  grid-column: 1 / -1;
+}
+
+.schedule__track {
+  font-weight: 700;
+}
+
+.schedule__main-stage {
+  padding-right: 5rem;
+}
+
+.schedule__side-track {
+  padding-left: 5rem;
+}
+
+.schedule__list {
+  margin-inline-start: -0.75rem;
+  margin-block-start: -0.75rem;
+}
+
+.workshops__image {
+  display: flex;
+  justify-content: center;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.closing-party__grid {
+  display: grid;
+  grid-template-columns: 1fr 33%;
+  align-items: center;
+  text-align: left;
+}
+
+.closing-party__image {
+  max-width: 100%;
+  height: 100%;
+  position: relative;
+  margin-left: 5rem;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    background-image: linear-gradient(65deg, #59decb 0%, #3b63e7 60%, #de59cc 100%);
+    mix-blend-mode: color;
+  }
+}
+
+.closing-party__content {
+  max-width: 80ch;
+}
+
+.mobile-schedule {
+  display: none;
+}
+
+.desktop-schedule {
+  position: relative;
+
+  td {
+    width: 50%;
+    padding-block: 2rem;
+
+    &:last-child:not(:nth-child(2)) {
+      padding-inline-start: var(--padding-inline);
+    }
+  }
+
+  tr:not(:has(td[colspan])) td + td {
+    padding-block: 1rem;
+  }
+
+  th,
+  td {
+    &:not(.schedule__table-side):not([colspan]) {
+      border-inline-end: var(--border);
+    }
+
+    &:nth-child(2) {
+      padding-inline-end: var(--padding-inline);
+    }
+
+    &[colspan] {
+      padding-inline: 0;
+      border-block-start: var(--border);
+      border-block-end: var(--border);
+      text-align: center;
+    }
+  }
+
+  th {
+    padding: 1rem 0.75rem;
+
+    &:last-child {
+      padding-left: calc(var(--padding-inline) + var(--activity-card-padding));
+    }
+  }
+}
