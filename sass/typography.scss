@@ -67,14 +67,20 @@ h2,
 
 h3,
 .h3 {
-  font-size: 36px;
-  line-height: 45px;
+  font-size: clamp(13px, 2.3vw, 40px);
+
+  @media screen and (max-width: 60rem) {
+    font-size: clamp(24px, 3.3vw, 30px);
+  }
 }
 
 h4,
 .h4 {
-  font-size: 26px;
-  line-height: 32px;
+  font-size: clamp(10px, 1.825vw, 35px);
+
+  @media screen and (max-width: 60rem) {
+    font-size: clamp(20px, 3vw, 25px);
+  }
 }
 
 p + p,
@@ -144,4 +150,8 @@ a:not([class]) {
   &:visited {
     text-decoration-color: var(--blue-light);
   }
+}
+
+strong {
+  font-weight: 800;
 }
