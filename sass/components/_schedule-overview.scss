@@ -3,6 +3,16 @@
   @include dashed-border-with-corners;
   width: clamp(20px, 75vw, 1440px);
   margin: 2rem auto;
+
+  & ul li {
+    font-size: clamp(14px, 1vw, 18px);
+    line-height: clamp(14.8px, 1.2vw, 22px);
+
+    @media screen and (max-width: 60rem) {
+      font-size: 1rem;
+      line-height: 1.2rem;
+    }
+  }
 }
 
 .schedule__table {
