@@ -4,6 +4,11 @@
   link="https://www.polarsignals.com//"
   image="/images/sponsors/polar-signals.svg"
 
+[[extra.premier_partner_sponsors]]
+  title="JetBrains"
+  link="https://www.jetbrains.com/"
+  image="/images/sponsors/jetbrains.svg"
+
 [[extra.lounge_partner_sponsors]]
   title="Helsing"
   link="https://helsing.ai/"
