@@ -70,7 +70,7 @@
   bluesky="https://bsky.app/profile/jamesmunns.com"
   company="Self-Directed Research podcast"
   job_title="Co-host"
-  image="/images/speakers/james.jpg"
+  image="/images/speakers/james-munn.png"
   github="https://github.com/jamesmunns"
 
 [[extra.speakers]]
@@ -79,6 +79,6 @@
   bluesky="https://bsky.app/profile/fasterthanli.me"
   company="Self-Directed Research podcast"
   job_title="Co-host"
-  image="/images/speakers/amos.png"
+  image="/images/speakers/amos-wenger.png"
   github="https://github.com/fasterthanlime"
 +++
