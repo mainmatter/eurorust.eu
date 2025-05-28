@@ -32,7 +32,7 @@
 [[extra.media_partners]]
   title="Self-Directed Research podcast"
   link="https://sdr-podcast.com"
-  image="/images/sponsors/sdr.svg"
+  image="/images/sponsors/sdr.png"
 
 [[extra.moderators]]
   name="Ciara"
