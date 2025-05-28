@@ -29,6 +29,11 @@
   link="https://rustfoundation.org"
   image="/images/sponsors/rust-foundation.svg"
 
+[[extra.media_partners]]
+  title="Self-Directed Research podcast"
+  link="https://sdr-podcast.com"
+  image="/images/sponsors/sdr.svg"
+
 [[extra.moderators]]
   name="Ciara"
   image="/images/moderators/ciara.png"
