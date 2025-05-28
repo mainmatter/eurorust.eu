@@ -58,4 +58,22 @@
   job_title="Engineer working on COSMIC"
   image="/images/speakers/victoria-brekenfeld.png"
   github="https://github.com/Drakulix"
+
+[[extra.speakers]]
+  name="James Munns"
+  mastodon="https://mastodon.social/@jamesmunns.com@bsky.brid.gy"
+  bluesky="https://bsky.app/profile/jamesmunns.com"
+  company="Self-Directed Research podcast"
+  job_title="Co-host"
+  image="/images/speakers/james.jpg"
+  github="https://github.com/jamesmunns"
+
+[[extra.speakers]]
+  name="Amos Wenger"
+  mastodon="https://hachyderm.io/@fasterthanlime"
+  bluesky="https://bsky.app/profile/fasterthanli.me"
+  company="Self-Directed Research podcast"
+  job_title="Co-host"
+  image="/images/speakers/amos.png"
+  github="https://github.com/fasterthanlime"
 +++
