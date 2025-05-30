@@ -59,7 +59,7 @@
         </div>
       </section>
 
-      <section class="workshop-author mt-7 mb-10">
+      <section class="workshop-author mt-7 mb-4">
         <div class="author-and-booking container">
           {% for mentor in page.extra.mentors %}
           <div class="mentor__grid">
@@ -125,6 +125,12 @@
       <!-- include venue when booked 
         {% include "2024/sections/workshop-venue.html" %}
       -->
+
+      <section class="ticket-button mb-10">
+        <a href="https://ti.to/events-matter/eurorust-2025" class="workshop__ticket-button"
+          >Get tickets</a
+        >
+      </section>
     </main>
 
     {% include "sections/footer.html" %}

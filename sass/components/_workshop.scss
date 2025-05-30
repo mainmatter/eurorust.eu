@@ -95,5 +95,15 @@
   gap: 1.5rem;
   justify-content: center;
 }
+
+.ticket-button {
+  text-align: center;
+}
+
+.workshop__ticket-button {
+    @include btn__primary;
+    margin:0 auto;
+}
+
   
 }
