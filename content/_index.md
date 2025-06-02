@@ -24,6 +24,11 @@
   link="https://mullvad.net/en"
   image="/images/sponsors/mullvad.svg"
 
+[[extra.partner_sponsors]]
+  title="Woven by Toyota"
+  link="https://woven.toyota/"
+  image="/images/sponsors/woven.svg"
+
 [[extra.supporter_sponsors]]
   title="Rust Foundation"
   link="https://rustfoundation.org"
