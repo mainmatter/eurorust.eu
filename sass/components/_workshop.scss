@@ -7,6 +7,59 @@
     }
   }
 
+  .workshop-hero__details {
+      line-height: 1.5rem;
+      color: var(--beige);
+  }
+
+  .workshop-hero__grid {
+    display: grid;
+    grid-template-columns: 70% 30%; 
+    grid-template-rows: 4rem 1fr;
+    justify-content: space-between;
+    text-wrap: balance;
+
+      @media (max-width: 60rem) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+      }
+
+      .workshop-hero__title {
+        grid-column: span 2 / span 2;
+
+          @media (max-width: 60rem) {
+            grid-column: span 2 / span 2;
+            grid-column-start: 1;
+            grid-row-start: 2;
+          }
+      }
+
+      .workshop-hero__abstract {
+        grid-row-start: 2;
+        padding-right: 3rem;
+
+        @media (max-width: 60rem) {
+          grid-column: span 2 / span 2;
+          grid-column-start: 1;
+          grid-row-start: 3;
+          padding-right: 0;
+        }
+      }
+
+      .photo-container {
+        grid-row-start: 2;
+
+        @media (max-width: 60rem){
+          grid-column: span 2 / span 2;
+          grid-column-start: 1;
+          grid-row-start: 1;
+          width: clamp(250px,50vw,500px);
+          margin: 0 auto 2rem auto;
+        }
+      
+  }
+}
+
   span {
     background-color: var(--beige);
     padding:.3rem .5rem;
@@ -19,6 +72,8 @@
   }
 
   .workshop-details {
+    background: var(--blue-dark);
+    
     h4 {
       padding-bottom:1rem;
     }

@@ -8,6 +8,8 @@ template = "workshop.html"
   ]
   abstract = "Python has served you well: you spun up a prototype and iterated quickly, keeping up with the evolving requirements of a successful product. Nonetheless, as time goes on, cracks are starting to show up: an endpoint is slower than it needs to be, a data processing job that took seconds now takes almost an hour, and your infrastructure bill is growing too fast compared to the size of your user base. Engineers are starting to whisper: is it time for a rewrite? Should we pause feature development to rebuild everything on more solid foundations? That's an option, but it's expensive.<br /><br />There's another path: rather than throwing away your entire Python codebase to start over, you analyse your application and isolate the performance-critical bits—the so-called 'hot modules' where your application spends most of its time. You will rewrite those in Rust and package them as a Python native extension. This workshop will teach you how.<br /><br />We will cover the <span>pyo3</span> crate, the subtleties of Python's Global interpreter lock, and typical examples that may arise in your daily Rust-Python interoperability work. By the end of the session, you will be well-equipped to seamlessly replace your slow Python modules with easy-to-use and blazingly fast Rust modules.<br /><br />We assume you are familiar with Rust and Python, but we don't assume any prior interoperability knowledge. We will provide a brief explanation and references whenever we rely on advanced features in either language."
   ogimage = "/images/workshops/og-images/og-image-rust-python.png"
+  heroimage = "/images/workshops/hero-python.png"
+  heroimage_alt = "Snake"
 +++
 
 <div class="">

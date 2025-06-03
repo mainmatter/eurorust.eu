@@ -9,117 +9,122 @@
     if (!window.tito) {
       var script = document.createElement('script');
       script.src = `https://js.tito.io/v2${
-      ['localhost', '127.0.0.1'].includes(window.location.hostname)
-        ? '/with/development_mode'
-        : ''}`;
+        ["localhost", "127.0.0.1"].includes(window.location.hostname) ? "/with/development_mode" : ""
+      }`;
       script.async = true;
-      document
-        .head
-        .appendChild(script);
+      document.head.appendChild(script);
     }
   </script>
 {% endblock head %}
 
 {% block content %}
-
-  <div class="generic-block workshop {{ page.title | lower | replace(from=' ', to='_')  }}">
-
+  <div class="generic-block workshop {{ page.title | lower | replace(from=' ', to='_') }}">
     {% include "sections/nav.html" %}
 
     <main tabindex="-1" id="main">
       <section class="workshop-hero">
         <div class="container blurred-background p-1">
-          <div class="my-7">
-            <p class="large">
-                <!--Date goes here--> 
+          <div class="mb-7">
+            <p class="workshop-hero__details">
+              »Workshop<br />
+              October 8, 2025, Paris and online<br />
+              10:00–16:00<br />
+              Location: TBA
             </p>
           </div>
 
           <div class="">
             <div class="wrapper-content">
-              <div class="h1 pb-7">
-                {{ page.title | safe }}
+              <div class="h1 pb-7">{{ page.title | safe }}</div>
+              <div class="workshop-hero__grid">
+                <h2 class="mb-4 workshop-hero__title">About</h2>
+                {% if page.extra.abstract %}
+                  <p class="pb-8 workshop-hero__abstract">{{ page.extra.abstract | safe }}</p>
+                {% endif %}
+                {% if page.extra.heroimage %}
+                  <div class="photo-container">
+                    <img class="photo" src="{{ page.extra.heroimage }}" alt="{{ page.extra.heroimage_alt }}" />
+                  </div>
+                {% endif %}
               </div>
-              {% if page.extra.abstract %}
-                <p class="pb-8">
-                  {{ page.extra.abstract | safe }}
-                </p>
-              {% endif %}
-              {# <div class="btn__primary">
-                <tito-button event="events-matter/eurorust-2024" save-metadata-parameters="utm_*" class="btn__primary--link">Get your ticket</tito-button>
-              </div> #}
             </div>
           </div>
         </div>
-
       </section>
-      <section class="workshop-details pb-8 container">
-        <div class="workshop-syllabus blurred-background">
-          {{ page.content | safe }}
+      <section class="ticket-button">
+        <a href="https://ti.to/events-matter/eurorust-2025" class="workshop__ticket-button">Get tickets</a>
+      </section>
+      <section class="workshop-details mt-8 pt-4">
+        <div class="container pt-8">
+          <div class="workshop-syllabus">{{ page.content | safe }}</div>
         </div>
       </section>
 
-      <section class="workshop-author mt-7 mb-4">
+      <section class="workshop-author mt-9 mb-4">
         <div class="author-and-booking container">
           {% for mentor in page.extra.mentors %}
-          <div class="mentor__grid">
-            {% if mentor.bio %}
-              <div class="mentor__grid-title">
-                <h5 class="mb-4">Mentor</h5>
-              </div>
-              <div class="mentor__grid-name">
-                <h2 class="mb-4">{{ mentor.name }}</h2>
-              </div>
-              <div class="mentor__grid-bio blurred-background">
-               <p class="">{{ mentor.bio | safe }}</p>
-              </div>
-            {% endif %}
-            <div class="mentor__grid-photo-links">
-              {% if mentor.avatar %}
-                <div class="photo-container">
-                  <img
-                    class="photo"
-                    src="/images/workshops/{{ mentor.avatar }}"
-                    alt="{{ mentor.avatar_alt }}">
+            <div class="mentor__grid">
+              {% if mentor.bio %}
+                <div class="mentor__grid-title">
+                  <h5 class="mb-4">Mentor</h5>
+                </div>
+                <div class="mentor__grid-name">
+                  <h2 class="mb-4">{{ mentor.name }}</h2>
+                </div>
+                <div class="mentor__grid-bio blurred-background">
+                  <p class="">{{ mentor.bio | safe }}</p>
                 </div>
               {% endif %}
-                <div class="links mt-5">
-                    <ul class="social mt-3">
-                      {%if mentor.github %}
-                        <li>
-                          <a href="https://github.com/{{ mentor.github }}"
-                          target="_blank"
-                          rel="noopener noreferrer" class="btn__icon"><img src="/images/icons/github.svg" alt="Github"/></a>
-                        </li>
-                      {% endif %}
-                      {%if mentor.url%}
-                        <li>
-                          <a href="{{ mentor.url }}"
-                          target="_blank"
-                          rel="noopener noreferrer" class="btn__icon"><img src="/images/icons/web.svg" alt="Website"/></a>
-                        </li>
-                      {% endif %}
-                      {%if mentor.bluesky %}
-                        <li>
-                          <a href="https://bsky.app/profile/{{ mentor.bluesky }}"
-                          target="_blank"
-                          rel="noopener noreferrer" class="btn__icon"><img src="/images/icons/bluesky.svg" alt="Bluesky"/></a>
-                        </li>
-                      {% endif %}
-                      {%if mentor.mastodon %}
-                        <li>
-                          <a href="{{ mentor.mastodon }}"
-                          target="_blank"
-                          rel="noopener noreferrer" class="btn__icon"><img src="/images/icons/mastodon.svg" alt="Mastodon"/></a>
-                        </li>
-                      {% endif %}
-                    </ul>
+              <div class="mentor__grid-photo-links">
+                {% if mentor.avatar %}
+                  <div class="photo-container">
+                    <img class="photo" src="/images/workshops/{{ mentor.avatar }}" alt="{{ mentor.avatar_alt }}" />
                   </div>
+                {% endif %}
+                <div class="links mt-5">
+                  <ul class="social mt-3">
+                    {% if mentor.github %}
+                      <li>
+                        <a
+                          href="https://github.com/{{ mentor.github }}"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="btn__icon"
+                          ><img src="/images/icons/github.svg" alt="Github"
+                        /></a>
+                      </li>
+                    {% endif %}
+                    {% if mentor.url %}
+                      <li>
+                        <a href="{{ mentor.url }}" target="_blank" rel="noopener noreferrer" class="btn__icon"
+                          ><img src="/images/icons/web.svg" alt="Website"
+                        /></a>
+                      </li>
+                    {% endif %}
+                    {% if mentor.bluesky %}
+                      <li>
+                        <a
+                          href="https://bsky.app/profile/{{ mentor.bluesky }}"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="btn__icon"
+                          ><img src="/images/icons/bluesky.svg" alt="Bluesky"
+                        /></a>
+                      </li>
+                    {% endif %}
+                    {% if mentor.mastodon %}
+                      <li>
+                        <a href="{{ mentor.mastodon }}" target="_blank" rel="noopener noreferrer" class="btn__icon"
+                          ><img src="/images/icons/mastodon.svg" alt="Mastodon"
+                        /></a>
+                      </li>
+                    {% endif %}
+                  </ul>
                 </div>
-          </div>
+              </div>
+            </div>
           {% endfor %}
         </div>
-
       </section>
 
       <!-- include venue when booked 
@@ -127,13 +132,10 @@
       -->
 
       <section class="ticket-button mb-10">
-        <a href="https://ti.to/events-matter/eurorust-2025" class="workshop__ticket-button"
-          >Get tickets</a
-        >
+        <a href="https://ti.to/events-matter/eurorust-2025" class="workshop__ticket-button">Get tickets</a>
       </section>
     </main>
 
     {% include "sections/footer.html" %}
   </div>
-
 {% endblock content %}

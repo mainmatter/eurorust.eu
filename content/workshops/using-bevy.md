@@ -1,5 +1,5 @@
 +++
-title = "Using Bevy for industrial applications"
+title = "Using Bevy for Industrial Applications"
 template = "workshop.html"
 [extra]
   sponsor = "Mainmatter"
@@ -8,6 +8,8 @@ template = "workshop.html"
   ]
   abstract = "Building interactive data visualizations in Rust can be a daunting task... Let's see how Bevy, a data-driven game engine, can help us! From building interactive dashboard to spatial and temporal data visualization, or just Computer Assisted Design, Bevy can be the solid (and fun!) foundation of your next application. This workshop will teach you Bevy basics through non game applications, and a few advanced rendering techniques, so that you're ready to tackle those challenges!"
   ogimage = "/images/workshops/og-images/og-image-rust-python.png"
+  heroimage = "/images/workshops/hero-bevy.png"
+  heroimage_alt = "A bevy of birds"
 +++
 
 <div class="">
