@@ -164,5 +164,24 @@
         </div>
       </div>
     {% endif %}
+    {% if section.extra.media_partners %}
+      <div class="sponsors-grid--supporters">
+        <h2>Media Partners</h2>
+        <div>
+          {% for sponsor in section.extra.media_partners %}
+            <a href="{{ sponsor.link }}" aria-label="{{ sponsor.title }}" target="_blank" rel="noopener noreferrer">
+              {% set meta = get_image_metadata(path=sponsor.image) %}
+              <img
+                alt="{{ sponsor.title }}"
+                src="{{ sponsor.image }}"
+                width="{{ meta.width }}"
+                height="{{ meta.height }}"
+                loading="lazy"
+              />
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
   </div>
 </section>

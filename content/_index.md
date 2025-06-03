@@ -34,6 +34,11 @@
   link="https://rustfoundation.org"
   image="/images/sponsors/rust-foundation.svg"
 
+[[extra.media_partners]]
+  title="Self-Directed Research podcast"
+  link="https://sdr-podcast.com"
+  image="/images/sponsors/sdr.png"
+
 [[extra.moderators]]
   name="Ciara"
   image="/images/moderators/ciara.png"
@@ -63,4 +68,22 @@
   job_title="Engineer working on COSMIC"
   image="/images/speakers/victoria-brekenfeld.png"
   github="https://github.com/Drakulix"
+
+[[extra.speakers]]
+  name="James Munns"
+  mastodon="https://mastodon.social/@jamesmunns.com@bsky.brid.gy"
+  bluesky="https://bsky.app/profile/jamesmunns.com"
+  company="Self-Directed Research podcast"
+  job_title="Co-host"
+  image="/images/speakers/james-munn.png"
+  github="https://github.com/jamesmunns"
+
+[[extra.speakers]]
+  name="Amos Wenger"
+  mastodon="https://hachyderm.io/@fasterthanlime"
+  bluesky="https://bsky.app/profile/fasterthanli.me"
+  company="Self-Directed Research podcast"
+  job_title="Co-host"
+  image="/images/speakers/amos-wenger.png"
+  github="https://github.com/fasterthanlime"
 +++
