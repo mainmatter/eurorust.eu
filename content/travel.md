@@ -15,7 +15,7 @@ title = "Traveling to Paris and the Venue"
 
 <h3 class="mb-3 mt-9">To the Venue</h3>
 <div class="box text-centered blurred-background">
-  <p>Our venue this year is Cité des Sciences et de l'Industrie in Paris, <a href="https://maps.app.goo.gl/Kay6EEX1vZUc1yjcA" target="_blank">30 Av. Corentin Cariou, 75019 Paris, France</a>. The venue is located in the 19th arrondissement. The best options to get there from the city center is by taking a tram, bus, or train to the Porte de la Vilette stop. </p>
+  <p>Our venue this year is Cité des Sciences et de l'Industrie in Paris, <a href="https://maps.app.goo.gl/Kay6EEX1vZUc1yjcA" target="_blank">30 Av. Corentin Cariou, 75019 Paris, France</a>. The venue is located in the 19th arrondissement. The best options to get there from the city center is by taking a metro, tram, or bus to the Porte de la Vilette stop. </p>
   <h4 class="mt-3">Public transit to the Venue</h4>
   <p><strong>Metro:</strong> Line 7, Porte de la Villette station.<br>
   <strong>Bus:</strong> Lines 71, 139, 150, 152, Porte de la Villette stop. <br>
