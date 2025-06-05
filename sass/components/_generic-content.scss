@@ -1,4 +1,20 @@
 .generic-content {
   width: 75vw;
   margin: 0 auto;
+
+  a {
+    display: inline;
+  }
+
+  .generic-list {
+    list-style: square; 
+
+    li {
+      font-size: clamp(14px, 1vw, 18px);
+
+      @media (max-width: 60rem) {
+        font-size: 1rem;
+      }
+    }
+  }
 }
