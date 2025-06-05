@@ -3,6 +3,9 @@ title = "Rust-Python Inter&shy;operability"
 template = "workshop.html"
 [extra]
   sponsor = "Mainmatter"
+  sponsor_bio = "We at Mainmatter are experts in Rust - our Rust team is led by the mentor of this workshop, Luca Palmieri. We have been part of the Rust ecosystem for years, helping out the crates.io project. <br />We can support you in rewriting existing codebases to Rust, using Rust to accelerate hot modules in Python, Ruby, Node.js, or other languages, and in building new systems with Rust from scratch."
+  sponsor_cta = "Learn more about our Rust expertise"
+  sponsor_url = "https://mainmatter.com/rust/?utm_source=eurorust"
   mentors = [
     { name = "Luca Palmieri", avatar = "luca-palmieri.png", avatar_alt = "Luca Palmieri",  bio = "Luca Palmieri builds technology products for a living. His current focus is on backend development, software architecture and the Rust programming language.<br /><br />He currently works at MainMatter as a Principal Engineering Consultant. He partners with teams across the industry to make sure they succeed in adopting or scaling their Rust usage, where it makes sense to do so. He was formerly at AWS and TrueLayer.<br /><br />He has been part of the Rust community since 2018 and is best known as the author of 'Zero to Production in Rust', an introduction to using Rust for backend development, and '100 Exercises to Learn Rust', a hands-on introduction to the language.<br /><br />When he is not coding, you’ll find him baking cakes or rolling pasta sheets.",  url = "https://www.lpalmieri.com/",  github = "LukeMathWalker" }
   ]

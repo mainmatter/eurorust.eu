@@ -24,13 +24,18 @@
     <main tabindex="-1" id="main">
       <section class="workshop-hero">
         <div class="container blurred-background p-1">
-          <div class="mb-7">
+          <div class="mb-7 workshop-hero__topline">
             <p class="workshop-hero__details">
               »Workshop<br />
               October 8, 2025, Paris and online<br />
               10:00–16:00<br />
               Location: TBA
             </p>
+            {% if page.extra.sponsor %}
+              <div class="workshop-hero__sponsor">
+                <p>Sponsored by</p>
+                <img src="/images/workshops/workshop-sponsors/{{ page.extra.sponsor }}.svg" alt="{{ page.extra.sponsor }}" /></div>
+            {% endif %}
           </div>
 
           <div class="">
@@ -126,12 +131,53 @@
           {% endfor %}
         </div>
       </section>
+      
+      {% if page.extra.sponsor %}
+      <section class="workshop-sponsor mt-9 mb-4 py-6">
+        <div class="container py-8">
+          <div class="sponsor__grid">
+            <div class="sponsor__grid-title">
+              <h5 class="mb-4">Sponsored by</h5>
+            </div>
+            <div class="sponsor__grid-name">
+              <h2 class="mb-4">{{ page.extra.sponsor }}</h2>
+            </div>
+            <div class="sponsor__grid-bio blurred-background">
+              <p class="">{{ page.extra.sponsor_bio | safe }}</p>
+              {% if page.extra.sponsor_url %}
+                <a href="{{ page.extra.sponsor_url }}" target="_blank">
+                  {% if page.extra.sponsor_cta %}
+                  <br />
+                  <p class=""><strong>{{ page.extra.sponsor_cta | safe }}</strong></p>
+                  {% endif %}
+                </a>
+              {% endif %}
+            </div>
+            <div class="sponsor__grid-photo-links">
+              <div class="photo-container">
+                <img class="photo sponsor-logo" src="/images/workshops/workshop-sponsors/{{ page.extra.sponsor }}.svg" alt="{{ page.extra.sponsor }}" />
+              </div>
+              <div class="links mt-5">
+                <ul class="social mt-3">
+                  {% if page.extra.sponsor_url %}
+                  <li>
+                    <a href="{{ page.extra.sponsor_url }}" target="_blank" rel="noopener noreferrer" class="btn__icon"
+                    ><img src="/images/icons/web.svg" alt="Website"
+                    /></a>
+                  </li>
+                  {% endif %}
+                </ul>
+              </div>
+          </div> 
+        </div>       
+      </section>
+      {% endif %}
 
       <!-- include venue when booked 
         {% include "2024/sections/workshop-venue.html" %}
       -->
 
-      <section class="ticket-button mb-10">
+      <section class="ticket-button mb-10 mt-8">
         <a href="https://ti.to/events-matter/eurorust-2025" class="workshop__ticket-button">Get tickets</a>
       </section>
     </main>

@@ -2,7 +2,6 @@
 title = "Using Bevy for Industrial Applications"
 template = "workshop.html"
 [extra]
-  sponsor = "Mainmatter"
   mentors = [
     { name = "Francois Mockers ", avatar = "francois-mockers.png", avatar_alt = "Francois Mockers",  bio = "Francois Mockers is a maintainer on Bevy Engine (most of the time), QA Lead at Paylead (during the day).<br /><br />He discovered Rust in 2017 and hasn't let go since!",  mastodon = "https://hachyderm.io/@FrancoisMockers",  bluesky = "francois.mock.rs" }
   ]
