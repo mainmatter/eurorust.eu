@@ -2,12 +2,38 @@
   <div class="container">
     <h1 id="schedule mb-2">Schedule Overview</h1>
     <div class="workshops p-4">
-      <h3 class="mt-4">Pre Conference Day</h3>
+      <h3 class="mt-4">Workshop Day</h3>
       <h4 class="mt-3 mb-6">October 8, 2025</h4>
-      <ul class="m-4">
-        <li><strong>10:00&ndash;16:00</strong> Workshops</li>
-        <li><strong>During the day and in the evening:</strong> Side activities</li>
-      </ul>
+      <div class="m-4">
+        <p><strong>»During the day and in the evening:</strong> Side activities</p>
+        <div class="mt-6 workshop-schedule__grid">
+          {% set workshops = load_data(path = "data/workshops.json") %}
+          {% for workshop in workshops %}
+              <div class="mb-4 activity-card activity-card__workshop">
+                {% set path = "workshops/" ~ workshop.slug~ ".md" %}
+                {% set workshopData = get_page(path = path) %}
+                <a class="activity-card__link" href="{{workshopData.path}}">              
+                <div class="activity-card__content">
+                  {% if workshop.image %}
+                  <img class="activity-card__image mb-3" src="{{ workshop.image }}" alt="{{ workshop.image_alt }}" />
+                  {% endif %}
+                  <p><strong>{{ workshop.title }} Workshop</strong><br/>
+                  {% if workshop.time %}
+                  <strong>»{{ workshop.time }}</strong>
+                  {% endif %}
+                  </p>
+                  {%for mentor in workshop.mentors %}
+                    <p class="mentor mt-3">Led by {{ mentor }}</p>
+                  {% endfor %}
+                   {% if workshop.sponsor %}
+                    <p>*Sponsored by {{ workshop.sponsor }}</p>
+                  {% endif %}
+                  </a>
+                </div>
+          </div>
+        {% endfor %}
+        </div>
+      </div>
     </div>
     <div class="workshops p-4">
       <h3 class="mt-4">Conference Day 1</h3>

@@ -1,0 +1,247 @@
+.workshop {
+  section {
+    padding: 3rem;
+
+    @media (max-width: 60rem) {
+      padding: 1rem;
+    }
+  }
+
+  .workshop-hero__topline {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      @media (max-width: 60rem) {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      p {
+      line-height: 1.5rem;
+      color: var(--beige); 
+
+       @media (max-width: 60rem) {
+        font-size: .75rem;
+        line-height: 1.25rem;
+      }
+    }
+  }
+
+  .workshop-hero__sponsor {
+    display: flex; 
+    flex-direction: row;
+    gap: 1rem;
+    align-items: baseline;
+
+    img {
+      max-width: 7rem;
+    }
+  }
+
+  .sponsor-logo {
+    padding-top: 2rem;
+    width: 100vw;
+  }
+  
+  .workshop-hero__grid {
+    display: grid;
+    grid-template-columns: 70% 30%; 
+    grid-template-rows: 4rem 1fr;
+    justify-content: space-between;
+    text-wrap: balance;
+
+      @media (max-width: 60rem) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+      }
+
+      .workshop-hero__title {
+        grid-column: span 2 / span 2;
+
+          @media (max-width: 60rem) {
+            grid-column: span 2 / span 2;
+            grid-column-start: 1;
+            grid-row-start: 2;
+          }
+      }
+
+      .workshop-hero__abstract {
+        grid-row-start: 2;
+        padding-right: 3rem;
+
+        @media (max-width: 60rem) {
+          grid-column: span 2 / span 2;
+          grid-column-start: 1;
+          grid-row-start: 3;
+          padding-right: 0;
+        }
+      }
+
+      .photo-container {
+        grid-row-start: 2;
+
+        @media (max-width: 60rem){
+          grid-column: span 2 / span 2;
+          grid-column-start: 1;
+          grid-row-start: 1;
+          width: clamp(250px,50vw,500px);
+          margin: 0 auto 2rem auto;
+        }
+      
+  }
+}
+
+  span {
+    background-color: var(--beige);
+    padding:.3rem .5rem;
+    color: var(--blue-dark);
+    border-radius: .125rem;
+  }
+
+  .hero {
+    padding-bottom: 2rem;
+  }
+
+  .workshop-details {
+    background: var(--blue-dark);
+    
+    h4 {
+      padding-bottom:1rem;
+    }
+
+    li {
+      @include dashed-border-with-corners;
+      padding:3rem;
+
+      @media (max-width: 60rem) {
+        padding: 1.75rem;
+        }
+      }
+    }
+
+  .workshop-author {
+    padding-top:4rem;
+  }
+
+  .mentor__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 70% 30%);
+    grid-template-rows: 2rem 5rem 1fr;
+
+    @media (max-width: 60rem) {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .mentor__grid-name {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+
+  .mentor__grid-bio {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    padding-right:3rem;
+
+    @media (max-width: 60rem) {
+      grid-column-start: 1;
+      grid-row-start: 4;
+      padding-right: 0;
+    }
+  }
+
+  .mentor__grid-photo-links {
+    grid-row: span 3 / span 3;
+    grid-column-start: 2;
+    grid-row-start: 1;
+
+     @media (max-width: 60rem) {
+      grid-row: 1;
+      grid-column-start: 1;
+      grid-row-start: 3;
+      margin: 0 auto;
+      padding-bottom: 3rem;
+      max-width:25rem;
+    }
+  }
+
+
+  .sponsor__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 70% 30%);
+    grid-template-rows: 2rem 5rem 1fr;
+
+    @media (max-width: 60rem) {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
+  }
+
+  .sponsor__grid-name {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+
+  .sponsor__grid-bio {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    padding-right:3rem;
+
+    @media (max-width: 60rem) {
+      grid-column-start: 1;
+      grid-row-start: 3;
+      padding-right: 0;
+    }
+  }
+
+  .sponsor__grid-photo-links {
+    grid-row: span 3 / span 3;
+    grid-column-start: 2;
+    grid-row-start: 1;
+
+     @media (max-width: 60rem) {
+      grid-row: 1;
+      grid-column-start: 1;
+      grid-row-start: 4;
+      margin: 0 auto;
+      padding-bottom: 3rem;
+      max-width:25rem;
+      padding-top:4rem;
+    }
+  }
+
+
+  .mentor__wrapper-content {
+    padding-right: 4rem;
+  }
+
+  .author-and-booking {
+    p, h5 {
+    color: var(--beige);
+    }
+  }
+
+.social {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.ticket-button {
+  text-align: center;
+}
+
+.workshop__ticket-button {
+    @include btn__primary;
+    margin:0 auto;
+}
+
+.workshop-sponsor {
+   background: var(--blue-dark);
+}
+
+  
+}

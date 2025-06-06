@@ -20,6 +20,7 @@
 @import "components/hover-effect";
 @import "components/generic-content";
 @import "components/schedule-overview";
+@import "components/workshop";
 
 body {
   background: var(--blue-dark);
@@ -61,4 +62,8 @@ body {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.blurred-background {
+  backdrop-filter: blur(.12rem);
 }
