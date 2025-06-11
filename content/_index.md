@@ -39,6 +39,11 @@
   link="https://sdr-podcast.com"
   image="/images/sponsors/sdr.png"
 
+[[extra.media_partners]]
+  title="Women in Tech Germany"
+  link="https://women-in-tech.org/gr/"
+  image="/images/sponsors/women-in-tech.png"
+
 [[extra.moderators]]
   name="Ciara"
   image="/images/moderators/ciara.png"
