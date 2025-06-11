@@ -44,6 +44,11 @@
   link="https://women-in-tech.org/gr/"
   image="/images/sponsors/women-in-tech.png"
 
+[[extra.media_partners]]
+  title="Code Beam Europe"
+  link="https://codebeameurope.com/"
+  image="/images/sponsors/code-beam-europe.png"
+
 [[extra.moderators]]
   name="Ciara"
   image="/images/moderators/ciara.png"
