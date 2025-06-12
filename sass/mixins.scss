@@ -38,6 +38,23 @@
   }
 }
 
+@mixin btn__text ($color: #1d113f) {
+  @include btn__secondary;
+  border: none;
+  color: $color;
+  font-family: Strenuous;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+
+  @media (max-width: 60rem) {
+    font-size: 15px;
+    width: auto;
+  }
+}
+
 @mixin btn__primary {
   @include button;
   border-radius: 45px;
