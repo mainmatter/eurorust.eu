@@ -4,15 +4,8 @@
     color: var(--beige);
   }
 
-  a {
-    text-decoration: none;
-    transition: all 0.2s ease-in;
-  }
-
-  a:hover {
-    filter: drop-shadow(10px 10px 5px var(--blue));
-    transition: all 0.2s ease-in;
-
+  .schedule-overview__button {
+   @include btn__secondary(#b3e4ff);
   }
 }
 
