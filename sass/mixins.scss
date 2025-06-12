@@ -77,6 +77,20 @@
   }
 }
 
+@mixin btn__secondary-large($color: var(--blue-light)) {
+  @include btn__primary;
+  border: 2px solid $color;
+  color: $color;
+  background: none;
+  box-shadow: none;
+
+  &:hover,
+  &:active {
+    box-shadow: none;
+    background: none;
+  }
+}
+
 @mixin dashed-border-with-corners() {
   outline: 2px dotted var(--blue-light);
   outline-offset: -15px;
