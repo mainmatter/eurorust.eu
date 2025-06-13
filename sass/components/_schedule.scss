@@ -39,6 +39,9 @@
     }
 }
 
+section#day1 {
+    background-color: var(--blue-dark);
+}
 
 .schedule-hero__details {
     line-height: 1.5rem;
@@ -76,7 +79,7 @@
     }
 }
 
-.schedule-grid {
+.schedule__grid {
   display: grid;
   grid-template-columns: repeat(2, 50%);
   grid-template-rows: repeat(1, 1fr);
@@ -102,6 +105,24 @@
   }  
 }
 
+.schedule__table {
+    & .schedule__table-side {
+        width: 50%;
+        border-left: 1px solid var(--blue-light);
+    }
+
+    & td[colspan] {
+        padding-inline: 0;
+        padding: 2rem;
+        border-block-start: 1px solid var(--blue-light);
+        border-block-end: 1px solid var(--blue-light);
+        text-align: center;
+    }
+
+    & .schedule__track th {
+        padding: .5rem 0 1rem 0;
+    }
+}
 
 
 

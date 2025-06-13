@@ -31,13 +31,13 @@
         </div>
       </section>
 
-      <section class="schedule__workshopday" id="workshop-day">
+      <section id="workshop-day">
         <div class="container">
           <div class="schedule__container">
             <div class="schedule__day">
               <h3>Workshop Day</h3>
               <h4 class="mt-3 mb-6">October 8, 2025</h4>
-              <div class="schedule-grid">
+              <div class="schedule__grid">
                 <p class="span-columns"><strong>The EuroRust workshops will take place in a separate venue, TBA soon</strong></p>
                 {% set workshops = load_data(path = "data/workshops.json") %}
                 {% for workshop in workshops %}
@@ -69,81 +69,23 @@
             </div>
         </div>
       </section>
-          {% set schedule = load_data(path = "data/schedule.json") %}
-          {% set_global sideCount = 0 %}
-          {% set_global currentRowspan = 0 %}
-          {% set_global sideRow = 0 %}
-          {% for day in schedule %}
-          {% set is_day1 = loop.first %}
-      <div>
-        <div class="conference mb-7">
-          <h3 class="h3">Conference Day {{ day.day }} - {{ day.date }}</h3>
-        </div>
-        <div class="mobile-schedule schedule__grid day-one mb-10">
-            <div class="schedule__main-stage border-r">
-            <h4 class="schedule__track mb-4">Main stage</h4>
-            <ol class="schedule__list">
-              {% for activity in day.mainStage %}
-                <li>
-                  {% include "2024/partials/activity-card.html" %}
-                </li>
-              {% endfor %}
-            </ol>
-          </div>
-          <div class="schedule__side-track">
-            <h4 class="schedule__track mb-4">Side track</h4>
-            <ol class="schedule__list">
-              {% for activity in day.side %}
-                {% include "2024/partials/activity-card.html" %}
-              {% endfor %}
-            </ol>
-          </div>
-          <div class="closing-party closing-party__grid schedule__shared">
-            <div class="closing-party__content">
-              <h3 class="large mb-2">Meet the Rust-programmed robo-soccer team!</h3>
-                  <p>The HULKs RoboCup SPL Team is coming to EuroRust. They'll be showing their robots, code showcases, as well as debugging tools and more during both conference days. 🤖</p>
-            </div>
-            <div class="closing-party__image">
-              <div class="closing-party__image-overlay"></div>
-              <img class="image-party" src="/2024/images/robots.jpg" alt="robot playing soccer"/>
-            </div>
-          </div>
-          {% if loop.first %}
-            <div class="closing-party closing-party__grid schedule__shared">
-              <div class="closing-party__content">
-                <h3 class="large mb-2">19:00: Karaoke – let's sing!</h3>
-                <p>The EuroRust team reserved 30 spots at the Karaoke bar <a href="https://www.babuders.at" target="_blank">Babuder's</a> for Rustaceans who like to sing after the first conference day 🧑‍🎤.</p>
-              </div>
-              <div class="closing-party__image">
-                <div class="closing-party__image-overlay"></div>
-                <img class="image-party" src="/2024/images/karaoke.jpg" alt="boy singing into a microphone"/>
-              </div>
-            </div>
-            <div class="closing-party closing-party__grid schedule__shared">
-              <div class="closing-party__content">
-                <h3 class="large mb-2">19:30: Group Dinners – Meet & Eat!</h3>
-                <p>We have reservations at various local restaurants in Vienna. Sign up at the conference venue to join fellow Rustaceans for dinner at your choice! 🍕🥗🍲</p>
-              </div>
-              <div class="closing-party__image">
-                <div class="closing-party__image-overlay"></div>
-                <img class="image-party" src="/2024/images/diner.jpg" alt="boy singing into a microphone"/>
-              </div>
-            </div>
-          {% endif %}
-          {% if loop.last %}
-            <div class="closing-party closing-party__grid schedule__shared">
-              <div class="closing-party__content">
-                <h3 class="large mb-2">18:00 - Closing Party</h3>
-                <p>Like every year, we'll be ending the conference with a closing party – at the conference venue, right after the closing talk on Friday, 11th around 18:00.</p>
-              </div>
-              <div class="closing-party__image">
-                <div class="closing-party__image-overlay"></div>
-                <img class="image-party" src="/2024/images/closingparty2023.jpg" alt="closing party at eurorust 2023"/>
-              </div>
-            </div>
-          {% endif %}
-        </div>
-        <div class="desktop-schedule">
+       
+      {% set schedule = load_data(path = "data/schedule.json") %}
+      {% set_global sideCount = 0 %}
+      {% set_global currentRowspan = 0 %}
+      {% set_global sideRow = 0 %}
+      {% for day in schedule %}
+      {% set is_day1 = loop.first %}
+
+      <section id="day{{ day.day }}">
+        <div class="container">
+          <div class="schedule__container">
+            <div class="schedule__day">
+              <h3>Conference Day {{ day.day }}</h3>
+              <h4 class="mt-3 mb-6">{{ day.date }}</h4>
+              
+         
+      
           <table class="schedule__table">
             <tr class="schedule__track h4">
               <th scope="col" class="visually-hidden">Time</th>
@@ -181,77 +123,11 @@
                   {% endif %}
                   {% set_global sideCount = sideCount + 1 %}
               </tr>
-              {% if loop.last %}
-                <tr>
-                  <td class="visually-hidden">&nbsp;</td>
-                  <td colspan="2">
-                    <div class="closing-party closing-party__grid schedule__shared">
-                      <div class="closing-party__content">
-                        <h3 class="large mb-2">Meet the Rust-programmed robo-soccer team!</h3>
-  <p>The HULKs RoboCup SPL Team is coming to EuroRust. They'll be showing their robots, code showcases, as well as debugging tools and more during both conference days. 🤖</p>
-                        </p>
-                      </div>
-                      <div class="closing-party__image">
-                        <div class="closing-party__image-overlay"></div>
-                        <img class="image-party" src="/2024/images/robots.jpg" alt="robot playing soccer"/>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-              {% endif %}
-              {% if is_day1 and loop.last %}
-                <tr>
-                  <td class="visually-hidden">19:00</td>
-                  <td colspan="2">
-                    <div class="closing-party closing-party__grid schedule__shared">
-                      <div class="closing-party__content">
-                        <h3 class="large mb-2">19:00: Karaoke – let's sing!</h3>
-                        <p>The EuroRust team reserved 30 spots at the Karaoke bar <a href="https://www.babuders.at" target="_blank">Babuder's</a> for Rustaceans who like to sing after the first conference day 🧑‍🎤.</p>
-                      </div>
-                      <div class="closing-party__image">
-                        <div class="closing-party__image-overlay"></div>
-                        <img class="image-party" src="/2024/images/karaoke.jpg" alt="boy singing into a microphone"/>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="visually-hidden">19:00</td>
-                  <td colspan="2">
-                    <div class="closing-party closing-party__grid schedule__shared">
-                      <div class="closing-party__content">
-                        <h3 class="large mb-2">19:30: Group Dinners – Meet & Eat!</h3>
-                        <p>We have reservations at various local restaurants in Vienna. Sign up a the conference venue to join fellow Rustaceans for dinner at your choice! 🍕🥗🍲</p>
-                      </div>
-                      <div class="closing-party__image">
-                        <div class="closing-party__image-overlay"></div>
-                        <img class="image-party" src="/2024/images/diner.jpg" alt="boy singing into a microphone"/>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-              {% endif %}
             {% endfor %}
-            {% if loop.last %}
-              <tr>
-                <td class="visually-hidden">18:00</td>
-                <td colspan="2">
-                  <div class="closing-party closing-party__grid schedule__shared">
-                    <div class="closing-party__content">
-                      <h3 class="large mb-2">18:00 - Closing Party</h3>
-                      <p>Like every year, we'll be ending the conference with a closing party – at the conference venue, right after the closing talk on Friday, 11th around 18:00.</p>
-                    </div>
-                    <div class="closing-party__image">
-                      <div class="closing-party__image-overlay"></div>
-                      <img class="image-party" src="/2024/images/closingparty2023.jpg" alt="closing party at eurorust 2023"/>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-            {% endif %}
           </table>
-        </div>
+        
       </div>
+    </section>
     {% endfor %}
 
     <div class="mb-9">
