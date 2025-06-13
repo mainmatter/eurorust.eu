@@ -17,7 +17,7 @@
 {% endblock head %}
 
 {% block content %}
-  {% set schedule = load_data(path = "data/schedule.json") %}
+  {% set schedule = load_data(path = "data/2024/schedule.json") %}
   {% set day = schedule[page.extra.day] %}
 
   <div class="generic-block full-schedule">
