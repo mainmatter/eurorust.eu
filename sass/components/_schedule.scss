@@ -1,6 +1,11 @@
 .schedule {
     & section {
     padding: 3rem;
+
+    @media screen and (max-width: 60rem) {
+        padding: 1rem 0;
+    }
+
     }
     
     & .activity-card {
