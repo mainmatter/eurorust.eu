@@ -76,15 +76,6 @@
   }
 }
 
-.schedule__table-side {
-  border-left: 2px dotted var(--blue-light);
-  border-top: none;
-
-  @media screen and (max-width: 60rem) {
-    border-top: 2px dotted var(--blue-light);
-    border-left: none;
-  }
-}
 
 .schedule-overview {
   text-align: center;
