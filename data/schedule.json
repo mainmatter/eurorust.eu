@@ -7,7 +7,7 @@
       { "time": "10:00–10:45", "title": "Opening talk, TBA", "isBreak": true },
       { "time": "11:00–11:30", "talk": "data-engineering-with-rust" },
       {"time": "11:45–12:15",  "talk": "from-any-to-this" },
-      { "time": "12:15–14:00", "title": "Lunch", "isBreak": true },
+      { "time": "12:15–13:45", "title": "Lunch", "isBreak": true },
       { "time": "14:00–14:30", "talk": "trust-your-benchmarks" },
       { "time": "14:45–15:15", "talk": "roto-scripting-language" },
       { "time": "15:30–16:00", "talk": "building-and-maintaining-rust-at-scale" },
