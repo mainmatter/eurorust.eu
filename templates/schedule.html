@@ -77,60 +77,80 @@
       {% for day in schedule %}
       {% set is_day1 = loop.first %}
 
-      <section id="day{{ day.day }}">
+      <section id="day{{ day.day }}" class="mt-6 mb-8">
         <div class="container">
           <div class="schedule__container">
             <div class="schedule__day">
               <h3>Conference Day {{ day.day }}</h3>
               <h4 class="mt-3 mb-6">{{ day.date }}</h4>
-              
-         
-      
-          <table class="schedule__table">
-            <tr class="schedule__track h4">
-              <th scope="col" class="visually-hidden">Time</th>
-              <th scope="col">Main Stage</th>
-              <th scope="col" class="schedule__table-side">Side track</th>
-            </tr>
-            {% set_global sideCount = 1 %}
-            {% set_global currentRowspan = 0 %}
-            {% set_global sideRow = 0 %}
-            {% for activity in day.mainStage %}
-              <tr>
-                <td scope="row" class="visually-hidden">{{activity.time}}</td>
-                <td {% if activity.isBreak %}colspan="2" class="schedule{% endif %}>
-                  <!-- siderow: {{ sideRow }} count: {{ sideCount }} currentRowSpan {{ currentRowspan }} -->
-                  {% include "2024/partials/activity-card.html" %}
-                </td>
-                  {% if currentRowspan and sideCount - sideRow < currentRowspan %}
-                  {% else %}
-                    {% if day.side[sideRow] %}
-                      {% if day.side[sideRow].rowspan %}
-                        {% set activity = day.side[sideRow] %}
-                        {% set_global currentRowspan = activity.rowspan %}
+              <div class="mobile-schedule schedule__grid day-one mb-5">
+                <div class="schedule__main-stage border-r">
+                  <h4 class="schedule__track mb-4">Main stage</h4>
+                  <ol class="schedule__list">
+                    {% for activity in day.mainStage %}
+                      <li>
+                        {% include "partials/activity-card.html" %}
+                      </li>
+                    {% endfor %}
+                  </ol>
+                </div>
+                <div class="schedule__side-track">
+                  <h4 class="schedule__track mb-4">Side track</h4>
+                  <ol class="schedule__list">
+                    {% for activity in day.side %}
+                    <li>
+                      {% include "partials/activity-card.html" %}
+                    </li>
+                    {% endfor %}
+                  </ol>
+                </div>
+              </div>
+              <div class="desktop-schedule">
+                <table class="schedule__table">
+                  <tr class="schedule__track h4">
+                    <th scope="col" class="visually-hidden">Time</th>
+                    <th scope="col">Main Stage</th>
+                    <th scope="col" class="schedule__table-side">Side track</th>
+                  </tr>
+                  {% set_global sideCount = 1 %}
+                  {% set_global currentRowspan = 0 %}
+                  {% set_global sideRow = 0 %}
+                  {% for activity in day.mainStage %}
+                  <tr>
+                    <td scope="row" class="visually-hidden">{{activity.time}}</td>
+                    <td {% if activity.isBreak %}colspan="2" class="schedule{% endif %}>
+                      <!-- siderow: {{ sideRow }} count: {{ sideCount }} currentRowSpan {{ currentRowspan }} -->
+                      {% include "partials/activity-card.html" %}
+                    </td>
+                      {% if currentRowspan and sideCount - sideRow < currentRowspan %}
                       {% else %}
-                        {% set_global currentRowspan = 0 %}
+                        {% if day.side[sideRow] %}
+                          {% if day.side[sideRow].rowspan %}
+                            {% set activity = day.side[sideRow] %}
+                            {% set_global currentRowspan = activity.rowspan %}
+                          {% else %}
+                            {% set_global currentRowspan = 0 %}
+                          {% endif %}
+                          {% if not activity.isBreak %}
+                            {% set activity = false %}
+                            {% set activity = day.side[sideRow] %}
+                            <td class="schedule__table-side" {% if activity.rowspan %}rowspan="{{ activity.rowspan }}"{% endif %}>
+                              {% include "partials/activity-card.html" %}
+                            </td>
+                          {% endif %}
+                          {% set_global sideRow = sideRow + 1 %}
+                        {% endif %}
                       {% endif %}
-                      {% if not activity.isBreak %}
-                        {% set activity = false %}
-                        {% set activity = day.side[sideRow] %}
-                        <td class="schedule__table-side" {% if activity.rowspan %}rowspan="{{ activity.rowspan }}"{% endif %}>
-                          {% include "2024/partials/activity-card.html" %}
-                        </td>
-                      {% endif %}
-                      {% set_global sideRow = sideRow + 1 %}
-                    {% endif %}
-                  {% endif %}
-                  {% set_global sideCount = sideCount + 1 %}
-              </tr>
-            {% endfor %}
-          </table>
-        
+                      {% set_global sideCount = sideCount + 1 %}
+                  </tr>
+                  {% endfor %}
+                </table>
+              </div>
       </div>
     </section>
     {% endfor %}
 
-    <div class="mb-9">
+    <!-- <div class="mb-9">
       <h3 class="h3 mb-4">Post Conference Day - Oct. 12th, 2024</h3>
       <ol>
         <li class="mb-4">
@@ -139,8 +159,8 @@
         </li>
       </ol>
     </div>
-  </div>
+  </div> -->
 
-    {% include "sections/footer.html" %}
+  {% include "sections/footer.html" %}
   </div>
   {% endblock content %}
