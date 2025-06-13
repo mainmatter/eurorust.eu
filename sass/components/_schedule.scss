@@ -43,6 +43,12 @@ section#day1 {
     background-color: var(--blue-dark);
 }
 
+section#day2 {
+    & .schedule__table {
+        backdrop-filter: blur(.12rem);
+    }
+}
+
 .schedule-hero__details {
     line-height: 1.5rem;
     color: var(--beige);
@@ -105,7 +111,20 @@ section#day1 {
   }  
 }
 
+.mobile-schedule {
+  display: none;
+}
+
 .schedule__table {
+
+     @media screen and (max-width: 60rem) {
+        columns: 2;
+
+        & td {
+            column-span: all;
+        };
+    }
+
     & .schedule__table-side {
         width: 50%;
         border-left: 1px solid var(--blue-light);
@@ -122,6 +141,46 @@ section#day1 {
     & .schedule__track th {
         padding: .5rem 0 1rem 0;
     }
+}
+
+@media (max-width: 60rem) {
+    .mobile-schedule {
+      display: block;
+    }
+
+    .desktop-schedule {
+      display: none;
+    }
+
+    .schedule__grid {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .schedule__main-stage {
+        padding-right: 0;
+        margin-bottom: 5rem;
+    }
+
+    .schedule__side-track {
+        padding-left: 0;
+    }
+
+    .activity-card {
+        text-align: center;
+        border-bottom: 1px solid var(--blue-light);
+    }
+
+    .schedule__list {
+        border-top: 1px solid var(--blue-light);
+
+        & li:last-child .activity-card {
+            border-bottom: none;
+        }
+    }
+    
+
+
 }
 
 
