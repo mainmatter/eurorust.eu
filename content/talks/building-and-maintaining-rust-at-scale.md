@@ -4,7 +4,8 @@ template = "talk.html"
 [extra]
   date = "October 9, 2025"
   time = "15:15-15:45"
+  stage = "Main Stage"
   speakers = ["jacob-pratt"]
-  description = ""
+  description = "<p>Many times, Rust code does not “feel” like Rust because coders don’t know what typical Rust code looks like. I will give an overview of how to ensure that code is exemplary by design, from testing and code coverage to how to structure files, enforce lints, and split code to improve compile times.</p><p>Learn various Rust design patterns, idioms, and how to set yourself up for success with large-scale codebases.</p>"
   ogimage = ""
 +++
