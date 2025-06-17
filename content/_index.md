@@ -96,4 +96,13 @@
   job_title="Co-host"
   image="/images/speakers/amos-wenger.png"
   github="https://github.com/fasterthanlime"
+
+[[extra.speakers]]
+  name="Ryan Dahl"
+  web="https://tinyclouds.org/"
+  twitter="https://x.com/rough__sea"
+  company="Creator of Node.js and Deno"
+  job_title=""
+  image="/images/speakers/ryan-dahl.png"
+  github="https://github.com/ry"
 +++
