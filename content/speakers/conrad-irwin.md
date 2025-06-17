@@ -1,8 +1,8 @@
 +++
 template = "speaker.html"
-title = "Speaker TBA"
+title = "Speaker: Conrad Irwin"
 [extra]
-  name = "Speaker TBA"
+  name = "Conrad Irwin"
   url = ""
   image = ""
   twitter = ""

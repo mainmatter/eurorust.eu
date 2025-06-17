@@ -18,8 +18,10 @@
       </p>
     </div>
   {% elif activity.title %}
-    <p><strong>{{ activity.time }}</strong></p>
-    <p class="beige">{{ activity.title }}</p>
+    <div class="activity-card__content">
+      <p><strong>{{ activity.time }}</strong></p>
+      <p class="beige">{{ activity.title }}</p>
+    </div>
   {% else %}
     <p><strong>{{ activity.time }}</strong></p>
     <p>TBA</p>

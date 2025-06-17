@@ -5,29 +5,33 @@
     "mainStage": [
       { "time": "9:00–10:00", "title": "Doors open & breakfast", "isBreak": true },
       { "time": "10:00–10:45", "title": "Opening talk, TBA", "isBreak": true },
-      { "time": "11:00–11:30", "talk": "data-engineering-with-rust" },
-      {"time": "11:45–12:15",  "talk": "from-any-to-this" },
+      { "time": "11:00–11:30", "talk": "building-and-maintaining-rust-at-scale" },
+      { "time": "11:45–12:15",  "title": "TBA" },
+
       { "time": "12:15–13:45", "title": "Lunch", "isBreak": true },
-      { "time": "14:00–14:30", "talk": "trust-your-benchmarks" },
-      { "time": "14:45–15:15", "talk": "roto-scripting-language" },
-      { "time": "15:30–16:00", "talk": "building-and-maintaining-rust-at-scale" },
-      { "time": "16:00–16:30", "title": "Snack Break", "isBreak": true },
-      { "time": "16:30–17:00", "talk": "production-unsafe-rust" },
-      { "time": "17:15–17:45", "talk": "sdr-podcast-day-1"},
+      { "time": "13:45–14:15", "talk": "production-unsafe-rust" },
+      { "time": "14:30–15:00", "talk": "roto-scripting-language" },
+      { "time": "15:15–15:45", "talk": "trust-your-benchmarks" },
+
+      { "time": "15:45–16:15", "title": "Snack Break", "isBreak": true },
+      { "time": "16:15–16:45", "talk": "reflections-on-the-humans" },
+      { "time": "17:00–17:30", "talk": "sdr-podcast-day-1" },
       { "time": "18:00–18:45", "title": "Closing talk, TBA", "isBreak": true }
     ],
     "side": [
       { "time": "9:00–10:00", "title": "Doors open & breakfast", "isBreak": true },
       { "time": "10:00–10:45", "title": "Opening talk, TBA", "isBreak": true },
-      { "time": "11:00–11:30", "talk": "make-your-own-stream-operators" },
-      { "time": "11:45–12:15", "talk": "building-a-chatbot-service" },
-      { "time": "12:15–14:00", "title": "Lunch", "isBreak": true },
-      { "time": "14:00–14:30", "talk": "deadlock-detection" },
-      { "time": "14:45–15:15", "talk": "writing-safe-postgresql-extensions" },
-      { "time": "15:30–16:00", "talk": "rusts-memory-model" },
-      { "time": "16:00–16:30", "title": "Snack Break", "isBreak": true },
-      { "time": "16:30–17:00", "talk": "serde-driven-reflection" },
-      { "time": "17:15–17:45", "talk": "automotive-rust" }, 
+      { "time": "11:00–11:30", "talk": "deadlock-detection" },
+      { "time": "11:45–12:15", "title": "TBA" },
+
+      { "time": "12:15–13:45", "title": "Lunch", "isBreak": true },
+      { "time": "13:45–14:15", "talk": "building-a-chatbot-service" },
+      { "time": "14:30–15:00", "talk": "znext-solver" },
+      { "time": "15:15–15:45", "talk": "rusts-memory-model" },
+
+      { "time": "15:45–16:15", "title": "Snack Break", "isBreak": true },
+      { "time": "16:15–16:45", "title": "TBA" },
+      { "time": "17:00–17:30", "talk": "make-your-own-stream-operators" },
       { "time": "18:00–18:45", "title": "Closing talk, TBA", "isBreak": true }
     ]
   },
@@ -37,30 +41,35 @@
     "mainStage": [
       { "time": "9:00–10:00", "title": "Doors open & breakfast", "isBreak": true },
       { "time": "10:00–10:45", "title": "Opening talk, TBA", "isBreak": true },
-      { "time": "11:00–11:30", "talk": "how-rust-compiles" },
-      {"time": "11:45–12:15",  "talk": "misusing-const" },
-      { "time": "12:15–14:00", "title": "Lunch", "isBreak": true },
-      { "time": "14:00–14:30", "talk": "how-to-fit-an-elephant" },
-      { "time": "14:45–15:15", "talk": "reflections-on-the-humans" },
-      { "time": "15:30–16:00", "talk": "one-rust-binary" },
-      { "time": "16:00–16:30", "title": "Snack Break", "isBreak": true },
-      { "time": "16:30–17:00", "talk": "lego-line-follower-challenge" },
-      { "time": "17:15–17:45", "talk": "sdr-podcast-day-2"},
+      { "time": "11:00–11:30", "talk": "data-engineering-with-rust" },
+      { "time": "11:45–12:15", "talk": "how-to-fit-an-elephant" },
+
+      { "time": "12:15–13:45", "title": "Lunch", "isBreak": true },
+      { "time": "13:45–14:15", "talk": "lego-line-follower-challenge" },
+      { "time": "14:30–15:00", "talk": "how-rust-compiles" },
+      { "time": "15:15–15:45",  "talk": "misusing-const" },
+
+      { "time": "15:45–16:15", "title": "Snack Break", "isBreak": true },
+      { "time": "16:15–16:45", "talk": "one-rust-binary" },
+      { "time": "17:00–17:30", "talk": "sdr-podcast-day-2"},
       { "time": "18:00–18:45", "title": "Closing talk, TBA", "isBreak": true }
     ],
     "side": [
       { "time": "9:00–10:00", "title": "Doors open & breakfast", "isBreak": true },
       { "time": "10:00–10:45", "title": "Opening talk, TBA", "isBreak": true },
-      { "time": "11:00–11:30", "talk": "znext-solver" },
+      { "time": "11:00–11:30", "talk": "random-seeds-and-state-machines" },
       { "time": "11:45–12:15", "talk": "sponsor-talk" },
-      { "time": "12:15–14:00", "title": "Lunch", "isBreak": true },
-      { "time": "14:00–14:30", "talk": "rust-unlinked" },
-      { "time": "14:45–15:15", "talk": "random-seeds-and-state-machines" },
-      { "time": "15:30–16:00", "talk": "a-minimal-rust-kernel" },
-      { "time": "16:00–16:30", "title": "Snack Break", "isBreak": true },
-      { "time": "16:30–17:00", "talk": "porting-embassy" },
-      { "time": "17:15–17:45", "talk": "nix-related" }, 
+
+      { "time": "12:15–13:45", "title": "Lunch", "isBreak": true },
+      { "time": "13:45–14:15", "talk": "serde-driven-reflection" },
+      { "time": "14:30–15:00", "talk": "porting-embassy" },
+      { "time": "15:15–15:45", "talk": "a-minimal-rust-kernel" },
+
+      { "time": "15:45–16:15", "title": "Snack Break", "isBreak": true },
+      { "time": "16:15–16:45", "talk": "rust-unlinked" },
+      { "time": "17:00–17:30", "talk": "nix-for-rustaceans" },
       { "time": "18:00–18:45", "title": "Closing talk, TBA", "isBreak": true }
+      
     ]
   }
 ]
