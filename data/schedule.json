@@ -6,7 +6,7 @@
       { "time": "9:00–10:00", "title": "Doors open & breakfast", "isBreak": true },
       { "time": "10:00–10:45", "title": "Opening talk, TBA", "isBreak": true },
       { "time": "11:00–11:30", "talk": "building-and-maintaining-rust-at-scale" },
-      { "time": "11:45–12:15",  "title": "TBA" },
+      { "time": "11:45–12:15",  "talk": "from-any-to-this" },
 
       { "time": "12:15–13:45", "title": "Lunch", "isBreak": true },
       { "time": "13:45–14:15", "talk": "production-unsafe-rust" },
@@ -30,7 +30,7 @@
       { "time": "15:15–15:45", "talk": "rusts-memory-model" },
 
       { "time": "15:45–16:15", "title": "Snack Break", "isBreak": true },
-      { "time": "16:15–16:45", "title": "TBA" },
+      { "time": "16:15–16:45", "title": "automotive-rust" },
       { "time": "17:00–17:30", "talk": "make-your-own-stream-operators" },
       { "time": "18:00–18:45", "title": "Closing talk, TBA", "isBreak": true }
     ]
