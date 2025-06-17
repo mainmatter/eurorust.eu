@@ -3,7 +3,7 @@ template = "speaker.html"
 title = "Speaker: Muskan Paliwal"
 [extra]
   name = "Muskan Paliwal"
-  role = "Founding Engineer at Vibinex" 
+  role = "" 
   url = "https://in.linkedin.com/in/muskanpaliwal"
   image = ""
   twitter = "PaliwalMuskan19"

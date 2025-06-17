@@ -2,8 +2,8 @@
 title = "Trust Your Benchmarks, Not Your Instincts: A Rust Performance Quiz"
 template = "talk.html"
 [extra]
-  date = "October 9, 2025"
-  time = "14:00-14:30"
+  date = "Thursday, October 9, 2025"
+  time = "15:15–15:45"
   stage = "Main Stage"
   speakers = ["arthur-pastel"]
   co-speaker = ["adrien-cacciaguerra"]
