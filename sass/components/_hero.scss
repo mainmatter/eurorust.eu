@@ -95,7 +95,17 @@
   @include dashed-border-with-corners;
 
   .hero__grid-content-ticket-button {
-    margin-top: 1rem;
     @include btn__primary;
   }
+
+  .hero__grid-content-schedule-button {
+    @include btn__secondary-large;
+  }
+}
+
+.hero__grid-buttons {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  gap: 1.5rem;
 }

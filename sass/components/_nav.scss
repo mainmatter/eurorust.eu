@@ -18,6 +18,20 @@ nav {
   }
 }
 
+.nav__links {
+  display: flex;
+  flex-direction: row;
+  gap: .25rem;
+
+  @media screen and (max-width: 60rem) {
+    gap: .75rem;
+  }
+}
+
+.nav__links-schedule {
+  @include btn__text;
+} 
+
 .nav__logo {
   .link {
     display: flex;
@@ -50,5 +64,6 @@ nav {
 
   .nav__wrapper {
     flex-direction: column;
+    gap: .75rem; 
   }
 }
