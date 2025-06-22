@@ -4,7 +4,7 @@ title = "Speaker: Conrad Irwin"
 [extra]
   name = "Conrad Irwin"
   url = ""
-  image = ""
+  image = "/images/talks/shriram-balaji.webp"
   twitter = ""
   mastodon = ""
   bio = "<p></p>"

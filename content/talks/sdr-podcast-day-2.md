@@ -5,7 +5,7 @@ template = "talk.html"
   date = "Friday, October 10, 2025"
   time = "17:00–17:30"
   stage = "Main Stage"
-  speakers = []
+  speakers = ["sdr-podcast"]
   description = ""
   ogimage = ""
 +++
