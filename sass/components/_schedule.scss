@@ -81,12 +81,23 @@ section#day2 {
 }
 
 .schedule-hero__nav {
+    @include dashed-border-with-corners;
+
     & p {
     color: var(--beige);
+    text-align: center;
     }
 
     & ul {
         list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+            @media screen and (max-width: 60rem) {
+                flex-direction: column;
+                align-items: center;
+            }
     }
 
     & li:before {
