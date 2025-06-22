@@ -7,5 +7,5 @@ template = "talk.html"
   stage = "Side Stage"
   speakers = ["TBA"]
   description = "<p>TBA</p>"
-  ogimage = ""
+  ogimage = "/images/talks/og-images/.png"
 +++

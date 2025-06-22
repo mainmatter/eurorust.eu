@@ -7,5 +7,5 @@ template = "talk.html"
   stage = "Main Stage"
   speakers = ["sdr-podcast"]
   description = ""
-  ogimage = ""
+  ogimage = "/images/talks/og-images/sdr-podcast.png"
 +++

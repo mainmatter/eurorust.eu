@@ -1,8 +1,8 @@
 +++
 template = "speaker.html"
-title = "Speaker: lcnr (Bastian Kauschke)"
+title = "Speaker: lcnr"
 [extra]
-  name = "lcnr (Bastian Kauschke)"
+  name = "lcnr"
   url = ""
   image = "images/talks/lcnr.webp"
   twitter = ""
