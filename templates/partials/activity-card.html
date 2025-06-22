@@ -2,7 +2,8 @@
   {% if activity.talk %}
     {% set path = "talks/" ~ activity.talk ~ ".md" %}
     {% set talk = get_page(path = path) %}
-    <!-- Link goes here  -->
+    <a class="activity-card__link" href="{{talk.path}}">
+    
     <div class="activity-card__content">
       <p class="activity-card__time"><strong>{{ activity.time }}</strong></p>
       <p aria-hidden="true" class="beige activity-card__title"><strong>{{ talk.title }}</strong></p>
@@ -10,7 +11,6 @@
         {% for speaker in talk.extra.speakers %}
         {% set path = "speakers/" ~ speaker ~ ".md" %}
         {% set speaker = get_page(path = path) %}
-        <!-- Insert link here -->
         {% if speaker.extra.image %}
               <img class="activity-card__portrait mb-3" src="{{ speaker.extra.image }}" alt="Photo of {{ speaker.extra.name }}" />
             {% else %}
@@ -20,13 +20,16 @@
         {% endfor %}
       {% endif %}
     </div>
+    </a>
   {% elif activity.title %}
     <div class="activity-card__content">
       <p><strong>{{ activity.time }}</strong></p>
       <p class="beige">{{ activity.title }}</p>
     </div>
+    </a>
   {% else %}
     <p><strong>{{ activity.time }}</strong></p>
     <p>TBA</p>
+    </a>
   {% endif %}
   </div>
