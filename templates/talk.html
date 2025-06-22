@@ -46,7 +46,7 @@
                 {{ page.title | safe }}
               </h1>
               {% if page.extra.description %}
-                <div class="pb-8">
+                <div>
                   {{ page.extra.description | safe }}
                 </div>
               {% endif %}
@@ -60,7 +60,7 @@
       </section>
 
       
-      <section class="workshop-author mt-9 mb-4">
+      <section class="workshop-author mb-4">
         <div class="author-and-booking container">
           {% for speaker in page.extra.speakers %}
           {% set path = "speakers/" ~ speaker ~ ".md" %}
