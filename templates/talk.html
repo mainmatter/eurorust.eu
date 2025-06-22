@@ -70,7 +70,11 @@
                 <h5 class="mb-4">Speaker</h5>
               </div>
               <div class="mentor__grid-name">
+                {% if speaker.extra.name == "Dănuț Aldea" %}
+                <h2 class="mentor__grid-name-exception mb-4">{{ speaker.extra.name }}</h2>
+                {% else %}
                 <h2 class="mb-4">{{ speaker.extra.name }}</h2>
+                {% endif %}
               </div>
                 {% if speaker.extra.bio %}
                 <div class="mentor__grid-bio blurred-background">
