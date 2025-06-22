@@ -207,7 +207,7 @@ section#day2 {
 
     .schedule__main-stage {
         padding-right: 0;
-        margin-bottom: 5rem;
+        margin-bottom: 6rem;
     }
 
     .schedule__side-track {
@@ -221,10 +221,6 @@ section#day2 {
 
     .schedule__list {
         border-top: 1px solid var(--blue-light);
-
-        & li:last-child .activity-card {
-            border-bottom: none;
-        }
     }
 }
 

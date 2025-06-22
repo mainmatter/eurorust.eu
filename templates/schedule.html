@@ -5,7 +5,7 @@
     {% include "sections/nav.html" %}
 
     <main tabindex="-1" id="main">
-      <section class="schedule-hero pb-10 border-b">
+      <section class="schedule-hero pb-10">
         <div class="container p-1">
           <p class="schedule-hero__details mb-7">
             »Schedule
@@ -84,7 +84,7 @@
               <h3>Conference Day {{ day.day }}</h3>
               <h4 class="mt-3 mb-6">{{ day.date }}</h4>
               <div class="mobile-schedule schedule__grid day-one mb-5">
-                <div class="schedule__main-stage border-r">
+                <div class="schedule__main-stage">
                   <h4 class="schedule__track mb-4">Main stage</h4>
                   <ol class="schedule__list">
                     {% for activity in day.mainStage %}
