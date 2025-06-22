@@ -11,7 +11,11 @@
         {% set path = "speakers/" ~ speaker ~ ".md" %}
         {% set speaker = get_page(path = path) %}
         <!-- Insert link here -->
-        <img src="{{speaker.extra.image}}" class="activity-card__portrait mb-3">
+        {% if speaker.extra.image %}
+              <img class="activity-card__portrait mb-3" src="{{ speaker.extra.image }}" alt="Photo of {{ speaker.extra.name }}" />
+            {% else %}
+              <img class="activity-card__portrait mb-3" src="/images/talks/placeholder.png" alt="" />
+        {% endif %}
         <p class="beige activity-card__speaker mt-3">»{{speaker.extra.name}}</p>
         {% endfor %}
       {% endif %}
