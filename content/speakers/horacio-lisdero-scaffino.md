@@ -4,7 +4,7 @@ title = "Speaker: Horacio Lisdero Scaffino"
 [extra]
   name = "Horacio Lisdero Scaffino"
   url = ""
-  image = "/images/talks/horacio-lisdero-scaffino.webp"
+  image = "images/talks/horacio-lisdero-scaffino.webp"
   github = "https://github.com/hlisdero/"
   twitter = ""
   mastodon = ""

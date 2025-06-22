@@ -4,7 +4,7 @@ title = "Speaker: Noratrieb"
 [extra]
   name = "Noratrieb"
   url = "https://noratrieb.dev/"
-  image = "/images/talks/noratrieb.webp"
+  image = "images/talks/noratrieb.webp"
   twitter = ""
   bluesky = "https://bsky.app/profile/noratrieb.dev"
   github = "https://github.com/Noratrieb"

@@ -4,7 +4,7 @@ title = "Speaker: Arthur Pastel"
 [extra]
   name = "Arthur Pastel"
   url = "https://www.linkedin.com/in/arthurpastel/"
-  image = "/images/talks/shriram-balaji.webp"
+  image = "images/talks/shriram-balaji.webp"
   twitter = "Art049"
   bluesky = "apas.tel"
   github = "https://github.com/art049/"

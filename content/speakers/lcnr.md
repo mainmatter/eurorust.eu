@@ -4,7 +4,7 @@ title = "Speaker: lcnr (Bastian Kauschke)"
 [extra]
   name = "lcnr (Bastian Kauschke)"
   url = ""
-  image = "/images/talks/lcnr.webp"
+  image = "images/talks/lcnr.webp"
   twitter = ""
   mastodon = ""
   github = "https://github.com/lcnr"
