@@ -63,6 +63,17 @@
         filter: drop-shadow(10px 10px 5px var(--blue));
         transition: all 0.2s ease-in;
     }
+
+    & .ticket-button {
+    text-align: center;
+    
+        & .schedule__button {
+            @include btn__primary;
+            color: var(--blue-dark);
+            margin:0 auto;
+            text-align: center;
+        }
+    }
 }
 
 section#day1 {

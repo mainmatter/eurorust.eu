@@ -50,22 +50,17 @@
                   {{ page.extra.description | safe }}
                 </div>
               {% endif %}
-              {# <div class="btn__primary">
-                <tito-button event="events-matter/eurorust-2024" save-metadata-parameters="utm_*" class="btn__primary--link">Get your ticket</tito-button>
-              </div> #}
             </div>
           </div>
         </div>
-
       </section>
-
       
-      <section class="workshop-author mb-4">
+      <section class="workshop-author mb-8">
         <div class="author-and-booking container">
           {% for speaker in page.extra.speakers %}
           {% set path = "speakers/" ~ speaker ~ ".md" %}
           {% set speaker = get_page(path = path) %}
-            <div class="mentor__grid mb-9">
+            <div class="mentor__grid">
               <div class="mentor__grid-title">
                 <h5 class="mb-4">Speaker</h5>
               </div>
@@ -145,7 +140,10 @@
               </div>
             {% endfor %}
             </div>
-          </div>
+      </section>
+
+      <section class="ticket-button mb-10">
+        <a href="https://ti.to/events-matter/eurorust-2025" class="workshop__ticket-button">Get tickets</a>
       </section>
 
     </main>
