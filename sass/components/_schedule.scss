@@ -60,10 +60,13 @@
 
     & .activity-card__link {
         text-decoration: none;
-        transition: all 0.2s ease-in;
         }
         
-    & .activity-card__link:hover {
+    & .activity-card__content {
+        transition: all 0.2s ease-in;
+        padding:0 1.5rem 1.5rem 1.5rem;
+    }    
+    & .activity-card__link:hover .activity-card__content{
         filter: drop-shadow(10px 10px 5px var(--blue));
         transition: all 0.2s ease-in;
     }
