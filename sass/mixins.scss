@@ -117,3 +117,10 @@
       bottom calc(0.75rem + 1px) left calc(0.75rem + 1px);
   }
 }
+
+@mixin dark-blue-background {
+  box-shadow: 0 1rem 20px var(--blue-dark),
+  0 -1rem 20px var(--blue-dark);
+
+  background-color: var(--blue-dark);
+}

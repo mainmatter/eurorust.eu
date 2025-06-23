@@ -77,7 +77,7 @@
 }
 
 section#day1 {
-    background-color: var(--blue-dark);
+   @include dark-blue-background;
 }
 
 section#day2 {
