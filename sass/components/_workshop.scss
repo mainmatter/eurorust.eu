@@ -5,6 +5,10 @@
     @media (max-width: 60rem) {
       padding: 1rem;
     }
+
+    p {
+      @include text-shadow;
+    }
   }
 
   .workshop-hero__topline {

@@ -1,4 +1,8 @@
 .schedule {
+    p {
+        @include text-shadow;
+    }
+
     & section {
     padding: 3rem;
 
