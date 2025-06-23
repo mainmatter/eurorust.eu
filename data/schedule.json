@@ -16,7 +16,8 @@
       { "time": "15:45–16:15", "title": "Snack Break", "isBreak": true },
       { "time": "16:15–16:45", "talk": "reflections-on-the-humans" },
       { "time": "17:00–17:30", "talk": "sdr-podcast-day-1" },
-      { "time": "18:00–18:45", "title": "Closing talk, TBA", "isBreak": true }
+      { "time": "18:00–18:45", "title": "Closing talk, TBA", "isBreak": true },
+      { "time": "19:00", "title": "Side activities", "isBreak": true }
     ],
     "side": [
       { "time": "9:00–10:00", "title": "Doors open & breakfast", "isBreak": true },
@@ -32,7 +33,8 @@
       { "time": "15:45–16:15", "title": "Snack Break", "isBreak": true },
       { "time": "16:15–16:45", "talk": "automotive-rust" },
       { "time": "17:00–17:30", "talk": "make-your-own-stream-operators" },
-      { "time": "18:00–18:45", "title": "Closing talk, TBA", "isBreak": true }
+      { "time": "18:00–18:45", "title": "Closing talk, TBA", "isBreak": true },
+      { "time": "19:00", "title": "Side activities", "isBreak": true }
     ]
   },
   {
@@ -52,7 +54,8 @@
       { "time": "15:45–16:15", "title": "Snack Break", "isBreak": true },
       { "time": "16:15–16:45", "talk": "one-rust-binary" },
       { "time": "17:00–17:30", "talk": "sdr-podcast-day-2"},
-      { "time": "18:00–18:45", "title": "Closing talk, TBA", "isBreak": true }
+      { "time": "18:00–18:45", "title": "Closing talk, TBA", "isBreak": true },
+      { "time": "19:00", "title": "Closing party", "isBreak": true }
     ],
     "side": [
       { "time": "9:00–10:00", "title": "Doors open & breakfast", "isBreak": true },
@@ -68,7 +71,8 @@
       { "time": "15:45–16:15", "title": "Snack Break", "isBreak": true },
       { "time": "16:15–16:45", "talk": "rust-unlinked" },
       { "time": "17:00–17:30", "talk": "nix-for-rustaceans" },
-      { "time": "18:00–18:45", "title": "Closing talk, TBA", "isBreak": true }
+      { "time": "18:00–18:45", "title": "Closing talk, TBA", "isBreak": true },
+      { "time": "19:00", "title": "Closing party", "isBreak": true }
       
     ]
   }

@@ -249,6 +249,14 @@ section#day2 {
     }
 }
 
+section#post-day {
+    @include dark-blue-background;
+
+    li {
+        text-align:center;
+    }
+}
+
 
 
 
