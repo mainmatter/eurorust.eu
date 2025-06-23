@@ -4,7 +4,7 @@ title = "Speaker: Rohit Dandamudi"
 [extra]
   name = "Rohit Dandamudi"
   url = "https://www.diru.tech/"
-  image = "images/talks/rohit-dandamudi.webp"
+  image = "/images/talks/rohit-dandamudi.webp"
   twitter = "me_diru"
   github = "https://github.com/me-diru"
   bluesky = "https://bsky.app/profile/diru.bsky.social"

@@ -4,7 +4,7 @@ title = "Speaker: Adrien Cacciaguerra"
 [extra]
   name = "Adrien Cacciaguerra"
   url = "https://www.linkedin.com/in/adrien-cacciaguerra/"
-  image = "images/talks/adrien-cacciaguerra.webp"
+  image = "/images/talks/adrien-cacciaguerra.webp"
   twitter = "adriencaccia"
   bluesky = "adriencaccia.bsky.social"
   github = "https://github.com/adriencaccia"

@@ -4,7 +4,7 @@ title = "Speaker: Kiril Karaatanassov"
 [extra]
   name = "Kiril Karaatanassov"
   url = "www.linkedin.com/in/karaatanasov"
-  image = "images/talks/kiril-karaatanassov.webp"
+  image = "/images/talks/kiril-karaatanassov.webp"
   twitter = ""
   mastodon = ""
   github = "https://github.com/noclue"
