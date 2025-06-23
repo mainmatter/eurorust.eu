@@ -264,6 +264,13 @@ section#post-day {
     }
 }
 
+.closing-party__content {
+    text-align:center;
+
+    .image-party {
+        width: clamp(200px, 20vw, 400px);
+    };
+}
 
 
 
