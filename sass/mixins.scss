@@ -33,6 +33,24 @@
   text-decoration: none;
 
   @media (max-width: 60rem) {
+    padding: 5px 15px;
+    font-size: 15px;
+    width: auto;
+  }
+}
+
+@mixin btn__text($color: #1d113f) {
+  @include btn__secondary;
+  border: none;
+  color: $color;
+  font-family: Strenuous;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+
+  @media (max-width: 60rem) {
     font-size: 15px;
     width: auto;
   }
@@ -60,6 +78,20 @@
   }
 }
 
+@mixin btn__secondary-large($color: var(--blue-light)) {
+  @include btn__primary;
+  border: 2px solid $color;
+  color: $color;
+  background: none;
+  box-shadow: none;
+
+  &:hover,
+  &:active {
+    box-shadow: none;
+    background: none;
+  }
+}
+
 @mixin dashed-border-with-corners() {
   outline: 2px dotted var(--blue-light);
   outline-offset: -15px;
@@ -84,4 +116,16 @@
       bottom calc(0.75rem + 1px) right calc(0.75rem + 1px),
       bottom calc(0.75rem + 1px) left calc(0.75rem + 1px);
   }
+}
+
+@mixin dark-blue-background {
+  box-shadow:
+    0 1rem 20px var(--blue-dark),
+    0 -1rem 20px var(--blue-dark);
+
+  background-color: var(--blue-dark);
+}
+
+@mixin text-shadow {
+  text-shadow: 2px 2px 2px #14033a;
 }

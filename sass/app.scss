@@ -21,6 +21,8 @@
 @import "components/generic-content";
 @import "components/schedule-overview";
 @import "components/workshop";
+@import "components/schedule";
+@import "components/talk";
 
 body {
   background: var(--blue-dark);
@@ -65,5 +67,9 @@ img {
 }
 
 .blurred-background {
-  backdrop-filter: blur(.12rem);
+  backdrop-filter: blur(0.12rem);
+}
+
+.inline {
+  display: inline;
 }

@@ -5,6 +5,10 @@
     @media (max-width: 60rem) {
       padding: 1rem;
     }
+
+    p {
+      @include text-shadow;
+    }
   }
 
   .workshop-hero__topline {
@@ -104,7 +108,7 @@
   }
 
   .workshop-details {
-    background: var(--blue-dark);
+    @include dark-blue-background;
     
     h4 {
       padding-bottom:1rem;
@@ -240,7 +244,7 @@
 }
 
 .workshop-sponsor {
-   background: var(--blue-dark);
+   @include dark-blue-background;
 }
 
   
