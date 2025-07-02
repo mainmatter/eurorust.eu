@@ -22,7 +22,7 @@ const gltfLoader = new GLTFLoader();
 let model = new THREE.Object3D();
 let ferris = new THREE.Object3D();
 
-gltfLoader.load('/js/model/ferris.glb', (gltf) => {
+gltfLoader.load('2024/js/model/ferris.glb', (gltf) => {
   model = gltf.scene;
   ferris = gltf.scene.children[0];
   ferris.scale.set(1.5, 1.5, 1.5);
