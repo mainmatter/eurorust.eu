@@ -14,6 +14,11 @@
   link="https://codspeed.io/"
   image="/images/sponsors/codspeed.svg"
 
+[[extra.premier_partner_sponsors]]
+  title="Wincent"
+  link="https://www.wincent.com/"
+  image="/images/sponsors/wincent.svg"
+
 [[extra.lounge_partner_sponsors]]
   title="Helsing"
   link="https://helsing.ai/"
