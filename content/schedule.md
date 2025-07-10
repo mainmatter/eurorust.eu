@@ -1,4 +1,4 @@
 +++
 template = "schedule.html"
-title = "Privacy Policy"
+title = "Schedule"
 +++
