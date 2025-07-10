@@ -73,6 +73,11 @@
                     <th scope="col">Workshops</th>
                     <th scope="col" class="schedule__table-side">Side activities</th>
                   </tr>
+                  <tr>
+                    <td scope="row" class="visually-hidden"></td>
+                    <td class="venue-warning"><p class="beige"><strong>The EuroRust workshops will take place in a separate venue, TBA soon</strong></p></td>
+                    <td class="schedule-table__side"></td>
+                  </tr>
                   {% set_global sideCount = 1 %}
                   {% set_global currentRowspan = 0 %}
                   {% set_global sideRow = 0 %}
@@ -216,22 +221,34 @@
     </section>
     {% endfor %}
 
-    <section class="mb-9" id="post-day">
-      <div class="container">
+    {% set schedule = load_data(path = "data/post-conference-day-schedule.json") %}
+      {% set_global sideCount = 0 %}
+      {% set_global currentRowspan = 0 %}
+      {% set_global sideRow = 0 %}
+      {% for day in schedule %}
+
+      <section id="post-day" class="mt-6 mb-8">
+        <div class="container">
           <div class="schedule__container">
             <div class="schedule__day">
-              <h3>Post-conference Day</h3>
-              <h4 class="mt-3 mb-6">October 11, 2025</h4>
-              <ol>
-                <li class="mb-4">
-                  <p><strong>Side activities TBA</strong></p>
-                  <p class="beige">Get to know your fellow Rustaceans and explore Paris.</p>
-                </li>
-              </ol>
-    </div>
-    </div>
-    </div>
-  </section>
+              <h3>Post-Conference Day</h3>
+              <h4 class="mt-3 mb-6 schedule__track pb-3">{{ day.date }}</h4>
+              <div class="schedule__grid mb-5">
+                <div class="schedule__main-stage">
+                  <ol class="schedule__list">
+                    {% for activity in day.side %}
+                      <li>
+                        {% include "partials/activity-card-side.html" %}
+                      </li>
+                    {% endfor %}
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+    {% endfor %}
 
     <section class="ticket-button mb-10">
       <a href="https://ti.to/events-matter/eurorust-2025" class="schedule__button">Get tickets</a>
