@@ -20,7 +20,7 @@
 
   <div class="generic-block speaker">
 
-    {% include "sections/nav.html" %}
+    {% include "2024/sections/nav.html" %}
 
     <main tabindex="-1" id="main" class="mt-5 mb-10">
       <section class="speaker-details container py-5">
@@ -31,7 +31,7 @@
             {%if page.extra.image and not page.extra.image is containing("/.")  %}
               <img
                 class="photo"
-                src="{{ page.extra.image }}"
+                src="/{{ page.extra.image }}"
                 alt="Photo of {{ page.extra.name }}">
             {% else %}
               <img
@@ -77,7 +77,7 @@
       </section>
     </main>
 
-    {% include "sections/footer.html" %}
+    {% include "2024/sections/footer.html" %}
   </div>
 
 {% endblock content %}
