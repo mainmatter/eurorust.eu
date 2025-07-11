@@ -9,6 +9,14 @@
     p {
       @include text-shadow;
     }
+
+    .tab1::before {
+      content: "◦◦◦";
+    }
+
+    .tab2::before {
+      content: "◦◦◦◦◦◦";
+    }
   }
 
   .workshop-hero__topline {
@@ -101,6 +109,7 @@
     padding:.3rem .5rem;
     color: var(--blue-dark);
     border-radius: .125rem;
+    text-shadow: none;
   }
 
   .hero {
