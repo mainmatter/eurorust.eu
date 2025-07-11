@@ -45,6 +45,8 @@
                     <h2 class="mb-4">Venue</h2>
                     {% if page.extra.location_name %}
                       <p class="mb-4">{{ page.extra.location_name | safe }}, {{ page.extra.location | safe }}</p>
+                    {% elif page.extra.location %} 
+                      <p class="mb-4">{{ page.extra.location | safe }}</p>
                     {% endif %}
                     {% if page.extra.location_url %}
                       <a href="{{ page.extra.location_url }}" class="map-button mb-3" target="_blank">See on map</a>
