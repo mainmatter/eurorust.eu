@@ -3,7 +3,7 @@ title = "Containers Are Dead: Long Live WebAssembly"
 template = "workshop.html"
 [extra]
   sponsor = "Mainmatter"
-  sponsor_bio = "We at Mainmatter are experts in Rust - our Rust team is led by the mentor of this workshop, Luca Palmieri. We have been part of the Rust ecosystem for years, helping out the crates.io project. <br />We can support you in rewriting existing codebases to Rust, using Rust to accelerate hot modules in Python, Ruby, Node.js, or other languages, and in building new systems with Rust from scratch."
+  sponsor_bio = "We at Mainmatter are experts in Rust. We have been part of the Rust ecosystem for years, helping out the crates.io project. <br />We can support you in rewriting existing codebases to Rust, using Rust to accelerate hot modules in Python, Ruby, Node.js, or other languages, and in building new systems with Rust from scratch."
   sponsor_cta = "Learn more about our Rust expertise"
   sponsor_url = "https://mainmatter.com/rust/?utm_source=eurorust"
   mentors = [
