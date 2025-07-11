@@ -1,5 +1,5 @@
 +++
-title = "Rust-Python Inter&shy;operability"
+title = "Rust-Python Interoperability"
 template = "workshop.html"
 [extra]
   sponsor = "Mainmatter"

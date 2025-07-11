@@ -1,0 +1,16 @@
+[
+  {
+    "day": "1",
+    "date": "October 8, 2025",
+    "workshop": [
+      { "time": "10:00–16:00", "title": "rust-python-interoperability" },
+      { "time": "10:00–16:00", "title": "using-bevy" },
+      { "time": "", "title": "" }
+    ],
+    "side": [
+      { "time": "14:30–17:30", "title": "bike-tour" },
+      { "time": "TBA", "title": "boat-tour" },
+      { "time": "18:30–20:00", "title": "wine-cheese" }
+    ]
+  }
+]

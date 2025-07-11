@@ -1,4 +1,17 @@
 .schedule {
+
+    .schedule__track {
+        @media screen and (min-width:60rem) {
+             border-bottom: 1px solid var(--blue-light);
+        }
+    }
+
+    .venue-warning {
+        border-right: 1px solid var(--blue-light);
+        padding: 2rem;
+        text-align:center;
+    }
+
     p {
         @include text-shadow;
     }
@@ -272,5 +285,23 @@ section#post-day {
     };
 }
 
+section#post-day {
+    .schedule__main-stage {
+        padding-right: 0;
+    }
 
+    .schedule__grid {
+        display:block;
+
+        .activity-card__image {
+            width:35%;
+            
+            @media (max-width: 60rem) {
+                width: clamp(15rem,60%,25rem);
+        }
+        }
+
+        
+    }
+}
 
