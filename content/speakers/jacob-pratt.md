@@ -4,7 +4,7 @@ title = "Speaker: Jacob Pratt"
 [extra]
   name = "Jacob Pratt"
   url = "https://jhpratt.dev"
-  image = ""
+  image = "/images/talks/jacob-pratt.webp"
   twitter = ""
   github = "https://github.com/jhpratt"
   mastodon = ""
