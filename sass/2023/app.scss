@@ -23,7 +23,7 @@ body {
 
   .top-block {
     @include min-screen-width(601px) {
-      background-image: url(/images/top-background-desktop-with-atomium.webp);
+      background-image: url(/2023/images/top-background-desktop-with-atomium.webp);
       background-size: cover;
       background-position: bottom center;
       background-repeat: no-repeat;
@@ -32,13 +32,13 @@ body {
   }
 
   .middle-block {
-    background: url(/images/background-generic-2.webp) top left no-repeat;
+    background: url(/2023/images/background-generic-2.webp) top left no-repeat;
     background-size: 100% 100%;
   }
 
   .bottom-block {
     transform: scaleX(-1);
-    background: url(/images/background-generic-2.webp) top left no-repeat;
+    background: url(/2023/images/background-generic-2.webp) top left no-repeat;
     background-size: 100% 100%;
     .bottom-block-content {
       transform: scaleX(-1);
@@ -51,7 +51,7 @@ body {
     align-items: center;
 
     @include min-max-screen-width(1px, 600px) {
-      background-image: url(/images/atomium-mobile.webp);
+      background-image: url(/2023/images/atomium-mobile.webp);
       background-position: top center;
       background-repeat: no-repeat;
     }
@@ -877,10 +877,10 @@ body {
 }
 
 .generic-block {
-  background: url("/images/background-generic-1.webp") top right no-repeat;
+  background: url("/2023/images/background-generic-1.webp") top right no-repeat;
   background-size: auto 100%;
   @include mobile-only {
-    background: url("/images/background-generic-mobile-1.webp") top right
+    background: url("/2023/images/background-generic-mobile-1.webp") top right
       no-repeat;
     background-size: 100% auto;
   }
@@ -890,16 +890,16 @@ body {
   &.workshop,
   &.full-schedule,
   &.speaker {
-    background: url("/images/background-generic-1.webp") top right no-repeat,
-      url("/images/background-generic-2.webp") bottom left no-repeat;
+    background: url("/2023/images/background-generic-1.webp") top right no-repeat,
+      url("/2023/images/background-generic-2.webp") bottom left no-repeat;
     background-size: 100% 50%, 100% 50%;
 
     @include mobile-xs-only {
-      background: url("/images/background-generic-mobile-1.webp") top right
+      background: url("/2023/images/background-generic-mobile-1.webp") top right
           no-repeat,
-        url("/images/background-generic-mobile-2.webp") top left no-repeat,
-        url("/images/background-generic-mobile-3.webp") bottom right no-repeat,
-        url("/images/background-generic-mobile-2.webp") bottom left no-repeat;
+        url("/2023/images/background-generic-mobile-2.webp") top left no-repeat,
+        url("/2023/images/background-generic-mobile-3.webp") bottom right no-repeat,
+        url("/2023/images/background-generic-mobile-2.webp") bottom left no-repeat;
       background-position-y: 0, 65rem, 145rem, 215rem;
       background-size: 100% auto, 100% auto, 100% auto, 100% auto;
     }
