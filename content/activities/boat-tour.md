@@ -3,7 +3,7 @@ title = "Cruise tour on the Seine"
 template = "activity.html"
 [extra]
   date = "Wednesday, October 08, 2025"
-  time = "TBA"
+  time = "16:45–17:45"
   location = "2 Port de Suffren, 75007 Paris"
   location_name = "Vedettes de Paris"
   location_url = "https://maps.app.goo.gl/dCSuQP78xPA9oKUM6"
