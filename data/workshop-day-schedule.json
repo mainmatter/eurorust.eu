@@ -5,12 +5,14 @@
     "workshop": [
       { "time": "10:00–16:00", "title": "rust-python-interoperability" },
       { "time": "10:00–16:00", "title": "using-bevy" },
-      { "time": "10:00–16:00", "title": "long-live-webassembly" }
+      { "time": "10:00–16:00", "title": "long-live-webassembly" },
+      { "time": "10:00–16:00", "title": "rust-in-action" }
     ],
     "side": [
       { "time": "14:30–17:30", "title": "bike-tour" },
       { "time": "16:45–17:45", "title": "boat-tour" },
-      { "time": "18:30–20:00", "title": "wine-cheese" }
+      { "time": "18:30–20:00", "title": "wine-cheese" },
+      { "time": "", "title": ""}
     ]
   }
 ]
