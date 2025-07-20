@@ -40,17 +40,28 @@
     }
   }
 
+  .workshop-hero__sponsor-container {
+    display: flex;
+    align-items: baseline;
+  }
+
   .workshop-hero__sponsor {
     display: flex; 
     flex-direction: row;
     gap: 1rem;
-    align-items: baseline;
+    align-items: center;
 
     img {
       max-width: 7rem;
+      max-height: 1.25rem;
     }
   }
 
+  .workshop-addnl-image {
+    width: 90%;
+    max-width:1500px;
+    padding: 2rem 0;
+  }
   .sponsor-logo {
     padding-top: 2rem;
     width: 100vw;
