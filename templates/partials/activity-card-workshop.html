@@ -1,4 +1,4 @@
-<div class="activity-card activity-card__workshop">
+<div class="activity-card activity-card__workshop mb-2">
   {% if activity.title %}
     {% set path = "workshops/" ~ activity.title ~ ".md" %}
     {% set event = get_page(path = path) %}
@@ -6,9 +6,9 @@
     
     <div class="activity-card__content">
       {% if event.extra.heroimage %}
-        <img class="activity-card__image mb-3" src="{{ event.extra.heroimage }}" alt="{{ event.extra.heroimage_alt }}" />
+        <img class="activity-card__image mb-1" src="{{ event.extra.heroimage }}" alt="{{ event.extra.heroimage_alt }}" />
       {% else %}
-        <img class="activity-card__image mb-3" src="/images/events/placeholder.webp" alt="" />
+        <img class="activity-card__image mb-1" src="/images/events/placeholder.webp" alt="" />
       {% endif %}
       <p class="activity-card__time"><strong>{{ activity.time }}</strong></p>
       <p aria-hidden="true" class="beige activity-card__title"><strong>{{ event.title }}</strong></p>
