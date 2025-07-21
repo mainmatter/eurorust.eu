@@ -8,7 +8,7 @@
 
     .venue-warning {
         border-right: 1px solid var(--blue-light);
-        padding: 2rem;
+        padding: 2rem 2rem 0 2rem;
         text-align:center;
     }
 
@@ -27,6 +27,10 @@
     
     & .activity-card {
         padding: 2rem;
+
+    @media screen and (max-width: 60rem) {
+        padding: 2rem 0;
+    }
     }
 
     & .activity-card:nth-child(even) {
@@ -232,6 +236,15 @@ section#day2 {
 
     .schedule__side-track {
         padding-left: 0;
+
+        /* Remove if number of workshops = number of side activities on Workshop Day */
+        .schedule__list {
+            li:last-child {
+                .activity-card {
+                    border-bottom: none;
+                }
+            }
+        }
     }
 
     .activity-card {
@@ -304,4 +317,3 @@ section#post-day {
         
     }
 }
-

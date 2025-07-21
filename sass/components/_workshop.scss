@@ -58,10 +58,10 @@
   }
 
   .workshop-addnl-image {
-    width: 90%;
-    max-width:1500px;
+    width: clamp(20rem, 50%, 90rem);
     padding: 2rem 0;
   }
+
   .sponsor-logo {
     padding-top: 2rem;
     width: 100vw;
