@@ -10,6 +10,10 @@
       @include text-shadow;
     }
 
+    a p {
+      text-shadow:none;
+    }
+
     .tab1::before {
       content: "◦◦◦";
     }
