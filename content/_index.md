@@ -24,6 +24,11 @@
   link="https://helsing.ai/"
   image="/images/sponsors/helsing.svg"
 
+[[extra.live_stream_partner_sponsors]]
+  title="Hichtec"
+  link="https://hightec-rt.com/"
+  image="/images/sponsors/hightec.svg"
+
 [[extra.partner_sponsors]]
   title="Open Source Security"
   link="https://opensrcsec.com"
