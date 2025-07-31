@@ -64,6 +64,11 @@
   link="https://codebeameurope.com/"
   image="/images/sponsors/code-beam-europe.png"
 
+[[extra.media_partners]]
+  title="Filtra"
+  link="https://filtra.io/"
+  image="/images/sponsors/filtra.svg"
+
 [[extra.moderators]]
   name="Ciara"
   image="/images/moderators/ciara.png"
