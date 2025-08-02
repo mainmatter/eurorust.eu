@@ -1,4 +1,9 @@
 +++
+[[extra.main_partner_sponsors]]
+  title="OxidOS"
+  link="/oxidos"
+  image="/images/sponsors/oxidOS.svg"
+
 [[extra.premier_partner_sponsors]]
   title="Polar Signals"
   link="https://www.polarsignals.com//"
