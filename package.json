@@ -16,7 +16,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.8.1",
+  "packageManager": "pnpm@10.14.0",
   "type": "module",
   "dependencies": {
     "concurrently": "^9.1.2",
