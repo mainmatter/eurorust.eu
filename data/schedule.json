@@ -4,7 +4,7 @@
     "date": "October 9, 2025",
     "mainStage": [
       { "time": "9:00–10:00", "title": "Doors open & breakfast", "isBreak": true },
-      { "time": "10:00–10:45", "title": "Opening talk, TBA", "isBreak": true },
+      { "time": "10:00–10:45", "talk": "tba-victoria", "isBreak": true },
       { "time": "11:00–11:30", "talk": "building-and-maintaining-rust-at-scale" },
       { "time": "11:45–12:15", "talk": "from-any-to-this" },
 
