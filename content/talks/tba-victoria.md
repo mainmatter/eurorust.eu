@@ -1,5 +1,5 @@
 +++
-title = "TBA"
+title = "Opening Talk"
 template = "talk.html"
 [extra]
   date = "Thursday, October 9"
