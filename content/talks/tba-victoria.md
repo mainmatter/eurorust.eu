@@ -7,5 +7,5 @@ template = "talk.html"
   stage = "Main Stage"
   speakers = ["victoria-brekenfeld"]
   description = "<p>tba</p>"
-  ogimage = "/images/talks/og-images/serde-driven-reflection.png"
+  ogimage = "/images/talks/og-images/victorias-talk.png"
 +++
