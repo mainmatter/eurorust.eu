@@ -197,6 +197,11 @@ section#day2 {
         };
     }
 
+    & .schedule__table-3cols {
+        width: 33.33%;
+        border-left: 1px solid var(--blue-light);
+    }
+
     & .schedule__table-side {
         width: 50%;
         border-left: 1px solid var(--blue-light);
