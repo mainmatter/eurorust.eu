@@ -3,9 +3,9 @@ template = "speaker.html"
 title = "Speaker: Conrad Irwin"
 [extra]
   name = "Conrad Irwin"
-  url = ""
-  image = "/images/talks/shriram-balaji.webp"
-  twitter = ""
+  url = "https://zed.dev/"
+  image = "/images/speakers/conrad-irwin.png"
+  twitter = "https://x.com/ConradIrwin"
   mastodon = ""
   bio = "<p></p>"
 +++
