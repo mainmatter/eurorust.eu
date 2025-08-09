@@ -74,3 +74,9 @@ img {
 .inline {
   display: inline;
 }
+
+hr.separator {
+  border-top: 2px dotted var(--blue-light);
+  color: transparent;
+  border-bottom: 0;
+}

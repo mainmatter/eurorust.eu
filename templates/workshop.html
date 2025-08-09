@@ -29,7 +29,7 @@
               <a href="/schedule" class="inline">»Schedule</a> //  Workshop<br />
               October 8, 2025, Paris and online<br />
               10:00–16:00<br />
-              Location: TBA
+              Location: Fiap Paris, 30 Rue Cabanis, 75014 Paris, France
             </p>
             {% if page.extra.sponsor %}
             <div class="workshop-hero__sponsor-container">
@@ -136,8 +136,9 @@
         </div>
       </section>
       
-      {% if page.extra.sponsor %}
+  
       <section class="workshop-sponsor mt-9 mb-4 py-6">
+        {% if page.extra.sponsor %}
         <div class="container py-8">
           <div class="sponsor__grid">
             <div class="sponsor__grid-title">
@@ -172,14 +173,16 @@
                   {% endif %}
                 </ul>
               </div>
-          </div> 
-        </div>       
+            </div> 
+        </div>
+        </div>
+        <hr class="separator">
+        {% endif %}    
+        {% include "sections/workshop-venue.html" %}   
       </section>
-      {% endif %}
+      
 
-      <!-- include venue when booked 
-        {% include "2024/sections/workshop-venue.html" %}
-      -->
+      
 
       <section class="ticket-button mb-10 mt-8">
         <a href="https://ti.to/events-matter/eurorust-2025" class="workshop__ticket-button">Get tickets</a>
