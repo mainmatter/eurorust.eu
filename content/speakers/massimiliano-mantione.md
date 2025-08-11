@@ -7,5 +7,5 @@ title = "Speaker: Massimiliano Mantione"
   image = "/images/talks/massimiliano-mantione.webp"
   twitter = ""
   mastodon = ""
-  bio = "<p>Line Follower robots are fun.</p><p>What they do is very simple (they follow a line drawn on the floor), but doing it fast to win a competition is tricky. In this case, to add spice to the challenge, the robot must be built entirely out of Lego parts, including all the electronics!</p><p>In this talk we’ll see what kind of algorithms can be used to control the robot, and how detailed telemetry is essential to understand its behavior.</p><p>We’ll also see how using embedded Rust and implementing our own async runtime can make the software easier to understand and at the same time more performant.</p>"
+  bio = "<p>Passionate software engineer, I have worked on implementing telecom switching stations, the Mono JIT compiler, the Unity3D game engine, the V8 Javascript VM at Google, a collaborative virtual reality system on the web, and blockchains. Currently, I am working on operational research applied to logistics at scale in WorkWave.</p>"
 +++
