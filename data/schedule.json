@@ -16,8 +16,7 @@
       { "time": "15:45–16:15", "title": "Snack Break", "isBreak": true },
       { "time": "16:15–16:45", "talk": "reflections-on-the-humans" },
       { "time": "17:00–17:30", "talk": "sdr-podcast-day-1" },
-      { "time": "17:45–18:30", "talk": "rendering-at-1-million-pixels---millisecond-with-gpui", "isBreak": true },
-      { "time": "Evening", "title": "Side activities", "isBreak": true }
+      { "time": "17:45–18:30", "talk": "rendering-at-1-million-pixels---millisecond-with-gpui", "isBreak": true }
     ],
     "side": [
       { "time": "9:00–10:00", "title": "Doors open & breakfast", "isBreak": true },
@@ -33,8 +32,7 @@
       { "time": "15:45–16:15", "title": "Snack Break", "isBreak": true },
       { "time": "16:15–16:45", "talk": "automotive-rust" },
       { "time": "17:00–17:30", "talk": "make-your-own-stream-operators" },
-      { "time": "17:45–18:30", "title": "Closing talk, TBA", "isBreak": true },
-      { "time": "Evening", "title": "Side activities", "isBreak": true }
+      { "time": "17:45–18:30", "title": "Closing talk, TBA", "isBreak": true }
     ]
   },
   {
