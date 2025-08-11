@@ -4,7 +4,7 @@
     "date": "October 9, 2025",
     "mainStage": [
       { "time": "9:00–10:00", "title": "Doors open & breakfast", "isBreak": true },
-      { "time": "10:00–10:45", "title": "Opening talk, TBA", "isBreak": true },
+      { "time": "10:00–10:45", "talk": "tba-victoria", "isBreak": true },
       { "time": "11:00–11:30", "talk": "building-and-maintaining-rust-at-scale" },
       { "time": "11:45–12:15", "talk": "from-any-to-this" },
 
@@ -16,7 +16,7 @@
       { "time": "15:45–16:15", "title": "Snack Break", "isBreak": true },
       { "time": "16:15–16:45", "talk": "reflections-on-the-humans" },
       { "time": "17:00–17:30", "talk": "sdr-podcast-day-1" },
-      { "time": "17:45–18:30", "title": "Closing talk, TBA", "isBreak": true },
+      { "time": "17:45–18:30", "talk": "rendering-at-1-million-pixels---millisecond-with-gpui", "isBreak": true },
       { "time": "Evening", "title": "Side activities", "isBreak": true }
     ],
     "side": [
@@ -54,7 +54,7 @@
       { "time": "15:45–16:15", "title": "Snack Break", "isBreak": true },
       { "time": "16:15–16:45", "talk": "one-rust-binary" },
       { "time": "17:00–17:30", "talk": "sdr-podcast-day-2" },
-      { "time": "17:45–18:30", "title": "Closing talk, TBA", "isBreak": true }
+      { "time": "17:45–18:30", "talk": "tba-ryan", "isBreak": true }
     ],
     "side": [
       { "time": "9:00–10:00", "title": "Doors open & breakfast", "isBreak": true },
