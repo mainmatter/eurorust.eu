@@ -8,7 +8,7 @@ template = "activity.html"
   location_name = "Vedettes de Paris"
   location_url = "https://maps.app.goo.gl/gTaHP3axZPWTbzSe8"
   abstract = "Join us for Karaoke Night after hours! This is your chance to unwind, have fun, and show off your vocal skills. Grab the mic, pick your favorite tune, and let loose in a relaxed, community-friendly atmosphere."
-  ogimage = "/images/activities/og-images/boat-tour.png"
+  ogimage = "/images/activities/og-images/karaoke.png"
   heroimage = "/images/activities/karaoke.webp"
   heroimage_alt = "Karaoke mic"
 +++
