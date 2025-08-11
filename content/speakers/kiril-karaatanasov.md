@@ -3,7 +3,7 @@ template = "speaker.html"
 title = "Speaker: Kiril Karaatanasov"
 [extra]
   name = "Kiril Karaatanasov"
-  url = "www.linkedin.com/in/karaatanasov"
+  url = "https://www.linkedin.com/in/karaatanasov"
   image = "/images/talks/kiril-karaatanasov.webp"
   twitter = ""
   mastodon = ""
