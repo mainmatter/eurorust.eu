@@ -150,11 +150,11 @@
                     {% endfor %}
                   </ol>
                 </div>
-                <div class="closing-part closing-party__grid schedule__shared impl-room__container pt-8">
-                  <h4 class="schedule__track mb-4">impl room</h4>
-                  {% include "partials/impl-room.html" %}
-                </div>
                 {% if day.day == "1"  %}
+                  <div class="closing-part closing-party__grid schedule__shared impl-room__container pt-8">
+                    <h4 class="schedule__track mb-4">impl room</h4>
+                    {% include "partials/impl-room.html" %}
+                  </div>
                   <div class="closing-party closing-party__grid schedule__shared mb-9">
                     <div class="closing-party__content">
                       <img class="image-party py-3" src="/images/dinner.webp" alt="Plate of food"/>
@@ -174,6 +174,10 @@
                   </div>
                 {% endif %}
                 {% if day.day == "2"  %}
+                  <div class="closing-part closing-party__grid schedule__shared impl-room__container pt-8">
+                    <h4 class="schedule__track mb-4">impl room</h4>
+                    {% include "partials/impl-room.html" %}
+                  </div>
                   <div class="closing-party closing-party__grid schedule__shared">
                     <div class="closing-party__content">
                       <img class="image-party py-3" src="/images/party.webp" alt="Astronaut with balloons"/>
