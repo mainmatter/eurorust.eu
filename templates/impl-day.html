@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% block og_image %}
   <meta property="og:image" content="{{ config.base_url | safe }}{{ page.extra.ogimage | safe }}" />
-  <meta name="twitter:image" content="{{ config.base_url | safe }}{{ page.extra.ogimage | safe }}">
+  <meta name="twitter:image" content="{{ config.base_url | safe }}{{ page.extra.ogimage | safe }}" />
 {% endblock %}
 
 {% block head %}
   <script>
     if (!window.tito) {
-      var script = document.createElement('script');
+      var script = document.createElement("script");
       script.src = `https://js.tito.io/v2${
         ["localhost", "127.0.0.1"].includes(window.location.hostname) ? "/with/development_mode" : ""
       }`;
@@ -29,12 +29,13 @@
               <a href="/schedule" class="inline">»Schedule</a><br />
               October 11, 2025, Paris and online<br />
               10:00–16:00<br />
-              Location: Stockly HQ
+              Location: Stockly HQ, 8 Rue du Sentier, 75002 Paris
             </p>
             <div class="workshop-hero__sponsor-container">
               <div class="workshop-hero__sponsor">
                 <p>Hosted by</p>
-                <img src="/images/workshops/workshop-sponsors/stockly.svg" alt="Stockly logo" /></div>
+                <img src="/images/workshops/workshop-sponsors/stockly.svg" alt="Stockly logo" />
+              </div>
             </div>
           </div>
 
@@ -56,6 +57,7 @@
           </div>
         </div>
       </section>
+
       <section class="ticket-button">
         <a href="https://ti.to/events-matter/eurorust-2025" class="workshop__ticket-button">Get tickets</a>
       </section>
@@ -70,40 +72,63 @@
               <h2 class="mb-4">Stockly</h2>
             </div>
             <div class="sponsor__grid-bio blurred-background">
-              <p class="">Stockly enables e-retailers to sell products they don't have in stock by having the products shipped by other official resellers and brands in the network.</p>
+              <p class="">
+                Stockly enables e-retailers to sell products they don't have in stock by having the products shipped by
+                other official resellers and brands in the network.
+              </p>
             </div>
             <div class="sponsor__grid-photo-links">
               <div class="photo-container">
-                <img class="photo sponsor-logo" src="/images/workshops/workshop-sponsors/stockly.svg" alt="Stockly logo" />
+                <img
+                  class="photo sponsor-logo"
+                  src="/images/workshops/workshop-sponsors/stockly.svg"
+                  alt="Stockly logo"
+                />
               </div>
               <div class="links mt-5">
                 <ul class="social mt-3">
                   <li>
-                    <a href="https://stockly.ai/?utm_source=eurorust" target="_blank" rel="noopener noreferrer" class="btn__icon"
-                    ><img src="/images/icons/web.svg" alt="Website"
+                    <a
+                      href="https://stockly.ai/?utm_source=eurorust"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="btn__icon"
+                      ><img src="/images/icons/web.svg" alt="Website"
                     /></a>
                   </li>
                 </ul>
               </div>
-          </div> 
-        </div>       
-      </section>
-
-      <section class="workshop-venue">
-        <h3><a name="workshop-venue">Workshops Venue</a></h3>
-        <div class="image-venue-container">
-          <picture>
-            <source srcset="/2024/images/workshop-venue/mobile/comet-louise.webp" media="(max-width: 640px)" />
-            <img class="image-venue" src="/2024/images/workshop-venue/comet-louise.webp" alt="workshop venue picture" />
-          </picture>
+            </div>
+          </div>
         </div>
-      
-        <p>Stockly will host the Impl Day/Unconference in their office in 8 Rue du Sentier, 75002 Paris.</p>
-        <a class="map-link" href="https://maps.app.goo.gl/x5jxzRATRhARH3i47" alt="Google Maps for workshop venue address"
-          target="_blank" rel="noopener noreferrer">Check on Map</a>
+
+        <hr class="separator" />
+
+        <div class="container py-8">
+          <div class="sponsor__grid">
+            <div class="sponsor__grid-title">
+              <h5 class="mb-4">Ipml Day venue</h5>
+            </div>
+            <div class="sponsor__grid-name">
+              <h2 class="mb-4">Stockly HQ</h2>
+            </div>
+            <div class="sponsor__grid-bio blurred-background">
+              <p class=""></p>
+              <p class="mb-4">
+                Stockly will host the Impl Day/Unconference in their office in 8 Rue du Sentier, 75002 Paris.
+              </p>
+              <a href="https://maps.app.goo.gl/gQrfzPksxjG8m323A" target="_blank">View on map</a>
+            </div>
+            <div class="sponsor__grid-photo-links">
+              <div class="photo-container">
+                <img class="image-workshop-venue" src="/images/stockly-office.jpg" alt="venue picture" />
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section class="ticket-button mb-10 mt-8">
+      <section class="ticket-button">
         <a href="https://ti.to/events-matter/eurorust-2025" class="workshop__ticket-button">Get tickets</a>
       </section>
     </main>
