@@ -34,13 +34,9 @@
     }
 
     & .activity-card:nth-child(even) {
-    border-inline-end: 1px solid var(--blue-light);
+    border-top: 1px solid var(--blue-light);
+    }
 
-    @media screen and (max-width: 60rem) {
-        border-inline-end: none;
-        border-bottom: 1px solid var(--blue-light);
-    }
-    }
 
     & .activity-card__content {
         text-align: center; 
