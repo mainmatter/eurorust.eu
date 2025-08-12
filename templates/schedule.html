@@ -150,6 +150,10 @@
                     {% endfor %}
                   </ol>
                 </div>
+                <div class="closing-part closing-party__grid schedule__shared impl-room__container pt-8">
+                    <h4 class="schedule__track mb-4">impl room</h4>
+                    {% include "partials/impl-room.html" %}
+                  </div>
                 {% if day.day == "1"  %}
                   <div class="closing-party closing-party__grid schedule__shared mb-9">
                     <div class="closing-party__content">
@@ -216,16 +220,18 @@
                             </td>
                           {% endif %}
                         {% endif %}
-
+                        <!-- impl room sticky cell -->
                         {% if sideRow == 2 or sideRow == 9 %}
-                            <td rowspan="2"><p style="position:sticky; top:0; z-index:1">hello there dolly</p></td>
+                            <td rowspan="2" class="schedule__table-3cols">
+                              {% include "partials/impl-room.html" %}
+                            </td>
                         {% elif sideRow == 5 %}
-                            <td rowspan="3"><p style="position:sticky; top:0; z-index:1">hello there dolly</p></td>
+                            <td rowspan="3" class="schedule__table-3cols">
+                              {% include "partials/impl-room.html" %}
+                            </td>
                         {% endif %}
-
-
+                        <!-- end of impl room -->
                         {% set_global sideRow = sideRow + 1 %}
-                        
                       {% endif %}
                       {% set_global sideCount = sideCount + 1 %}
                   </tr>
