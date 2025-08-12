@@ -7,6 +7,6 @@ template = "impl-day.html"
   location_url = "https://maps.app.goo.gl/x5jxzRATRhARH3i47"
   abstract = "Join us the Saturday after the main conference for a collaborative day with the Rust community. Whether you want to hack on open source, share challenges and experiences, or simply connect with fellow Rustaceans over ideas and conversations — this day is for you.<br /><br />The format is open and community-driven, giving everyone the space to contribute, propose topics, and shape the day together."
   ogimage = "/images/activities/og-images/impl-day.png"
-  heroimage = "/images/activities/boat-tour.webp"
-  heroimage_alt = "Boat"
+  heroimage = "/images/activities/impl-day.webp"
+  heroimage_alt = "Astronaut typing on a laptop"
 +++
