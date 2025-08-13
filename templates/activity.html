@@ -29,7 +29,9 @@
               <a href="/schedule" class="inline">»Schedule</a> //  Side activity<br />
               {{ page.extra.date }}<br />
               {{ page.extra.time }}<br />
-              Meet at: {{ page.extra.location }}
+              {% if page.extra.location %}
+                Meet at: {{ page.extra.location }}
+              {% endif %}
             </p>
           </div>
 
@@ -38,8 +40,13 @@
               <div class="h1 pb-7">{{ page.title | safe }}</div>
               <div class="workshop-hero__grid">
                 <h2 class="mb-4 workshop-hero__title">About</h2>
-                {% if page.extra.abstract %}
-                  <p class="pb-8 workshop-hero__abstract">{{ page.extra.abstract | safe }}</p>
+                  {% if page.extra.abstract %}
+                    <div class="pb-8 workshop-hero__abstract">
+                      <p>{{ page.extra.abstract | safe }}</p>
+                      {% if page.extra.link %}
+                      <a href="{{ page.extra.link }}" target="_blank" class="mt-4">{{ page.extra.link_cta | safe }}</a>
+                      {% endif %}
+                    </div>
                   {% if page.extra.location %}
                   <div>
                     <h2 class="mb-4">Venue</h2>
