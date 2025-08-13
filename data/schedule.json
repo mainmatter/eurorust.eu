@@ -9,7 +9,7 @@
       { "time": "11:45–12:15", "talk": "from-any-to-this" },
 
       { "time": "12:15–13:45", "title": "Lunch", "isBreak": true },
-      { "time": "13:45–14:15", "talk": "TBA" },
+      { "time": "13:45–14:15", "talk": "production-unsafe-rust" },
       { "time": "14:30–15:00", "talk": "roto-scripting-language" },
       { "time": "15:15–15:45", "talk": "trust-your-benchmarks" },
 
@@ -22,7 +22,7 @@
       { "time": "9:00–10:00", "title": "Doors open & breakfast", "isBreak": true },
       { "time": "10:00–10:45", "title": "Opening talk, TBA", "isBreak": true },
       { "time": "11:00–11:30", "talk": "deadlock-detection" },
-      { "time": "11:45–12:15", "talk": "TBA" },
+      { "time": "11:45–12:15", "talk": "rust-c-plus-plus-interop" },
 
       { "time": "12:15–13:45", "title": "Lunch", "isBreak": true },
       { "time": "13:45–14:15", "talk": "building-a-chatbot-service" },
