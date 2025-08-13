@@ -4,7 +4,7 @@
     "date": "October 9, 2025",
     "mainStage": [
       { "time": "9:00–10:00", "title": "Doors open & breakfast", "isBreak": true },
-      { "time": "10:00–10:45", "talk": "tba-victoria", "isBreak": true },
+      { "time": "10:00–10:45", "talk": "are-we-desktop-yet", "isBreak": true },
       { "time": "11:00–11:30", "talk": "building-and-maintaining-rust-at-scale" },
       { "time": "11:45–12:15", "talk": "from-any-to-this" },
 
@@ -32,7 +32,7 @@
       { "time": "15:45–16:15", "title": "Snack Break", "isBreak": true },
       { "time": "16:15–16:45", "talk": "automotive-rust" },
       { "time": "17:00–17:30", "talk": "make-your-own-stream-operators" },
-      { "time": "17:45–18:30", "title": "Closing talk, TBA", "isBreak": true }
+      { "time": "17:45–18:30", "title": "rendering-at-1-million-pixels---millisecond-with-gpui", "isBreak": true }
     ]
   },
   {
@@ -68,7 +68,7 @@
       { "time": "15:45–16:15", "title": "Snack Break", "isBreak": true },
       { "time": "16:15–16:45", "talk": "what-are-attributes" },
       { "time": "17:00–17:30", "talk": "nix-for-rustaceans" },
-      { "time": "17:45–18:30", "title": "Closing talk, TBA", "isBreak": true }
+      { "time": "17:45–18:30", "title": "tba-ryan", "isBreak": true }
     ]
   }
 ]
