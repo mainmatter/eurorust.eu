@@ -12,6 +12,7 @@
       { "time": "14:30–17:30", "title": "bike-tour" },
       { "time": "16:45–17:45", "title": "boat-tour" },
       { "time": "18:30–20:00", "title": "wine-cheese" },
+      { "time": "19:00–22:00", "title": "meetup" },
       { "time": "", "title": ""}
     ]
   }
