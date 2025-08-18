@@ -1,5 +1,5 @@
 +++
-title = "Rust Meetup"
+title = "Rust Paris Meetup"
 template = "meetup.html"
 [extra]
   date = "Wednesday, October 8, 2025"
