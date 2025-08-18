@@ -21,7 +21,7 @@
   <div class="generic-block workshop {{ page.title | lower | replace(from=' ', to='_') }}">
     {% include "sections/nav.html" %}
 
-    <main tabindex="-1" id="main">
+    <main tabindex="-1" id="main" class="activity">
       <section class="workshop-hero">
         <div class="container blurred-background p-1">
           <div class="mb-7 workshop-hero__topline">
@@ -45,7 +45,13 @@
               <div class="workshop-hero__grid">
                 <h2 class="mb-4 workshop-hero__title">About</h2>
                 {% if page.extra.abstract %}
-                  <p class="pb-8 workshop-hero__abstract">{{ page.extra.abstract | safe }}</p>
+                  <div class="pb-8 workshop-hero__abstract">
+                    <p class="beige"><sup>*</sup>This event is free to attend but requires prior registration.</p>
+                    <p>{{ page.extra.abstract | safe }}</p>
+                  {% if page.extra.link %}
+                    <a href="{{ page.extra.link }}" target="_blank" class="mt-4">{{ page.extra.link_cta | safe }}</a>
+                  {% endif %}
+                </div>
                 {% endif %}
                 {% if page.extra.heroimage %}
                   <div class="photo-container">
@@ -59,7 +65,7 @@
       </section>
 
       <section class="ticket-button">
-        <a href="https://ti.to/events-matter/eurorust-2025" class="workshop__ticket-button">Get tickets</a>
+        <a href="https://ti.to/events-matter/eurorust-2025" class="workshop__ticket-button">Register now</a>
       </section>
 
       <section class="workshop-sponsor mt-9 mb-4 py-6">
