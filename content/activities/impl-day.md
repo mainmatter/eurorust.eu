@@ -1,5 +1,5 @@
 +++
-title = "Impl Day/Unconference"
+title = "impl Day/Unconference"
 template = "impl-day.html"
 [extra]
   location = "8 Rue du Sentier, 75002 Paris"

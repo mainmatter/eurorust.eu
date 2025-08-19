@@ -94,7 +94,7 @@
     {% endif %}
     {% if section.extra.impl_room_partner_sponsors %}
       <div class="sponsors-grid--impl_room_partners">
-        <h2>Impl Room Partner</h2>
+        <h2>impl Room Partner</h2>
         {% for sponsor in section.extra.impl_room_partner_sponsors %}
           <a href="{{ sponsor.link }}" aria-label="{{ sponsor.title }}" target="_blank" rel="noopener noreferrer">
             {% set meta = get_image_metadata(path=sponsor.image) %}
