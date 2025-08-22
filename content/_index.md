@@ -4,6 +4,11 @@
   link="/oxidos"
   image="/images/sponsors/oxidOS.svg"
 
+[[extra.main_partner_sponsors]]
+  title="Wyliodrin"
+  link="/wyliodrin"
+  image="/images/sponsors/wyliodrin.svg"
+
 [[extra.premier_partner_sponsors]]
   title="Polar Signals"
   link="https://www.polarsignals.com//"
