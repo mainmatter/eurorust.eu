@@ -6,7 +6,8 @@
       { "time": "10:00–16:00", "title": "rust-in-action" },
       { "time": "10:00–16:00", "title": "rust-python-interoperability" },
       { "time": "10:00–16:00", "title": "using-bevy" },
-      { "time": "10:00–16:00", "title": "long-live-webassembly" }
+      { "time": "10:00–16:00", "title": "long-live-webassembly" },
+      { "time": "10:00–16:00", "title": "edge-ai-with-rust" }
     ],
     "side": [
       { "time": "14:30–17:30", "title": "bike-tour" },
