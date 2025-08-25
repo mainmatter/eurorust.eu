@@ -6,7 +6,7 @@ template = "workshop.html"
     { name = "Francois Mockers ", avatar = "francois-mockers.png", avatar_alt = "Francois Mockers",  bio = "Francois Mockers is a maintainer on Bevy Engine (most of the time), QA Lead at Paylead (during the day).<br /><br />He discovered Rust in 2017 and hasn't let go since!",  mastodon = "https://hachyderm.io/@FrancoisMockers",  bluesky = "francois.mock.rs" }
   ]
   abstract = "Building interactive data visualizations in Rust can be a daunting task... Let's see how Bevy, a data-driven game engine, can help us! From building interactive dashboard to spatial and temporal data visualization, or just Computer Assisted Design, Bevy can be the solid (and fun!) foundation of your next application. This workshop will teach you Bevy basics through non game applications, and a few advanced rendering techniques, so that you're ready to tackle those challenges!"
-  ogimage = "/images/workshops/og-images/og-image-rust-python.png"
+  ogimage = "/images/workshops/og-images/og-image-using-bevy.png"
   heroimage = "/images/workshops/hero-bevy.png"
   heroimage_alt = "A bevy of birds"
 +++
