@@ -53,15 +53,6 @@
   color: var(--beige);
 }
 
-p,
-a {
-  font-size: clamp(14px, 1vw, 18px);
-
-  @media screen and (max-width: 60rem) {
-    font-size: 1rem;
-  }
-}
-
 .footer__meta-rust {
   color: var(--beige);
   text-align: center;

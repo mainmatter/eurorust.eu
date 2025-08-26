@@ -12,14 +12,16 @@
       {% endif %}
       <p class="activity-card__time"><strong>{{ activity.time }}</strong></p>
       <p aria-hidden="true" class="beige activity-card__title"><strong>{{ event.title }}</strong></p>
-      {% if event.extra.mentors %}
-        {%for mentor in event.extra.mentors %}
-          <p class="beige mentor mt-3">»Led by {{ mentor.name }}</p>
-        {% endfor %}
-      {% endif %}
-      {% if event.extra.sponsor %}
-        <p class="beige sponsored-by">*Sponsored by {{ event.extra.sponsor }}</p>
-      {% endif %}
+      <div class="mt-3">
+        {% if event.extra.mentors %}
+          {%for mentor in event.extra.mentors %}
+            <p class="beige mentor">»Led by {{ mentor.name }}</p>
+          {% endfor %}
+        {% endif %}
+        {% if event.extra.sponsor %}
+          <p class="beige sponsored-by">*Sponsored by {{ event.extra.sponsor }}</p>
+        {% endif %}
+      </div>
       
     </div>
     </a>

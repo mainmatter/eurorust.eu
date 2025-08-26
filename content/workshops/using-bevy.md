@@ -13,7 +13,7 @@ template = "workshop.html"
 
 <div class="">
   <h2 class="mb-7">Syllabus</h2>
-  <ol>
+  <ol class="syllabus">
     <li class="mb-7 border">
       <h4>1. Introduction to Bevy and its ecosystem</h4>
       <div>

@@ -57,7 +57,7 @@
 
     img {
       max-width: 7rem;
-      max-height: 1.25rem;
+      max-height: 1.5rem;
     }
   }
 
@@ -138,13 +138,33 @@
       padding-bottom:1rem;
     }
 
-    li {
+    ol.syllabus > li {
       @include dashed-border-with-corners;
       padding:3rem;
 
       @media (max-width: 60rem) {
         padding: 1.75rem;
         }
+      }
+    }
+
+    ol.syllabus {
+
+      ul,
+      ol {
+        list-style-position: outside;
+        padding-left: 4rem;
+        @media (max-width: 60rem) {
+          padding-left: 2rem;
+        }
+      }
+
+      ol {
+        list-style-type: decimal;
+      }
+
+      ul {
+        list-style-type: disc; 
       }
     }
 
@@ -235,9 +255,9 @@
       grid-column-start: 1;
       grid-row-start: 4;
       margin: 0 auto;
-      padding-bottom: 3rem;
-      max-width:25rem;
-      padding-top:4rem;
+      padding-bottom: 2rem;
+      max-width: 25rem;
+      padding-top: 4rem;
     }
   }
 
