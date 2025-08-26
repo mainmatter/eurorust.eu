@@ -17,7 +17,7 @@ template = "workshop.html"
 
 <div class="">
   <h2 class="mb-7">Format</h2>
-  <ol>
+  <ol class="syllabus">
     <li class="mb-7 border">
       <h4>1. Meet your crew</h4>
       <div>
