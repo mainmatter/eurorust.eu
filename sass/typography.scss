@@ -91,15 +91,16 @@ h2 + p {
 }
 
 p,
-a {
+a,
+li {
   color: var(--blue-light);
-  font-size: clamp(8px, 1.4vw, 27px);
+  font-size: clamp(14px, 1vw, 18px);
   line-height: clamp(14.8px, 2.6vw, 50px);
   font-style: normal;
   font-weight: 500;
 
   @media screen and (max-width: 60rem) {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 24px;
   }
 }
