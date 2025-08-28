@@ -6,7 +6,9 @@ template = "workshop.html"
   sponsor_bio = "Wyliodrin is a French company specialized in embedded systems and full-stack software development, empowering industries to leverage cutting-edge technologies like Rust for maximum impact."
   sponsor_cta = "More about Wyliodrin"
   sponsor_url = "/wyliodrin"
-  mentors = []
+  mentors = [
+    { name = "Alexandru Radovici, PhD.", avatar = "alexandru-radovici.webp", avatar_alt = "Alexandru Radovici",  bio = "Alexandru specialized in Operating Systems and Compiler and is a core contributor to Tock OS. He has published the first book on Tock OS kernel & application development. Alexandru has 20 years of experience in software engineering with a focus on embedded systems and IoT, with products delivered to industrial top players." }
+  ]
   abstract = "Running AI models on edge devices, such as smartphones and wearables, opens up exciting opportunities. Rust is particularly well-suited for harnessing this potential and advancing how we deploy and reason with AI models on these devices.<br><br>In this hands-on workshop, you will explore practical, real-world scenarios while building essential skills and gaining a foundational understanding of embedded AI programming using Rust. Join us as we discover how Rust enables you to deploy and engage with AI applications on edge devices."
   ogimage = "/images/workshops/og-images/og-image-edge-ai.png"
   heroimage = "/images/workshops/hero-edge-ai.webp"
