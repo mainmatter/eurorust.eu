@@ -63,6 +63,8 @@
 
   .activity-card__image {
     order: 1;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .activity-card__speaker {
@@ -193,8 +195,8 @@ section#day2 {
         };
     }
 
-    & .schedule__table-3cols {
-        width: 33.33%;
+    & .schedule__table-4cols {
+        width: 25%;
         border-left: 1px solid var(--blue-light);
     }
 
@@ -265,14 +267,22 @@ section#day2 {
         }
     }
 
-    .impl-room {
-        position: sticky;
-        top: 0;
-        text-align: center;
+    .sticky {
+        .activity-card {
+            position: sticky;
+            top: 0;
+            text-align: center;
 
-        @media (max-width: 60rem) {
-            position: inherit;
-            border-top: 1px solid var(--blue-light);
+            @media (max-width: 60rem) {
+                position: inherit;
+                border-top: 1px solid var(--blue-light);
+            }
+        }
+
+        .activity-card__workshop {
+            .activity-card__image {
+                width: auto;
+            }
         }
     }
 

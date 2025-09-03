@@ -27,9 +27,15 @@
           <div class="mb-7 workshop-hero__topline">
             <p class="workshop-hero__details">
               <a href="/schedule" class="inline">»Schedule</a> //  Workshop<br />
-              October 8, 2025, Paris and online<br />
-              10:00–16:00<br />
-              Location: Fiap Paris, 30 Rue Cabanis, 75014 Paris, France
+              {% if page.extra.day and page.extra.time %}
+                {{ page.extra.day | safe }}<br />
+                {{ page.extra.time | safe }}<br />
+                Location: Main Venue, Cité des Sciences et de l'Industrie
+              {% else %}
+                October 8, 2025, Paris and online<br />
+                10:00–16:00<br />
+                Location: Fiap Paris, 30 Rue Cabanis, 75014 Paris, France
+              {% endif %}
             </p>
             {% if page.extra.sponsor %}
             <div class="workshop-hero__sponsor-container">
@@ -177,8 +183,12 @@
         </div>
         </div>
         <hr class="separator">
-        {% endif %}    
-        {% include "sections/workshop-venue.html" %}   
+        {% endif %}  
+        {% if page.extra.venue %}
+          {% include "sections/workshop-venue-cite.html" %}  
+        {% else %}
+          {% include "sections/workshop-venue-fiap.html" %}  
+        {% endif %}
       </section>
       
 

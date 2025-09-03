@@ -194,8 +194,9 @@
                   <tr class="schedule__track h4">
                     <th scope="col" class="visually-hidden">Time</th>
                     <th scope="col">Main Stage</th>
-                    <th scope="col" class="schedule__table-3cols">Side Track</th>
-                    <th scope="col" class="schedule__table-3cols">impl Room</th>
+                    <th scope="col" class="schedule__table-4cols">Side Track</th>
+                    <th scope="col" class="schedule__table-4cols">impl Room</th>
+                    <th scope="col" class="schedule__table-4cols">Workshop</th>
                   </tr>
                   {% set_global sideCount = 1 %}
                   {% set_global currentRowspan = 0 %}
@@ -203,7 +204,7 @@
                   {% for activity in day.mainStage %}
                   <tr>
                     <td scope="row" class="visually-hidden">{{activity.time}}</td>
-                    <td {% if activity.isBreak %}colspan="3" class="schedule{% endif %}>
+                    <td {% if activity.isBreak %}colspan="4" class="schedule{% endif %}>
                       <!-- siderow: {{ sideRow }} count: {{ sideCount }} currentRowSpan {{ currentRowspan }} -->
                       {% include "partials/activity-card.html" %}
                     </td>
@@ -220,22 +221,44 @@
                           {% if not activity.isBreak %}
                             {% set activity = false %}
                             {% set activity = day.side[sideRow] %}
-                            <td class="schedule__table-3cols" {% if activity.rowspan %}rowspan="{{ activity.rowspan }}"{% endif %}>
+                            <td class="schedule__table-4cols sticky" {% if activity.rowspan %}rowspan="{{ activity.rowspan }}"{% endif %}>
                               {% include "partials/activity-card.html" %}
                             </td>
                           {% endif %}
                         {% endif %}
                         <!-- impl room sticky cell -->
+                        {% set_global rowSpan = 0 %}
                         {% if sideRow == 2 or sideRow == 9 %}
-                            <td rowspan="2" class="schedule__table-3cols">
-                              {% include "partials/impl-room.html" %}
-                            </td>
+                          {% set_global rowSpan = 2%}
                         {% elif sideRow == 5 %}
-                            <td rowspan="3" class="schedule__table-3cols">
+                          {% set_global rowSpan = 3 %}
+                        {% endif %}
+
+                        {% if sideRow == 2 or sideRow == 5 or sideRow == 9 %}
+                            <td rowspan="{{ rowSpan }}" class="schedule__table-4cols sticky">
                               {% include "partials/impl-room.html" %}
                             </td>
                         {% endif %}
                         <!-- end of impl room -->
+                        <!-- workshop sticky cell -->
+                        {% set_global colSpan = 0 %}
+                        {% if sideRow == 2 %}
+                          {% set_global colSpan = 2 %}
+                        {% elif sideRow == 5 %}
+                          {% set_global colSpan = 3 %}
+                        {% endif %}
+
+                        {% if sideRow == 2 or sideRow == 5 %}
+                          <td rowspan="{{ rowSpan }}" class="schedule__table-4cols sticky">
+                            {% if day.day == "1" %}
+                            {% set workshopType = "jetbrains-rustrover" %}
+                              {% include "partials/activity-card-workshop.html" %}
+                            {% elif day.day == "2" %}
+                              {% include "partials/impl-room.html" %}
+                            {% endif %}
+                          </td>
+                        {% endif%}
+                        <!-- end of workshop sticky cell -->
                         {% set_global sideRow = sideRow + 1 %}
                       {% endif %}
                       {% set_global sideCount = sideCount + 1 %}
@@ -244,7 +267,7 @@
                   {% if day.day == "1"  %}
                   <tr>
                     <td class="visually-hidden">18:00</td>
-                    <td colspan="3">
+                    <td colspan="4">
                       <div class="closing-party closing-party__grid schedule__shared">
                         <div class="closing-party__content">
                           <img class="image-party py-3" src="/images/dinner.webp" alt="Plate of food"/>
@@ -257,7 +280,7 @@
                   </tr>
                   <tr>
                     <td class="visually-hidden">20:40–22:40</td>
-                    <td colspan="3">
+                    <td colspan="4">
                       <div class="closing-party closing-party__grid schedule__shared">
                         <a class="activity-card__link" href="/activities/karaoke/">
                           <div class="closing-party__content">
@@ -273,7 +296,7 @@
                   {% if day.day == "2"  %}
                   <tr>
                     <td class="visually-hidden">18:30-22:00</td>
-                    <td colspan="3">
+                    <td colspan="4">
                       <div class="closing-party closing-party__grid schedule__shared">
                         <div class="closing-party__content">
                           <img class="image-party py-3" src="/images/party.webp" alt="Astronaut with balloons"/>
