@@ -155,7 +155,13 @@
                     <h4 class="schedule__track mb-4">impl room</h4>
                     {% include "partials/impl-room.html" %}
                   </div>
-                  <div class="closing-party closing-party__grid schedule__shared mb-9">
+                  <div class="closing-part closing-party__grid schedule__shared pt-8">
+                    <h4 class="schedule__track mb-4">Workshop</h4>
+                      {% set workshopType = "jetbrains-rustrover" %}
+                      {% include "partials/activity-card-workshop.html" %}
+                  </div>
+                  <div class="closing-party closing-party__grid schedule__shared mb-9 pt-8 pb-8 border-bottom">
+                    <h4 class="schedule__track mb-4 border-bottom pb-4">Side activities</h4>
                     <div class="closing-party__content">
                       <img class="image-party py-3" src="/images/dinner.webp" alt="Plate of food"/>
                       <p><strong>19:30</strong></p>
@@ -178,7 +184,13 @@
                     <h4 class="schedule__track mb-4">impl room</h4>
                     {% include "partials/impl-room.html" %}
                   </div>
-                  <div class="closing-party closing-party__grid schedule__shared">
+                  <div class="closing-part closing-party__grid schedule__shared pt-8">
+                    <h4 class="schedule__track mb-4">Workshop</h4>
+                    {% set workshopType = "profiling-rust-in-action" %}
+                    {% include "partials/activity-card-workshop.html" %}
+                  </div>
+                  <div class="closing-party closing-party__grid schedule__shared pt-8">
+                    <h4 class="schedule__track mb-4 border-bottom pb-4">Side activity</h4>
                     <div class="closing-party__content">
                       <img class="image-party py-3" src="/images/party.webp" alt="Astronaut with balloons"/>
                       <p><strong>18:30–22:00</strong></p>
@@ -221,7 +233,7 @@
                           {% if not activity.isBreak %}
                             {% set activity = false %}
                             {% set activity = day.side[sideRow] %}
-                            <td class="schedule__table-4cols sticky" {% if activity.rowspan %}rowspan="{{ activity.rowspan }}"{% endif %}>
+                            <td class="schedule__table-4cols" {% if activity.rowspan %}rowspan="{{ activity.rowspan }}"{% endif %}>
                               {% include "partials/activity-card.html" %}
                             </td>
                           {% endif %}
@@ -240,25 +252,38 @@
                             </td>
                         {% endif %}
                         <!-- end of impl room -->
-                        <!-- workshop sticky cell -->
-                        {% set_global colSpan = 0 %}
+                        <!-- workshop cell -->
                         {% if sideRow == 2 %}
-                          {% set_global colSpan = 2 %}
+                          {% set_global rowSpan = 2 %}
                         {% elif sideRow == 5 %}
-                          {% set_global colSpan = 3 %}
+                          {% set_global rowSpan = 3 %}
                         {% endif %}
 
-                        {% if sideRow == 2 or sideRow == 5 %}
-                          <td rowspan="{{ rowSpan }}" class="schedule__table-4cols sticky">
-                            {% if day.day == "1" %}
-                            {% set workshopType = "jetbrains-rustrover" %}
+                        {% if sideRow == 2 %}
+                          <!-- workshop cell: sticky if day 1; not sticky if day 2 -->
+                          <td rowspan="{{ rowSpan }}" class="schedule__table-4cols 
+                            {% if day.day == "1" %}sticky">
+                              {% set workshopType = "jetbrains-rustrover" %}
                               {% include "partials/activity-card-workshop.html" %}
-                            {% elif day.day == "2" %}
-                              {% include "partials/impl-room.html" %}
+                            {% elif day.day == "2" %}">
+                              {% set workshopType = "profiling-rust-in-action" %}
+                              {% include "partials/activity-card-workshop.html" %}
                             {% endif %}
                           </td>
+                        <!-- end of workshop cell -->
                         {% endif%}
-                        <!-- end of workshop sticky cell -->
+
+                        {% if sideRow == 5 %}
+                          <!-- workshop cell: sticky if day 1; nothing if day 2 -->
+                            {% if day.day == "1" %}
+                            <td rowspan="{{ rowSpan }}" class="schedule__table-4cols sticky">
+                              {% set workshopType = "jetbrains-rustrover" %}
+                              {% include "partials/activity-card-workshop.html" %}
+                              </td>
+                            {% endif %}
+                        <!-- end of workshop cell -->
+                        {% endif%}
+                        
                         {% set_global sideRow = sideRow + 1 %}
                       {% endif %}
                       {% set_global sideCount = sideCount + 1 %}

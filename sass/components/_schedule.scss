@@ -213,6 +213,10 @@ section#day2 {
         text-align: center;
     }
 
+    & td:nth-child(4) {
+        border-right: 1px solid var(--blue-light);
+    }
+
     & .schedule__track th {
         padding: .5rem 0 1rem 0;
     }
@@ -258,6 +262,10 @@ section#day2 {
     .schedule__list {
         border-top: 1px solid var(--blue-light);
     }
+}
+
+.border-bottom {
+        border-bottom: 1px solid var(--blue-light);
 }
 
 #day1, #day2 {
