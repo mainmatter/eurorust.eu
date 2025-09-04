@@ -52,7 +52,7 @@
       { "time": "15:45–16:15", "title": "Snack Break", "isBreak": true },
       { "time": "16:15–16:45", "talk": "one-rust-binary" },
       { "time": "17:00–17:30", "talk": "sdr-podcast-day-2" },
-      { "time": "17:45–18:30", "talk": "tba-ryan", "isBreak": true }
+      { "time": "17:45–18:30", "talk": "unrusted-code-execution", "isBreak": true }
     ],
     "side": [
       { "time": "9:00–10:00", "title": "Doors open & breakfast", "isBreak": true },
@@ -68,7 +68,7 @@
       { "time": "15:45–16:15", "title": "Snack Break", "isBreak": true },
       { "time": "16:15–16:45", "talk": "what-are-attributes" },
       { "time": "17:00–17:30", "talk": "nix-for-rustaceans" },
-      { "time": "17:45–18:30", "title": "tba-ryan", "isBreak": true }
+      { "time": "17:45–18:30", "title": "unrusted-code-execution", "isBreak": true }
     ]
   }
 ]
