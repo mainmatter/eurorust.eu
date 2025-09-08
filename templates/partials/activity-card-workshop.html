@@ -13,9 +13,9 @@
     <a class="activity-card__link" href="{{event.path}}">
     <div class="activity-card__content">
       {% if event.extra.heroimage %}
-        <img class="activity-card__image mb-1" src="{{ event.extra.heroimage }}" alt="{{ event.extra.heroimage_alt }}" />
+        <img class="activity-card__image mb-3" src="{{ event.extra.heroimage }}" alt="{{ event.extra.heroimage_alt }}" />
       {% else %}
-        <img class="activity-card__image mb-1" src="/images/events/placeholder.webp" alt="" />
+        <img class="activity-card__image mb-3" src="/images/events/placeholder.webp" alt="" />
       {% endif %}
       <p class="activity-card__time"><strong>{{ time | safe}}</strong></p>
       <p aria-hidden="true" class="beige activity-card__title"><strong>{{ event.title }}</strong></p>
