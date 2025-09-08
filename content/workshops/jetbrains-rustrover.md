@@ -1,5 +1,5 @@
 +++
-title = "JetBrains/RustRover workshop"
+title = "JetBrains / RustRover workshop"
 template = "workshop.html"
 [extra]
   sponsor = "JetBrains"
