@@ -2,9 +2,9 @@
   {% set path = "activities/impl-room.md" %}
   {% set event = get_page(path = path) %}
   <a class="activity-card__link" href="{{ event.path }}">
-    <div class="activity-card__content">
+    <div class="activity-card__content impl-room">
       <p class="activity-card__time"><strong>{{ event.extra.time }}</strong></p>
       <p aria-hidden="true" class="beige activity-card__title"><strong>{{ event.title }}</strong></p>
-      <img class="impl-room__portrait mb-3" src="{{ event.extra.heroimage }}" alt="{{ event.extra.heroimage_alt }}" />
+      <img class="activity-card__image mb-3" src="{{ event.extra.heroimage }}" alt="{{ event.extra.heroimage_alt }}" />
     </div>
   </a>
