@@ -23,14 +23,14 @@
         {% if event.extra.mentors %}
           <p class="beige mentor">»Led by
             {% set_global mentorCounter = 0 %}
-            {%for mentor in event.extra.mentors %}
-              {% set_global mentorCounter = mentorCounter + 1 %}
-              {% if mentorCounter == 1 %}
+            {%- for mentor in event.extra.mentors -%}
+              {%- set_global mentorCounter = mentorCounter + 1 -%}
+              {%- if mentorCounter == 1 -%}
                 {{ mentor.name }}
-              {% else %}
+              {%- else -%}
                 , {{ mentor.name }}
-              {% endif %}            
-            {% endfor %}
+              {%- endif -%}            
+            {%- endfor -%}
           </p>
         {% endif %}
         {% if event.extra.sponsor %}
