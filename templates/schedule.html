@@ -259,25 +259,23 @@
                           {% set_global rowSpan = 3 %}
                         {% endif %}
 
-                        {% if sideRow == 2 %}
-                          <!-- workshop cell: sticky if day 1; not sticky if day 2 -->
-                          <td rowspan="{{ rowSpan }}" class="schedule__table-4cols 
-                            {% if day.day == "1" %}sticky">
+                        {% if sideRow == 2 or sideRow == 5%}
+                          <td rowspan="{{ rowSpan }}" class="schedule__table-4cols sticky">
+                            {% if day.day == "1" %}
                               {% set workshopType = "jetbrains-rustrover" %}
                               {% include "partials/activity-card-workshop.html" %}
-                            {% elif day.day == "2" %}">
+                            {% elif day.day == "2" %}
                               {% set workshopType = "profiling-rust-in-action" %}
                               {% include "partials/activity-card-workshop.html" %}
                             {% endif %}
                           </td>
-                        <!-- end of workshop cell -->
                         {% endif%}
 
-                        {% if sideRow == 5 %}
-                          <!-- workshop cell: sticky if day 1; nothing if day 2 -->
-                            {% if day.day == "1" %}
+                        {% if sideRow == 9 %}
+                          <!-- workshop cell: nothing if day 1; sticky if day 2 -->
+                            {% if day.day == "2" %}
                             <td rowspan="{{ rowSpan }}" class="schedule__table-4cols sticky">
-                              {% set workshopType = "jetbrains-rustrover" %}
+                              {% set workshopType = "profiling-rust-in-action" %}
                               {% include "partials/activity-card-workshop.html" %}
                               </td>
                             {% endif %}
