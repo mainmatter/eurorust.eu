@@ -248,15 +248,12 @@ section#day2 {
 
     .schedule__side-track {
         padding-left: 0;
+    }
 
-        /* Remove if number of workshops = number of side activities on Workshop Day */
-        .schedule__list {
-            li:nth-last-child(2), li:last-child {
-                display: none; 
-                
-                .activity-card {
-                    border-bottom: none;
-                }
+    .schedule__list {
+        li:last-child {
+            .activity-card {
+               border-bottom: none;
             }
         }
     }
@@ -278,6 +275,15 @@ section#day2 {
 #workshop-day {
     .activity-card__image {
         margin-bottom: .25rem;
+    }
+
+    @media (max-width: 60rem) {
+        /* Remove if number of workshops = number of side activities on Workshop Day */
+        .schedule__list {
+            li:nth-last-child(2), li:last-child {
+                display: none; 
+            }
+        }
     }
 }
 
