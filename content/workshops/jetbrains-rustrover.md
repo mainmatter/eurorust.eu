@@ -3,7 +3,7 @@ title = "JetBrains / RustRover workshop"
 template = "workshop.html"
 [extra]
   sponsor = "JetBrains"
-  sponsor_bio = ""
+  sponsor_bio = "JetBrains is a software company that creates professional development tools trusted by millions worldwide. Their product range includes award-winning tools such as IntelliJ IDEA, PyCharm, ReSharper, and PhpStorm, as well as productivity-enhancing team tools like YouTrack, TeamCity, and Datalore.<br/>In 2023, JetBrains introduced RustRover – a standalone IDE for Rust. Smart code completion, custom-built live inspections, intricate syntax highlighting, full integration with Cargo, and complete testing support to power your development with Rust."
   sponsor_cta = ""
   sponsor_url = "https://www.jetbrains.com/"
   venue = "main"
