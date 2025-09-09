@@ -251,7 +251,9 @@ section#day2 {
 
         /* Remove if number of workshops = number of side activities on Workshop Day */
         .schedule__list {
-            li:last-child {
+            li:nth-last-child(2), li:last-child {
+                display: none; 
+                
                 .activity-card {
                     border-bottom: none;
                 }
