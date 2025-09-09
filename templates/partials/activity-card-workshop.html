@@ -21,9 +21,17 @@
       <p aria-hidden="true" class="beige activity-card__title"><strong>{{ event.title }}</strong></p>
       <div class="mt-3 activity-card__speaker">
         {% if event.extra.mentors %}
+        <p class="beige mentor">»Led by
+          {% set_global mentorCounter = 0 %}
           {%for mentor in event.extra.mentors %}
-            <p class="beige mentor">»Led by {{ mentor.name }}</p>
+            {% set_global mentorCounter = mentorCounter + 1 %}
+            {% if mentorCounter == 1 %}
+              {{ mentor.name }}
+            {% else %}
+              , {{ mentor.name }}
+            {% endif %}            
           {% endfor %}
+          </p>
         {% endif %}
         {% if event.extra.sponsor %}
           <p class="beige sponsored-by">*Sponsored by {{ event.extra.sponsor }}</p>
