@@ -27,9 +27,15 @@
           <div class="mb-7 workshop-hero__topline">
             <p class="workshop-hero__details">
               <a href="/schedule" class="inline">»Schedule</a> //  Workshop<br />
-              October 8, 2025, Paris and online<br />
-              10:00–16:00<br />
-              Location: Fiap Paris, 30 Rue Cabanis, 75014 Paris, France
+              {% if page.extra.day and page.extra.time %}
+                {{ page.extra.day | safe }}<br />
+                {{ page.extra.time | safe }}<br />
+                Location: Main Venue, Cité des Sciences et de l'Industrie
+              {% else %}
+                October 8, 2025, Paris and online<br />
+                10:00–16:00<br />
+                Location: Fiap Paris, 30 Rue Cabanis, 75014 Paris, France
+              {% endif %}
             </p>
             {% if page.extra.sponsor %}
             <div class="workshop-hero__sponsor-container">
@@ -63,78 +69,83 @@
       <section class="ticket-button">
         <a href="https://ti.to/events-matter/eurorust-2025" class="workshop__ticket-button">Get tickets</a>
       </section>
-      <section class="workshop-details mt-8 pt-4">
-        <div class="container pt-8">
-          <div class="workshop-syllabus">{{ page.content | safe }}</div>
-        </div>
-      </section>
-
-      <section class="workshop-author mt-9 mb-4">
-        <div class="author-and-booking container">
-          {% for mentor in page.extra.mentors %}
-            <div class="mentor__grid">
-              {% if mentor.bio %}
-                <div class="mentor__grid-title">
-                  <h5 class="mb-4">Mentor</h5>
-                </div>
-                <div class="mentor__grid-name">
-                  <h2 class="mb-4">{{ mentor.name }}</h2>
-                </div>
-                <div class="mentor__grid-bio blurred-background">
-                  <p class="">{{ mentor.bio | safe }}</p>
-                </div>
-              {% endif %}
-              <div class="mentor__grid-photo-links">
-                {% if mentor.avatar %}
-                  <div class="photo-container">
-                    <img class="photo" src="/images/workshops/{{ mentor.avatar }}" alt="{{ mentor.avatar_alt }}" />
+     
+      {% if page.content %}
+        <section class="workshop-details mt-8 pt-4">
+          <div class="container pt-8">
+            <div class="workshop-syllabus">{{ page.content | safe }}</div>
+          </div>
+        </section>
+      {% endif %}
+      
+      {% if page.extra.mentors %}
+        <section class="workshop-author mt-9 mb-4">
+          <div class="author-and-booking container">
+              {% for mentor in page.extra.mentors %}
+                <div class="mentor__grid">
+                  {% if mentor.bio %}
+                    <div class="mentor__grid-title">
+                      <h5 class="mb-4">Mentor</h5>
+                    </div>
+                    <div class="mentor__grid-name">
+                      <h2 class="mb-4">{{ mentor.name }}</h2>
+                    </div>
+                    <div class="mentor__grid-bio blurred-background">
+                      <p class="">{{ mentor.bio | safe }}</p>
+                    </div>
+                  {% endif %}
+                  <div class="mentor__grid-photo-links">
+                    {% if mentor.avatar %}
+                      <div class="photo-container">
+                        <img class="photo" src="/images/workshops/{{ mentor.avatar }}" alt="{{ mentor.avatar_alt }}" />
+                      </div>
+                    {% endif %}
+                    <div class="links mt-5">
+                      <ul class="social mt-3">
+                        {% if mentor.github %}
+                          <li>
+                            <a
+                              href="https://github.com/{{ mentor.github }}"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              class="btn__icon"
+                              ><img src="/images/icons/github.svg" alt="Github"
+                            /></a>
+                          </li>
+                        {% endif %}
+                        {% if mentor.url %}
+                          <li>
+                            <a href="{{ mentor.url }}" target="_blank" rel="noopener noreferrer" class="btn__icon"
+                              ><img src="/images/icons/web.svg" alt="Website"
+                            /></a>
+                          </li>
+                        {% endif %}
+                        {% if mentor.bluesky %}
+                          <li>
+                            <a
+                              href="https://bsky.app/profile/{{ mentor.bluesky }}"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              class="btn__icon"
+                              ><img src="/images/icons/bluesky.svg" alt="Bluesky"
+                            /></a>
+                          </li>
+                        {% endif %}
+                        {% if mentor.mastodon %}
+                          <li>
+                            <a href="{{ mentor.mastodon }}" target="_blank" rel="noopener noreferrer" class="btn__icon"
+                              ><img src="/images/icons/mastodon.svg" alt="Mastodon"
+                            /></a>
+                          </li>
+                        {% endif %}
+                      </ul>
+                    </div>
                   </div>
-                {% endif %}
-                <div class="links mt-5">
-                  <ul class="social mt-3">
-                    {% if mentor.github %}
-                      <li>
-                        <a
-                          href="https://github.com/{{ mentor.github }}"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          class="btn__icon"
-                          ><img src="/images/icons/github.svg" alt="Github"
-                        /></a>
-                      </li>
-                    {% endif %}
-                    {% if mentor.url %}
-                      <li>
-                        <a href="{{ mentor.url }}" target="_blank" rel="noopener noreferrer" class="btn__icon"
-                          ><img src="/images/icons/web.svg" alt="Website"
-                        /></a>
-                      </li>
-                    {% endif %}
-                    {% if mentor.bluesky %}
-                      <li>
-                        <a
-                          href="https://bsky.app/profile/{{ mentor.bluesky }}"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          class="btn__icon"
-                          ><img src="/images/icons/bluesky.svg" alt="Bluesky"
-                        /></a>
-                      </li>
-                    {% endif %}
-                    {% if mentor.mastodon %}
-                      <li>
-                        <a href="{{ mentor.mastodon }}" target="_blank" rel="noopener noreferrer" class="btn__icon"
-                          ><img src="/images/icons/mastodon.svg" alt="Mastodon"
-                        /></a>
-                      </li>
-                    {% endif %}
-                  </ul>
                 </div>
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-      </section>
+              {% endfor %}
+          </div>
+        </section>
+    {% endif %}
       
   
       <section class="workshop-sponsor mt-9 mb-4 py-6">
@@ -177,8 +188,12 @@
         </div>
         </div>
         <hr class="separator">
-        {% endif %}    
-        {% include "sections/workshop-venue.html" %}   
+        {% endif %}  
+        {% if page.extra.venue %}
+          {% include "sections/workshop-venue-cite.html" %}  
+        {% else %}
+          {% include "sections/workshop-venue-fiap.html" %}  
+        {% endif %}
       </section>
       
 

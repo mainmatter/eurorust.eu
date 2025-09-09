@@ -28,6 +28,10 @@
     & .activity-card {
         padding: 2rem;
 
+     @media screen and (max-width: 85rem) {
+        padding: 2rem 0;
+    }
+
     @media screen and (max-width: 60rem) {
         padding: 2rem 0;
     }
@@ -63,7 +67,10 @@
 
   .activity-card__image {
     order: 1;
+    margin-left: auto;
+    margin-right: auto;
   }
+
 
   .activity-card__speaker {
     order: 4;
@@ -193,8 +200,8 @@ section#day2 {
         };
     }
 
-    & .schedule__table-3cols {
-        width: 33.33%;
+    & .schedule__table-4cols {
+        width: 25%;
         border-left: 1px solid var(--blue-light);
     }
 
@@ -209,6 +216,10 @@ section#day2 {
         border-block-start: 1px solid var(--blue-light);
         border-block-end: 1px solid var(--blue-light);
         text-align: center;
+    }
+
+    & td:nth-child(4) {
+        border-right: 1px solid var(--blue-light);
     }
 
     & .schedule__track th {
@@ -237,13 +248,12 @@ section#day2 {
 
     .schedule__side-track {
         padding-left: 0;
+    }
 
-        /* Remove if number of workshops = number of side activities on Workshop Day */
-        .schedule__list {
-            li:last-child {
-                .activity-card {
-                    border-bottom: none;
-                }
+    .schedule__list {
+        li:last-child {
+            .activity-card {
+               border-bottom: none;
             }
         }
     }
@@ -258,6 +268,25 @@ section#day2 {
     }
 }
 
+.border-bottom {
+        border-bottom: 1px solid var(--blue-light);
+}
+
+#workshop-day {
+    .activity-card__image {
+        margin-bottom: .25rem;
+    }
+
+    @media (max-width: 60rem) {
+        /* Remove if number of workshops = number of side activities on Workshop Day */
+        .schedule__list {
+            li:nth-last-child(2), li:last-child {
+                display: none; 
+            }
+        }
+    }
+}
+
 #day1, #day2 {
     .impl-room__container {
         @media (max-width: 60rem) {
@@ -265,16 +294,39 @@ section#day2 {
         }
     }
 
-    .impl-room {
-        position: sticky;
-        top: 0;
-        text-align: center;
-
-        @media (max-width: 60rem) {
-            position: inherit;
-            border-top: 1px solid var(--blue-light);
+    .activity-card__image {
+        width:80%;
+        
+        @media screen and (max-width: 60rem) {
+            width: 10rem;
         }
     }
+
+    .sticky {
+        .activity-card {
+            position: sticky;
+            top: 0;
+            text-align: center;
+
+            @media (max-width: 60rem) {
+                position: inherit;
+                border-top: 1px solid var(--blue-light);
+            }
+        
+
+        .activity-card__workshop {
+            .activity-card__image {
+                max-height: 10rem;
+                margin: 0 auto 1rem auto;
+                order: 1;
+
+                 @media screen and (max-width:60rem) {
+                    width: 10rem; 
+                }
+            }
+        }
+    }
+}
 
     .activity-card__content {
         display:flex;
@@ -289,15 +341,13 @@ section#day2 {
             }
 
             .activity-card__portrait {
-                width: 10rem;
+                width: clamp(5rem, 12vw, 10rem);
                 margin: 0 auto 1rem auto;
                 order: 1;
-            }
 
-            .impl-room__portrait {
-                height: 10rem;
-                margin: 0 auto 1rem auto;
-                order: 1;
+                @media screen and (max-width:60rem) {
+                    width: 10rem;
+                }
             }
 
             .activity-card__speaker {
@@ -335,7 +385,7 @@ section#post-day {
             
             @media (max-width: 60rem) {
                 width: clamp(15rem,60%,25rem);
-        }
+            }
         }
 
         
