@@ -39,6 +39,11 @@
   link="https://hightec-rt.com/"
   image="/images/sponsors/hightec.svg"
 
+[[extra.head_partner_sponsors]]
+  title="Huawei"
+  link="https://www.huawei.com/en/?ic_medium=direct&ic_source=surlent&utm_source=eurorust"
+  image="/images/sponsors/huawei.png"
+
 [[extra.partner_sponsors]]
   title="Open Source Security"
   link="https://opensrcsec.com"
