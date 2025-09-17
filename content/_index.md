@@ -98,13 +98,13 @@
   mastodon="https://mastodon.social/@deadparrot"
 
 [[extra.speakers]]
-  name="Conrad Irwin"
-  company="Zed"
-  image="/images/speakers/conrad-irwin.png"
-  twitter="https://x.com/ConradIrwin"
-  web="https://zed.dev"
-  linkedin="https://www.linkedin.com/in/conradirwin/"
-  github="https://github.com/conradirwin"
+  name="Ryan Dahl"
+  web="https://tinyclouds.org/"
+  twitter="https://x.com/rough__sea"
+  company="Creator of Node.js and Deno"
+  job_title=""
+  image="/images/speakers/ryan-dahl.png"
+  github="https://github.com/ry"
 
 [[extra.speakers]]
   name="Victoria Brekenfeld"
@@ -131,4 +131,13 @@
   job_title="Co-host"
   image="/images/speakers/amos-wenger.png"
   github="https://github.com/fasterthanlime"
+
+[[extra.speakers]]
+  name="Conrad Irwin"
+  company="Zed"
+  image="/images/speakers/conrad-irwin.png"
+  twitter="https://x.com/ConradIrwin"
+  web="https://zed.dev"
+  linkedin="https://www.linkedin.com/in/conradirwin/"
+  github="https://github.com/conradirwin"
 +++
