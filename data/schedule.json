@@ -40,7 +40,7 @@
     "date": "October 10, 2025",
     "mainStage": [
       { "time": "9:00–10:00", "title": "Doors open & breakfast", "isBreak": true },
-      { "time": "10:00–10:45", "title": "Opening talk, TBA", "isBreak": true },
+      { "time": "10:00–10:45", "talk": "rewrite-optimize-repeat", "isBreak": true },
       { "time": "11:00–11:30", "talk": "data-engineering-with-rust" },
       { "time": "11:45–12:15", "talk": "how-to-fit-an-elephant" },
 
@@ -52,11 +52,11 @@
       { "time": "15:45–16:15", "title": "Snack Break", "isBreak": true },
       { "time": "16:15–16:45", "talk": "one-rust-binary" },
       { "time": "17:00–17:30", "talk": "sdr-podcast-day-2" },
-      { "time": "17:45–18:30", "talk": "unrusted-code-execution", "isBreak": true }
+      { "time": "17:45–18:30", "title": "Closing talk, TBA", "isBreak": true }
     ],
     "side": [
       { "time": "9:00–10:00", "title": "Doors open & breakfast", "isBreak": true },
-      { "time": "10:00–10:45", "title": "Opening talk, TBA", "isBreak": true },
+      { "time": "10:00–10:45", "talk": "rewrite-optimize-repeat", "isBreak": true },
       { "time": "11:00–11:30", "talk": "random-seeds-and-state-machines" },
       { "time": "11:45–12:15", "talk": "sponsor-talk" },
 
@@ -68,7 +68,7 @@
       { "time": "15:45–16:15", "title": "Snack Break", "isBreak": true },
       { "time": "16:15–16:45", "talk": "what-are-attributes" },
       { "time": "17:00–17:30", "talk": "nix-for-rustaceans" },
-      { "time": "17:45–18:30", "talk": "unrusted-code-execution", "isBreak": true }
+      { "time": "17:45–18:30", "title": "Closing talk, TBA", "isBreak": true }
     ]
   }
 ]
