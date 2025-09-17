@@ -7,5 +7,5 @@ template = "talk.html"
   stage = "Main Stage"
   speakers = ["ryan-dahl"]
   description = ""
-  ogimage = "/images/talks/og-images/unrusted-code-execution.png"
+  ogimage = "/images/talks/og-images/untrusted-code-execution.png"
 +++
