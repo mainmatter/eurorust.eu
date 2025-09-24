@@ -98,13 +98,13 @@
   mastodon="https://mastodon.social/@deadparrot"
 
 [[extra.speakers]]
-  name="Ryan Dahl"
-  web="https://tinyclouds.org/"
-  twitter="https://x.com/rough__sea"
-  company="Creator of Node.js and Deno"
+  name="Clément Renault"
+  web="https://blog.kerollmops.com"
+  linkedin="https://www.linkedin.com/in/kerollmops/"
+  company="Co-founder and CTO of Meilisearch"
   job_title=""
-  image="/images/speakers/ryan-dahl.png"
-  github="https://github.com/ry"
+  image="/images/speakers/clement-renault.webp"
+  github="https://github.com/kerollmops"
 
 [[extra.speakers]]
   name="Victoria Brekenfeld"
