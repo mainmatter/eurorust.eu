@@ -29,6 +29,11 @@
   link="https://www.wincent.com/"
   image="/images/sponsors/wincent.svg"
 
+[[extra.premier_partner_sponsors]]
+  title="Solana"
+  link="https://solana.com/"
+  image="/images/sponsors/solana.svg"
+
 [[extra.lounge_partner_sponsors]]
   title="Helsing"
   link="https://helsing.ai/"
