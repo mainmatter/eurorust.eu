@@ -64,6 +64,11 @@
   link="https://rustfoundation.org"
   image="/images/sponsors/rust-foundation.svg"
 
+[[extra.supporter_sponsors]]
+  title="Peeriot"
+  link="http://peeriot.io/"
+  image="/images/sponsors/peeriot.svg"
+
 [[extra.media_partners]]
   title="Self-Directed Research podcast"
   link="https://sdr-podcast.com"
