@@ -4,7 +4,6 @@
     "date": "October 11, 2025",
     "side": [
       { "time": "10:00–16:00", "title": "impl-day" },
-      { "time": "14:30–16:45", "title": "movie-tour" },
       { "time": "16:30–18:00", "title": "street-art-tour" }
     ]
   }
