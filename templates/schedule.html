@@ -156,8 +156,10 @@
                     {% include "partials/impl-room.html" %}
                   </div>
                   <div class="closing-part closing-party__grid schedule__shared pt-8">
-                    <h4 class="schedule__track mb-4">Workshop</h4>
+                    <h4 class="schedule__track mb-4">Workshops</h4>
                       {% set workshopType = "jetbrains-rustrover" %}
+                      {% include "partials/activity-card-workshop.html" %}
+                      {% set workshopType = "rust-meets-solana" %}
                       {% include "partials/activity-card-workshop.html" %}
                   </div>
                   <div class="closing-party closing-party__grid schedule__shared mb-9 pt-8 pb-8 border-bottom">
@@ -208,7 +210,7 @@
                     <th scope="col">Main Stage</th>
                     <th scope="col" class="schedule__table-4cols">Side Track</th>
                     <th scope="col" class="schedule__table-4cols">impl Room</th>
-                    <th scope="col" class="schedule__table-4cols">Workshop</th>
+                    <th scope="col" class="schedule__table-4cols">Workshop{% if day.day == "1" %}s{% endif %}</th>
                   </tr>
                   {% set_global sideCount = 1 %}
                   {% set_global currentRowspan = 0 %}

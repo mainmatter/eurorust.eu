@@ -1,11 +1,4 @@
 .schedule {
-
-    .schedule__track {
-        @media screen and (min-width:60rem) {
-             border-bottom: 1px solid var(--blue-light);
-        }
-    }
-
     .venue-warning {
         border-right: 1px solid var(--blue-light);
         padding: 2rem 2rem 0 2rem;
