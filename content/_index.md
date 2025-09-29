@@ -49,6 +49,11 @@
   link="https://www.huawei.com/en/?ic_medium=direct&ic_source=surlent&utm_source=eurorust"
   image="/images/sponsors/huawei.png"
 
+[[extra.head_partner_sponsors]]
+  title="Exein"
+  link="https://www.exein.io/?ic_medium=direct&ic_source=surlent&utm_source=eurorust"
+  image="/images/sponsors/exein.svg"
+
 [[extra.partner_sponsors]]
   title="Open Source Security"
   link="https://opensrcsec.com"
