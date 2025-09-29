@@ -58,7 +58,7 @@
       { "time": "9:00–10:00", "title": "Doors open & breakfast", "isBreak": true },
       { "time": "10:00–10:45", "talk": "rewrite-optimize-repeat", "isBreak": true },
       { "time": "11:00–11:30", "talk": "random-seeds-and-state-machines" },
-      { "time": "11:45–12:15", "talk": "sponsor-talk" },
+      { "time": "11:45–12:15", "talk": "adoption-in-safety-critical-systems" },
 
       { "time": "12:15–13:45", "title": "Lunch", "isBreak": true },
       { "time": "13:45–14:15", "talk": "serde-driven-reflection" },
