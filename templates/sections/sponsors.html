@@ -111,9 +111,9 @@
     {% endif %}
     {% if section.extra.head_partner_sponsors %}
       <div class="sponsors-grid--head_partners">
-        <h2>Head Partner</h2>
+        <h2>Head Partners</h2>
         {% for sponsor in section.extra.head_partner_sponsors %}
-          <a href="{{ sponsor.link }}" aria-label="{{ sponsor.title }}" target="_blank" rel="noopener noreferrer">
+          <a class="mb-4" href="{{ sponsor.link }}" aria-label="{{ sponsor.title }}" target="_blank" rel="noopener noreferrer">
             {% set meta = get_image_metadata(path=sponsor.image) %}
             <img
               alt="{{ sponsor.title }}"
