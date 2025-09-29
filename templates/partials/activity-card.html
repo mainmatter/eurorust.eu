@@ -19,6 +19,9 @@
         <p class="beige activity-card__speaker mt-3">»{{speaker.extra.name}}</p>
         {% endfor %}
       {% endif %}
+      {% if talk.extra.sponsor %}
+        <p class="beige activity-card__speaker mt-3 ">*Sponsored by {{ talk.extra.sponsor }}</p>
+      {% endif %}
     </div>
     </a>
   {% elif activity.title %}
