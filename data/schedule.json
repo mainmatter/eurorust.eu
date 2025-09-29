@@ -67,7 +67,7 @@
 
       { "time": "15:45–16:15", "title": "Snack Break", "isBreak": true },
       { "time": "16:15–16:45", "talk": "what-are-attributes" },
-      { "time": "17:00–17:30", "talk": "nix-for-rustaceans" },
+      { "time": "17:00–17:30", "talk": "panic-at-the-disk-oh" },
       { "time": "17:45–18:30", "talk": "lightning-fast-search-engine", "isBreak": true }
     ]
   }
