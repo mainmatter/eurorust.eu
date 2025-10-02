@@ -12,7 +12,7 @@ template = "workshop.html"
     { name = "Alfonso Subiotto", avatar = "alfonso-subiotto.webp", avatar_alt = "Alfonso Subiotto",  bio = "Alfonso is a software engineer with a deep focus on distributed systems and databases. After honing his skills on the SQL execution team at Cockroach Labs, he now contributes to the storage layer at Polar Signals, a continuous profiling solution. Alfonso’s current area of focus is ensuring correctness through deterministic simulation testing. " }
   ]
   venue = "main"
-  day = "October 10, 2025, Paris and online"
+  day = "October 10, 2025, Paris"
   time = "30-minute sessions between 11:00–17:30"
   abstract = "Curious how to make your Rust applications faster and more efficient? In this 30-minute hands-on workshop, we’ll explore what continuous profiling is, why it matters, and how it goes beyond traditional profiling. Using real Rust examples, you’ll learn to capture On-CPU, Off-CPU, and heap memory profiles, tackle advanced scenarios like thread-level analysis, and even correlate profiles with distributed tracing data. Walk away with practical techniques to unlock deeper insights into your Rust applications’ performance.<br/><br/>This workshop runs on repeat in 30-minute sessions. Join anytime!"
   ogimage = "/images/workshops/og-images/og-image-profiling-rust.png"
