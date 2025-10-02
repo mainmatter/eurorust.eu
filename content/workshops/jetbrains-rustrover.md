@@ -7,7 +7,7 @@ template = "workshop.html"
   sponsor_cta = ""
   sponsor_url = "https://www.jetbrains.com/"
   venue = "main"
-  day = "October 9, 2025, Paris and online"
+  day = "October 9, 2025, Paris"
   time = "11:00–15:45"
   mentors = [
     { name = "Vitaly Bragilevsky", avatar = "vitaly-bragilevsky.webp", avatar_alt = "Vitaly Bragilevsky",  bio = "Vitaly Bragilevsky is a Developer Advocate at JetBrains and a passionate fan of Rust and other programming languages – especially those with strong static type systems. He has spent most of his career teaching programming languages, computer science, and software development to students, and now continues this work with professional developers at industry conferences and beyond.", github = "bravit" }

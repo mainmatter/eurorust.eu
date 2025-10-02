@@ -7,7 +7,7 @@ template = "workshop.html"
   sponsor_cta = ""
   sponsor_url = "https://solana.com/"
   venue = "main"
-  day = "October 9, 2025, Paris and online"
+  day = "October 9, 2025, Paris"
   time = "11:00–17:30"
   mentors = [
     { name = "Jonas Hahn", avatar = "jonas-hahn.webp", avatar_alt = "Jonas Hahn",  bio = "Jonas Hahn is a Developer Relations Engineer at the Solana Foundation. Before joining Solana, he spent over 10 years as a game developer. Today, he works on developer tools, builds DePIN projects, and helps game developers bring their ideas to life in Rust on Solana."}
