@@ -123,7 +123,7 @@
       {% for day in schedule %}
       {% set is_day1 = loop.first %}
 
-      <section id="day{{ day.day }}" class="mt-6 mb-8">
+      <section id="day{{ day.day }}" class="mt-6 mb-9">
         <div class="container">
           <div class="schedule__container">
             <div class="schedule__day">
@@ -350,7 +350,7 @@
       {% set_global sideRow = 0 %}
       {% for day in schedule %}
 
-      <section id="post-day" class="mt-6 mb-8">
+      <section id="post-day" class="mt-6 mb-9">
         <div class="container">
           <div class="schedule__container">
             <div class="schedule__day">
@@ -372,10 +372,6 @@
       </div>
     </section>
     {% endfor %}
-
-    <section class="ticket-button mb-10">
-      <a href="https://ti.to/events-matter/eurorust-2025" class="schedule__button">Get tickets</a>
-    </section>
 
   {% include "2025/sections/footer.html" %}
   </div>
