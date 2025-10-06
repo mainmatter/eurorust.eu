@@ -201,3 +201,226 @@ command = "vite build && zola build --base-url $DEPLOY_PRIME_URL"
 [[redirects]]
   from = "/talks/building-an-extremely-fast-python-package-manager-in-rust/"
   to = "/2024/talks/building-an-extremely-fast-python-package-manager-in-rust/"
+
+ # 2025 sponsors
+
+[[redirects]]
+  from = "/wyliodrin/"
+  to = "/2025/wyliodrin/"
+
+[[redirects]]
+  from = "/oxidos/"
+  to = "/2025/oxidos/"
+
+# 2025 workshops
+
+[[redirects]]
+  from = "/workshops/rust-in-action/"
+  to = "/2025/workshops/rust-in-action/"
+
+[[redirects]]
+  from = "/workshops/rust-python-interoperability/"
+  to = "/2025/workshops/rust-python-interoperability/"
+
+[[redirects]]
+  from = "/workshops/using-bevy/"
+  to = "/2025/workshops/using-bevy/"
+
+[[redirects]]
+  from = "/workshops/long-live-webassembly/"
+  to = "/2025/workshops/long-live-webassembly/"
+
+[[redirects]]
+  from = "/workshops/edge-ai-with-rust/"
+  to = "/2025/workshops/edge-ai-with-rust/"
+
+[[redirects]]
+  from = "/workshops/rust-performance-lab/"
+  to = "/2025/workshops/rust-performance-lab/"
+
+[[redirects]]
+  from = "/workshops/jetbrains-rustrover/"
+  to = "/2025/workshops/jetbrains-rustrover/"
+
+[[redirects]]
+  from = "/workshops/rust-meets-solana/"
+  to = "/2025/workshops/rust-meets-solana/"
+
+[[redirects]]
+  from = "/workshops/profiling-rust-in-action/"
+  to = "/2025/workshops/profiling-rust-in-action/"
+
+# 2025 activities
+
+[[redirects]]
+  from = "/activities/bike-tour/"
+  to = "/2025/activities/bike-tour/"
+
+[[redirects]]
+  from = "/activities/boat-tour/"
+  to = "/2025/activities/boat-tour/"
+
+[[redirects]]
+  from = "/activities/impl-day/"
+  to = "/2025/activities/impl-day/"
+
+[[redirects]]
+  from = "/activities/impl-room/"
+  to = "/2025/activities/impl-room/"
+
+[[redirects]]
+  from = "/activities/karaoke/"
+  to = "/2025/activities/karaoke/"
+
+[[redirects]]
+  from = "/activities/meetup/"
+  to = "/2025/activities/meetup/"
+
+[[redirects]]
+  from = "/activities/street-art-tour/"
+  to = "/2025/activities/street-art-tour/"
+
+[[redirects]]
+  from = "/activities/wine-cheese/"
+  to = "/2025/activities/wine-cheese/"
+
+# 2025 talks
+[[redirects]]
+  from = "/talks/a-minimal-rust-kernel/"
+  to = "/2025/talks/a-minimal-rust-kernel/"
+
+[[redirects]]
+  from = "/talks/adoption-in-safety-critical-systems/"
+  to = "/2025/talks/adoption-in-safety-critical-systems/"
+
+[[redirects]]
+  from = "/talks/are-we-desktop-yet/"
+  to = "/2025/talks/are-we-desktop-yet/"
+
+[[redirects]]
+  from = "/talks/automotive-rust/"
+  to = "/2025/talks/automotive-rust/"
+
+[[redirects]]
+  from = "/talks/building-a-chatbot-service/"
+  to = "/2025/talks/building-a-chatbot-service/"
+
+[[redirects]]
+  from = "/talks/building-and-maintaining-rust-at-scale/"
+  to = "/2025/talks/building-and-maintaining-rust-at-scale/"
+
+[[redirects]]
+  from = "/talks/closing-talk-victoria/"
+  to = "/2025/talks/closing-talk-victoria/"
+
+[[redirects]]
+  from = "/talks/data-engineering-with-rust/"
+  to = "/2025/talks/data-engineering-with-rust/"
+
+[[redirects]]
+  from = "/talks/deadlock-detection/"
+  to = "/2025/talks/deadlock-detection/"
+
+[[redirects]]
+  from = "/talks/from-any-to-this/"
+  to = "/2025/talks/from-any-to-this/"
+
+[[redirects]]
+  from = "/talks/how-rust-compiles/"
+  to = "/2025/talks/how-rust-compiles/"
+
+[[redirects]]
+  from = "/talks/how-to-fit-an-elephant/"
+  to = "/2025/talks/how-to-fit-an-elephant/"
+
+[[redirects]]
+  from = "/talks/lego-line-follower-challenge/"
+  to = "/2025/talks/lego-line-follower-challenge/"
+
+[[redirects]]
+  from = "/talks/lightning-fast-search-engine/"
+  to = "/2025/talks/lightning-fast-search-engine/"
+
+[[redirects]]
+  from = "/talks/make-your-own-stream-operators/"
+  to = "/2025/talks/make-your-own-stream-operators/"
+
+[[redirects]]
+  from = "/talks/misusing-const/"
+  to = "/2025/talks/misusing-const/"
+
+[[redirects]]
+  from = "/talks/one-rust-binary/"
+  to = "/2025/talks/one-rust-binary/"
+
+[[redirects]]
+  from = "/talks/opening-talk-conrad/"
+  to = "/2025/talks/opening-talk-conrad/"
+
+[[redirects]]
+  from = "/talks/panic-at-the-disk-oh/"
+  to = "/2025/talks/panic-at-the-disk-oh/"
+
+[[redirects]]
+  from = "/talks/porting-embassy/"
+  to = "/2025/talks/porting-embassy/"
+
+[[redirects]]
+  from = "/talks/production-unsafe-rust"
+  to = "/2025/talks/production-unsafe-rust/"
+
+[[redirects]]
+  from = "/talks/random-seeds-and-state-machines/"
+  to = "/2025/talks/random-seeds-and-state-machines/"
+
+[[redirects]]
+  from = "/talks/reflections-on-the-humans/"
+  to = "/2025/talks/reflections-on-the-humans/"
+
+[[redirects]]
+  from = "/talks/rendering-at-1-million-pixels---millisecond-with-gpui/"
+  to = "/2025/talks/rendering-at-1-million-pixels---millisecond-with-gpui/"
+
+[[redirects]]
+  from = "/talks/rewrite-optimize-repeat/"
+  to = "/2025/talks/rewrite-optimize-repeat/"
+
+[[redirects]]
+  from = "/talks/roto-scripting-language/"
+  to = "/2025/talks/roto-scripting-language/"
+
+[[redirects]]
+  from = "/talks/rust-c-plus-plus-interop/"
+  to = "/2025/talks/rust-c-plus-plus-interop/"
+
+[[redirects]]
+  from = "/talks/rusts-memory-model/"
+  to = "/2025/talks/rusts-memory-model/"
+
+[[redirects]]
+  from = "/talks/sdr-podcast-day-1/"
+  to = "/2025/talks/sdr-podcast-day-1/"
+
+[[redirects]]
+  from = "/talks/sdr-podcast-day-2/"
+  to = "/2025/talks/sdr-podcast-day-2/"
+
+[[redirects]]
+  from = "/talks/serde-driven-reflection/"
+  to = "/2025/talks/serde-driven-reflection/"
+
+[[redirects]]
+  from = "/talks/trust-your-benchmarks/"
+  to = "/2025/talks/trust-your-benchmarks/"
+
+[[redirects]]
+  from = "/talks/what-are-attributes/"
+  to = "/2025/talks/what-are-attributes/"
+
+[[redirects]]
+  from = "/talks/writing-safe-postgresql-extensions/"
+  to = "/2025/talks/writing-safe-postgresql-extensions/"
+
+[[redirects]]
+  from = "/talks/znext-solver/"
+  to = "/2025/talks/znext-solver/"
