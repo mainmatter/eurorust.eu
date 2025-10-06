@@ -1,116 +1,78 @@
 +++
-[[extra.main_partner_sponsors]]
+[[extra.past_sponsors]]
   title="OxidOS"
-  link="/oxidos"
+  link="https://oxidos.io/"
   image="/images/sponsors/oxidOS.svg"
 
-[[extra.main_partner_sponsors]]
+[[extra.past_sponsors]]
   title="Wyliodrin"
-  link="/wyliodrin"
+  link="https://wyliodrin.com/"
   image="/images/sponsors/wyliodrin.svg"
 
-[[extra.premier_partner_sponsors]]
+[[extra.past_sponsors]]
   title="Polar Signals"
   link="https://www.polarsignals.com//"
   image="/images/sponsors/polar-signals.svg"
 
-[[extra.premier_partner_sponsors]]
+[[extra.past_sponsors]]
   title="JetBrains"
   link="https://www.jetbrains.com/"
   image="/images/sponsors/jetbrains.svg"
 
-[[extra.premier_partner_sponsors]]
+[[extra.past_sponsors]]
   title="Codspeed"
   link="https://codspeed.io/"
   image="/images/sponsors/codspeed.svg"
 
-[[extra.premier_partner_sponsors]]
+[[extra.past_sponsors]]
   title="Wincent"
   link="https://www.wincent.com/"
   image="/images/sponsors/wincent.svg"
 
-[[extra.premier_partner_sponsors]]
+[[extra.past_sponsors]]
   title="Solana"
   link="https://solana.com/"
   image="/images/sponsors/solana.svg"
 
-[[extra.lounge_partner_sponsors]]
+[[extra.past_sponsors]]
   title="Helsing"
   link="https://helsing.ai/"
   image="/images/sponsors/helsing.svg"
 
-[[extra.live_stream_partner_sponsors]]
+[[extra.past_sponsors]]
   title="Hichtec"
   link="https://hightec-rt.com/"
   image="/images/sponsors/hightec.svg"
 
-[[extra.head_partner_sponsors]]
+[[extra.past_sponsors]]
   title="Huawei"
   link="https://www.huawei.com/en/?ic_medium=direct&ic_source=surlent&utm_source=eurorust"
   image="/images/sponsors/huawei.png"
 
-[[extra.head_partner_sponsors]]
+[[extra.past_sponsors]]
   title="Exein"
   link="https://www.exein.io/?ic_medium=direct&ic_source=surlent&utm_source=eurorust"
   image="/images/sponsors/exein.svg"
 
-[[extra.partner_sponsors]]
+[[extra.past_sponsors]]
   title="Open Source Security"
   link="https://opensrcsec.com"
   image="/images/sponsors/oss.svg"
 
-[[extra.partner_sponsors]]
+[[extra.past_sponsors]]
   title="Mullvad VPN AB"
   link="https://mullvad.net/en"
   image="/images/sponsors/mullvad.svg"
 
-[[extra.partner_sponsors]]
+[[extra.past_sponsors]]
   title="Woven by Toyota"
   link="https://woven.toyota/"
   image="/images/sponsors/woven.svg"
 
-[[extra.supporter_sponsors]]
+[[extra.past_sponsors]]
   title="Rust Foundation"
   link="https://rustfoundation.org"
   image="/images/sponsors/rust-foundation.svg"
-
-[[extra.supporter_sponsors]]
-  title="Peeriot"
-  link="http://peeriot.io/"
-  image="/images/sponsors/peeriot.svg"
-
-[[extra.media_partners]]
-  title="Self-Directed Research podcast"
-  link="https://sdr-podcast.com"
-  image="/images/sponsors/sdr.png"
-
-[[extra.media_partners]]
-  title="Women in Tech Germany"
-  link="https://women-in-tech.org/gr/"
-  image="/images/sponsors/women-in-tech.png"
-
-[[extra.media_partners]]
-  title="Code Beam Europe"
-  link="https://codebeameurope.com/"
-  image="/images/sponsors/code-beam-europe.png"
-
-[[extra.media_partners]]
-  title="Filtra"
-  link="https://filtra.io/"
-  image="/images/sponsors/filtra.svg"
-
-[[extra.moderators]]
-  name="Ciara"
-  image="/images/moderators/ciara.png"
-	twitter="https://x.com/Ciara0x1F973"
-
-[[extra.moderators]]
-  name="Stefan Baumgartner"
-  image="/images/moderators/stefan-baumgartner.png"
-  bsky="https://bsky.app/profile/deadparrot.dev"
-  web="https://fettblog.eu/?utm_source=eurorust"
-  github="https://github.com/ddprrt"
-  mastodon="https://mastodon.social/@deadparrot"
 
 [[extra.speakers]]
   name="Clément Renault"
