@@ -1,0 +1,25 @@
+.presented-by {
+  margin: 8rem auto;
+
+  @media screen and (max-width: 60rem) {
+    margin: 4rem auto;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  > div {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  img {
+    width: 75vw;
+    max-width: 34rem;
+  }
+}

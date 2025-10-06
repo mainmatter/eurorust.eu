@@ -1,0 +1,50 @@
+{% block head %}
+  <script
+    defer
+    src="https://cdnjs.cloudflare.com/ajax/libs/lite-youtube-embed/0.3.3/lite-yt-embed.min.js"
+    integrity="sha512-l8cIzs5aAJutiOPIyW/9PAvDevwTA8F17Pmge51rwmKBkjZ47tap3kRv+pI8JX9owkkBpRMuOIUE7v+Rg6os9w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/lite-youtube-embed/0.3.3/lite-yt-embed.min.css"
+    integrity="sha512-jGFXuWMxJUKzdfBmoyqCXz9k2AU3Z/ZNoayoUPEBAtJZjHbTbw50AxTR1ICVPQJbSamH9ny1JwOur0x4WOdcWQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+{% endblock head %}
+
+<section class="past-event-highlights">
+  <h1 class="mb-4">Eurorust 2024 Highlights</h1>
+  <div class="past-event-highlights__grid">
+    <img
+      class="past-event-highlights__image"
+      src="/2025/images/backgrounds/frame-empty.webp"
+      alt=""
+      role="presentation"
+      width="315"
+      height="1153"
+      loading="lazy"
+    />
+    <div class="past-event-highlights__video">
+      <lite-youtube
+        videoid="OYy9LKXDuio"
+        style="background-image: url('https://i.ytimg.com/vi/OYy9LKXDuio/hqdefault.jpg');"
+      >
+        <a href="https://youtube.com/watch?v=OYy9LKXDuio" class="lty-playbtn" title="Play Video">
+          <span class="lyt-visually-hidden">Play Video: Keynote (Google I/O '18)</span>
+        </a>
+      </lite-youtube>
+    </div>
+    <img
+      class="past-event-highlights__image"
+      src="/2025/images/backgrounds/frame-empty.webp"
+      alt=""
+      role="presentation"
+      width="315"
+      height="1153"
+      loading="lazy"
+    />
+  </div>
+</section>

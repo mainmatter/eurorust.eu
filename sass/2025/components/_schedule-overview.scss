@@ -1,0 +1,131 @@
+.schedule-overview {
+  a,
+  p {
+    color: var(--beige);
+  }
+
+  .schedule-overview__button {
+   @include btn__secondary(#b3e4ff);
+  }
+
+  .workshops,
+.desktop-schedule {
+    .mentor + p {
+      margin-top:0;
+    }
+
+    @include dashed-border-with-corners;
+    width: clamp(20px, 75vw, 1440px);
+    margin: 2rem auto;
+
+    & ul li {
+      font-size: clamp(14px, 1vw, 18px);
+      line-height: clamp(14.8px, 1.2vw, 22px);
+
+      @media screen and (max-width: 60rem) {
+        font-size: 1rem;
+        line-height: 1.2rem;
+      }
+    }
+  }
+}
+
+.activity-card__image {
+  object-fit: contain;
+  width: 70%;
+
+   @media screen and (max-width: 60rem) {
+    width: clamp(15rem, 60%, 25rem);
+   }
+}
+
+.workshop-schedule__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 24rem); 
+  grid-template-rows: repeat(1, 1fr);
+  justify-content: center;
+  text-wrap: balance;
+  gap: 4rem;
+
+  @media screen and (max-width: 75rem) {
+     grid-template-columns: repeat(2, 20rem); 
+     gap: 2rem;
+  }
+
+  @media screen and (max-width: 60rem) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat (2, 1fr);
+  }
+
+.activity-card__content {
+  p {
+    line-height: 1.5rem;
+  }
+}
+}
+
+.schedule__table {
+  display: flex;
+  flex-direction: row;
+
+  @media screen and (max-width: 60rem) {
+    flex-direction: column;
+  }
+
+  & > div {
+    flex-grow: 1;
+  }
+}
+
+.schedule__table-side .activity-card__image {
+  width: 60%;
+}
+
+.schedule-overview {
+  text-align: center;
+
+  & ul li::before {
+    content: "\00BB";
+  }
+
+  & ul li {
+    padding-bottom: 1rem;
+    color: var(--beige);
+  }
+}
+
+.schedule__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.schedule__shared {
+  grid-column: 1 / -1;
+}
+
+.schedule__track {
+  font-weight: 700;
+}
+
+.schedule__main-stage {
+  padding-right: 5rem;
+}
+
+.schedule__side-track {
+  padding-left: 5rem;
+}
+
+.schedule__list {
+  margin-inline-start: -0.75rem;
+  margin-block-start: -0.75rem;
+}
+
+.workshops__image {
+  display: flex;
+  justify-content: center;
+
+  img {
+    max-width: 100%;
+  }
+}
+

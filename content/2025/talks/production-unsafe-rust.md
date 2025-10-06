@@ -1,0 +1,11 @@
++++
+title = "Production Unsafe Rust: Patterns for Zero-Copy Performance"
+template = "2025/talk.html"
+[extra]
+  date = "Wednesday, October 9"
+  time = "13:45-14:15"
+  stage = "Main Stage"
+  speakers = ["muskan-paliwal"]
+  description = "<p><strong>When Safe Rust Meets Reality</strong></p><p>Picture this: your beautifully crafted, idiomatic Rust service is processing 50MB/s when the business needs 5GB/s. Your network parser allocates on every packet when microseconds matter. Your SIMD experiments somehow made things slower. Welcome to the performance wall that separates hobby projects from production systems.</p><p>This is where unsafe Rust transforms from “dangerous territory to avoid” into “the tool that saves your career.</p><p><strong>What Makes This Talk Different</strong></p><p>Most unsafe Rust content focuses on how to write unsafe code. This talk focuses on when, why, and what happens after you ship it. These are battle-tested patterns from systems handling terabytes daily, not academic examples.</p><p><strong>Who Should Attend</strong></p><p>Perfect for you if:<br/>• You’ve hit performance walls that safe Rust can’t break through<br/>• You’re curious about unsafe but don’t know where to start safely<br/>• You maintain high-performance Rust systems and need to justify architectural decisions<br/>• You’re evaluating whether Rust can replace C/C++ in performance-critical applications<p><strong>You’ll leave knowing:</strong></p><p>• Exactly when unsafe provides real benefits vs. perceived ones, with decision frameworks you can apply immediately<br/>• How to implement unsafe patterns that survive production code review and team turnover<br/>• A systematic approach to weighing safety vs. performance trade-offs based on actual business impact<br/>• Specific architectural patterns you can adapt to your performance bottlenecks</p><p><strong>Why This Matters Now</strong></p><p>As Rust moves into domains traditionally dominated by C and C++, the ability to use unsafe responsibly becomes a competitive advantage. The companies winning in performance-critical markets aren’t avoiding unsafe—they’re using it strategically and safely, with the engineering discipline to maintain it long-term.</p>"
+  ogimage = "/2025/images/talks/og-images/production-unsafe-rust.png"
++++

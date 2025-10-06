@@ -1,0 +1,86 @@
+<section class="moderators pb-2">
+  <h1 class="pb-8">Moderators</h1>
+  <ul>
+    {% for moderator in section.extra.moderators %}
+      <li>
+        <img
+          class="speaker__portrait"
+          alt="{{ moderator.name }}"
+          src="{{ moderator.image }}"
+          width="809"
+          height="736"
+        />
+        <p><span class="bold">{{ moderator.name }}</span><br/>
+        {% if moderator.job_title %}, {{ moderator.job_title }} at {% endif %}{% if moderator.company %}{{ moderator.company }}{% endif %}</p>
+        <ul class="speaker__socials">
+          {% if moderator.twitter %}
+            <li>
+              <a
+                class="btn__icon"
+                href="{{ moderator.twitter }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="/2025/images/icons/twitter.svg" alt="X" width="42" height="42"
+              /></a>
+            </li>
+          {% endif %}
+          {% if moderator.bsky %}
+            <li>
+              <a
+                class="btn__icon"
+                href="{{ moderator.bsky }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="/2025/images/icons/bluesky.svg" alt="Bluesky" width="42" height="42"
+              /></a>
+            </li>
+          {% endif %}
+          {% if moderator.mastodon %}
+            <li>
+              <a
+                class="btn__icon"
+                href="{{ moderator.mastodon }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="/2025/images/icons/mastodon.svg" alt="Mastodon" width="42" height="42"
+              /></a>
+            </li>
+          {% endif %}
+          {% if moderator.linkedin %}
+            <li>
+              <a
+                class="btn__icon"
+                href="{{ moderator.linkedin }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="/2025/images/icons/linkedin.svg" alt="LinkedIn" width="42" height="42"
+              /></a>
+            </li>
+          {% endif %}
+          {% if moderator.web %}
+            <li>
+              <a
+                class="btn__icon"
+                href="{{ moderator.web }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="/2025/images/icons/web.svg" alt="Internet" width="42" height="42"
+              /></a>
+            </li>
+          {% endif %}
+          {% if moderator.github %}
+            <li>
+              <a
+                class="btn__icon"
+                href="{{ moderator.github }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="/2025/images/icons/github.svg" alt="GitHub" width="42" height="42"
+              /></a>
+            </li>
+          {% endif %}
+        </ul>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

@@ -1,0 +1,144 @@
+{% extends "2025/base.html" %}
+{% block og_image %}
+  <meta property="og:image" content="{{ config.base_url | safe }}{{ page.extra.ogimage | safe }}" />
+  <meta name="twitter:image" content="{{ config.base_url | safe }}{{ page.extra.ogimage | safe }}" />
+{% endblock %}
+
+{% block head %}
+  <script>
+    if (!window.tito) {
+      var script = document.createElement("script");
+      script.src = `https://js.tito.io/v2${
+        ["localhost", "127.0.0.1"].includes(window.location.hostname) ? "/with/development_mode" : ""
+      }`;
+      script.async = true;
+      document.head.appendChild(script);
+    }
+  </script>
+{% endblock head %}
+
+{% block content %}
+  <div class="generic-block workshop {{ page.title | lower | replace(from=' ', to='_') }}">
+    {% include "2025/sections/nav.html" %}
+
+    <main tabindex="-1" id="main" class="activity">
+      <section class="workshop-hero">
+        <div class="container blurred-background p-1">
+          <div class="mb-7 workshop-hero__topline">
+            <p class="workshop-hero__details">
+              <a href="/2025/schedule" class="inline">»Schedule</a><br />
+              October 11, 2025, Paris<br />
+              10:00–16:00<br />
+              Location: Stockly HQ, 8 Rue du Sentier, 75002 Paris
+            </p>
+            <div class="workshop-hero__sponsor-container">
+              <div class="workshop-hero__sponsor">
+                <p>Hosted by</p>
+                <img src="/2025/images/workshops/workshop-sponsors/stockly.svg" alt="Stockly logo" />
+              </div>
+            </div>
+          </div>
+
+          <div class="">
+            <div class="wrapper-content">
+              <div class="h1 pb-7">impl Day/Unconference</div>
+              <div class="workshop-hero__grid">
+                <h2 class="mb-4 workshop-hero__title">About</h2>
+                {% if page.extra.abstract %}
+                  <div class="pb-8 workshop-hero__abstract">
+                    <p class="beige"><sup>*</sup>This event is free to attend but requires prior registration.</p>
+                    <p>{{ page.extra.abstract | safe }}</p>
+                  {% if page.extra.link %}
+                    <a href="{{ page.extra.link }}" target="_blank" class="mt-4">{{ page.extra.link_cta | safe }}</a>
+                  {% endif %}
+                </div>
+                {% endif %}
+                {% if page.extra.heroimage %}
+                  <div class="photo-container">
+                    <img class="photo" src="{{ page.extra.heroimage }}" alt="{{ page.extra.heroimage_alt }}" />
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="ticket-button">
+        <a href="https://ti.to/events-matter/eurorust-2025" class="workshop__ticket-button">Register now</a>
+      </section>
+
+      <section class="workshop-sponsor mt-9 mb-4 py-6">
+        <div class="container py-8">
+          <div class="sponsor__grid">
+            <div class="sponsor__grid-title">
+              <h5 class="mb-4">Hosted by</h5>
+            </div>
+            <div class="sponsor__grid-name">
+              <h2 class="mb-4">Stockly</h2>
+            </div>
+            <div class="sponsor__grid-bio blurred-background">
+              <p class="">
+                Stockly enables e-retailers to sell products they don't have in stock by having the products shipped by
+                other official resellers and brands in the network.
+              </p>
+            </div>
+            <div class="sponsor__grid-photo-links">
+              <div class="photo-container">
+                <img
+                  class="photo sponsor-logo"
+                  src="/2025/images/workshops/workshop-sponsors/stockly.svg"
+                  alt="Stockly logo"
+                />
+              </div>
+              <div class="links mt-5">
+                <ul class="social mt-3">
+                  <li>
+                    <a
+                      href="https://stockly.ai/?utm_source=eurorust"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="btn__icon"
+                      ><img src="/2025/images/icons/web.svg" alt="Website"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="separator" />
+
+        <div class="container py-8">
+          <div class="sponsor__grid">
+            <div class="sponsor__grid-title">
+              <h5 class="mb-4">Ipml Day venue</h5>
+            </div>
+            <div class="sponsor__grid-name">
+              <h2 class="mb-4">Stockly HQ</h2>
+            </div>
+            <div class="sponsor__grid-bio blurred-background">
+              <p class=""></p>
+              <p class="mb-4">
+                Stockly will host the impl Day/Unconference in their office in 8 Rue du Sentier, 75002 Paris.
+              </p>
+              <a href="https://maps.app.goo.gl/gQrfzPksxjG8m323A" target="_blank">View on map</a>
+            </div>
+            <div class="sponsor__grid-photo-links">
+              <div class="photo-container">
+                <img class="image-workshop-venue" src="/2025/images/stockly-office.jpg" alt="venue picture" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="ticket-button mb-8">
+        <a href="https://ti.to/events-matter/eurorust-2025" class="workshop__ticket-button">Get tickets</a>
+      </section>
+    </main>
+
+    {% include "2025/sections/footer.html" %}
+  </div>
+{% endblock content %}

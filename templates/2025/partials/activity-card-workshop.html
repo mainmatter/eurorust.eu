@@ -1,0 +1,43 @@
+<div class="activity-card activity-card__workshop mb-2">
+  <!-- is this workshop held on Oct. 8 or the main even days?. Load the approrpiate database and set the 'time' variable accordingly -->
+  {% if workshopType %}
+    {% set path = "2025/workshops/" ~ workshopType ~ ".md" %}
+    {% set event = get_page(path = path) %}
+    {% set time = event.extra.time %}
+  {% elif activity.title %}
+    {% set path = "2025/workshops/" ~ activity.title ~ ".md" %}
+    {% set event = get_page(path = path) %}
+    {% set time = activity.time %}
+  {% endif %}
+    
+    <a class="activity-card__link" href="{{event.path}}">
+    <div class="activity-card__content">
+      {% if event.extra.heroimage %}
+        <img class="activity-card__image mb-3" src="{{ event.extra.heroimage }}" alt="{{ event.extra.heroimage_alt }}" />
+      {% else %}
+        <img class="activity-card__image mb-3" src="/2025/images/events/placeholder.webp" alt="" />
+      {% endif %}
+      <p class="activity-card__time"><strong>{{ time | safe}}</strong></p>
+      <p aria-hidden="true" class="beige activity-card__title"><strong>{{ event.title }}</strong></p>
+      <div class="mt-3 activity-card__speaker">
+        {% if event.extra.mentors %}
+          <p class="beige mentor">»Led by
+            {% set_global mentorCounter = 0 %}
+            {%- for mentor in event.extra.mentors -%}
+              {%- set_global mentorCounter = mentorCounter + 1 -%}
+              {%- if mentorCounter == 1 -%}
+                {{ mentor.name }}
+              {%- else -%}
+                , {{ mentor.name }}
+              {%- endif -%}            
+            {%- endfor -%}
+          </p>
+        {% endif %}
+        {% if event.extra.sponsor %}
+          <p class="beige sponsored-by">*Sponsored by {{ event.extra.sponsor }}</p>
+        {% endif %}
+      </div>
+      
+    </div>
+    </a>
+  </div>

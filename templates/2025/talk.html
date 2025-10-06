@@ -1,0 +1,206 @@
+{% extends "2025/base.html" %}
+{% block og_image %}
+  {% if page.extra.ogimage %}
+    <meta property="og:image" content="{{ config.base_url | safe }}{{ page.extra.ogimage | safe }}" />
+    <meta name="twitter:image" content="{{ config.base_url | safe }}{{ page.extra.ogimage | safe }}">
+  {% endif %}
+{% endblock %}
+
+{% block head %}
+  <script>
+    if (!window.tito) {
+      var script = document.createElement('script');
+      script.src = `https://js.tito.io/v2${
+      ['localhost', '127.0.0.1'].includes(window.location.hostname)
+        ? '/with/development_mode'
+        : ''}`;
+      script.async = true;
+      document
+        .head
+        .appendChild(script);
+    }
+  </script>
+{% endblock head %}
+
+{% block content %}
+
+  <div class="generic-block workshop {{ page.title | lower | replace(from=' ', to='_')  }}">
+
+    {% include "2025/sections/nav.html" %}
+
+    <main tabindex="-1" id="main">
+      <section class="workshop-hero">
+        <div class="container blurred-background p-1">
+          <div class="mb-7 workshop-hero__topline">
+            <p class="workshop-hero__details">
+              <a href="/2025/schedule" class="inline">»Schedule</a> //  Talk<br />
+              {{ page.extra.date }}<br />
+              {{ page.extra.time }}<br />
+              {{ page.extra.stage }}
+            </p>
+            {% if page.extra.sponsor %}
+            <div class="workshop-hero__sponsor-container">
+              <div class="workshop-hero__sponsor">
+                <p>Sponsored by</p>
+                <img src="/2025/images/workshops/workshop-sponsors/{{ page.extra.sponsor }}.svg" alt="{{ page.extra.sponsor }}" />
+              </div>
+            </div>
+            {% endif %}
+          </div>
+
+          <div class="">
+            <div class="wrapper-content">
+              <h1 class="h1 pb-7">
+                {{ page.title | safe }}
+              </h1>
+              {% if page.extra.description %}
+                <div>
+                  {{ page.extra.description | safe }}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="workshop-author mb-4">
+        <div class="author-and-booking container">
+          {% if page.extra.speakers %}
+          {% for speaker in page.extra.speakers %}
+          {% set path = "2025/speakers/" ~ speaker ~ ".md" %}
+          {% set speaker = get_page(path = path) %}
+            <div class="mentor__grid">
+              <div class="mentor__grid-title">
+                <h5 class="mb-4">Speaker</h5>
+              </div>
+              <div class="mentor__grid-name">
+                {% if speaker.extra.name == "Dănuț Aldea" %}
+                <h2 class="mentor__grid-name-exception mb-4">{{ speaker.extra.name }}</h2>
+                {% else %}
+                <h2 class="mb-4">{{ speaker.extra.name }}</h2>
+                {% endif %}
+              </div>
+                {% if speaker.extra.bio %}
+                <div class="mentor__grid-bio blurred-background">
+                  <p class="">{{ speaker.extra.bio | safe }}</p>
+                </div>
+                {% endif %}
+                <div class="mentor__grid-photo-links">
+                  {%if speaker.extra.image and not speaker.extra.image is containing("/.")  %}
+                    <img
+                      class="photo"
+                      src="{{ speaker.extra.image }}"
+                      alt="{{ speaker.extra.name }}">
+                  {% else %}
+                    <img
+                      class="photo"
+                      src="/2025/images/talks/placeholder.webp"
+                      alt="">
+                  {% endif %}
+                  <div class="links mt-5">
+                      <ul class="social mt-3">
+                        {% if speaker.extra.github %}
+                        <li>
+                          <a
+                            href="{{ speaker.extra.github }}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn__icon"
+                            ><img src="/2025/images/icons/github.svg" alt="Github"
+                          /></a>
+                        </li>
+                      {% endif %}
+                      {% if speaker.extra.url %}
+                      <li>
+                        <a href="{{ speaker.extra.url }}" target="_blank" rel="noopener noreferrer" class="btn__icon"
+                          ><img src="/2025/images/icons/web.svg" alt="Website"
+                        /></a>
+                      </li>
+                      {% endif %}
+                      {% if speaker.extra.bluesky %}
+                        <li>
+                          <a
+                            href="{{ speaker.extra.bluesky }}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn__icon"
+                            ><img src="/2025/images/icons/bluesky.svg" alt="Bluesky"
+                          /></a>
+                        </li>
+                      {% endif %}
+                      {% if speaker.extra.mastodon %}
+                        <li>
+                          <a href="{{ speaker.extra.mastodon }}" target="_blank" rel="noopener noreferrer" class="btn__icon"
+                            ><img src="/2025/images/icons/mastodon.svg" alt="Mastodon"
+                          /></a>
+                        </li>
+                      {% endif %}
+                      {%if speaker.extra.twitter %}
+                        <li>
+                          <a
+          href="https://twitter.com/{{ speaker.extra.twitter }}"
+          target="_blank"
+          rel="noopener noreferrer" class="btn__icon"><img src="/2025/images/icons/twitter.svg" alt="Twitter"/></a>
+                        </li>
+                      {% endif %}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+            {% endif %}
+            </div>
+      </section>
+
+      {% if page.extra.sponsor %}
+        <section class="workshop-sponsor mt-4 mb-9 py-6">
+          <div class="container py-8">
+            <div class="sponsor__grid">
+              <div class="sponsor__grid-title">
+                <h5 class="mb-4">Sponsored by</h5>
+              </div>
+              <div class="sponsor__grid-name">
+                <h2 class="mb-4">{{ page.extra.sponsor }}</h2>
+              </div>
+              <div class="sponsor__grid-bio blurred-background">
+                <p class="">{{ page.extra.sponsor_bio | safe }}</p>
+                {% if page.extra.sponsor_url %}
+                  <a href="{{ page.extra.sponsor_url }}" target="_blank">
+                    {% if page.extra.sponsor_cta %}
+                    <br />
+                    <p class=""><strong>{{ page.extra.sponsor_cta | safe }}</strong></p>
+                    {% endif %}
+                  </a>
+                {% endif %}
+              </div>
+              <div class="sponsor__grid-photo-links">
+                <div class="photo-container">
+                  <img class="photo sponsor-logo" src="/2025/images/workshops/workshop-sponsors/{{ page.extra.sponsor }}.svg" alt="{{ page.extra.sponsor }}" />
+                </div>
+                <div class="links mt-5">
+                  <ul class="social mt-3">
+                    {% if page.extra.sponsor_url %}
+                    <li>
+                      <a href="{{ page.extra.sponsor_url }}" target="_blank" rel="noopener noreferrer" class="btn__icon"
+                      ><img src="/2025/images/icons/web.svg" alt="Website"
+                      /></a>
+                    </li>
+                    {% endif %}
+                  </ul>
+                </div>
+              </div> 
+          </div>
+          </div>
+        </section>
+      {% endif %} 
+
+      <section class="ticket-button mb-10 mt-9">
+        <a href="https://ti.to/events-matter/eurorust-2025" class="workshop__ticket-button">Get tickets</a>
+      </section>
+
+    </main>
+
+    {% include "2025/sections/footer.html" %}
+  </div>
+
+{% endblock content %}

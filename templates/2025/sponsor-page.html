@@ -1,0 +1,50 @@
+{% extends "2025/base.html" %}
+
+{% block head %}
+  <script>
+    if (!window.tito) {
+      var script = document.createElement("script");
+      script.src = `https://js.tito.io/v2${
+        ["localhost", "127.0.0.1"].includes(window.location.hostname) ? "/with/development_mode" : ""
+      }`;
+      script.async = true;
+      document.head.appendChild(script);
+    }
+  </script>
+{% endblock head %}
+
+{% block content %}
+  {% include "2025/sections/nav.html" %}
+
+  <main tabindex="-1" id="main" class="sponsor-page">
+    <section class="sponsor-page__hero">
+      <div class="container blurred-background p-1">
+        <div class="mb-7 hero__topline">
+          <p class="hero__details beige">
+            »Sponsors // {{ page.extra.sponsor_type | safe }}s // {{ page.title | safe }}
+          </p>
+        </div>
+        <div class="sponsor-page__hero__grid">
+          <div class="photo-container">
+            <img class="sponsor_logo" src="{{ page.extra.image }}" alt="{{ page.title }}" />
+          </div>
+          <h1 class="pb-3">{{ page.extra.tagline | safe }}</h1>
+        </div>
+      </div>
+    </section>
+
+    {{ page.content | safe }}
+
+    <section class="sponsor-page__btn mb-8">
+      <div class="container">
+        <div class="btn__primary">
+          <a href="{{ page.extra.url }}" target="_blank" class="btn__primary--link"
+            >Visit {{ page.title | safe }} website</a
+          >
+        </div>
+      </div>
+    </section>
+
+    {% include "2025/sections/footer.html" %}
+  </main>
+{% endblock content %}

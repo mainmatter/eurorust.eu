@@ -1,0 +1,34 @@
+.btn__icon {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  line-height: 0;
+  scale: 1;
+  transition: all 0.2s ease-in-out;
+
+  &:hover,
+  &:active {
+    scale: 1.15;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.btn__icon::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  mix-blend-mode: overlay;
+  clip-path: circle();
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.btn__icon:hover::after {
+  background: linear-gradient(90deg, var(--blue) 50%, var(--green) 100%);
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+}
