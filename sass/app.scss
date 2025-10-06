@@ -8,23 +8,16 @@
 @import "components/nav";
 @import "components/rustfest";
 @import "components/about";
-@import "components/speakers";
-@import "components/moderators";
-@import "components/venue";
 @import "components/footer";
 @import "components/presented-by";
-@import "components/sponsors";
-@import "components/submit";
+@import "components/past-speakers";
+@import "components/past-sponsors";
 @import "components/topics";
 @import "components/past-event-highlights";
 @import "components/hover-effect";
 @import "components/generic-content";
 @import "components/schedule-overview";
-@import "components/workshop";
-@import "components/schedule";
-@import "components/talk";
 @import "components/activity";
-@import "components/sponsor-page";
 
 body {
   background: var(--blue-dark);

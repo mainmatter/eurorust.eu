@@ -96,6 +96,7 @@
 
   .hero__grid-content-ticket-button {
     @include btn__primary;
+    text-align: center;
   }
 
   .hero__grid-content-schedule-button {
