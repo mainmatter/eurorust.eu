@@ -17,7 +17,11 @@
       {% else %}
         <img class="activity-card__image mb-3" src="/2025/images/events/placeholder.webp" alt="" />
       {% endif %}
-      <p class="activity-card__time"><strong>{{ time | safe}}</strong></p>
+      {% if timeSolana %}
+        <p class="activity-card__time"><strong>{{ timeSolana | safe}}</strong></p>
+      {% else %}
+        <p class="activity-card__time"><strong>{{ time | safe}}</strong></p>
+      {% endif %}
       <p aria-hidden="true" class="beige activity-card__title"><strong>{{ event.title }}</strong></p>
       <div class="mt-3 activity-card__speaker">
         {% if event.extra.mentors %}
