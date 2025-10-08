@@ -268,6 +268,11 @@
                                 {% set workshopType = "jetbrains-rustrover" %}
                                 {% include "partials/activity-card-workshop.html" %}
                                 {% set workshopType = "rust-meets-solana" %}
+                                {% if sideRow == 2 %}
+                                  {% set timeSolana ="11:00–12:00" %}
+                                {% else %}
+                                  {% set timeSolana ="14:00–15:00" %}
+                                {% endif %}
                                 {% include "partials/activity-card-workshop.html" %}
                                </div>
                             {% elif day.day == "2" %}
@@ -278,11 +283,8 @@
                         {% endif%}
 
                         {% if sideRow == 9 %}
-                          <td rowspan="{{ rowSpan }}" class="schedule__table-4cols sticky">
-                            {% if day.day == "1" %}
-                              {% set workshopType = "rust-meets-solana" %}
-                              {% include "partials/activity-card-workshop.html" %}
-                            {% elif day.day == "2" %}
+                          <td rowspan="{{ rowSpan }}" class="schedule__table-4cols sticky">                            
+                            {% if day.day == "2" %}
                               {% set workshopType = "profiling-rust-in-action" %}
                               {% include "partials/activity-card-workshop.html" %}
                             {% endif %}
