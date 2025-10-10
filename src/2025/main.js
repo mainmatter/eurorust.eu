@@ -29,14 +29,14 @@ async function ferris() {
   const textureLoader = new CubeTextureLoader();
   const meshLoader = new GLTFLoader();
 
-  const meshPromise = meshLoader.loadAsync('/three/ferris.glb');
+  const meshPromise = meshLoader.loadAsync('/2025/three/ferris.glb');
   const texturePromise = textureLoader.loadAsync([
-    '/three/px.webp',
-    '/three/nx.webp',
-    '/three/py.webp',
-    '/three/ny.webp',
-    '/three/pz.webp',
-    '/three/nz.webp',
+    '/2025/three/px.webp',
+    '/2025/three/nx.webp',
+    '/2025/three/py.webp',
+    '/2025/three/ny.webp',
+    '/2025/three/pz.webp',
+    '/2025/three/nz.webp',
   ]);
 
   const [envMap, mesh] = await Promise.all([texturePromise, meshPromise]);
