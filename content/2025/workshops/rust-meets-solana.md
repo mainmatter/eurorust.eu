@@ -1,6 +1,6 @@
 +++
 title = "Rust Meets Solana: A Playground for High-Performance Apps"
-template = "workshop.html"
+template = "2025/workshop.html"
 [extra]
   sponsor = "Solana"
   sponsor_bio = ""
