@@ -75,13 +75,13 @@
   image="/images/sponsors/rust-foundation.svg"
 
 [[extra.speakers]]
-  name="Clément Renault"
-  web="https://blog.kerollmops.com"
-  linkedin="https://www.linkedin.com/in/kerollmops/"
-  company="Co-founder and CTO of Meilisearch"
-  job_title=""
-  image="/images/speakers/clement-renault.webp"
-  github="https://github.com/kerollmops"
+  name="Amos Wenger"
+  mastodon="https://hachyderm.io/@fasterthanlime"
+  bluesky="https://bsky.app/profile/fasterthanli.me"
+  company="Self-Directed Research podcast"
+  job_title="Co-host"
+  image="/images/speakers/amos-wenger.webp"
+  github="https://github.com/fasterthanlime"
 
 [[extra.speakers]]
   name="Victoria Brekenfeld"
@@ -92,29 +92,56 @@
   github="https://github.com/Drakulix"
 
 [[extra.speakers]]
-  name="James Munns"
-  mastodon="https://mastodon.social/@jamesmunns.com@bsky.brid.gy"
-  bluesky="https://bsky.app/profile/jamesmunns.com"
-  company="Self-Directed Research podcast"
-  job_title="Co-host"
-  image="/images/speakers/james-munn.png"
-  github="https://github.com/jamesmunns"
-
-[[extra.speakers]]
-  name="Amos Wenger"
-  mastodon="https://hachyderm.io/@fasterthanlime"
-  bluesky="https://bsky.app/profile/fasterthanli.me"
-  company="Self-Directed Research podcast"
-  job_title="Co-host"
-  image="/images/speakers/amos-wenger.png"
-  github="https://github.com/fasterthanlime"
-
-[[extra.speakers]]
   name="Conrad Irwin"
-  company="Zed"
+  job_title="Zed"
   image="/images/speakers/conrad-irwin.png"
   twitter="https://x.com/ConradIrwin"
   web="https://zed.dev"
   linkedin="https://www.linkedin.com/in/conradirwin/"
   github="https://github.com/conradirwin"
+
+[[extra.speakers]]
+	name="Charlie Marsh"
+	image="/images/speakers/charlie-marsh.webp"
+	job_title="Founder of Astral"
+	twitter="https://x.com/charliermarsh"
+	web="https://astral.sh/?utm_source=eurorust"
+  github="https://github.com/charliermarsh"
+
+[[extra.speakers]]
+	name="Jon Gjengset"
+	image="/images/speakers/jon-gjengset.webp"
+  company="Helsing"
+	job_title="Author of Rust for Rustaceans, Principal Engineer"
+	twitter="https://x.com/jonhoo"
+
+[[extra.speakers]]
+    name="Amanda Stjerna"
+    image="/images/speakers/amanda-stjerna.webp"
+    job_title="PhD student in Web security at Uppsala university"
+    mastodon="https://social.spejset.org/@amanda"
+    github="https://github.com/amandasystems"
+    web="https://amandastjerna.se/"
+
+[[extra.speakers]]
+	name="Ashley Williams"
+	job_title="Former Rust Core team member and Founding Executive Director of the Rust Foundation"
+	image="/images/speakers/ashley-williams.webp"
+	twitter="https://x.com/ag_dubs"
+  github="https://github.com/ashleygwilliams"
+
+[[extra.speakers]]
+	name="Niko Matsakis"
+	company="AWS"
+	job_title="Senior Principal Engineer, Co-Lead of the Rust Language Team"
+	image="/images/speakers/niko-matsakis.webp"
+	bluesky="https://bsky.app/profile/nikomatsakis.com"
+	web="http://smallcultfollowing.com/babysteps/about/"
+  github="https://github.com/nikomatsakis"
+
+[[extra.speakers]]
+	name="Lisa Passing"
+	job_title="Creative Technologist"
+	image="/images/speakers/lisa-passing.webp"
+	web="https://lislis.de/?utm_source=eurorust"
 +++
