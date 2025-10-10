@@ -281,19 +281,15 @@
                             {% endif %}
                           </td>
                         {% endif%}
-
                         {% if sideRow == 9 %}
                           <td rowspan="{{ rowSpan }}" class="schedule__table-4cols sticky">
-                            {% if day.day == "1" %}
-                              {% set workshopType = "rust-meets-solana" %}
-                              {% include "2025/partials/activity-card-workshop.html" %}
-                            {% elif day.day == "2" %}
+                            {% if day.day == "2" %}
                               {% set workshopType = "profiling-rust-in-action" %}
                               {% include "2025/partials/activity-card-workshop.html" %}
                             {% endif %}
                           </td>
                         {% endif%}
-                        
+
                         {% set_global sideRow = sideRow + 1 %}
                       {% endif %}
                       {% set_global sideCount = sideCount + 1 %}
