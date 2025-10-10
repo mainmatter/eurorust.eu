@@ -424,3 +424,7 @@ command = "vite build && zola build --base-url $DEPLOY_PRIME_URL"
 [[redirects]]
   from = "/talks/znext-solver/"
   to = "/2025/talks/znext-solver/"
+
+[[redirects]]
+  from = "/schedule/"
+  to = "/2025/schedule/"
