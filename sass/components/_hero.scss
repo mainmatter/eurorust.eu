@@ -90,12 +90,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: start;
   padding: 4vw;
   @include dashed-border-with-corners;
 
   .hero__grid-content-ticket-button {
     @include btn__primary;
+    text-align: center;
   }
 
   .hero__grid-content-schedule-button {

@@ -1,0 +1,21 @@
+{% extends "2025/base.html" %}
+
+{% block content %}
+  {% include "2025/sections/nav.html" %}
+  <div class="main sections">
+    <a id="main"></a>
+    {% include "2025/sections/hero.html" %}
+    {% include "2025/sections/rustfest.html" %}
+    {% include "2025/sections/about.html" %}
+    {% include "2025/sections/speakers.html" %}
+    {% include "2025/sections/moderators.html" %}
+    {% include "2025/sections/schedule-overview.html" %}
+    {% include "2025/sections/venue.html" %}
+    {% include "2025/sections/past-event-highlights.html" %}
+    {% include "2025/sections/presented-by.html" %}
+    {% include "2025/sections/sponsors.html" %}
+
+    <img class="main__station" src="images/space-station.png" alt="" role="presentation" loading="lazy" />
+  </div>
+  {% include "2025/sections/footer.html" %}
+{% endblock content %}

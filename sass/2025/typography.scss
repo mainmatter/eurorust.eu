@@ -1,0 +1,158 @@
+@import "./mixins.scss";
+
+body {
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  font-family: "Panel-Mono", monospace;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+@mixin base-typo {
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  font-family: "Panel-Mono", monospace;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+  @include base-typo;
+  color: var(--blue-light);
+  font-feature-settings:
+    "liga" off,
+    "clig" off;
+  text-shadow: 10px 10px 20px var(--blue);
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--beige);
+  font-family: Strenuous;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: lowercase;
+  letter-spacing: 3px;
+}
+
+h1,
+.h1 {
+  font-size: clamp(20px, 3.65vw, 70px);
+  line-height: clamp(26px, 4.67vw, 90px);
+
+  @media screen and (max-width: 60rem) {
+    font-size: clamp(30px, 4.5vw, 36px);
+    line-height: 42px;
+  }
+}
+
+h2,
+.h2 {
+  font-size: clamp(14px, 2.55vw, 50px);
+
+  @media screen and (max-width: 60rem) {
+    font-size: clamp(24px, 3.3vw, 30px);
+  }
+}
+
+h3,
+.h3 {
+  font-size: clamp(13px, 2.3vw, 40px);
+
+  @media screen and (max-width: 60rem) {
+    font-size: clamp(24px, 3.3vw, 30px);
+  }
+}
+
+h4,
+.h4 {
+  font-size: clamp(10px, 1.825vw, 35px);
+
+  @media screen and (max-width: 60rem) {
+    font-size: clamp(20px, 3vw, 25px);
+  }
+}
+
+p + p,
+p + ul,
+ul + p,
+h2 + p {
+  margin-top: 1rem;
+}
+
+p,
+a,
+li {
+  color: var(--blue-light);
+  font-size: clamp(14px, 1vw, 18px);
+  line-height: clamp(14.8px, 2.6vw, 50px);
+  font-style: normal;
+  font-weight: 500;
+
+  @media screen and (max-width: 60rem) {
+    font-size: 1rem;
+    line-height: 24px;
+  }
+}
+
+a {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+  font-weight: 700;
+}
+
+@keyframes btnText {
+  0% {
+    background-position-x: -4rem;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+a:not([class]) {
+  display: block;
+  /*TO DO: move <a> style to body */
+  -webkit-text-fill-color: var(--blue-light);
+
+  &:hover {
+    text-decoration-color: transparent;
+    background-repeat: no-repeat;
+    background: -webkit-linear-gradient(
+      65deg,
+      var(--blue-light) 0%,
+      var(--yellow) 30%,
+      var(--green) 70%,
+      var(--blue) 100%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation-name: btnText;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  }
+
+  &:visited {
+    text-decoration-color: var(--blue-light);
+  }
+}
+
+strong {
+  font-weight: 900;
+}

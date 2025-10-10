@@ -1,125 +1,228 @@
 +++
-[[extra.main_partner_sponsors]]
+[[extra.past_sponsors]]
   title="OxidOS"
-  link="/oxidos"
-  image="/images/sponsors/oxidOS.svg"
+  link="https://oxidos.io/"
+  image="/images/past-sponsors/oxidOS.svg"
 
-[[extra.main_partner_sponsors]]
+[[extra.past_sponsors]]
   title="Wyliodrin"
-  link="/wyliodrin"
-  image="/images/sponsors/wyliodrin.svg"
+  link="https://wyliodrin.com/"
+  image="/images/past-sponsors/wyliodrin.svg"
 
-[[extra.premier_partner_sponsors]]
+[[extra.past_sponsors]]
   title="Polar Signals"
   link="https://www.polarsignals.com//"
-  image="/images/sponsors/polar-signals.svg"
+  image="/images/past-sponsors/polar-signals.svg"
 
-[[extra.premier_partner_sponsors]]
+[[extra.past_sponsors]]
   title="JetBrains"
   link="https://www.jetbrains.com/"
-  image="/images/sponsors/jetbrains.svg"
+  image="/images/past-sponsors/jetbrains.svg"
 
-[[extra.premier_partner_sponsors]]
+[[extra.past_sponsors]]
   title="Codspeed"
   link="https://codspeed.io/"
-  image="/images/sponsors/codspeed.svg"
+  image="/images/past-sponsors/codspeed.svg"
 
-[[extra.premier_partner_sponsors]]
+[[extra.past_sponsors]]
   title="Wincent"
   link="https://www.wincent.com/"
-  image="/images/sponsors/wincent.svg"
+  image="/images/past-sponsors/wincent.svg"
 
-[[extra.premier_partner_sponsors]]
+[[extra.past_sponsors]]
   title="Solana"
   link="https://solana.com/"
-  image="/images/sponsors/solana.svg"
+  image="/images/past-sponsors/solana.svg"
 
-[[extra.lounge_partner_sponsors]]
+[[extra.past_sponsors]]
   title="Helsing"
   link="https://helsing.ai/"
-  image="/images/sponsors/helsing.svg"
+  image="/images/past-sponsors/helsing.svg"
 
-[[extra.live_stream_partner_sponsors]]
+[[extra.past_sponsors]]
   title="Hichtec"
   link="https://hightec-rt.com/"
-  image="/images/sponsors/hightec.svg"
+  image="/images/past-sponsors/hightec.svg"
 
-[[extra.head_partner_sponsors]]
+[[extra.past_sponsors]]
   title="Huawei"
   link="https://www.huawei.com/en/?ic_medium=direct&ic_source=surlent&utm_source=eurorust"
-  image="/images/sponsors/huawei.png"
+  image="/images/past-sponsors/huawei.png"
 
-[[extra.head_partner_sponsors]]
+[[extra.past_sponsors]]
   title="Exein"
   link="https://www.exein.io/?ic_medium=direct&ic_source=surlent&utm_source=eurorust"
-  image="/images/sponsors/exein.svg"
+  image="/images/past-sponsors/exein.svg"
 
-[[extra.partner_sponsors]]
+[[extra.past_sponsors]]
   title="Open Source Security"
   link="https://opensrcsec.com"
-  image="/images/sponsors/oss.svg"
+  image="/images/past-sponsors/oss.svg"
 
-[[extra.partner_sponsors]]
+[[extra.past_sponsors]]
   title="Mullvad VPN AB"
   link="https://mullvad.net/en"
-  image="/images/sponsors/mullvad.svg"
+  image="/images/past-sponsors/mullvad.svg"
 
-[[extra.partner_sponsors]]
+[[extra.past_sponsors]]
   title="Woven by Toyota"
   link="https://woven.toyota/"
-  image="/images/sponsors/woven.svg"
+  image="/images/past-sponsors/woven.svg"
 
-[[extra.supporter_sponsors]]
+[[extra.past_sponsors]]
   title="Rust Foundation"
   link="https://rustfoundation.org"
-  image="/images/sponsors/rust-foundation.svg"
+  image="/images/past-sponsors/rust-foundation.svg"
 
-[[extra.supporter_sponsors]]
+[[extra.past_sponsors]]
   title="Peeriot"
   link="http://peeriot.io/"
-  image="/images/sponsors/peeriot.svg"
+  image="/images/past-sponsors/peeriot.svg"
 
-[[extra.media_partners]]
+[[extra.past_sponsors]]
   title="Self-Directed Research podcast"
   link="https://sdr-podcast.com"
-  image="/images/sponsors/sdr.png"
+  image="/images/past-sponsors/sdr.png"
 
-[[extra.media_partners]]
+[[extra.past_sponsors]]
   title="Women in Tech Germany"
   link="https://women-in-tech.org/gr/"
-  image="/images/sponsors/women-in-tech.png"
+  image="/images/past-sponsors/women-in-tech.png"
 
-[[extra.media_partners]]
+[[extra.past_sponsors]]
   title="Code Beam Europe"
   link="https://codebeameurope.com/"
-  image="/images/sponsors/code-beam-europe.png"
+  image="/images/past-sponsors/code-beam-europe.png"
 
-[[extra.media_partners]]
+[[extra.past_sponsors]]
   title="Filtra"
   link="https://filtra.io/"
-  image="/images/sponsors/filtra.svg"
+  image="/images/past-sponsors/filtra.svg"
 
-[[extra.moderators]]
-  name="Ciara"
-  image="/images/moderators/ciara.png"
-	twitter="https://x.com/Ciara0x1F973"
+  [[extra.past_sponsors]]
+	title="ferrocene"
+	link="https://ferrous-systems.com/?utm_source=eurorust"
+  image="/images/past-sponsors/ferrous-systems.svg" 
 
-[[extra.moderators]]
-  name="Stefan Baumgartner"
-  image="/images/moderators/stefan-baumgartner.png"
-  bsky="https://bsky.app/profile/deadparrot.dev"
-  web="https://fettblog.eu/?utm_source=eurorust"
-  github="https://github.com/ddprrt"
-  mastodon="https://mastodon.social/@deadparrot"
+[[extra.past_sponsors]]
+	title="arm"
+	link="https://www.arm.com/?utm_source=eurorust"
+  image="/images/past-sponsors/arm.svg" 
+
+[[extra.past_sponsors]]
+	title="google"
+	link="https://about.google/?utm_source=eurorust"
+  image="/images/past-sponsors/google.svg" 
+
+[[extra.past_sponsors]]
+	title="realm_group"
+	link="https://www.realmgroup.io/?utm_source=eurorust"
+  image="/images/past-sponsors/realm.png" 
+
+[[extra.past_sponsors]]
+	title="crabnebula"
+	link="https://crabnebula.dev/?utm_campaign=eurorust23&utm_source=eurorust"
+  image="/images/past-sponsors/crabnebula.svg" 
+
+[[extra.past_sponsors]]
+	title="neo4j"
+	link="https://neo4j.com/?utm_source=eurorust"
+  image="/images/past-sponsors/neo4j.svg" 
+
+[[extra.past_sponsors]]
+	title="gensyn"
+	link="https://www.gensyn.ai/?utm_source=eurorust"
+  image="/images/past-sponsors/gensyn.svg" 
+
+[[extra.past_sponsors]]
+	title="trail-of-bits"
+	link="https://www.trailofbits.com/?utm_source=eurorust"
+  image="/images/past-sponsors/trail-of-bits.png" 
+
+[[extra.past_sponsors]]
+	title="sentry"
+	link="https://sentry.io/?utm_source=eurorust"
+  image="/images/past-sponsors/sentry.svg" 
+
+[[extra.past_sponsors]]
+	title="no_starch"
+	link="https://nostarch.com/?utm_source=eurorust"
+  image="/images/past-sponsors/no-starch.png" 
+
+[[extra.past_sponsors]]
+	title="oreilly"
+	link="https://www.oreilly.com/?utm_source=eurorust"
+  image="/images/past-sponsors/oreilly.svg" 
+
+[[extra.past_sponsors]]
+	title="keyrock"
+	link="https://keyrock.eu/?utm_source=eurorust"
+  image="/images/past-sponsors/keyrock.svg" 
+
+[[extra.past_sponsors]]
+	title="Grafbase"
+	link="https://grafbase.com/?utm_source=eurorust"
+  image="/images/past-sponsors/graftbase.svg" 
+
+[[extra.past_sponsors]]
+	title="DevITjobs"
+	link="https://devitjobs.uk/"
+  image="/images/past-sponsors/dev-it.png" 
+
+[[extra.past_sponsors]]
+	title="Rust Vienna"
+	link="https://www.meetup.com/rust-vienna/"
+  image="/images/past-sponsors/rust-vienna.png" 
+
+[[extra.past_sponsors]]
+	title="Rust Meetup Linz"
+	link="https://rust-linz.at/"
+	image="/images/past-sponsors/rust-linz.png"
+
+[[extra.past_sponsors]]
+	title="Trail of Bits"
+	link="https://www.trailofbits.com/?utm_source=eurorust"
+	image="/images/past-sponsors/trail-of-bits.png"
+
+[[extra.past_sponsors]]
+	title="GiGa infosystems GmbH"
+	link="https://giga-infosystems.com/?utm_source=eurorust"
+	image="/images/past-sponsors/giga.png"
+
+[[extra.past_sponsors]]
+	title="Astral"
+	link="https://astral.sh/?utm_source=eurorust"
+	image="/images/past-sponsors/astral.svg"
+
+[[extra.past_sponsors]]
+	title="BMW Car IT"
+	link="https://www.bmw-carit.de/en.html"
+	image="/images/past-sponsors/bmw-car-it.png"
+
+[[extra.past_sponsors]]
+	title="Veecle GmbH"
+	link="https://veecle.io"
+	image="/images/past-sponsors/veecle.png"
+
+[[extra.past_sponsors]]
+	title="WyeWorks LLC"
+	link="https://www.wyeworks.com/"
+	image="/images/past-sponsors/wyeworks.svg"
+
+[[extra.past_sponsors]]
+	title="Polkadot Blockchain Academy"
+	link="https://polkadot.academy/"
+	image="/images/past-sponsors/polkadot.svg"
+
 
 [[extra.speakers]]
-  name="Clément Renault"
-  web="https://blog.kerollmops.com"
-  linkedin="https://www.linkedin.com/in/kerollmops/"
-  company="Co-founder and CTO of Meilisearch"
-  job_title=""
-  image="/images/speakers/clement-renault.webp"
-  github="https://github.com/kerollmops"
+  name="Amos Wenger"
+  mastodon="https://hachyderm.io/@fasterthanlime"
+  bluesky="https://bsky.app/profile/fasterthanli.me"
+  company="Self-Directed Research podcast"
+  job_title="Co-host"
+  image="/images/speakers/amos-wenger.webp"
+  github="https://github.com/fasterthanlime"
 
 [[extra.speakers]]
   name="Victoria Brekenfeld"
@@ -130,29 +233,56 @@
   github="https://github.com/Drakulix"
 
 [[extra.speakers]]
-  name="James Munns"
-  mastodon="https://mastodon.social/@jamesmunns.com@bsky.brid.gy"
-  bluesky="https://bsky.app/profile/jamesmunns.com"
-  company="Self-Directed Research podcast"
-  job_title="Co-host"
-  image="/images/speakers/james-munn.png"
-  github="https://github.com/jamesmunns"
-
-[[extra.speakers]]
-  name="Amos Wenger"
-  mastodon="https://hachyderm.io/@fasterthanlime"
-  bluesky="https://bsky.app/profile/fasterthanli.me"
-  company="Self-Directed Research podcast"
-  job_title="Co-host"
-  image="/images/speakers/amos-wenger.png"
-  github="https://github.com/fasterthanlime"
-
-[[extra.speakers]]
   name="Conrad Irwin"
-  company="Zed"
+  job_title="Zed"
   image="/images/speakers/conrad-irwin.png"
   twitter="https://x.com/ConradIrwin"
   web="https://zed.dev"
   linkedin="https://www.linkedin.com/in/conradirwin/"
   github="https://github.com/conradirwin"
+
+[[extra.speakers]]
+	name="Charlie Marsh"
+	image="/images/speakers/charlie-marsh.webp"
+	job_title="Founder of Astral"
+	twitter="https://x.com/charliermarsh"
+	web="https://astral.sh/?utm_source=eurorust"
+  github="https://github.com/charliermarsh"
+
+[[extra.speakers]]
+	name="Jon Gjengset"
+	image="/images/speakers/jon-gjengset.webp"
+  company="Helsing"
+	job_title="Author of Rust for Rustaceans, Principal Engineer"
+	twitter="https://x.com/jonhoo"
+
+[[extra.speakers]]
+    name="Amanda Stjerna"
+    image="/images/speakers/amanda-stjerna.webp"
+    job_title="PhD student in Web security at Uppsala university"
+    mastodon="https://social.spejset.org/@amanda"
+    github="https://github.com/amandasystems"
+    web="https://amandastjerna.se/"
+
+[[extra.speakers]]
+	name="Ashley Williams"
+	job_title="Former Rust Core team member and Founding Executive Director of the Rust Foundation"
+	image="/images/speakers/ashley-williams.webp"
+	twitter="https://x.com/ag_dubs"
+  github="https://github.com/ashleygwilliams"
+
+[[extra.speakers]]
+	name="Niko Matsakis"
+	company="AWS"
+	job_title="Senior Principal Engineer, Co-Lead of the Rust Language Team"
+	image="/images/speakers/niko-matsakis.webp"
+	bluesky="https://bsky.app/profile/nikomatsakis.com"
+	web="http://smallcultfollowing.com/babysteps/about/"
+  github="https://github.com/nikomatsakis"
+
+[[extra.speakers]]
+	name="Lisa Passing"
+	job_title="Creative Technologist"
+	image="/images/speakers/lisa-passing.webp"
+	web="https://lislis.de/?utm_source=eurorust"
 +++

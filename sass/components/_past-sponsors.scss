@@ -1,0 +1,132 @@
+.sponsors {
+  margin: 8rem auto;
+  padding-bottom: 15rem;
+
+  @media screen and (max-width: 60rem) {
+    margin: 4rem auto;
+    padding-bottom: 4rem;
+  }
+
+  h1,
+  h2 {
+    text-align: center;
+  }
+
+  h2 {
+    padding-bottom: 1rem;
+  }
+
+  .sponsors-grid {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    > div + div {
+      padding-top: 4rem;
+    }
+
+    .sponsors-grid--main_partners,
+    .sponsors-grid--premier_partners,
+    .sponsors-grid--lounge_partners,
+    .sponsors-grid--live_stream_partners,
+    .sponsors-grid--closing_party_partners,
+    .sponsors-grid--impl_room_partners,
+    .sponsors-grid--head_partners,
+    .sponsors-grid--partners,
+    .sponsors-grid--supporters {
+      display: grid;
+      grid-template-columns: 25% 25% 25%;
+      gap: 1rem;
+      justify-content: center;
+
+       @media screen and (max-width: 60rem) {
+        grid-template-columns: 40% 40%;
+       }
+
+      a {
+        display: flex;
+        background: var(--beige);
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+      }
+    }
+
+    .sponsors-grid--main_partners a,
+    .sponsors-grid--premier_partners a,
+    .sponsors-grid--lounge_partners a,
+    .sponsors-grid--live_stream_partners a,
+    .sponsors-grid--closing_party_partners a,
+    .sponsors-grid--impl_room_partners a,
+    .sponsors-grid--head_partners a {
+      aspect-ratio: 3/1;
+      line-height: 6rem;
+      border-radius: 6rem;
+
+      img {
+        max-height: 4rem;
+        height: unset;
+        width: auto;
+
+         @media screen and (max-width: 60rem) {
+          max-height:2.75rem;
+         }
+      }
+    }
+
+    .sponsors-grid--partners,
+    .sponsors-grid--supporters {
+      img {
+        max-width: 6rem;
+      }
+
+      div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+      }
+
+      a {
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+      }
+    }
+
+    .sponsors-grid--partners {
+      div {
+        gap: 4rem;
+
+      @media screen and (max-width: 60rem) {
+        gap: 1rem;
+      }
+      }
+
+      a {
+        max-height: 6rem;
+
+        img {
+          max-height: 6rem;
+        }
+      }
+    }
+
+    .sponsors-grid--supporters {
+      div {
+        gap: 2rem;
+      }
+
+      a {
+        max-height: 4rem;
+
+        img {
+          max-height: 4rem;
+          height: unset;
+          width: auto;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{% extends "2025/base.html" %}
+{% block og_image %}
+  <meta property="og:image" content="{{ config.base_url | safe }}{{ page.extra.ogimage | safe }}" />
+  <meta name="twitter:image" content="{{ config.base_url | safe }}{{ page.extra.ogimage | safe }}">
+{% endblock %}
+
+{% block head %}
+  <script>
+    if (!window.tito) {
+      var script = document.createElement('script');
+      script.src = `https://js.tito.io/v2${
+        ["localhost", "127.0.0.1"].includes(window.location.hostname) ? "/with/development_mode" : ""
+      }`;
+      script.async = true;
+      document.head.appendChild(script);
+    }
+  </script>
+{% endblock head %}
+
+{% block content %}
+  <div class="generic-block workshop {{ page.title | lower | replace(from=' ', to='_') }}">
+    {% include "2025/sections/nav.html" %}
+
+    <main tabindex="-1" id="main" class="activity">
+      <section class="workshop-hero mb-10">
+        <div class="container blurred-background p-1">
+          <div class="mb-7 workshop-hero__topline">
+            <p class="workshop-hero__details">
+              <a href="/2025/schedule" class="inline">»Schedule</a> //  Side activity<br />
+              {{ page.extra.date }}<br />
+              {{ page.extra.time }}<br />
+              {% if page.extra.location %}
+                Meet at: {{ page.extra.location }}
+              {% endif %}
+            </p>
+          </div>
+
+          <div class="">
+            <div class="wrapper-content">
+              <div class="h1 pb-7">{{ page.title | safe }}</div>
+              <div class="workshop-hero__grid">
+                <h2 class="mb-4 workshop-hero__title">About</h2>
+                  {% if page.extra.abstract %}
+                    <div class="pb-8 workshop-hero__abstract">
+                      <p>{{ page.extra.abstract | safe }}</p>
+                      {% if page.extra.link %}
+                      <a href="{{ page.extra.link }}" target="_blank" class="mt-4">{{ page.extra.link_cta | safe }}</a>
+                      {% endif %}
+                    </div>
+                  {% if page.extra.location %}
+                  <div>
+                    <h2 class="mb-4">Venue</h2>
+                    {% if page.extra.location_name %}
+                      <p class="mb-4">{{ page.extra.location_name | safe }}, {{ page.extra.location | safe }}</p>
+                    {% elif page.extra.location %} 
+                      <p class="mb-4">{{ page.extra.location | safe }}</p>
+                    {% endif %}
+                    {% if page.extra.location_url %}
+                      <a href="{{ page.extra.location_url }}" class="map-button mb-3" target="_blank">See on map</a>
+                    {% endif %}
+                    </div>
+                  {% endif %}
+
+                {% endif %}
+                {% if page.extra.heroimage %}
+                  <div class="photo-container">
+                    <img class="photo" src="{{ page.extra.heroimage }}" alt="{{ page.extra.heroimage_alt }}" />
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    {% include "2025/sections/footer.html" %}
+  </div>
+{% endblock content %}
