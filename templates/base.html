@@ -65,7 +65,7 @@
 
     {% if build_mode == "production" %}
       {% set manifest = load_data(path="static/bundle/.vite/manifest.json") %}
-      <script defer type="module" src='bundle/{{ manifest["src/main.js"]["file"] }}'></script>
+      <script defer type="module" src='/bundle/{{ manifest["src/main.js"]["file"] }}'></script>
     {% else %}
       <script defer type="module" src="http://localhost:5173/@vite/client"></script>
       <script defer type="module" src="http://localhost:5173/src/main.js"></script>
