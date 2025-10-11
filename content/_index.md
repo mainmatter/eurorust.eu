@@ -40,7 +40,7 @@
   image="/images/past-sponsors/helsing.svg"
 
 [[extra.past_sponsors]]
-  title="Hichtec"
+  title="Hightec"
   link="https://hightec-rt.com/"
   image="/images/past-sponsors/hightec.svg"
 
@@ -80,27 +80,7 @@
   image="/images/past-sponsors/peeriot.svg"
 
 [[extra.past_sponsors]]
-  title="Self-Directed Research podcast"
-  link="https://sdr-podcast.com"
-  image="/images/past-sponsors/sdr.png"
-
-[[extra.past_sponsors]]
-  title="Women in Tech Germany"
-  link="https://women-in-tech.org/gr/"
-  image="/images/past-sponsors/women-in-tech.png"
-
-[[extra.past_sponsors]]
-  title="Code Beam Europe"
-  link="https://codebeameurope.com/"
-  image="/images/past-sponsors/code-beam-europe.png"
-
-[[extra.past_sponsors]]
-  title="Filtra"
-  link="https://filtra.io/"
-  image="/images/past-sponsors/filtra.svg"
-
-  [[extra.past_sponsors]]
-	title="ferrocene"
+	title="Ferrocene"
 	link="https://ferrous-systems.com/?utm_source=eurorust"
   image="/images/past-sponsors/ferrous-systems.svg" 
 
@@ -120,12 +100,12 @@
   image="/images/past-sponsors/realm.png" 
 
 [[extra.past_sponsors]]
-	title="crabnebula"
+	title="Crab Nebula"
 	link="https://crabnebula.dev/?utm_campaign=eurorust23&utm_source=eurorust"
   image="/images/past-sponsors/crabnebula.svg" 
 
 [[extra.past_sponsors]]
-	title="neo4j"
+	title="Neo4j"
 	link="https://neo4j.com/?utm_source=eurorust"
   image="/images/past-sponsors/neo4j.svg" 
 
@@ -135,27 +115,22 @@
   image="/images/past-sponsors/gensyn.svg" 
 
 [[extra.past_sponsors]]
-	title="trail-of-bits"
+	title="Trail of Bits"
 	link="https://www.trailofbits.com/?utm_source=eurorust"
   image="/images/past-sponsors/trail-of-bits.png" 
 
 [[extra.past_sponsors]]
-	title="sentry"
+	title="Sentry"
 	link="https://sentry.io/?utm_source=eurorust"
   image="/images/past-sponsors/sentry.svg" 
 
 [[extra.past_sponsors]]
-	title="no_starch"
-	link="https://nostarch.com/?utm_source=eurorust"
-  image="/images/past-sponsors/no-starch.png" 
-
-[[extra.past_sponsors]]
-	title="oreilly"
+	title="O'Reilly"
 	link="https://www.oreilly.com/?utm_source=eurorust"
   image="/images/past-sponsors/oreilly.svg" 
 
 [[extra.past_sponsors]]
-	title="keyrock"
+	title="Keyrock"
 	link="https://keyrock.eu/?utm_source=eurorust"
   image="/images/past-sponsors/keyrock.svg" 
 
@@ -163,21 +138,6 @@
 	title="Grafbase"
 	link="https://grafbase.com/?utm_source=eurorust"
   image="/images/past-sponsors/graftbase.svg" 
-
-[[extra.past_sponsors]]
-	title="DevITjobs"
-	link="https://devitjobs.uk/"
-  image="/images/past-sponsors/dev-it.png" 
-
-[[extra.past_sponsors]]
-	title="Rust Vienna"
-	link="https://www.meetup.com/rust-vienna/"
-  image="/images/past-sponsors/rust-vienna.png" 
-
-[[extra.past_sponsors]]
-	title="Rust Meetup Linz"
-	link="https://rust-linz.at/"
-	image="/images/past-sponsors/rust-linz.png"
 
 [[extra.past_sponsors]]
 	title="Trail of Bits"
