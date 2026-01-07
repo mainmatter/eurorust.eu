@@ -34,16 +34,7 @@ h1,
 .h1 {
   font-size: clamp(20px, 2.6vw, 50px);
   line-height: 156%;
-  text-shadow:
-    -1px -1px 0 var(--blue),
-     0 -1px 0 var(--blue),
-     1px -1px 0 var(--blue),
-     1px 0 0 var(--blue),
-     1px 1px 0 var(--blue),
-     0 1px 0 var(--blue),
-    -1px 1px 0 var(--blue),
-    -1px 0 0 var(--blue);
-
+  @include stroke(var(--orange-100), 1px);
 
   @media screen and (max-width: 60rem) {
     font-size: clamp(30px, 4.5vw, 36px);
@@ -54,17 +45,7 @@ h1,
 h2,
 .h2 {
   font-size: clamp(14px, 1.9vw, 38px);
-
-  text-shadow:
-    -0.5px -0.5px 0 var(--blue),
-     0 -0.5px 0 var(--blue),
-     0.5px -0.5px 0 var(--blue),
-     0.5px 0 0 var(--blue),
-     0.5px 0.5px 0 var(--blue),
-     0 0.5px 0 var(--blue),
-    -0.5px 0.5px 0 var(--blue),
-    -0.5px 0 0 var(--blue);
-
+  @include stroke(var(--orange-100), 0.5px);
 
   @media screen and (max-width: 60rem) {
     font-size: clamp(24px, 3.3vw, 30px);
@@ -116,7 +97,6 @@ a {
   text-decoration-thickness: auto;
   text-underline-offset: auto;
   text-underline-position: from-font;
-  font-weight: 700;
 }
 
 @keyframes btnText {

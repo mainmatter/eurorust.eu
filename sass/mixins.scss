@@ -10,7 +10,7 @@
 
   &:hover,
   &:active {
-    scale: 1.05;
+    scale: 1.03;
     transition: all 0.2s ease-in-out;
   }
 
@@ -20,12 +20,12 @@
   }
 }
 
-@mixin btn__secondary($color: #1d113f) {
+@mixin btn__secondary($color: var(--pink-300)) {
   @include button;
   border-radius: 100px;
   border: 2px solid $color;
   color: $color;
-  font-size: 20px;
+  font-size: clamp(14px, 1.9vw, 38px);
   line-height: normal;
   text-decoration: none;
 
@@ -36,11 +36,10 @@
   }
 }
 
-@mixin btn__text($color: #1d113f) {
+@mixin btn__text($color: var(--pink-300)) {
   @include btn__secondary;
   border: none;
   color: $color;
-  font-size: 20px;
   line-height: normal;
   text-decoration: none;
 
@@ -83,40 +82,19 @@
   }
 }
 
-@mixin dashed-border-with-corners() {
-  outline: 2px dotted var(--blue-light);
-  outline-offset: -15px;
-
-  background-image:
-    url(/images/util/corner-top-left.svg), url(/images/util/corner-top-right.svg),
-    url(/images/util/corner-bottom-right.svg), url(/images/util/corner-bottom-left.svg);
-  background-position:
-    top left,
-    top right,
-    bottom right,
-    bottom left;
-  background-repeat: no-repeat;
-  background-size: 0.75rem;
-
-  transition: background 0.25s ease-in-out;
-
-  &:hover {
-    background-position:
-      top calc(0.75rem + 1px) left calc(0.75rem + 1px),
-      top calc(0.75rem + 1px) right calc(0.75rem + 1px),
-      bottom calc(0.75rem + 1px) right calc(0.75rem + 1px),
-      bottom calc(0.75rem + 1px) left calc(0.75rem + 1px);
-  }
+@mixin dark-blue-shadow {
+  text-shadow: 0 0 20px var(--blue-800);
 }
 
-@mixin dark-blue-background {
-  box-shadow:
-    0 1rem 20px var(--blue-dark),
-    0 -1rem 20px var(--blue-dark);
-
-  background-color: var(--blue-dark);
+@mixin stroke($color: #000, $size: 1px) {
+  text-shadow:
+    -#{$size} -#{$size} 0 $color,
+     0        -#{$size} 0 $color,
+     #{$size} -#{$size} 0 $color,
+     #{$size}  0        0 $color,
+     #{$size}  #{$size} 0 $color,
+     0         #{$size} 0 $color,
+    -#{$size}  #{$size} 0 $color,
+    -#{$size}  0        0 $color;
 }
 
-@mixin text-shadow {
-  text-shadow: 2px 2px 2px #14033a;
-}
