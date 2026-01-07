@@ -25,10 +25,7 @@
   border-radius: 100px;
   border: 2px solid $color;
   color: $color;
-  font-family: Strenuous;
   font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
   line-height: normal;
   text-decoration: none;
 
@@ -43,10 +40,7 @@
   @include btn__secondary;
   border: none;
   color: $color;
-  font-family: Strenuous;
   font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
   line-height: normal;
   text-decoration: none;
 
@@ -63,10 +57,7 @@
   background: linear-gradient(90deg, var(--yellow) 0%, var(--green) 100%);
   box-shadow: 0px 0px 100px 0px var(--yellow);
   color: var(--blue-dark);
-  font-family: Strenuous;
   font-size: clamp(32px, 2.9vw, 55px);
-  font-style: normal;
-  font-weight: 700;
   line-height: 48px;
   letter-spacing: 0.3vw;
   text-decoration: none;

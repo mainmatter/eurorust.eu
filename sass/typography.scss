@@ -1,20 +1,16 @@
 @import "./mixins.scss";
 
 body {
-  font-feature-settings:
-    "liga" off,
-    "clig" off;
-  font-family: "Panel-Mono", monospace;
-  font-weight: 500;
+  font-family: "Quantico", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   line-height: 150%;
 }
 
 @mixin base-typo {
-  font-feature-settings:
-    "liga" off,
-    "clig" off;
-  font-family: "Panel-Mono", monospace;
-  font-weight: 500;
+  font-family: "Quantico", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   line-height: 150%;
 }
 
@@ -25,30 +21,29 @@ body {
 h1,
 .h1,
 h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4 {
+.h2 {
   @include base-typo;
-  color: var(--blue-light);
-  font-feature-settings:
-    "liga" off,
-    "clig" off;
-  text-shadow: 10px 10px 20px var(--blue);
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(--beige);
-  font-family: Strenuous;
-  font-weight: 700;
+  color: var(--blue);
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
   font-style: normal;
-  text-transform: lowercase;
-  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 h1,
 .h1 {
-  font-size: clamp(20px, 3.65vw, 70px);
-  line-height: clamp(26px, 4.67vw, 90px);
+  font-size: clamp(20px, 2.6vw, 50px);
+  line-height: 156%;
+  text-shadow:
+    -1px -1px 0 var(--blue),
+     0 -1px 0 var(--blue),
+     1px -1px 0 var(--blue),
+     1px 0 0 var(--blue),
+     1px 1px 0 var(--blue),
+     0 1px 0 var(--blue),
+    -1px 1px 0 var(--blue),
+    -1px 0 0 var(--blue);
+
 
   @media screen and (max-width: 60rem) {
     font-size: clamp(30px, 4.5vw, 36px);
@@ -58,7 +53,18 @@ h1,
 
 h2,
 .h2 {
-  font-size: clamp(14px, 2.55vw, 50px);
+  font-size: clamp(14px, 1.9vw, 38px);
+
+  text-shadow:
+    -0.5px -0.5px 0 var(--blue),
+     0 -0.5px 0 var(--blue),
+     0.5px -0.5px 0 var(--blue),
+     0.5px 0 0 var(--blue),
+     0.5px 0.5px 0 var(--blue),
+     0 0.5px 0 var(--blue),
+    -0.5px 0.5px 0 var(--blue),
+    -0.5px 0 0 var(--blue);
+
 
   @media screen and (max-width: 60rem) {
     font-size: clamp(24px, 3.3vw, 30px);
@@ -94,10 +100,8 @@ p,
 a,
 li {
   color: var(--blue-light);
-  font-size: clamp(14px, 1vw, 18px);
-  line-height: clamp(14.8px, 2.6vw, 50px);
-  font-style: normal;
-  font-weight: 500;
+  font-size: clamp(22px, 1.5vw, 30px);
+  line-height: 150%;
 
   @media screen and (max-width: 60rem) {
     font-size: 1rem;
