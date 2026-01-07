@@ -1,8 +1,15 @@
 nav {
   z-index: 50;
-  position: relative;
-  background: linear-gradient(90deg, #fec976 0%, #c0cffa 47%, #c0cffa 97%);
+  position: sticky;
+  top:0;
+  left:0;
   padding: 14px 16px;
+  background-color: var(--blue-500);
+
+  &.sticking {
+    background:red
+  }
+
 
   .skip-link {
     position: absolute;
@@ -28,22 +35,27 @@ nav {
   }
 }
 
-.nav__links-schedule {
+.nav__links-mm {
   @include btn__text;
+
+  span {
+    border-bottom: 2px solid var(--pink-300);
+  }
+
+  img {
+    height: clamp(11px, 1.5vw, 30px);
+  }
 } 
 
 .nav__logo {
   .link {
     display: flex;
-  }
-  .logo {
-    height: 20px;
-    padding-bottom: 0;
+    text-decoration: none;
 
-    @media screen and (max-width: 60rem) {
-      width: 30vw;
-      padding-bottom: 0.75rem;
-    }
+    h1 {
+      color: var(--orange-100);
+      @include dark-blue-shadow;
+      }
   }
 }
 
@@ -55,6 +67,13 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 85%;
+  max-width: 114rem;
+  margin: 2rem auto;
+  background: url('data:image/svg+xml,<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><rect opacity="0.2" x="0.5" y="0.5" width="24" height="24" stroke="%23FFF9E1"/></svg>');
+  padding: 1.5rem 4.2rem;
+  border-radius: 25px; 
+  border: 1px solid var(--orange-100)
 }
 
 @media screen and (max-width: 60rem) {

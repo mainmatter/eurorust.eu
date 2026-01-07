@@ -60,6 +60,11 @@
         src="https://plausible.io/js/script.tagged-events.outbound-links.js"
       ></script>
     {% endif %}
+    {% if build_mode == "production" %}
+      <script defer type="module" src="/src/scroll.js"></script>
+    {% else %}
+      <script defer type="module" src="http://localhost:5173/src/scroll.js"></script>
+    {% endif %}
   </head>
 
   <body>
