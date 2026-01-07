@@ -92,7 +92,6 @@
   align-items: center;
   justify-content: start;
   padding: 4vw;
-  @include dashed-border-with-corners;
 
   .hero__grid-content-ticket-button {
     @include btn__primary;
