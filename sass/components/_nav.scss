@@ -3,13 +3,6 @@ nav {
   position: sticky;
   top:0;
   left:0;
-  padding: 14px 16px;
-  background-color: var(--blue-500);
-
-  &.sticking {
-    background:red
-  }
-
 
   .skip-link {
     position: absolute;
@@ -70,10 +63,19 @@ nav {
   width: 85%;
   max-width: 114rem;
   margin: 2rem auto;
-  background: url('data:image/svg+xml,<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><rect opacity="0.2" x="0.5" y="0.5" width="24" height="24" stroke="%23FFF9E1"/></svg>');
+  background-image: 
+    url('data:image/svg+xml,<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><rect opacity="0.2" x="0.5" y="0.5" width="24" height="24" stroke="%23FFF9E1"/></svg>'),
+    url(/images/backgrounds/blue-noise.webp);
   padding: 1.5rem 4.2rem;
+  transition: all 0.2s ease-in-out;
   border-radius: 25px; 
-  border: 1px solid var(--orange-100)
+  border: 1px solid var(--orange-100);
+}
+
+.sticking .nav__wrapper {
+  margin: 0 auto;
+  padding: .75rem 4.2rem;
+  transition: all 0.2s ease-in-out;
 }
 
 @media screen and (max-width: 60rem) {
