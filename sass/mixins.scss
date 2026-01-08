@@ -1,4 +1,5 @@
 @mixin button {
+  border-radius: 100px;
   display: inline-flex;
   padding: 10px 35px;
   justify-content: center;
@@ -7,6 +8,7 @@
   cursor: pointer;
   transition: all 0.4s;
   width: auto;
+  position: relative;
 
   &:hover,
   &:active {
@@ -22,7 +24,6 @@
 
 @mixin btn__secondary($color: var(--pink-300)) {
   @include button;
-  border-radius: 100px;
   border: 2px solid $color;
   color: $color;
   font-size: clamp(14px, 1.5vw, 38px);
@@ -51,16 +52,44 @@
 
 @mixin btn__primary {
   @include button;
-  border-radius: 45px;
-  border: 2px solid var(--blue-dark);
-  background: linear-gradient(90deg, var(--yellow) 0%, var(--green) 100%);
-  box-shadow: 0px 0px 100px 0px var(--yellow);
-  color: var(--blue-dark);
-  font-size: clamp(32px, 2.9vw, 55px);
-  line-height: 48px;
-  letter-spacing: 0.3vw;
-  text-decoration: none;
+  border: 1px solid #012880;
+	background-image: linear-gradient(-180deg, #FF89D6 0%, #C01F9E 100%);
+	box-shadow: 0 1rem 1.25rem 0 rgba(22,75,195,0.50),
+							0 -0.25rem 1.5rem rgba(110, 15, 155, 1) inset,
+							0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset,
+							0 0.25rem 0.5rem 0 rgba(180, 70, 207, 1) inset;
 
+  &::before {
+    content: "";
+    display: block;
+    height: 0.25rem;
+    position: absolute;
+    top: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 7.5rem);
+    background: #fff;
+    border-radius: 100%;
+    opacity: 0.7;
+    background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    height: 0.25rem;
+    position: absolute;
+    bottom: 0.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 7.5rem);
+    background: #fff;
+    border-radius: 100%;
+    filter: blur(1px);
+    opacity: 0.05;
+    background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
+  }
+  
   &:hover,
   &:active {
     box-shadow: 0px 0px 50px 0px var(--blue);
