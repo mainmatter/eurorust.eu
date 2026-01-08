@@ -44,7 +44,7 @@ h1,
 
 h2,
 .h2 {
-  font-size: clamp(14px, 1.9vw, 38px);
+  font-size: clamp(14px, 1.5vw, 38px);
   @include stroke(var(--orange-100), 0.5px);
 
   @media screen and (max-width: 60rem) {
@@ -81,7 +81,7 @@ p,
 a,
 li {
   color: var(--blue-light);
-  font-size: clamp(22px, 1.5vw, 30px);
+  font-size: clamp(14px, 1.5vw, 38px);
   line-height: 150%;
 
   @media screen and (max-width: 60rem) {
