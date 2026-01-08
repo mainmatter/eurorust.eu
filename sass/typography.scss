@@ -23,7 +23,7 @@ h1,
 h2,
 .h2 {
   @include base-typo;
-  color: var(--blue);
+  color: var(--orange-100);
   font-family: "Audiowide", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -34,7 +34,6 @@ h1,
 .h1 {
   font-size: clamp(20px, 2.6vw, 50px);
   line-height: 156%;
-  @include stroke(var(--orange-100), 1px);
 
   @media screen and (max-width: 60rem) {
     font-size: clamp(30px, 4.5vw, 36px);
@@ -80,7 +79,7 @@ h2 + p {
 p,
 a,
 li {
-  color: var(--blue-light);
+  color: var(--orange-100);
   font-size: clamp(14px, 1.5vw, 38px);
   line-height: 150%;
 

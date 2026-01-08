@@ -87,6 +87,13 @@
   align-items: center;
   justify-content: start;
   padding: 4vw;
+  background: rgba(28, 117, 196, 65);
+  border-radius: var(--corner);
+  box-shadow: inset 0 5px 5px var(--blue-200);
+
+  .hero__grid-content-header {
+     @include stroke__shadow(var(--orange-100), 0.5px);
+  }
 
   .hero__grid-content-ticket-button {
     @include btn__primary;

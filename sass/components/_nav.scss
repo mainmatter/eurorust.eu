@@ -46,9 +46,8 @@ nav {
     text-decoration: none;
 
     h1 {
-      color: var(--orange-100);
-      @include dark-blue-shadow;
-      }
+      @include stroke__shadow(var(--orange-100), 0.5px);
+    }
   }
 }
 
@@ -68,7 +67,7 @@ nav {
   background-color: var(--blue-500);
   padding: 1.5rem 4.2rem;
   transition: all 0.2s ease-in-out;
-  border-radius: 25px; 
+  border-radius: var(--corner); 
   border: 1px solid var(--orange-100);
 }
 
