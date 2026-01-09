@@ -65,8 +65,7 @@
     color: var(--orange-100);
     line-height: 140%;
     margin-bottom: 2rem;
-    padding-left: 20px;
-    text-align: left;
+    text-align: center;
 
     @media screen and (max-width: 60rem) {
       text-align: center;
@@ -96,18 +95,22 @@
   }
 
   .hero__grid-content-ticket-button {
-    @include btn__primary-orange;
+    @include btn__primary-purple;
     text-align: center;
   }
 
-  .hero__grid-content-schedule-button {
-    @include btn__secondary-large;
+  .hero__grid-content-talk-button {
+    @include btn__primary-pink;
+  }
+
+  .hero__grid-content-sponsor-button {
+    @include btn__primary-orange;
   }
 }
 
 .hero__grid-buttons {
   display: flex;
   flex-direction: column;
-  margin: 1rem auto;
-  gap: 1.5rem;
+  margin: 2rem auto 0 auto;
+  gap: 1.25rem;
 }
