@@ -50,28 +50,29 @@
   }
 }
 
-@mixin btn__primary {
+@mixin btn__primary-purple ($color1: #FFB8D6, $color2: #C000B5, $color3: #940196, $shadow1: rgba(255,255,255, 0.4), $shadow2: rgba(180, 70, 207, 1)) {
   @include button;
-  border: 1px solid #012880;
-	background-image: linear-gradient(-180deg, #FF89D6 0%, #C01F9E 100%);
-	box-shadow: 0 1rem 1.25rem 0 rgba(22,75,195,0.50),
-							0 -0.25rem 1.5rem rgba(110, 15, 155, 1) inset,
-							0 0.75rem 0.5rem rgba(255,255,255, 0.4) inset,
-							0 0.25rem 0.5rem 0 rgba(180, 70, 207, 1) inset;
+  padding: 20px 35px; 
+  font-size: clamp(18px,1.9vw,48px);
+  color: var(--white);
+  text-decoration: none;
+	background-image: linear-gradient($color1 0%, $color2 75%, $color3 95%);
+	box-shadow: 0 0.75rem 0.5rem $shadow1 inset,
+							0 0.25rem 0.5rem 0 $shadow2 inset;
 
   &::before {
     content: "";
     display: block;
-    height: 0.25rem;
+    height: 0.2rem;
     position: absolute;
-    top: 0.5rem;
+    top: 0.35rem;
     left: 50%;
     transform: translateX(-50%);
-    width: calc(100% - 7.5rem);
+    width: calc(100% - 4.5rem);
     background: #fff;
     border-radius: 100%;
-    opacity: 0.7;
-    background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
+    opacity: 0.9;
+    background-image: linear-gradient(-270deg, rgba(255,255,255,0.30) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.30) 100%);
   }
 
   &::after {
@@ -97,8 +98,16 @@
   }
 }
 
+@mixin btn__primary-pink ($color1: #F39CD1, $color2: #F9528A, $color3: #D31D7D, $shadow1: rgba(255,255,255, 0.4), $shadow2: rgba(180, 70, 207, 1)) {
+  @include btn__primary-purple($color1, $color2, $color3, $shadow1, $shadow2);
+}
+
+@mixin btn__primary-orange ($color1: #FFCC92, $color2: #FD9935, $color3: #DC4E14, $shadow1: rgba(255,255,255, 0.4), $shadow2: rgba(193, 7, 7, 1)) {
+  @include btn__primary-purple($color1, $color2, $color3, $shadow1, $shadow2);
+}
+
 @mixin btn__secondary-large($color: var(--blue-light)) {
-  @include btn__primary;
+  @include btn__primary-purple;
   border: 2px solid $color;
   color: $color;
   background: none;
