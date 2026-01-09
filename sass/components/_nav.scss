@@ -73,8 +73,9 @@ nav {
 
 .sticking .nav__wrapper {
   margin: 0 auto;
-  padding: .75rem 4.2rem;
+  padding: .5rem 4.2rem .75rem 4.2rem;
   transition: all 0.2s ease-in-out;
+  border-radius: 0 0 var(--corner) var(--corner);
 }
 
 @media screen and (max-width: 60rem) {
