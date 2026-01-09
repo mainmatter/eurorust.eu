@@ -12,8 +12,7 @@
 
   &:hover,
   &:active {
-    scale: 1.03;
-    transition: all 0.2s ease-in-out;
+   animation: jelly 0.5s ease-in-out;
   }
 
   @media (max-width: 60rem) {
@@ -90,12 +89,6 @@
     opacity: 0.05;
     background-image: linear-gradient(-270deg, rgba(255,255,255,0.00) 0%, #FFFFFF 20%, #FFFFFF 80%, rgba(255,255,255,0.00) 100%);
   }
-  
-  &:hover,
-  &:active {
-    box-shadow: 0px 0px 50px 0px var(--blue);
-    background: linear-gradient(90deg, var(--green) 0%, #f6d2d7 80%);
-  }
 }
 
 @mixin btn__primary-pink ($color1: #F39CD1, $color2: #F9528A, $color3: #D31D7D, $shadow1: rgba(255,255,255, 0.4), $shadow2: rgba(180, 70, 207, 1)) {
@@ -119,6 +112,25 @@
     background: none;
   }
 }
+
+/* Jelly Animation */
+  @keyframes jelly {
+    0% {
+      transform: scale(1, 1);
+    }
+    25% {
+      transform: scale(0.9, 1.1);
+    }
+    50% {
+      transform: scale(1.1, 0.9);
+    }
+    75% {
+      transform: scale(0.95, 1.05);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
 
 @mixin dark-blue-shadow {
   text-shadow: 0 0 20px var(--blue-800);
