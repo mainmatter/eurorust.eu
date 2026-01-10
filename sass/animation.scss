@@ -20,7 +20,7 @@
 // Moving Clouds
 $clouds: 
   ("/images/backgrounds/cloud1.webp" 70vw 175s),
-  ("" 1000px 15s),
+  ("/images/backgrounds/cloud2.webp" 75vw 150s),
   ("https://s.cdpn.io/15514/clouds_3.png" 1579px 17s);
 
 // Animation & keyframes
@@ -47,7 +47,6 @@ $clouds:
     background-size: contain;
     animation: clouds-loop-#{$i} $duration infinite linear;
     z-index: 1;
-    animation-delay: -100s;
   }
 }
 
@@ -71,4 +70,11 @@ $clouds:
 
 .clouds-1 {
     height: 46vw;
+    animation-delay: -100s;
+}
+
+.clouds-2 {
+    height: 40vw;
+    animation-delay: -10s;
+    top: -45vw;
 }
