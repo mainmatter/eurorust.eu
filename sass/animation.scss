@@ -4,13 +4,13 @@
       transform: scale(1, 1);
     }
     25% {
-      transform: scale(0.9, 1);
+      transform: scale(0.9, 1.01);
     }
     50% {
       transform: scale(1.05, 1);
     }
     75% {
-      transform: scale(0.95, 1);
+      transform: scale(0.95, 1.005);
     }
     100% {
       transform: scale(1, 1);
@@ -20,7 +20,7 @@
 // Moving Clouds
 $clouds: 
   ("/images/backgrounds/cloud1.webp" 70vw 175s),
-  ("/images/backgrounds/cloud2.webp" 75vw 150s),
+  ("/images/backgrounds/cloud2.webp" 75vw 190s),
   ("https://s.cdpn.io/15514/clouds_3.png" 1579px 17s);
 
 // Animation & keyframes
@@ -75,6 +75,6 @@ $clouds:
 
 .clouds-2 {
     height: 40vw;
-    animation-delay: -10s;
+    animation-delay: -13s;
     top: -45vw;
 }
