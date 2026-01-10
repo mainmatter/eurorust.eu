@@ -78,3 +78,16 @@ $clouds:
     animation-delay: -13s;
     top: -45vw;
 }
+
+//Soap bubbles 
+@keyframes bubbles {
+  0% {
+    scale: 1;
+    }
+  50% {
+    scale: 0.90;
+  }
+  100% {
+    scale: 1;
+  }
+}
