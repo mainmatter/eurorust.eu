@@ -1,0 +1,74 @@
+// Jelly Animation for Buttons
+  @keyframes jelly {
+    0% {
+      transform: scale(1, 1);
+    }
+    25% {
+      transform: scale(0.9, 1);
+    }
+    50% {
+      transform: scale(1.05, 1);
+    }
+    75% {
+      transform: scale(0.95, 1);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+
+// Moving Clouds
+$clouds: 
+  ("/images/backgrounds/cloud1.webp" 70vw 175s),
+  ("" 1000px 15s),
+  ("https://s.cdpn.io/15514/clouds_3.png" 1579px 17s);
+
+// Animation & keyframes
+// Refactor by @HugoGiraudel
+// https://codepen.io/HugoGiraudel
+@for $i from 1 through length($clouds) {
+  
+  $item     : nth($clouds, $i);
+  $path     : nth($item, 1);
+  $width    : nth($item, 2);
+  $duration : nth($item, 3);
+  
+  @keyframes clouds-loop-#{$i} {
+    from {
+       transform: translateX(100%)
+    }
+    to {
+       transform: translateX(-100%)
+    }
+  }
+  
+  .clouds-#{$i} {
+    background-image: url($path);
+    background-size: contain;
+    animation: clouds-loop-#{$i} $duration infinite linear;
+    z-index: 1;
+    animation-delay: -100s;
+  }
+}
+
+.clouds {
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 3.5rem;
+}
+
+.clouds-1,
+.clouds-2,
+.clouds-3 {
+  background-repeat: no-repeat;
+  position: relative;
+  top:      0;
+  right:    0;
+  left:     0;
+}
+
+.clouds-1 {
+    height: 46vw;
+}

@@ -52,6 +52,7 @@
 }
 
 .hero__grid-meta {
+  z-index: 2; 
   grid-area: meta;
   padding-top: 0.75rem;
   width: 35vw;
