@@ -189,13 +189,13 @@
   mastodon="https://fosstodon.org/@drakulix@dreampi.es"
   company="System76"
   job_title="Engineer working on COSMIC"
-  image="/images/speakers/victoria-brekenfeld.png"
+  image="/images/speakers/victoria-brekenfeld.webp"
   github="https://github.com/Drakulix"
 
 [[extra.speakers]]
   name="Conrad Irwin"
   job_title="Zed"
-  image="/images/speakers/conrad-irwin.png"
+  image="/images/speakers/conrad-irwin.webp"
   twitter="https://x.com/ConradIrwin"
   web="https://zed.dev"
   linkedin="https://www.linkedin.com/in/conradirwin/"
