@@ -30,6 +30,13 @@ body {
   }
 }
 
+.btn__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--orange-300);
+  border-radius: var(--corner);
+}
+
 .main {
   position: relative;
   padding-bottom: 70vh;

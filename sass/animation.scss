@@ -21,7 +21,9 @@
 $clouds: 
   ("/images/backgrounds/cloud1.webp" 70vw 175s),
   ("/images/backgrounds/cloud2.webp" 75vw 190s),
-  ("https://s.cdpn.io/15514/clouds_3.png" 1579px 17s);
+  ("/images/backgrounds/cloud3.webp" 88vw 180s),
+  ("/images/backgrounds/cloud4.webp" 91vw 200s),
+  ("/images/backgrounds/cloud5.webp" 95vw 175s);
 
 // Animation & keyframes
 // Refactor by @HugoGiraudel
@@ -60,7 +62,9 @@ $clouds:
 
 .clouds-1,
 .clouds-2,
-.clouds-3 {
+.clouds-3, 
+.clouds-4,
+.clouds-5 {
   background-repeat: no-repeat;
   position: relative;
   top:      0;
@@ -77,6 +81,26 @@ $clouds:
     height: 40vw;
     animation-delay: -13s;
     top: -45vw;
+}
+
+.clouds-3 {
+    height: 37vw;
+    animation-delay: -120s;
+    opacity: 0.8;
+}
+
+.clouds-4 {
+    height: 57vw;
+    margin-top: -39vw;
+    animation-delay: -30s;
+    opacity: 0.5;
+}
+
+.clouds-5 {
+    height: 39vw;
+    animation-delay: -50s;
+    opacity: 0.5;
+    margin-bottom: 39vw;
 }
 
 //Soap bubbles 

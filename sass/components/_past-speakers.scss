@@ -9,6 +9,51 @@
     padding-top: 0;
   }
 
+  * {
+    z-index: 2;
+    position: relative;
+  }
+
+  .clouds-top {
+    margin-bottom: -57vw;
+    z-index: 1;
+  }
+
+  .clouds-middle {
+    margin-top: -200vw;
+    z-index: 1;
+  }
+
+  .clouds-bottom {
+    margin-top:auto;
+    z-index:1; 
+  }
+
+  .speakers__buttons {
+    text-align:center;
+    margin: 10rem;
+
+    .speakers__buttons__background {
+      background-image: url("/images/backgrounds/bubble1.webp");
+      position: relative;
+      display: block;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 16vw;
+      height: 16.4vw;
+      animation: bubbles 9s infinite ease-in-out;
+      animation-delay: 1s;
+      z-index: 1;
+      margin: -11vw auto 16vw auto;
+    }
+  }
+  .speakers__ticket-button {
+    @include btn__primary-orange;
+    padding: 10px 75px;
+    z-index: 2;
+  }
+
   img.speaker__portrait {
     width: 30vw;
     max-width: 400px;
@@ -56,7 +101,7 @@
 
 
     p {
-      margin: 1rem auto;
+      margin: 1.5rem auto;
       color: var(--beige);
       width: 30rem;
       max-width:400px;
@@ -64,6 +109,10 @@
        @media screen and (max-width: 60rem) {
         width: 70vw;
        }
+    }
+
+    .speaker__job {
+      @include dark-blue-shadow;
     }
 
     .speaker__socials {
@@ -84,13 +133,15 @@
     }
       
     &:nth-child(3n+2) {
-      .speaker__name {
+      .speaker__name,
+      .btn__icon {
         background-color: var(--purple-200);
       }
     }
 
     &:nth-child(3n+3) {
-      .speaker__name {
+      .speaker__name,
+      .btn__icon {
         background-color: var(--pink-600);
       }
     }
