@@ -169,3 +169,11 @@
   @include separator__top;
   rotate: 180deg;
 }
+
+@mixin background-pink {
+  background-color: var(--pink-300);
+  background-image: url('/images/backgrounds/eurorust.svg');
+  background-repeat: repeat;
+  margin: -17rem auto;
+  padding: 17rem 0;
+}

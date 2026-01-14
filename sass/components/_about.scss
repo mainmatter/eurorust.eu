@@ -13,11 +13,7 @@
   }
 
   .about__grid {
-    background-color: var(--pink-300);
-    background-image: url('/images/backgrounds/eurorust.svg');
-    background-repeat: repeat;
-    margin: -17rem auto;
-    padding: 17rem 0;
+   @include background-pink;
   }
 
   .about__grid-container {
