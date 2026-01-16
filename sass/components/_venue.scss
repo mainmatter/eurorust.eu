@@ -3,9 +3,49 @@
   .separator__bottom {
     background: var(--blue-500);
   }
+  
+  p {
+    color: var(--blue-400);
+  }
 
   .venue__grid {
     @include background-pink;
+  }
+
+  .venue__map-button {
+    @include btn__secondary;
+    color: var(--blue-400);
+    border-color: var(--blue-400);
+  }
+
+  .venue__grid-container {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    max-width: 55rem;
+    background: var(--pink-300);
+    border: 1.5px solid var(--blue-400);
+    border-radius: var(--corner);
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .venue__image-container {
+    border-bottom: 1.5px solid var(--blue-400);
+    border-top-right-radius: var(--corner);
+    border-top-left-radius: var(--corner);
+    background-image: 
+      url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect opacity="1" x="0.5" y="0.5" width="24" height="24" stroke="%2384B9CF"/></svg>');
+  }
+
+  .venue__image {
+    padding: 3rem;
+    max-width: 30vw;
+    margin: 0 auto;
+  }
+
+  .venue__description {
+    padding: 3rem 6rem;
   }
 
   h1 {
