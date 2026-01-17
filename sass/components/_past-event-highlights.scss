@@ -46,11 +46,11 @@
   align-content: center;
   background: linear-gradient(black, black), 
               var(--pink-gradient);
-  border: 2.5rem solid transparent;
+  border: 2rem solid transparent;
   background-repeat: no-repeat;
   background-origin: padding-box, border-box;
   border-radius: var(--corner);
-  border-width: 2.5rem;
+  border-width: 2rem;
   position: relative;
 
   @media screen and (max-width: 60rem) {
