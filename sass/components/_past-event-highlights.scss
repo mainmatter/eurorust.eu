@@ -1,5 +1,11 @@
 .past-event-highlights {
-  margin: 8rem auto;
+  padding: 8rem 0;
+  
+
+  h1 {
+    @include stroke__shadow(var(--orange-100), 0.5px);
+    margin-bottom: 8rem;
+  }
 
   @media screen and (max-width: 60rem) {
     margin: 4rem auto;
@@ -16,42 +22,38 @@
   animation: none;
 }
 
+.past-event-highlights__content {
+  background: url('/images/backgrounds/circle.svg') no-repeat center center;
+  background-size: contain;
+  padding-bottom: 10rem;
+}
+
 .past-event-highlights__grid {
   display: grid;
-  grid-template-columns: 14% 70% 14%;
-  justify-content: space-between;
-
-  @media screen and (max-width: 60rem) {
-    display: block;
-    width: 90vw;
-    margin: 0 auto;
-  }
+  grid-template-rows: auto auto;
+  justify-items: center;
 }
 
 .past-event-highlights__image {
-  width: 13vw;
-  justify-self: end;
-
-  @media screen and (max-width: 60rem) {
-    display: none;
-  }
+  margin-top: -3rem;
+  margin-bottom: 1rem;
+  width: clamp(15rem, 18vw, 20rem);
 }
 
 .past-event-highlights__video {
-  background-image: url('/images/backgrounds/frame-full.webp');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  padding: 2vw 5vw;
-  margin: 0 1vw;
+  width: clamp(300px, 50vw, 900px);
+  margin: 0 auto;
   align-content: center;
+  background: linear-gradient(black, black), 
+              var(--pink-gradient);
+  border: 2.5rem solid transparent;
+  background-repeat: no-repeat;
+  background-origin: padding-box, border-box;
+  border-radius: var(--corner);
+  border-width: 2.5rem;
+  position: relative;
 
   @media screen and (max-width: 60rem) {
     padding: 10vw;
   }
-}
-
-.past-event-highlights__image:first-child {
-  transform: rotateY(180deg);
-  justify-self: start;
 }

@@ -9,8 +9,11 @@
     {% include "sections/about.html" %}
     {% include "sections/past-speakers.html" %}
     {% include "sections/venue.html" %}
-    {% include "sections/presented-by.html" %}
-    {% include "sections/past-sponsors.html" %}
+    <div class="combined-background">
+      {% include "sections/past-event-highlights.html" %}
+      {% include "sections/presented-by.html" %}
+      {% include "sections/past-sponsors.html" %}
+    </div>
 
     <img class="main__station" src="images/space-station.png" alt="" role="presentation" loading="lazy" />
   </div>

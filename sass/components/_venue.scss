@@ -1,7 +1,10 @@
 .venue {
-  .separator__top,
-  .separator__bottom {
+  .separator__top {
     background: var(--blue-500);
+  }
+
+  .separator__bottom {
+    background: var(--blue-300);
   }
   
   p {
