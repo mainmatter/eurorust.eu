@@ -7,6 +7,10 @@
     padding-bottom: 4rem;
   }
 
+  h1 {
+    @include stroke__shadow(var(--orange-100), 0.5px);
+  }
+
   h1,
   h2 {
     text-align: center;
@@ -48,10 +52,29 @@
 
       a {
         display: flex;
-        background: var(--beige);
         align-items: center;
         justify-content: center;
         padding: 1rem;
+        background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0)), 
+              var(--orange-gradient);
+        border: 2rem solid transparent;
+        background-repeat: no-repeat;
+        background-origin: padding-box, border-box;
+        border-radius: var(--corner);
+        border-width: 2rem;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: -1rem;
+          bottom: -1rem;
+          left: -1rem;
+          right: -1rem;
+          border: 3.05rem solid var(--white);
+          border-radius: 100px;
+          z-index: 1;
+        } 
       }
     }
 
@@ -62,7 +85,7 @@
     .sponsors-grid--closing_party_partners a,
     .sponsors-grid--impl_room_partners a,
     .sponsors-grid--head_partners a {
-      aspect-ratio: 3/1;
+      aspect-ratio: 5/1;
       line-height: 6rem;
       border-radius: 6rem;
 
@@ -70,6 +93,7 @@
         max-height: 4rem;
         height: unset;
         width: auto;
+        z-index:2;
 
          @media screen and (max-width: 60rem) {
           max-height:2.75rem;
