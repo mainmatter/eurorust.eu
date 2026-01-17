@@ -138,12 +138,7 @@
 	title="Grafbase"
 	link="https://grafbase.com/?utm_source=eurorust"
   image="/images/past-sponsors/graftbase.svg" 
-
-[[extra.past_sponsors]]
-	title="Trail of Bits"
-	link="https://www.trailofbits.com/?utm_source=eurorust"
-	image="/images/past-sponsors/trail-of-bits.png"
-
+  
 [[extra.past_sponsors]]
 	title="GiGa infosystems GmbH"
 	link="https://giga-infosystems.com/?utm_source=eurorust"
