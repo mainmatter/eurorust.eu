@@ -10,6 +10,10 @@
   .separator__bottom {
     background-color: var(--blue-700);
     background-image: none;
+
+    .separator__content {
+      background-image: url("/images/backgrounds/separator-white.svg");
+    }
   }
 }
   

@@ -1,4 +1,37 @@
 .sponsors {
+  &::before {
+    content: '';
+    background-image: url("/images/backgrounds/lens-flare.webp");
+    position: relative;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(45deg);
+    width: 23vw;
+    height: 23vw;
+    margin-bottom: -23vw;
+    top: 50vw;
+    left: -11vw;
+    z-index: 1;
+  }
+
+  &::after {
+    content: '';
+    background-image: url("/images/backgrounds/bubble3.webp");
+    position: relative;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 14.3vw;
+    height: 15vw;
+    margin-bottom: -15vw;
+    bottom: 9vw;
+    left: 55%;
+    animation: bubbles 3s infinite ease-in-out;
+    animation-delay: 2.5s;
+    z-index: 2; 
+  }
+
   margin: 7rem auto 0 auto;
 
   @media screen and (max-width: 60rem) {
@@ -8,6 +41,7 @@
 
   h1 {
     @include stroke__shadow(var(--orange-100), 0.5px);
+    z-index: 3;
   }
 
   h1,
@@ -20,11 +54,42 @@
   }
 
   .sponsors-grid {
+    &::before {
+      content: '';
+      background-image: url("/images/backgrounds/bubble2.webp");
+      position: relative;
+      display: block;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 11.4vw;
+      height: 8.52vw;
+      margin-bottom: -8.52vw;
+      top: 5vw;
+      left: -6vw;
+      animation: bubbles 3s infinite ease-in-out;
+      animation-delay: 1s;
+      z-index: 2;
+    }
+
+    &::after {
+    content: '';
+    background-image: url("/images/backgrounds/lens-flare.webp");
+    position: relative;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 10vw;
+    height: 10vw;
+    margin-bottom: -10vw;
+    bottom: 18vw;
+    right: -65vw;
+    z-index: 1;
+  }
+
     max-width: 1024px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-between;
 
     > div + div {
@@ -46,6 +111,7 @@
       row-gap: 1rem;
       justify-content: center;
       justify-items: center;
+      z-index: 3; 
 
        @media screen and (max-width: 60rem) {
         grid-template-columns: 40% 40%;
