@@ -1,8 +1,38 @@
 .past-event-highlights {
+  &::before {
+    content: '';
+    background-image: url("/images/backgrounds/lens-flare.webp");
+    position: relative;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 14.7vw;
+    height: 14.7vw;
+    margin-bottom: -14.7vw;
+    top: 20vw;
+    left: 3vw;
+    z-index: 1;
+  }
+
+  &::after {
+    content: '';
+    background-image: url("/images/backgrounds/lens-flare.webp");
+    position: relative;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(45deg);
+    width: 22vw;
+    height: 22vw;
+    margin-bottom: -22vw;
+    bottom: 18vw;
+    left: 75vw;
+    z-index: 1;
+  }
+
   margin-top: -1px;
   padding: 7rem 0;
   
-
   h1 {
     @include stroke__shadow(var(--orange-100), 0.5px);
     margin-bottom: 8rem;
@@ -27,6 +57,8 @@
   background: url('/images/backgrounds/circle.svg') no-repeat center center;
   background-size: contain;
   padding-bottom: 10rem;
+  z-index: 2; 
+  position: relative;
 }
 
 .past-event-highlights__grid {
