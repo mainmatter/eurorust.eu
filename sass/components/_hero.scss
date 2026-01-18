@@ -140,17 +140,19 @@
      @include stroke__shadow(var(--orange-100), 0.5px);
   }
 
-  .hero__grid-content-ticket-button {
-    @include btn__primary-purple;
-    text-align: center;
-  }
+  .hero__grid-button {
+    &:first-child {
+      @include btn__primary-purple;
+      text-align: center;
+    }
 
-  .hero__grid-content-talk-button {
-    @include btn__primary-pink;
-  }
+    &:nth-child(2) {
+      @include btn__primary-pink;
+    }
 
-  .hero__grid-content-sponsor-button {
-    @include btn__primary-orange;
+    &:nth-child(3) {
+      @include btn__primary-orange;
+    }
   }
 }
 
