@@ -19,7 +19,7 @@
   display: grid;
   grid-template:
     'meta content' auto
-    / auto max(50%, 26rem);
+    / auto max(45%, 26rem);
 
   gap: 5rem;
   width: min(85%, 100rem);
@@ -55,7 +55,6 @@
   z-index: 2; 
   grid-area: meta;
   padding-top: 0.75rem;
-  width: 35vw;
   margin: 0 auto;
 
   @media screen and (max-width: 60rem) {
@@ -79,7 +78,7 @@
   .hero__grid-meta-info {
     color: var(--orange-100);
     line-height: 140%;
-    margin-bottom: 2rem;
+    margin-bottom: -1rem;
     text-align: center;
 
     @media screen and (max-width: 60rem) {
