@@ -29,5 +29,6 @@
   img {
     width: 65vw;
     max-width: 25rem;
+    @include btn__image;
   }
 }

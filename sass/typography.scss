@@ -6,14 +6,6 @@ body {
   font-style: normal;
   line-height: 150%;
 }
-
-@mixin base-typo {
-  font-family: "Quantico", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 150%;
-}
-
 .bold {
   font-weight: 700;
 }
@@ -22,7 +14,6 @@ h1,
 .h1,
 h2,
 .h2 {
-  @include base-typo;
   color: var(--orange-100);
   font-family: "Audiowide", sans-serif;
   font-weight: 400;
@@ -54,6 +45,8 @@ h2,
 h3,
 .h3 {
   font-size: clamp(13px, 2.3vw, 40px);
+  line-height: 150%;
+  color: var(--orange-100);
 
   @media screen and (max-width: 60rem) {
     font-size: clamp(24px, 3.3vw, 30px);
@@ -110,18 +103,17 @@ a {
 
 a:not([class]) {
   display: block;
-  /*TO DO: move <a> style to body */
-  -webkit-text-fill-color: var(--blue-light);
+  -webkit-text-fill-color: var(--orange-100);
 
   &:hover {
     text-decoration-color: transparent;
     background-repeat: no-repeat;
     background: -webkit-linear-gradient(
       65deg,
-      var(--blue-light) 0%,
-      var(--yellow) 30%,
-      var(--green) 70%,
-      var(--blue) 100%
+      var(--orange-100) 0%,
+      var(--blue-100) 30%,
+      var(--pink-100) 70%,
+      var(--purple-100) 100%
     );
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -132,7 +124,7 @@ a:not([class]) {
   }
 
   &:visited {
-    text-decoration-color: var(--blue-light);
+    text-decoration-color: var(--orange-100);
   }
 }
 

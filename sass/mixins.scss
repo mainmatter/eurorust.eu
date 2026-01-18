@@ -21,6 +21,13 @@
   }
 }
 
+@mixin btn__image {
+  &:hover,
+  &:active {
+   animation: jelly 0.5s ease-in-out;
+  }
+}
+
 @mixin btn__secondary($color: var(--pink-300)) {
   @include button;
   border: 2px solid $color;
