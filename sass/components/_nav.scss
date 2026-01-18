@@ -86,5 +86,13 @@ nav {
   .nav__wrapper {
     flex-direction: column;
     gap: .75rem; 
+    width: auto;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 32rem) {
+  .nav__links {
+    flex-direction: column;
   }
 }

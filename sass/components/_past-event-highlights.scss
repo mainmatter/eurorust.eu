@@ -71,6 +71,10 @@
   margin-top: -3rem;
   margin-bottom: 1rem;
   width: clamp(15rem, 18vw, 20rem);
+
+  @media screen and (max-width: 60rem) {
+    width: 30vw; 
+  }
 }
 
 .past-event-highlights__video {

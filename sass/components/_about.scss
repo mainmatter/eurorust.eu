@@ -29,9 +29,11 @@
     @media screen and (max-width: 60rem) {
       grid-template-columns: none;
       grid-template-rows: auto;
-      gap: 3rem;
-      padding: 2rem;
       width: 70vw;
+    }
+
+    @media screen and (max-width: 32rem) {
+      width: 90vw;
     }
   }
 
@@ -39,11 +41,13 @@
     display: grid;
     text-align: right;
     border-right: 1.5px solid var(--blue-400);
-    grid-template-columns: 31% 1fr;
+    grid-template-columns: 40% 1fr;
     grid-template-rows: repeat(6, 1fr);
 
     @media screen and (max-width: 60rem) {
+      border-right: none;
       text-align: center;
+      border-bottom: 1.5px solid var(--blue-400);
     }
 
     .about__grid-list__line {
@@ -52,7 +56,7 @@
       border-bottom: 1.5px solid var(--blue-400);
 
       @media screen and (max-width: 60rem) {
-        padding: 0.25rem 0;
+        padding: 1rem 0;
       }
 
       &.line-1 {
@@ -81,9 +85,13 @@
         border-bottom: none;
         border-right: 1.5px solid var(--blue-400);
         background-image: url('images/cursor.png');
-        background-size: 70%;
+        background-size: 60%;
         background-repeat: no-repeat;
         background-position: center center; 
+
+        @media screen and (max-width: 60rem) {
+          background-size: contain; 
+        }
       }
 
       &.line-6 {
@@ -102,10 +110,13 @@
   .about__grid-image {
     display: grid;
     padding: 1rem;
-    border-top-right-radius: var(--corner);
-    border-bottom-right-radius: var(--corner);
+    border-radius: 0 var(--corner) var(--corner) 0;
     background-image: 
       url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect opacity="1" x="0.5" y="0.5" width="24" height="24" stroke="%2384B9CF"/></svg>');
+   
+    @media screen and (max-width: 60rem) {
+      border-radius: 0 0 var(--corner) var(--corner);
+    }
   }
 
   .about__grid-image__content {
@@ -117,12 +128,11 @@
 
     @media screen and (max-width: 60rem) {
       margin: 0 auto;
-      max-width: 300px;
     }
 
     img {
-      width: 14vw;
-      max-width: 250px;
+      width: 20vw;
+      min-width: 200px;
       padding: 1rem;
     }
   }
@@ -133,9 +143,5 @@
     padding-bottom: 2rem;
     color: var(--blue-300);
     @include stroke(var(--blue-300), 0.5px);
-
-    @media screen and (max-width: 60rem) {
-      padding-top: 8rem;
-    }
   }
 }

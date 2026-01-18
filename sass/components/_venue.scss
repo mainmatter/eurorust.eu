@@ -31,6 +31,14 @@
     border-radius: var(--corner);
     margin: 0 auto;
     text-align: center;
+
+    @media screen and (max-width: 60rem) {
+      width: 70vw;
+    }
+
+    @media screen and (max-width: 32rem) {
+      width: 90vw;
+    }
   }
 
   .venue__image-container {
@@ -45,10 +53,18 @@
     padding: 3rem;
     max-width: 30vw;
     margin: 0 auto;
+
+    @media screen and (max-width: 60rem) {
+      max-width: 50vw;
+    }
   }
 
   .venue__description {
     padding: 3rem 6rem;
+
+    @media screen and (max-width: 60rem) {
+      padding: 3rem 2rem 2rem 2rem;
+    }
   }
 
   h1 {
@@ -57,9 +73,5 @@
     padding-bottom: 2rem;
     color: var(--blue-300);
     @include stroke(var(--blue-300), 0.5px);
-
-    @media screen and (max-width: 60rem) {
-      padding-top: 8rem;
-    }
   }
 }
