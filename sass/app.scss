@@ -46,11 +46,6 @@ body {
 
 .main {
   position: relative;
-  padding-bottom: 70vh;
-
-  @media screen and (max-width: 60rem) {
-    padding-bottom: 60vw;
-  }
 }
 
 img {

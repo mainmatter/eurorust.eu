@@ -1,8 +1,8 @@
 .presented-by {
-  margin: 8rem auto;
+  margin: 0 auto;
 
   @media screen and (max-width: 60rem) {
-    margin: 4rem auto;
+    margin: 0 auto;
   }
 
   .presented-by__wrapper {
@@ -22,8 +22,8 @@
 
   h1 {
     text-align: center;
-    @include stroke(var(--blue-500), 0.5px);
-    color: var(--blue-500);
+    @include stroke(var(--blue-300), 0.5px);
+    color: var(--blue-300);
   }
 
   img {

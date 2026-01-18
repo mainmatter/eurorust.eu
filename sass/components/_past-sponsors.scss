@@ -1,6 +1,5 @@
 .sponsors {
-  margin: 8rem auto;
-  padding-bottom: 15rem;
+  margin: 7rem auto 0 auto;
 
   @media screen and (max-width: 60rem) {
     margin: 4rem auto;
@@ -46,6 +45,7 @@
       column-gap: 4rem;
       row-gap: 1rem;
       justify-content: center;
+      justify-items: center;
 
        @media screen and (max-width: 60rem) {
         grid-template-columns: 40% 40%;
@@ -64,6 +64,15 @@
         justify-content: center;
         align-items: center;
         height: 3.5rem;
+
+        &:last-child:nth-child(3n+1) {
+          grid-column: span 3 / span 3;
+          justify-self: center;
+
+          @media screen and (max-width: 60rem) {
+            grid-column: 1;
+          }
+        }
       }
     }
 
