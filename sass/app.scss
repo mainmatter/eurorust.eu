@@ -53,17 +53,6 @@ body {
   }
 }
 
-.main__station {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: max(15rem, 10vw);
-  width: 60vw;
-  display: block;
-  z-index: -1;
-  pointer-events: none;
-}
-
 img {
   max-width: 100%;
   height: auto;
