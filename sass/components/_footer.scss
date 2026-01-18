@@ -34,6 +34,12 @@
 
   .footer__link {
     color: var(--blue-100);
+
+    &:hover,
+    &:active 
+    {
+      @include textlink-hover-animation;
+    }
   }
 
   .footer__meta-links,

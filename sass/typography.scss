@@ -106,21 +106,7 @@ a:not([class]) {
   -webkit-text-fill-color: var(--orange-100);
 
   &:hover {
-    text-decoration-color: transparent;
-    background-repeat: no-repeat;
-    background: -webkit-linear-gradient(
-      65deg,
-      var(--orange-100) 0%,
-      var(--blue-100) 30%,
-      var(--pink-100) 70%,
-      var(--purple-100) 100%
-    );
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation-name: btnText;
-    animation-duration: 0.4s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
+    @include textlink-hover-animation;
   }
 
   &:visited {
