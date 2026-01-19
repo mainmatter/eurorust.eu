@@ -10,7 +10,15 @@
       <p class="hero__grid-meta-info">
         October 14–17, 2026 • Barcelona and online
       </p>
-      <img class="hero__logo" alt="EuroRust" src="/images/logo.webp" width="850" height="502" />
+      <picture>
+        <source srcset="/images/logo-mobile.webp" media="(max-width: 32rem)" />
+          <img
+          class="hero__logo"
+          alt="Eurorust"
+          src="/images/logo.webp"
+          width="850"
+          height="502">
+      </picture>
 
       <div class="hero__canvas">
         <canvas></canvas>

@@ -20,7 +20,8 @@
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: none;
-    width: clamp(600px, 45vw, 1600px);
+    width: 60vw;
+    max-width: 55rem;
     margin: 0 auto;
     background: var(--pink-300);
     border: 1.5px solid var(--blue-400);
@@ -131,8 +132,7 @@
     }
 
     img {
-      width: 20vw;
-      min-width: 200px;
+      width: clamp(200px, 20vw, 300px);
       padding: 1rem;
     }
   }

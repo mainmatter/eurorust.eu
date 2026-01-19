@@ -189,11 +189,10 @@
   background-color: var(--pink-300);
   background-image: url('/images/backgrounds/eurorust.svg');
   background-repeat: repeat;
-  margin: -20vw auto;
+  margin: -18vw auto;
   padding: 20vw 0;
 
   @media screen and (max-width:60rem) {
-    margin: -18vw auto;
     padding: 33vw 0; 
     background-size: 33vw;
   }
