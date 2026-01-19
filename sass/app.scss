@@ -7,6 +7,7 @@
 @import "components/tito-button.scss";
 @import "components/hero";
 @import "components/nav";
+@import "components/nav-generic";
 @import "components/rustfest";
 @import "components/about";
 @import "components/footer";
@@ -47,16 +48,31 @@ body {
   .clouds-top {
     margin-bottom: -60vw;
     z-index: 1;
+
+    @media screen and (max-width: 60rem) {
+      margin-bottom: -152vw;
+    }
   }
 
   .clouds-middle {
     margin-top: -170vw;
     z-index: 1;
+
+    @media screen and (max-width: 60rem) {
+      .clouds-5 {
+        animation-delay: -20s;
+      }
+    }
   }
 
   .clouds-bottom {
     margin-bottom:-30vw;
     z-index:1; 
+
+    @media screen and (max-width: 60rem) {
+      margin-top: -100vw;
+      margin-bottom: 30vw;
+    }
   }
 }
 

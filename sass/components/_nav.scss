@@ -4,6 +4,10 @@ nav {
   top:0;
   left:0;
 
+  @media screen and (max-width: 60rem) {
+    position: static;
+  }
+
   .skip-link {
     position: absolute;
     background-color: var(--black);
@@ -25,7 +29,7 @@ nav {
 
   @media screen and (max-width: 60rem) {
     gap: .75rem;
-  }
+  } 
 }
 
 .nav__links-mm {
@@ -41,6 +45,10 @@ nav {
 } 
 
 .nav__logo {
+  @media screen and (max-width: 32rem) {
+    display: none;
+    }
+
   .link {
     display: flex;
     text-decoration: none;
@@ -69,6 +77,18 @@ nav {
   transition: all 0.2s ease-in-out;
   border-radius: var(--corner); 
   border: 1px solid var(--orange-100);
+
+  @media screen and (max-width: 60rem) {
+    flex-direction: column;
+    gap: .75rem; 
+    width: auto;
+    margin: 0 auto;
+    border-radius: 0 0 var(--corner) var(--corner)
+  }
+
+  @media screen and (max-width: 32rem) {
+    padding: 1rem 2px;
+  }
 }
 
 .sticking .nav__wrapper {
@@ -76,23 +96,4 @@ nav {
   padding: .5rem 4.2rem .75rem 4.2rem;
   transition: all 0.2s ease-in-out;
   border-radius: 0 0 var(--corner) var(--corner);
-}
-
-@media screen and (max-width: 60rem) {
-  .nav {
-    position: static;
-  }
-
-  .nav__wrapper {
-    flex-direction: column;
-    gap: .75rem; 
-    width: auto;
-    margin: 0 auto;
-  }
-}
-
-@media screen and (max-width: 32rem) {
-  .nav__links {
-    flex-direction: column;
-  }
 }

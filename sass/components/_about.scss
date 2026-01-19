@@ -143,5 +143,9 @@
     padding-bottom: 2rem;
     color: var(--blue-300);
     @include stroke(var(--blue-300), 0.5px);
+
+    @media screen and (max-width: 60rem) {
+      margin-top: -18vw; 
+    }
   }
 }

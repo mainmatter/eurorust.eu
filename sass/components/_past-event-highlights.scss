@@ -32,17 +32,16 @@
 
   margin-top: -1px;
   padding: 7rem 0;
+  text-align: center;
   
   h1 {
     @include stroke__shadow(var(--orange-100), 0.5px);
     margin-bottom: 8rem;
-  }
 
-  @media screen and (max-width: 60rem) {
-    margin: 4rem auto;
+    @media screen and (max-width: 60rem) {
+      margin-bottom: 5rem;
+      }
   }
-
-  text-align: center;
 
   lite-youtube {
     margin: 0 auto;
@@ -59,6 +58,10 @@
   padding-bottom: 10rem;
   z-index: 2; 
   position: relative;
+
+  @media screen and (max-width: 60rem) {
+    padding-bottom: 5rem;
+    }
 }
 
 .past-event-highlights__grid {
@@ -78,7 +81,7 @@
 }
 
 .past-event-highlights__video {
-  width: clamp(300px, 50vw, 900px);
+  width: clamp(250px, 50vw, 900px);
   margin: 0 auto;
   align-content: center;
   background: linear-gradient(black, black), 
@@ -91,6 +94,8 @@
   position: relative;
 
   @media screen and (max-width: 60rem) {
+    border: 1rem solid transparent;
+    border-width: 1rem;
     padding: 10vw;
   }
 }

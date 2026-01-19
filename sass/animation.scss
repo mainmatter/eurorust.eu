@@ -75,18 +75,30 @@ $clouds:
 .clouds-1 {
     height: 46vw;
     animation-delay: -100s;
+
+    @media screen and (max-width: 60rem) {
+      height: 92vw;
+    }
 }
 
 .clouds-2 {
     height: 40vw;
     animation-delay: -13s;
     top: -45vw;
+
+     @media screen and (max-width: 60rem) {
+      height: 80vw;
+    }
 }
 
 .clouds-3 {
     height: 37vw;
     animation-delay: -120s;
     opacity: 0.8;
+
+      @media screen and (max-width: 60rem) {
+      height: 74vw;
+    }
 }
 
 .clouds-4 {
@@ -94,6 +106,10 @@ $clouds:
     margin-top: -36vw;
     animation-delay: -30s;
     opacity: 0.5;
+
+    @media screen and (max-width: 60rem) {
+      height: 114vw;
+    }
 }
 
 .clouds-5 {
@@ -101,6 +117,11 @@ $clouds:
     animation-delay: -50s;
     opacity: 0.5;
     margin-bottom: 39vw;
+
+    @media screen and (max-width: 60rem) {
+      height: 78vw;
+      margin-bottom: 0;
+    }
 }
 
 //Soap bubbles 

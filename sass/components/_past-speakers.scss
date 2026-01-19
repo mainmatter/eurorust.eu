@@ -21,7 +21,6 @@
   margin-top: -1px;
 
   @media screen and (max-width: 60rem) {
-    margin: 4rem auto;
     padding-top: 0;
   }
 
@@ -33,16 +32,39 @@
   .clouds-top {
     margin-bottom: -60vw;
     z-index: 1;
+
+    @media screen and (max-width: 60rem) {
+      margin-bottom: -150vw;
+      
+    }
   }
 
   .clouds-middle {
     margin-top: -200vw;
     z-index: 1;
+    top: 0; 
+
+    @media screen and (max-width: 60rem) {
+      margin-top: -513vw;
+
+      .clouds-5 {
+        opacity: 0.9;
+      }
+    }
   }
 
   .clouds-bottom {
     margin-top:auto;
     z-index:1; 
+
+    @media screen and (max-width: 60rem) {
+      margin-top: 270vw;
+      
+      .clouds-5 {
+        top: -48vw;
+        opacity: 0.8;
+      }
+    }
   }
 
   .speakers__buttons {
@@ -56,18 +78,22 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center center;
-      width: 16vw;
-      height: 16.4vw;
+      width: 16rem;
+      height: 16rem;
+      margin: -11rem auto 16rem auto;
       animation: bubbles 9s infinite ease-in-out;
       animation-delay: 1s;
       z-index: 1;
-      margin: -11vw auto 16vw auto;
     }
   }
   .speakers__ticket-button {
     @include btn__primary-orange;
-    padding: 10px 75px;
+    padding: .8rem 4.5rem;
     z-index: 2;
+
+    @media screen and (max-width: 60rem) {
+      padding: 1rem 4.5rem;
+    }
   }
 
   img.speaker__portrait {

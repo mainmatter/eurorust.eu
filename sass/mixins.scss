@@ -14,11 +14,6 @@
   &:active {
    animation: jelly 0.5s ease-in-out;
   }
-
-  @media (max-width: 60rem) {
-    padding: 8px;
-    width: 70vw;
-  }
 }
 
 @mixin btn__image {
@@ -183,6 +178,12 @@
   background-repeat: repeat;
   margin: -20vw auto;
   padding: 20vw 0;
+
+  @media screen and (max-width:60rem) {
+    margin: -18vw auto;
+    padding: 33vw 0; 
+    background-size: 33vw;
+  }
 }
 
 @mixin textlink-hover-animation {

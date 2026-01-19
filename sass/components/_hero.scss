@@ -59,6 +59,7 @@
     @media screen and (max-width: 60rem) {
       width: 80vw;
     }
+    
 
     &::before {
       content: '';
@@ -72,6 +73,12 @@
       top: 20rem;
       left: 0;
       animation: bubbles 3s infinite ease-in-out;
+
+       @media screen and (max-width: 60rem) {
+        left: 74vw;
+        width: 19vw;
+        height: 14.2vw;
+      }
     }
 
     .hero__grid-meta-info {
@@ -103,6 +110,10 @@
     border-radius: var(--corner);
     box-shadow: inset 0 5px 5px var(--blue-200);
 
+     @media screen and (max-width: 60rem) {
+        padding: clamp(1.5rem, 8vw, 3rem);
+      }
+
     &::before {
       content: '';
       background-image: url("/images/backgrounds/bubble1.webp");
@@ -117,6 +128,14 @@
       left: -65%;
       animation: bubbles 3s infinite ease-in-out;
       animation-delay: 1s;
+
+       @media screen and (max-width: 60rem) {
+        width: 16vw;
+        height: 16.4vw;
+        margin-bottom: - 16.4vw;
+        top: -5vw;
+        left: -58%;
+      }
     }
 
     &::after {
@@ -133,12 +152,29 @@
       right: -65%;
       animation: bubbles 3s infinite ease-in-out;
       animation-delay: 2.5s;
+
+      @media screen and (max-width: 60rem) {
+        width: 11.56vw;
+        height: 12.1vw;
+        margin-bottom: - 12.1vw;
+        top: 1rem;
+        right: 0;
+      }
     }
 
     .hero__grid-content-header {
       @include stroke__shadow(var(--orange-100), 0.5px);
+
+      @media screen and (max-width: 60rem) {
+        text-align: center;
+      }
     }
 
+    .hero__grid-content-about {
+       @media screen and (max-width: 60rem) {
+        text-align: center;
+      }
+    }
     .hero__grid-button {
       &:first-child {
         @include btn__primary-purple;
