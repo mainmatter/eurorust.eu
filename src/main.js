@@ -9,7 +9,7 @@ import {
   ShaderMaterial,
   Vector3,
   Color,
-  DoubleSide
+  DoubleSide,
 } from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
@@ -35,12 +35,12 @@ async function ferris() {
   // Shader Material (Gummy Jell-O)
   // -----------------------------
   const material = new ShaderMaterial({
-  uniforms: {
-    uColor: { value: new Color(0xfccc3a) },           // base yellow
-    uLightPos: { value: new Vector3(0, 5, 5) },
-    uInternalPos: { value: new Vector3(2, 0, 0) },
-  },
-  vertexShader: `
+    uniforms: {
+      uColor: { value: new Color(0xfccc3a) }, // base yellow
+      uLightPos: { value: new Vector3(0, 5, 5) },
+      uInternalPos: { value: new Vector3(2, 0, 0) },
+    },
+    vertexShader: `
     varying vec3 vNormal;
     varying vec3 vPos;
     varying vec3 vViewDir;
@@ -52,7 +52,7 @@ async function ferris() {
       gl_Position = projectionMatrix * viewMatrix * vec4(vPos,1.0);
     }
   `,
-  fragmentShader: `
+    fragmentShader: `
     uniform vec3 uColor;
     uniform vec3 uLightPos;
     uniform vec3 uInternalPos;
@@ -87,10 +87,9 @@ async function ferris() {
       gl_FragColor = vec4(color, 0.95);
     }
   `,
-  transparent: true,
-  side: DoubleSide
-});
-
+    transparent: true,
+    side: DoubleSide,
+  });
 
   // -----------------------------
   // Build scene

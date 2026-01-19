@@ -1,11 +1,11 @@
 .pre-footer {
   .footer__image {
-      margin: 4rem auto 7rem auto;
-      transform: scale(-1, 1);
-      width: 20vw;
-      display: block;
-      animation: bubbles 5s infinite ease-in-out;
-    }
+    margin: 4rem auto 7rem auto;
+    transform: scale(-1, 1);
+    width: 20vw;
+    display: block;
+    animation: bubbles 5s infinite ease-in-out;
+  }
 
   .separator__bottom {
     background-color: var(--blue-700);
@@ -21,7 +21,7 @@
     }
   }
 }
-  
+
 .footer {
   background-color: var(--blue-700);
   margin-top: -1px;
@@ -29,15 +29,14 @@
   .footer__container {
     display: flex;
     flex-direction: column;
-    gap: 1rem; 
+    gap: 1rem;
   }
 
   .footer__link {
     color: var(--blue-100);
 
     &:hover,
-    &:active 
-    {
+    &:active {
       @include textlink-hover-animation;
     }
   }
@@ -64,7 +63,7 @@
       gap: 1rem;
       justify-content: left;
       padding-left: 5vw;
-      padding-right: 5vw; 
+      padding-right: 5vw;
     }
   }
 
@@ -85,8 +84,7 @@
     text-align: center;
     padding: 2rem 0 4rem 0;
     margin-top: 2rem;
-    background-image: 
-    url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect opacity="0.2" x="0.5" y="0.5" width="24" height="24" stroke="%23FFF9E1"/></svg>');
+    background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect opacity="0.2" x="0.5" y="0.5" width="24" height="24" stroke="%23FFF9E1"/></svg>');
 
     @media screen and (max-width: 60rem) {
       text-align: left;
@@ -98,5 +96,3 @@
     background-color: var(--blue-100);
   }
 }
-
-

@@ -6,7 +6,7 @@
   .separator__bottom {
     background: var(--blue-300);
   }
-  
+
   p {
     color: var(--blue-400);
   }
@@ -45,8 +45,7 @@
     border-bottom: 1.5px solid var(--blue-400);
     border-top-right-radius: var(--corner);
     border-top-left-radius: var(--corner);
-    background-image: 
-      url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect opacity="1" x="0.5" y="0.5" width="24" height="24" stroke="%2384B9CF"/></svg>');
+    background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect opacity="1" x="0.5" y="0.5" width="24" height="24" stroke="%2384B9CF"/></svg>');
   }
 
   .venue__image {
@@ -75,7 +74,7 @@
     @include stroke(var(--blue-300), 0.5px);
 
     @media screen and (max-width: 60rem) {
-      margin-top: -18vw; 
+      margin-top: -18vw;
     }
   }
 }

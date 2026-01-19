@@ -1,6 +1,6 @@
 .past-event-highlights {
   &::before {
-    content: '';
+    content: "";
     background-image: url("/images/backgrounds/lens-flare.webp");
     position: relative;
     display: block;
@@ -15,7 +15,7 @@
   }
 
   &::after {
-    content: '';
+    content: "";
     background-image: url("/images/backgrounds/lens-flare.webp");
     position: relative;
     display: block;
@@ -33,14 +33,14 @@
   margin-top: -1px;
   padding: 7rem 0;
   text-align: center;
-  
+
   h1 {
     @include stroke__shadow(var(--orange-100), 0.5px);
     margin-bottom: 8rem;
 
     @media screen and (max-width: 60rem) {
       margin-bottom: 5rem;
-      }
+    }
   }
 
   lite-youtube {
@@ -53,15 +53,15 @@
 }
 
 .past-event-highlights__content {
-  background: url('/images/backgrounds/circle.svg') no-repeat center center;
+  background: url("/images/backgrounds/circle.svg") no-repeat center center;
   background-size: contain;
   padding-bottom: 10rem;
-  z-index: 2; 
+  z-index: 2;
   position: relative;
 
   @media screen and (max-width: 60rem) {
     padding-bottom: 5rem;
-    }
+  }
 }
 
 .past-event-highlights__grid {
@@ -76,7 +76,7 @@
   width: clamp(15rem, 18vw, 20rem);
 
   @media screen and (max-width: 60rem) {
-    width: 20vw; 
+    width: 20vw;
   }
 }
 
@@ -84,8 +84,7 @@
   width: clamp(250px, 50vw, 900px);
   margin: 0 auto;
   align-content: center;
-  background: linear-gradient(black, black), 
-              var(--pink-gradient);
+  background: linear-gradient(black, black), var(--pink-gradient);
   border: 2rem solid transparent;
   background-repeat: no-repeat;
   background-origin: padding-box, border-box;
