@@ -17,9 +17,13 @@
 }
 
 @mixin btn__image {
+  scale: 1;
+  transition: all 0.2s ease-in-out;
+
   &:hover,
   &:active {
-   animation: jelly 0.5s ease-in-out;
+    scale: 1.05;
+    transition: all 0.2s ease-in-out;
   }
 }
 
@@ -30,6 +34,15 @@
   font-size: clamp(14px, 1.5vw, 38px);
   line-height: normal;
   text-decoration: none;
+  scale: 1;
+  transition: all 0.2s ease-in-out;
+
+  &:hover,
+  &:active {
+    animation: none;
+    scale: 1.1;
+    transition: all 0.2s ease-in-out;
+  }
 
   @media (max-width: 60rem) {
     padding: 5px 15px;

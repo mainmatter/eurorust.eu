@@ -1,3 +1,14 @@
+// Animated hover links in paragraphs and the footer
+@keyframes btnText {
+  0% {
+    background-position-x: -4rem;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
 // Jelly Animation for Buttons
   @keyframes jelly {
     0% {

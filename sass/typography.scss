@@ -91,16 +91,6 @@ a {
   text-underline-position: from-font;
 }
 
-@keyframes btnText {
-  0% {
-    background-position-x: -4rem;
-  }
-
-  100% {
-    background-position: 0 0;
-  }
-}
-
 a:not([class]) {
   display: block;
   -webkit-text-fill-color: var(--orange-100);
