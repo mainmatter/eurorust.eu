@@ -114,10 +114,6 @@ hr.separator {
   border-bottom: 0;
 }
 
-.wordbreak {
-  hyphens: auto;
-}
-
 .separator__top {
   @include separator__top;
 }
