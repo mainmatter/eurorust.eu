@@ -220,11 +220,12 @@
     web="https://amandastjerna.se/"
 
 [[extra.speakers]]
-	name="Ashley Williams"
-	job_title="Former Rust Core team member and Founding Executive Director of the Rust Foundation"
-	image="/images/speakers/ashley-williams.webp"
-	twitter="https://x.com/ag_dubs"
-  github="https://github.com/ashleygwilliams"
+	name="Luca Palmieri"
+	job_title="Principal Engineering Consultant"
+  company="Mainmatter"
+	image="/images/speakers/luca-palmieri.webp"
+	web="https://www.lpalmieri.com/"
+  github="https://github.com/LukeMathWalker"
 
 [[extra.speakers]]
 	name="Niko Matsakis"
@@ -240,4 +241,11 @@
 	job_title="Creative Technologist"
 	image="/images/speakers/lisa-passing.webp"
 	web="https://lislis.de/?utm_source=eurorust"
+
+[[extra.speakers]]
+	name="Ashley Williams"
+	job_title="Former Rust Core team member and Founding Executive Director of the Rust Foundation"
+	image="/images/speakers/ashley-williams.webp"
+	twitter="https://x.com/ag_dubs"
+  github="https://github.com/ashleygwilliams"
 +++
