@@ -51,6 +51,25 @@
   }
 }
 
+@mixin btn__underline($color: var(--white)) {
+  @include button;
+  border-radius: 0;
+  border: none;
+  padding: 10px 0 5px 0;
+  border-bottom: 2px solid $color;
+  font-size: clamp(14px, 1.5vw, 38px);
+  line-height: normal;
+  scale: 1;
+  transition: all 0.2s ease-in-out;
+
+  &:hover,
+  &:active {
+    animation: none;
+    scale: 1.1;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
 @mixin btn__text($color: var(--white)) {
   @include btn__secondary;
   border: none;
