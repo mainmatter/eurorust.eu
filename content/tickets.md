@@ -1,4 +1,4 @@
 +++
 template = "tickets.html"
-title = "Eurorust 2025 Tickets"
+title = "Eurorust 2026 Tickets"
 +++
