@@ -18,7 +18,8 @@
         <p><span class="speaker__name">{{ speaker.name }}</span></p>
         <p></p>
         <p class="speaker__job">
-          {% if speaker.job_title %}{{ speaker.job_title }}{% endif %}{% if speaker.company %}at {{ speaker.company }}{% endif %}
+          {% if speaker.job_title %}{{ speaker.job_title }}{% endif %}{% if speaker.company %}&nbsp;at
+          {{ speaker.company }}{% endif %}
         </p>
         <ul class="speaker__socials">
           {% if speaker.twitter %}
