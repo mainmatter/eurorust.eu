@@ -1,47 +1,47 @@
 +++
 [[extra.past_sponsors]]
   title="OxidOS"
-  link="https://oxidos.io/"
+  link="https://oxidos.io/?utm_source=eurorust"
   image="/images/past-sponsors/oxidOS.svg"
 
 [[extra.past_sponsors]]
   title="Wyliodrin"
-  link="https://wyliodrin.com/"
+  link="https://wyliodrin.com/?utm_source=eurorust"
   image="/images/past-sponsors/wyliodrin.svg"
 
 [[extra.past_sponsors]]
   title="Polar Signals"
-  link="https://www.polarsignals.com//"
+  link="https://www.polarsignals.com/?utm_source=eurorust"
   image="/images/past-sponsors/polar-signals.svg"
 
 [[extra.past_sponsors]]
   title="JetBrains"
-  link="https://www.jetbrains.com/"
+  link="https://www.jetbrains.com/?utm_source=eurorust"
   image="/images/past-sponsors/jetbrains.svg"
 
 [[extra.past_sponsors]]
   title="Codspeed"
-  link="https://codspeed.io/"
+  link="https://codspeed.io/?utm_source=eurorust"
   image="/images/past-sponsors/codspeed.svg"
 
 [[extra.past_sponsors]]
   title="Wincent"
-  link="https://www.wincent.com/"
+  link="https://www.wincent.com/?utm_source=eurorust"
   image="/images/past-sponsors/wincent.svg"
 
 [[extra.past_sponsors]]
   title="Solana"
-  link="https://solana.com/"
+  link="https://solana.com/?utm_source=eurorust"
   image="/images/past-sponsors/solana.svg"
 
 [[extra.past_sponsors]]
   title="Helsing"
-  link="https://helsing.ai/"
+  link="https://helsing.ai/?utm_source=eurorust"
   image="/images/past-sponsors/helsing.svg"
 
 [[extra.past_sponsors]]
   title="Hightec"
-  link="https://hightec-rt.com/"
+  link="https://hightec-rt.com/?utm_source=eurorust"
   image="/images/past-sponsors/hightec.svg"
 
 [[extra.past_sponsors]]
@@ -56,27 +56,27 @@
 
 [[extra.past_sponsors]]
   title="Open Source Security"
-  link="https://opensrcsec.com"
+  link="https://opensrcsec.com/?utm_source=eurorust"
   image="/images/past-sponsors/oss.svg"
 
 [[extra.past_sponsors]]
   title="Mullvad VPN AB"
-  link="https://mullvad.net/en"
+  link="https://mullvad.net/en?utm_source=eurorust"
   image="/images/past-sponsors/mullvad.svg"
 
 [[extra.past_sponsors]]
   title="Woven by Toyota"
-  link="https://woven.toyota/"
+  link="https://woven.toyota/?utm_source=eurorust"
   image="/images/past-sponsors/woven.svg"
 
 [[extra.past_sponsors]]
   title="Rust Foundation"
-  link="https://rustfoundation.org"
+  link="https://rustfoundation.org/?utm_source=eurorust"
   image="/images/past-sponsors/rust-foundation.svg"
 
 [[extra.past_sponsors]]
   title="Peeriot"
-  link="http://peeriot.io/"
+  link="http://peeriot.io/?utm_source=eurorust"
   image="/images/past-sponsors/peeriot.svg"
 
 [[extra.past_sponsors]]
@@ -151,22 +151,22 @@
 
 [[extra.past_sponsors]]
 	title="BMW Car IT"
-	link="https://www.bmw-carit.de/en.html"
+	link="https://www.bmw-carit.de/en.html?utm_source=eurorust"
 	image="/images/past-sponsors/bmw-car-it.png"
 
 [[extra.past_sponsors]]
 	title="Veecle GmbH"
-	link="https://veecle.io"
+	link="https://veecle.io?utm_source=eurorust"
 	image="/images/past-sponsors/veecle.png"
 
 [[extra.past_sponsors]]
 	title="WyeWorks LLC"
-	link="https://www.wyeworks.com/"
+	link="https://www.wyeworks.com/?utm_source=eurorust"
 	image="/images/past-sponsors/wyeworks.svg"
 
 [[extra.past_sponsors]]
 	title="Polkadot Blockchain Academy"
-	link="https://polkadot.academy/"
+	link="https://polkadot.academy/?utm_source=eurorust"
 	image="/images/past-sponsors/polkadot.svg"
 
 
