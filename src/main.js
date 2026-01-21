@@ -16,6 +16,9 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { observeScroll } from "./scroll";
 observeScroll();
 
+import { btnPrimaryAnimation } from "./btn__primary-animation";
+btnPrimaryAnimation();
+
 function debounce(callback, wait) {
   let to = null;
   return (...args) => {
