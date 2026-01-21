@@ -6,13 +6,15 @@
   align-items: center;
   gap: 10px;
   cursor: pointer;
-  transition: all 0.4s;
+  transition: all 0.2s ease-in-out;
+  transform: scale(1);
   width: auto;
   position: relative;
 
   &:hover,
   &:active {
-    animation: jelly 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.14, 1.05);
   }
 }
 
@@ -99,6 +101,7 @@
   box-shadow:
     0 0.75rem 0.5rem $shadow1 inset,
     0 0.25rem 0.5rem 0 $shadow2 inset;
+  transition: 0.3 ease-in-out;
 
   &::before {
     content: "";
@@ -119,6 +122,7 @@
       #ffffff 80%,
       rgba(255, 255, 255, 0.3) 100%
     );
+    transition: 0.3 ease-in-out;
   }
 
   &::after {
@@ -141,6 +145,19 @@
       #ffffff 80%,
       rgba(255, 255, 255, 0) 100%
     );
+  }
+
+  &:hover {
+    transition: 0.3s ease-in-out;
+    background-image: linear-gradient(lighten($color1, 5%) 0%, $color2 75%, lighten($color3, 5%) 95%);
+    box-shadow:
+      0 1rem 0.75rem $shadow1 inset,
+      0 0.5rem 1rem 0 $shadow2 inset;
+
+    &::before {
+      filter: blur(2px);
+      transition: 0.3 ease-in-out;
+    }
   }
 }
 
