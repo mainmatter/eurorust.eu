@@ -103,11 +103,13 @@
   font-size: clamp(18px, 1.9vw, 48px);
   color: var(--white);
   text-decoration: none;
-  background-image: linear-gradient($color1 0%, $color2 75%, $color3 95%);
+  background-image: linear-gradient($color1 10%, $color2 65%, $color3 85%);
   box-shadow:
     0 0.75rem 0.5rem $shadow1 inset,
     0 0.25rem 0.5rem 0 $shadow2 inset;
   transition: all 0.3s ease-in-out;
+  background-position: 0 -20px;
+  background-size: 100% calc(100% + 20px);
 
   &::before {
     content: "";
@@ -155,10 +157,10 @@
 
   &:hover {
     transition: all 0.3s ease-in-out;
+    background-position: 0 0;
     box-shadow:
       0 1rem 0.75rem $shadow1 inset,
       0 0.5rem 1rem 0 $shadow2 inset;
-
     &::before {
       filter: blur(2px);
     }
