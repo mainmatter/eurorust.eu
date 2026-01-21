@@ -6,7 +6,6 @@ export default {
     },
     outDir: 'static/bundle',
     assetsDir: '',
-    minify: process.env.BUILD_MODE === 'production',
   },
 
   publicDir: false,
