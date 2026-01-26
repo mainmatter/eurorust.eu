@@ -63,7 +63,7 @@
   @include btn__secondary;
   border-radius: 0;
   border: none;
-  padding: 10px 0 5px 0;
+  padding: 0 0 7px 0;
   border-bottom: 2px solid $color;
   font-size: clamp(14px, 1.5vw, 38px);
   line-height: normal;
@@ -75,6 +75,10 @@
     animation: none;
     scale: 1.1;
     transition: all 0.2s ease-in-out;
+  }
+
+  @media (max-width: 60rem) {
+    padding: 0 0 5px 0;
   }
 }
 
