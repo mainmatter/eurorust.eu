@@ -4,7 +4,6 @@
 @import "./colors.scss";
 @import "./utility";
 @import "./animation";
-@import "components/tito-button.scss";
 @import "components/hero";
 @import "components/nav";
 @import "components/nav-generic";
@@ -15,10 +14,8 @@
 @import "components/past-speakers";
 @import "components/past-sponsors";
 @import "components/topics";
-@import "components/past-event-highlights";
 @import "components/hover-effect";
 @import "components/generic-content";
-@import "components/schedule-overview";
 @import "components/activity";
 @import "components/venue";
 
@@ -106,12 +103,6 @@ img {
 
 .inline {
   display: inline;
-}
-
-hr.separator {
-  border-top: 2px dotted var(--blue-light);
-  color: transparent;
-  border-bottom: 0;
 }
 
 .separator__top {
