@@ -1,11 +1,47 @@
 .past-event-highlights {
-  margin: 8rem auto;
-
-  @media screen and (max-width: 60rem) {
-    margin: 4rem auto;
+  &::before {
+    content: "";
+    background-image: url("/images/backgrounds/lens-flare.webp");
+    position: relative;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 14.7vw;
+    height: 14.7vw;
+    margin-bottom: -14.7vw;
+    top: 20vw;
+    left: 3vw;
+    z-index: 1;
   }
 
+  &::after {
+    content: "";
+    background-image: url("/images/backgrounds/lens-flare.webp");
+    position: relative;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(45deg);
+    width: 22vw;
+    height: 22vw;
+    margin-bottom: -22vw;
+    bottom: 18vw;
+    left: 70vw;
+    z-index: 1;
+  }
+
+  margin-top: -1px;
+  padding: 7rem 0;
   text-align: center;
+
+  h1 {
+    @include stroke__shadow(var(--orange-100), 0.5px);
+    margin-bottom: 8rem;
+
+    @media screen and (max-width: 60rem) {
+      margin-bottom: 5rem;
+    }
+  }
 
   lite-youtube {
     margin: 0 auto;
@@ -16,42 +52,49 @@
   animation: none;
 }
 
-.past-event-highlights__grid {
-  display: grid;
-  grid-template-columns: 14% 70% 14%;
-  justify-content: space-between;
+.past-event-highlights__content {
+  background: url("/images/backgrounds/circle.svg") no-repeat center center;
+  background-size: contain;
+  padding-bottom: 10rem;
+  z-index: 2;
+  position: relative;
 
   @media screen and (max-width: 60rem) {
-    display: block;
-    width: 90vw;
-    margin: 0 auto;
+    padding-bottom: 5rem;
   }
 }
 
+.past-event-highlights__grid {
+  display: grid;
+  grid-template-rows: auto auto;
+  justify-items: center;
+}
+
 .past-event-highlights__image {
-  width: 13vw;
-  justify-self: end;
+  margin-top: -3rem;
+  margin-bottom: 1rem;
+  width: clamp(15rem, 18vw, 20rem);
 
   @media screen and (max-width: 60rem) {
-    display: none;
+    width: 20vw;
   }
 }
 
 .past-event-highlights__video {
-  background-image: url('/images/backgrounds/frame-full.webp');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  padding: 2vw 5vw;
-  margin: 0 1vw;
+  width: clamp(250px, 50vw, 900px);
+  margin: 0 auto;
   align-content: center;
+  background: linear-gradient(black, black), var(--pink-gradient);
+  border: 2rem solid transparent;
+  background-repeat: no-repeat;
+  background-origin: padding-box, border-box;
+  border-radius: var(--corner);
+  border-width: 2rem;
+  position: relative;
 
   @media screen and (max-width: 60rem) {
+    border: 1rem solid transparent;
+    border-width: 1rem;
     padding: 10vw;
   }
-}
-
-.past-event-highlights__image:first-child {
-  transform: rotateY(180deg);
-  justify-self: start;
 }

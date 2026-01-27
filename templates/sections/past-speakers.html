@@ -1,4 +1,8 @@
 <section class="speakers">
+  <div class="clouds clouds-top">
+    <div class="clouds-3"></div>
+    <div class="clouds-4"></div>
+  </div>
   <h1 class="pb-8">Past Speakers</h1>
   <ul>
     {% for speaker in section.extra.speakers %}
@@ -7,74 +11,55 @@
           class="speaker__portrait"
           alt="{{ speaker.name }}"
           src="{{ speaker.image }}"
-          width="809"
-          height="736"
+          loading="lazy"
+          width="400"
+          height="402"
         />
-        <p><span class="bold">{{ speaker.name }}</span><br/>
-        {% if speaker.job_title %} {{ speaker.job_title }}{% endif %}{% if speaker.company %} at {{ speaker.company }}{% endif %}</p>
+        <p><span class="speaker__name">{{ speaker.name }}</span></p>
+        <p></p>
+        <p class="speaker__job">
+          {% if speaker.job_title %}{{ speaker.job_title }}{% endif %}{% if speaker.company %}&nbsp;at
+          {{ speaker.company }}{% endif %}
+        </p>
         <ul class="speaker__socials">
           {% if speaker.twitter %}
             <li>
-              <a
-                class="btn__icon"
-                href="{{ speaker.twitter }}"
-                target="_blank"
-                rel="noopener noreferrer"
+              <a class="btn__icon" href="{{ speaker.twitter }}" target="_blank" rel="noopener noreferrer"
                 ><img src="/images/icons/twitter.svg" alt="X" width="42" height="42"
               /></a>
             </li>
           {% endif %}
           {% if speaker.bsky %}
             <li>
-              <a
-                class="btn__icon"
-                href="{{ speaker.bsky }}"
-                target="_blank"
-                rel="noopener noreferrer"
+              <a class="btn__icon" href="{{ speaker.bsky }}" target="_blank" rel="noopener noreferrer"
                 ><img src="/images/icons/bluesky.svg" alt="Bluesky" width="42" height="42"
               /></a>
             </li>
           {% endif %}
           {% if speaker.mastodon %}
             <li>
-              <a
-                class="btn__icon"
-                href="{{ speaker.mastodon }}"
-                target="_blank"
-                rel="noopener noreferrer"
+              <a class="btn__icon" href="{{ speaker.mastodon }}" target="_blank" rel="noopener noreferrer"
                 ><img src="/images/icons/mastodon.svg" alt="Mastodon" width="42" height="42"
               /></a>
             </li>
           {% endif %}
           {% if speaker.linkedin %}
             <li>
-              <a
-                class="btn__icon"
-                href="{{ speaker.linkedin }}"
-                target="_blank"
-                rel="noopener noreferrer"
+              <a class="btn__icon" href="{{ speaker.linkedin }}" target="_blank" rel="noopener noreferrer"
                 ><img src="/images/icons/linkedin.svg" alt="LinkedIn" width="42" height="42"
               /></a>
             </li>
           {% endif %}
           {% if speaker.web %}
             <li>
-              <a
-                class="btn__icon"
-                href="{{ speaker.web }}"
-                target="_blank"
-                rel="noopener noreferrer"
+              <a class="btn__icon" href="{{ speaker.web }}" target="_blank" rel="noopener noreferrer"
                 ><img src="/images/icons/web.svg" alt="Internet" width="42" height="42"
               /></a>
             </li>
           {% endif %}
           {% if speaker.github %}
             <li>
-              <a
-                class="btn__icon"
-                href="{{ speaker.github }}"
-                target="_blank"
-                rel="noopener noreferrer"
+              <a class="btn__icon" href="{{ speaker.github }}" target="_blank" rel="noopener noreferrer"
                 ><img src="/images/icons/github.svg" alt="GitHub" width="42" height="42"
               /></a>
             </li>
@@ -83,4 +68,17 @@
       </li>
     {% endfor %}
   </ul>
+  <div class="speakers__buttons">
+    <a href="https://ti.to/events-matter/eurorust-2026" class="speakers__ticket-button" target="_blank"
+      >Get your ticket</a
+    >
+    <div class="speakers__buttons__background"></div>
+  </div>
+  <div class="clouds clouds-middle">
+    <div class="clouds-5"></div>
+  </div>
+  <div class="clouds clouds-bottom">
+    <div class="clouds-3"></div>
+    <div class="clouds-5"></div>
+  </div>
 </section>

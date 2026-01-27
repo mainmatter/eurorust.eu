@@ -1,8 +1,12 @@
 nav {
   z-index: 50;
-  position: relative;
-  background: linear-gradient(90deg, #fec976 0%, #c0cffa 47%, #c0cffa 97%);
-  padding: 14px 16px;
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  @media screen and (max-width: 60rem) {
+    position: static;
+  }
 
   .skip-link {
     position: absolute;
@@ -21,28 +25,44 @@ nav {
 .nav__links {
   display: flex;
   flex-direction: row;
-  gap: .25rem;
+  gap: 2rem;
+  align-items: baseline;
 
   @media screen and (max-width: 60rem) {
-    gap: .75rem;
+    gap: 1.5rem;
   }
 }
 
-.nav__links-schedule {
-  @include btn__text;
-} 
+.nav__links-mm {
+  font-size: clamp(14px, 1.5vw, 38px);
+  color: var(--white);
 
-.nav__logo {
-  .link {
-    display: flex;
-  }
-  .logo {
-    height: 20px;
-    padding-bottom: 0;
+  a {
+    @include btn__underline;
+
+    margin-left: 0.5rem;
 
     @media screen and (max-width: 60rem) {
-      width: 30vw;
-      padding-bottom: 0.75rem;
+      margin-left: 0.25rem;
+    }
+  }
+
+  img {
+    height: clamp(11px, 1.2vw, 25px);
+  }
+}
+
+.nav__logo {
+  @media screen and (max-width: 32rem) {
+    display: none;
+  }
+
+  .link {
+    display: flex;
+    text-decoration: none;
+
+    h1 {
+      @include stroke__shadow(var(--orange-100), 0.5px);
     }
   }
 }
@@ -55,15 +75,32 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 85%;
+  max-width: 114rem;
+  margin: 2rem auto;
+  background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect opacity="0.2" x="0.5" y="0.5" width="24" height="24" stroke="%23FFF9E1"/></svg>');
+  background-color: var(--blue-500);
+  padding: 1.5rem 4.2rem;
+  transition: all 0.2s ease-in-out;
+  border-radius: var(--corner);
+  border: 1px solid var(--orange-100);
+
+  @media screen and (max-width: 60rem) {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: auto;
+    margin: 0 auto;
+    border-radius: 0 0 var(--corner) var(--corner);
+  }
+
+  @media screen and (max-width: 32rem) {
+    padding: 1rem 2px;
+  }
 }
 
-@media screen and (max-width: 60rem) {
-  .nav {
-    position: static;
-  }
-
-  .nav__wrapper {
-    flex-direction: column;
-    gap: .75rem; 
-  }
+.sticking .nav__wrapper {
+  margin: 0 auto;
+  padding: 0.5rem 4.2rem 0.75rem 4.2rem;
+  transition: all 0.2s ease-in-out;
+  border-radius: 0 0 var(--corner) var(--corner);
 }

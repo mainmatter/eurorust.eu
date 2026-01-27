@@ -1,36 +1,56 @@
 @mixin button {
+  border-radius: 100px;
   display: inline-flex;
-  padding: 15px 40px;
+  padding: 10px 35px;
   justify-content: center;
   align-items: center;
   gap: 10px;
   cursor: pointer;
-  transition: all 0.4s;
+  transition: all 0.2s ease-in-out;
+  transform: scale(1);
   width: auto;
+  position: relative;
+
+  &:hover,
+  &:active {
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.14, 1.05);
+  }
+}
+
+@mixin btn__image {
+  scale: 1;
+  transition: all 0.2s ease-in-out;
 
   &:hover,
   &:active {
     scale: 1.05;
     transition: all 0.2s ease-in-out;
   }
-
-  @media (max-width: 60rem) {
-    padding: 8px;
-    width: 70vw;
-  }
 }
 
-@mixin btn__secondary($color: #1d113f) {
-  @include button;
+@mixin btn__secondary($color: var(--white)) {
   border-radius: 100px;
+  display: inline-flex;
+  padding: 10px 35px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
   border: 2px solid $color;
   color: $color;
-  font-family: Strenuous;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
+  font-size: clamp(14px, 1.5vw, 38px);
   line-height: normal;
   text-decoration: none;
+  scale: 1;
+  transition: all 0.2s ease-in-out;
+
+  &:hover,
+  &:active {
+    animation: none;
+    scale: 1.1;
+    transition: all 0.2s ease-in-out;
+  }
 
   @media (max-width: 60rem) {
     padding: 5px 15px;
@@ -39,14 +59,33 @@
   }
 }
 
-@mixin btn__text($color: #1d113f) {
+@mixin btn__underline($color: var(--white)) {
+  @include btn__secondary;
+  border-radius: 0;
+  border: none;
+  padding: 0 0 7px 0;
+  border-bottom: 2px solid $color;
+  font-size: clamp(14px, 1.5vw, 38px);
+  line-height: normal;
+  scale: 1;
+  transition: all 0.2s ease-in-out;
+
+  &:hover,
+  &:active {
+    animation: none;
+    scale: 1.1;
+    transition: all 0.2s ease-in-out;
+  }
+
+  @media (max-width: 60rem) {
+    padding: 0 0 5px 0;
+  }
+}
+
+@mixin btn__text($color: var(--white)) {
   @include btn__secondary;
   border: none;
   color: $color;
-  font-family: Strenuous;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
   line-height: normal;
   text-decoration: none;
 
@@ -56,30 +95,104 @@
   }
 }
 
-@mixin btn__primary {
+@mixin btn__primary-purple(
+  $color1: #ffb8d6,
+  $color2: #c000b5,
+  $color3: #940196,
+  $shadow1: rgba(255, 255, 255, 0.4),
+  $shadow2: rgba(180, 70, 207, 1)
+) {
   @include button;
-  border-radius: 45px;
-  border: 2px solid var(--blue-dark);
-  background: linear-gradient(90deg, var(--yellow) 0%, var(--green) 100%);
-  box-shadow: 0px 0px 100px 0px var(--yellow);
-  color: var(--blue-dark);
-  font-family: Strenuous;
-  font-size: clamp(32px, 2.9vw, 55px);
-  font-style: normal;
-  font-weight: 700;
-  line-height: 48px;
-  letter-spacing: 0.3vw;
+  padding: 20px 35px;
+  font-size: clamp(18px, 1.9vw, 48px);
+  color: var(--white);
   text-decoration: none;
+  background-image: linear-gradient($color1 10%, $color2 65%, $color3 85%);
+  box-shadow:
+    0 0.75rem 0.5rem $shadow1 inset,
+    0 0.25rem 0.5rem 0 $shadow2 inset;
+  transition: all 0.3s ease-in-out;
+  background-position: 0 -20px;
+  background-size: 100% calc(100% + 20px);
 
-  &:hover,
-  &:active {
-    box-shadow: 0px 0px 50px 0px var(--blue);
-    background: linear-gradient(90deg, var(--green) 0%, #f6d2d7 80%);
+  &::before {
+    content: "";
+    display: block;
+    height: 0.2rem;
+    position: absolute;
+    top: 0.35rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 4.5rem);
+    background: #fff;
+    border-radius: 100%;
+    opacity: 0.9;
+    background-image: linear-gradient(
+      -270deg,
+      rgba(255, 255, 255, 0.3) 0%,
+      #ffffff 20%,
+      #ffffff 80%,
+      rgba(255, 255, 255, 0.3) 100%
+    );
+    transition: all 0.3s ease-in-out;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    height: 0.25rem;
+    position: absolute;
+    bottom: 0.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 7.5rem);
+    background: #fff;
+    border-radius: 100%;
+    filter: blur(1px);
+    opacity: 0.05;
+    background-image: linear-gradient(
+      -270deg,
+      rgba(255, 255, 255, 0) 0%,
+      #ffffff 20%,
+      #ffffff 80%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+
+  &:hover {
+    transition: all 0.3s ease-in-out;
+    background-position: 0 0;
+    box-shadow:
+      0 1rem 0.75rem $shadow1 inset,
+      0 0.5rem 1rem 0 $shadow2 inset;
+    &::before {
+      filter: blur(2px);
+    }
   }
 }
 
+@mixin btn__primary-pink(
+  $color1: #f39cd1,
+  $color2: #f9528a,
+  $color3: #d31d7d,
+  $shadow1: rgba(255, 255, 255, 0.4),
+  $shadow2: rgba(180, 70, 207, 1)
+) {
+  @include btn__primary-purple($color1, $color2, $color3, $shadow1, $shadow2);
+}
+
+@mixin btn__primary-orange(
+  $color1: #ffcc92,
+  $color2: #fd9935,
+  $color3: #dc4e14,
+  $shadow1: rgba(255, 255, 255, 0.4),
+  $shadow2: rgba(193, 7, 7, 1)
+) {
+  @include btn__primary-purple($color1, $color2, $color3, $shadow1, $shadow2);
+}
+
 @mixin btn__secondary-large($color: var(--blue-light)) {
-  @include btn__primary;
+  @include btn__primary-purple;
   border: 2px solid $color;
   color: $color;
   background: none;
@@ -92,40 +205,104 @@
   }
 }
 
-@mixin dashed-border-with-corners() {
-  outline: 2px dotted var(--blue-light);
-  outline-offset: -15px;
+@mixin dark-blue-shadow {
+  text-shadow: 0 0 20px var(--blue-800);
+}
 
-  background-image:
-    url(/images/util/corner-top-left.svg), url(/images/util/corner-top-right.svg),
-    url(/images/util/corner-bottom-right.svg), url(/images/util/corner-bottom-left.svg);
-  background-position:
-    top left,
-    top right,
-    bottom right,
-    bottom left;
+@mixin stroke($color: #000, $size: 1px) {
+  text-shadow:
+    -#{$size} -#{$size} 0 $color,
+    0 -#{$size} 0 $color,
+    #{$size} -#{$size} 0 $color,
+    #{$size} 0 0 $color,
+    #{$size} #{$size} 0 $color,
+    0 #{$size} 0 $color,
+    -#{$size} #{$size} 0 $color,
+    -#{$size} 0 0 $color;
+}
+
+@mixin stroke__shadow($color: #000, $size: 1px) {
+  text-shadow:
+    -#{$size} -#{$size} 0 $color,
+    0 -#{$size} 0 $color,
+    #{$size} -#{$size} 0 $color,
+    #{$size} 0 0 $color,
+    #{$size} #{$size} 0 $color,
+    0 #{$size} 0 $color,
+    -#{$size} #{$size} 0 $color,
+    -#{$size} 0 0 $color,
+    0 0 20px var(--blue-800);
+}
+
+@mixin background__noise {
+  background-image: url(data:image/png;base64,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);
+  background-blend-mode: overlay;
+}
+
+@mixin separator__top {
+  @include background__noise;
+  z-index: 10;
+  position: relative;
+  mask-image: url("images/backgrounds/separator-mask.svg");
+  mask-repeat: no-repeat;
+  mask-position: top center;
+  mask-size: 101% auto;
+}
+
+@mixin separator__content {
+  background-image: url("/images/backgrounds/separator.svg");
+  background-size: contain;
   background-repeat: no-repeat;
-  background-size: 0.75rem;
+  display: block;
+  height: 20vw;
+}
 
-  transition: background 0.25s ease-in-out;
+@mixin separator__bottom {
+  @include separator__top;
+  rotate: 180deg;
+}
 
-  &:hover {
-    background-position:
-      top calc(0.75rem + 1px) left calc(0.75rem + 1px),
-      top calc(0.75rem + 1px) right calc(0.75rem + 1px),
-      bottom calc(0.75rem + 1px) right calc(0.75rem + 1px),
-      bottom calc(0.75rem + 1px) left calc(0.75rem + 1px);
+@mixin background-pink {
+  background-color: var(--pink-300);
+  background-image: url("/images/backgrounds/eurorust.svg");
+  background-repeat: repeat;
+  margin: -18vw auto;
+  padding: 20vw 0;
+
+  @media screen and (max-width: 60rem) {
+    padding: 33vw 0;
+    background-size: 33vw;
   }
 }
 
-@mixin dark-blue-background {
-  box-shadow:
-    0 1rem 20px var(--blue-dark),
-    0 -1rem 20px var(--blue-dark);
-
-  background-color: var(--blue-dark);
+@mixin textlink-hover-animation {
+  text-decoration-color: transparent;
+  background-repeat: no-repeat;
+  background: -webkit-linear-gradient(
+    65deg,
+    var(--orange-100) 0%,
+    var(--blue-100) 30%,
+    var(--pink-100) 70%,
+    var(--purple-100) 100%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-name: btnText;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
 }
 
-@mixin text-shadow {
-  text-shadow: 2px 2px 2px #14033a;
+@mixin sponsor-logo($gradient: var(--orange-gradient), $border-size: 1.25rem, $height: 3.5rem) {
+  background: transparent;
+  padding: 0.5rem 1rem;
+  background-image: linear-gradient(90deg, white, white), $gradient;
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  border: $border-size solid transparent;
+  border-radius: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: $height;
 }

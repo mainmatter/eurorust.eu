@@ -5,16 +5,15 @@
   }
 
   .schedule-overview__button {
-   @include btn__secondary(#b3e4ff);
+    @include btn__secondary(#b3e4ff);
   }
 
   .workshops,
-.desktop-schedule {
+  .desktop-schedule {
     .mentor + p {
-      margin-top:0;
+      margin-top: 0;
     }
 
-    @include dashed-border-with-corners;
     width: clamp(20px, 75vw, 1440px);
     margin: 2rem auto;
 
@@ -34,22 +33,22 @@
   object-fit: contain;
   width: 70%;
 
-   @media screen and (max-width: 60rem) {
+  @media screen and (max-width: 60rem) {
     width: clamp(15rem, 60%, 25rem);
-   }
+  }
 }
 
 .workshop-schedule__grid {
   display: grid;
-  grid-template-columns: repeat(2, 24rem); 
+  grid-template-columns: repeat(2, 24rem);
   grid-template-rows: repeat(1, 1fr);
   justify-content: center;
   text-wrap: balance;
   gap: 4rem;
 
   @media screen and (max-width: 75rem) {
-     grid-template-columns: repeat(2, 20rem); 
-     gap: 2rem;
+    grid-template-columns: repeat(2, 20rem);
+    gap: 2rem;
   }
 
   @media screen and (max-width: 60rem) {
@@ -57,11 +56,11 @@
     grid-template-rows: repeat (2, 1fr);
   }
 
-.activity-card__content {
-  p {
-    line-height: 1.5rem;
+  .activity-card__content {
+    p {
+      line-height: 1.5rem;
+    }
   }
-}
 }
 
 .schedule__table {
@@ -128,4 +127,3 @@
     max-width: 100%;
   }
 }
-

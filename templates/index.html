@@ -8,10 +8,22 @@
     {% include "sections/rustfest.html" %}
     {% include "sections/about.html" %}
     {% include "sections/past-speakers.html" %}
-    {% include "sections/presented-by.html" %}
-    {% include "sections/past-sponsors.html" %}
-
-    <img class="main__station" src="images/space-station.png" alt="" role="presentation" loading="lazy" />
+    {% include "sections/venue.html" %}
+    <div class="combined-background">
+      <div class="clouds clouds-top">
+        <div class="clouds-3"></div>
+        <div class="clouds-4"></div>
+      </div>
+      {% include "sections/presented-by.html" %}
+      {% include "sections/past-sponsors.html" %}
+      <div class="clouds clouds-middle">
+        <div class="clouds-5"></div>
+      </div>
+      <div class="clouds clouds-bottom">
+        <div class="clouds-3"></div>
+        <div class="clouds-5"></div>
+      </div>
+    </div>
   </div>
   {% include "sections/footer.html" %}
 {% endblock content %}
