@@ -7,6 +7,10 @@
     margin: 0;
   }
 
+  p + p {
+    margin-top: 0;
+  }
+
   .separator__top,
   .separator__bottom {
     background: var(--blue-300);
