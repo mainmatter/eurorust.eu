@@ -1,33 +1,20 @@
 .rustfest {
   margin: 0 auto;
-  padding: 6rem 0 3rem 0;
+  padding: 9rem 0 4rem 0;
   text-align: center;
   background-color: var(--blue-300);
   @include background__noise;
 
   @media screen and (max-width: 60rem) {
-    padding: 0;
+    padding: 6rem 0 0 0;
   }
 
   p {
-    color: var(--blue-500);
+    color: var(--orange-100);
     text-wrap: balance;
 
     @media screen and (max-width: 60rem) {
       padding-bottom: 1rem;
-    }
-  }
-
-  .rustfest__wrapper {
-    background-image: url("/images/backgrounds/circle.webp");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 50% 50%;
-    background-size: 80% 100%;
-    padding: 5rem 0;
-
-    @media screen and (max-width: 60rem) {
-      background-size: 100% 100%;
     }
   }
 }
