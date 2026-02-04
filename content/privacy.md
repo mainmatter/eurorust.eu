@@ -656,15 +656,15 @@ title = "Privacy Policy"
   </p>
 </div>
 
-<h3 class="mb-3 mt-7">13. Data protection provisions about the application and use of Tito</h3>
+<h3 class="mb-3 mt-7">13. Data protection provisions about the application and use of Ticket Tailor</h3>
 <div class="box privacy text-centered">
   <p>
-    On this website, the controller has integrated components of the enterprise Tito.
-    Tito is software which gives you the ability to register for events, make payments for those registrations and get notified about relevant news regarding the event.
+    On this website, the controller has integrated components of the enterprise Ticket Tailor.
+    Ticket Tailor is software which gives you the ability to register for events, make payments for those registrations and get notified about relevant news regarding the event.
   </p>
   <br>
   <p>
-    The operating company of Tito is Team Tito Limited of Unit 2, 64 Dame Street, Dublin 2, Ireland.
+    The operating company of Ticket Tailor is Zimma Limited, trading as Ticket Tailor of Unit 222, Mare Street Studios, 203-213 Mare Street, London, E8 3LY, United Kingdom.
   </p>
   <br>
   <p>
@@ -681,13 +681,13 @@ title = "Privacy Policy"
   </ul>
   <br>
   <p>
-    Tito collects more information about its users. This information isn’t passed on to us,
-    however, we suggest reading Tito’s privacy policy to see how it uses that information.
+    Ticket Tailor collects more information about its users. This information isn’t passed on to us,
+    however, we suggest reading Ticket Tailor’s privacy policy to see how it uses that information.
   </p>
   <br>
   <p>
-    The applicable data protection provisions of Tito may be accessed under
-    https://ti.to/privacy.
+    The applicable data protection provisions of Ticket Tailor may be accessed under
+    https://www.tickettailor.com/legal/privacy-policy.
   </p>
 </div>
   
