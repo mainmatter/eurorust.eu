@@ -1,8 +1,6 @@
 .newsletter {
   position: relative;
   z-index: 40;
-  background-color: var(--blue-300);
-  @include background__noise;
   padding: 7rem 0 0 0;
   text-align: center;
 
@@ -27,7 +25,8 @@
   }
 
   #mce-EMAIL {
-    width: clamp(350px, 40vw, 700px);
+    width: 55vw;
+    max-width: 700px;
     height: 58px;
     border-radius: 100px 0 0 100px;
     border: 0;
@@ -38,6 +37,8 @@
     margin-bottom: 1rem;
 
     @media screen and (max-width: 60rem) {
+      width: 50vw;
+      min-width: 280px;
       border-radius: 100px;
     }
 

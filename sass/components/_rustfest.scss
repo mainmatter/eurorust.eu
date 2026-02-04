@@ -2,8 +2,6 @@
   margin: 0 auto;
   padding: 9rem 0 4rem 0;
   text-align: center;
-  background-color: var(--blue-300);
-  @include background__noise;
 
   @media screen and (max-width: 60rem) {
     padding: 6rem 0 0 0;
