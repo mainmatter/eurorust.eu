@@ -1,4 +1,4 @@
-nav {
+.nav {
   z-index: 50;
   position: relative;
   background: linear-gradient(90deg, #fec976 0%, #c0cffa 47%, #c0cffa 97%);
@@ -15,6 +15,12 @@ nav {
     &:focus {
       opacity: 1;
     }
+  }
+
+  @media screen and (max-width: 60rem) {
+    position: sticky; /* Change to sticky */
+    top: 0; /* Stick to the top */
+    z-index: 100; /* Ensure it's above other content */
   }
 }
 
@@ -59,7 +65,8 @@ nav {
 
 @media screen and (max-width: 60rem) {
   .nav {
-    position: static;
+    position: sticky; /* Ensure it's sticky */
+    top: 0; /* Stick to the top */
   }
 
   .nav__wrapper {
