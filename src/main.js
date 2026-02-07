@@ -13,8 +13,9 @@ import {
 } from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
-import { observeScroll } from "./scroll";
+import { initBackToTopButton, observeScroll } from './scroll';
 observeScroll();
+initBackToTopButton();
 
 function debounce(callback, wait) {
   let to = null;
@@ -136,7 +137,7 @@ async function ferris() {
   // Renderer
   // -----------------------------
   const renderer = new WebGLRenderer({ canvas, alpha: true });
-  renderer.setSize(sizes.width, sizes.height);
+  renderer.setSize(sizes.width, sizes.height, false);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
   window.addEventListener(
@@ -149,7 +150,7 @@ async function ferris() {
       camera.aspect = sizes.width / sizes.height;
       camera.updateProjectionMatrix();
 
-      renderer.setSize(sizes.width, sizes.height);
+      renderer.setSize(sizes.width, sizes.height, false);
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     }, 100)
   );

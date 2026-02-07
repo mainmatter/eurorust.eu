@@ -5,7 +5,7 @@ nav {
   left: 0;
 
   @media screen and (max-width: 60rem) {
-    position: static;
+    /* position: static; */
   }
 
   .skip-link {
@@ -29,7 +29,7 @@ nav {
   align-items: baseline;
 
   @media screen and (max-width: 60rem) {
-    gap: 1.5rem;
+    gap: 0.75rem;
   }
 }
 
@@ -90,10 +90,11 @@ nav {
     gap: 0.75rem;
     width: auto;
     margin: 0 auto;
-    border-radius: 0 0 var(--corner) var(--corner);
+    border-radius: var(--corner);
   }
 
-  @media screen and (max-width: 32rem) {
+  @media screen and (max-width: 60rem) {
+    margin: 1rem 5vw 0;
     padding: 1rem 2px;
   }
 }
@@ -103,4 +104,9 @@ nav {
   padding: 0.5rem 4.2rem 0.75rem 4.2rem;
   transition: all 0.2s ease-in-out;
   border-radius: 0 0 var(--corner) var(--corner);
+
+  @media screen and (max-width: 60rem) {
+    margin: 0 5vw 0;
+    padding: 0.5rem 2px;
+  }
 }

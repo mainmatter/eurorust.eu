@@ -1,0 +1,51 @@
+.back-to-top {
+  position: fixed;
+  right: clamp(1rem, 2.2vw, 2.5rem);
+  bottom: clamp(1rem, 2.2vw, 2.5rem);
+  z-index: 70;
+  width: 3.25rem;
+  height: 3.25rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--orange-100);
+  border-radius: 100%;
+  background: linear-gradient(var(--blue-300), var(--blue-500));
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow:
+    0 0.65rem 0.9rem rgba(0, 28, 118, 0.25),
+    inset 0 0.2rem 0.5rem rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(0.5rem);
+  transition: all 0.2s ease-in-out;
+
+  &.is-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  &:hover {
+    box-shadow:
+      0 0.85rem 1rem rgba(0, 28, 118, 0.35),
+      inset 0 0.3rem 0.65rem rgba(255, 255, 255, 0.6);
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--orange-100);
+    outline-offset: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .back-to-top {
+    transition: none;
+  }
+}
