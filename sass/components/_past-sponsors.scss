@@ -122,11 +122,12 @@
       z-index: 3;
 
       @media screen and (max-width: 60rem) {
-        grid-template-columns: 30% 30%;
+        grid-template-columns: repeat(2, 1fr) !important; // 2 columns on mobile
+        column-gap: 1.5rem;
       }
 
       @media screen and (max-width: 32rem) {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr) !important; // still 2 columns on very small screens
       }
 
       a {

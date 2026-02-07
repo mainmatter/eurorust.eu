@@ -1,5 +1,5 @@
 .venue {
-  margin-bottom:-2px;
+  margin-bottom: -2px;
 
   .separator__top {
     background: var(--blue-500);
@@ -14,7 +14,7 @@
   }
 
   .venue__grid {
-    @include background-pink;
+    @include background-pink; // keep the pink pattern
   }
 
   .venue__map-button {
@@ -28,11 +28,23 @@
     flex-direction: column;
     width: 60vw;
     max-width: 55rem;
-    background: var(--pink-300);
-    border: 1.5px solid var(--blue-400);
+    background: rgba(255, 255, 255, 0); // Start with a very transparent background
+    border: 1.5px solid var(--blue-400); // Solid border for structure
     border-radius: var(--corner);
     margin: 0 auto;
     text-align: center;
+    overflow: hidden;
+    padding: 2rem 0;
+    backdrop-filter: blur(1px);           // Apply blur to the card's background (no glass effect)
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); // Soft shadow for a floating effect
+    transition: all 0.4s ease; // smooth transition for hover
+
+    &:hover {
+      transform: translateY(-10px) scale(1.02); // Lift and scale the container on hover
+      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15); // Deeper shadow on hover
+      border-color: rgba(255, 255, 255, 0.6); // Brighter border on hover
+      background: rgba(255, 255, 255, 0.3); // Slightly more transparent on hover
+    }
 
     @media screen and (max-width: 60rem) {
       width: 70vw;
@@ -47,16 +59,23 @@
     border-bottom: 1.5px solid var(--blue-400);
     border-top-right-radius: var(--corner);
     border-top-left-radius: var(--corner);
-    background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect opacity="1" x="0.5" y="0.5" width="24" height="24" stroke="%2384B9CF"/></svg>');
+    background: rgba(255, 255, 255, 0.1); // Consistent with the card's background
+    transition: transform 0.4s ease; // smooth rotation effect on hover
   }
 
   .venue__image {
     padding: 3rem;
     max-width: 30vw;
     margin: 0 auto;
+    display: block;
+    transition: transform 0.4s ease; // smooth rotation
 
     @media screen and (max-width: 60rem) {
       max-width: 50vw;
+    }
+
+    &:hover {
+      transform: rotate(5deg); // Slight rotation on hover
     }
   }
 
@@ -72,11 +91,14 @@
     text-align: center;
     margin-top: -2rem;
     padding-bottom: 2rem;
-    color: var(--blue-300);
-    @include stroke(var(--blue-300), 0.5px);
+    color: var(--blue-400);
+    @include stroke(var(--blue-400), 0.5px);
 
     @media screen and (max-width: 60rem) {
       margin-top: -18vw;
     }
   }
 }
+
+
+

@@ -10,6 +10,8 @@
   img.speaker__portrait {
     width: 30vw;
     max-width: 400px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border-radius: var(--corner);
 
     @media screen and (max-width: 60rem) {
       width: 75vw;
@@ -33,23 +35,22 @@
     list-style: none;
     max-width: 1024px;
     margin: 0 auto;
-    text-align: center; 
+    text-align: center;
 
     @media screen and (max-width: 60rem) {
       grid-template-columns: 1fr;
       gap: 5rem;
     }
 
-
     p {
       margin: 1rem auto;
       color: var(--beige);
       width: 30rem;
-      max-width:400px;
+      max-width: 400px;
 
-       @media screen and (max-width: 60rem) {
+      @media screen and (max-width: 60rem) {
         width: 70vw;
-       }
+      }
     }
 
     .speaker__socials {
@@ -59,15 +60,37 @@
     }
   }
 
-  li.speaker__details:last-child:nth-child(odd) {
-      grid-column: span 2 / span 2;
-      justify-self: center;
+  li.speaker__details {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
 
-      @media screen and (max-width: 60rem) {
-        grid-column: 1;
+    &:hover {
+      transform: translateY(-5px);  // Slight lift effect
+      filter: blur(2px);  // Slight blur effect
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);  // Adding a shadow effect
+    }
+
+    @media screen and (max-width: 60rem) {
+      padding: 1rem;
     }
   }
-  
-    
-  
+
+  li.speaker__details:last-child:nth-child(odd) {
+    grid-column: span 2 / span 2;
+    justify-self: center;
+
+    @media screen and (max-width: 60rem) {
+      grid-column: 1;
+    }
+  }
+
+  /* Adding Hover effects to the speaker image */
+  .speaker__portrait:hover {
+    transform: rotate(5deg) scale(1.05);  // Slight rotation and scaling
+    filter: brightness(0.9) contrast(1.1);  // Slight brightness and contrast changes
+  }
 }

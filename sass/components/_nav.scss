@@ -4,9 +4,11 @@ nav {
   top: 0;
   left: 0;
 
+  /* Remove this block or just comment it out
   @media screen and (max-width: 60rem) {
     position: static;
   }
+  */
 
   .skip-link {
     position: absolute;
