@@ -129,6 +129,7 @@
 
       a {
         @include sponsor-logo;
+        @include btn__image;
 
         @media screen and (max-width: 60rem) {
           min-width: 0;
