@@ -66,6 +66,9 @@
 
   <body>
     {% block content %}{% endblock %}
+    <button class="back-to-top" type="button" aria-label="Back to top" data-back-to-top>
+      <span aria-hidden="true">↑</span>
+    </button>
 
     {% if build_mode == "production" %}
       {% set manifest = load_data(path="static/bundle/.vite/manifest.json") %}
