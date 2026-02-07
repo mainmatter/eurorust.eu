@@ -136,7 +136,7 @@ async function ferris() {
   // Renderer
   // -----------------------------
   const renderer = new WebGLRenderer({ canvas, alpha: true });
-  renderer.setSize(sizes.width, sizes.height);
+  renderer.setSize(sizes.width, sizes.height, false);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
   window.addEventListener(
@@ -149,7 +149,7 @@ async function ferris() {
       camera.aspect = sizes.width / sizes.height;
       camera.updateProjectionMatrix();
 
-      renderer.setSize(sizes.width, sizes.height);
+      renderer.setSize(sizes.width, sizes.height, false);
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     }, 100)
   );
