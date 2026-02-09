@@ -1,37 +1,23 @@
-.presented-by {
-  margin: 0 auto;
-  position: relative;
-  padding-top: 4rem;
-  z-index: 2;
+.presented-by-box {
+	width: 100%;
+	background-image: url(/images/fdiaz/rust2.png);
+	min-height: 600px;
+	flex-wrap: wrap;
+	flex-direction: column;
+	text-align: center;
+	justify-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top;
+	overflow: hidden;
+	@include max-width($max-width);
 
-  @media screen and (max-width: 60rem) {
-    margin: 0 auto;
-  }
-
-  .presented-by__wrapper {
-    padding: 5rem 0;
-    max-width: 1024px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-
-    a {
-      @include sponsor-logo(var(--purple-gradient), 1.5rem, 5rem);
-      @include btn__image;
-    }
-  }
-
-  h1 {
-    text-align: center;
-    @include stroke__shadow(var(--orange-100), 0.5px);
-    margin-bottom: 2rem;
-  }
-
-  img {
-    width: 55vw;
-    max-width: 20rem;
-    padding: 2rem;
-  }
+	.mainmater-logo-icon {
+		width: 50%;
+    min-width: 300px;
+		height: auto;
+		align-self: center;
+	}
 }

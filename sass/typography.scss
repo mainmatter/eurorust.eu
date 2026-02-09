@@ -1,85 +1,63 @@
 @import "./mixins.scss";
 
 body {
-  font-family: "Quantico", sans-serif;
+  font-family: "Lexend", sans-serif;
   font-weight: 400;
   font-style: normal;
   line-height: 150%;
+  color: var(--white);
 }
+
 .bold {
   font-weight: 700;
 }
 
 h1,
-.h1,
-h2,
-.h2 {
-  color: var(--orange-100);
-  font-family: "Audiowide", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+.h1 {
+  font-size: clamp(35px, 5vw, 60px);
+  line-height: 100%;
   text-transform: uppercase;
 }
 
-h1,
-.h1 {
-  font-size: clamp(20px, 2.6vw, 50px);
-  line-height: 156%;
-
-  @media screen and (max-width: 60rem) {
-    font-size: clamp(30px, 4.5vw, 36px);
-    line-height: 42px;
-  }
-}
-
 h2,
 .h2 {
-  font-size: clamp(14px, 1.5vw, 38px);
-  @include stroke(var(--orange-100), 0.5px);
-
-  @media screen and (max-width: 60rem) {
-    font-size: clamp(24px, 3.3vw, 30px);
-  }
+  font-size: clamp(30px, 3.5vw, 50px);
+  line-height: 120%;
+  margin: auto;
+  text-align: center;
 }
 
 h3,
 .h3 {
-  font-size: clamp(13px, 2.3vw, 40px);
-  line-height: 150%;
-  color: var(--orange-100);
-
-  @media screen and (max-width: 60rem) {
-    font-size: clamp(24px, 3.3vw, 30px);
+  font-size: clamp(25px, 2.5vw, 30px);
+  line-height: 120%;
+  @media screen and (max-width: $breakpoint-mobile) {
+    font-size: clamp(20px, 2.5vw, 30px);
   }
+
 }
 
 h4,
 .h4 {
-  font-size: clamp(10px, 1.825vw, 35px);
-
-  @media screen and (max-width: 60rem) {
-    font-size: clamp(20px, 3vw, 25px);
+  font-size: clamp(20px, 1.4vw, 35px);
+  line-height: 120%;
+  @media screen and (max-width: $breakpoint-mobile) {
+    font-size: clamp(15px, 1.4vw, 35px);
   }
 }
 
-p + p,
-p + ul,
-ul + p,
-h2 + p {
+p+p,
+p+ul,
+ul+p,
+h2+p {
   margin-top: 1rem;
 }
 
 p,
 a,
 li {
-  color: var(--orange-100);
-  font-size: clamp(14px, 1.5vw, 38px);
+  font-size: clamp(15px, 1vw, 20px);
   line-height: 150%;
-
-  @media screen and (max-width: 60rem) {
-    font-size: 1rem;
-    line-height: 24px;
-  }
 }
 
 a {
@@ -92,11 +70,11 @@ a {
 }
 
 a:not([class]) {
+  color: var(--white);
   display: block;
-  -webkit-text-fill-color: var(--orange-100);
 
   &:hover {
-    @include textlink-hover-animation;
+    color: var(--magenta-800);
   }
 
   &:visited {

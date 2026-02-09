@@ -1,39 +1,26 @@
-<main class="hero">
-  <div class="clouds">
-    <div class="clouds-1"></div>
-    <div class="clouds-2"></div>
-  </div>
-
-  <div class="hero__grid">
-    <div class="hero__grid-meta">
-      <p class="hero__grid-meta-info">October 14–17, 2026 <span>|</span> Barcelona and online</p>
-      <picture>
-        <source srcset="/images/logo-mobile.webp" media="(max-width: 32rem)" />
-        <img class="hero__logo" alt="Eurorust" src="/images/logo.webp" width="850" height="502" />
-      </picture>
-
-      <div class="hero__canvas">
-        <canvas></canvas>
-      </div>
+<main id="hero" class="hero container">
+  <div class="block">
+    <div class="pill">
+      <p>Presented by </p>
+      <img class="frame-icon" src="/images/fdiaz/mainmatter-logo.svg" alt="Frame Icon">
     </div>
-
-    <div class="hero__grid-content">
-      <div>
-        <div>
-          <h1 class="pb-4 hero__grid-content-header">We cover all things rust</h1>
-          <p class="hero__grid-content-about">
-            Two conference days and two days of fun side events, hackathons and exploring Barcelona.
-          </p>
-        </div>
-        <div class="hero__grid-buttons">
-          <a href="https://www.tickettailor.com/events/eurorust/2022388" class="hero__grid-button" target="_blank"
-            >Get your ticket</a
-          >
-          <a href="/2026-sponsorship-prospectus.pdf" class="hero__grid-button" target="_blank">Become a sponsor</a>
-        </div>
-      </div>
+    <div class="hero__canvas">
+      <canvas  data-engine="three.js r179" width="809" height="809"></canvas>
+    </div>
+    <!-- <img class="ferrisdesktop-icon" src="/images/fdiaz/ferris-desktop.png" alt="Ferris Desktop">-->
+    <div class="logoherodesktop-parent">
+      <img class="logoherodesktop-icon" src="/images/fdiaz/logo-250307.svg" alt="EuroRust Logo">
+      <h3>October 14–17, 2026 | Barcelona and online</b>
     </div>
   </div>
-  {% include "sections/newsletter.html" %}
-  {% include "sections/rustfest.html" %}
+  <div class="block bg-filled">
+    <h1><b>We cover all things rust</b></h1>
+    <h3>Two conference days and two days of fun side events, hackathons and exploring
+      Barcelona.</h3>
+    <div class="box">
+      <a href="https://www.tickettailor.com/events/eurorust/2022388" class="button solid">Get your ticket</a>
+      <a href="https://eurorust.eu/2026-sponsorship-prospectus.pdf" class="button lined">Become a sponsor</a>
+      <a class="button lined">view schedule</a>
+    </div>
+  </div>
 </main>

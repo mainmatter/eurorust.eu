@@ -176,7 +176,7 @@
   bluesky="https://bsky.app/profile/fasterthanli.me"
   company="Self-Directed Research podcast"
   job_title="Co-host"
-  image="/images/speakers/amos-wenger.webp"
+  image="/images/fdiaz/speakers/amos-wenger.png"
   github="https://github.com/fasterthanlime"
 
 [[extra.speakers]]
@@ -184,13 +184,13 @@
   mastodon="https://fosstodon.org/@drakulix@dreampi.es"
   company="System76"
   job_title="Engineer working on COSMIC"
-  image="/images/speakers/victoria-brekenfeld.webp"
+  image="/images/fdiaz/speakers/victoria-brekenfeld.png"
   github="https://github.com/Drakulix"
 
 [[extra.speakers]]
   name="Conrad Irwin"
   job_title="Zed"
-  image="/images/speakers/conrad-irwin.webp"
+  image="/images/fdiaz/speakers/conrad-irwin.png"
   twitter="https://x.com/ConradIrwin"
   web="https://zed.dev"
   linkedin="https://www.linkedin.com/in/conradirwin/"
@@ -198,7 +198,7 @@
 
 [[extra.speakers]]
 	name="Charlie Marsh"
-	image="/images/speakers/charlie-marsh.webp"
+	image="/images/fdiaz/speakers/charlie-marsh.png"
 	job_title="Founder of Astral"
 	twitter="https://x.com/charliermarsh"
 	web="https://astral.sh/?utm_source=eurorust"
@@ -206,14 +206,14 @@
 
 [[extra.speakers]]
 	name="Jon Gjengset"
-	image="/images/speakers/jon-gjengset.webp"
+	image="/images/fdiaz/speakers/jon-gjengset.png"
   company="Helsing"
 	job_title="Author of Rust for Rustaceans, Principal Engineer"
 	twitter="https://x.com/jonhoo"
 
 [[extra.speakers]]
     name="Amanda Stjerna"
-    image="/images/speakers/amanda-stjerna.webp"
+    image="/images/fdiaz/speakers/amanda-stjerna.png"
     job_title="PhD student in Web security at Uppsala university"
     mastodon="https://social.spejset.org/@amanda"
     github="https://github.com/amandasystems"
@@ -223,7 +223,7 @@
 	name="Luca Palmieri"
 	job_title="Principal Engineering Consultant"
   company="Mainmatter"
-	image="/images/speakers/luca-palmieri.webp"
+	image="/images/fdiaz/speakers/luca-palmieri.png"
 	web="https://www.lpalmieri.com/"
   github="https://github.com/LukeMathWalker"
 
@@ -231,7 +231,7 @@
 	name="Niko Matsakis"
 	company="AWS"
 	job_title="Senior Principal Engineer, Co-Lead of the Rust Language Team"
-	image="/images/speakers/niko-matsakis.webp"
+	image="/images/fdiaz/speakers/niko-matsakis.png"
 	bluesky="https://bsky.app/profile/nikomatsakis.com"
 	web="http://smallcultfollowing.com/babysteps/about/"
   github="https://github.com/nikomatsakis"
@@ -239,13 +239,13 @@
 [[extra.speakers]]
 	name="Lisa Passing"
 	job_title="Creative Technologist"
-	image="/images/speakers/lisa-passing.webp"
+	image="/images/fdiaz/speakers/lisa-passing.png"
 	web="https://lislis.de/?utm_source=eurorust"
 
 [[extra.speakers]]
 	name="Ashley Williams"
 	job_title="Former Rust Core team member and Founding Executive Director of the Rust Foundation"
-	image="/images/speakers/ashley-williams.webp"
+	image="/images/fdiaz/speakers/ashley-williams.png"
 	twitter="https://x.com/ag_dubs"
   github="https://github.com/ashleygwilliams"
 +++

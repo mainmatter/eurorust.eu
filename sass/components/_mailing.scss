@@ -1,0 +1,80 @@
+.mailing {
+  flex-direction: column;
+  align-items: center;
+  padding: 120px 20%;
+  gap: 50px;
+  @include max-width($max-width);
+  text-align: center;
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    padding: 120px 20px;
+  }
+
+  .email {
+    flex: 1;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    background-color: var(--black);
+    border: 0;
+    width: 100%;
+    font-family: inherit;
+    color: var(--white);
+    padding: 20px;
+    border-radius: 20px 0 0 20px;
+    font-size: clamp(20px, 1.5vw, 30px);
+
+    @media screen and (max-width: $breakpoint-tablet) {
+      border-radius: 20px;
+    }
+  }
+
+  .button {
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 190px;
+    border: 0;
+    height: 100%;
+    background-color: var(--magenta-800);
+    color: var(--white);
+    border-radius: 0 20px 20px 0;
+    font-family: inherit;
+    font-size: clamp(20px, 1.5vw, 30px);
+
+    @media screen and (max-width: $breakpoint-tablet) {
+      border-radius: 20px;
+    }
+  }
+
+  #mc_embed_signup_scroll {
+    display: flex;
+    width: 100%;
+
+    @media screen and (max-width: $breakpoint-tablet) {
+      flex-wrap: wrap;
+      justify-content: center;
+      justify-items: center;
+      gap: 20px;
+    }
+  }
+
+  form#mc-embedded-subscribe-form {
+    width: 100%;
+  }
+
+  .mc-field-group {
+    width: 70%;
+
+    @media screen and (max-width: $breakpoint-tablet) {
+      width: 100%;
+    }
+  }
+}
