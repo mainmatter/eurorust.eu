@@ -5,24 +5,14 @@
   <div class="main sections">
     <a id="main"></a>
     {% include "sections/hero.html" %}
+    {% include "sections/mailing.html" %}
+    {% include "sections/rustfest.html" %}
     {% include "sections/about.html" %}
     {% include "sections/past-speakers.html" %}
+    {% include "sections/get-tickets.html" %}
     {% include "sections/venue.html" %}
-    <div class="combined-background">
-      <div class="clouds clouds-top">
-        <div class="clouds-3"></div>
-        <div class="clouds-4"></div>
-      </div>
-      {% include "sections/presented-by.html" %}
-      {% include "sections/past-sponsors.html" %}
-      <div class="clouds clouds-middle">
-        <div class="clouds-5"></div>
-      </div>
-      <div class="clouds clouds-bottom">
-        <div class="clouds-3"></div>
-        <div class="clouds-5"></div>
-      </div>
-    </div>
+    {% include "sections/presented-by.html" %}
+    {% include "sections/past-sponsors.html" %}
   </div>
   {% include "sections/footer.html" %}
 {% endblock content %}

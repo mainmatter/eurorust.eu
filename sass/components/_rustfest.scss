@@ -1,18 +1,28 @@
 .rustfest {
-  margin: 0 auto;
-  padding: 9rem 0 4rem 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 177px 20px;
+  gap: 12px;
+  background: url("/images/fdiaz/rust2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  @include max-width($max-width);
   text-align: center;
+  overflow: hidden;
+  width: 100%;
+}
 
-  @media screen and (max-width: 60rem) {
-    padding: 6rem 0 0 0;
-  }
+.eurorust-is-part {
+  width: 947px;
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+}
 
-  p {
-    color: var(--orange-100);
-    text-wrap: balance;
-
-    @media screen and (max-width: 60rem) {
-      padding-bottom: 1rem;
-    }
-  }
+.group-icon {
+  width: 40%;
+  max-width: 700px;
+  position: relative;
 }

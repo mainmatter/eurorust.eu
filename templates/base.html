@@ -1,86 +1,76 @@
 <!doctype html>
 <html lang="en">
-  {% set build_mode = get_env(name="BUILD_MODE", default="development") %}
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="EuroRust 2026 is a conference for the European Rust community – Barcelona & online, 14.10-17.10.2026"
-    />
-    <meta name="keywords" content="" />
-    <meta name="language" content="en" />
-    <meta name="content-language" content="en" />
-    <meta name="publisher" content="EuroRust" />
-    <title>EuroRust 2026, Barcelona & online</title>
-    <link rel="stylesheet" href="/app.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="image" href="/images/backgrounds/cloud1.webp" fetchpriority="high" />
-    <link rel="preload" as="image" href="/images/backgrounds/cloud2.webp" fetchpriority="high" />
-    <link rel="preload" as="image" href="/images/backgrounds/cloud3.webp" fetchpriority="high" />
-    <link rel="preload" as="image" href="/images/backgrounds/cloud4.webp" fetchpriority="high" />
-    <link rel="preload" as="image" href="/images/backgrounds/cloud5.webp" fetchpriority="high" />
-    <link rel="icon" type="image/x-icon" href="/images/icons/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/favicon-192x192.png" />
-    <link rel="icon" type="image/png" sizes="256x256" href="/images/icons/favicon-256x256.png" />
-    <!--  Essential META Tags -->
-    <meta property="og:title" content="EuroRust 2026, Barcelona & online" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="/" />
-    {% block og_image %}
-      <meta property="og:image" content="{{ config.base_url | safe }}/images/og-image.webp" />
-      <meta name="twitter:image" content="{{ config.base_url | safe }}/images/og-image.webp" />
-    {% endblock %}
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="EuroRust 2026, Barcelona & online" />
-    <meta
-      name="twitter:description"
-      content="EuroRust 2026 is a conference for the European Rust community – Barcelona & online, 14.10-17.10.2026"
-    />
+{% set build_mode = get_env(name="BUILD_MODE", default="development") %}
 
-    <!--  Non-Essential, But Recommended -->
-    <meta
-      property="og:description"
-      content="EuroRust 2026 is a conference for the European Rust community – Barcelona & online, 14.10-17.10.2026"
-    />
-    <meta property="og:site_name" content="EuroRust" />
-    <meta name="twitter:image:alt" content="EuroRust 2026" />
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="EuroRust 2026 is a conference for the European Rust community – Barcelona & online, 14.10-17.10.2026" />
+  <meta name="keywords" content="" />
+  <meta name="language" content="en" />
+  <meta name="content-language" content="en" />
+  <meta name="publisher" content="EuroRust" />
+  <title>EuroRust 2026, Barcelona & online</title>
+  <link rel="stylesheet" href="/app.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" type="image/x-icon" href="/images/icons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/favicon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="256x256" href="/images/icons/favicon-256x256.png" />
+  <!--  Essential META Tags -->
+  <meta property="og:title" content="EuroRust 2026, Barcelona & online" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/" />
+  {% block og_image %}
+  <meta property="og:image" content="{{ config.base_url | safe }}/images/og-image.webp" />
+  <meta name="twitter:image" content="{{ config.base_url | safe }}/images/og-image.webp" />
+  {% endblock %}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="EuroRust 2026, Barcelona & online" />
+  <meta name="twitter:description"
+    content="EuroRust 2026 is a conference for the European Rust community – Barcelona & online, 14.10-17.10.2026" />
 
-    <!--  Non-Essential, But Required for Analytics -->
-    <meta name="twitter:site" content="@euro_rust" />
-    <meta name="fediverse:creator" content="@eurorust@fosstodon.org" />
+  <!--  Non-Essential, But Recommended -->
+  <meta property="og:description"
+    content="EuroRust 2026 is a conference for the European Rust community – Barcelona & online, 14.10-17.10.2026" />
+  <meta property="og:site_name" content="EuroRust" />
+  <meta name="twitter:image:alt" content="EuroRust 2026" />
 
-    {% block head %}{% endblock %}
-    {% if build_mode == "production" %}
-      <script
-        defer
-        data-domain="eurorust.eu"
-        src="https://plausible.io/js/script.tagged-events.outbound-links.js"
-      ></script>
-    {% endif %}
-  </head>
+  <!--  Non-Essential, But Required for Analytics -->
+  <meta name="twitter:site" content="@euro_rust" />
+  <meta name="fediverse:creator" content="@eurorust@fosstodon.org" />
 
-  <body>
-    {% block content %}{% endblock %}
+  {% block head %}{% endblock %}
+  {% if build_mode == "production" %}
+  <script defer data-domain="eurorust.eu" src="https://plausible.io/js/script.tagged-events.outbound-links.js"></script>
+  {% endif %}
+</head>
 
-    {% if build_mode == "production" %}
-      {% set manifest = load_data(path="static/bundle/.vite/manifest.json") %}
-      <script defer type="module" src='/bundle/{{ manifest["src/main.js"]["file"] }}'></script>
-    {% else %}
-      <script defer type="module" src="http://localhost:5173/@vite/client"></script>
-      <script defer type="module" src="http://localhost:5173/src/main.js"></script>
-    {% endif %}
+<body>
+  {% block content %}{% endblock %}
 
-    {% if build_mode == "production" %}
-      {% set manifest = load_data(path="static/bundle/.vite/manifest.json") %}
-      <script defer type="module" src='/bundle/{{ manifest["src/main.js"]["file"] }}'></script>
-    {% else %}
-      <script defer type="module" src="http://localhost:5173/@vite/client"></script>
-      <script defer type="module" src="http://localhost:5173/src/main.js"></script>
-    {% endif %}
-  </body>
+  {% if build_mode == "production" %}
+  {% set manifest = load_data(path="static/bundle/.vite/manifest.json") %}
+  <script defer type="module" src='/bundle/{{ manifest["src/main.js"]["file"] }}'></script>
+  {% else %}
+  <script defer type="module" src="http://localhost:5173/@vite/client"></script>
+  <script defer type="module" src="http://localhost:5173/src/main.js"></script>
+  <script defer type="module" src="http://localhost:5173/src/menu.js"></script>
+  {% endif %}
+
+  {% if build_mode == "production" %}
+  {% set manifest = load_data(path="static/bundle/.vite/manifest.json") %}
+  <script defer type="module" src='/bundle/{{ manifest["src/main.js"]["file"] }}'></script>
+  {% else %}
+  <script defer type="module" src="http://localhost:5173/@vite/client"></script>
+  <script defer type="module" src="http://localhost:5173/src/main.js"></script>
+  <script defer type="module" src="http://localhost:5173/src/menu.js"></script>
+  {% endif %}
+</body>
+
 </html>

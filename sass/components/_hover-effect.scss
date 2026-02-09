@@ -12,24 +12,3 @@
     transition: all 0.2s ease-in-out;
   }
 }
-
-.btn__icon::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  mix-blend-mode: overlay;
-  clip-path: circle();
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-
-.btn__icon:hover::after {
-  background: linear-gradient(90deg, var(--blue-100) 50%, var(--pink-100) 100%);
-  mix-blend-mode: overlay;
-  opacity: 0.5;
-  transition: opacity 0.2s ease;
-}
