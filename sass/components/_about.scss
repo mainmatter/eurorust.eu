@@ -1,5 +1,7 @@
 .about {
   background-color: var(--blue-300);
+  position: relative;
+  z-index: 2;
   @include background__noise;
 
   @media screen and (max-width: 60rem) {

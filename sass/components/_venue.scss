@@ -1,5 +1,7 @@
 .venue {
   margin-bottom:-2px;
+  position: relative;
+  z-index: 2;
 
   .separator__top {
     background: var(--blue-500);
