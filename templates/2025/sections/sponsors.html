@@ -5,7 +5,7 @@
       <div class="sponsors-grid--main_partners">
         <h2>Main Partners</h2>
         {% for sponsor in section.extra.main_partner_sponsors %}
-          <a class="mb-4" href="{{ sponsor.link }}" aria-label="{{ sponsor.title }}" rel="noopener noreferrer">
+          <a class="mb-4" href="{{ sponsor.link }}" aria-label="{{ sponsor.title }}" target="_blank" rel="noopener noreferrer">
             {% set meta = get_image_metadata(path=sponsor.image) %}
             <img
               alt="{{ sponsor.title }}"
