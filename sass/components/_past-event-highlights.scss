@@ -82,6 +82,13 @@
 
 .past-event-highlights__video {
   width: clamp(250px, 50vw, 900px);
+  @media screen and (max-width: 60rem) {
+    width: 70vw;
+  }
+  @media screen and (max-width: 30rem) {
+    width: 90vw;
+  }
+
   margin: 0 auto;
   align-content: center;
   background: linear-gradient(black, black), var(--pink-gradient);
@@ -95,6 +102,5 @@
   @media screen and (max-width: 60rem) {
     border: 1rem solid transparent;
     border-width: 1rem;
-    padding: 10vw;
   }
 }
