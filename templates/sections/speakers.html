@@ -1,0 +1,75 @@
+<section class="speakers workshops pt-4 pb-8">
+  <h1 class="pb-8">Invited speakers</h1>
+  <ul>
+    {% for talk in section.extra.talks %}
+      {% if talk.title %}
+        {% set path = "talks/" ~ talk.title ~ ".md" %}
+        {% set event = get_page(path = path) %}
+      {% endif %}
+     
+      <li class="speaker__details">
+         {% if talk.image %}
+          <img
+            class="speaker__portrait"
+            alt="{{ talk.speaker }}"
+            src="{{ talk.image }}"
+            loading="lazy"
+            width="400"
+            height="402"
+          />
+        {% endif %}
+        <p><span class="speaker__name">{{ talk.speaker }}</span></p>
+        <p></p>
+        <p class="speaker__job">
+          {% if talk.job_title %}{{ talk.job_title }}{% endif %}{% if talk.company %}&nbsp;at
+          {{ talk.company }}{% endif %}
+        </p>
+        <ul class="speaker__socials pb-4">
+          {% if talk.twitter %}
+            <li>
+              <a class="btn__icon" href="{{ talk.twitter }}" target="_blank" rel="noopener noreferrer"
+                ><img src="/images/icons/twitter.svg" alt="X" width="42" height="42"
+              /></a>
+            </li>
+          {% endif %}
+          {% if talk.bsky %}
+            <li>
+              <a class="btn__icon" href="{{ talk.bsky }}" target="_blank" rel="noopener noreferrer"
+                ><img src="/images/icons/bluesky.svg" alt="Bluesky" width="42" height="42"
+              /></a>
+            </li>
+          {% endif %}
+          {% if talk.mastodon %}
+            <li>
+              <a class="btn__icon" href="{{ talk.mastodon }}" target="_blank" rel="noopener noreferrer"
+                ><img src="/images/icons/mastodon.svg" alt="Mastodon" width="42" height="42"
+              /></a>
+            </li>
+          {% endif %}
+          {% if talk.linkedin %}
+            <li>
+              <a class="btn__icon" href="{{ talk.linkedin }}" target="_blank" rel="noopener noreferrer"
+                ><img src="/images/icons/linkedin.svg" alt="LinkedIn" width="42" height="42"
+              /></a>
+            </li>
+          {% endif %}
+          {% if talk.web %}
+            <li>
+              <a class="btn__icon" href="{{ talk.web }}" target="_blank" rel="noopener noreferrer"
+                ><img src="/images/icons/web.svg" alt="Internet" width="42" height="42"
+              /></a>
+            </li>
+          {% endif %}
+          {% if talk.github %}
+            <li>
+              <a class="btn__icon" href="{{ talk.github }}" target="_blank" rel="noopener noreferrer"
+                ><img src="/images/icons/github.svg" alt="GitHub" width="42" height="42"
+              /></a>
+            </li>
+          {% endif %}
+        </ul>
+        <a href="{{event.path}}">Read talk details ></a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

@@ -254,4 +254,10 @@
 
 [[extra.talks]]
   title="move-your-problems"
+  image="/images/talks/oli-scherer.webp"
+  speaker="Oli Scherer"
+  job_title="Rust Compiler Maintainer"
+  company="RustNL"
+  github = "https://github.com/oli-obk/"
+  mastodon = "https://hachyderm.io/@oli"
 +++
