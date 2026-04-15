@@ -21,6 +21,8 @@
 @import "components/generic-content";
 @import "components/activity";
 @import "components/venue";
+@import "components/workshop";
+@import "components/workshops";
 
 body {
   background-color: var(--blue-500);
@@ -66,6 +68,17 @@ body {
     }
   }
 
+  .clouds-midway {
+    margin-top: -70vw;
+    z-index: 1;
+
+    @media screen and (max-width: 60rem) {
+      .clouds-5 {
+        animation-delay: -20s;
+      }
+    }
+  }
+
   .clouds-bottom {
     margin-bottom: -30vw;
     z-index: 1;
@@ -75,6 +88,8 @@ body {
       margin-bottom: 30vw;
     }
   }
+
+  
 }
 
 .generic-block {
