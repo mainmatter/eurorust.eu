@@ -6,9 +6,9 @@
         {% set path = "talks/" ~ talk.title ~ ".md" %}
         {% set event = get_page(path = path) %}
       {% endif %}
-     
+
       <li class="speaker__details">
-         {% if talk.image %}
+        {% if talk.image %}
           <img
             class="speaker__portrait"
             alt="{{ talk.speaker }}"
@@ -21,8 +21,9 @@
         <p><span class="speaker__name">{{ talk.speaker }}</span></p>
         <p></p>
         <p class="speaker__job">
-          {% if talk.job_title %}{{ talk.job_title }}{% endif %}{% if talk.company %}&nbsp;at
-          {{ talk.company }}{% endif %}
+          {% if talk.job_title %}{{ talk.job_title }}{% endif %}{% if talk.company %}
+            &nbsp;at {{ talk.company }}
+          {% endif %}
         </p>
         <ul class="speaker__socials pb-4">
           {% if talk.twitter %}
@@ -68,7 +69,7 @@
             </li>
           {% endif %}
         </ul>
-        <a href="{{event.path}}">Read talk details ></a>
+        <a href="{{ event.path }}">Read talk details ></a>
       </li>
     {% endfor %}
   </ul>

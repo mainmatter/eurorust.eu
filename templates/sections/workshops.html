@@ -6,9 +6,9 @@
         {% set path = "workshops/" ~ workshop.title ~ ".md" %}
         {% set event = get_page(path = path) %}
       {% endif %}
-     
+
       <li class="speaker__details">
-         {% if event.extra.heroimage %}
+        {% if event.extra.heroimage %}
           <img
             class="speaker__portrait"
             alt="{{ event.extra.heroimage_alt }}"
@@ -22,20 +22,18 @@
         <p></p>
         <p class="speaker__job">
           {% if event.extra.mentors %}
-            Led by
-              {% set_global mentorCounter = 0 %}
-              {%- for mentor in event.extra.mentors -%}
-                {%- set_global mentorCounter = mentorCounter + 1 -%}
-                {%- if mentorCounter == 1 -%}
-                  {{ mentor.name }}
-                {%- else -%}
-                  , {{ mentor.name }}
-                {%- endif -%}            
-              {%- endfor -%}
+            Led by {% set_global mentorCounter = 0 %}
+            {%- for mentor in event.extra.mentors -%}
+              {%- set_global mentorCounter = mentorCounter + 1 -%}
+              {%- if mentorCounter == 1 -%}
+                {{ mentor.name }}
+              {%- else -%}
+                , {{ mentor.name }}
+              {%- endif -%}
+            {%- endfor -%}
           {% endif %}
         </p>
-        <a href="{{event.path}}">Learn more ></a>
-        </ul>
+        <a href="{{ event.path }}">Learn more ></a>
       </li>
     {% endfor %}
   </ul>

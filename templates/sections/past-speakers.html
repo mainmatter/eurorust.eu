@@ -14,8 +14,9 @@
         <p><span class="speaker__name">{{ speaker.name }}</span></p>
         <p></p>
         <p class="speaker__job">
-          {% if speaker.job_title %}{{ speaker.job_title }}{% endif %}{% if speaker.company %}&nbsp;at
-          {{ speaker.company }}{% endif %}
+          {% if speaker.job_title %}{{ speaker.job_title }}{% endif %}{% if speaker.company %}
+            &nbsp;at {{ speaker.company }}
+          {% endif %}
         </p>
         <ul class="speaker__socials">
           {% if speaker.twitter %}
@@ -65,9 +66,7 @@
     {% endfor %}
   </ul>
   <div class="speakers__buttons">
-    <a href="https://sessionize.com/eurorust-2026/" class="speakers__ticket-button" target="_blank"
-      >Submit a talk</a
-    >
+    <a href="https://sessionize.com/eurorust-2026/" class="speakers__ticket-button" target="_blank">Submit a talk</a>
     <div class="speakers__buttons__background"></div>
   </div>
 </section>
