@@ -282,5 +282,18 @@
     margin:0 auto;
 }
 
+.CTA__buttons {
+    text-align: center;
+  }
+  
+  .CTA__ticket-button {
+    @include btn__primary-pink;
+    padding: 0.8rem 4.5rem;
+    z-index: 2;
+
+    @media screen and (max-width: 60rem) {
+      padding: 1rem 4.5rem;
+    }
+  }
   
 }
