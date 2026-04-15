@@ -282,12 +282,21 @@
   }
 
   .CTA__ticket-button {
-    @include btn__primary-pink;
-    padding: 0.8rem 4.5rem;
+    @include btn__primary-purple;
+    padding: 2rem 4.5rem;
     z-index: 2;
 
     @media screen and (max-width: 60rem) {
       padding: 1rem 4.5rem;
     }
   }
+
+  .CTA__buttons:nth-of-type(2) .CTA__ticket-button {
+    @include btn__primary-pink; padding: 2rem 4.5rem;
+    z-index: 2;
+
+    @media screen and (max-width: 60rem) {
+      padding: 1rem 4.5rem;
+    }
+}
 }
