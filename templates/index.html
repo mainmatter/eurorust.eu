@@ -6,7 +6,17 @@
     <a id="main"></a>
     {% include "sections/hero.html" %}
     {% include "sections/about-schedule.html" %}
-    {% include "sections/past-speakers.html" %}
+    <div class="combined-background">
+      <div class="clouds clouds-top">
+        <div class="clouds-3"></div>
+        <div class="clouds-4"></div>
+      </div>
+      {% include "sections/past-speakers.html" %}
+      {% include "sections/workshops.html" %}
+      <div class="clouds clouds-midway">
+        <div class="clouds-5"></div>
+      </div>
+    </div>
     {% include "sections/venue.html" %}
     <div class="combined-background">
       <div class="clouds clouds-top">
