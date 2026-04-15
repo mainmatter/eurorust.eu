@@ -9,16 +9,20 @@
 
       <li class="speaker__details">
         {% if talk.image %}
-          <img
-            class="speaker__portrait"
-            alt="{{ talk.speaker }}"
-            src="{{ talk.image }}"
-            loading="lazy"
-            width="400"
-            height="402"
-          />
+          <a href="{{ event.path }}">
+            <img
+              class="speaker__portrait"
+              alt="{{ talk.speaker }}"
+              src="{{ talk.image }}"
+              loading="lazy"
+              width="400"
+              height="402"
+            />
+          </a>
         {% endif %}
-        <h4>"{{ event.title | safe }}"</h4>
+        <a href="{{ event.path }}" class="talk__link">
+          <p class="title">{{ event.title | safe }}</p>
+        </a>
         <p><span class="speaker__name">{{ talk.speaker }}</span></p>
         <p></p>
         <p class="speaker__job">
@@ -70,7 +74,6 @@
             </li>
           {% endif %}
         </ul>
-        <a href="{{ event.path }}">Read talk details ></a>
       </li>
     {% endfor %}
   </ul>

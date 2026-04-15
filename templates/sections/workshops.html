@@ -9,16 +9,20 @@
 
       <li class="speaker__details">
         {% if event.extra.heroimage %}
-          <img
-            class="speaker__portrait"
-            alt="{{ event.extra.heroimage_alt }}"
-            src="{{ event.extra.heroimage }}"
-            loading="lazy"
-            width="400"
-            height="402"
-          />
+          <a href="{{ event.path }}">
+            <img
+              class="speaker__portrait"
+              alt="{{ event.extra.heroimage_alt }}"
+              src="{{ event.extra.heroimage }}"
+              loading="lazy"
+              width="400"
+              height="402"
+            />
+          </a>
         {% endif %}
-        <p><span class="speaker__name">{{ event.title }}</span></p>
+        <a href="{{ event.path }}" class="talk__link">
+          <p class="title">{{ event.title }}</p>
+        </a>
         <p></p>
         <p class="speaker__job">
           {% if event.extra.mentors %}
@@ -33,7 +37,6 @@
             {%- endfor -%}
           {% endif %}
         </p>
-        <a href="{{ event.path }}">Learn more ></a>
       </li>
     {% endfor %}
   </ul>

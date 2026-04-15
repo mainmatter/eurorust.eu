@@ -60,11 +60,14 @@
   .speaker__name {
     font-weight: 700;
     text-transform: uppercase;
+  }
+
+  .title {
+    font-weight: 700;
+    text-transform: uppercase;
     padding: 5px 25px;
     background-color: var(--orange-300);
     border-radius: var(--corner);
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
   }
 
   h1 {
@@ -96,17 +99,19 @@
     }
 
     p {
-      margin: 1.5rem auto;
+      margin: 1.25rem auto 1rem auto;
       color: var(--beige);
-      width: 30rem;
-      max-width: 400px;
+      width: calc(30vw - 50px);
+      max-width: 350px;
+      text-wrap: balance;
 
       @media screen and (max-width: 60rem) {
-        width: 70vw;
+        width: calc(75vw - 50px);
       }
     }
 
-    .speaker__job {
+    .speaker__job,
+    .speaker__name {
       @include dark-blue-shadow;
     }
 
@@ -134,16 +139,34 @@
     }
 
     &:nth-child(3n + 2) {
-      .speaker__name,
+      .title,
       .btn__icon {
         background-color: var(--purple-200);
       }
     }
 
     &:nth-child(3n + 3) {
-      .speaker__name,
+      .title,
       .btn__icon {
         background-color: var(--pink-600);
+      }
+    }
+  }
+
+  .talk__link {
+    text-decoration-line: none;
+    display: block;
+    scale: 1;
+    transition: all 0.2s ease-in-out;
+
+
+    &:hover,
+    &:active {
+      scale: 1.05;
+      transition: all 0.2s ease-in-out;
+
+      .title {
+        background: #F9BD7A;
       }
     }
   }
