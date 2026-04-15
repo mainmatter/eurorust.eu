@@ -1,8 +1,4 @@
-<section class="speakers">
-  <div class="clouds clouds-top">
-    <div class="clouds-3"></div>
-    <div class="clouds-4"></div>
-  </div>
+<section class="speakers mt-9">
   <h1 class="pb-8">Past Speakers</h1>
   <ul>
     {% for speaker in section.extra.speakers %}
@@ -18,8 +14,9 @@
         <p><span class="speaker__name">{{ speaker.name }}</span></p>
         <p></p>
         <p class="speaker__job">
-          {% if speaker.job_title %}{{ speaker.job_title }}{% endif %}{% if speaker.company %}&nbsp;at
-          {{ speaker.company }}{% endif %}
+          {% if speaker.job_title %}{{ speaker.job_title }}{% endif %}{% if speaker.company %}
+            &nbsp;at {{ speaker.company }}
+          {% endif %}
         </p>
         <ul class="speaker__socials">
           {% if speaker.twitter %}
@@ -69,16 +66,7 @@
     {% endfor %}
   </ul>
   <div class="speakers__buttons">
-    <a href="https://sessionize.com/eurorust-2026/" class="speakers__ticket-button" target="_blank"
-      >Submit a talk</a
-    >
+    <a href="https://sessionize.com/eurorust-2026/" class="speakers__ticket-button" target="_blank">Submit a talk</a>
     <div class="speakers__buttons__background"></div>
-  </div>
-  <div class="clouds clouds-middle">
-    <div class="clouds-5"></div>
-  </div>
-  <div class="clouds clouds-bottom">
-    <div class="clouds-3"></div>
-    <div class="clouds-5"></div>
   </div>
 </section>

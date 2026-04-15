@@ -1,0 +1,43 @@
+<section class="speakers workshops mt-9 pb-8">
+  <h1 class="pb-8">Workshops</h1>
+  <ul>
+    {% for workshop in section.extra.workshops %}
+      {% if workshop.title %}
+        {% set path = "workshops/" ~ workshop.title ~ ".md" %}
+        {% set event = get_page(path = path) %}
+      {% endif %}
+
+      <li class="speaker__details">
+        {% if event.extra.heroimage %}
+          <a href="{{ event.path }}">
+            <img
+              class="speaker__portrait"
+              alt="{{ event.extra.heroimage_alt }}"
+              src="{{ event.extra.heroimage }}"
+              loading="lazy"
+              width="400"
+              height="402"
+            />
+          </a>
+        {% endif %}
+        <a href="{{ event.path }}" class="talk__link">
+          <p class="title">{{ event.title }}</p>
+        </a>
+        <p></p>
+        <p class="speaker__job">
+          {% if event.extra.mentors %}
+            Led by {% set_global mentorCounter = 0 %}
+            {%- for mentor in event.extra.mentors -%}
+              {%- set_global mentorCounter = mentorCounter + 1 -%}
+              {%- if mentorCounter == 1 -%}
+                {{ mentor.name }}
+              {%- else -%}
+                , {{ mentor.name }}
+              {%- endif -%}
+            {%- endfor -%}
+          {% endif %}
+        </p>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

@@ -248,4 +248,16 @@
 	image="/images/speakers/ashley-williams.webp"
 	twitter="https://x.com/ag_dubs"
   github="https://github.com/ashleygwilliams"
+
+[[extra.workshops]]
+  title="programming-a-line-follower-robot"
+
+[[extra.talks]]
+  title="move-your-problems"
+  image="/images/talks/oli-scherer.webp"
+  speaker="Oli Scherer"
+  job_title="Rust Compiler Maintainer"
+  company="RustNL"
+  github = "https://github.com/oli-obk/"
+  mastodon = "https://hachyderm.io/@oli"
 +++
