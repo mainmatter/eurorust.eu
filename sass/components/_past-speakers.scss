@@ -13,11 +13,6 @@
     left: 3vw;
     z-index: 1;
   }
-  padding-top: 7rem;
-
-  @media screen and (max-width: 60rem) {
-    padding-top: 0;
-  }
 
   * {
     z-index: 2;
@@ -37,7 +32,7 @@
       background-position: center center;
       width: 16rem;
       height: 16rem;
-      margin: -11rem auto 8rem auto;
+      margin: -11rem auto 0 auto;
       animation: bubbles 9s infinite ease-in-out;
       animation-delay: 1s;
       z-index: 1;
