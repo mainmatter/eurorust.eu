@@ -110,6 +110,12 @@
       @include dark-blue-shadow;
     }
 
+    h4 {
+      @include dark-blue-shadow;
+      max-width: 50vw;
+      margin: 0 auto;
+    }
+
     .speaker__socials {
       display: flex;
       gap: 1.5rem;
