@@ -248,4 +248,7 @@
 	image="/images/speakers/ashley-williams.webp"
 	twitter="https://x.com/ag_dubs"
   github="https://github.com/ashleygwilliams"
+
+[[extra.workshops]]
+  title="programming-a-line-follower-robot"
 +++
