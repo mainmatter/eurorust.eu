@@ -251,4 +251,7 @@
 
 [[extra.workshops]]
   title="programming-a-line-follower-robot"
+
+[[extra.talks]]
+  title="move-your-problems"
 +++
