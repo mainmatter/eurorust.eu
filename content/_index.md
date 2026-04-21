@@ -252,6 +252,9 @@
 [[extra.workshops]]
   title="programming-a-line-follower-robot"
 
+[[extra.workshops]]
+  title="c-to-rust"
+
 [[extra.talks]]
   title="move-your-problems"
   image="/images/talks/oli-scherer.webp"

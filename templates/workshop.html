@@ -36,7 +36,7 @@
                   {% endif %}
                   {% if page.extra.description %}
                     <h2 class="mb-4 workshop-hero__title">Description</h2>
-                    <p class="pb-8">{{ page.extra.description | safe }}</p>
+                    <div class="pb-8"><p>{{ page.extra.description | safe }}</p></div>
                   {% endif %}
                   {% if page.extra.prerequisites %}
                     <h2 class="mb-4 workshop-hero__title">Prerequisites</h2>

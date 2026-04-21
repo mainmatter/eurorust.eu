@@ -1,5 +1,5 @@
 +++
-title = "Programming a line follower robot"
+title = "Programming a Line Follower Robot"
 template = "workshop.html"
 [extra]
   mentors = [

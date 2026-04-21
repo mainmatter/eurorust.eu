@@ -143,24 +143,14 @@
     }
   }
 
-  ol.syllabus {
-    ul,
-    ol {
+  ul.syllabus {
       list-style-position: outside;
       padding-left: 4rem;
+      list-style-type: disclosure-closed;
       @media (max-width: 60rem) {
         padding-left: 2rem;
       }
     }
-
-    ol {
-      list-style-type: decimal;
-    }
-
-    ul {
-      list-style-type: disc;
-    }
-  }
 
   .workshop-author {
     padding-top: 4rem;
