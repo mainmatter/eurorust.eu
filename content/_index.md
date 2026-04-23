@@ -255,6 +255,9 @@
 [[extra.workshops]]
   title="c-to-rust"
 
+[[extra.workshops]]
+  title="containers-are-dead"
+
 [[extra.talks]]
   title="move-your-problems"
   image="/images/talks/oli-scherer.webp"
