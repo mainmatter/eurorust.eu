@@ -147,6 +147,9 @@
       list-style-position: outside;
       padding-left: 4rem;
       list-style-type: disclosure-closed;
+      ::marker {
+        color: var(--pink-300);
+      }
       @media (max-width: 60rem) {
         padding-left: 2rem;
       }
