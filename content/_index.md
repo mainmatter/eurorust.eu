@@ -2,9 +2,8 @@
 
 [[extra.premier_partner_sponsors]]
   title="JetBrains"
-  link="https://www.jetbrains.com/"
+  link="/jetbrains"
   image="/images/sponsors/jetbrains.svg"
-
 
 [[extra.speakers]]
   name="Amos Wenger"

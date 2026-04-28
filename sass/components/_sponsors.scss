@@ -150,6 +150,10 @@
       }
     }
 
+    .sponsors-grid--premier_partners {
+      grid-template-columns: 1fr;
+    }
+
     .sponsors-grid--main_partners a,
     .sponsors-grid--premier_partners a,
     .sponsors-grid--lounge_partners a,
@@ -178,6 +182,11 @@
           max-height: 2.75rem;
         }
       }
+    }
+
+    .sponsors-grid--premier_partners a {
+       aspect-ratio: 6/1;
+       padding: 1rem 0.125rem;
     }
 
     .sponsors-grid--partners,
