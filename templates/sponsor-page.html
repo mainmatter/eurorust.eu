@@ -8,9 +8,7 @@
       <section class="sponsor-page__hero">
         <div class="container blurred-background p-1">
           <div class="mb-7 hero__topline">
-            <p class="hero__details">
-              »Sponsors // {{ page.extra.sponsor_type | safe }}s // {{ page.title | safe }}
-            </p>
+            <p class="hero__details">»Sponsors // {{ page.extra.sponsor_type | safe }}s // {{ page.title | safe }}</p>
           </div>
           <div class="sponsor-page__hero__grid">
             <div class="photo-container">
@@ -25,13 +23,13 @@
 
       <section class="sponsor-page__btn mb-8">
         <div class="CTA__buttons pb-8">
-            <a href="{{ page.extra.url }}" target="_blank" class="CTA__ticket-button" >
-              {% if page.extra.cta %}
-                {{ page.extra.cta | safe }}
-              {% else %}
-                Visit {{ page.title | safe }} website
-              {% endif %}
-            </a>
+          <a href="{{ page.extra.url }}" target="_blank" class="CTA__ticket-button">
+            {% if page.extra.cta %}
+              {{ page.extra.cta | safe }}
+            {% else %}
+              Visit {{ page.title | safe }} website
+            {% endif %}
+          </a>
         </div>
       </section>
 
