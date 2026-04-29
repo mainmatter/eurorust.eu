@@ -15,6 +15,7 @@
     z-index: 1;
   }
 
+  /* Add back in when there are more sponsors 
   &::after {
     content: "";
     background-image: url("/images/backgrounds/bubble3.webp");
@@ -31,6 +32,7 @@
     animation-delay: 2.5s;
     z-index: 2;
   }
+  */
 
   margin: 7rem auto 0 auto;
   z-index: 2;
