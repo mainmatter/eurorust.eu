@@ -15,7 +15,8 @@
 @import "components/past-event-highlights";
 @import "components/presented-by";
 @import "components/past-speakers";
-@import "components/past-sponsors";
+@import "components/sponsors";
+@import "components/sponsor-page";
 @import "components/topics";
 @import "components/hover-effect";
 @import "components/generic-content";
@@ -88,8 +89,12 @@ body {
       margin-bottom: 30vw;
     }
   }
+}
 
-  
+.combined-background-2 {
+  .clouds-middle {
+    margin-top: -140vw;
+  }
 }
 
 .generic-block {
