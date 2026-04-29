@@ -3,6 +3,7 @@
     margin: 4rem auto 7rem auto;
     transform: scale(-1, 1);
     width: 20vw;
+    max-width: 250px;
     display: block;
     animation: bubbles 5s infinite ease-in-out;
   }
