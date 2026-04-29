@@ -5,6 +5,12 @@
   link="/jetbrains"
   image="/images/sponsors/jetbrains.svg"
 
+[[extra.premier_partner_sponsors]]
+  title="Microsoft"
+  link="/microsoft"
+  image="/images/sponsors/microsoft.svg"
+
+
 [[extra.speakers]]
   name="Amos Wenger"
   mastodon="https://hachyderm.io/@fasterthanlime"
