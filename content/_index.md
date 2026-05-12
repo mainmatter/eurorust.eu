@@ -10,6 +10,10 @@
   link="/microsoft"
   image="/images/sponsors/microsoft.svg"
 
+[[extra.premier_partner_sponsors]]
+  title="Quantum Systems"
+  link="https://quantum-systems.com/"
+  image="/images/sponsors/quantum-systems.svg"
 
 [[extra.speakers]]
   name="Amos Wenger"
