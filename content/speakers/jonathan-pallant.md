@@ -9,5 +9,5 @@ title = "Speaker: Jonathan Pallant"
   twitter = ""
   bluesky = "https://bsky.app/profile/thejpster.org.uk"
   linkedin = "https://linkedin.com/in/jonathanpallant"
-  bio = "Consultant and trainer at Ferrous Systems. Co-founder of the Rust Embedded Devices Working Group. Maintainer of many crates."
+  bio = "<p>Consultant and trainer at Ferrous Systems. Co-founder of the Rust Embedded Devices Working Group. Maintainer of many crates.</p>"
 +++

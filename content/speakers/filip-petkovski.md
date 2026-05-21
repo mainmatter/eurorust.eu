@@ -8,5 +8,5 @@ title = "Speaker: Filip Petkovski"
   image = ""
   twitter = ""
   linkedin = "https://www.linkedin.com/in/fpetkovski/"
-  bio = "Filip is a Staff Production Engineer at Shopify focusing on the performance, resiliency and cost efficiency of a planet-scale Observability system. He is a Thanos Metrics maintainer and a Prometheus contributor."
+  bio = "<p>Filip is a Staff Production Engineer at Shopify focusing on the performance, resiliency and cost efficiency of a planet-scale Observability system. He is a Thanos Metrics maintainer and a Prometheus contributor.</p>"
 +++

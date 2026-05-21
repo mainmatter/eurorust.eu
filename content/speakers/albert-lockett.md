@@ -8,5 +8,5 @@ title = "Speaker: Albert Lockett"
   image = ""
   twitter = ""
   linkedin = "https://www.linkedin.com/in/albertlockett/"
-  bio = "Albert is a software developer at F5 and maintainer of Open-Telemetry Arrow Protocol & Dataflow Engine. He lives in Québec City."
+  bio = "<p>Albert is a software developer at F5 and maintainer of Open-Telemetry Arrow Protocol & Dataflow Engine. He lives in QuÃƒÂ©bec City.</p>"
 +++

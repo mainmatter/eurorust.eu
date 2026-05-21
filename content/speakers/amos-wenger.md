@@ -9,5 +9,5 @@ title = "Speaker: Amos Wenger"
   twitter = ""
   url = "https://fasterthanli.me"
   bluesky = "https://bsky.app/profile/fasterthanli.me"
-  bio = "I write (and shoot) deep dives about Rust, performance, operating system stuff, videography, and whatever else I feel my wonderful patrons & sponsors will like learning about. I'm extremely lucky to do this full time for now."
+  bio = "<p>I write (and shoot) deep dives about Rust, performance, operating system stuff, videography, and whatever else I feel my wonderful patrons & sponsors will like learning about. I'm extremely lucky to do this full time for now.</p>"
 +++

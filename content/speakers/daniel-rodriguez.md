@@ -7,5 +7,5 @@ title = "Speaker: Daniel Rodriguez"
   mastodon = ""
   image = ""
   twitter = ""
-  bio = "Daniel Rodriguez is a Production Engineer on Meta's PE Network AI team, based in Spain. For the past nine years he has helped keep the network that carries every Facebook, Instagram, WhatsApp, and Threads packet healthy — building active probing systems, telemetry pipelines, and the automation that detects, classifies, and repairs faults across hundreds of data centers."
+  bio = "<p>Daniel Rodriguez is a Production Engineer on Meta's PE Network AI team, based in Spain. For the past nine years he has helped keep the network that carries every Facebook, Instagram, WhatsApp, and Threads packet healthy Ã¢â‚¬â€ building active probing systems, telemetry pipelines, and the automation that detects, classifies, and repairs faults across hundreds of data centers.</p>"
 +++
