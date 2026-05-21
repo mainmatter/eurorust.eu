@@ -153,6 +153,7 @@
                   <ol class="schedule__list">
                     {% for activity in day.mainStage %}
                       <li>
+                        {% set_global card = activity %}
                         {% include "partials/activity-card.html" %}
                       </li>
                     {% endfor %}
@@ -163,6 +164,7 @@
                   <ol class="schedule__list">
                     {% for activity in day.side %}
                     <li>
+                      {% set_global card = activity %}
                       {% include "partials/activity-card.html" %}
                     </li>
                     {% endfor %}
@@ -238,24 +240,23 @@
                   {% for activity in day.mainStage %}
                   <tr>
                     <td scope="row" class="visually-hidden">{{activity.time}}</td>
-                    <td {% if activity.isBreak %}colspan="4" class="schedule{% endif %}>
+                    <td {% if activity.isBreak %}colspan="4" class="schedule"{% endif %}>
                       <!-- siderow: {{ sideRow }} count: {{ sideCount }} currentRowSpan {{ currentRowspan }} -->
+                      {% set_global card = activity %}
                       {% include "partials/activity-card.html" %}
                     </td>
                       {% if currentRowspan and sideCount - sideRow < currentRowspan %}
                       
                       {% else %}
                         {% if day.side[sideRow] %}
-                          {% if day.side[sideRow].rowspan %}
-                            {% set activity = day.side[sideRow] %}
-                            {% set_global currentRowspan = activity.rowspan %}
+                          {% set_global card = day.side[sideRow] %}
+                          {% if card.rowspan %}
+                            {% set_global currentRowspan = card.rowspan %}
                           {% else %}
                             {% set_global currentRowspan = 0 %}
                           {% endif %}
-                          {% if not activity.isBreak %}
-                            {% set activity = false %}
-                            {% set activity = day.side[sideRow] %}
-                            <td class="schedule__table-4cols" {% if activity.rowspan %}rowspan="{{ activity.rowspan }}"{% endif %}>
+                          {% if not card.isBreak %}
+                            <td class="schedule__table-4cols" {% if card.rowspan %}rowspan="{{ card.rowspan }}"{% endif %}>
                               {% include "partials/activity-card.html" %}
                             </td>
                           {% endif %}
