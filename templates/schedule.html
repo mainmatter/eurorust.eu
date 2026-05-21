@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
+  <div class="clouds clouds-top">
+    <div class="clouds-3"></div>
+    <div class="clouds-4"></div>
+  </div>
+     
   <div class="schedule">
     {% include "sections/nav.html" %}
 
@@ -10,7 +15,7 @@
           <p class="schedule-hero__details mb-7">
             »Schedule
           </p>
-          <h1 class="schedule-hero__title pb-7">This is your Eurorust experience</h1>
+          <h1 class="schedule-hero__title mb-7">This is your Eurorust experience</h1>
           <div class="schedule-hero__nav schedule__day">
             <p><strong>Jump to:</strong></p>
             <ul>
@@ -37,7 +42,13 @@
       {% set_global sideRow = 0 %}
       {% for day in schedule %}
 
+     
+
       <section id="workshop-day" class="mt-6 mb-8">
+        <div class="clouds workshop__clouds">
+          <div class="clouds-3"></div>
+          <div class="clouds-4"></div>
+        </div>
         <div class="container">
           <div class="schedule__container">
             <div class="schedule__day">
@@ -123,6 +134,13 @@
       {% for day in schedule %}
       {% set is_day1 = loop.first %}
 
+      {% if day.day == "1" %}
+      <div class="schedule__sections">
+        <div class="separator__top">
+          <div class="separator__content"></div>
+        </div>
+        <div class="schedule__sections-inner">
+      {% endif %}
       <section id="day{{ day.day }}" class="mt-6 mb-9">
         <div class="container">
           <div class="schedule__container">
@@ -205,13 +223,15 @@
               </div>
               <div class="desktop-schedule">
                 <table class="schedule__table">
+                  <thead>
                   <tr class="schedule__track h4">
                     <th scope="col" class="visually-hidden">Time</th>
-                    <th scope="col">Main Stage</th>
+                    <th scope="col"><span class="schedule__sticky-label">Main Stage</span></th>
                     <th scope="col" class="schedule__table-4cols">Side Track</th>
                     <th scope="col" class="schedule__table-4cols">impl Room</th>
                     <th scope="col" class="schedule__table-4cols">Workshop{% if day.day == "1" %}s{% endif %}</th>
                   </tr>
+                  </thead>
                   {% set_global sideCount = 1 %}
                   {% set_global currentRowspan = 0 %}
                   {% set_global sideRow = 0 %}
@@ -343,6 +363,13 @@
               </div>
       </div>
     </section>
+    {% if day.day == "1" %}
+        </div>
+        <div class="separator__bottom">
+          <div class="separator__content"></div>
+        </div>
+      </div>
+    {% endif %}
     {% endfor %}
 
     {% set schedule = load_data(path = "data/post-conference-day-schedule.json") %}
@@ -352,6 +379,10 @@
       {% for day in schedule %}
 
       <section id="post-day" class="mt-6 mb-9">
+        <div class="clouds post-day__clouds">
+          <div class="clouds-3"></div>
+          <div class="clouds-4"></div>
+        </div>
         <div class="container">
           <div class="schedule__container">
             <div class="schedule__day">
@@ -374,6 +405,7 @@
     </section>
     {% endfor %}
 
-  {% include "sections/footer.html" %}
+    </main>
+    {% include "sections/footer.html" %}
   </div>
   {% endblock content %}

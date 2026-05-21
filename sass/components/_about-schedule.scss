@@ -42,6 +42,26 @@
     }
   }
 
+  .about-schedule__button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+
+    @media screen and (max-width: 60rem) {
+      width: 100%;
+      margin-bottom: -18vw;
+    }
+
+    .about-schedule__button {
+      @include btn__primary-orange;
+      z-index: 11;
+
+      @media screen and (max-width: 60rem) {
+        width: 100%;
+      }
+    }
+  }
+
   // --- Grid 1: Topics (What We Cover) ---
   .about-schedule__topics-grid {
     display: grid;
@@ -133,7 +153,6 @@
     @media screen and (max-width: 60rem) {
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
-      margin-bottom: -18vw;
     }
 
     @media screen and (max-width: 32rem) {

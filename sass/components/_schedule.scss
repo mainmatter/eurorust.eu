@@ -1,4 +1,27 @@
+.clouds {
+        opacity: .4;
+        top: 25rem;
+    }
+
 .schedule {
+
+    h1, h3 { 
+        @include stroke__shadow(var(--orange-100), 0.5px);
+        text-align: center;
+    }
+
+    h3, h4, th, p, li {
+        text-shadow: 0 0 20px var(--blue-800);
+    }
+
+    .schedule-hero__title {
+        background-color: var(--orange-300);   
+        border-radius: var(--corner);
+    }
+
+    
+    
+
     .venue-warning {
         border-right: 1px solid var(--blue-light);
         padding: 2rem 2rem 0 2rem;
@@ -41,7 +64,7 @@
         text-align: center; 
 
         & p {
-            line-height: 1.5rem;
+            line-height: 1.8rem;
         }
 
         & .sponsored-by {
@@ -54,6 +77,13 @@
 
   .activity-card__time {
     order: 2;
+       background-color: var(--orange-300);
+       padding: 0.4rem 1rem;
+       border-radius: var(--corner);
+       text-shadow: 0 0 10px var(--orange-800);
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.4rem;
   }
 
   .activity-card__title {
@@ -97,6 +127,21 @@
     }
 }
 
+.schedule__sections {
+    position: relative;
+    z-index: 2;
+
+    .separator__top, .separator__bottom {
+        background: var(--blue-500);
+        background-blend-mode: overlay;
+    }
+}
+
+.schedule__sections-inner {
+    @include background-pink;
+    padding-bottom: 4rem;
+}
+
 
 section#day2 {
     & .schedule__table {
@@ -106,8 +151,9 @@ section#day2 {
 
 .schedule-hero__details {
     line-height: 1.5rem;
-    color: var(--beige);
 }
+
+
 
 .schedule-hero__nav {
     & p {
@@ -141,7 +187,12 @@ section#day2 {
 }
 
 .schedule__day {
+     
+    background: rgba(28, 117, 196, 0.65);
+    border-radius: var(--corner);
+    box-shadow: inset 0 5px 5px var(--blue-200);
     padding: 3rem;
+    color: var(--orange-100);
 
     & h3, & h4 {
         text-align: center;
@@ -261,8 +312,15 @@ section#day2 {
 }
 
 #workshop-day {
+
+    position: relative;
+    
     .activity-card__image {
         margin-bottom: .25rem;
+    }
+
+    .workshop__clouds {
+        top: 250rem;
     }
 
     @media (max-width: 60rem) {
@@ -372,6 +430,12 @@ section#post-day li {
 }
 
 section#post-day {
+
+    position: relative;
+
+    .post-day__clouds {
+        top: -22rem;
+    }
     .schedule__main-stage {
         padding-right: 0;
     }
