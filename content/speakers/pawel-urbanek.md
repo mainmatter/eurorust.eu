@@ -1,11 +1,11 @@
 +++
-title = "Speaker: Paweł Urbanek"
+title = "Speaker: PaweÅ‚ Urbanek"
 [extra]
-  name = "Paweł Urbanek"
+  name = "PaweÅ‚ Urbanek"
   role = "Rubyist turned Rustacean, working in a Singaporean IoT startup at Nami.ai"
   github = "https://github.com/pawurb"
   mastodon = ""
-  image = ""
+  image = "/images/talks/pawel-urbanek.webp"
   twitter = "_pawurb"
   url = "https://pawelurbanek.com"
   linkedin = "https://www.linkedin.com/in/pawel-urbanek-6225b2330/"
