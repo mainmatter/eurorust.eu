@@ -1,6 +1,6 @@
 <div class="activity-card activity-card__workshop">
   {% if activity.title %}
-    {% set path = "2025/activities/" ~ activity.title ~ ".md" %}
+    {% set path = "activities/" ~ activity.title ~ ".md" %}
     {% set event = get_page(path = path) %}
     <a class="activity-card__link" href="{{event.path}}">
     
