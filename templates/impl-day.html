@@ -35,10 +35,10 @@
                   <div class="pb-8 workshop-hero__abstract">
                     <p class="beige"><sup>*</sup>This event is free to attend but requires prior registration.</p>
                     <p>{{ page.extra.abstract | safe }}</p>
-                  {% if page.extra.link %}
-                    <a href="{{ page.extra.link }}" target="_blank" class="mt-4">{{ page.extra.link_cta | safe }}</a>
-                  {% endif %}
-                </div>
+                    {% if page.extra.link %}
+                      <a href="{{ page.extra.link }}" target="_blank" class="mt-4">{{ page.extra.link_cta | safe }}</a>
+                    {% endif %}
+                  </div>
                 {% endif %}
                 {% if page.extra.heroimage %}
                   <div class="photo-container">
@@ -116,7 +116,6 @@
           </div>
         </div>
       </section>
-
     </main>
 
     {% include "sections/footer.html" %}

@@ -1,7 +1,7 @@
 +++
-title = "Speaker: PaweÅ‚ Urbanek"
+title = "Speaker: Paweł Urbanek"
 [extra]
-  name = "PaweÅ‚ Urbanek"
+  name = "Paweł Urbanek"
   role = "Rubyist turned Rustacean, working in a Singaporean IoT startup at Nami.ai"
   github = "https://github.com/pawurb"
   mastodon = ""

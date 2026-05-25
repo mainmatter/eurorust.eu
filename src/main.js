@@ -13,7 +13,7 @@ import {
 } from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
-import { observeScroll } from "./scroll";
+import { observeScroll } from './scroll';
 observeScroll();
 
 function debounce(callback, wait) {
