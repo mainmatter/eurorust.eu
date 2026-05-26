@@ -87,7 +87,7 @@
                       <th scope="col"><h2>Workshops</h2></th>
                       <th scope="col" class="schedule__table-side"><h2>Side activities</h2></th>
                     </tr>
-                    <tr>
+                    <tr class="schedule__bottom-line">
                       <td scope="row" class="visually-hidden"></td>
                       <td class="venue-warning">
                         <p class="pb-4">
@@ -239,10 +239,10 @@
                 <div class="desktop-schedule">
                   <table class="schedule__table">
                     <thead>
-                      <tr class="schedule__track">
+                      <tr class="schedule__track schedule__bottom-line">
                         <th scope="col" class="visually-hidden">Time</th>
-                        <th scope="col"><p>Main Stage</p></th>
-                        <th scope="col"><p>Side Track</p></th>
+                        <th scope="col"><h2>Main Stage</h2></th>
+                        <th scope="col" class="schedule__table-side"><h2>Side Track</h2></th>
                       </tr>
                     </thead>
                     {% set_global sideCount = 1 %}
@@ -270,7 +270,7 @@
                               {% set_global currentRowspan = 0 %}
                             {% endif %}
                             {% if not card.isBreak %}
-                              <td
+                              <td class="schedule__table-side"
                                 {% if card.rowspan %}rowspan="{{ card.rowspan }}"{% endif %}
                               >
                                 {% include "partials/activity-card.html" %}
@@ -283,9 +283,9 @@
                       </tr>
                     {% endfor %}
                     {% if day.day == "1" %}
-                      <tr>
-                        <td class="visually-hidden">18:00</td>
-                        <td colspan="4">
+                      <tr class="schedule__day-body">
+                        <td class="visually-hidden">20:00</td>
+                        <td colspan="2">
                           <div class="closing-party closing-party__grid schedule__shared">
                             <div class="closing-party__content">
                               <img class="image-party py-3" src="/images/activities/dinner.webp" alt="Plate of food" />
@@ -299,9 +299,9 @@
                           </div>
                         </td>
                       </tr>
-                      <tr>
+                      <tr class="schedule__day-body">
                         <td class="visually-hidden">20:40–22:40</td>
-                        <td colspan="4">
+                        <td colspan="2">
                           <div class="closing-party closing-party__grid schedule__shared">
                             <a class="activity-card__link" href="/activities/karaoke/">
                               <div class="closing-party__content">
@@ -315,9 +315,9 @@
                       </tr>
                     {% endif %}
                     {% if day.day == "2" %}
-                      <tr>
+                      <tr class="schedule__day-body">
                         <td class="visually-hidden">18:30-22:00</td>
-                        <td colspan="4">
+                        <td colspan="2">
                           <div class="closing-party closing-party__grid schedule__shared">
                             <div class="closing-party__content">
                               <img class="image-party py-3" src="/images/activities/party.webp" alt="Disco ball" />

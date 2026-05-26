@@ -8,6 +8,10 @@
     color: var(--blue-400);
   }
 
+  .schedule__track p {
+    color: var(--pink-100);
+  }
+
   h1,
   h3 {
     @include stroke__shadow(var(--orange-100), 0.5px);
@@ -20,7 +24,6 @@
   }
 
   .venue-warning {
-    border-right: 1px solid var(--blue-light);
     text-align: center;
     & p {
       color: var(--pink-100);
@@ -48,7 +51,7 @@
   }
 
   & .activity-card:nth-child(even) {
-    border-top: 1px solid var(--blue-light);
+    border-top: 1px solid var(--blue-400);
   }
 
   & .two-sticky-activity-cards {
@@ -176,6 +179,10 @@ section#day2 {
   width: 100%;
 }
 
+.schedule__bottom-line {
+  border-bottom: 1px solid var(--blue-400);
+}
+
 .schedule__day {
   color: var(--pink-100);
   border: 1.5px solid var(--blue-400);
@@ -184,10 +191,16 @@ section#day2 {
   overflow: hidden;
   padding-top: 2rem;
 
-  &--1 {
+  &--w {
     background-color: var(--blue-200);
     background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect opacity="1" x="0.5" y="0.5" width="24" height="24" stroke="%230A95B5"/></svg>');
   }
+      
+  &--1 {
+      background-color: var(--pink-500);
+        background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect opacity="1" x="0.5" y="0.5" width="24" height="24" stroke="%23F665A5"/></svg>');
+      }
+  
 
   & h1,
   & h2 {
@@ -203,9 +216,6 @@ section#day2 {
   margin: 0;
   color: var(--blue-400);
   background-color: var(--pink-100);
-  border: 1.5px solid var(--blue-400);
-  border-top: none;
-  border-bottom: none;
 
   & .schedule__table-side {
     border-left: 1.5px solid var(--blue-400);
@@ -238,8 +248,8 @@ section#day2 {
     text-align: center;
     color: var(--beige);
     padding: 2rem 0;
-    border-top: 1px solid var(--blue-light);
-    border-bottom: 1px solid var(--blue-light);
+    border-top: 1px solid var(--blue-400);
+    border-bottom: 1px solid var(--blue-400);
 
     @media screen and (max-width: 60rem) {
       grid-column: inherit;
@@ -260,9 +270,9 @@ section#day2 {
     }
   }
 
-  & .schedule__table-4cols {
+  & .schedule__table-2cols {
     width: 25%;
-    border-left: 1px solid var(--blue-light);
+    border-left: 1px solid var(--blue-400);
   }
 
   & .schedule__table-side {
@@ -272,17 +282,24 @@ section#day2 {
   & td[colspan] {
     padding-inline: 0;
     padding: 2rem;
-    border-block-start: 1px solid var(--blue-light);
-    border-block-end: 1px solid var(--blue-light);
+    border-block-start: 1px solid var(--blue-400);
+    border-block-end: 1px solid var(--blue-400);
     text-align: center;
   }
 
   & td:nth-child(4) {
-    border-right: 1px solid var(--blue-light);
+    border-right: 1px solid var(--blue-400);
   }
 
   & .schedule__track th {
     padding: 0.5rem 0 1rem 0;
+  }
+}
+
+.schedule__day--w {
+  & td[colspan] {
+    border-block-start: none;
+    border-block-end: none;
   }
 }
 
@@ -319,16 +336,16 @@ section#day2 {
 
   .activity-card {
     text-align: center;
-    border-bottom: 1px solid var(--blue-light);
+    border-bottom: 1px solid var(--blue-400);
   }
 
   .schedule__list {
-    border-top: 1px solid var(--blue-light);
+    border-top: 1px solid var(--blue-400);
   }
 }
 
 .border-bottom {
-  border-bottom: 1px solid var(--blue-light);
+  border-bottom: 1px solid var(--blue-400);
 }
 
 #workshop-day {
@@ -357,7 +374,7 @@ section#day2 {
 #day2 {
   .impl-room__container {
     @media (max-width: 60rem) {
-      border-top: 1px solid var(--blue-light);
+      border-top: 1px solid var(--blue-400);
     }
   }
 
@@ -377,7 +394,7 @@ section#day2 {
 
       @media (max-width: 60rem) {
         position: inherit;
-        border-top: 1px solid var(--blue-light);
+        border-top: 1px solid var(--blue-400);
       }
 
       .activity-card__workshop {
@@ -399,7 +416,7 @@ section#day2 {
 
       @media (max-width: 60rem) {
         position: inherit;
-        border-top: 1px solid var(--blue-light);
+        border-top: 1px solid var(--blue-400);
       }
 
       .activity-card {
