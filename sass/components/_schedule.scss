@@ -195,12 +195,16 @@ section#day2 {
     background-color: var(--blue-200);
     background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect opacity="1" x="0.5" y="0.5" width="24" height="24" stroke="%230A95B5"/></svg>');
   }
-      
+
   &--1 {
-      background-color: var(--pink-500);
-        background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect opacity="1" x="0.5" y="0.5" width="24" height="24" stroke="%23F665A5"/></svg>');
-      }
-  
+    background-color: var(--pink-500);
+    background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect opacity="1" x="0.5" y="0.5" width="24" height="24" stroke="%23F665A5"/></svg>');
+  }
+
+  &--2 {
+     background-color: var(--purple-200);
+     background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect opacity="1" x="0.5" y="0.5" width="24" height="24" stroke="%23893FC4"/></svg>');
+  }
 
   & h1,
   & h2 {
@@ -270,7 +274,7 @@ section#day2 {
     }
   }
 
-  & .schedule__table-2cols {
+  & .schedule__table-4cols {
     width: 25%;
     border-left: 1px solid var(--blue-400);
   }

@@ -270,7 +270,8 @@
                               {% set_global currentRowspan = 0 %}
                             {% endif %}
                             {% if not card.isBreak %}
-                              <td class="schedule__table-side"
+                              <td
+                                class="schedule__table-side"
                                 {% if card.rowspan %}rowspan="{{ card.rowspan }}"{% endif %}
                               >
                                 {% include "partials/activity-card.html" %}
