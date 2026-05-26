@@ -1,8 +1,3 @@
-.clouds {
-  opacity: 0.4;
-  top: 25rem;
-}
-
 .schedule {
   z-index: 100;
   position: relative;
@@ -29,6 +24,10 @@
 
   #day1 {
     margin-bottom: 5rem;
+
+    @media screen and (max-width: 60rem) {
+      margin-bottom: 0;
+    }
   }
 
   #day2 {
@@ -209,7 +208,7 @@
   &--3 {
     background-color: var(--orange-200);
     background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect opacity="1" x="0.5" y="0.5" width="24" height="24" stroke="%23FC9557"/></svg>');
-  
+
     .schedule__day-body {
       border-top: 1px solid var(--blue-400);
     }
@@ -267,6 +266,7 @@
     @media screen and (max-width: 60rem) {
       grid-column: inherit;
       border-top: none;
+      border-bottom: none;
     }
   }
 }
@@ -293,7 +293,7 @@
     width: 50%;
   }
 
-  & td[colspan] {
+  & td.schedule__entry {
     padding-inline: 0;
     padding: 2rem;
     border-block-start: 1px solid var(--blue-400);
@@ -347,7 +347,7 @@
     }
   }
 
-  .schedule__day-body { 
+  .schedule__day-body {
     border-bottom: 1px solid var(--blue-400);
   }
 
@@ -355,11 +355,7 @@
     text-align: center;
   }
 
-  .schedule__list {
-    border-top: 1px solid var(--blue-400);
-  }
-
-  /* Hides empty lis */
+  /* Hides empty list */
   li.schedule__day-body:has(.activity-card__content--empty) {
     display: none;
   }
@@ -374,10 +370,7 @@
 
   .activity-card__image {
     margin-bottom: 0.25rem;
-  }
-
-  .workshop__clouds {
-    top: 250rem;
+    width: 15rem;
   }
 
   @media (max-width: 60rem) {
@@ -389,7 +382,7 @@
       li:last-child {
         display: none;
       }
-      
+
       /* Removes the bottom border of the last activity card */
       li:nth-last-child(5) .activity-card {
         border-bottom: none;
@@ -496,9 +489,6 @@ section#post-day li {
 section#post-day {
   position: relative;
 
-  .post-day__clouds {
-    top: -22rem;
-  }
   .schedule__main-stage {
     padding-right: 0;
   }
