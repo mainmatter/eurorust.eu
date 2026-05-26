@@ -46,7 +46,7 @@
           </div>
           <div class="container">
             <div class="schedule__container">
-              <div class="schedule__day schedule__day--1">
+              <div class="schedule__day schedule__day--w">
                 <h1>Workshop Day</h1>
                 <h2 class="mt-3 mb-6">{{ day.date }}</h2>
                 <div class="mobile-schedule schedule__grid day-one mb-5">
@@ -168,7 +168,7 @@
         <section id="day{{ day.day }}" class="mt-6 mb-9">
           <div class="container">
             <div class="schedule__container">
-              <div class="schedule__day">
+              <div class="schedule__day schedule__day--{{ day.day }}">
                 <h1>Conference Day {{ day.day }}</h1>
                 <h2 class="mt-3 mb-6">{{ day.date }}</h2>
                 <div class="mobile-schedule schedule__grid day-one mb-5">
@@ -195,17 +195,6 @@
                     </ol>
                   </div>
                   {% if day.day == "1" %}
-                    <div class="closing-part closing-party__grid schedule__shared impl-room__container pt-8">
-                      <h4 class="schedule__track mb-4">impl room</h4>
-                      {% include "partials/impl-room.html" %}
-                    </div>
-                    <div class="closing-part closing-party__grid schedule__shared pt-8">
-                      <h4 class="schedule__track mb-4">Workshops</h4>
-                      {% set workshopType = "jetbrains-rustrover" %}
-                      {% include "partials/activity-card-workshop.html" %}
-                      {% set workshopType = "rust-meets-solana" %}
-                      {% include "partials/activity-card-workshop.html" %}
-                    </div>
                     <div class="closing-party closing-party__grid schedule__shared mb-9 pt-8 pb-8 border-bottom">
                       <h4 class="schedule__track mb-4 border-bottom pb-4">Side activities</h4>
                       <div class="closing-party__content">
@@ -233,15 +222,6 @@
                     </div>
                   {% endif %}
                   {% if day.day == "2" %}
-                    <div class="closing-part closing-party__grid schedule__shared impl-room__container pt-8">
-                      <h4 class="schedule__track mb-4">impl room</h4>
-                      {% include "partials/impl-room.html" %}
-                    </div>
-                    <div class="closing-part closing-party__grid schedule__shared pt-8">
-                      <h4 class="schedule__track mb-4">Workshop</h4>
-                      {% set workshopType = "profiling-rust-in-action" %}
-                      {% include "partials/activity-card-workshop.html" %}
-                    </div>
                     <div class="closing-party closing-party__grid schedule__shared pt-8">
                       <h4 class="schedule__track mb-4 border-bottom pb-4">Side activity</h4>
                       <div class="closing-party__content">
@@ -263,18 +243,16 @@
                         <th scope="col" class="visually-hidden">Time</th>
                         <th scope="col"><span class="schedule__sticky-label">Main Stage</span></th>
                         <th scope="col" class="schedule__table-4cols">Side Track</th>
-                        <th scope="col" class="schedule__table-4cols">impl Room</th>
-                        <th scope="col" class="schedule__table-4cols">Workshop{% if day.day == "1" %}s{% endif %}</th>
                       </tr>
                     </thead>
                     {% set_global sideCount = 1 %}
                     {% set_global currentRowspan = 0 %}
                     {% set_global sideRow = 0 %}
                     {% for activity in day.mainStage %}
-                      <tr>
+                      <tr class="schedule__day-body">
                         <td scope="row" class="visually-hidden">{{ activity.time }}</td>
                         <td
-                          colspan="{% if activity.isBreak %}4{% else %}1{% endif %}"
+                          colspan="{% if activity.isBreak %}2{% else %}1{% endif %}"
                           class="{% if activity.isBreak %}schedule{% endif %}"
                         >
                           <!-- siderow: {{ sideRow }} count: {{ sideCount }} currentRowSpan {{ currentRowspan }} -->
@@ -299,55 +277,6 @@
                                 {% include "partials/activity-card.html" %}
                               </td>
                             {% endif %}
-                          {% endif %}
-                          <!-- impl room sticky cell -->
-                          {% set_global rowSpan = 0 %}
-                          {% if sideRow == 2 or sideRow == 9 %}
-                            {% set_global rowSpan = 2 %}
-                          {% elif sideRow == 5 %}
-                            {% set_global rowSpan = 3 %}
-                          {% endif %}
-
-                          {% if sideRow == 2 or sideRow == 5 or sideRow == 9 %}
-                            <td rowspan="{{ rowSpan }}" class="schedule__table-4cols sticky">
-                              {% include "partials/impl-room.html" %}
-                            </td>
-                          {% endif %}
-                          <!-- end of impl room -->
-                          <!-- workshop cell -->
-                          {% if sideRow == 2 %}
-                            {% set_global rowSpan = 2 %}
-                          {% elif sideRow == 5 %}
-                            {% set_global rowSpan = 3 %}
-                          {% endif %}
-
-                          {% if sideRow == 2 or sideRow == 5 %}
-                            <td rowspan="{{ rowSpan }}" class="schedule__table-4cols sticky">
-                              {% if day.day == "1" %}
-                                <div class="two-sticky-activity-cards">
-                                  {% set workshopType = "jetbrains-rustrover" %}
-                                  {% include "partials/activity-card-workshop.html" %}
-                                  {% set workshopType = "rust-meets-solana" %}
-                                  {% if sideRow == 2 %}
-                                    {% set timeSolana ="11:00–12:00" %}
-                                  {% else %}
-                                    {% set timeSolana ="14:00–15:00" %}
-                                  {% endif %}
-                                  {% include "partials/activity-card-workshop.html" %}
-                                </div>
-                              {% elif day.day == "2" %}
-                                {% set workshopType = "profiling-rust-in-action" %}
-                                {% include "partials/activity-card-workshop.html" %}
-                              {% endif %}
-                            </td>
-                          {% endif %}
-                          {% if sideRow == 9 %}
-                            <td rowspan="{{ rowSpan }}" class="schedule__table-4cols sticky">
-                              {% if day.day == "2" %}
-                                {% set workshopType = "profiling-rust-in-action" %}
-                                {% include "partials/activity-card-workshop.html" %}
-                              {% endif %}
-                            </td>
                           {% endif %}
                           {% set_global sideRow = sideRow + 1 %}
                         {% endif %}
