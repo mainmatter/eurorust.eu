@@ -1,11 +1,11 @@
 <div class="activity-card activity-card__workshop mb-2">
   <!-- is this workshop held on Oct. 8 or the main even days?. Load the approrpiate database and set the 'time' variable accordingly -->
   {% if workshopType %}
-    {% set path = "2025/workshops/" ~ workshopType ~ ".md" %}
+    {% set path = "workshops/" ~ workshopType ~ ".md" %}
     {% set event = get_page(path = path) %}
     {% set time = event.extra.time %}
   {% elif activity.title %}
-    {% set path = "2025/workshops/" ~ activity.title ~ ".md" %}
+    {% set path = "workshops/" ~ activity.title ~ ".md" %}
     {% set event = get_page(path = path) %}
     {% set time = activity.time %}
   {% endif %}

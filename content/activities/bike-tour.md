@@ -1,15 +1,14 @@
 +++
-title = "The Seine bike tour"
+title = "Barcelona bike tour"
 template = "activity.html"
 [extra]
-  date = "Wednesday, October 08, "
+  date = "Wednesday, October 14, "
   time = "14:30–17:30"
-  location = "13 rue Brantôme, 75003 Paris"
-  location_name = "Paris Bike Tour"
-  location_url = "https://maps.app.goo.gl/KyTC1JdrMwzwgh22A"
-  abstract = "Take in the most iconic sights of the capital while following the banks of the Seine (a UNESCO world cultural heritage site). A unique spectacle is waiting for you!<br/><br/>We start on the right bank of the Seine. Our first crossing is the Pont Notre-Dame in our adventure of discovery as we follow Paris’s winding history. From the Notre Dame Cathedral to the Eiffel tower; from the Palais de Chaillot to the Louvre Palace –you will enjoy the most beautiful perspectives that offer Paris while your professional guide will allow you to discover prestigious monuments and multiples treasures of the city…<br/><br/><strong>Please be at the venue 10/15 minutes before departure time.</strong><br/><br/><strong>Included in the tour:</strong> Bicycle, accessories (helmet, basket, poncho), professional national guide, insurance.<br/><br/><strong>The price does not include:</strong> Food and drinks"
+  location = "Plaça de Sant Agustí Vell, 16, 08003 Barcelona"
+  location_name = "Plaça de Sant Agustí Vell"
+  location_url = "https://maps.app.goo.gl/bt29dFBtN2o1hqME7"
+  abstract = "Discover Barcelona by bike in this private guided tour through the city's most iconic sights. Starting and finishing at the workshop in the heart of El Born, your expert local guide will take you through Barcelona's highlights at a relaxed pace, sharing stories, history, and hidden gems along the way.<br/><br/>Included: Bicycle, professional local guide, insurance.<br/>Not included: Helmet, water, food and drinks."
   ogimage = "/images/activities/og-images/bike-tour.png"
   heroimage = "/images/activities/bike-tour.webp"
   heroimage_alt = "Bicycle"
 +++
-

@@ -3,15 +3,13 @@
     "day": "1",
     "date": "October 14, 2026",
     "workshop": [
-      { "time": "10:00–16:00", "title": "rust-in-action" },
-      { "time": "10:00–16:00", "title": "rust-python-interoperability" },
-      { "time": "10:00–16:00", "title": "using-bevy" },
-      { "time": "10:00–16:00", "title": "long-live-webassembly" },
-      { "time": "10:00–16:00", "title": "edge-ai-with-rust" },
-      { "time": "10:00–16:00", "title": "rust-performance-lab" }
+      { "time": "10:00–16:00", "title": "c-to-rust" },
+      { "time": "10:00–16:00", "title": "containers-are-dead" },
+      { "time": "10:00–16:00", "title": "programming-a-line-follower-robot" }
     ],
     "side": [
       { "time": "14:30–17:30", "title": "bike-tour" },
+      { "time": "18:30–20:00", "title": "boat-tour" },
       { "time": "18:30–20:00", "title": "wine-tasting" },
       { "time": "", "title": "" },
       { "time": "", "title": "" },
