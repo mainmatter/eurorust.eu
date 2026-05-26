@@ -241,8 +241,8 @@
                     <thead>
                       <tr class="schedule__track">
                         <th scope="col" class="visually-hidden">Time</th>
-                        <th scope="col"><span class="schedule__sticky-label">Main Stage</span></th>
-                        <th scope="col" class="schedule__table-4cols">Side Track</th>
+                        <th scope="col"><p>Main Stage</p></th>
+                        <th scope="col"><p>Side Track</p></th>
                       </tr>
                     </thead>
                     {% set_global sideCount = 1 %}
@@ -271,7 +271,6 @@
                             {% endif %}
                             {% if not card.isBreak %}
                               <td
-                                class="schedule__table-4cols"
                                 {% if card.rowspan %}rowspan="{{ card.rowspan }}"{% endif %}
                               >
                                 {% include "partials/activity-card.html" %}
