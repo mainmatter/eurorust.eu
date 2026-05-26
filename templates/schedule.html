@@ -5,10 +5,10 @@
     {% include "sections/nav.html" %}
 
     <main tabindex="-1" id="main">
-      <section class="schedule-hero pb-10">
+      <section class="schedule-hero">
         <div class="container p-1">
           <h1 class="schedule-hero__title mb-7">This is your Eurorust experience</h1>
-          <div class="schedule-hero__nav schedule__day">
+          <div class="schedule-hero__nav">
             <p><strong>Jump to:</strong></p>
             <ul>
               <li>
@@ -33,7 +33,7 @@
       {% set_global currentRowspan = 0 %}
       {% set_global sideRow = 0 %}
       {% for day in schedule %}
-        <section id="workshop-day" class="mt-6 mb-8">
+        <section id="workshop-day" class="mb-8">
           <div class="container">
             <div class="schedule__container">
               <div class="schedule__day schedule__day--w">
