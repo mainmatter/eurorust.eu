@@ -8,7 +8,7 @@
     
     <div class="activity-card__content">
       <p class="activity-card__time"><strong>{{ card.time }}</strong></p>
-      <p aria-hidden="true" class="beige activity-card__title"><strong>{{ talk.title }}</strong></p>
+      <p aria-hidden="true" class="activity-card__title"><strong>{{ talk.title }}</strong></p>
       {% if talk.extra.speakers %}
         {% for speaker in talk.extra.speakers %}
         {% set path = "speakers/" ~ speaker ~ ".md" %}
@@ -18,23 +18,23 @@
             {% else %}
               <img class="activity-card__portrait mb-3" src="/images/talks/placeholder.webp" alt="" />
         {% endif %}
-        <p class="beige activity-card__speaker mt-3">»{{speaker.extra.name}}</p>
+        <p class="activity-card__speaker mt-3">»{{speaker.extra.name}}</p>
         {% endfor %}
       {% endif %}
       {% if talk.extra.sponsor %}
-        <p class="beige activity-card__speaker mt-3 ">*Sponsored by {{ talk.extra.sponsor }}</p>
+        <p class="activity-card__speaker mt-3 ">*Sponsored by {{ talk.extra.sponsor }}</p>
       {% endif %}
     </div>
     </a>
   {% elif card.title %}
     <div class="activity-card__content">
       <p class="activity-card__time"><strong>{{ card.time }}</strong></p>
-      <p aria-hidden="true" class="beige activity-card__title"><strong>{{ card.title }}</strong></p>
+      <p aria-hidden="true" class="activity-card__title"><strong>{{ card.title }}</strong></p>
     </div>
     </a>
   {% else %}
     <p class="activity-card__time"><strong>{{ card.time }}</strong></p>
-    <p aria-hidden="true" class="beige activity-card__title"><strong>TBA</strong></p>
+    <p aria-hidden="true" class="activity-card__title"><strong>TBA</strong></p>
     </a>
   {% endif %}
   </div>

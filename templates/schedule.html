@@ -46,9 +46,9 @@
           </div>
           <div class="container">
             <div class="schedule__container">
-              <div class="schedule__day">
-                <h3>Workshop Day</h3>
-                <h4 class="mt-3 mb-6">{{ day.date }}</h4>
+              <div class="schedule__day schedule__day--1">
+                <h1>Workshop Day</h1>
+                <h2 class="mt-3 mb-6">{{ day.date }}</h2>
                 <div class="mobile-schedule schedule__grid day-one mb-5">
                   <div class="schedule__main-stage">
                     <h4 class="schedule__track mb-4">Workshops</h4>
@@ -82,15 +82,15 @@
                 </div>
                 <div class="desktop-schedule">
                   <table class="schedule__table">
-                    <tr class="schedule__track h4">
+                    <tr class="schedule__track">
                       <th scope="col" class="visually-hidden">Time</th>
-                      <th scope="col">Workshops</th>
-                      <th scope="col" class="schedule__table-side">Side activities</th>
+                      <th scope="col"><h2>Workshops</h2></th>
+                      <th scope="col" class="schedule__table-side"><h2>Side activities</h2></th>
                     </tr>
                     <tr>
                       <td scope="row" class="visually-hidden"></td>
                       <td class="venue-warning">
-                        <p class="beige">
+                        <p class="pb-4">
                           <strong
                             >The EuroRust workshops will take place in a separate venue,
                             <a
@@ -108,7 +108,7 @@
                     {% set_global currentRowspan = 0 %}
                     {% set_global sideRow = 0 %}
                     {% for activity in day.workshop %}
-                      <tr>
+                      <tr class="schedule__day-body">
                         <td scope="row" class="visually-hidden">{{ activity.time }}</td>
                         <td
                           colspan="{% if activity.isBreak %}2{% else %}1{% endif %}"
@@ -169,8 +169,8 @@
           <div class="container">
             <div class="schedule__container">
               <div class="schedule__day">
-                <h3>Conference Day {{ day.day }}</h3>
-                <h4 class="mt-3 mb-6">{{ day.date }}</h4>
+                <h1>Conference Day {{ day.day }}</h1>
+                <h2 class="mt-3 mb-6">{{ day.date }}</h2>
                 <div class="mobile-schedule schedule__grid day-one mb-5">
                   <div class="schedule__main-stage">
                     <h4 class="schedule__track mb-4">Main stage</h4>
@@ -215,8 +215,8 @@
                           alt="Plate, fork, and spoon"
                         />
                         <p><strong>20:00</strong></p>
-                        <p class="beige"><strong>Group Dinners: Meet & Eat!</strong></p>
-                        <p class="beige">
+                        <p><strong>Group Dinners: Meet & Eat!</strong></p>
+                        <p>
                           We have reservations at various local restaurants in Paris. Sign up at the conference venue to
                           join fellow Rustaceans for a dinner of your choice!
                         </p>
@@ -227,7 +227,7 @@
                         <div class="closing-party__content">
                           <img class="image-party py-3" src="/images/activities/karaoke.webp" alt="Retro mic" />
                           <p><strong>21:00–23:00</strong></p>
-                          <p class="beige"><strong>Karaoke Night</strong></p>
+                          <p><strong>Karaoke Night</strong></p>
                         </div>
                       </a>
                     </div>
@@ -247,8 +247,8 @@
                       <div class="closing-party__content">
                         <img class="image-party py-3" src="/images/activities/party.webp" alt="Disco ball" />
                         <p><strong>18:30–22:00</strong></p>
-                        <p class="beige"><strong>Closing Party</strong></p>
-                        <p class="beige">
+                        <p><strong>Closing Party</strong></p>
+                        <p>
                           Like every year, we'll be ending the conference with a closing party. It will be held directly
                           at the conference venue, right after the closing talk on Friday, October 10.
                         </p>
@@ -259,7 +259,7 @@
                 <div class="desktop-schedule">
                   <table class="schedule__table">
                     <thead>
-                      <tr class="schedule__track h4">
+                      <tr class="schedule__track">
                         <th scope="col" class="visually-hidden">Time</th>
                         <th scope="col"><span class="schedule__sticky-label">Main Stage</span></th>
                         <th scope="col" class="schedule__table-4cols">Side Track</th>
@@ -362,8 +362,8 @@
                             <div class="closing-party__content">
                               <img class="image-party py-3" src="/images/activities/dinner.webp" alt="Plate of food" />
                               <p><strong>20:00</strong></p>
-                              <p class="beige"><strong>Group Dinners: Meet & Eat!</strong></p>
-                              <p class="beige">
+                              <p><strong>Group Dinners: Meet & Eat!</strong></p>
+                              <p>
                                 We have reservations at various local restaurants in Paris. Sign up at the conference
                                 venue to join fellow Rustaceans for a dinner of your choice!
                               </p>
@@ -379,7 +379,7 @@
                               <div class="closing-party__content">
                                 <img class="image-party py-3" src="/images/activities/karaoke.webp" alt="Retro mic" />
                                 <p><strong>21:00–23:00</strong></p>
-                                <p class="beige"><strong>Karaoke Night</strong></p>
+                                <p><strong>Karaoke Night</strong></p>
                               </div>
                             </a>
                           </div>
@@ -394,8 +394,8 @@
                             <div class="closing-party__content">
                               <img class="image-party py-3" src="/images/activities/party.webp" alt="Disco ball" />
                               <p><strong>18:30–22:00</strong></p>
-                              <p class="beige"><strong>Closing Party</strong></p>
-                              <p class="beige">
+                              <p><strong>Closing Party</strong></p>
+                              <p>
                                 Like every year, we'll be ending the conference with a closing party. It will be held
                                 directly at the conference venue, right after the closing talk on Friday, October 10.
                               </p>
@@ -432,8 +432,8 @@
           <div class="container">
             <div class="schedule__container">
               <div class="schedule__day">
-                <h3>Post-Conference Day</h3>
-                <h4 class="mt-3 mb-6 schedule__track pb-3">{{ day.date }}</h4>
+                <h1>Post-Conference Day</h1>
+                <h2 class="mt-3 mb-6 schedule__track pb-3">{{ day.date }}</h2>
                 <div class="schedule__grid mb-5">
                   <div class="schedule__main-stage">
                     <ol class="schedule__list">
