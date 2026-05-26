@@ -1,7 +1,7 @@
 [
   {
     "day": "1",
-    "date": "October 14, 2025",
+    "date": "October 14, 2026",
     "workshop": [
       { "time": "10:00–16:00", "title": "rust-in-action" },
       { "time": "10:00–16:00", "title": "rust-python-interoperability" },
