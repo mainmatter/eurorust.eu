@@ -9,5 +9,5 @@ title = "Speaker: Dmitriy Kovalenko"
   twitter = "neogoose_btw"
   url = "https://dmtrkovalenko.dev"
   linkedin = "http://linkedin.com/in/dmtrKovalenko/"
-  bio = "<p>More than 10 years making bugs for open source, made some popular media processing libraries, and also JavaScript ðŸ’€ libraries.</p><p>Love C, Rust, OCaml and my little chihuahua.</p>"
+  bio = "<p>More than 10 years making bugs for open source, made some popular media processing libraries, and also JavaScript 💀 libraries.</p><p>Love C, Rust, OCaml and my little chihuahua.</p>"
 +++
