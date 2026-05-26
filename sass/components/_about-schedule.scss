@@ -1,7 +1,7 @@
 .about-schedule {
   background-color: var(--blue-300);
   position: relative;
-  z-index: 2;
+  z-index: 100;
   @include background__noise;
 
   @media screen and (max-width: 60rem) {
@@ -53,8 +53,9 @@
     }
 
     .about-schedule__button {
-      @include btn__primary-orange;
+      @include btn__primary-pink;
       z-index: 11;
+      margin-top: 4rem;
 
       @media screen and (max-width: 60rem) {
         width: 100%;

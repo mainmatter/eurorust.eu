@@ -1,202 +1,246 @@
-.clouds {
-        opacity: .4;
-        top: 25rem;
-    }
-
 .schedule {
+  z-index: 100;
+  position: relative;
+  p {
+    color: var(--blue-400);
+  }
 
-    h1, h3 { 
-        @include stroke__shadow(var(--orange-100), 0.5px);
-        text-align: center;
+  .schedule__track p {
+    color: var(--pink-100);
+  }
+
+  h1,
+  h3 {
+    @include stroke__shadow(var(--orange-100), 0.5px);
+    text-align: center;
+  }
+
+  .venue-warning {
+    text-align: center;
+    & p {
+      color: var(--pink-100);
     }
+  }
 
-    h3, h4, th, p, li {
-        text-shadow: 0 0 20px var(--blue-800);
+  #day1 {
+    margin-bottom: 5rem;
+
+    @media screen and (max-width: 60rem) {
+      margin-bottom: 0;
     }
+  }
 
-    .schedule-hero__title {
-        background-color: var(--orange-300);   
-        border-radius: var(--corner);
-    }
+  #day2 {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+  }
 
-    
-    
-
-    .venue-warning {
-        border-right: 1px solid var(--blue-light);
-        padding: 2rem 2rem 0 2rem;
-        text-align:center;
-    }
-
-    & section {
+  & section {
     padding: 3rem;
 
     @media screen and (max-width: 60rem) {
-        padding: 1rem 0;
+      padding: 1rem 0;
     }
+  }
 
-    }
-    
-    & .activity-card {
-        padding: 2rem;
+  & .activity-card {
+    padding: 1rem;
 
-     @media screen and (max-width: 85rem) {
-        padding: 2rem 0;
+    @media screen and (max-width: 85rem) {
+      padding: 2rem 0;
     }
 
     @media screen and (max-width: 60rem) {
-        padding: 2rem 0;
+      padding: 2rem 0;
     }
-    }
-
-    & .activity-card:nth-child(even) {
-    border-top: 1px solid var(--blue-light);
-    }
-
-    & .two-sticky-activity-cards {
-        .activity-card:nth-child(even) {
-            border-top: none;
-        }
-    }
-
-
-    & .activity-card__content {
-        text-align: center; 
-
-        & p {
-            line-height: 1.8rem;
-        }
-
-        & .sponsored-by {
-            margin-top: 0; 
-        }
-    }
-
-    .activity-card__content {
-
-
-  .activity-card__time {
-    order: 2;
-       background-color: var(--orange-300);
-       padding: 0.4rem 1rem;
-       border-radius: var(--corner);
-       text-shadow: 0 0 10px var(--orange-800);
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 1.4rem;
   }
 
-  .activity-card__title {
-    order: 3;
+  & .activity-card:nth-child(even) {
+    border-top: 1px solid var(--blue-400);
   }
 
-  .activity-card__image {
-    order: 1;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-
-  .activity-card__speaker {
-    order: 4;
-  }
-
-}
-
-    & .activity-card__link {
-        text-decoration: none;
-        }
-        
-    & .activity-card__content {
-        transition: all 0.2s ease-in;
-        padding:0 1.5rem 1.5rem 1.5rem;
-    }    
-    & .activity-card__link:hover .activity-card__content, & .activity-card__link:hover .closing-party__content{
-        filter: drop-shadow(10px 10px 5px var(--blue));
-        transition: all 0.2s ease-in;
+  & .two-sticky-activity-cards {
+    .activity-card:nth-child(even) {
+      border-top: none;
     }
+  }
 
-    & .ticket-button {
+  & .activity-card__content {
     text-align: center;
-    
-        & .schedule__button {
-            color: var(--blue-dark);
-            margin:0 auto;
-            text-align: center;
-        }
+
+    & p {
+      line-height: 1.8rem;
     }
+
+    & .sponsored-by {
+      margin-top: 0;
+    }
+  }
+
+  .activity-card__content {
+    .activity-card__time {
+      order: 2;
+      padding: 0.4rem 1rem;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1.4rem;
+      font-weight: 400;
+    }
+
+    .activity-card__title {
+      order: 3;
+    }
+
+    .activity-card__image {
+      order: 1;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .activity-card__speaker {
+      order: 4;
+    }
+  }
+
+  & .activity-card__link {
+    text-decoration: none;
+  }
+
+  & .activity-card__content {
+    transition: all 0.2s ease-in;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+  }
+  & .activity-card__link:hover .activity-card__content,
+  & .activity-card__link:hover .closing-party__content {
+    filter: drop-shadow(10px 10px 5px var(--blue));
+    transition: all 0.2s ease-in;
+  }
+
+  & .ticket-button {
+    text-align: center;
+
+    & .schedule__button {
+      color: var(--blue-dark);
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
 }
 
 .schedule__sections {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 
-    .separator__top, .separator__bottom {
-        background: var(--blue-500);
-        background-blend-mode: overlay;
-    }
+  .separator__top,
+  .separator__bottom {
+    background: var(--blue-500);
+    background-blend-mode: overlay;
+  }
 }
 
 .schedule__sections-inner {
-    @include background-pink;
-    padding-bottom: 4rem;
-}
-
-
-section#day2 {
-    & .schedule__table {
-        backdrop-filter: blur(.12rem);
-    }
+  @include background-pink;
+  padding-bottom: 4rem;
 }
 
 .schedule-hero__details {
-    line-height: 1.5rem;
+  line-height: 1.5rem;
 }
 
-
-
 .schedule-hero__nav {
-    & p {
-    color: var(--beige);
+  & p {
+    color: var(--pink-100);
     text-align: center;
-    }
+  }
 
-    & ul {
-        list-style: none;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+  & ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 
-            @media screen and (max-width: 60rem) {
-                flex-direction: column;
-                align-items: center;
-            }
+    @media screen and (max-width: 60rem) {
+      flex-direction: column;
+      align-items: center;
     }
+  }
 
-    & li:before {
-        content: "» ";
-    }
+  & li:before {
+    content: "» ";
+  }
 
-    & a {
-        display: inline
-    }
+  & a {
+    display: inline;
+  }
 }
 
 .schedule__container {
-    width: 100%;
+  width: 100%;
+}
+
+.schedule__bottom-line {
+  border-bottom: 1px solid var(--blue-400);
 }
 
 .schedule__day {
-     
-    background: rgba(28, 117, 196, 0.65);
-    border-radius: var(--corner);
-    box-shadow: inset 0 5px 5px var(--blue-200);
-    padding: 3rem;
-    color: var(--orange-100);
+  color: var(--pink-100);
+  border: 1.5px solid var(--blue-400);
+  border-radius: var(--corner);
+  margin: 0;
+  overflow: hidden;
+  padding-top: 2rem;
 
-    & h3, & h4 {
-        text-align: center;
+  &--w {
+    background-color: var(--blue-200);
+    background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect opacity="1" x="0.5" y="0.5" width="24" height="24" stroke="%230A95B5"/></svg>');
+  }
+
+  &--1 {
+    background-color: var(--pink-500);
+    background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect opacity="1" x="0.5" y="0.5" width="24" height="24" stroke="%23F665A5"/></svg>');
+  }
+
+  &--2 {
+    background-color: var(--purple-200);
+    background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect opacity="1" x="0.5" y="0.5" width="24" height="24" stroke="%23893FC4"/></svg>');
+  }
+
+  &--3 {
+    background-color: var(--orange-200);
+    background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect opacity="1" x="0.5" y="0.5" width="24" height="24" stroke="%23FC9557"/></svg>');
+
+    .schedule__day-body {
+      border-top: 1px solid var(--blue-400);
     }
+  }
+
+  & h1,
+  & h2 {
+    text-align: center;
+    color: var(--pink-100);
+    text-transform: uppercase;
+  }
+}
+
+.schedule__day-body {
+  flex-grow: 1;
+  padding: 1rem;
+  margin: 0;
+  color: var(--blue-400);
+  background-color: var(--pink-100);
+
+  & .schedule__table-side {
+    border-left: 1.5px solid var(--blue-400);
+  }
+
+  &:last-child {
+    td:first-child {
+      border-bottom-left-radius: var(--corner);
+    }
+    td:last-child {
+      border-bottom-right-radius: var(--corner);
+    }
+  }
 }
 
 .schedule__grid {
@@ -207,22 +251,24 @@ section#day2 {
   text-wrap: balance;
   gap: 0;
 
-    @media screen and (max-width: 60rem) {
-        grid-template-columns: repeat(1, 1fr);
-    }
+  @media screen and (max-width: 60rem) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
   & .span-columns {
     grid-column: 1 / span 2;
     text-align: center;
     color: var(--beige);
-    padding: 2rem 0; 
-    border-top: 1px solid var(--blue-light);
-    border-bottom: 1px solid var(--blue-light);
+    padding: 2rem 0;
+    border-top: 1px solid var(--blue-400);
+    border-bottom: 1px solid var(--blue-400);
 
     @media screen and (max-width: 60rem) {
-        grid-column: inherit;
+      grid-column: inherit;
+      border-top: none;
+      border-bottom: none;
     }
-  }  
+  }
 }
 
 .mobile-schedule {
@@ -230,227 +276,232 @@ section#day2 {
 }
 
 .schedule__table {
+  @media screen and (max-width: 60rem) {
+    columns: 2;
 
-     @media screen and (max-width: 60rem) {
-        columns: 2;
-
-        & td {
-            column-span: all;
-        };
+    & td {
+      column-span: all;
     }
+  }
 
-    & .schedule__table-4cols {
-        width: 25%;
-        border-left: 1px solid var(--blue-light);
-    }
+  & .schedule__table-4cols {
+    width: 25%;
+    border-left: 1px solid var(--blue-400);
+  }
 
-    & .schedule__table-side {
-        width: 50%;
-        border-left: 1px solid var(--blue-light);
-    }
+  & .schedule__table-side {
+    width: 50%;
+  }
 
-    & td[colspan] {
-        padding-inline: 0;
-        padding: 2rem;
-        border-block-start: 1px solid var(--blue-light);
-        border-block-end: 1px solid var(--blue-light);
-        text-align: center;
-    }
+  & td.schedule__entry {
+    padding-inline: 0;
+    padding: 2rem;
+    border-block-start: 1px solid var(--blue-400);
+    border-block-end: 1px solid var(--blue-400);
+    text-align: center;
+  }
 
-    & td:nth-child(4) {
-        border-right: 1px solid var(--blue-light);
-    }
+  & td:nth-child(4) {
+    border-right: 1px solid var(--blue-400);
+  }
 
-    & .schedule__track th {
-        padding: .5rem 0 1rem 0;
-    }
+  & .schedule__track th {
+    padding: 0.5rem 0 1rem 0;
+  }
+}
+
+.schedule__day--w {
+  & td[colspan] {
+    border-block-start: none;
+    border-block-end: none;
+  }
 }
 
 @media (max-width: 60rem) {
-    .mobile-schedule {
-      display: block;
-    }
+  .mobile-schedule {
+    display: block;
+  }
 
-    .desktop-schedule {
-      display: none;
-    }
+  .desktop-schedule {
+    display: none;
+  }
 
-    .schedule__grid {
-        display: grid;
-        grid-template-columns: 100%;
-    }
+  .schedule__grid {
+    display: grid;
+    grid-template-columns: 100%;
+  }
 
-    .schedule__main-stage {
-        padding-right: 0;
-        margin-bottom: 6rem;
-    }
+  .schedule__main-stage {
+    padding-right: 0;
+  }
 
-    .schedule__side-track {
-        padding-left: 0;
-    }
+  .schedule__side-track {
+    padding-left: 0;
+  }
 
-    .schedule__list {
-        li:last-child {
-            .activity-card {
-               border-bottom: none;
-            }
-        }
+  .schedule__list {
+    li:last-child {
+      .activity-card {
+        border-bottom: none;
+      }
     }
+  }
 
-    .activity-card {
-        text-align: center;
-        border-bottom: 1px solid var(--blue-light);
-    }
+  .schedule__day-body {
+    border-bottom: 1px solid var(--blue-400);
+  }
 
-    .schedule__list {
-        border-top: 1px solid var(--blue-light);
-    }
+  .activity-card {
+    text-align: center;
+  }
+
+  /* Hides empty list */
+  li.schedule__day-body:has(.activity-card__content--empty) {
+    display: none;
+  }
 }
 
 .border-bottom {
-        border-bottom: 1px solid var(--blue-light);
+  border-bottom: 1px solid var(--blue-400);
 }
 
 #workshop-day {
+  position: relative;
 
-    position: relative;
-    
-    .activity-card__image {
-        margin-bottom: .25rem;
-    }
+  .activity-card__image {
+    margin-bottom: 0.25rem;
+    width: 15rem;
+  }
 
-    .workshop__clouds {
-        top: 250rem;
-    }
+  @media (max-width: 60rem) {
+    /* Removes empty workshops if the number of workshops is bigger than then number of side activities on Workshop Day */
+    .schedule__list {
+      li:nth-last-child(4),
+      li:nth-last-child(3),
+      li:nth-last-child(2),
+      li:last-child {
+        display: none;
+      }
 
-    @media (max-width: 60rem) {
-        /* Remove if number of workshops = number of side activities on Workshop Day */
-        .schedule__list {
-            li:nth-last-child(2), li:last-child {
-                display: none; 
-            }
-        }
+      /* Removes the bottom border of the last activity card */
+      li:nth-last-child(5) .activity-card {
+        border-bottom: none;
+      }
     }
+  }
 }
 
-#day1, #day2 {
-    .impl-room__container {
-        @media (max-width: 60rem) {
-            border-top: 1px solid var(--blue-light);
-        }
+#day1,
+#day2 {
+  .impl-room__container {
+    @media (max-width: 60rem) {
+      border-top: 1px solid var(--blue-400);
     }
+  }
 
-    .activity-card__image {
-        width:80%;
-        
-        @media screen and (max-width: 60rem) {
+  .activity-card__image {
+    width: 80%;
+
+    @media screen and (max-width: 60rem) {
+      width: 10rem;
+    }
+  }
+
+  .sticky {
+    .activity-card {
+      position: sticky;
+      top: 0;
+      text-align: center;
+
+      @media (max-width: 60rem) {
+        position: inherit;
+        border-top: 1px solid var(--blue-400);
+      }
+
+      .activity-card__workshop {
+        .activity-card__image {
+          max-height: 10rem;
+          margin: 0 auto 1rem auto;
+          order: 1;
+
+          @media screen and (max-width: 60rem) {
             width: 10rem;
+          }
         }
+      }
     }
-
-    .sticky {
-        .activity-card {
-            position: sticky;
-            top: 0;
-            text-align: center;
-
-            @media (max-width: 60rem) {
-                position: inherit;
-                border-top: 1px solid var(--blue-light);
-            }
-        
-
-            .activity-card__workshop {
-                .activity-card__image {
-                    max-height: 10rem;
-                    margin: 0 auto 1rem auto;
-                    order: 1;
-
-                    @media screen and (max-width:60rem) {
-                        width: 10rem; 
-                    }
-                }
-            }
-        }
 
     .two-sticky-activity-cards {
-        position: sticky;
-        top: 0;
+      position: sticky;
+      top: 0;
 
-        @media (max-width: 60rem) {
-            position: inherit;
-            border-top: 1px solid var(--blue-light);
-        }
-        
-        .activity-card {
-            position: relative
-        }
+      @media (max-width: 60rem) {
+        position: inherit;
+        border-top: 1px solid var(--blue-400);
+      }
+
+      .activity-card {
+        position: relative;
+      }
     }
-}
+  }
 
-    .activity-card__content {
-        display:flex;
-        flex-direction: column;
-    
-            .activity-card__time {
-                order: 2;
-            }
+  .activity-card__content {
+    display: flex;
+    flex-direction: column;
 
-            .activity-card__title {
-                order: 3;
-            }
-
-            .activity-card__portrait {
-                width: clamp(5rem, 12vw, 10rem);
-                margin: 0 auto 1rem auto;
-                order: 1;
-
-                @media screen and (max-width:60rem) {
-                    width: 10rem;
-                }
-            }
-
-            .activity-card__speaker {
-                order: 4;
-            }
+    .activity-card__time {
+      order: 2;
     }
+
+    .activity-card__title {
+      order: 3;
+    }
+
+    .activity-card__portrait {
+      width: clamp(7.5rem, 18vw, 15rem);
+      margin: 0 auto 1rem auto;
+      order: 1;
+
+      @media screen and (max-width: 60rem) {
+        width: 13rem;
+      }
+    }
+
+    .activity-card__speaker {
+      order: 4;
+    }
+  }
 }
 
 section#post-day li {
-    text-align:center;
+  text-align: center;
 }
 
-
 .closing-party__content {
-    text-align:center;
+  text-align: center;
 
-    .image-party {
-        width: clamp(200px, 20vw, 400px);
-    };
+  .image-party {
+    width: clamp(200px, 20vw, 400px);
+  }
 }
 
 section#post-day {
+  position: relative;
 
-    position: relative;
+  .schedule__main-stage {
+    padding-right: 0;
+  }
 
-    .post-day__clouds {
-        top: -22rem;
+  .schedule__grid {
+    display: block;
+
+    .activity-card__image {
+      width: 35%;
+
+      @media (max-width: 60rem) {
+        width: clamp(15rem, 60%, 25rem);
+      }
     }
-    .schedule__main-stage {
-        padding-right: 0;
-    }
-
-    .schedule__grid {
-        display:block;
-
-        .activity-card__image {
-            width:35%;
-            
-            @media (max-width: 60rem) {
-                width: clamp(15rem,60%,25rem);
-            }
-        }
-
-        
-    }
+  }
 }
