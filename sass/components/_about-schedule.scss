@@ -53,8 +53,9 @@
     }
 
     .about-schedule__button {
-      @include btn__primary-orange;
+      @include btn__primary-pink;
       z-index: 11;
+      margin-top: 4rem;
 
       @media screen and (max-width: 60rem) {
         width: 100%;
