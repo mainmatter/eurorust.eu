@@ -347,13 +347,21 @@
     }
   }
 
+  .schedule__day-body { 
+    border-bottom: 1px solid var(--blue-400);
+  }
+
   .activity-card {
     text-align: center;
-    border-bottom: 1px solid var(--blue-400);
   }
 
   .schedule__list {
     border-top: 1px solid var(--blue-400);
+  }
+
+  /* Hides empty lis */
+  li.schedule__day-body:has(.activity-card__content--empty) {
+    display: none;
   }
 }
 
@@ -373,13 +381,18 @@
   }
 
   @media (max-width: 60rem) {
-    /* Remove if number of workshops = number of side activities on Workshop Day */
+    /* Removes empty workshops if the number of workshops is bigger than then number of side activities on Workshop Day */
     .schedule__list {
       li:nth-last-child(4),
       li:nth-last-child(3),
       li:nth-last-child(2),
       li:last-child {
         display: none;
+      }
+      
+      /* Removes the bottom border of the last activity card */
+      li:nth-last-child(5) .activity-card {
+        border-bottom: none;
       }
     }
   }
