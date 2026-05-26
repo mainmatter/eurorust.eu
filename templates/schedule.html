@@ -170,9 +170,9 @@
               <div class="schedule__day schedule__day--{{ day.day }}">
                 <h1>Conference Day {{ day.day }}</h1>
                 <h2 class="mt-3 mb-6">{{ day.date }}</h2>
-                <div class="mobile-schedule schedule__grid day-one mb-5">
+                <div class="mobile-schedule schedule__grid day-one">
                   <div class="schedule__main-stage">
-                    <h4 class="schedule__track mb-4">Main stage</h4>
+                    <h2 class="schedule__track mb-4">Main stage</h2>
                     <ol class="schedule__list">
                       {% for activity in day.mainStage %}
                         <li class="schedule__day-body">
@@ -183,7 +183,7 @@
                     </ol>
                   </div>
                   <div class="schedule__side-track">
-                    <h4 class="schedule__track mb-4">Side track</h4>
+                    <h2 class="schedule__track mb-5 mt-5">Side track</h2>
                     <ol class="schedule__list">
                       {% for activity in day.side %}
                         <li class="schedule__day-body">
@@ -194,8 +194,8 @@
                     </ol>
                   </div>
                   {% if day.day == "1" %}
-                    <div class="closing-party closing-party__grid schedule__shared mb-9 pt-8 pb-8 border-bottom">
-                      <h4 class="schedule__track mb-4 border-bottom pb-4">Side activities</h4>
+                    <div class="closing-party closing-party__grid schedule__shared">
+                      <h2 class="schedule__track pb-5 border-bottom mt-5">Side activities</h2>
                       <div class="closing-party__content schedule__day-body">
                         <img
                           class="image-party py-3"
