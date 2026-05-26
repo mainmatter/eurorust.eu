@@ -4,12 +4,20 @@
     "date": "October 15, 2026",
     "mainStage": [
       { "time": "10:00–10:45", "talk": "move-your-problems" },
-      { "time": "11:00–11:30", "title": "Compiling the Linux kernel with gccrs" },
-      { "time": "11:45–12:15", "title": "Shipping Temporal: How the Rust Ecosystem Built Chrome’s Newest Web API" },
+      { "time": "11:00–11:30", "title": "Compiling the Linux kernel with gccrs", "isUnconfirmed": true },
+      {
+        "time": "11:45–12:15",
+        "title": "Shipping Temporal: How the Rust Ecosystem Built Chrome’s Newest Web API",
+        "isUnconfirmed": true
+      },
 
       { "time": "12:15–13:45", "title": "Lunch break", "isBreak": true },
       { "time": "13:45–14:15", "talk": "tales-from-the-embedded-rust-frontier-bootstrapping-a-brand-new-ecosystem" },
-      { "time": "14:30–15:00", "title": "From Hardware to Human Interface: Building HID Devices in Rust" },
+      {
+        "time": "14:30–15:00",
+        "title": "From Hardware to Human Interface: Building HID Devices in Rust",
+        "isUnconfirmed": true
+      },
       { "time": "15:15–15:45", "talk": "running-safely-with-scissors-lock-free-concurrency-for-maximum-throughput" },
 
       { "time": "15:45–16:15", "title": "Coffee break", "isBreak": true },
@@ -19,8 +27,8 @@
     ],
     "side": [
       { "time": "10:00–10:45", "isEmpty": true },
-      { "time": "11:00–11:30", "title": "What's next for Rust's type system" },
-      { "time": "11:45–12:15", "title": "Jana Dönszelmann" },
+      { "time": "11:00–11:30", "title": "What's next for Rust's type system", "isUnconfirmed": true },
+      { "time": "11:45–12:15", "title": "Jana Dönszelmann", "isUnconfirmed": true },
 
       { "time": "12:15–13:45", "title": "Lunch break", "isBreak": true },
       { "time": "13:45–14:15", "talk": "building-a-query-system" },
@@ -62,12 +70,24 @@
     ],
     "side": [
       { "time": "10:00–10:45", "isEmpty": true },
-      { "time": "11:00–11:30", "title": "Designing State Machines for Streaming Proxies in Rust" },
-      { "time": "11:45–12:15", "title": "Supply Chain Attacks, and how to protect ourselves" },
+      {
+        "time": "11:00–11:30",
+        "title": "Designing State Machines for Streaming Proxies in Rust",
+        "isUnconfirmed": true
+      },
+      {
+        "time": "11:45–12:15",
+        "title": "Supply Chain Attacks, and how to protect ourselves",
+        "isUnconfirmed": true
+      },
 
       { "time": "12:15–13:45", "title": "Lunch break", "isBreak": true },
       { "time": "13:45–14:15", "talk": "encodings-all-the-way-down-building-vortex-an-extensible-file-format-in-rust" },
-      { "time": "14:30–15:00", "title": "Trusting the Box: Making Hardware Security simple with Rust" },
+      {
+        "time": "14:30–15:00",
+        "title": "Trusting the Box: Making Hardware Security simple with Rust",
+        "isUnconfirmed": true
+      },
       { "time": "15:15–15:45", "title": "MM slot" },
 
       { "time": "15:45–16:15", "title": "Coffee break", "isBreak": true },
