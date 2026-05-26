@@ -3,7 +3,7 @@
     "day": "1",
     "date": "October 15, 2026",
     "mainStage": [
-      { "time": "10:00–10:45", "talk": "move-your-problems" },
+      { "time": "10:00–10:45", "talk": "move-your-problems", "isSpan": true  },
       { "time": "11:00–11:30", "title": "Compiling the Linux kernel with gccrs" },
       { "time": "11:45–12:15", "title": "Shipping Temporal: How the Rust Ecosystem Built Chrome’s Newest Web API" },
 
@@ -15,7 +15,7 @@
       { "time": "15:45–16:15", "title": "Coffee break", "isBreak": true },
       { "time": "16:15–16:45", "title": "MM slot" },
       { "time": "17:00–17:30", "title": "Podcast or Panel" },
-      { "time": "17:45–18:30", "talk": "image-codecs-rustification-in-chromium" }
+      { "time": "17:45–18:30", "talk": "image-codecs-rustification-in-chromium", "isSpan": true  }
     ],
     "side": [
       { "time": "10:00–10:45", "isEmpty": true },
@@ -40,7 +40,7 @@
     "day": "2",
     "date": "October 16, 2026",
     "mainStage": [
-      { "time": "10:00–10:45", "talk": "rust-s-influence-on-c-and-python-shaping-the-future-of-three-communities" },
+      { "time": "10:00–10:45", "talk": "rust-s-influence-on-c-and-python-shaping-the-future-of-three-communities", "isSpan": true },
       { "time": "11:00–11:30", "talk": "blastbeat-when-a-decade-of-c-meets-rust-and-io-uring" },
       { "time": "11:45–12:15", "talk": "qt-bridges-bringing-a-mature-c-ui-framework-to-rust" },
 
@@ -58,7 +58,7 @@
       { "time": "15:45–16:15", "title": "Coffee break", "isBreak": true },
       { "time": "16:15–16:45", "talk": "from-deref-into-borrow-a-primer-on-standard-library-traits" },
       { "time": "17:00–17:30", "title": "Podcast or Panel" },
-      { "time": "17:45–18:30", "talk": "beyond-cargo-build" }
+      { "time": "17:45–18:30", "talk": "beyond-cargo-build", "isSpan": true }
     ],
     "side": [
       { "time": "10:00–10:45", "isEmpty": true },

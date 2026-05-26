@@ -251,7 +251,7 @@
                       <tr class="schedule__day-body">
                         <td scope="row" class="visually-hidden">{{ activity.time }}</td>
                         <td
-                          colspan="{% if activity.isBreak %}2{% else %}1{% endif %}"
+                          colspan="{% if activity.isBreak or activity.isSpan %}2{% else %}1{% endif %}"
                           class="{% if activity.isBreak %}schedule{% endif %}"
                         >
                           <!-- siderow: {{ sideRow }} count: {{ sideCount }} currentRowSpan {{ currentRowspan }} -->
@@ -268,7 +268,7 @@
                             {% else %}
                               {% set_global currentRowspan = 0 %}
                             {% endif %}
-                            {% if not card.isBreak %}
+                            {% if not card.isBreak and not activity.isSpan %}
                               <td
                                 class="schedule__table-side"
                                 {% if card.rowspan %}rowspan="{{ card.rowspan }}"{% endif %}
