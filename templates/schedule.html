@@ -88,9 +88,8 @@
                               href="https://maps.app.goo.gl/KVWt3iy6rVuuQQ3h7"
                               target="_blank"
                               >Fiap Paris</a -->
-                              TBA
-                            </strong
-                          >
+                            TBA
+                          </strong>
                         </p>
                       </td>
                       <td class="schedule-table__side"></td>
@@ -103,7 +102,7 @@
                         <td scope="row" class="visually-hidden">{{ activity.time }}</td>
                         <td
                           colspan="{% if activity.isBreak %}2{% else %}1{% endif %}"
-                          class="{% if activity.isBreak %}schedule {% endif %}schedule__entry"
+                          class="{% if activity.isBreak %}schedule{% endif %}schedule__entry"
                         >
                           <!-- siderow: {{ sideRow }} count: {{ sideCount }} currentRowSpan {{ currentRowspan }} -->
                           {% include "partials/activity-card-workshop.html" %}
@@ -197,7 +196,8 @@
                         <p><strong>20:00</strong></p>
                         <p><strong>Group Dinners: Meet & Eat!</strong></p>
                         <p class="pb-5">
-                          We have reservations at various local restaurants in Barcelona. Join fellow Rustaceans for a dinner of your choice!
+                          We have reservations at various local restaurants in Barcelona. Join fellow Rustaceans for a
+                          dinner of your choice!
                         </p>
                       </div>
                     </div>
@@ -243,7 +243,7 @@
                         <td scope="row" class="visually-hidden">{{ activity.time }}</td>
                         <td
                           colspan="{% if activity.isBreak or activity.isSpan %}2{% else %}1{% endif %}"
-                          class="{% if activity.isBreak %}schedule {% endif %}schedule__entry"
+                          class="{% if activity.isBreak %}schedule{% endif %}schedule__entry"
                         >
                           <!-- siderow: {{ sideRow }} count: {{ sideCount }} currentRowSpan {{ currentRowspan }} -->
                           {% set_global card = activity %}
@@ -283,7 +283,8 @@
                               <p><strong>20:00</strong></p>
                               <p><strong>Group Dinners: Meet & Eat!</strong></p>
                               <p>
-                                We have reservations at various local restaurants in Barcelona. Join fellow Rustaceans for a dinner of your choice!
+                                We have reservations at various local restaurants in Barcelona. Join fellow Rustaceans
+                                for a dinner of your choice!
                               </p>
                             </div>
                           </div>
