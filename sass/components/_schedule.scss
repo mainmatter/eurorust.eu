@@ -229,10 +229,6 @@
   &--3 {
     background-color: var(--orange-200);
     background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect opacity="1" x="0.5" y="0.5" width="24" height="24" stroke="%23FC9557"/></svg>');
-
-    .schedule__day-body {
-      border-top: 1px solid var(--blue-400);
-    }
   }
 
   & h1,
@@ -249,6 +245,11 @@
   margin: 0;
   color: var(--blue-400);
   background-color: var(--pink-100);
+  border-bottom: 1px solid var(--blue-400);
+
+  &:last-child {
+    border-bottom: none;
+  }
 
   & .schedule__table-side {
     border-left: 1.5px solid var(--blue-400);
@@ -334,9 +335,12 @@
 
 .schedule__day--w {
   & td[colspan] {
-    border-block-start: none;
     border-block-end: none;
   }
+}
+
+td.schedule__table-side {
+  border-block-start: 1px solid var(--blue-400);
 }
 
 @media (max-width: 60rem) {
@@ -367,10 +371,6 @@
         border-bottom: none;
       }
     }
-  }
-
-  .schedule__day-body {
-    border-bottom: 1px solid var(--blue-400);
   }
 
   .activity-card {
