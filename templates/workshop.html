@@ -84,46 +84,48 @@
                       <img class="photo" src="/images/workshops/{{ mentor.avatar }}" alt="{{ mentor.avatar_alt }}" />
                     </div>
                   {% endif %}
-                  <div class="links mt-5">
-                    <ul class="social mt-3">
-                      {% if mentor.github %}
-                        <li>
-                          <a
-                            href="https://github.com/{{ mentor.github }}"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn__icon"
-                            ><img src="/images/icons/github.svg" alt="Github"
-                          /></a>
-                        </li>
-                      {% endif %}
-                      {% if mentor.url %}
-                        <li>
-                          <a href="{{ mentor.url }}" target="_blank" rel="noopener noreferrer" class="btn__icon"
-                            ><img src="/images/icons/web.svg" alt="Website"
-                          /></a>
-                        </li>
-                      {% endif %}
-                      {% if mentor.bluesky %}
-                        <li>
-                          <a
-                            href="https://bsky.app/profile/{{ mentor.bluesky }}"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn__icon"
-                            ><img src="/images/icons/bluesky.svg" alt="Bluesky"
-                          /></a>
-                        </li>
-                      {% endif %}
-                      {% if mentor.mastodon %}
-                        <li>
-                          <a href="{{ mentor.mastodon }}" target="_blank" rel="noopener noreferrer" class="btn__icon"
-                            ><img src="/images/icons/mastodon.svg" alt="Mastodon"
-                          /></a>
-                        </li>
-                      {% endif %}
-                    </ul>
-                  </div>
+                  {% if mentor.github or mentor.url or mentor.bluesky or mentor.mastodon %}
+                    <div class="links mt-5 mb-5">
+                      <ul class="social mt-3">
+                        {% if mentor.github %}
+                          <li>
+                            <a
+                              href="https://github.com/{{ mentor.github }}"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              class="btn__icon"
+                              ><img src="/images/icons/github.svg" alt="Github"
+                            /></a>
+                          </li>
+                        {% endif %}
+                        {% if mentor.url %}
+                          <li>
+                            <a href="{{ mentor.url }}" target="_blank" rel="noopener noreferrer" class="btn__icon"
+                              ><img src="/images/icons/web.svg" alt="Website"
+                            /></a>
+                          </li>
+                        {% endif %}
+                        {% if mentor.bluesky %}
+                          <li>
+                            <a
+                              href="https://bsky.app/profile/{{ mentor.bluesky }}"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              class="btn__icon"
+                              ><img src="/images/icons/bluesky.svg" alt="Bluesky"
+                            /></a>
+                          </li>
+                        {% endif %}
+                        {% if mentor.mastodon %}
+                          <li>
+                            <a href="{{ mentor.mastodon }}" target="_blank" rel="noopener noreferrer" class="btn__icon"
+                              ><img src="/images/icons/mastodon.svg" alt="Mastodon"
+                            /></a>
+                          </li>
+                        {% endif %}
+                      </ul>
+                    </div>
+                  {% endif %}
                 </div>
               </div>
             {% endfor %}
@@ -160,7 +162,7 @@
                     alt="{{ page.extra.sponsor }}"
                   />
                 </div>
-                <div class="links mt-5">
+                <div class="links mt-5 mb-5">
                   <ul class="social mt-3">
                     {% if page.extra.sponsor_url %}
                       <li>

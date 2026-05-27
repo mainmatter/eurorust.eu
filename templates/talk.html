@@ -92,61 +92,63 @@
                   {% else %}
                     <img class="photo" src="/images/talks/placeholder.webp" alt="" />
                   {% endif %}
-                  <div class="links mt-5">
-                    <ul class="social mt-3">
-                      {% if speaker.extra.github %}
-                        <li>
-                          <a
-                            href="{{ speaker.extra.github }}"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn__icon"
-                            ><img src="/images/icons/github.svg" alt="Github"
-                          /></a>
-                        </li>
-                      {% endif %}
-                      {% if speaker.extra.url %}
-                        <li>
-                          <a href="{{ speaker.extra.url }}" target="_blank" rel="noopener noreferrer" class="btn__icon"
-                            ><img src="/images/icons/web.svg" alt="Website"
-                          /></a>
-                        </li>
-                      {% endif %}
-                      {% if speaker.extra.bluesky %}
-                        <li>
-                          <a
-                            href="{{ speaker.extra.bluesky }}"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn__icon"
-                            ><img src="/images/icons/bluesky.svg" alt="Bluesky"
-                          /></a>
-                        </li>
-                      {% endif %}
-                      {% if speaker.extra.mastodon %}
-                        <li>
-                          <a
-                            href="{{ speaker.extra.mastodon }}"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn__icon"
-                            ><img src="/images/icons/mastodon.svg" alt="Mastodon"
-                          /></a>
-                        </li>
-                      {% endif %}
-                      {% if speaker.extra.twitter %}
-                        <li>
-                          <a
-                            href="https://twitter.com/{{ speaker.extra.twitter }}"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn__icon"
-                            ><img src="/images/icons/twitter.svg" alt="Twitter"
-                          /></a>
-                        </li>
-                      {% endif %}
-                    </ul>
-                  </div>
+                  {% if speaker.extra.github or speaker.extra.url or speaker.extra.bluesky or speaker.extra.mastodon %}
+                    <div class="links mt-5 mb-5">
+                      <ul class="social mt-3">
+                        {% if speaker.extra.github %}
+                          <li>
+                            <a
+                              href="{{ speaker.extra.github }}"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              class="btn__icon"
+                              ><img src="/images/icons/github.svg" alt="Github"
+                            /></a>
+                          </li>
+                        {% endif %}
+                        {% if speaker.extra.url %}
+                          <li>
+                            <a href="{{ speaker.extra.url }}" target="_blank" rel="noopener noreferrer" class="btn__icon"
+                              ><img src="/images/icons/web.svg" alt="Website"
+                            /></a>
+                          </li>
+                        {% endif %}
+                        {% if speaker.extra.bluesky %}
+                          <li>
+                            <a
+                              href="{{ speaker.extra.bluesky }}"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              class="btn__icon"
+                              ><img src="/images/icons/bluesky.svg" alt="Bluesky"
+                            /></a>
+                          </li>
+                        {% endif %}
+                        {% if speaker.extra.mastodon %}
+                          <li>
+                            <a
+                              href="{{ speaker.extra.mastodon }}"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              class="btn__icon"
+                              ><img src="/images/icons/mastodon.svg" alt="Mastodon"
+                            /></a>
+                          </li>
+                        {% endif %}
+                        {% if speaker.extra.twitter %}
+                          <li>
+                            <a
+                              href="https://twitter.com/{{ speaker.extra.twitter }}"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              class="btn__icon"
+                              ><img src="/images/icons/twitter.svg" alt="Twitter"
+                            /></a>
+                          </li>
+                        {% endif %}
+                      </ul>
+                    </div>
+                  {% endif %}
                 </div>
               </div>
             {% endfor %}
@@ -183,7 +185,7 @@
                     alt="{{ page.extra.sponsor }}"
                   />
                 </div>
-                <div class="links mt-5">
+                <div class="links mt-5 mb-5">
                   <ul class="social mt-3">
                     {% if page.extra.sponsor_url %}
                       <li>
