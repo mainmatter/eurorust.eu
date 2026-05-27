@@ -10,11 +10,7 @@
     "side": [
       { "time": "14:30–17:30", "title": "bike-tour" },
       { "time": "18:30–20:00", "title": "boat-tour" },
-      { "time": "18:30–20:00", "title": "wine-tasting" },
-      { "time": "", "title": "" },
-      { "time": "", "title": "" },
-      { "time": "", "title": "" },
-      { "time": "", "title": "" }
+      { "time": "18:30–20:00", "title": "wine-tasting" }
     ]
   }
 ]
