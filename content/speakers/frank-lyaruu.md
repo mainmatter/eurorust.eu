@@ -9,5 +9,5 @@ title = "Speaker: Frank Lyaruu"
   mastodon = ""
   image = "/images/talks/frank-lyaruu.webp"
   twitter = ""
-  bio = "<p>Architect and software generalist. Rustacian. Java veteran. Sustainable computing advocate. Web assembly enthousiast. Occasional Embedded Rust streamer.</p>"
+  bio = "<p>Architect and software generalist. Rustacean. Java veteran. Sustainable computing advocate. Web assembly enthousiast. Occasional Embedded Rust streamer.</p>"
 +++
