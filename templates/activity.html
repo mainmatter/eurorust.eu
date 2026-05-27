@@ -32,6 +32,9 @@
               {% if page.extra.location %}
                 Meet at: {{ page.extra.location }}
               {% endif %}
+               {% if page.extra.price %}
+                {{ page.extra.price }} €
+              {% endif %}
             </p>
           </div>
 
@@ -71,14 +74,16 @@
           </div>
         </div>
       </section>
+      {% if page.extra.show_activity_ticket is not defined or page.extra.show_activity_ticket %}
+        <div class="CTA__buttons pb-8">
+          <a href="https://www.tickettailor.com/events/eurorust/2022388" class="CTA__ticket-button" target="_blank"
+            >Get your activity ticket</a
+          >
+        </div>
+      {% endif %}
       <div class="CTA__buttons pb-8">
         <a href="https://www.tickettailor.com/events/eurorust/2022388" class="CTA__ticket-button" target="_blank"
-          >Get your activity ticket</a
-        >
-      </div>
-      <div class="CTA__buttons pb-8">
-        <a href="https://www.tickettailor.com/events/eurorust/2022388" class="CTA__ticket-button" target="_blank"
-          >Get your Eurorust ticket</a
+          >Get your EuroRust ticket</a
         >
       </div>
     </main>
