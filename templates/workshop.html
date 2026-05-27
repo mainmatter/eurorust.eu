@@ -12,6 +12,18 @@
       <section class="workshop-hero">
         <div class="container p-1">
           <div class="mb-7 workshop-hero__topline">
+            <p class="workshop-hero__details">
+              »<a href="/schedule" class="inline">Schedule</a> // Workshop<br />
+              {% if page.extra.day and page.extra.time %}
+                {{ page.extra.day | safe }}<br />
+                {{ page.extra.time | safe }}<br />
+                Location:
+              {% else %}
+                Wednesday, October 14, 2026<br />
+                10:00–16:00<br />
+                Location: Workshop location TBA
+              {% endif %}
+            </p>
             {% if page.extra.sponsor %}
               <div class="workshop-hero__sponsor-container">
                 <div class="workshop-hero__sponsor">
@@ -63,7 +75,7 @@
       {% endif %}
 
       {% if page.extra.mentors %}
-        <section class="workshop-author mb-4">
+        <section class="workshop-author">
           <div class="author-and-booking container">
             {% for mentor in page.extra.mentors %}
               <div class="mentor__grid">
@@ -84,46 +96,48 @@
                       <img class="photo" src="/images/workshops/{{ mentor.avatar }}" alt="{{ mentor.avatar_alt }}" />
                     </div>
                   {% endif %}
-                  <div class="links mt-5">
-                    <ul class="social mt-3">
-                      {% if mentor.github %}
-                        <li>
-                          <a
-                            href="https://github.com/{{ mentor.github }}"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn__icon"
-                            ><img src="/images/icons/github.svg" alt="Github"
-                          /></a>
-                        </li>
-                      {% endif %}
-                      {% if mentor.url %}
-                        <li>
-                          <a href="{{ mentor.url }}" target="_blank" rel="noopener noreferrer" class="btn__icon"
-                            ><img src="/images/icons/web.svg" alt="Website"
-                          /></a>
-                        </li>
-                      {% endif %}
-                      {% if mentor.bluesky %}
-                        <li>
-                          <a
-                            href="https://bsky.app/profile/{{ mentor.bluesky }}"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn__icon"
-                            ><img src="/images/icons/bluesky.svg" alt="Bluesky"
-                          /></a>
-                        </li>
-                      {% endif %}
-                      {% if mentor.mastodon %}
-                        <li>
-                          <a href="{{ mentor.mastodon }}" target="_blank" rel="noopener noreferrer" class="btn__icon"
-                            ><img src="/images/icons/mastodon.svg" alt="Mastodon"
-                          /></a>
-                        </li>
-                      {% endif %}
-                    </ul>
-                  </div>
+                  {% if mentor.github or mentor.url or mentor.bluesky or mentor.mastodon %}
+                    <div class="links mt-5 mb-5">
+                      <ul class="social mt-3">
+                        {% if mentor.github %}
+                          <li>
+                            <a
+                              href="https://github.com/{{ mentor.github }}"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              class="btn__icon"
+                              ><img src="/images/icons/github.svg" alt="Github"
+                            /></a>
+                          </li>
+                        {% endif %}
+                        {% if mentor.url %}
+                          <li>
+                            <a href="{{ mentor.url }}" target="_blank" rel="noopener noreferrer" class="btn__icon"
+                              ><img src="/images/icons/web.svg" alt="Website"
+                            /></a>
+                          </li>
+                        {% endif %}
+                        {% if mentor.bluesky %}
+                          <li>
+                            <a
+                              href="https://bsky.app/profile/{{ mentor.bluesky }}"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              class="btn__icon"
+                              ><img src="/images/icons/bluesky.svg" alt="Bluesky"
+                            /></a>
+                          </li>
+                        {% endif %}
+                        {% if mentor.mastodon %}
+                          <li>
+                            <a href="{{ mentor.mastodon }}" target="_blank" rel="noopener noreferrer" class="btn__icon"
+                              ><img src="/images/icons/mastodon.svg" alt="Mastodon"
+                            /></a>
+                          </li>
+                        {% endif %}
+                      </ul>
+                    </div>
+                  {% endif %}
                 </div>
               </div>
             {% endfor %}
@@ -133,7 +147,7 @@
 
       {% if page.extra.sponsor %}
         <section class="workshop-sponsor mt-9 mb-10 py-6">
-          <div class="container py-8">
+          <div class="container">
             <div class="sponsor__grid">
               <div class="sponsor__grid-title">
                 <h5 class="mb-4">Sponsored by</h5>
@@ -160,7 +174,7 @@
                     alt="{{ page.extra.sponsor }}"
                   />
                 </div>
-                <div class="links mt-5">
+                <div class="links mt-5 mb-5">
                   <ul class="social mt-3">
                     {% if page.extra.sponsor_url %}
                       <li>
@@ -178,8 +192,11 @@
               </div>
             </div>
           </div>
-          <hr class="separator" />
         </section>
+      {% endif %}
+
+      {% if page.extra.venue %}
+        <section class="workshop-sponsor mb-5">{% include "sections/workshop-venue.html" %}</section>
       {% endif %}
 
       <div class="CTA__buttons pb-8">
@@ -189,7 +206,7 @@
       </div>
       <div class="CTA__buttons pb-8">
         <a href="https://www.tickettailor.com/events/eurorust/2022388" class="CTA__ticket-button" target="_blank"
-          >Get your Eurorust ticket</a
+          >Get your EuroRust ticket</a
         >
       </div>
     </main>

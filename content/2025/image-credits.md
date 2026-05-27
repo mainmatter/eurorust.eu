@@ -4,7 +4,7 @@ title = "Image Credits"
 +++
 
 <div class="box">
-  <p>We thank all talented designers and photographers whose work enabled us to design the Eurorust website.</p>
+  <p>We thank all talented designers and photographers whose work enabled us to design the EuroRust website.</p>
 </div>
 
 <h3 class="mb-3 mt-7">3D Ferris</h3>

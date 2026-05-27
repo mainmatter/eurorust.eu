@@ -12,6 +12,7 @@ template = "workshop.html"
   ogimage = "/images/workshops/og-images/og-image-line-follower-robot.png"
   heroimage = "/images/workshops/hero-line-follower-robot.webp"
   heroimage_alt = "Line follower robot"
+  venue = "tba"
 +++
 
 

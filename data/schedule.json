@@ -1,0 +1,85 @@
+[
+  {
+    "day": "1",
+    "date": "October 15, 2026",
+    "mainStage": [
+      { "time": "09:00–10:00", "title": "Doors open", "isBreak": true },
+      { "time": "10:00–10:45", "talk": "move-your-problems", "isSpan": true },
+      { "time": "11:00–11:30", "talk": "compiling-the-linux-kernel-with-gccrs" },
+      { "time": "11:45–12:15", "talk": "shipping-temporal-how-the-rust-ecosystem-built-chrome-s-newest-web-api" },
+
+      { "time": "12:15–13:45", "title": "Lunch break", "isBreak": true },
+      { "time": "13:45–14:15", "talk": "tales-from-the-embedded-rust-frontier-bootstrapping-a-brand-new-ecosystem" },
+      { "time": "14:30–15:00", "talk": "from-hardware-to-human-interface-building-hid-devices-in-rust" },
+      { "time": "15:15–15:45", "talk": "running-safely-with-scissors-lock-free-concurrency-for-maximum-throughput" },
+
+      { "time": "15:45–16:15", "title": "Coffee break", "isBreak": true },
+      { "time": "16:15–16:45", "title": "TBA" },
+      { "time": "17:00–17:30", "title": "TBA" },
+      { "time": "17:45–18:30", "talk": "image-codecs-rustification-in-chromium", "isSpan": true }
+    ],
+    "side": [
+      { "time": "09:00–10:00", "title": "Doors open", "isBreak": true },
+      { "time": "10:00–10:45", "isEmpty": true },
+      { "time": "11:00–11:30", "talk": "what-s-next-for-rust-s-type-system" },
+      { "time": "11:45–12:15", "talk": "optimizing-the-new-rust-trait-solver" },
+
+      { "time": "12:15–13:45", "title": "Lunch break", "isBreak": true },
+      { "time": "13:45–14:15", "talk": "building-a-query-system" },
+      {
+        "time": "14:30–15:00",
+        "talk": "rebuilding-the-tower-of-babel-write-your-own-language-server-with-tree-sitter"
+      },
+      { "time": "15:15–15:45", "talk": "lessons-from-building-a-background-task-processing-library" },
+
+      { "time": "15:45–16:15", "title": "Coffee break", "isBreak": true },
+      { "time": "16:15–16:45", "title": "TBA" },
+      { "time": "17:00–17:30", "talk": "inside-cloud-hypervisor-from-kvm-to-a-running-vm" },
+      { "time": "17:45–18:30", "isEmpty": true }
+    ]
+  },
+  {
+    "day": "2",
+    "date": "October 16, 2026",
+    "mainStage": [
+      {
+        "time": "10:00–10:45",
+        "talk": "rust-s-influence-on-c-and-python-shaping-the-future-of-three-communities",
+        "isSpan": true
+      },
+      { "time": "11:00–11:30", "talk": "blastbeat-when-a-decade-of-c-meets-rust-and-io-uring" },
+      { "time": "11:45–12:15", "talk": "qt-bridges-bringing-a-mature-c-ui-framework-to-rust" },
+
+      { "time": "12:15–13:45", "title": "Lunch break", "isBreak": true },
+      {
+        "time": "13:45–14:15",
+        "talk": "how-i-built-a-file-search-that-is-50x-faster-than-ripgrep-and-made-it-into-opencode"
+      },
+      { "time": "14:30–15:00", "talk": "atomic-design-patterns-in-rust-from-orderings-to-code" },
+      {
+        "time": "15:15–15:45",
+        "talk": "building-a-high-performance-thread-per-core-zero-copy-opentelemetry-engine-in-rust"
+      },
+
+      { "time": "15:45–16:15", "title": "Coffee break", "isBreak": true },
+      { "time": "16:15–16:45", "talk": "from-deref-into-borrow-a-primer-on-standard-library-traits" },
+      { "time": "17:00–17:30", "title": "TBA" },
+      { "time": "17:45–18:30", "talk": "beyond-cargo-build", "isSpan": true }
+    ],
+    "side": [
+      { "time": "10:00–10:45", "isEmpty": true },
+      { "time": "11:00–11:30", "talk": "designing-state-machines-for-streaming-proxies-in-rust" },
+      { "time": "11:45–12:15", "talk": "supply-chain-attacks-and-how-to-protect-ourselves" },
+
+      { "time": "12:15–13:45", "title": "Lunch break", "isBreak": true },
+      { "time": "13:45–14:15", "talk": "encodings-all-the-way-down-building-vortex-an-extensible-file-format-in-rust" },
+      { "time": "14:30–15:00", "talk": "moving-a-quantum-compiler-from-python-to-rust" },
+      { "time": "15:15–15:45", "title": "TBA" },
+
+      { "time": "15:45–16:15", "title": "Coffee break", "isBreak": true },
+      { "time": "16:15–16:45", "title": "Main sponsor slot" },
+      { "time": "17:00–17:30", "talk": "beyond-flamegraphs-precise-rust-profiling-with-hotpath-rs" },
+      { "time": "17:45–18:30", "isEmpty": true }
+    ]
+  }
+]

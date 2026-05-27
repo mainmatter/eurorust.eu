@@ -101,7 +101,7 @@
   $color3: #940196,
   $shadow1: rgba(255, 255, 255, 0.4),
   $shadow2: rgba(180, 70, 207, 1),
-  $icon: url('')
+  $icon: url("")
 ) {
   @include button;
   padding: 20px 35px;
@@ -113,9 +113,13 @@
     0 0.75rem 0.5rem $shadow1 inset,
     0 0.25rem 0.5rem 0 $shadow2 inset;
   transition: all 0.3s ease-in-out;
-  background-size: contain, 100% calc(100% + 20px);
+  background-size:
+    contain,
+    100% calc(100% + 20px);
   background-repeat: no-repeat, repeat;
-  background-position: center center, 0 -20px;
+  background-position:
+    center center,
+    0 -20px;
 
   /* Mozilla on:hover fix */
   @-moz-document url-prefix() {
@@ -169,7 +173,9 @@
 
   &:hover {
     transition: all 0.3s ease-in-out;
-    background-position: center center, 0 0;
+    background-position:
+      center center,
+      0 0;
     box-shadow:
       0 1rem 0.75rem $shadow1 inset,
       0 0.5rem 1rem 0 $shadow2 inset;
@@ -185,7 +191,7 @@
   $color3: #d31d7d,
   $shadow1: rgba(255, 255, 255, 0.4),
   $shadow2: rgba(180, 70, 207, 1),
-  $icon: url('')
+  $icon: url("")
 ) {
   @include btn__primary-purple($color1, $color2, $color3, $shadow1, $shadow2, $icon);
 }
@@ -196,7 +202,7 @@
   $color3: #dc4e14,
   $shadow1: rgba(255, 255, 255, 0.4),
   $shadow2: rgba(193, 7, 7, 1),
-  $icon: url('')
+  $icon: url("")
 ) {
   @include btn__primary-purple($color1, $color2, $color3, $shadow1, $shadow2, $icon);
 }
