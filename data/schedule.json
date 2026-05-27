@@ -13,8 +13,8 @@
       { "time": "15:15–15:45", "talk": "running-safely-with-scissors-lock-free-concurrency-for-maximum-throughput" },
 
       { "time": "15:45–16:15", "title": "Coffee break", "isBreak": true },
-      { "time": "16:15–16:45", "title": "MM slot" },
-      { "time": "17:00–17:30", "title": "Podcast or Panel" },
+      { "time": "16:15–16:45", "title": "TBA" },
+      { "time": "17:00–17:30", "title": "TBA" },
       { "time": "17:45–18:30", "talk": "image-codecs-rustification-in-chromium", "isSpan": true }
     ],
     "side": [
@@ -31,7 +31,7 @@
       { "time": "15:15–15:45", "talk": "lessons-from-building-a-background-task-processing-library" },
 
       { "time": "15:45–16:15", "title": "Coffee break", "isBreak": true },
-      { "time": "16:15–16:45", "title": "QS slot" },
+      { "time": "16:15–16:45", "title": "TBA" },
       { "time": "17:00–17:30", "talk": "inside-cloud-hypervisor-from-kvm-to-a-running-vm" },
       { "time": "17:45–18:30", "isEmpty": true }
     ]
@@ -61,7 +61,7 @@
 
       { "time": "15:45–16:15", "title": "Coffee break", "isBreak": true },
       { "time": "16:15–16:45", "talk": "from-deref-into-borrow-a-primer-on-standard-library-traits" },
-      { "time": "17:00–17:30", "title": "Podcast or Panel" },
+      { "time": "17:00–17:30", "title": "TBA" },
       { "time": "17:45–18:30", "talk": "beyond-cargo-build", "isSpan": true }
     ],
     "side": [
@@ -72,7 +72,7 @@
       { "time": "12:15–13:45", "title": "Lunch break", "isBreak": true },
       { "time": "13:45–14:15", "talk": "encodings-all-the-way-down-building-vortex-an-extensible-file-format-in-rust" },
       { "time": "14:30–15:00", "talk": "moving-a-quantum-compiler-from-python-to-rust" },
-      { "time": "15:15–15:45", "title": "MM slot" },
+      { "time": "15:15–15:45", "title": "TBA" },
 
       { "time": "15:45–16:15", "title": "Coffee break", "isBreak": true },
       { "time": "16:15–16:45", "title": "Main sponsor slot" },

@@ -25,8 +25,13 @@
 
   .venue-warning {
     text-align: center;
+  
     & p {
-      color: var(--pink-100);
+        color: var(--pink-100);
+        padding: 0.5rem 1rem;
+        background-color: color-mix(in srgb, var(--blue-800) 50%, transparent);
+        border-top-left-radius: var(--corner);
+        border-top-right-radius: var(--corner);
     }
   }
 
