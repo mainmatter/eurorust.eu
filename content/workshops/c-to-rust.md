@@ -16,6 +16,7 @@ bio = "Luca Palmieri builds technology products for a living. His current focus 
   ogimage = "/images/workshops/og-images/og-image-c-to-rust.png"
   heroimage = "/images/workshops/hero-c-to-rust.webp"
   heroimage_alt = "Arrow pointing from C to Rust"
+  venue = "tba"
 +++
 
 

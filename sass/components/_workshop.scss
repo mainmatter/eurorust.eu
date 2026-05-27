@@ -162,18 +162,21 @@
 
   .workshop-author {
     padding-top: 4rem;
+    padding-bottom: 0;
+
+    @media screen and (max-width: 60rem) {
+      padding-bottom: 4rem;
+    }
   }
 
   .mentor__grid {
     display: grid;
     grid-template-columns: repeat(2, 70% 30%);
     grid-template-rows: 2rem 5rem 1fr;
-    margin-bottom: 4rem;
 
     @media (max-width: 60rem) {
       display: grid;
       grid-template-columns: 1fr;
-      margin-bottom: auto;
     }
   }
 
@@ -192,7 +195,6 @@
       grid-column-start: 1;
       grid-row-start: 4;
       padding-right: 0;
-      margin-bottom: 4rem;
     }
   }
 
