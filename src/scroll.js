@@ -1,5 +1,12 @@
 export function observeScroll() {
   const primaryHeader = document.querySelector('.nav');
+
+  if (!primaryHeader || primaryHeader.dataset.scrollObserved) {
+    return;
+  }
+
+  primaryHeader.dataset.scrollObserved = 'true';
+
   const scrollWatcher = document.createElement('div');
   scrollWatcher.setAttribute('data-scroll-watcher', '');
   primaryHeader.before(scrollWatcher);

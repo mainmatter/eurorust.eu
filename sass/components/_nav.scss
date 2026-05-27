@@ -1,11 +1,14 @@
 nav {
   z-index: 50;
+  display: flow-root;
   position: sticky;
   top: 0;
   left: 0;
+  height: clamp(9.5rem, 9.9vw, 11.875rem);
 
   @media screen and (max-width: 60rem) {
     position: static;
+    height: auto;
   }
 
   .skip-link {
@@ -81,7 +84,10 @@ nav {
   background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect opacity="0.2" x="0.5" y="0.5" width="24" height="24" stroke="%23FFF9E1"/></svg>');
   background-color: var(--blue-500);
   padding: 1.5rem 4.2rem;
-  transition: all 0.2s ease-in-out;
+  transition:
+    margin 0.2s ease-in-out,
+    border-radius 0.2s ease-in-out,
+    background-color 0.2s ease-in-out;
   border-radius: var(--corner);
   border: 1px solid var(--orange-100);
 
@@ -101,6 +107,5 @@ nav {
 .sticking .nav__wrapper {
   margin: 0 auto;
   padding: 0.5rem 4.2rem 0.75rem 4.2rem;
-  transition: all 0.2s ease-in-out;
   border-radius: 0 0 var(--corner) var(--corner);
 }
