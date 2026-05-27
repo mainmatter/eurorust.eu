@@ -1,5 +1,5 @@
 +++
-title = "Museu Nacional d'Art de Catalunya private tour"
+title = "Museu Nacional d'Art de Catalunya Private Tour"
 template = "activity.html"
 [extra]
   date = "Saturday, October 17, 2026"

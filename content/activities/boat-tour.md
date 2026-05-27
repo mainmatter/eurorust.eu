@@ -1,5 +1,5 @@
 +++
-title = "Barcelona sunset catamaran tour"
+title = "Barcelona Sunset Catamaran Tour"
 template = "activity.html"
 [extra]
   date = "Wednesday, October 14, 2026"

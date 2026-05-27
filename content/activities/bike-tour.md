@@ -1,5 +1,5 @@
 +++
-title = "Barcelona bike tour"
+title = "Barcelona Bike Tour"
 template = "activity.html"
 [extra]
   date = "Wednesday, October 14, 2026"

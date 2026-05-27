@@ -1,5 +1,5 @@
 +++
-title = "Spanish wine and tapas tasting"
+title = "Spanish Wine and Tapas Tasting"
 template = "activity.html"
 [extra]
   date = "Wednesday, October 14, 2026"

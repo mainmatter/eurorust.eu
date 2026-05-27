@@ -1,5 +1,5 @@
 +++
-title = "Karaoke night"
+title = "Karaoke Night"
 template = "activity.html"
 [extra]
   date = "Thursday, October 15, 2026"
