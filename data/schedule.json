@@ -4,12 +4,8 @@
     "date": "October 15, 2026",
     "mainStage": [
       { "time": "10:00–10:45", "talk": "move-your-problems" },
-      { "time": "11:00–11:30", "title": "Compiling the Linux kernel with gccrs", "isUnconfirmed": true },
-      {
-        "time": "11:45–12:15",
-        "title": "Shipping Temporal: How the Rust Ecosystem Built Chrome’s Newest Web API",
-        "isUnconfirmed": true
-      },
+      { "time": "11:00–11:30", "talk": "compiling-the-linux-kernel-with-gccrs" },
+      { "time": "11:45–12:15", "talk": "shipping-temporal-how-the-rust-ecosystem-built-chrome-s-newest-web-api" },
 
       { "time": "12:15–13:45", "title": "Lunch break", "isBreak": true },
       { "time": "13:45–14:15", "talk": "tales-from-the-embedded-rust-frontier-bootstrapping-a-brand-new-ecosystem" },
