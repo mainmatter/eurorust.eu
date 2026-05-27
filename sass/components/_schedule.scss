@@ -25,13 +25,13 @@
 
   .venue-warning {
     text-align: center;
-  
+
     & p {
-        color: var(--pink-100);
-        padding: 0.5rem 1rem;
-        background-color: color-mix(in srgb, var(--blue-800) 50%, transparent);
-        border-top-left-radius: var(--corner);
-        border-top-right-radius: var(--corner);
+      color: var(--pink-100);
+      padding: 0.5rem 1rem;
+      background-color: color-mix(in srgb, var(--blue-800) 50%, transparent);
+      border-top-left-radius: var(--corner);
+      border-top-right-radius: var(--corner);
     }
   }
 
@@ -426,9 +426,9 @@ td.schedule__table-side {
     */
 
     /* Removes the bottom border of the last activity card */
-      .schedule__side-track li:nth-last-child(5) .activity-card {
-        border-bottom: none;
-      }
+    .schedule__side-track li:nth-last-child(5) .activity-card {
+      border-bottom: none;
+    }
   }
 }
 
