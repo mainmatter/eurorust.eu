@@ -112,6 +112,17 @@
                           /></a>
                         </li>
                       {% endif %}
+                      {% if speaker.extra.linkedin %}
+                        <li>
+                          <a
+                            href="{{ speaker.extra.linkedin }}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn__icon"
+                            ><img src="/images/icons/linkedin.svg" alt="LinkedIn"
+                          /></a>
+                        </li>
+                      {% endif %}
                       {% if speaker.extra.bluesky %}
                         <li>
                           <a
