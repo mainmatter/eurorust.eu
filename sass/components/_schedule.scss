@@ -9,6 +9,14 @@
     color: var(--pink-100);
   }
 
+  a.inline {
+    color: var(--blue-400);
+
+    &:hover {
+      @include textlink-hover-animation;
+    }
+  }
+
   h1,
   h3 {
     @include stroke__shadow(var(--orange-100), 0.5px);
