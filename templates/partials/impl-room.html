@@ -1,5 +1,5 @@
 <div class="activity-card mb-2 p-2">
-  {% set path = "2025/activities/impl-room.md" %}
+  {% set path = "activities/impl-room.md" %}
   {% set event = get_page(path = path) %}
   <a class="activity-card__link" href="{{ event.path }}">
     <div class="activity-card__content impl-room">
@@ -8,3 +8,4 @@
       <img class="activity-card__image mb-3" src="{{ event.extra.heroimage }}" alt="{{ event.extra.heroimage_alt }}" />
     </div>
   </a>
+</div>

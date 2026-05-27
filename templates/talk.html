@@ -14,6 +14,34 @@
       <section class="workshop-hero">
         <div class="container blurred-background p-1">
           <div class="mb-7 workshop-hero__topline">
+            {% set schedule = load_data(path = "data/schedule.json") %}
+            {% set_global talk_date = false %}
+            {% set_global talk_time = false %}
+            {% set_global talk_stage = false %}
+            {% for day in schedule %}
+              {% for activity in day.mainStage %}
+                {% if activity.talk and activity.talk == page.slug %}
+                  {% set_global talk_date = day.date %}
+                  {% set_global talk_time = activity.time %}
+                  {% set_global talk_stage = "Main Stage" %}
+                {% endif %}
+              {% endfor %}
+              {% for activity in day.side %}
+                {% if activity.talk and activity.talk == page.slug %}
+                  {% set_global talk_date = day.date %}
+                  {% set_global talk_time = activity.time %}
+                  {% set_global talk_stage = "Side Track" %}
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+            {% if talk_date and talk_time and talk_stage %}
+              <p class="workshop-hero__details">
+                »<a href="/schedule" class="inline">Schedule</a> // Talk<br />
+                {{ talk_date }}<br />
+                {{ talk_time }}<br />
+                {{ talk_stage }}
+              </p>
+            {% endif %}
             {% if page.extra.sponsor %}
               <div class="workshop-hero__sponsor-container">
                 <div class="workshop-hero__sponsor">
@@ -81,6 +109,17 @@
                         <li>
                           <a href="{{ speaker.extra.url }}" target="_blank" rel="noopener noreferrer" class="btn__icon"
                             ><img src="/images/icons/web.svg" alt="Website"
+                          /></a>
+                        </li>
+                      {% endif %}
+                      {% if speaker.extra.linkedin %}
+                        <li>
+                          <a
+                            href="{{ speaker.extra.linkedin }}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn__icon"
+                            ><img src="/images/icons/linkedin.svg" alt="LinkedIn"
                           /></a>
                         </li>
                       {% endif %}
@@ -155,7 +194,7 @@
                     alt="{{ page.extra.sponsor }}"
                   />
                 </div>
-                <div class="links mt-5">
+                <div class="links mt-5 mb-5">
                   <ul class="social mt-3">
                     {% if page.extra.sponsor_url %}
                       <li>
