@@ -2,7 +2,7 @@
 title = "Spanish wine and tapas tasting"
 template = "activity.html"
 [extra]
-  date = "Wednesday, October 14, "
+  date = "Wednesday, October 14, 2026"
   time = "18:30–20:00"
   location = "Carrer de Lluís el Piadós, 6, 08003 Barcelona"
   location_name = "Carrer de Lluís el Piadós"

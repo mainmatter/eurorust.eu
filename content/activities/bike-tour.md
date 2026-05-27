@@ -2,7 +2,7 @@
 title = "Barcelona bike tour"
 template = "activity.html"
 [extra]
-  date = "Wednesday, October 14, "
+  date = "Wednesday, October 14, 2026"
   time = "14:30–17:30"
   location = "Plaça de Sant Agustí Vell, 16, 08003 Barcelona"
   location_name = "Plaça de Sant Agustí Vell"

@@ -1,8 +1,8 @@
 +++
-title = "Barcelona Sunset Catamaran Tour"
+title = "Barcelona sunset catamaran tour"
 template = "activity.html"
 [extra]
-  date = "Wednesday, October 14, "
+  date = "Wednesday, October 14, 2026"
   time = "18:30–20:00"
   location = "Escullera del Poblenou, 1, 08005 Barcelona"
   location_name = "Escullera del Poblenou"
