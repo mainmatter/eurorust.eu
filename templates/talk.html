@@ -36,7 +36,7 @@
             {% endfor %}
             {% if talk_date and talk_time and talk_stage %}
               <p class="workshop-hero__details">
-                <a href="/schedule" class="inline">»Schedule</a> // Talk<br />
+                »<a href="/schedule" class="inline">Schedule</a> // Talk<br />
                 {{ talk_date }}<br />
                 {{ talk_time }}<br />
                 {{ talk_stage }}
@@ -194,7 +194,7 @@
                     alt="{{ page.extra.sponsor }}"
                   />
                 </div>
-                <div class="links mt-5">
+                <div class="links mt-5 mb-5">
                   <ul class="social mt-3">
                     {% if page.extra.sponsor_url %}
                       <li>
