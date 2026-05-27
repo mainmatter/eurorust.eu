@@ -166,18 +166,14 @@
                   {% if day.day == "1" %}
                     <div class="closing-party closing-party__grid schedule__shared">
                       <h2 class="schedule__track pb-5 border-bottom mt-5">Side activities</h2>
-                      <div class="closing-party__content schedule__day-body">
-                        <img
-                          class="image-party py-3"
-                          src="/images/activities/dinner.webp"
-                          alt="Plate, fork, and spoon"
-                        />
-                        <p>20:00</p>
-                        <p><strong>Group Dinners: Meet & Eat!</strong></p>
-                        <p class="pb-5">
-                          We have reservations at various local restaurants in Barcelona. Join fellow Rustaceans for a
-                          dinner of your choice!
-                        </p>
+                      <div class="closing-party__content schedule__day-body border-bottom mb-4">
+                        <a class="activity-card__link" href="/activities/group-dinner/">
+                          <div class="closing-party__content">
+                            <img class="image-party" src="/images/activities/dinner.webp" alt="Plate, fork, and spoon" />
+                            <p>20:00</p>
+                            <p><strong>Group Dinners: Meet & Eat!</strong></p>
+                          </div>
+                        </a>
                       </div>
                     </div>
                     <div class="closing-party closing-party__grid schedule__shared schedule__day-body">
@@ -256,16 +252,14 @@
                       <tr class="schedule__day-body">
                         <td class="visually-hidden">20:00</td>
                         <td colspan="2" class="schedule__entry">
-                          <div class="closing-party closing-party__grid schedule__shared">
-                            <div class="closing-party__content">
-                              <img class="image-party py-3" src="/images/activities/dinner.webp" alt="Plate of food" />
-                              <p>20:00</p>
-                              <p><strong>Group Dinners: Meet & Eat!</strong></p>
-                              <p>
-                                We have reservations at various local restaurants in Barcelona. Join fellow Rustaceans
-                                for a dinner of your choice!
-                              </p>
-                            </div>
+                          <div class="closing-party closing-party__grid schedule__shared mb-2">
+                            <a class="activity-card__link" href="/activities/group-dinner/">
+                              <div class="closing-party__content">
+                                <img class="image-party" src="/images/activities/dinner.webp" alt="Plate, fork and knife" />
+                                <p>20:00</p>
+                                <p><strong>Group Dinners: Meet & Eat!</strong></p>
+                              </div>
+                            </a>
                           </div>
                         </td>
                       </tr>

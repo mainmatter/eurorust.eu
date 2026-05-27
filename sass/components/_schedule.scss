@@ -264,6 +264,10 @@
     border-bottom: none;
   }
 
+  &.border-bottom {
+    border-bottom: 1px solid var(--blue-400);
+  }
+
   & .schedule__table-side {
     border-left: 1.5px solid var(--blue-400);
   }
