@@ -44,20 +44,6 @@
                     <div class="schedule__main-stage">
                       <h2 class="schedule__track mb-4">Workshops</h2>
                       <ol class="schedule__list">
-                        <li class="schedule__day-body">
-                          <p class="span-columns">
-                            <strong
-                              >The EuroRust workshops will take place in a separate venue, TBA
-                              <!-- <a
-                                style="display:inline; text-shadow:none"
-                                href="https://maps.app.goo.gl/KVWt3iy6rVuuQQ3h7"
-                                target="_blank"
-                                >Fiap Paris</a
-                              > -->
-                              </strong
->
-                          </p>
-                        </li>
                         {% for activity in day.workshop %}
                           <li class="schedule__day-body">{% include "partials/activity-card-workshop.html" %}</li>
                         {% endfor %}
@@ -81,19 +67,6 @@
                       </tr>
                       <tr class="schedule__bottom-line">
                         <td scope="row" class="visually-hidden"></td>
-                        <td class="venue-warning">
-                          <p>
-                            <strong
-                              >The EuroRust workshops will take place in a separate venue,
-                              <!-- <a
-                                style="display:inline; text-shadow:none"
-                                href="https://maps.app.goo.gl/KVWt3iy6rVuuQQ3h7"
-                                target="_blank"
-                                >Fiap Paris</a -->
-                              TBA
-                            </strong>
-                          </p>
-                        </td>
                         <td class="schedule-table__side"></td>
                       </tr>
                       {% set_global sideCount = 1 %}
