@@ -37,7 +37,7 @@
 
 [[extra.talks]]
   title="optimizing-the-new-rust-trait-solver"
-  image="/images/talks/jana-doenszelmann.webp"
+  image="images/headline-speakers/jana-purple.webp"
   speaker="Jana Dönszelmann"
   job_title="Hexcat, RustNL, Rust's Compiler Team"
   github = "https://github.com/jdonszelmann"
@@ -46,7 +46,7 @@
 
 [[extra.talks]]
   title="beyond-cargo-build"
-  image="/images/talks/amos-wenger.webp"
+  image="/images/headline-speakers/amos-pink.webp"
   speaker="Amos Wenger"
   github = "https://github.com/fasterthanlime"
   mastodon = "https://hachyderm.io/@fasterthanlime"
