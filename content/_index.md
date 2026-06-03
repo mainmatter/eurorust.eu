@@ -1,5 +1,10 @@
 +++
 
+[[extra.supporter_sponsors]]
+  title="Open Source Security"
+  link="https://opensrcsec.com"
+  image="/images/sponsors/oss.svg"
+
 [[extra.premier_partner_sponsors]]
   title="JetBrains"
   link="/jetbrains"
