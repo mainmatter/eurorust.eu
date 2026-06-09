@@ -34,29 +34,32 @@
 [[extra.talks]]
   title="move-your-problems"
   image="/images/talks/oli-scherer.webp"
-  speaker="Oli Scherer"
-  job_title="Rust Compiler Maintainer"
-  company="RustNL"
-  github = "https://github.com/oli-obk/"
-  mastodon = "https://hachyderm.io/@oli"
+  speakers = ["oli-scherer"]
 
 [[extra.talks]]
   title="optimizing-the-new-rust-trait-solver"
   image="images/headline-speakers/jana-purple.webp"
-  speaker="Jana Dönszelmann"
-  job_title="Hexcat, RustNL, Rust's Compiler Team"
-  github = "https://github.com/jdonszelmann"
-  mastodon = "https://fedi.xirion.net/@jana"
-  web = "https://donsz.nl"
+  speakers = ["jana-doenszelmann"]
 
 [[extra.talks]]
   title="beyond-cargo-build"
   image="/images/headline-speakers/amos-pink.webp"
-  speaker="Amos Wenger"
-  github = "https://github.com/fasterthanlime"
-  mastodon = "https://hachyderm.io/@fasterthanlime"
-  bsky = "https://bsky.app/profile/fasterthanli.me"
-  web = "https://fasterthanli.me"
+  speakers = ["amos-wenger"]
+
+[[extra.talks]]
+  title="rust-s-influence-on-c-and-python-shaping-the-future-of-three-communities"
+  image = "/images/talks/cristian-maureira-fredes.webp"
+  speakers = ["cristian-maureira-fredes"]
+
+[[extra.talks]]
+  title="building-a-query-system"
+  image="images/headline-speakers/arya-purple.webp"
+  speakers = ["arya-dradjica"]
+
+[[extra.talks]]
+  title="image-codecs-rustification-in-chromium"
+  image="images/headline-speakers/johan-sergio-pink.webp"
+  speakers = ["johan-rosengren", "sergio-gonzalez-martin"]
 
 [[extra.moderators]]
   name="Stefan Baumgartner"

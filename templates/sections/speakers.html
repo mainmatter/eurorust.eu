@@ -12,7 +12,7 @@
           <a href="{{ event.path }}">
             <img
               class="speaker__portrait"
-              alt="{{ talk.speaker }}"
+              alt="Speakers for {{ event.title }}"
               src="{{ talk.image }}"
               loading="lazy"
               width="400"
@@ -23,57 +23,62 @@
         <a href="{{ event.path }}" class="talk__link">
           <p class="title">{{ event.title | safe }}</p>
         </a>
-        <p><span class="speaker__name">{{ talk.speaker }}</span></p>
-        <p></p>
-        <p class="speaker__job">
-          {% if talk.job_title %}{{ talk.job_title }}{% endif %}{% if talk.company %}
-            &nbsp;at {{ talk.company }}
+        {% for speaker_slug in talk.speakers %}
+          {% set speaker_path = "speakers/" ~ speaker_slug ~ ".md" %}
+          {% set speaker = get_page(path = speaker_path) %}
+          <p><span class="speaker__name">{{ speaker.extra.name }}</span></p>
+          {% if speaker.extra.role %}
+            <p class="speaker__job">{{ speaker.extra.role }}</p>
           {% endif %}
-        </p>
-        <ul class="speaker__socials pb-4">
-          {% if talk.twitter %}
-            <li>
-              <a class="btn__icon" href="{{ talk.twitter }}" target="_blank" rel="noopener noreferrer"
-                ><img src="/images/icons/twitter.svg" alt="X" width="42" height="42"
-              /></a>
-            </li>
-          {% endif %}
-          {% if talk.bsky %}
-            <li>
-              <a class="btn__icon" href="{{ talk.bsky }}" target="_blank" rel="noopener noreferrer"
-                ><img src="/images/icons/bluesky.svg" alt="Bluesky" width="42" height="42"
-              /></a>
-            </li>
-          {% endif %}
-          {% if talk.mastodon %}
-            <li>
-              <a class="btn__icon" href="{{ talk.mastodon }}" target="_blank" rel="noopener noreferrer"
-                ><img src="/images/icons/mastodon.svg" alt="Mastodon" width="42" height="42"
-              /></a>
-            </li>
-          {% endif %}
-          {% if talk.linkedin %}
-            <li>
-              <a class="btn__icon" href="{{ talk.linkedin }}" target="_blank" rel="noopener noreferrer"
-                ><img src="/images/icons/linkedin.svg" alt="LinkedIn" width="42" height="42"
-              /></a>
-            </li>
-          {% endif %}
-          {% if talk.web %}
-            <li>
-              <a class="btn__icon" href="{{ talk.web }}" target="_blank" rel="noopener noreferrer"
-                ><img src="/images/icons/web.svg" alt="Internet" width="42" height="42"
-              /></a>
-            </li>
-          {% endif %}
-          {% if talk.github %}
-            <li>
-              <a class="btn__icon" href="{{ talk.github }}" target="_blank" rel="noopener noreferrer"
-                ><img src="/images/icons/github.svg" alt="GitHub" width="42" height="42"
-              /></a>
-            </li>
-          {% endif %}
-        </ul>
+          <ul class="speaker__socials pb-4">
+            {% if speaker.extra.twitter %}
+              <li>
+                <a
+                  class="btn__icon"
+                  href="https://twitter.com/{{ speaker.extra.twitter }}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><img src="/images/icons/twitter.svg" alt="X" width="42" height="42"
+                /></a>
+              </li>
+            {% endif %}
+            {% if speaker.extra.bluesky %}
+              <li>
+                <a class="btn__icon" href="{{ speaker.extra.bluesky }}" target="_blank" rel="noopener noreferrer"
+                  ><img src="/images/icons/bluesky.svg" alt="Bluesky" width="42" height="42"
+                /></a>
+              </li>
+            {% endif %}
+            {% if speaker.extra.mastodon %}
+              <li>
+                <a class="btn__icon" href="{{ speaker.extra.mastodon }}" target="_blank" rel="noopener noreferrer"
+                  ><img src="/images/icons/mastodon.svg" alt="Mastodon" width="42" height="42"
+                /></a>
+              </li>
+            {% endif %}
+            {% if speaker.extra.linkedin %}
+              <li>
+                <a class="btn__icon" href="{{ speaker.extra.linkedin }}" target="_blank" rel="noopener noreferrer"
+                  ><img src="/images/icons/linkedin.svg" alt="LinkedIn" width="42" height="42"
+                /></a>
+              </li>
+            {% endif %}
+            {% if speaker.extra.url %}
+              <li>
+                <a class="btn__icon" href="{{ speaker.extra.url }}" target="_blank" rel="noopener noreferrer"
+                  ><img src="/images/icons/web.svg" alt="Internet" width="42" height="42"
+                /></a>
+              </li>
+            {% endif %}
+            {% if speaker.extra.github %}
+              <li>
+                <a class="btn__icon" href="{{ speaker.extra.github }}" target="_blank" rel="noopener noreferrer"
+                  ><img src="/images/icons/github.svg" alt="GitHub" width="42" height="42"
+                /></a>
+              </li>
+            {% endif %}
+          </ul>
+        {% endfor %}
       </li>
     {% endfor %}
   </ul>
