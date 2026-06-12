@@ -14,11 +14,23 @@ main.generic-block {
     list-style: square;
 
     li {
-      font-size: clamp(14px, 1vw, 18px);
+      font-size: clamp(14px, 1.5vw, 38px);
 
       @media (max-width: 60rem) {
         font-size: 1rem;
       }
     }
   }
+}
+
+h1,
+h2,
+h3,
+h4,
+.h1, .h2, .h3, .h4 {
+    color: var(--orange-100);
+}
+
+h1, h2, h3, .h1, .h2, .h3 {
+  text-shadow: 0 0 20px var(--blue-800);
 }
