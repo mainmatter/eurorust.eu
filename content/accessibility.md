@@ -3,7 +3,7 @@ template = "generic-content.html"
 title = "Accessibility Statement"
 +++
 
-<div class="box mb-7 blurred-background">
+<div class="box mb-7">
   <p>If you need any help, please contact us at <a href="mailto:mail@eurorust.eu">mail@eurorust.eu</a>.</p>
   <br>
   <p>EuroRust is an inclusive conference and strives to be accessible to everyone. We offer significantly discounted tickets for concession holders as well as complimentary tickets for assistants of disabled participants. If you’re not sure whether the concession rate should apply to you, please do get in touch via <a href="mailto:mail@eurorust.eu">mail@eurorust.eu</a>,</p>
