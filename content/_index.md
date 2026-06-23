@@ -20,7 +20,10 @@
   link="https://quantum-systems.com/"
   image="/images/sponsors/quantum-systems.svg"
 
-
+[[extra.premier_partner_sponsors]]
+  title="Helsing"
+  link="https://helsing.ai/"
+  image="/images/sponsors/helsing.svg"
 
 [[extra.workshops]]
   title="programming-a-line-follower-robot"

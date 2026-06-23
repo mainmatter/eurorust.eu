@@ -153,6 +153,10 @@
       }
     }
 
+  .sponsors-grid--premier_partners a:last-child:nth-child(3n+1) {
+    grid-column: revert;
+  }
+
     .sponsors-grid--supporters a {
       @include sponsor-logo(var(--pink-gradient), 1.25rem, 3.5rem);
     }
