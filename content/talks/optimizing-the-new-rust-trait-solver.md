@@ -1,5 +1,5 @@
 +++
-title = "Optimizing The New Rust Trait Solver"
+title = "Optimizing rustc's Next Trait Solver"
 template = "talk.html"
 [extra]
   speakers = ["jana-doenszelmann"]
