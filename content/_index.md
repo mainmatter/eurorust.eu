@@ -1,6 +1,11 @@
 +++
 
 [[extra.supporter_sponsors]]
+  title="Spiral"
+  link="https://spiraldb.com/"
+  image="/images/sponsors/spiraldb.svg"
+
+[[extra.supporter_sponsors]]
   title="Open Source Security"
   link="https://opensrcsec.com"
   image="/images/sponsors/oss.svg"
