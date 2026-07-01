@@ -1,5 +1,5 @@
-<section class="speakers pt-4 pb-8">
-  <h1 class="pb-8">Headline Speakers</h1>
+<section class="speakers speakers--highlights pt-4 pb-8">
+  <h1 class="pb-8">Highlights</h1>
   <ul>
     {% for talk in section.extra.talks %}
       {% if talk.title %}
@@ -7,7 +7,7 @@
         {% set event = get_page(path = path) %}
       {% endif %}
 
-      <li class="speaker__details">
+      <li class="speaker__details{% if talk.is_wide %} speaker__details--wide{% endif %}">
         {% if talk.image %}
           <a href="{{ event.path }}">
             <img
