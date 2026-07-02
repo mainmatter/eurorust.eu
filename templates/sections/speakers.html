@@ -26,7 +26,12 @@
         {% for speaker_slug in talk.speakers %}
           {% set speaker_path = "speakers/" ~ speaker_slug ~ ".md" %}
           {% set speaker = get_page(path = speaker_path) %}
-          <p><span class="speaker__name">{{ speaker.extra.name }}</span></p>
+          <p>
+            <span class="speaker__name">{{ speaker.extra.name }}</span>
+            {% if talk.title == "game-show" and speaker.extra.handle %}
+              <span class="speaker__handle">{{ speaker.extra.handle }}</span>
+            {% endif %}
+          </p>
           {% if speaker.extra.role %}
             <p class="speaker__job">{{ speaker.extra.role }}</p>
           {% endif %}

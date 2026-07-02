@@ -111,7 +111,8 @@
     }
 
     .speaker__job,
-    .speaker__name {
+    .speaker__name,
+    .speaker__handle {
       @include dark-blue-shadow;
     }
 
