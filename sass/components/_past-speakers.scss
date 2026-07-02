@@ -111,7 +111,8 @@
     }
 
     .speaker__job,
-    .speaker__name {
+    .speaker__name,
+    .speaker__handle {
       @include dark-blue-shadow;
     }
 
@@ -129,9 +130,14 @@
   }
 
   li.speaker__details {
-    &:last-child:nth-child(odd) {
+    &.speaker__details--wide {
       grid-column: span 2 / span 2;
       justify-self: center;
+
+      .title,
+      .btn__icon {
+        background-color: var(--pink-600);
+      }
 
       @media screen and (max-width: 60rem) {
         grid-column: 1;
@@ -146,6 +152,30 @@
     }
 
     &:nth-child(3n + 3) {
+      .title,
+      .btn__icon {
+        background-color: var(--pink-600);
+      }
+    }
+
+  }
+
+  &.speakers--highlights li.speaker__details {
+    &:nth-child(3n + 2) {
+      .title,
+      .btn__icon {
+        background-color: var(--orange-300);
+      }
+    }
+
+    &:nth-child(3n + 3) {
+      .title,
+      .btn__icon {
+        background-color: var(--purple-200);
+      }
+    }
+
+    &:not(.speaker__details--wide):nth-child(3n + 1) {
       .title,
       .btn__icon {
         background-color: var(--pink-600);

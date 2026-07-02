@@ -40,6 +40,12 @@
   title="containers-are-dead"
 
 [[extra.talks]]
+  title="game-show"
+  image="/images/headline-speakers/tris%26amos-pink.webp"
+  speakers = ["amos-wenger", "tristram-oaten"]
+  is_wide = true
+
+[[extra.talks]]
   title="move-your-problems"
   image="/images/talks/oli-scherer.webp"
   speakers = ["oli-scherer"]
