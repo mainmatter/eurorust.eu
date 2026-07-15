@@ -5,8 +5,8 @@
       "id": "workshop-day",
       "label": "Workshop Day",
       "navLabel": "Workshop day",
-      "date": "2026-07-14",
-      "displayDate": "July 14, 2026",
+      "date": "2026-10-14",
+      "displayDate": "October 14, 2026",
       "theme": "w",
       "tracks": [
         { "id": "workshop", "label": "Workshops" },
@@ -16,12 +16,12 @@
         {
           "id": "workshop-day-1000",
           "time": "10:00–16:00",
-          "start": "2026-07-14T10:00:00+02:00",
+          "start": "2026-10-14T10:00:00+02:00",
           "entries": [
             {
               "id": "c-to-rust",
-              "start": "2026-07-14T10:00:00+02:00",
-              "end": "2026-07-14T16:00:00+02:00",
+              "start": "2026-10-14T10:00:00+02:00",
+              "end": "2026-10-14T16:00:00+02:00",
               "time": "10:00–16:00",
               "kind": "workshop",
               "filterType": "workshop",
@@ -32,8 +32,8 @@
             },
             {
               "id": "containers-are-dead",
-              "start": "2026-07-14T10:00:00+02:00",
-              "end": "2026-07-14T16:00:00+02:00",
+              "start": "2026-10-14T10:00:00+02:00",
+              "end": "2026-10-14T16:00:00+02:00",
               "time": "10:00–16:00",
               "kind": "workshop",
               "filterType": "workshop",
@@ -44,8 +44,8 @@
             },
             {
               "id": "programming-a-line-follower-robot",
-              "start": "2026-07-14T10:00:00+02:00",
-              "end": "2026-07-14T16:00:00+02:00",
+              "start": "2026-10-14T10:00:00+02:00",
+              "end": "2026-10-14T16:00:00+02:00",
               "time": "10:00–16:00",
               "kind": "workshop",
               "filterType": "workshop",
@@ -59,12 +59,12 @@
         {
           "id": "workshop-day-1430",
           "time": "14:30–17:30",
-          "start": "2026-07-14T14:30:00+02:00",
+          "start": "2026-10-14T14:30:00+02:00",
           "entries": [
             {
               "id": "bike-tour",
-              "start": "2026-07-14T14:30:00+02:00",
-              "end": "2026-07-14T17:30:00+02:00",
+              "start": "2026-10-14T14:30:00+02:00",
+              "end": "2026-10-14T17:30:00+02:00",
               "time": "14:30–17:30",
               "kind": "side-activity",
               "filterType": "side-activity",
@@ -78,12 +78,12 @@
         {
           "id": "workshop-day-1830",
           "time": "18:30–20:00",
-          "start": "2026-07-14T18:30:00+02:00",
+          "start": "2026-10-14T18:30:00+02:00",
           "entries": [
             {
               "id": "boat-tour",
-              "start": "2026-07-14T18:30:00+02:00",
-              "end": "2026-07-14T20:00:00+02:00",
+              "start": "2026-10-14T18:30:00+02:00",
+              "end": "2026-10-14T20:00:00+02:00",
               "time": "18:30–20:00",
               "kind": "side-activity",
               "filterType": "side-activity",
@@ -94,8 +94,8 @@
             },
             {
               "id": "wine-tasting",
-              "start": "2026-07-14T18:30:00+02:00",
-              "end": "2026-07-14T20:00:00+02:00",
+              "start": "2026-10-14T18:30:00+02:00",
+              "end": "2026-10-14T20:00:00+02:00",
               "time": "18:30–20:00",
               "kind": "side-activity",
               "filterType": "side-activity",

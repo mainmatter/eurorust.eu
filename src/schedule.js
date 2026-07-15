@@ -100,7 +100,7 @@ class ScheduleController {
     this.navbar = navbar;
 
     this.syncNavbarOffset = () => {
-      const navbarBottom = Math.ceil(Math.max(0, navbar.getBoundingClientRect().bottom));
+      const navbarBottom = Math.max(0, navbar.getBoundingClientRect().bottom - 1);
       this.root.style.setProperty('--schedule-sticky-top', `${navbarBottom}px`);
     };
 
