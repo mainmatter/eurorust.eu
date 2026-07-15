@@ -5,15 +5,15 @@ template = "workshop.html"
 name = "Domenic Quirl"
 avatar = "domenic-quirl.webp"
 avatar_alt = "Domenic Quirl"
-github = ""
-mastodon = ""
+github = "domenicquirl"
+mastodon = "https://hachyderm.io/@domenicquirl"
 bio = "For the past few years, Domenic has been working on powering the world with Rust. He’s written firmware for an embedded PCB that measures various electrical and fluidic sensors in energy storage systems and is currently building a new team to develop software for even larger batteries.<br/><br/>When he is not working on renewable energy infrastructure, Domenic enjoys listening to and making music, discovering new restaurants and recipes, and chatting about all things Rust and technology at meetups or conferences."
 
 [[extra.mentors]]
 name = "Björn Barwinski"
 avatar = "bjorn-barwinski.webp"
 avatar_alt = "Björn Barwinski"
-github = ""
+github = "BjoernLange"
 bio = "Björn Barwinski’s main interest is in embedded systems, from microcontrollers to embedded Linux, as well as software architecture. He works at AMAZONE where he is building the central, pure Rust, on-board telemetry platform for the next generation of smart agricultural machines. Previously, when working as a consultant, he applied Rust in a wide range of contexts, from embedded and desktop applications to cloud services.<br/><br/>In his free time, Björn loves to play board games and enjoys doing winter sports."
 
 [extra]
