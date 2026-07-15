@@ -1,0 +1,11 @@
+<li
+  class="schedule__event schedule__event--{{ entry.layout }} schedule__event--{{ entry.kind }}"
+  data-schedule-entry
+  data-entry-id="{{ entry.id }}"
+  data-start="{{ entry.start }}"
+  data-end="{{ entry.end }}"
+  data-filter-type="{{ entry.filterType }}"
+  data-track="{{ entry.track }}"
+>
+  {% include "partials/schedule-entry.html" %}
+</li>

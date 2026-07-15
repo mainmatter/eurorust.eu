@@ -1,0 +1,121 @@
+{% if entry.talk %}
+  {% set path = "talks/" ~ entry.talk ~ ".md" %}
+  {% set event = get_page(path = path) %}
+  <article
+    class="activity-card"
+    data-search="{{ event.title }} {{ entry.trackLabel }}{% if event.extra.sponsor %}{{ event.extra.sponsor }}{% endif %}{% for speaker_slug in event.extra.speakers | default(value=[]) %}
+      {% set speaker_path = "speakers/" ~ speaker_slug ~ ".md" %}{% set speaker = get_page(path = speaker_path) %}
+      {{ speaker.extra.name }}
+    {% endfor %}"
+  >
+    <a class="activity-card__link" href="{{ event.path }}">
+      <div class="activity-card__content">
+        <p class="activity-card__track">{{ entry.trackLabel }}</p>
+        <time class="activity-card__time" datetime="{{ entry.start }}">{{ entry.time }}</time>
+        <p class="beige activity-card__title"><strong>{{ event.title }}</strong></p>
+        {% for speaker_slug in event.extra.speakers | default(value=[]) %}
+          {% set speaker_path = "speakers/" ~ speaker_slug ~ ".md" %}
+          {% set speaker = get_page(path = speaker_path) %}
+          {% if speaker.extra.image %}
+            <img
+              class="activity-card__portrait mb-3"
+              src="{{ speaker.extra.image }}"
+              alt="Photo of {{ speaker.extra.name }}"
+            />
+          {% else %}
+            <img class="activity-card__portrait mb-3" src="/images/talks/placeholder.webp" alt="" />
+          {% endif %}
+          <p class="beige activity-card__speaker mt-3">»{{ speaker.extra.name }}</p>
+        {% endfor %}
+        {% if event.extra.sponsor %}
+          <p class="beige activity-card__speaker mt-3">*Sponsored by {{ event.extra.sponsor }}</p>
+        {% endif %}
+        <p class="activity-card__status" data-live-status hidden></p>
+      </div>
+    </a>
+  </article>
+{% elif entry.workshop %}
+  {% set path = "workshops/" ~ entry.workshop ~ ".md" %}
+  {% set event = get_page(path = path) %}
+  <article
+    class="activity-card activity-card__workshop"
+    data-search="{{ event.title }} {{ entry.trackLabel }}{% for mentor in event.extra.mentors | default(value=[]) %}{{ mentor.name }}{% endfor %}{% if event.extra.sponsor %}{{ event.extra.sponsor }}{% endif %}"
+  >
+    <a class="activity-card__link" href="{{ event.path }}">
+      <div class="activity-card__content">
+        <p class="activity-card__track">{{ entry.trackLabel }}</p>
+        {% if event.extra.heroimage %}
+          <img
+            class="activity-card__image mb-3"
+            src="{{ event.extra.heroimage }}"
+            alt="{{ event.extra.heroimage_alt }}"
+          />
+        {% else %}
+          <img class="activity-card__image mb-3" src="/images/events/placeholder.webp" alt="" />
+        {% endif %}
+        <time class="activity-card__time" datetime="{{ entry.start }}">{{ entry.time }}</time>
+        <p class="activity-card__title"><strong>{{ event.title }}</strong></p>
+        {% if event.extra.mentors %}
+          <p class="activity-card__speaker mt-3">
+            »Led by
+            {% for mentor in event.extra.mentors %}{{ mentor.name }}{% if not loop.last %},{% endif %}{% endfor %}
+          </p>
+        {% endif %}
+        {% if event.extra.sponsor %}
+          <p class="sponsored-by">*Sponsored by {{ event.extra.sponsor }}</p>
+        {% endif %}
+        <p class="activity-card__status" data-live-status hidden></p>
+      </div>
+    </a>
+  </article>
+{% elif entry.activity %}
+  {% set path = "activities/" ~ entry.activity ~ ".md" %}
+  {% set event = get_page(path = path) %}
+  <article class="activity-card activity-card__workshop" data-search="{{ event.title }} {{ entry.trackLabel }}">
+    <a class="activity-card__link" href="{{ event.path }}">
+      <div class="activity-card__content">
+        <p class="activity-card__track">{{ entry.trackLabel }}</p>
+        {% if event.extra.heroimage %}
+          <img
+            class="activity-card__image mb-3"
+            src="{{ event.extra.heroimage }}"
+            alt="{{ event.extra.heroimage_alt }}"
+          />
+        {% else %}
+          <img class="activity-card__image mb-3" src="/images/events/placeholder.webp" alt="" />
+        {% endif %}
+        <time class="activity-card__time" datetime="{{ entry.start }}">{{ entry.time }}</time>
+        <p class="beige activity-card__title"><strong>{{ event.title }}</strong></p>
+        <p class="activity-card__status" data-live-status hidden></p>
+      </div>
+    </a>
+  </article>
+{% else %}
+  <article class="activity-card" data-search="{{ entry.title }} {{ entry.trackLabel }}">
+    {% if entry.url %}
+      <a class="activity-card__link" href="{{ entry.url }}" target="_blank" rel="noopener">
+        <div class="activity-card__content">
+          <p class="activity-card__track">{{ entry.trackLabel }}</p>
+          {% if entry.image %}
+            <img class="activity-card__image mb-3" src="{{ entry.image }}" alt="{{ entry.imageAlt }}" />
+          {% endif %}
+          <time class="activity-card__time" datetime="{{ entry.start }}">{{ entry.time }}</time>
+          <p class="beige activity-card__title"><strong>{{ entry.title }}</strong></p>
+          {% if entry.description %}<p class="activity-card__description">{{ entry.description }}</p>{% endif %}
+          <p class="activity-card__status" data-live-status hidden></p>
+        </div>
+      </a>
+    {% else %}
+      <div class="activity-card__content">
+        <p class="activity-card__track">{{ entry.trackLabel }}</p>
+        {% if entry.image %}
+          <img class="activity-card__image mb-3" src="{{ entry.image }}" alt="{{ entry.imageAlt }}" />
+        {% endif %}
+        <time class="activity-card__time" datetime="{{ entry.start }}">{{ entry.time }}</time>
+        <p class="beige activity-card__title"><strong>{{ entry.title }}</strong></p>
+        {% if entry.description %}<p class="activity-card__description">{{ entry.description }}</p>{% endif %}
+        <p class="activity-card__status" data-live-status hidden></p>
+      </div>
+    {% endif %}
+  </article>
+{% endif %}

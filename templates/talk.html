@@ -18,20 +18,15 @@
             {% set_global talk_date = false %}
             {% set_global talk_time = false %}
             {% set_global talk_stage = false %}
-            {% for day in schedule %}
-              {% for activity in day.mainStage %}
-                {% if activity.talk and activity.talk == page.slug %}
-                  {% set_global talk_date = day.date %}
-                  {% set_global talk_time = activity.time %}
-                  {% set_global talk_stage = "Main Stage" %}
-                {% endif %}
-              {% endfor %}
-              {% for activity in day.side %}
-                {% if activity.talk and activity.talk == page.slug %}
-                  {% set_global talk_date = day.date %}
-                  {% set_global talk_time = activity.time %}
-                  {% set_global talk_stage = "Side Track" %}
-                {% endif %}
+            {% for day in schedule.days %}
+              {% for slot in day.slots %}
+                {% for entry in slot.entries %}
+                  {% if entry.talk and entry.talk == page.slug %}
+                    {% set_global talk_date = day.displayDate %}
+                    {% set_global talk_time = entry.time %}
+                    {% set_global talk_stage = entry.trackLabel %}
+                  {% endif %}
+                {% endfor %}
               {% endfor %}
             {% endfor %}
             {% if talk_date and talk_time and talk_stage %}
