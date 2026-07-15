@@ -6,7 +6,10 @@ name = "Domenic Quirl"
 avatar = "domenic-quirl.webp"
 avatar_alt = "Domenic Quirl"
 github = "domenicquirl"
+twitter = "https://x.com/domenicquirl"
+linkedin = "https://www.linkedin.com/in/domenic-quirl-60ba5217a/"
 mastodon = "https://hachyderm.io/@domenicquirl"
+bluesky = "domenicquirl.bsky.social"
 bio = "For the past few years, Domenic has been working on powering the world with Rust. He’s written firmware for an embedded PCB that measures various electrical and fluidic sensors in energy storage systems and is currently building a new team to develop software for even larger batteries.<br/><br/>When he is not working on renewable energy infrastructure, Domenic enjoys listening to and making music, discovering new restaurants and recipes, and chatting about all things Rust and technology at meetups or conferences."
 
 [[extra.mentors]]
