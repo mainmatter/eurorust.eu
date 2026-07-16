@@ -5,7 +5,8 @@
     "workshop": [
       { "time": "10:00–16:00", "title": "c-to-rust" },
       { "time": "10:00–16:00", "title": "containers-are-dead" },
-      { "time": "10:00–16:00", "title": "programming-a-line-follower-robot" }
+      { "time": "10:00–16:00", "title": "programming-a-line-follower-robot" },
+      { "time": "10:00–16:00", "title": "hands-on-embedded-rust" }
     ],
     "side": [
       { "time": "14:30–17:30", "title": "bike-tour" },

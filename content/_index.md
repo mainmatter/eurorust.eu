@@ -39,6 +39,9 @@
 [[extra.workshops]]
   title="containers-are-dead"
 
+[[extra.workshops]]
+  title="hands-on-embedded-rust"
+
 [[extra.talks]]
   title="game-show"
   image="/images/headline-speakers/tris%26amos-pink.webp"

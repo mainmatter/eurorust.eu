@@ -96,7 +96,7 @@
                       <img class="photo" src="/images/workshops/{{ mentor.avatar }}" alt="{{ mentor.avatar_alt }}" />
                     </div>
                   {% endif %}
-                  {% if mentor.github or mentor.url or mentor.bluesky or mentor.mastodon %}
+                  {% if mentor.github or mentor.url or mentor.linkedin or mentor.bluesky or mentor.mastodon or mentor.twitter %}
                     <div class="links mt-5 mb-5">
                       <ul class="social mt-3">
                         {% if mentor.github %}
@@ -117,6 +117,13 @@
                             /></a>
                           </li>
                         {% endif %}
+                        {% if mentor.linkedin %}
+                          <li>
+                            <a href="{{ mentor.linkedin }}" target="_blank" rel="noopener noreferrer" class="btn__icon"
+                              ><img src="/images/icons/linkedin.svg" alt="LinkedIn"
+                            /></a>
+                          </li>
+                        {% endif %}
                         {% if mentor.bluesky %}
                           <li>
                             <a
@@ -132,6 +139,13 @@
                           <li>
                             <a href="{{ mentor.mastodon }}" target="_blank" rel="noopener noreferrer" class="btn__icon"
                               ><img src="/images/icons/mastodon.svg" alt="Mastodon"
+                            /></a>
+                          </li>
+                        {% endif %}
+                        {% if mentor.twitter %}
+                          <li>
+                            <a href="{{ mentor.twitter }}" target="_blank" rel="noopener noreferrer" class="btn__icon"
+                              ><img src="/images/icons/twitter.svg" alt="X"
                             /></a>
                           </li>
                         {% endif %}
