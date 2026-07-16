@@ -16,7 +16,7 @@ bio = "For the past few years, Domenic has been working on powering the world wi
 name = "Björn Barwinski"
 avatar = "bjorn-barwinski.webp"
 avatar_alt = "Björn Barwinski"
-github = "BjoernLange"
+linkedin = "https://www.linkedin.com/in/bj%C3%B6rn-barwinski-6b2a10358/"
 bio = "Björn Barwinski’s main interest is in embedded systems, from microcontrollers to embedded Linux, as well as software architecture. He works at AMAZONE where he is building the central, pure Rust, on-board telemetry platform for the next generation of smart agricultural machines. Previously, when working as a consultant, he applied Rust in a wide range of contexts, from embedded and desktop applications to cloud services.<br/><br/>In his free time, Björn loves to play board games and enjoys doing winter sports."
 
 [extra]
