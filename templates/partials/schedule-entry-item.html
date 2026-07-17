@@ -1,10 +1,18 @@
+{% if entry.type == "talk" %}
+  {% set filter_type = entry.track ~ "-talk" %}
+{% elif entry.type == "workshop" %}
+  {% set filter_type = "workshop" %}
+{% elif entry.type == "side-activity" %}
+  {% set filter_type = "side-activity" %}
+{% else %}
+  {% set filter_type = "service" %}
+{% endif %}
 <li
-  class="schedule__event schedule__event--{{ entry.layout }} schedule__event--{{ entry.kind }}"
+  class="schedule__event schedule__event--{{ entry_layout }} schedule__event--{{ entry.type }}"
   data-schedule-entry
-  data-entry-id="{{ entry.id }}"
-  data-start="{{ entry.start }}"
-  data-end="{{ entry.end }}"
-  data-filter-type="{{ entry.filterType }}"
+  data-start="{{ slot.start }}"
+  data-end="{{ slot.end }}"
+  data-filter-type="{{ filter_type }}"
   data-track="{{ entry.track }}"
 >
   {% include "partials/schedule-entry.html" %}

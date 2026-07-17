@@ -118,7 +118,7 @@
                     {% endif %}
                   </div>
 
-                  {% if day.id == "workshop-day" %}
+                  {% if day.layout | default(value="paired") == "independent-tracks" %}
                     <div class="schedule__timeline schedule__timeline--independent-tracks">
                       <ol class="schedule__track-column schedule__track-column--main" data-schedule-track-content>
                         {% for slot in day.slots %}
@@ -128,7 +128,8 @@
                             </h3>
                             <ul class="schedule__slot-track-events">
                               {% for entry in slot.entries %}
-                                {% if entry.layout == "main" %}
+                                {% if entry.track == day.tracks[0].id %}
+                                  {% set entry_layout = "main" %}
                                   {% include "partials/schedule-entry-item.html" %}
                                 {% endif %}
                               {% endfor %}
@@ -144,7 +145,8 @@
                             </h3>
                             <ul class="schedule__slot-track-events">
                               {% for entry in slot.entries %}
-                                {% if entry.layout == "side" %}
+                                {% if entry.track == day.tracks[1].id %}
+                                  {% set entry_layout = "side" %}
                                   {% include "partials/schedule-entry-item.html" %}
                                 {% endif %}
                               {% endfor %}
@@ -164,7 +166,9 @@
                             <li class="schedule__slot-track schedule__slot-track--main" data-schedule-track-content>
                               <ul class="schedule__slot-track-events">
                                 {% for entry in slot.entries %}
-                                  {% if entry.layout == "main" %}
+                                  {% set entry_is_full = entry.fullWidth | default(value=false) %}
+                                  {% if not entry_is_full and entry.track == day.tracks[0].id %}
+                                    {% set entry_layout = "main" %}
                                     {% include "partials/schedule-entry-item.html" %}
                                   {% endif %}
                                 {% endfor %}
@@ -172,15 +176,21 @@
                             </li>
                             <li class="schedule__slot-track schedule__slot-track--side" data-schedule-track-content>
                               <ul class="schedule__slot-track-events">
-                                {% for entry in slot.entries %}
-                                  {% if entry.layout == "side" %}
-                                    {% include "partials/schedule-entry-item.html" %}
-                                  {% endif %}
-                                {% endfor %}
+                                {% if day.tracks | length > 1 %}
+                                  {% for entry in slot.entries %}
+                                    {% set entry_is_full = entry.fullWidth | default(value=false) %}
+                                    {% if not entry_is_full and entry.track == day.tracks[1].id %}
+                                      {% set entry_layout = "side" %}
+                                      {% include "partials/schedule-entry-item.html" %}
+                                    {% endif %}
+                                  {% endfor %}
+                                {% endif %}
                               </ul>
                             </li>
                             {% for entry in slot.entries %}
-                              {% if entry.layout == "full" %}
+                              {% set entry_is_full = entry.fullWidth | default(value=false) %}
+                              {% if entry_is_full or entry.track == "all-stages" or day.tracks | length == 1 %}
+                                {% set entry_layout = "full" %}
                                 {% include "partials/schedule-entry-item.html" %}
                               {% endif %}
                             {% endfor %}

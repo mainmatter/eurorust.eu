@@ -9,100 +9,65 @@
       "displayDate": "October 14, 2026",
       "theme": "w",
       "tracks": [
-        { "id": "workshop", "label": "Workshops" },
-        { "id": "side-activity", "label": "Side activities" }
+        {
+          "id": "workshop",
+          "label": "Workshops"
+        },
+        {
+          "id": "side-activity",
+          "label": "Side activities"
+        }
       ],
+      "layout": "independent-tracks",
       "slots": [
         {
-          "id": "workshop-day-1000",
-          "time": "10:00–16:00",
           "start": "2026-10-14T10:00:00+02:00",
+          "end": "2026-10-14T16:00:00+02:00",
+          "time": "10:00–16:00",
           "entries": [
             {
-              "id": "c-to-rust",
-              "start": "2026-10-14T10:00:00+02:00",
-              "end": "2026-10-14T16:00:00+02:00",
-              "time": "10:00–16:00",
-              "kind": "workshop",
-              "filterType": "workshop",
+              "type": "workshop",
               "track": "workshop",
-              "trackLabel": "Workshop",
-              "layout": "main",
-              "workshop": "c-to-rust"
+              "ref": "c-to-rust"
             },
             {
-              "id": "containers-are-dead",
-              "start": "2026-10-14T10:00:00+02:00",
-              "end": "2026-10-14T16:00:00+02:00",
-              "time": "10:00–16:00",
-              "kind": "workshop",
-              "filterType": "workshop",
+              "type": "workshop",
               "track": "workshop",
-              "trackLabel": "Workshop",
-              "layout": "main",
-              "workshop": "containers-are-dead"
+              "ref": "containers-are-dead"
             },
             {
-              "id": "programming-a-line-follower-robot",
-              "start": "2026-10-14T10:00:00+02:00",
-              "end": "2026-10-14T16:00:00+02:00",
-              "time": "10:00–16:00",
-              "kind": "workshop",
-              "filterType": "workshop",
+              "type": "workshop",
               "track": "workshop",
-              "trackLabel": "Workshop",
-              "layout": "main",
-              "workshop": "programming-a-line-follower-robot"
+              "ref": "programming-a-line-follower-robot"
             }
           ]
         },
         {
-          "id": "workshop-day-1430",
-          "time": "14:30–17:30",
           "start": "2026-10-14T14:30:00+02:00",
+          "end": "2026-10-14T17:30:00+02:00",
+          "time": "14:30–17:30",
           "entries": [
             {
-              "id": "bike-tour",
-              "start": "2026-10-14T14:30:00+02:00",
-              "end": "2026-10-14T17:30:00+02:00",
-              "time": "14:30–17:30",
-              "kind": "side-activity",
-              "filterType": "side-activity",
+              "type": "side-activity",
               "track": "side-activity",
-              "trackLabel": "Side activity",
-              "layout": "side",
-              "activity": "bike-tour"
+              "ref": "bike-tour"
             }
           ]
         },
         {
-          "id": "workshop-day-1830",
-          "time": "18:30–20:00",
           "start": "2026-10-14T18:30:00+02:00",
+          "end": "2026-10-14T20:00:00+02:00",
+          "time": "18:30–20:00",
           "entries": [
             {
-              "id": "boat-tour",
-              "start": "2026-10-14T18:30:00+02:00",
-              "end": "2026-10-14T20:00:00+02:00",
-              "time": "18:30–20:00",
-              "kind": "side-activity",
-              "filterType": "side-activity",
+              "type": "side-activity",
               "track": "side-activity",
-              "trackLabel": "Side activity",
-              "layout": "side",
-              "activity": "boat-tour"
+              "ref": "boat-tour"
             },
             {
-              "id": "wine-tasting",
-              "start": "2026-10-14T18:30:00+02:00",
-              "end": "2026-10-14T20:00:00+02:00",
-              "time": "18:30–20:00",
-              "kind": "side-activity",
-              "filterType": "side-activity",
+              "type": "side-activity",
               "track": "side-activity",
-              "trackLabel": "Side activity",
-              "layout": "side",
-              "activity": "wine-tasting"
+              "ref": "wine-tasting"
             }
           ]
         }
@@ -116,345 +81,216 @@
       "displayDate": "October 15, 2026",
       "theme": "1",
       "tracks": [
-        { "id": "main-stage", "label": "Main Stage" },
-        { "id": "side-stage", "label": "Side Track" }
+        {
+          "id": "main-stage",
+          "label": "Main Stage"
+        },
+        {
+          "id": "side-stage",
+          "label": "Side Track"
+        }
       ],
       "slots": [
         {
-          "id": "day1-0900",
-          "time": "09:00–10:00",
           "start": "2026-10-15T09:00:00+02:00",
+          "end": "2026-10-15T10:00:00+02:00",
+          "time": "09:00–10:00",
           "entries": [
             {
-              "id": "day1-doors-open",
-              "start": "2026-10-15T09:00:00+02:00",
-              "end": "2026-10-15T10:00:00+02:00",
-              "time": "09:00–10:00",
-              "title": "Doors open",
-              "kind": "service",
-              "filterType": "service",
+              "type": "service",
               "track": "all-stages",
-              "trackLabel": "All stages",
-              "layout": "full"
+              "title": "Doors open"
             }
           ]
         },
         {
-          "id": "day1-1000",
-          "time": "10:00–10:45",
           "start": "2026-10-15T10:00:00+02:00",
+          "end": "2026-10-15T10:45:00+02:00",
+          "time": "10:00–10:45",
           "entries": [
             {
-              "id": "move-your-problems",
-              "start": "2026-10-15T10:00:00+02:00",
-              "end": "2026-10-15T10:45:00+02:00",
-              "time": "10:00–10:45",
-              "kind": "talk",
-              "filterType": "main-stage-talk",
+              "type": "talk",
               "track": "main-stage",
-              "trackLabel": "Main Stage",
-              "layout": "full",
-              "talk": "move-your-problems"
+              "ref": "move-your-problems",
+              "fullWidth": true
             }
           ]
         },
         {
-          "id": "day1-1100",
-          "time": "11:00–11:30",
           "start": "2026-10-15T11:00:00+02:00",
+          "end": "2026-10-15T11:30:00+02:00",
+          "time": "11:00–11:30",
           "entries": [
             {
-              "id": "compiling-the-linux-kernel-with-gccrs",
-              "start": "2026-10-15T11:00:00+02:00",
-              "end": "2026-10-15T11:30:00+02:00",
-              "time": "11:00–11:30",
-              "kind": "talk",
-              "filterType": "main-stage-talk",
+              "type": "talk",
               "track": "main-stage",
-              "trackLabel": "Main Stage",
-              "layout": "main",
-              "talk": "compiling-the-linux-kernel-with-gccrs"
+              "ref": "compiling-the-linux-kernel-with-gccrs"
             },
             {
-              "id": "what-s-next-for-rust-s-type-system",
-              "start": "2026-10-15T11:00:00+02:00",
-              "end": "2026-10-15T11:30:00+02:00",
-              "time": "11:00–11:30",
-              "kind": "talk",
-              "filterType": "side-stage-talk",
+              "type": "talk",
               "track": "side-stage",
-              "trackLabel": "Side Track",
-              "layout": "side",
-              "talk": "what-s-next-for-rust-s-type-system"
+              "ref": "what-s-next-for-rust-s-type-system"
             }
           ]
         },
         {
-          "id": "day1-1145",
-          "time": "11:45–12:15",
           "start": "2026-10-15T11:45:00+02:00",
+          "end": "2026-10-15T12:15:00+02:00",
+          "time": "11:45–12:15",
           "entries": [
             {
-              "id": "shipping-temporal-how-the-rust-ecosystem-built-chrome-s-newest-web-api",
-              "start": "2026-10-15T11:45:00+02:00",
-              "end": "2026-10-15T12:15:00+02:00",
-              "time": "11:45–12:15",
-              "kind": "talk",
-              "filterType": "main-stage-talk",
+              "type": "talk",
               "track": "main-stage",
-              "trackLabel": "Main Stage",
-              "layout": "main",
-              "talk": "shipping-temporal-how-the-rust-ecosystem-built-chrome-s-newest-web-api"
+              "ref": "shipping-temporal-how-the-rust-ecosystem-built-chrome-s-newest-web-api"
             },
             {
-              "id": "optimizing-the-new-rust-trait-solver",
-              "start": "2026-10-15T11:45:00+02:00",
-              "end": "2026-10-15T12:15:00+02:00",
-              "time": "11:45–12:15",
-              "kind": "talk",
-              "filterType": "side-stage-talk",
+              "type": "talk",
               "track": "side-stage",
-              "trackLabel": "Side Track",
-              "layout": "side",
-              "talk": "optimizing-the-new-rust-trait-solver"
+              "ref": "optimizing-the-new-rust-trait-solver"
             }
           ]
         },
         {
-          "id": "day1-1215",
-          "time": "12:15–13:45",
           "start": "2026-10-15T12:15:00+02:00",
+          "end": "2026-10-15T13:45:00+02:00",
+          "time": "12:15–13:45",
           "entries": [
             {
-              "id": "day1-lunch-break",
-              "start": "2026-10-15T12:15:00+02:00",
-              "end": "2026-10-15T13:45:00+02:00",
-              "time": "12:15–13:45",
-              "title": "Lunch break",
-              "kind": "break",
-              "filterType": "service",
+              "type": "break",
               "track": "all-stages",
-              "trackLabel": "All stages",
-              "layout": "full"
+              "title": "Lunch break"
             }
           ]
         },
         {
-          "id": "day1-1345",
-          "time": "13:45–14:15",
           "start": "2026-10-15T13:45:00+02:00",
+          "end": "2026-10-15T14:15:00+02:00",
+          "time": "13:45–14:15",
           "entries": [
             {
-              "id": "tales-from-the-embedded-rust-frontier-bootstrapping-a-brand-new-ecosystem",
-              "start": "2026-10-15T13:45:00+02:00",
-              "end": "2026-10-15T14:15:00+02:00",
-              "time": "13:45–14:15",
-              "kind": "talk",
-              "filterType": "main-stage-talk",
+              "type": "talk",
               "track": "main-stage",
-              "trackLabel": "Main Stage",
-              "layout": "main",
-              "talk": "tales-from-the-embedded-rust-frontier-bootstrapping-a-brand-new-ecosystem"
+              "ref": "tales-from-the-embedded-rust-frontier-bootstrapping-a-brand-new-ecosystem"
             },
             {
-              "id": "building-a-query-system",
-              "start": "2026-10-15T13:45:00+02:00",
-              "end": "2026-10-15T14:15:00+02:00",
-              "time": "13:45–14:15",
-              "kind": "talk",
-              "filterType": "side-stage-talk",
+              "type": "talk",
               "track": "side-stage",
-              "trackLabel": "Side Track",
-              "layout": "side",
-              "talk": "building-a-query-system"
+              "ref": "building-a-query-system"
             }
           ]
         },
         {
-          "id": "day1-1430",
-          "time": "14:30–15:00",
           "start": "2026-10-15T14:30:00+02:00",
+          "end": "2026-10-15T15:00:00+02:00",
+          "time": "14:30–15:00",
           "entries": [
             {
-              "id": "from-hardware-to-human-interface-building-hid-devices-in-rust",
-              "start": "2026-10-15T14:30:00+02:00",
-              "end": "2026-10-15T15:00:00+02:00",
-              "time": "14:30–15:00",
-              "kind": "talk",
-              "filterType": "main-stage-talk",
+              "type": "talk",
               "track": "main-stage",
-              "trackLabel": "Main Stage",
-              "layout": "main",
-              "talk": "from-hardware-to-human-interface-building-hid-devices-in-rust"
+              "ref": "from-hardware-to-human-interface-building-hid-devices-in-rust"
             },
             {
-              "id": "rebuilding-the-tower-of-babel-write-your-own-language-server-with-tree-sitter",
-              "start": "2026-10-15T14:30:00+02:00",
-              "end": "2026-10-15T15:00:00+02:00",
-              "time": "14:30–15:00",
-              "kind": "talk",
-              "filterType": "side-stage-talk",
+              "type": "talk",
               "track": "side-stage",
-              "trackLabel": "Side Track",
-              "layout": "side",
-              "talk": "rebuilding-the-tower-of-babel-write-your-own-language-server-with-tree-sitter"
+              "ref": "rebuilding-the-tower-of-babel-write-your-own-language-server-with-tree-sitter"
             }
           ]
         },
         {
-          "id": "day1-1515",
-          "time": "15:15–15:45",
           "start": "2026-10-15T15:15:00+02:00",
+          "end": "2026-10-15T15:45:00+02:00",
+          "time": "15:15–15:45",
           "entries": [
             {
-              "id": "running-safely-with-scissors-lock-free-concurrency-for-maximum-throughput",
-              "start": "2026-10-15T15:15:00+02:00",
-              "end": "2026-10-15T15:45:00+02:00",
-              "time": "15:15–15:45",
-              "kind": "talk",
-              "filterType": "main-stage-talk",
+              "type": "talk",
               "track": "main-stage",
-              "trackLabel": "Main Stage",
-              "layout": "main",
-              "talk": "running-safely-with-scissors-lock-free-concurrency-for-maximum-throughput"
+              "ref": "running-safely-with-scissors-lock-free-concurrency-for-maximum-throughput"
             },
             {
-              "id": "lessons-from-building-a-background-task-processing-library",
-              "start": "2026-10-15T15:15:00+02:00",
-              "end": "2026-10-15T15:45:00+02:00",
-              "time": "15:15–15:45",
-              "kind": "talk",
-              "filterType": "side-stage-talk",
+              "type": "talk",
               "track": "side-stage",
-              "trackLabel": "Side Track",
-              "layout": "side",
-              "talk": "lessons-from-building-a-background-task-processing-library"
+              "ref": "lessons-from-building-a-background-task-processing-library"
             }
           ]
         },
         {
-          "id": "day1-1545",
-          "time": "15:45–16:15",
           "start": "2026-10-15T15:45:00+02:00",
+          "end": "2026-10-15T16:15:00+02:00",
+          "time": "15:45–16:15",
           "entries": [
             {
-              "id": "day1-coffee-break",
-              "start": "2026-10-15T15:45:00+02:00",
-              "end": "2026-10-15T16:15:00+02:00",
-              "time": "15:45–16:15",
-              "title": "Coffee break",
-              "kind": "break",
-              "filterType": "service",
+              "type": "break",
               "track": "all-stages",
-              "trackLabel": "All stages",
-              "layout": "full"
+              "title": "Coffee break"
             }
           ]
         },
         {
-          "id": "day1-1615",
-          "time": "16:15–16:45",
           "start": "2026-10-15T16:15:00+02:00",
+          "end": "2026-10-15T16:45:00+02:00",
+          "time": "16:15–16:45",
           "entries": [
             {
-              "id": "game-show",
-              "start": "2026-10-15T16:15:00+02:00",
-              "end": "2026-10-15T16:45:00+02:00",
-              "time": "16:15–16:45",
-              "kind": "talk",
-              "filterType": "main-stage-talk",
+              "type": "talk",
               "track": "main-stage",
-              "trackLabel": "Main Stage",
-              "layout": "full",
-              "talk": "game-show"
+              "ref": "game-show",
+              "fullWidth": true
             }
           ]
         },
         {
-          "id": "day1-1700",
-          "time": "17:00–17:30",
           "start": "2026-10-15T17:00:00+02:00",
+          "end": "2026-10-15T17:30:00+02:00",
+          "time": "17:00–17:30",
           "entries": [
             {
-              "id": "day1-main-tba",
-              "start": "2026-10-15T17:00:00+02:00",
-              "end": "2026-10-15T17:30:00+02:00",
-              "time": "17:00–17:30",
-              "title": "TBA",
-              "kind": "talk",
-              "filterType": "main-stage-talk",
+              "type": "talk",
               "track": "main-stage",
-              "trackLabel": "Main Stage",
-              "layout": "main"
+              "title": "TBA"
             },
             {
-              "id": "inside-cloud-hypervisor-from-kvm-to-a-running-vm",
-              "start": "2026-10-15T17:00:00+02:00",
-              "end": "2026-10-15T17:30:00+02:00",
-              "time": "17:00–17:30",
-              "kind": "talk",
-              "filterType": "side-stage-talk",
+              "type": "talk",
               "track": "side-stage",
-              "trackLabel": "Side Track",
-              "layout": "side",
-              "talk": "inside-cloud-hypervisor-from-kvm-to-a-running-vm"
+              "ref": "inside-cloud-hypervisor-from-kvm-to-a-running-vm"
             }
           ]
         },
         {
-          "id": "day1-1745",
-          "time": "17:45–18:30",
           "start": "2026-10-15T17:45:00+02:00",
+          "end": "2026-10-15T18:30:00+02:00",
+          "time": "17:45–18:30",
           "entries": [
             {
-              "id": "image-codecs-rustification-in-chromium",
-              "start": "2026-10-15T17:45:00+02:00",
-              "end": "2026-10-15T18:30:00+02:00",
-              "time": "17:45–18:30",
-              "kind": "talk",
-              "filterType": "main-stage-talk",
+              "type": "talk",
               "track": "main-stage",
-              "trackLabel": "Main Stage",
-              "layout": "full",
-              "talk": "image-codecs-rustification-in-chromium"
+              "ref": "image-codecs-rustification-in-chromium",
+              "fullWidth": true
             }
           ]
         },
         {
-          "id": "day1-2000",
-          "time": "20:00",
           "start": "2026-10-15T20:00:00+02:00",
+          "end": "2026-10-15T21:00:00+02:00",
+          "time": "20:00",
           "entries": [
             {
-              "id": "group-dinner",
-              "start": "2026-10-15T20:00:00+02:00",
-              "end": "2026-10-15T21:00:00+02:00",
-              "time": "20:00",
-              "kind": "side-activity",
-              "filterType": "side-activity",
+              "type": "side-activity",
               "track": "side-activity",
-              "trackLabel": "Side activity",
-              "layout": "full",
-              "activity": "group-dinner"
+              "ref": "group-dinner",
+              "fullWidth": true
             }
           ]
         },
         {
-          "id": "day1-2100",
-          "time": "21:00–23:00",
           "start": "2026-10-15T21:00:00+02:00",
+          "end": "2026-10-15T23:00:00+02:00",
+          "time": "21:00–23:00",
           "entries": [
             {
-              "id": "karaoke",
-              "start": "2026-10-15T21:00:00+02:00",
-              "end": "2026-10-15T23:00:00+02:00",
-              "time": "21:00–23:00",
-              "kind": "side-activity",
-              "filterType": "side-activity",
+              "type": "side-activity",
               "track": "side-activity",
-              "trackLabel": "Side activity",
-              "layout": "full",
-              "activity": "karaoke"
+              "ref": "karaoke",
+              "fullWidth": true
             }
           ]
         }
@@ -468,322 +304,198 @@
       "displayDate": "October 16, 2026",
       "theme": "2",
       "tracks": [
-        { "id": "main-stage", "label": "Main Stage" },
-        { "id": "side-stage", "label": "Side Track" }
+        {
+          "id": "main-stage",
+          "label": "Main Stage"
+        },
+        {
+          "id": "side-stage",
+          "label": "Side Track"
+        }
       ],
       "slots": [
         {
-          "id": "day2-1000",
-          "time": "10:00–10:45",
           "start": "2026-10-16T10:00:00+02:00",
+          "end": "2026-10-16T10:45:00+02:00",
+          "time": "10:00–10:45",
           "entries": [
             {
-              "id": "rust-s-influence-on-c-and-python-shaping-the-future-of-three-communities",
-              "start": "2026-10-16T10:00:00+02:00",
-              "end": "2026-10-16T10:45:00+02:00",
-              "time": "10:00–10:45",
-              "kind": "talk",
-              "filterType": "main-stage-talk",
+              "type": "talk",
               "track": "main-stage",
-              "trackLabel": "Main Stage",
-              "layout": "full",
-              "talk": "rust-s-influence-on-c-and-python-shaping-the-future-of-three-communities"
+              "ref": "rust-s-influence-on-c-and-python-shaping-the-future-of-three-communities",
+              "fullWidth": true
             }
           ]
         },
         {
-          "id": "day2-1100",
-          "time": "11:00–11:30",
           "start": "2026-10-16T11:00:00+02:00",
+          "end": "2026-10-16T11:30:00+02:00",
+          "time": "11:00–11:30",
           "entries": [
             {
-              "id": "blastbeat-when-a-decade-of-c-meets-rust-and-io-uring",
-              "start": "2026-10-16T11:00:00+02:00",
-              "end": "2026-10-16T11:30:00+02:00",
-              "time": "11:00–11:30",
-              "kind": "talk",
-              "filterType": "main-stage-talk",
+              "type": "talk",
               "track": "main-stage",
-              "trackLabel": "Main Stage",
-              "layout": "main",
-              "talk": "blastbeat-when-a-decade-of-c-meets-rust-and-io-uring"
+              "ref": "blastbeat-when-a-decade-of-c-meets-rust-and-io-uring"
             },
             {
-              "id": "designing-state-machines-for-streaming-proxies-in-rust",
-              "start": "2026-10-16T11:00:00+02:00",
-              "end": "2026-10-16T11:30:00+02:00",
-              "time": "11:00–11:30",
-              "kind": "talk",
-              "filterType": "side-stage-talk",
+              "type": "talk",
               "track": "side-stage",
-              "trackLabel": "Side Track",
-              "layout": "side",
-              "talk": "designing-state-machines-for-streaming-proxies-in-rust"
+              "ref": "designing-state-machines-for-streaming-proxies-in-rust"
             }
           ]
         },
         {
-          "id": "day2-1145",
-          "time": "11:45–12:15",
           "start": "2026-10-16T11:45:00+02:00",
+          "end": "2026-10-16T12:15:00+02:00",
+          "time": "11:45–12:15",
           "entries": [
             {
-              "id": "qt-bridges-bringing-a-mature-c-ui-framework-to-rust",
-              "start": "2026-10-16T11:45:00+02:00",
-              "end": "2026-10-16T12:15:00+02:00",
-              "time": "11:45–12:15",
-              "kind": "talk",
-              "filterType": "main-stage-talk",
+              "type": "talk",
               "track": "main-stage",
-              "trackLabel": "Main Stage",
-              "layout": "main",
-              "talk": "qt-bridges-bringing-a-mature-c-ui-framework-to-rust"
+              "ref": "qt-bridges-bringing-a-mature-c-ui-framework-to-rust"
             },
             {
-              "id": "supply-chain-attacks-and-how-to-protect-ourselves",
-              "start": "2026-10-16T11:45:00+02:00",
-              "end": "2026-10-16T12:15:00+02:00",
-              "time": "11:45–12:15",
-              "kind": "talk",
-              "filterType": "side-stage-talk",
+              "type": "talk",
               "track": "side-stage",
-              "trackLabel": "Side Track",
-              "layout": "side",
-              "talk": "supply-chain-attacks-and-how-to-protect-ourselves"
+              "ref": "supply-chain-attacks-and-how-to-protect-ourselves"
             }
           ]
         },
         {
-          "id": "day2-1215",
-          "time": "12:15–13:45",
           "start": "2026-10-16T12:15:00+02:00",
+          "end": "2026-10-16T13:45:00+02:00",
+          "time": "12:15–13:45",
           "entries": [
             {
-              "id": "day2-lunch-break",
-              "start": "2026-10-16T12:15:00+02:00",
-              "end": "2026-10-16T13:45:00+02:00",
-              "time": "12:15–13:45",
-              "title": "Lunch break",
-              "kind": "break",
-              "filterType": "service",
+              "type": "break",
               "track": "all-stages",
-              "trackLabel": "All stages",
-              "layout": "full"
+              "title": "Lunch break"
             }
           ]
         },
         {
-          "id": "day2-1345",
-          "time": "13:45–14:15",
           "start": "2026-10-16T13:45:00+02:00",
+          "end": "2026-10-16T14:15:00+02:00",
+          "time": "13:45–14:15",
           "entries": [
             {
-              "id": "how-i-built-a-file-search-that-is-50x-faster-than-ripgrep-and-made-it-into-opencode",
-              "start": "2026-10-16T13:45:00+02:00",
-              "end": "2026-10-16T14:15:00+02:00",
-              "time": "13:45–14:15",
-              "kind": "talk",
-              "filterType": "main-stage-talk",
+              "type": "talk",
               "track": "main-stage",
-              "trackLabel": "Main Stage",
-              "layout": "main",
-              "talk": "how-i-built-a-file-search-that-is-50x-faster-than-ripgrep-and-made-it-into-opencode"
+              "ref": "how-i-built-a-file-search-that-is-50x-faster-than-ripgrep-and-made-it-into-opencode"
             },
             {
-              "id": "encodings-all-the-way-down-building-vortex-an-extensible-file-format-in-rust",
-              "start": "2026-10-16T13:45:00+02:00",
-              "end": "2026-10-16T14:15:00+02:00",
-              "time": "13:45–14:15",
-              "kind": "talk",
-              "filterType": "side-stage-talk",
+              "type": "talk",
               "track": "side-stage",
-              "trackLabel": "Side Track",
-              "layout": "side",
-              "talk": "encodings-all-the-way-down-building-vortex-an-extensible-file-format-in-rust"
+              "ref": "encodings-all-the-way-down-building-vortex-an-extensible-file-format-in-rust"
             }
           ]
         },
         {
-          "id": "day2-1430",
-          "time": "14:30–15:00",
           "start": "2026-10-16T14:30:00+02:00",
+          "end": "2026-10-16T15:00:00+02:00",
+          "time": "14:30–15:00",
           "entries": [
             {
-              "id": "atomic-design-patterns-in-rust-from-orderings-to-code",
-              "start": "2026-10-16T14:30:00+02:00",
-              "end": "2026-10-16T15:00:00+02:00",
-              "time": "14:30–15:00",
-              "kind": "talk",
-              "filterType": "main-stage-talk",
+              "type": "talk",
               "track": "main-stage",
-              "trackLabel": "Main Stage",
-              "layout": "main",
-              "talk": "atomic-design-patterns-in-rust-from-orderings-to-code"
+              "ref": "atomic-design-patterns-in-rust-from-orderings-to-code"
             },
             {
-              "id": "moving-a-quantum-compiler-from-python-to-rust",
-              "start": "2026-10-16T14:30:00+02:00",
-              "end": "2026-10-16T15:00:00+02:00",
-              "time": "14:30–15:00",
-              "kind": "talk",
-              "filterType": "side-stage-talk",
+              "type": "talk",
               "track": "side-stage",
-              "trackLabel": "Side Track",
-              "layout": "side",
-              "talk": "moving-a-quantum-compiler-from-python-to-rust"
+              "ref": "moving-a-quantum-compiler-from-python-to-rust"
             }
           ]
         },
         {
-          "id": "day2-1515",
-          "time": "15:15–15:45",
           "start": "2026-10-16T15:15:00+02:00",
+          "end": "2026-10-16T15:45:00+02:00",
+          "time": "15:15–15:45",
           "entries": [
             {
-              "id": "building-a-high-performance-thread-per-core-zero-copy-opentelemetry-engine-in-rust",
-              "start": "2026-10-16T15:15:00+02:00",
-              "end": "2026-10-16T15:45:00+02:00",
-              "time": "15:15–15:45",
-              "kind": "talk",
-              "filterType": "main-stage-talk",
+              "type": "talk",
               "track": "main-stage",
-              "trackLabel": "Main Stage",
-              "layout": "main",
-              "talk": "building-a-high-performance-thread-per-core-zero-copy-opentelemetry-engine-in-rust"
+              "ref": "building-a-high-performance-thread-per-core-zero-copy-opentelemetry-engine-in-rust"
             },
             {
-              "id": "day2-side-tba",
-              "start": "2026-10-16T15:15:00+02:00",
-              "end": "2026-10-16T15:45:00+02:00",
-              "time": "15:15–15:45",
-              "title": "TBA",
-              "kind": "talk",
-              "filterType": "side-stage-talk",
+              "type": "talk",
               "track": "side-stage",
-              "trackLabel": "Side Track",
-              "layout": "side"
+              "title": "TBA"
             }
           ]
         },
         {
-          "id": "day2-1545",
-          "time": "15:45–16:15",
           "start": "2026-10-16T15:45:00+02:00",
+          "end": "2026-10-16T16:15:00+02:00",
+          "time": "15:45–16:15",
           "entries": [
             {
-              "id": "day2-coffee-break",
-              "start": "2026-10-16T15:45:00+02:00",
-              "end": "2026-10-16T16:15:00+02:00",
-              "time": "15:45–16:15",
-              "title": "Coffee break",
-              "kind": "break",
-              "filterType": "service",
+              "type": "break",
               "track": "all-stages",
-              "trackLabel": "All stages",
-              "layout": "full"
+              "title": "Coffee break"
             }
           ]
         },
         {
-          "id": "day2-1615",
-          "time": "16:15–16:45",
           "start": "2026-10-16T16:15:00+02:00",
+          "end": "2026-10-16T16:45:00+02:00",
+          "time": "16:15–16:45",
           "entries": [
             {
-              "id": "from-deref-into-borrow-a-primer-on-standard-library-traits",
-              "start": "2026-10-16T16:15:00+02:00",
-              "end": "2026-10-16T16:45:00+02:00",
-              "time": "16:15–16:45",
-              "kind": "talk",
-              "filterType": "main-stage-talk",
+              "type": "talk",
               "track": "main-stage",
-              "trackLabel": "Main Stage",
-              "layout": "main",
-              "talk": "from-deref-into-borrow-a-primer-on-standard-library-traits"
+              "ref": "from-deref-into-borrow-a-primer-on-standard-library-traits"
             },
             {
-              "id": "day2-main-sponsor-slot",
-              "start": "2026-10-16T16:15:00+02:00",
-              "end": "2026-10-16T16:45:00+02:00",
-              "time": "16:15–16:45",
-              "title": "Main sponsor slot",
-              "kind": "service",
-              "filterType": "service",
+              "type": "service",
               "track": "side-stage",
-              "trackLabel": "Side Track",
-              "layout": "side"
+              "title": "Main sponsor slot"
             }
           ]
         },
         {
-          "id": "day2-1700",
-          "time": "17:00–17:30",
           "start": "2026-10-16T17:00:00+02:00",
+          "end": "2026-10-16T17:30:00+02:00",
+          "time": "17:00–17:30",
           "entries": [
             {
-              "id": "day2-main-tba",
-              "start": "2026-10-16T17:00:00+02:00",
-              "end": "2026-10-16T17:30:00+02:00",
-              "time": "17:00–17:30",
-              "title": "TBA",
-              "kind": "talk",
-              "filterType": "main-stage-talk",
+              "type": "talk",
               "track": "main-stage",
-              "trackLabel": "Main Stage",
-              "layout": "main"
+              "title": "TBA"
             },
             {
-              "id": "beyond-flamegraphs-precise-rust-profiling-with-hotpath-rs",
-              "start": "2026-10-16T17:00:00+02:00",
-              "end": "2026-10-16T17:30:00+02:00",
-              "time": "17:00–17:30",
-              "kind": "talk",
-              "filterType": "side-stage-talk",
+              "type": "talk",
               "track": "side-stage",
-              "trackLabel": "Side Track",
-              "layout": "side",
-              "talk": "beyond-flamegraphs-precise-rust-profiling-with-hotpath-rs"
+              "ref": "beyond-flamegraphs-precise-rust-profiling-with-hotpath-rs"
             }
           ]
         },
         {
-          "id": "day2-1745",
-          "time": "17:45–18:30",
           "start": "2026-10-16T17:45:00+02:00",
+          "end": "2026-10-16T18:30:00+02:00",
+          "time": "17:45–18:30",
           "entries": [
             {
-              "id": "beyond-cargo-build",
-              "start": "2026-10-16T17:45:00+02:00",
-              "end": "2026-10-16T18:30:00+02:00",
-              "time": "17:45–18:30",
-              "kind": "talk",
-              "filterType": "main-stage-talk",
+              "type": "talk",
               "track": "main-stage",
-              "trackLabel": "Main Stage",
-              "layout": "full",
-              "talk": "beyond-cargo-build"
+              "ref": "beyond-cargo-build",
+              "fullWidth": true
             }
           ]
         },
         {
-          "id": "day2-1800",
-          "time": "18:00–22:00",
           "start": "2026-10-16T18:00:00+02:00",
+          "end": "2026-10-16T22:00:00+02:00",
+          "time": "18:00–22:00",
           "entries": [
             {
-              "id": "closing-party",
-              "start": "2026-10-16T18:00:00+02:00",
-              "end": "2026-10-16T22:00:00+02:00",
-              "time": "18:00–22:00",
-              "title": "Closing Party",
-              "kind": "side-activity",
-              "filterType": "side-activity",
+              "type": "side-activity",
               "track": "side-activity",
-              "trackLabel": "Side activity",
-              "layout": "full",
+              "fullWidth": true,
+              "title": "Closing Party",
+              "description": "The conference ends with a closing party at Bikini Barcelona.",
               "image": "/images/activities/party.webp",
               "imageAlt": "Disco ball",
-              "description": "The conference ends with a closing party at Bikini Barcelona.",
               "url": "https://maps.app.goo.gl/rfuhDZ3M6pxXWYP58"
             }
           ]
@@ -797,43 +509,34 @@
       "date": "2026-10-17",
       "displayDate": "October 17, 2026",
       "theme": "3",
-      "tracks": [{ "id": "side-activity", "label": "Side activities" }],
+      "tracks": [
+        {
+          "id": "side-activity",
+          "label": "Side activities"
+        }
+      ],
       "slots": [
         {
-          "id": "post-day-1000",
-          "time": "10:00–16:00",
           "start": "2026-10-17T10:00:00+02:00",
+          "end": "2026-10-17T16:00:00+02:00",
+          "time": "10:00–16:00",
           "entries": [
             {
-              "id": "impl-day",
-              "start": "2026-10-17T10:00:00+02:00",
-              "end": "2026-10-17T16:00:00+02:00",
-              "time": "10:00–16:00",
-              "kind": "side-activity",
-              "filterType": "side-activity",
+              "type": "side-activity",
               "track": "side-activity",
-              "trackLabel": "Side activity",
-              "layout": "full",
-              "activity": "impl-day"
+              "ref": "impl-day"
             }
           ]
         },
         {
-          "id": "post-day-1300",
-          "time": "13:00–15:00",
           "start": "2026-10-17T13:00:00+02:00",
+          "end": "2026-10-17T15:00:00+02:00",
+          "time": "13:00–15:00",
           "entries": [
             {
-              "id": "museum-tour",
-              "start": "2026-10-17T13:00:00+02:00",
-              "end": "2026-10-17T15:00:00+02:00",
-              "time": "13:00–15:00",
-              "kind": "side-activity",
-              "filterType": "side-activity",
+              "type": "side-activity",
               "track": "side-activity",
-              "trackLabel": "Side activity",
-              "layout": "full",
-              "activity": "museum-tour"
+              "ref": "museum-tour"
             }
           ]
         }
