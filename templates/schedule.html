@@ -9,13 +9,11 @@
       <div class="schedule__common-background-1">
         <section class="schedule-hero">
           <div class="container p-1">
-            <h1 class="schedule-hero__title mb-7" data-schedule-hero-title>This is your EuroRust experience</h1>
-            <div class="schedule-live__actions schedule-live__actions--enter" hidden>
-              <button type="button" data-live-toggle data-live-toggle-mode="enter" hidden>Show live schedule</button>
-            </div>
+            <h1 class="schedule-hero__title mb-7">This is your EuroRust experience</h1>
             <nav class="schedule-hero__nav" aria-label="Schedule days">
               <p><strong>Jump to:</strong></p>
               <ul>
+                <li data-schedule-now-item hidden><a href="#main" data-schedule-now>Now</a></li>
                 {% for day in schedule.days %}
                   <li><a href="#{{ day.id }}">{{ day.navLabel }}</a></li>
                 {% endfor %}
@@ -67,12 +65,6 @@
                   <button type="reset">Clear filters</button>
                 </div>
               </form>
-              <div class="schedule-live" data-live-banner hidden>
-                <p data-live-message role="status" aria-live="polite" aria-atomic="true"></p>
-              </div>
-              <div class="schedule-live__actions" hidden>
-                <button type="button" data-live-toggle data-live-toggle-mode="exit" hidden>Show full schedule</button>
-              </div>
               <p class="schedule-tools__empty" data-no-results hidden>No events match these filters.</p>
             </div>
           </div>

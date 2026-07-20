@@ -1,6 +1,6 @@
-const LIVE_REFRESH_INTERVAL = 30_000;
+const CURRENT_TIME_REFRESH_INTERVAL = 30_000;
 
-export function normalizeSearchText(value) {
+function normalizeSearchText(value) {
   return value
     .normalize('NFKD')
     .replace(/[\u0300-\u036f]/g, '')
@@ -8,7 +8,19 @@ export function normalizeSearchText(value) {
     .trim();
 }
 
-export function getEntryStatus(now, start, end) {
+function getSearchableCardText(card) {
+  if (!card) return '';
+
+  return [
+    ...card.querySelectorAll(
+      '.activity-card__title, .activity-card__speaker, .activity-card__description, .sponsored-by'
+    ),
+  ]
+    .map((element) => element.textContent)
+    .join(' ');
+}
+
+function getEntryStatus(now, start, end) {
   if ([now, start].some((date) => Number.isNaN(date.getTime()))) return 'invalid';
   if (end && Number.isNaN(end.getTime())) return 'invalid';
   if (now < start) return 'upcoming';
@@ -16,7 +28,7 @@ export function getEntryStatus(now, start, end) {
   return 'live';
 }
 
-export function dateInTimeZone(date, timeZone) {
+function dateInTimeZone(date, timeZone) {
   const parts = new Intl.DateTimeFormat('en-CA', {
     timeZone,
     year: 'numeric',
@@ -27,33 +39,26 @@ export function dateInTimeZone(date, timeZone) {
   return `${values.year}-${values.month}-${values.day}`;
 }
 
-export function getLiveDayDate(now, timeZone, scheduleDates) {
-  const today = dateInTimeZone(now, timeZone);
-  return scheduleDates.includes(today) ? today : null;
-}
-
-export function readScheduleUrlState(params) {
+function readScheduleUrlState(params) {
   return {
     query: params.get('q') ?? '',
     date: params.get('date') ?? '',
     types: new Set(params.getAll('type')),
-    view: params.get('view') ?? '',
   };
 }
 
-export function buildScheduleUrl(currentUrl, { query = '', date = '', types = new Set(), view = '' } = {}) {
+function buildScheduleUrl(currentUrl, { query = '', date = '', types = new Set() } = {}) {
   const url = new URL(currentUrl);
   url.search = '';
 
   if (normalizeSearchText(query)) url.searchParams.set('q', query.trim());
   if (date) url.searchParams.set('date', date);
   types.forEach((type) => url.searchParams.append('type', type));
-  if (view) url.searchParams.set('view', view);
 
   return url;
 }
 
-export function matchesScheduleFilters(entry, state) {
+function matchesScheduleFilters(entry, state) {
   const query = normalizeSearchText(state.query ?? '');
   const searchText = normalizeSearchText(entry.searchText ?? '');
   const types = state.types ?? new Set();
@@ -79,14 +84,9 @@ class ScheduleController {
     this.entries = [...root.querySelectorAll('[data-schedule-entry]')];
     this.summary = root.querySelector('[data-result-summary]');
     this.noResults = root.querySelector('[data-no-results]');
-    this.liveBanner = root.querySelector('[data-live-banner]');
-    this.liveMessage = root.querySelector('[data-live-message]');
-    this.liveToggles = [...root.querySelectorAll('[data-live-toggle]')];
-    this.heroTitle = root.querySelector('[data-schedule-hero-title]');
-    this.defaultHeroTitle = this.heroTitle?.textContent.trim() ?? '';
-    this.liveMode = false;
-    this.liveDay = null;
-    this.hasScrolledToLiveEvent = false;
+    this.nowNavigationItem = root.querySelector('[data-schedule-now-item]');
+    this.nowLink = root.querySelector('[data-schedule-now]');
+    this.nowTarget = null;
   }
 
   init() {
@@ -97,7 +97,6 @@ class ScheduleController {
 
     const urlState = readScheduleUrlState(new URLSearchParams(window.location.search));
     this.restoreFilters(urlState);
-    this.refreshLiveAvailability(urlState.view);
 
     this.searchInput?.addEventListener('input', () => this.handleFilterChange());
     this.dateSelect?.addEventListener('change', () => this.handleFilterChange());
@@ -105,33 +104,24 @@ class ScheduleController {
     this.form.addEventListener('reset', (event) => {
       event.preventDefault();
       this.clearFilterControls();
-      this.liveMode = false;
       this.applyFilters();
     });
-    this.liveToggles.forEach((toggle) => {
-      toggle.addEventListener('click', () => {
-        this.liveMode = toggle.dataset.liveToggleMode === 'enter';
-        if (this.liveMode) this.clearFilterControls();
-        this.liveMode ? this.applyLiveView() : this.applyFilters();
-      });
+    this.nowLink?.addEventListener('click', (event) => {
+      event.preventDefault();
+      this.scrollToNow();
     });
     window.addEventListener('popstate', () => {
       const currentState = readScheduleUrlState(new URLSearchParams(window.location.search));
       this.restoreFilters(currentState);
-      this.refreshLiveAvailability(currentState.view);
-      this.liveMode ? this.applyLiveView() : this.applyFilters({ updateUrl: false });
+      this.applyFilters({ updateUrl: false });
     });
     document.addEventListener('visibilitychange', () => {
       if (!document.hidden) this.refreshClock();
     });
 
-    if (this.liveMode) {
-      this.applyLiveView();
-    } else {
-      this.applyFilters({ updateUrl: false });
-    }
+    this.applyFilters();
 
-    window.setInterval(() => this.refreshClock(), LIVE_REFRESH_INTERVAL);
+    window.setInterval(() => this.refreshClock(), CURRENT_TIME_REFRESH_INTERVAL);
   }
 
   observeNavbarHeight() {
@@ -208,7 +198,6 @@ class ScheduleController {
   }
 
   handleFilterChange() {
-    this.liveMode = false;
     this.applyFilters();
   }
 
@@ -220,24 +209,7 @@ class ScheduleController {
     });
   }
 
-  clearLivePresentation() {
-    this.entries.forEach((entry) => {
-      entry.classList.remove('is-live');
-      delete entry.dataset.liveStatus;
-      const status = entry.querySelector('[data-live-status]');
-      if (status) {
-        status.hidden = true;
-        status.textContent = '';
-      }
-    });
-    if (this.liveBanner) this.liveBanner.hidden = true;
-  }
-
   applyFilters({ updateUrl = true } = {}) {
-    this.root.classList.remove('is-live-view');
-    if (this.heroTitle) this.heroTitle.textContent = this.defaultHeroTitle;
-    this.hasScrolledToLiveEvent = false;
-    this.clearLivePresentation();
     const state = this.getFilterState();
     let visibleCount = 0;
 
@@ -246,7 +218,7 @@ class ScheduleController {
       const searchableCard = entry.querySelector('.activity-card');
       const visible = matchesScheduleFilters(
         {
-          searchText: searchableCard?.textContent ?? '',
+          searchText: getSearchableCardText(searchableCard),
           date: day?.dataset.date ?? '',
           type: entry.dataset.filterType ?? '',
         },
@@ -258,104 +230,71 @@ class ScheduleController {
     });
 
     this.updateContainers();
+    this.updateCurrentPresentation();
     this.updateSummary(visibleCount);
     this.updateClearButton(state);
-    this.updateLiveToggle();
     if (updateUrl) this.updateUrl();
   }
 
-  refreshLiveAvailability(requestedView) {
-    const liveDate = getLiveDayDate(
-      this.now(),
-      this.timeZone,
-      this.days.map((day) => day.dataset.date)
-    );
-    this.liveDay = this.days.find((day) => day.dataset.date === liveDate) ?? null;
-
-    if (!this.liveDay) {
-      this.liveMode = false;
-    } else if (requestedView === 'full') {
-      this.liveMode = false;
-    } else if (requestedView === 'live') {
-      this.liveMode = true;
-    } else {
-      const state = this.getFilterState();
-      this.liveMode = !state.query && !state.date && !state.types.size;
-    }
-
-    this.updateLiveToggle();
-  }
-
   refreshClock() {
-    const previousDay = this.liveDay;
-    this.refreshLiveAvailability(this.liveMode ? 'live' : 'full');
-
-    if (this.liveMode) {
-      this.applyLiveView();
-    } else if (previousDay !== this.liveDay) {
-      this.applyFilters({ updateUrl: false });
-    }
+    this.updateCurrentPresentation();
   }
 
-  applyLiveView() {
-    if (!this.liveDay) {
-      this.liveMode = false;
-      this.applyFilters();
-      return;
-    }
-
-    this.root.classList.add('is-live-view');
-    if (this.heroTitle) this.heroTitle.textContent = 'LIVE SCHEDULE';
-    this.clearLivePresentation();
+  updateCurrentPresentation() {
     const now = this.now();
-    let liveCount = 0;
-    let upcomingCount = 0;
+    const currentDate = dateInTimeZone(now, this.timeZone);
+    const currentDay = this.days.find((day) => day.dataset.date === currentDate) ?? null;
+    this.nowTarget = null;
+    let nextEntry = null;
     let nextStart = null;
 
     this.entries.forEach((entry) => {
-      const onLiveDay = entry.closest('[data-schedule-day]') === this.liveDay;
+      entry.classList.remove('is-live');
+      const onCurrentDay = entry.closest('[data-schedule-day]') === currentDay;
       const start = new Date(entry.dataset.start);
       const end = entry.dataset.end ? new Date(entry.dataset.end) : null;
-      const statusValue = onLiveDay ? getEntryStatus(now, start, end) : 'past';
-      const visible = onLiveDay && (statusValue === 'live' || statusValue === 'upcoming');
+      const statusValue = onCurrentDay ? getEntryStatus(now, start, end) : 'past';
       const status = entry.querySelector('[data-live-status]');
 
-      entry.hidden = !visible;
-      entry.dataset.liveStatus = statusValue;
-      entry.classList.toggle('is-live', statusValue === 'live');
+      if (status) {
+        status.hidden = true;
+        status.textContent = '';
+      }
 
-      if (visible) {
-        if (statusValue === 'live') {
-          liveCount += 1;
-          if (status) {
-            status.textContent = 'Happening now';
-            status.hidden = false;
-          }
-        } else {
-          upcomingCount += 1;
-          if (!nextStart || start < nextStart) nextStart = start;
+      if (statusValue === 'live') {
+        entry.classList.add('is-live');
+        if (!this.nowTarget) this.nowTarget = entry;
+        if (status) {
+          status.textContent = 'Live';
+          status.hidden = false;
         }
+      } else if (statusValue === 'upcoming' && (!nextStart || start < nextStart)) {
+        nextEntry = entry;
+        nextStart = start;
       }
     });
 
-    this.updateContainers();
-    this.updateLiveMessage(liveCount, upcomingCount, nextStart);
-    this.updateLiveToggle();
-    this.updateUrl();
-    this.scrollToFirstLiveEvent();
+    this.nowTarget ??= nextEntry;
+    if (this.nowNavigationItem) this.nowNavigationItem.hidden = !this.nowTarget;
   }
 
-  scrollToFirstLiveEvent() {
-    if (this.hasScrolledToLiveEvent) return;
-    const firstLiveEvent = this.liveDay?.querySelector('[data-schedule-entry].is-live');
-    if (!firstLiveEvent) return;
+  scrollToNow() {
+    if (!this.nowTarget) return;
 
-    this.hasScrolledToLiveEvent = true;
+    if (this.nowTarget.hidden) {
+      this.clearFilterControls();
+      this.applyFilters();
+    }
+
+    const target = this.nowTarget;
+    const day = target?.closest('[data-schedule-day]');
+    if (!target || !day) return;
+
     window.requestAnimationFrame(() => {
-      const stickyHeader = this.liveDay?.querySelector('[data-sticky-header]');
+      const stickyHeader = day.querySelector('[data-sticky-header]');
       const stickyTop = stickyHeader ? Number.parseFloat(window.getComputedStyle(stickyHeader).top) || 0 : 0;
       const stickyHeight = stickyHeader?.offsetHeight ?? 0;
-      const targetTop = window.scrollY + firstLiveEvent.getBoundingClientRect().top - stickyTop - stickyHeight - 16;
+      const targetTop = window.scrollY + target.getBoundingClientRect().top - stickyTop - stickyHeight - 16;
       const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
 
       window.scrollTo({ top: Math.max(0, targetTop), behavior });
@@ -465,41 +404,12 @@ class ScheduleController {
     this.resetButton.disabled = !state.query && !state.date && state.types.size === 0;
   }
 
-  updateLiveMessage(liveCount, upcomingCount, nextStart) {
-    if (!this.liveBanner || !this.liveMessage) return;
-    this.liveBanner.hidden = false;
-
-    if (liveCount > 0) {
-      const liveLabel = liveCount === 1 ? 'event is' : 'events are';
-      const laterLabel = upcomingCount === 1 ? 'event' : 'events';
-      this.liveMessage.textContent = `${liveCount} ${liveLabel} happening now. ${upcomingCount} ${laterLabel} later today.`;
-    } else if (nextStart) {
-      const time = new Intl.DateTimeFormat('en-GB', {
-        timeZone: this.timeZone,
-        hour: '2-digit',
-        minute: '2-digit',
-      }).format(nextStart);
-      this.liveMessage.textContent = `Nothing is happening right now. The next event starts at ${time}.`;
-    } else {
-      this.liveMessage.textContent = "Today's schedule has ended.";
-    }
-  }
-
-  updateLiveToggle() {
-    this.liveToggles.forEach((toggle) => {
-      const isEnterToggle = toggle.dataset.liveToggleMode === 'enter';
-      toggle.hidden = !this.liveDay || isEnterToggle === this.liveMode;
-      toggle.closest('.schedule-live__actions').hidden = toggle.hidden;
-    });
-  }
-
   updateUrl() {
     const state = this.getFilterState();
     const url = buildScheduleUrl(window.location.href, {
       query: this.searchInput?.value ?? '',
       date: state.date,
       types: state.types,
-      view: this.liveDay ? (this.liveMode ? 'live' : 'full') : '',
     });
 
     window.history.replaceState({}, '', url);

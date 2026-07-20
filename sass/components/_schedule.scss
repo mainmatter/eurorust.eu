@@ -407,74 +407,11 @@
   }
 }
 
-.schedule.is-live-view {
-  .schedule-hero__nav,
-  .schedule-tools__inner > h2,
-  .schedule-filters,
-  .schedule-tools__summary {
-    display: none;
-  }
-
-  .schedule-tools__inner {
-    background: transparent;
-    border: 0;
-    border-radius: 0;
-    padding: 0;
-  }
-
-  .schedule-hero {
-    padding-bottom: 0.75rem;
-  }
-
-  .schedule-hero__title {
-    margin-bottom: 0;
-  }
-
-  .schedule-live {
-    text-align: center;
-
-    p {
-      color: var(--pink-100);
-      font-size: clamp(1.25rem, 2vw, 2rem);
-      line-height: 1.4;
-    }
-  }
-}
-
 .schedule-tools__summary,
 .schedule-tools__empty {
   color: var(--pink-100) !important;
   margin-top: 1.25rem;
   text-align: center;
-}
-
-.schedule-live {
-  p {
-    margin: 0;
-  }
-}
-
-.schedule-live__actions {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-
-  &--enter {
-    margin-top: -2rem;
-    margin-bottom: 2rem;
-  }
-
-  button {
-    @include btn__primary-pink;
-    appearance: none;
-    border: 0;
-    font-family: inherit;
-    z-index: 11;
-
-    @media screen and (max-width: 60rem) {
-      width: 100%;
-    }
-  }
 }
 
 .schedule__day-section {
@@ -654,10 +591,6 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-rows: repeat(var(--schedule-independent-row-count), auto);
-
-  .schedule__slot:not(:has([data-schedule-entry])) {
-    display: none;
-  }
 }
 
 .schedule__track-column {
@@ -840,18 +773,6 @@
   order: 0;
 }
 
-.activity-card__status {
-  order: 5;
-  align-self: center;
-  color: var(--blue-800) !important;
-  background: var(--orange-100);
-  border-radius: 999px;
-  font-weight: 700;
-  margin-top: 1rem;
-  padding: 0.25rem 0.75rem;
-  text-transform: uppercase;
-}
-
 @keyframes schedule-live-dot-pulse {
   0%,
   100% {
@@ -872,12 +793,16 @@
   display: inline-flex;
   gap: 0.5rem;
   align-items: center;
+  align-self: center;
   color: var(--orange-300) !important;
   background: var(--white);
   border: 2px solid var(--orange-300);
+  border-radius: 999px;
   font-size: 0.875rem;
   font-weight: 400;
   margin: 0 0 1rem;
+  padding: 0.25rem 0.75rem;
+  text-transform: none;
 
   &::before {
     content: "";
@@ -944,17 +869,12 @@
     border-left: 0;
   }
 
-  .schedule__slot-track,
-  .schedule__slot-track--main,
-  .schedule__slot-track--side {
+  .schedule__slot-track {
     grid-column: 1;
     border-left: 0;
   }
 
-  .schedule__event,
-  .schedule__event--main,
-  .schedule__event--side,
-  .schedule__event--full {
+  .schedule__event {
     grid-column: 1;
     border-left: 0;
     padding: 1.5rem 1rem;

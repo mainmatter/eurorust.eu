@@ -33,7 +33,7 @@
 {% elif entry.type == "workshop" and entry.ref %}
   {% set path = "workshops/" ~ entry.ref ~ ".md" %}
   {% set event = get_page(path = path) %}
-  <article class="activity-card activity-card__workshop">
+  <article class="activity-card">
     <a class="activity-card__link" href="{{ event.path }}">
       <div class="activity-card__content">
         <p class="activity-card__track">{{ track_label }}</p>
@@ -64,7 +64,7 @@
 {% elif entry.type == "side-activity" and entry.ref %}
   {% set path = "activities/" ~ entry.ref ~ ".md" %}
   {% set event = get_page(path = path) %}
-  <article class="activity-card activity-card__workshop">
+  <article class="activity-card">
     <a class="activity-card__link" href="{{ event.path }}">
       <div class="activity-card__content">
         <p class="activity-card__track">{{ track_label }}</p>
