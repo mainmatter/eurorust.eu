@@ -425,3 +425,7 @@ command = "vite build && zola build --base-url $DEPLOY_PRIME_URL"
   from = "/talks/znext-solver/"
   to = "/2025/talks/znext-solver/"
 
+[[redirects]]
+  from = "/talks/encodings-all-the-way-down-building-vortex-an-extensible-file-format-in-rust"
+  to = "/talks/vortex-one-format-for-any-shape/"
+

@@ -39,6 +39,11 @@
               "type": "workshop",
               "track": "workshop",
               "ref": "programming-a-line-follower-robot"
+            },
+            {
+              "type": "workshop",
+              "track": "workshop",
+              "ref": "hands-on-embedded-rust"
             }
           ]
         },
@@ -386,7 +391,7 @@
             {
               "type": "talk",
               "track": "side-stage",
-              "ref": "encodings-all-the-way-down-building-vortex-an-extensible-file-format-in-rust"
+              "ref": "vortex-one-format-for-any-shape"
             }
           ]
         },

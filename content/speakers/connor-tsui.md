@@ -8,5 +8,5 @@ title = "Speaker: Connor Tsui"
   image = "/images/talks/connor-tsui.webp"
   twitter = ""
   linkedin = "https://www.linkedin.com/in/connortsui/"
-  bio = "<p>Connor Tsui is a software engineer at Spiral and one of the core maintainers of Vortex, a next-generation, open-source columnar file format and toolkit designed for high-performance data processing. Connor graduated from Carnegie Mellon University in 2025 with a B.S. in Computer Science. While at CMU, he was one of the main creators of the student-taught \"Intro to Rust Lang StuCo\", and also enjoys contributing to the Rust standard library.</p>"
+  bio = "<p>Connor Tsui is a software engineer at Spiral and a core maintainer of Vortex. He graduated from Carnegie Mellon University, where he researched database systems with the CMU-DB group. While at CMU, he created and taught \"Intro to Rust Lang\", a student-led course. He enjoys contributing to open source, including the Rust standard library.</p>"
 +++
