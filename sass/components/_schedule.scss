@@ -27,23 +27,38 @@
 }
 
 .schedule__common-background-1 {
-  background: linear-gradient(var(--blue-500), color-mix(in srgb, var(--blue-300) 65%, var(--blue-500)));
+  --schedule-visible-end-color: color-mix(in srgb, var(--blue-300) 65%, var(--blue-500));
+
+  background: linear-gradient(var(--blue-500), var(--schedule-visible-end-color));
 }
 
 .schedule__day-section--workshop-day {
-  background: linear-gradient(color-mix(in srgb, var(--blue-300) 65%, var(--blue-500)), var(--blue-300));
+  --schedule-section-start-color: color-mix(in srgb, var(--blue-300) 65%, var(--blue-500));
+  --schedule-section-end-color: var(--blue-300);
 }
 
 .schedule__day-section--day1 {
+  --schedule-section-start-color: var(--blue-300);
+  --schedule-section-end-color: var(--blue-300);
+
   background: transparent;
 }
 
 .schedule__day-section--day2 {
-  background: linear-gradient(var(--blue-300), var(--blue-500));
+  --schedule-section-start-color: var(--blue-300);
+  --schedule-section-end-color: var(--blue-500);
 }
 
 .schedule__day-section--post-day {
-  background: var(--blue-500);
+  --schedule-section-start-color: var(--blue-500);
+  --schedule-section-end-color: var(--blue-500);
+}
+
+.schedule__day-section:not(.schedule__day-section--day1) {
+  background: linear-gradient(
+    var(--schedule-section-start-color),
+    var(--schedule-visible-end-color, var(--schedule-section-end-color))
+  );
 }
 
 .schedule__common-background-1,
@@ -107,7 +122,7 @@
     position: absolute;
     z-index: 1;
     inset: 0;
-    background-color: var(--blue-300);
+    background-color: var(--schedule-separator-color, var(--blue-300));
     mask-image: url("/images/backgrounds/separator-mask.svg");
     mask-repeat: no-repeat;
     mask-position: top center;
@@ -174,7 +189,7 @@
 
 .schedule-tools__inner {
   color: var(--pink-100);
-  background-color: color-mix(in srgb, var(--blue-800) 70%, transparent);
+  background-color: transparent;
   border: 1.5px solid var(--white);
   border-radius: var(--corner);
   padding: clamp(1.25rem, 2vw, 2rem);
@@ -226,10 +241,16 @@
     padding: 0.45rem 0.75rem;
     transition:
       background-color 0.2s ease,
+      border-color 0.2s ease,
       opacity 0.2s ease;
 
+    &:not(:disabled) {
+      background: var(--blue-500);
+      border-color: var(--orange-100);
+    }
+
     &:hover:not(:disabled) {
-      background: color-mix(in srgb, var(--blue-500) 55%, transparent);
+      background: color-mix(in srgb, var(--blue-500) 70%, var(--blue-800));
     }
 
     &:disabled {
@@ -834,42 +855,38 @@
 @keyframes schedule-live-dot-pulse {
   0%,
   100% {
-    box-shadow: 0 0 0 0 color-mix(in srgb, var(--blue-300) 45%, transparent);
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--orange-300) 45%, transparent);
     opacity: 0.65;
     transform: scale(0.85);
   }
 
   50% {
-    box-shadow: 0 0 0 0.35rem color-mix(in srgb, var(--blue-300) 0%, transparent);
+    box-shadow: 0 0 0 0.35rem color-mix(in srgb, var(--orange-300) 0%, transparent);
     opacity: 1;
     transform: scale(1);
   }
 }
 
 .schedule__event.is-live .activity-card__status {
+  order: 0;
   display: inline-flex;
   gap: 0.5rem;
   align-items: center;
-  color: var(--blue-400) !important;
+  color: var(--orange-300) !important;
   background: var(--white);
-  border: 2px solid var(--blue-400);
+  border: 2px solid var(--orange-300);
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin: 0 0 1rem;
 
   &::before {
     content: "";
     width: 0.65rem;
     height: 0.65rem;
-    background: var(--blue-300);
+    background: var(--orange-300);
     border-radius: 50%;
     animation: schedule-live-dot-pulse 1.5s ease-in-out infinite;
   }
-}
-
-.schedule__event[data-live-status="upcoming"] .activity-card__status {
-  color: var(--blue-400) !important;
-  background: transparent;
-  border: 0;
-  border-radius: 0;
-  padding: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {

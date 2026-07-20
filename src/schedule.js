@@ -334,10 +334,6 @@ class ScheduleController {
         } else {
           upcomingCount += 1;
           if (!nextStart || start < nextStart) nextStart = start;
-          if (status) {
-            status.textContent = 'Later today';
-            status.hidden = false;
-          }
         }
       }
     });
@@ -405,6 +401,40 @@ class ScheduleController {
     this.root.querySelectorAll('[data-schedule-separator]').forEach((separator) => {
       const day = this.days.find((candidate) => candidate.id === separator.dataset.separatorDay);
       separator.hidden = !day || day.hidden;
+    });
+
+    this.updateBackgroundTransitions(this.days.filter((day) => !day.hidden));
+  }
+
+  updateBackgroundTransitions(visibleDays) {
+    const pageEndColor = 'var(--blue-500)';
+    const commonBackground = this.root.querySelector('.schedule__common-background-1');
+    const sectionStartColor = (day) =>
+      window.getComputedStyle(day).getPropertyValue('--schedule-section-start-color').trim() || pageEndColor;
+
+    const firstColor = visibleDays.length ? sectionStartColor(visibleDays[0]) : pageEndColor;
+    commonBackground?.style.setProperty('--schedule-visible-end-color', firstColor);
+
+    this.days.forEach((day) => day.style.removeProperty('--schedule-visible-end-color'));
+    visibleDays.forEach((day, index) => {
+      const nextDay = visibleDays[index + 1];
+      day.style.setProperty('--schedule-visible-end-color', nextDay ? sectionStartColor(nextDay) : pageEndColor);
+    });
+
+    this.root.querySelectorAll('[data-schedule-separator]:not([hidden])').forEach((separator) => {
+      const dayIndex = visibleDays.findIndex((day) => day.id === separator.dataset.separatorDay);
+      if (dayIndex < 0) return;
+
+      const day = visibleDays[dayIndex];
+      const nextDay = visibleDays[dayIndex + 1];
+      const color =
+        separator.dataset.separatorPosition === 'before'
+          ? sectionStartColor(day)
+          : nextDay
+            ? sectionStartColor(nextDay)
+            : pageEndColor;
+
+      separator.style.setProperty('--schedule-separator-color', color);
     });
   }
 

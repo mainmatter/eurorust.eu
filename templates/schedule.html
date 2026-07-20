@@ -51,12 +51,12 @@
                   </div>
 
                   <div class="schedule-filters__search">
-                    <label for="schedule-search">Search titles and people</label>
+                    <label for="schedule-search">Search events or people</label>
                     <input
                       id="schedule-search"
                       name="q"
                       type="search"
-                      placeholder="Talk or speaker"
+                      placeholder="Event or person"
                       autocomplete="off"
                     />
                   </div>
@@ -86,6 +86,7 @@
               class="schedule__separator"
               data-schedule-separator
               data-separator-day="{{ day.id }}"
+              data-separator-position="before"
               aria-hidden="true"
             >
               <div class="separator__content"></div>
@@ -234,6 +235,7 @@
               class="schedule__separator schedule__separator--bottom"
               data-schedule-separator
               data-separator-day="{{ day.id }}"
+              data-separator-position="after"
               aria-hidden="true"
             >
               <div class="separator__content"></div>
