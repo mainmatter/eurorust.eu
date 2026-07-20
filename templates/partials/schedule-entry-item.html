@@ -11,9 +11,10 @@
   class="schedule__event schedule__event--{{ entry_layout }} schedule__event--{{ entry.type }}"
   data-schedule-entry
   data-start="{{ slot.start }}"
-  data-end="{{ slot.end }}"
+  {% if slot.end %}data-end="{{ slot.end }}"{% endif %}
   data-filter-type="{{ filter_type }}"
   data-track="{{ entry.track }}"
+  data-track-label="{{ schedule.entryTrackLabels[entry.track] }}"
 >
   {% include "partials/schedule-entry.html" %}
 </li>

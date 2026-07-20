@@ -9,12 +9,14 @@ export function normalizeSearchText(value) {
 }
 
 export function getEntryStatus(now, start, end) {
+  if ([now, start].some((date) => Number.isNaN(date.getTime()))) return 'invalid';
+  if (end && Number.isNaN(end.getTime())) return 'invalid';
   if (now < start) return 'upcoming';
-  if (now >= end) return 'past';
+  if (end && now >= end) return 'past';
   return 'live';
 }
 
-function dateInTimeZone(date, timeZone) {
+export function dateInTimeZone(date, timeZone) {
   const parts = new Intl.DateTimeFormat('en-CA', {
     timeZone,
     year: 'numeric',
@@ -23,6 +25,44 @@ function dateInTimeZone(date, timeZone) {
   }).formatToParts(date);
   const values = Object.fromEntries(parts.map(({ type, value }) => [type, value]));
   return `${values.year}-${values.month}-${values.day}`;
+}
+
+export function getLiveDayDate(now, timeZone, scheduleDates) {
+  const today = dateInTimeZone(now, timeZone);
+  return scheduleDates.includes(today) ? today : null;
+}
+
+export function readScheduleUrlState(params) {
+  return {
+    query: params.get('q') ?? '',
+    date: params.get('date') ?? '',
+    types: new Set(params.getAll('type')),
+    view: params.get('view') ?? '',
+  };
+}
+
+export function buildScheduleUrl(currentUrl, { query = '', date = '', types = new Set(), view = '' } = {}) {
+  const url = new URL(currentUrl);
+  url.search = '';
+
+  if (normalizeSearchText(query)) url.searchParams.set('q', query.trim());
+  if (date) url.searchParams.set('date', date);
+  types.forEach((type) => url.searchParams.append('type', type));
+  if (view) url.searchParams.set('view', view);
+
+  return url;
+}
+
+export function matchesScheduleFilters(entry, state) {
+  const query = normalizeSearchText(state.query ?? '');
+  const searchText = normalizeSearchText(entry.searchText ?? '');
+  const types = state.types ?? new Set();
+  const matchesQuery = !query || searchText.includes(query);
+  const matchesDate = !state.date || entry.date === state.date;
+  const matchesType = !types.size || types.has(entry.type);
+  const showService = !types.size || entry.type !== 'service';
+
+  return matchesQuery && matchesDate && matchesType && showService;
 }
 
 class ScheduleController {
@@ -46,7 +86,6 @@ class ScheduleController {
     this.defaultHeroTitle = this.heroTitle?.textContent.trim() ?? '';
     this.liveMode = false;
     this.liveDay = null;
-    this.refreshTimer = null;
     this.hasScrolledToLiveEvent = false;
   }
 
@@ -56,12 +95,13 @@ class ScheduleController {
     this.observeNavbarHeight();
     this.observeStickyHeaders();
 
-    const params = new URLSearchParams(window.location.search);
-    this.restoreFilters(params);
-    this.refreshLiveAvailability(params.get('view'));
+    const urlState = readScheduleUrlState(new URLSearchParams(window.location.search));
+    this.restoreFilters(urlState);
+    this.refreshLiveAvailability(urlState.view);
 
-    this.form.addEventListener('input', () => this.handleFilterChange());
-    this.form.addEventListener('change', () => this.handleFilterChange());
+    this.searchInput?.addEventListener('input', () => this.handleFilterChange());
+    this.dateSelect?.addEventListener('change', () => this.handleFilterChange());
+    this.typeInputs.forEach((input) => input.addEventListener('change', () => this.handleFilterChange()));
     this.form.addEventListener('reset', (event) => {
       event.preventDefault();
       this.clearFilterControls();
@@ -76,9 +116,9 @@ class ScheduleController {
       });
     });
     window.addEventListener('popstate', () => {
-      const currentParams = new URLSearchParams(window.location.search);
-      this.restoreFilters(currentParams);
-      this.refreshLiveAvailability(currentParams.get('view'));
+      const currentState = readScheduleUrlState(new URLSearchParams(window.location.search));
+      this.restoreFilters(currentState);
+      this.refreshLiveAvailability(currentState.view);
       this.liveMode ? this.applyLiveView() : this.applyFilters({ updateUrl: false });
     });
     document.addEventListener('visibilitychange', () => {
@@ -91,14 +131,12 @@ class ScheduleController {
       this.applyFilters({ updateUrl: false });
     }
 
-    this.refreshTimer = window.setInterval(() => this.refreshClock(), LIVE_REFRESH_INTERVAL);
+    window.setInterval(() => this.refreshClock(), LIVE_REFRESH_INTERVAL);
   }
 
   observeNavbarHeight() {
     const navbar = document.querySelector('.nav__wrapper');
     if (!navbar) return;
-    this.navbar = navbar;
-
     this.syncNavbarOffset = () => {
       const navbarBottom = Math.max(0, navbar.getBoundingClientRect().bottom - 1);
       this.root.style.setProperty('--schedule-sticky-top', `${navbarBottom}px`);
@@ -152,13 +190,12 @@ class ScheduleController {
     });
   }
 
-  restoreFilters(params) {
-    if (this.searchInput) this.searchInput.value = params.get('q') ?? '';
-    if (this.dateSelect) this.dateSelect.value = params.get('date') ?? '';
+  restoreFilters(state) {
+    if (this.searchInput) this.searchInput.value = state.query;
+    if (this.dateSelect) this.dateSelect.value = state.date;
 
-    const selectedTypes = new Set(params.getAll('type'));
     this.typeInputs.forEach((input) => {
-      input.checked = selectedTypes.has(input.value);
+      input.checked = state.types.has(input.value);
     });
   }
 
@@ -206,15 +243,15 @@ class ScheduleController {
 
     this.entries.forEach((entry) => {
       const day = entry.closest('[data-schedule-day]');
-      const searchableCard = entry.querySelector('[data-search]');
-      const searchText = normalizeSearchText(
-        `${searchableCard?.dataset.search ?? ''} ${searchableCard?.textContent ?? ''}`
+      const searchableCard = entry.querySelector('.activity-card');
+      const visible = matchesScheduleFilters(
+        {
+          searchText: searchableCard?.textContent ?? '',
+          date: day?.dataset.date ?? '',
+          type: entry.dataset.filterType ?? '',
+        },
+        state
       );
-      const matchesQuery = !state.query || searchText.includes(state.query);
-      const matchesDate = !state.date || day?.dataset.date === state.date;
-      const matchesType = !state.types.size || state.types.has(entry.dataset.filterType);
-      const showService = !state.types.size || entry.dataset.filterType !== 'service';
-      const visible = matchesQuery && matchesDate && matchesType && showService;
 
       entry.hidden = !visible;
       if (visible) visibleCount += 1;
@@ -228,8 +265,12 @@ class ScheduleController {
   }
 
   refreshLiveAvailability(requestedView) {
-    const today = dateInTimeZone(this.now(), this.timeZone);
-    this.liveDay = this.days.find((day) => day.dataset.date === today) ?? null;
+    const liveDate = getLiveDayDate(
+      this.now(),
+      this.timeZone,
+      this.days.map((day) => day.dataset.date)
+    );
+    this.liveDay = this.days.find((day) => day.dataset.date === liveDate) ?? null;
 
     if (!this.liveDay) {
       this.liveMode = false;
@@ -267,7 +308,6 @@ class ScheduleController {
     if (this.heroTitle) this.heroTitle.textContent = 'LIVE SCHEDULE';
     this.clearLivePresentation();
     const now = this.now();
-    let visibleCount = 0;
     let liveCount = 0;
     let upcomingCount = 0;
     let nextStart = null;
@@ -275,9 +315,9 @@ class ScheduleController {
     this.entries.forEach((entry) => {
       const onLiveDay = entry.closest('[data-schedule-day]') === this.liveDay;
       const start = new Date(entry.dataset.start);
-      const end = new Date(entry.dataset.end);
+      const end = entry.dataset.end ? new Date(entry.dataset.end) : null;
       const statusValue = onLiveDay ? getEntryStatus(now, start, end) : 'past';
-      const visible = onLiveDay && statusValue !== 'past';
+      const visible = onLiveDay && (statusValue === 'live' || statusValue === 'upcoming');
       const status = entry.querySelector('[data-live-status]');
 
       entry.hidden = !visible;
@@ -285,7 +325,6 @@ class ScheduleController {
       entry.classList.toggle('is-live', statusValue === 'live');
 
       if (visible) {
-        visibleCount += 1;
         if (statusValue === 'live') {
           liveCount += 1;
           if (status) {
@@ -304,7 +343,6 @@ class ScheduleController {
     });
 
     this.updateContainers();
-    this.updateSummary(visibleCount, 'live');
     this.updateLiveMessage(liveCount, upcomingCount, nextStart);
     this.updateLiveToggle();
     this.updateUrl();
@@ -337,22 +375,27 @@ class ScheduleController {
       slot.hidden = !slot.querySelector('[data-schedule-entry]:not([hidden])');
     });
 
+    this.updateTimeHeadings();
+
     this.days.forEach((day) => {
       const visibleEntries = [...day.querySelectorAll('[data-schedule-entry]:not([hidden])')];
       const headings = [...day.querySelectorAll('[data-schedule-track-heading]')];
+      const fallbackHeading = day.querySelector('[data-schedule-track-heading-fallback]');
       const visibleTracks = new Set(visibleEntries.map((entry) => entry.dataset.track));
       let visibleHeadingCount = 0;
+
+      if (fallbackHeading) fallbackHeading.hidden = true;
 
       headings.forEach((heading) => {
         heading.hidden = !visibleTracks.has(heading.dataset.track);
         if (!heading.hidden) visibleHeadingCount += 1;
       });
 
-      if (visibleEntries.length > 0 && headings.length > 0 && visibleHeadingCount === 0) {
-        headings.forEach((heading) => {
-          heading.hidden = false;
-        });
-        visibleHeadingCount = headings.length;
+      if (visibleEntries.length > 0 && headings.length > 0 && visibleHeadingCount === 0 && fallbackHeading) {
+        const visibleTrackLabels = new Set(visibleEntries.map((entry) => entry.dataset.trackLabel).filter(Boolean));
+        fallbackHeading.textContent = visibleTrackLabels.size === 1 ? [...visibleTrackLabels][0] : 'Schedule';
+        fallbackHeading.hidden = false;
+        visibleHeadingCount = 1;
       }
 
       day.classList.toggle('has-single-visible-track', visibleHeadingCount === 1);
@@ -365,11 +408,26 @@ class ScheduleController {
     });
   }
 
-  updateSummary(count, mode = 'filters') {
+  updateTimeHeadings() {
+    this.root.querySelectorAll('[data-schedule-time-sequence]').forEach((sequence) => {
+      let previousStart = null;
+
+      sequence.querySelectorAll(':scope > [data-schedule-slot]').forEach((slot) => {
+        const heading = slot.querySelector('.schedule__slot-time');
+        if (!heading) return;
+
+        const isDuplicate = !slot.hidden && slot.dataset.start === previousStart;
+        heading.hidden = slot.hidden || isDuplicate;
+        if (!slot.hidden) previousStart = slot.dataset.start;
+      });
+    });
+  }
+
+  updateSummary(count) {
     if (!this.summary) return;
     const label = count === 1 ? 'event' : 'events';
-    this.summary.textContent = mode === 'live' ? `${count} ${label} now or later today.` : `${count} ${label}`;
-    if (this.noResults) this.noResults.hidden = count !== 0 || mode === 'live';
+    this.summary.textContent = `${count} ${label}`;
+    if (this.noResults) this.noResults.hidden = count !== 0;
   }
 
   updateClearButton(state = this.getFilterState()) {
@@ -406,14 +464,13 @@ class ScheduleController {
   }
 
   updateUrl() {
-    const url = new URL(window.location.href);
     const state = this.getFilterState();
-    url.search = '';
-
-    if (state.query) url.searchParams.set('q', this.searchInput.value.trim());
-    if (state.date) url.searchParams.set('date', state.date);
-    state.types.forEach((type) => url.searchParams.append('type', type));
-    if (this.liveDay) url.searchParams.set('view', this.liveMode ? 'live' : 'full');
+    const url = buildScheduleUrl(window.location.href, {
+      query: this.searchInput?.value ?? '',
+      date: state.date,
+      types: state.types,
+      view: this.liveDay ? (this.liveMode ? 'live' : 'full') : '',
+    });
 
     window.history.replaceState({}, '', url);
   }

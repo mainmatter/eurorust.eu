@@ -1,25 +1,9 @@
-{% if entry.track == "main-stage" %}
-  {% set track_label = "Main Stage" %}
-{% elif entry.track == "side-stage" %}
-  {% set track_label = "Side Track" %}
-{% elif entry.track == "workshop" %}
-  {% set track_label = "Workshop" %}
-{% elif entry.track == "side-activity" %}
-  {% set track_label = "Side activity" %}
-{% else %}
-  {% set track_label = "All stages" %}
-{% endif %}
+{% set track_label = schedule.entryTrackLabels[entry.track] %}
 
 {% if entry.type == "talk" and entry.ref %}
   {% set path = "talks/" ~ entry.ref ~ ".md" %}
   {% set event = get_page(path = path) %}
-  <article
-    class="activity-card"
-    data-search="{{ event.title }} {{ track_label }}{% if event.extra.sponsor %}{{ event.extra.sponsor }}{% endif %}{% for speaker_slug in event.extra.speakers | default(value=[]) %}
-      {% set speaker_path = "speakers/" ~ speaker_slug ~ ".md" %}{% set speaker = get_page(path = speaker_path) %}
-      {{ speaker.extra.name }}
-    {% endfor %}"
-  >
+  <article class="activity-card">
     <a class="activity-card__link" href="{{ event.path }}">
       <div class="activity-card__content">
         <p class="activity-card__track">{{ track_label }}</p>
@@ -49,10 +33,7 @@
 {% elif entry.type == "workshop" and entry.ref %}
   {% set path = "workshops/" ~ entry.ref ~ ".md" %}
   {% set event = get_page(path = path) %}
-  <article
-    class="activity-card activity-card__workshop"
-    data-search="{{ event.title }} {{ track_label }}{% for mentor in event.extra.mentors | default(value=[]) %}{{ mentor.name }}{% endfor %}{% if event.extra.sponsor %}{{ event.extra.sponsor }}{% endif %}"
-  >
+  <article class="activity-card activity-card__workshop">
     <a class="activity-card__link" href="{{ event.path }}">
       <div class="activity-card__content">
         <p class="activity-card__track">{{ track_label }}</p>
@@ -83,7 +64,7 @@
 {% elif entry.type == "side-activity" and entry.ref %}
   {% set path = "activities/" ~ entry.ref ~ ".md" %}
   {% set event = get_page(path = path) %}
-  <article class="activity-card activity-card__workshop" data-search="{{ event.title }} {{ track_label }}">
+  <article class="activity-card activity-card__workshop">
     <a class="activity-card__link" href="{{ event.path }}">
       <div class="activity-card__content">
         <p class="activity-card__track">{{ track_label }}</p>
@@ -103,31 +84,13 @@
     </a>
   </article>
 {% else %}
-  <article class="activity-card" data-search="{{ entry.title }} {{ track_label }}">
+  <article class="activity-card">
     {% if entry.url %}
       <a class="activity-card__link" href="{{ entry.url }}" target="_blank" rel="noopener">
-        <div class="activity-card__content">
-          <p class="activity-card__track">{{ track_label }}</p>
-          {% if entry.image %}
-            <img class="activity-card__image mb-3" src="{{ entry.image }}" alt="{{ entry.imageAlt }}" />
-          {% endif %}
-          <time class="activity-card__time" datetime="{{ slot.start }}">{{ slot.time }}</time>
-          <p class="beige activity-card__title"><strong>{{ entry.title }}</strong></p>
-          {% if entry.description %}<p class="activity-card__description">{{ entry.description }}</p>{% endif %}
-          <p class="activity-card__status" data-live-status hidden></p>
-        </div>
+        {% include "partials/schedule-entry-generic-content.html" %}
       </a>
     {% else %}
-      <div class="activity-card__content">
-        <p class="activity-card__track">{{ track_label }}</p>
-        {% if entry.image %}
-          <img class="activity-card__image mb-3" src="{{ entry.image }}" alt="{{ entry.imageAlt }}" />
-        {% endif %}
-        <time class="activity-card__time" datetime="{{ slot.start }}">{{ slot.time }}</time>
-        <p class="beige activity-card__title"><strong>{{ entry.title }}</strong></p>
-        {% if entry.description %}<p class="activity-card__description">{{ entry.description }}</p>{% endif %}
-        <p class="activity-card__status" data-live-status hidden></p>
-      </div>
+      {% include "partials/schedule-entry-generic-content.html" %}
     {% endif %}
   </article>
 {% endif %}

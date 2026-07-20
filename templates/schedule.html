@@ -68,8 +68,7 @@
                 </div>
               </form>
               <div class="schedule-live" data-live-banner hidden>
-                <p class="schedule-live__eyebrow">Live schedule</p>
-                <p data-live-message></p>
+                <p data-live-message role="status" aria-live="polite" aria-atomic="true"></p>
               </div>
               <div class="schedule-live__actions" hidden>
                 <button type="button" data-live-toggle data-live-toggle-mode="exit" hidden>Show full schedule</button>
@@ -94,14 +93,13 @@
           {% endif %}
           <section
             id="{{ day.id }}"
-            class="schedule__day-section schedule__day-section--{{ day.theme }}"
+            class="schedule__day-section schedule__day-section--{{ day.id }}"
             data-schedule-day
             data-date="{{ day.date }}"
-            data-day-label="{{ day.label }}"
           >
             <div class="container">
               <div class="schedule__container">
-                <div class="schedule__day schedule__day--{{ day.theme }}">
+                <div class="schedule__day schedule__day--{{ day.id }}">
                   <div class="schedule__sticky-sentinel" data-sticky-sentinel aria-hidden="true"></div>
                   <div class="schedule__sticky-header" data-sticky-header>
                     <header class="schedule__day-heading">
@@ -114,49 +112,77 @@
                         {% for track in day.tracks %}
                           <span data-schedule-track-heading data-track="{{ track.id }}">{{ track.label }}</span>
                         {% endfor %}
+                        <span data-schedule-track-heading-fallback hidden></span>
                       </div>
                     {% endif %}
                   </div>
 
                   {% if day.layout | default(value="paired") == "independent-tracks" %}
-                    <div class="schedule__timeline schedule__timeline--independent-tracks">
-                      <ol class="schedule__track-column schedule__track-column--main" data-schedule-track-content>
+                    {% set_global independent_main_count = 0 %}
+                    {% set_global independent_side_count = 0 %}
+                    {% for slot in day.slots %}
+                      {% for entry in slot.entries %}
+                        {% if entry.track == day.tracks[0].id %}
+                          {% set_global independent_main_count = independent_main_count + 1 %}
+                        {% elif entry.track == day.tracks[1].id %}
+                          {% set_global independent_side_count = independent_side_count + 1 %}
+                        {% endif %}
+                      {% endfor %}
+                    {% endfor %}
+                    {% if independent_main_count > independent_side_count %}
+                      {% set_global independent_row_count = independent_main_count %}
+                    {% else %}
+                      {% set_global independent_row_count = independent_side_count %}
+                    {% endif %}
+                    <div
+                      class="schedule__timeline schedule__timeline--independent-tracks"
+                      style="--schedule-independent-row-count: {{ independent_row_count }}"
+                    >
+                      <ol
+                        class="schedule__track-column schedule__track-column--main"
+                        data-schedule-track-content
+                        data-schedule-time-sequence
+                      >
                         {% for slot in day.slots %}
-                          <li class="schedule__slot" data-schedule-slot data-start="{{ slot.start }}">
-                            <h3 class="schedule__slot-time">
-                              <time datetime="{{ slot.start }}">{{ slot.time }}</time>
-                            </h3>
-                            <ul class="schedule__slot-track-events">
-                              {% for entry in slot.entries %}
-                                {% if entry.track == day.tracks[0].id %}
+                          {% for entry in slot.entries %}
+                            {% if entry.track == day.tracks[0].id %}
+                              <li class="schedule__slot" data-schedule-slot data-start="{{ slot.start }}">
+                                <h3 class="schedule__slot-time">
+                                  <time datetime="{{ slot.start }}">{{ slot.time }}</time>
+                                </h3>
+                                <ul class="schedule__slot-track-events">
                                   {% set entry_layout = "main" %}
                                   {% include "partials/schedule-entry-item.html" %}
-                                {% endif %}
-                              {% endfor %}
-                            </ul>
-                          </li>
+                                </ul>
+                              </li>
+                            {% endif %}
+                          {% endfor %}
                         {% endfor %}
                       </ol>
-                      <ol class="schedule__track-column schedule__track-column--side" data-schedule-track-content>
+                      <ol
+                        class="schedule__track-column schedule__track-column--side"
+                        data-schedule-track-content
+                        data-schedule-time-sequence
+                      >
                         {% for slot in day.slots %}
-                          <li class="schedule__slot" data-schedule-slot data-start="{{ slot.start }}">
-                            <h3 class="schedule__slot-time">
-                              <time datetime="{{ slot.start }}">{{ slot.time }}</time>
-                            </h3>
-                            <ul class="schedule__slot-track-events">
-                              {% for entry in slot.entries %}
-                                {% if entry.track == day.tracks[1].id %}
+                          {% for entry in slot.entries %}
+                            {% if entry.track == day.tracks[1].id %}
+                              <li class="schedule__slot" data-schedule-slot data-start="{{ slot.start }}">
+                                <h3 class="schedule__slot-time">
+                                  <time datetime="{{ slot.start }}">{{ slot.time }}</time>
+                                </h3>
+                                <ul class="schedule__slot-track-events">
                                   {% set entry_layout = "side" %}
                                   {% include "partials/schedule-entry-item.html" %}
-                                {% endif %}
-                              {% endfor %}
-                            </ul>
-                          </li>
+                                </ul>
+                              </li>
+                            {% endif %}
+                          {% endfor %}
                         {% endfor %}
                       </ol>
                     </div>
                   {% else %}
-                    <ol class="schedule__timeline">
+                    <ol class="schedule__timeline" data-schedule-time-sequence>
                       {% for slot in day.slots %}
                         <li class="schedule__slot" data-schedule-slot data-start="{{ slot.start }}">
                           <h3 class="schedule__slot-time">
@@ -167,7 +193,7 @@
                               <ul class="schedule__slot-track-events">
                                 {% for entry in slot.entries %}
                                   {% set entry_is_full = entry.fullWidth | default(value=false) %}
-                                  {% if not entry_is_full and entry.track == day.tracks[0].id %}
+                                  {% if day.tracks | length > 1 and not entry_is_full and entry.track == day.tracks[0].id %}
                                     {% set entry_layout = "main" %}
                                     {% include "partials/schedule-entry-item.html" %}
                                   {% endif %}

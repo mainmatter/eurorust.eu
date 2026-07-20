@@ -30,24 +30,24 @@
   background: linear-gradient(var(--blue-500), color-mix(in srgb, var(--blue-300) 65%, var(--blue-500)));
 }
 
-.schedule__day-section--w {
+.schedule__day-section--workshop-day {
   background: linear-gradient(color-mix(in srgb, var(--blue-300) 65%, var(--blue-500)), var(--blue-300));
 }
 
-.schedule__day-section--1 {
+.schedule__day-section--day1 {
   background: transparent;
 }
 
-.schedule__day-section--2 {
+.schedule__day-section--day2 {
   background: linear-gradient(var(--blue-300), var(--blue-500));
 }
 
-.schedule__day-section--3 {
+.schedule__day-section--post-day {
   background: var(--blue-500);
 }
 
 .schedule__common-background-1,
-.schedule__day-section:not(.schedule__day-section--1) {
+.schedule__day-section:not(.schedule__day-section--day1) {
   position: relative;
   isolation: isolate;
 
@@ -390,8 +390,7 @@
   .schedule-hero__nav,
   .schedule-tools__inner > h2,
   .schedule-filters,
-  .schedule-tools__summary,
-  .schedule-live__eyebrow {
+  .schedule-tools__summary {
     display: none;
   }
 
@@ -411,11 +410,6 @@
   }
 
   .schedule-live {
-    background: transparent;
-    border: 0;
-    border-radius: 0;
-    margin: 0;
-    padding: 0;
     text-align: center;
 
     p {
@@ -434,20 +428,9 @@
 }
 
 .schedule-live {
-  background: var(--pink-100);
-  border-left: 0.5rem solid var(--orange-100);
-  border-radius: calc(var(--corner) / 2);
-  margin-top: 1.25rem;
-  padding: 1rem 1.25rem;
-
   p {
     margin: 0;
   }
-}
-
-.schedule-live__eyebrow {
-  font-weight: 700;
-  text-transform: uppercase;
 }
 
 .schedule-live__actions {
@@ -491,22 +474,22 @@
   border-radius: var(--corner);
   overflow: clip;
 
-  &--w {
+  &--workshop-day {
     --schedule-day-background-color: var(--blue-200);
     --schedule-day-background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect opacity="1" x="0.5" y="0.5" width="24" height="24" stroke="%230A95B5"/></svg>');
   }
 
-  &--1 {
+  &--day1 {
     --schedule-day-background-color: var(--pink-500);
     --schedule-day-background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect opacity="1" x="0.5" y="0.5" width="24" height="24" stroke="%23F665A5"/></svg>');
   }
 
-  &--2 {
+  &--day2 {
     --schedule-day-background-color: var(--purple-200);
     --schedule-day-background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect opacity="1" x="0.5" y="0.5" width="24" height="24" stroke="%23893FC4"/></svg>');
   }
 
-  &--3 {
+  &--post-day {
     --schedule-day-background-color: var(--orange-200);
     --schedule-day-background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect opacity="1" x="0.5" y="0.5" width="24" height="24" stroke="%23FC9557"/></svg>');
   }
@@ -648,8 +631,8 @@
 
 .schedule__timeline--independent-tracks {
   display: grid;
-  grid-auto-flow: row dense;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(var(--schedule-independent-row-count), auto);
 
   .schedule__slot:not(:has([data-schedule-entry])) {
     display: none;
@@ -669,27 +652,23 @@
 
 @media screen and (min-width: 60.001rem) {
   .schedule__timeline--independent-tracks {
-    > .schedule__track-column,
-    > .schedule__track-column > .schedule__slot,
-    > .schedule__track-column > .schedule__slot > .schedule__slot-track-events {
-      display: contents;
+    > .schedule__track-column {
+      display: grid;
+      grid-row: 1 / span var(--schedule-independent-row-count);
+      grid-template-rows: subgrid;
     }
 
-    .schedule__event {
-      border-bottom: 1px solid var(--blue-400);
-
-      + .schedule__event {
-        border-top: 0;
-      }
-    }
-
-    .schedule__track-column--main .schedule__event {
+    > .schedule__track-column--main {
       grid-column: 1;
     }
 
-    .schedule__track-column--side .schedule__event {
+    > .schedule__track-column--side {
       grid-column: 2;
-      border-left: 1px solid var(--blue-400);
+    }
+
+    .schedule__slot {
+      display: flex;
+      flex-direction: column;
     }
   }
 }
@@ -755,8 +734,8 @@
 
     .schedule__slot-track--main,
     .schedule__slot-track--side,
-    .schedule__track-column--main .schedule__event,
-    .schedule__track-column--side .schedule__event {
+    .schedule__track-column--main,
+    .schedule__track-column--side {
       grid-column: 1;
       border-left: 0;
     }
@@ -994,7 +973,7 @@
     background: var(--pink-500);
   }
 
-  .schedule__day-section--2 .schedule__event[data-track="side-stage"] .activity-card__track {
+  .schedule__day-section--day2 .schedule__event[data-track="side-stage"] .activity-card__track {
     background: var(--purple-100);
   }
 

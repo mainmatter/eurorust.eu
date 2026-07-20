@@ -24,11 +24,7 @@
                   {% if entry.type == "talk" and entry.ref and entry.ref == page.slug %}
                     {% set_global talk_date = day.displayDate %}
                     {% set_global talk_time = slot.time %}
-                    {% if entry.track == "main-stage" %}
-                      {% set_global talk_stage = "Main Stage" %}
-                    {% elif entry.track == "side-stage" %}
-                      {% set_global talk_stage = "Side Track" %}
-                    {% endif %}
+                    {% set_global talk_stage = schedule.entryTrackLabels[entry.track] %}
                   {% endif %}
                 {% endfor %}
               {% endfor %}
