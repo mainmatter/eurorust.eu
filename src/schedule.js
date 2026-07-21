@@ -395,7 +395,9 @@ class ScheduleController {
   updateSummary(count) {
     if (!this.summary) return;
     const label = count === 1 ? 'event' : 'events';
-    this.summary.textContent = `Showing ${count} ${label}`;
+    const countElement = document.createElement('strong');
+    countElement.textContent = count;
+    this.summary.replaceChildren('Showing ', countElement, ` ${label}`);
     if (this.noResults) this.noResults.hidden = count !== 0;
   }
 

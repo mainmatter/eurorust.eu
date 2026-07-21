@@ -486,9 +486,13 @@
   .schedule-tools__summary {
     grid-column: 2;
     font-size: clamp(1rem, 1.4vw, 1.4rem);
-    font-weight: 700;
+    font-weight: 400;
     margin: 0;
     text-align: center;
+
+    strong {
+      font-weight: 700;
+    }
   }
 
   button {
