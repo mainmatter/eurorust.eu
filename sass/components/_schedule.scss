@@ -216,6 +216,7 @@
   input[type="search"],
   select {
     width: 100%;
+    height: 3.5rem;
     color: var(--blue-800);
     background: var(--pink-100);
     border: 1px solid var(--blue-400);
@@ -274,6 +275,15 @@
   padding-left: 2.6rem;
 }
 
+.schedule-filters select {
+  appearance: none;
+  background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 7.5L10 12.5L15 7.5" stroke="%23001C76" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  background-position: right 0.85rem center;
+  background-repeat: no-repeat;
+  background-size: 1.25rem;
+  padding-right: 2.75rem;
+}
+
 .schedule-filters__types {
   border: 0;
   margin: 0;
@@ -287,7 +297,7 @@
 
 .schedule-filters__type-options {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 0.5rem;
 
   label {
@@ -296,21 +306,19 @@
     align-items: center;
     min-height: 2.35rem;
     background: color-mix(in srgb, var(--blue-800) 55%, transparent);
-    border: 1.5px solid var(--blue-400);
+    border: 0;
     border-radius: 999px;
     cursor: pointer;
     padding: 0.4rem 0.7rem;
-    transition:
-      background-color 0.2s ease,
-      border-color 0.2s ease;
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
 
     &:hover {
-      background: color-mix(in srgb, var(--blue-500) 40%, transparent);
+      background: color-mix(in srgb, var(--blue-800) 70%, transparent);
     }
 
     &:has(input:checked) {
       background: var(--blue-500);
-      border-color: var(--orange-100);
     }
 
     &:has(input:focus-visible) {
@@ -353,7 +361,7 @@
   }
 }
 
-@media screen and (max-width: 80rem) {
+@media screen and (max-width: 100rem) {
   .schedule-filters {
     grid-template-columns: 1fr;
   }
@@ -371,16 +379,10 @@
   .schedule-filters__refinements {
     grid-template-columns: 1fr;
   }
-}
 
-@media screen and (max-width: 44rem) {
   .schedule-filters__type-options {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    label {
-      border-radius: 0.75rem;
-    }
   }
 }
 
@@ -796,12 +798,12 @@
   align-self: center;
   color: var(--orange-300) !important;
   background: var(--white);
-  border: 2px solid var(--orange-300);
+  border: 1px solid var(--orange-300);
   border-radius: 999px;
   font-size: 0.875rem;
   font-weight: 400;
   margin: 0 0 1rem;
-  padding: 0.25rem 0.75rem;
+  padding: 0 1rem;
   text-transform: none;
 
   &::before {
@@ -923,7 +925,7 @@
   }
 
   .schedule__event[data-track="all-stages"] .activity-card__track {
-    background: var(--blue-400);
+    display: none;
   }
 
   .activity-card__portrait {
