@@ -37,48 +37,40 @@ const talks = scheduled
   .map((entry) => {
     const talk = readContent('talks', entry.ref);
     const speakers = talk.speakers.map((slug) => readContent('speakers', slug).name ?? slug);
-    return `- [${talk.title}](${absoluteUrl(`/talks/${entry.ref}/`)}) — ${speakers.join(' and ')}; ${entry.day}, ${entry.time}`;
+    return `- [${talk.title}](${absoluteUrl(`/talks/${entry.ref}/`)}): Talk by ${speakers.join(' and ')} on ${entry.day}, ${entry.time}.`;
   });
 
 const workshops = scheduled
   .filter((entry) => entry.type === 'workshop')
   .map((entry) => {
     const workshop = readContent('workshops', entry.ref);
-    return `- [${workshop.title}](${absoluteUrl(`/workshops/${entry.ref}/`)}) — ${entry.day}, ${entry.time}`;
+    return `- [${workshop.title}](${absoluteUrl(`/workshops/${entry.ref}/`)}): Workshop on ${entry.day}, ${entry.time}.`;
   });
 
 const activities = scheduled
   .filter((entry) => entry.type === 'side-activity')
   .map((entry) => {
     const activity = readContent('activities', entry.ref);
-    return `- [${activity.title}](${absoluteUrl(`/activities/${entry.ref}/`)}) — ${entry.day}, ${entry.time}`;
+    return `- [${activity.title}](${absoluteUrl(`/activities/${entry.ref}/`)}): Side activity on ${entry.day}, ${entry.time}.`;
   });
 
 const output = `# ${event.siteName}
 
 > ${event.description}
 
-${event.siteName} is an annual conference for the European Rust community. ${event.name} includes two conference days, workshops, community activities, and online participation.
+${event.siteName} is an annual conference for the European Rust community. ${event.name} runs from October 14–17, 2026, in Barcelona and online. Workshops and side activities begin on October 14. The conference takes place on October 15–16 at ${event.location.name}, ${event.location.streetAddress}, ${event.location.postalCode} ${event.location.addressLocality}, Spain. Community activities continue on October 17.
 
-## Event details
+## Core event information
 
-- Dates: October 14–17, 2026
-- Conference days: October 15–16, 2026
-- Location: ${event.location.name}, ${event.location.streetAddress}, ${event.location.postalCode} ${event.location.addressLocality}, Spain
-- Format: Barcelona and online
-- Website: [${event.website}](${event.website})
-- [Schedule](${absoluteUrl('/schedule/')})
-- [Tickets and registration](${event.ticketUrl})
+- [EuroRust website](${event.website}): Main website for ${event.name}, held in Barcelona and online from October 14–17, 2026.
+- [Schedule](${absoluteUrl('/schedule/')}): Full schedule for workshops, talks, side activities, and community events.
+- [Tickets and registration](${event.ticketUrl}): Ticket options and registration for on-site and online attendance.
 
 ## Talks and speakers
-
-The schedule links each session to its speaker profile and full abstract.
 
 ${talks.join('\n')}
 
 ## Workshops
-
-Workshops take place on October 14. Workshop venue details are still to be announced.
 
 ${workshops.join('\n')}
 
@@ -88,19 +80,19 @@ ${activities.join('\n')}
 
 ## Venue and attendee information
 
-- [Venue and travel](${absoluteUrl('/travel/')})
-- [Code of Conduct](${absoluteUrl('/code-of-conduct/')})
-- [Accessibility statement](${absoluteUrl('/accessibility/')})
-- [Health and safety policy](${absoluteUrl('/health-safety-policy/')})
-- [Cancellation policy](${absoluteUrl('/cancellation/')})
+- [Venue and travel](${absoluteUrl('/travel/')}): Venue address, public transport, travel, accessibility, and visa information.
+- [Code of Conduct](${absoluteUrl('/code-of-conduct/')}): Conduct requirements and anti-harassment policy for all participants.
+- [Accessibility statement](${absoluteUrl('/accessibility/')}): Accessibility measures, ticket support, and contact information for assistance.
+- [Health and safety policy](${absoluteUrl('/health-safety-policy/')}): Health and safety guidance for on-site attendees and participants.
+- [Cancellation policy](${absoluteUrl('/cancellation/')}): Refund, ticket reassignment, and event cancellation terms.
 
 ## Sponsorship
 
-- [EuroRust 2026 sponsorship prospectus](${event.sponsorshipUrl})
+- [EuroRust 2026 sponsorship prospectus](${event.sponsorshipUrl}): Sponsorship packages, benefits, pricing, and contact information.
 
 ## Contact
 
-- Email: [mail@eurorust.eu](mailto:mail@eurorust.eu)
+- [Email EuroRust](mailto:mail@eurorust.eu): Contact the organizers about attendance, accessibility, travel, visas, or sponsorship.
 `;
 
 fs.mkdirSync(path.join(root, 'public'), { recursive: true });

@@ -112,8 +112,38 @@ for (const relative of representativePages) {
   }
 }
 
-if (!fs.existsSync(path.join(publicDir, 'llms.txt'))) {
+const llmsPath = path.join(publicDir, 'llms.txt');
+if (!fs.existsSync(llmsPath)) {
   throw new Error('missing public/llms.txt');
 }
 
-console.log(`Validated ${currentPages} current pages and parsed ${jsonLdBlocks} JSON-LD blocks.`);
+const llmsLines = fs.readFileSync(llmsPath, 'utf8').split('\n');
+if (!/^# [^#]/.test(llmsLines[0]) || llmsLines.filter((line) => /^# /.test(line)).length !== 1) {
+  throw new Error('llms.txt must start with exactly one H1 title');
+}
+if (!llmsLines[2]?.startsWith('> ')) {
+  throw new Error('llms.txt must include a blockquote summary after its H1 title');
+}
+
+let insideFileList = false;
+let fileListSections = 0;
+for (const line of llmsLines) {
+  if (line.startsWith('## ')) {
+    insideFileList = true;
+    fileListSections += 1;
+    continue;
+  }
+  if (!insideFileList || line === '') {
+    continue;
+  }
+  if (!/^- \[[^\]]+\]\((?:https?:\/\/|mailto:)[^)]+\): .+/.test(line)) {
+    throw new Error(`invalid llms.txt file-list entry: ${line}`);
+  }
+}
+if (fileListSections === 0) {
+  throw new Error('llms.txt must include at least one H2 file-list section');
+}
+
+console.log(
+  `Validated ${currentPages} current pages, ${jsonLdBlocks} JSON-LD blocks, and ${fileListSections} llms.txt sections.`
+);
