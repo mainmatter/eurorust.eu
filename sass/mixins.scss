@@ -11,7 +11,13 @@
   width: auto;
   position: relative;
 
-  &:hover,
+  @media (hover: hover) {
+    &:hover {
+      transition: all 0.3s ease-in-out;
+      transform: scale(1.14, 1.05);
+    }
+  }
+
   &:active {
     transition: all 0.3s ease-in-out;
     transform: scale(1.14, 1.05);
