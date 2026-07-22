@@ -95,6 +95,26 @@
   }
 }
 
+@mixin btn__primary-surface(
+  $color1: #ffb8d6,
+  $color2: #c000b5,
+  $color3: #940196,
+  $shadow1: rgba(255, 255, 255, 0.4),
+  $shadow2: rgba(180, 70, 207, 1),
+  $icon: url("")
+) {
+  background-image: $icon, linear-gradient($color1 10%, $color2 65%, $color3 85%);
+  box-shadow:
+    0 0.75rem 0.5rem $shadow1 inset,
+    0 0.25rem 0.5rem 0 $shadow2 inset;
+
+  &:hover {
+    box-shadow:
+      0 1rem 0.75rem $shadow1 inset,
+      0 0.5rem 1rem 0 $shadow2 inset;
+  }
+}
+
 @mixin btn__primary-purple(
   $color1: #ffb8d6,
   $color2: #c000b5,
@@ -104,14 +124,11 @@
   $icon: url("")
 ) {
   @include button;
+  @include btn__primary-surface($color1, $color2, $color3, $shadow1, $shadow2, $icon);
   padding: 20px 35px;
   font-size: clamp(18px, 1.9vw, 48px);
   color: var(--white);
   text-decoration: none;
-  background-image: $icon, linear-gradient($color1 10%, $color2 65%, $color3 85%);
-  box-shadow:
-    0 0.75rem 0.5rem $shadow1 inset,
-    0 0.25rem 0.5rem 0 $shadow2 inset;
   transition: all 0.3s ease-in-out;
   background-size:
     contain,
@@ -176,9 +193,6 @@
     background-position:
       center center,
       0 0;
-    box-shadow:
-      0 1rem 0.75rem $shadow1 inset,
-      0 0.5rem 1rem 0 $shadow2 inset;
     &::before {
       filter: blur(2px);
     }
@@ -194,6 +208,17 @@
   $icon: url("")
 ) {
   @include btn__primary-purple($color1, $color2, $color3, $shadow1, $shadow2, $icon);
+}
+
+@mixin btn__primary-pink-surface(
+  $color1: #f39cd1,
+  $color2: #f9528a,
+  $color3: #d31d7d,
+  $shadow1: rgba(255, 255, 255, 0.4),
+  $shadow2: rgba(180, 70, 207, 1),
+  $icon: url("")
+) {
+  @include btn__primary-surface($color1, $color2, $color3, $shadow1, $shadow2, $icon);
 }
 
 @mixin btn__primary-orange(

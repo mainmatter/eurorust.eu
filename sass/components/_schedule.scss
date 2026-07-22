@@ -154,10 +154,6 @@
 }
 
 .schedule-hero__nav {
-  position: static;
-  z-index: auto;
-  height: auto;
-
   @media screen and (max-width: 60rem) {
     p,
     a {
@@ -392,16 +388,7 @@
     white-space: nowrap;
 
     &:has(input:checked) {
-      background-image: none, linear-gradient(#f39cd1 10%, #f9528a 65%, #d31d7d 85%);
-      box-shadow:
-        0 0.75rem 0.5rem rgba(255, 255, 255, 0.4) inset,
-        0 0.25rem 0.5rem rgba(180, 70, 207, 1) inset;
-
-      &:hover {
-        box-shadow:
-          0 1rem 0.75rem rgba(255, 255, 255, 0.4) inset,
-          0 0.5rem 1rem rgba(180, 70, 207, 1) inset;
-      }
+      @include btn__primary-pink-surface($icon: none);
     }
 
     &:has(input:focus-visible) {
@@ -552,6 +539,9 @@
 .schedule-tools__summary,
 .schedule-tools__empty {
   color: var(--pink-100) !important;
+}
+
+.schedule-tools__empty {
   margin-top: 1.25rem;
   text-align: center;
 }
@@ -562,10 +552,6 @@
   @media screen and (max-width: 60rem) {
     scroll-margin-top: 1rem;
   }
-}
-
-.schedule__container {
-  width: 100%;
 }
 
 .schedule__day {

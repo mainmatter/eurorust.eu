@@ -8,7 +8,7 @@
   {% set filter_type = "service" %}
 {% endif %}
 <li
-  class="schedule__event schedule__event--{{ entry_layout }}"
+  class="schedule__event{% if entry_layout == 'full' %}{{ ' schedule__event--full' }}{% endif %}"
   data-schedule-entry
   data-start="{{ slot.start }}"
   {% if slot.end %}data-end="{{ slot.end }}"{% endif %}
