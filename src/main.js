@@ -14,7 +14,9 @@ import {
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 import { observeScroll } from './scroll';
+import { initSchedule } from './schedule';
 observeScroll();
+initSchedule();
 
 function debounce(callback, wait) {
   let to = null;
@@ -29,6 +31,7 @@ function debounce(callback, wait) {
 async function ferris() {
   // Canvas
   const canvas = document.querySelector('.hero__canvas canvas');
+  if (!canvas) return;
 
   // Load model
   const meshLoader = new GLTFLoader();

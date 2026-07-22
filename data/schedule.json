@@ -1,85 +1,553 @@
-[
-  {
-    "day": "1",
-    "date": "October 15, 2026",
-    "mainStage": [
-      { "time": "09:00–10:00", "title": "Doors open", "isBreak": true },
-      { "time": "10:00–10:45", "talk": "move-your-problems", "isSpan": true },
-      { "time": "11:00–11:30", "talk": "compiling-the-linux-kernel-with-gccrs" },
-      { "time": "11:45–12:15", "talk": "shipping-temporal-how-the-rust-ecosystem-built-chrome-s-newest-web-api" },
-
-      { "time": "12:15–13:45", "title": "Lunch break", "isBreak": true },
-      { "time": "13:45–14:15", "talk": "tales-from-the-embedded-rust-frontier-bootstrapping-a-brand-new-ecosystem" },
-      { "time": "14:30–15:00", "talk": "from-hardware-to-human-interface-building-hid-devices-in-rust" },
-      { "time": "15:15–15:45", "talk": "running-safely-with-scissors-lock-free-concurrency-for-maximum-throughput" },
-
-      { "time": "15:45–16:15", "title": "Coffee break", "isBreak": true },
-      { "time": "16:15–16:45", "talk": "game-show", "isSpan": true },
-      { "time": "17:00–17:30", "title": "TBA" },
-      { "time": "17:45–18:30", "talk": "image-codecs-rustification-in-chromium", "isSpan": true }
-    ],
-    "side": [
-      { "time": "09:00–10:00", "title": "Doors open", "isBreak": true },
-      { "time": "10:00–10:45", "isEmpty": true },
-      { "time": "11:00–11:30", "talk": "what-s-next-for-rust-s-type-system" },
-      { "time": "11:45–12:15", "talk": "optimizing-the-new-rust-trait-solver" },
-
-      { "time": "12:15–13:45", "title": "Lunch break", "isBreak": true },
-      { "time": "13:45–14:15", "talk": "building-a-query-system" },
-      {
-        "time": "14:30–15:00",
-        "talk": "rebuilding-the-tower-of-babel-write-your-own-language-server-with-tree-sitter"
-      },
-      { "time": "15:15–15:45", "talk": "lessons-from-building-a-background-task-processing-library" },
-
-      { "time": "15:45–16:15", "title": "Coffee break", "isBreak": true },
-      { "time": "16:15–16:45", "title": "TBA" },
-      { "time": "17:00–17:30", "talk": "inside-cloud-hypervisor-from-kvm-to-a-running-vm" },
-      { "time": "17:45–18:30", "isEmpty": true }
-    ]
+{
+  "timezone": "Europe/Madrid",
+  "entryTrackLabels": {
+    "main-stage": "Main Stage",
+    "side-stage": "Side Track",
+    "workshop": "Workshop",
+    "side-activity": "Side activity",
+    "all-stages": "All stages"
   },
-  {
-    "day": "2",
-    "date": "October 16, 2026",
-    "mainStage": [
-      {
-        "time": "10:00–10:45",
-        "talk": "rust-s-influence-on-c-and-python-shaping-the-future-of-three-communities",
-        "isSpan": true
-      },
-      { "time": "11:00–11:30", "talk": "blastbeat-when-a-decade-of-c-meets-rust-and-io-uring" },
-      { "time": "11:45–12:15", "talk": "qt-bridges-bringing-a-mature-c-ui-framework-to-rust" },
-
-      { "time": "12:15–13:45", "title": "Lunch break", "isBreak": true },
-      {
-        "time": "13:45–14:15",
-        "talk": "how-i-built-a-file-search-that-is-50x-faster-than-ripgrep-and-made-it-into-opencode"
-      },
-      { "time": "14:30–15:00", "talk": "atomic-design-patterns-in-rust-from-orderings-to-code" },
-      {
-        "time": "15:15–15:45",
-        "talk": "building-a-high-performance-thread-per-core-zero-copy-opentelemetry-engine-in-rust"
-      },
-
-      { "time": "15:45–16:15", "title": "Coffee break", "isBreak": true },
-      { "time": "16:15–16:45", "talk": "from-deref-into-borrow-a-primer-on-standard-library-traits" },
-      { "time": "17:00–17:30", "title": "TBA" },
-      { "time": "17:45–18:30", "talk": "beyond-cargo-build", "isSpan": true }
-    ],
-    "side": [
-      { "time": "10:00–10:45", "isEmpty": true },
-      { "time": "11:00–11:30", "talk": "designing-state-machines-for-streaming-proxies-in-rust" },
-      { "time": "11:45–12:15", "talk": "supply-chain-attacks-and-how-to-protect-ourselves" },
-
-      { "time": "12:15–13:45", "title": "Lunch break", "isBreak": true },
-      { "time": "13:45–14:15", "talk": "vortex-one-format-for-any-shape" },
-      { "time": "14:30–15:00", "talk": "moving-a-quantum-compiler-from-python-to-rust" },
-      { "time": "15:15–15:45", "title": "TBA" },
-
-      { "time": "15:45–16:15", "title": "Coffee break", "isBreak": true },
-      { "time": "16:15–16:45", "title": "Main sponsor slot" },
-      { "time": "17:00–17:30", "talk": "beyond-flamegraphs-precise-rust-profiling-with-hotpath-rs" },
-      { "time": "17:45–18:30", "isEmpty": true }
-    ]
-  }
-]
+  "days": [
+    {
+      "id": "workshop-day",
+      "label": "Workshop Day",
+      "navLabel": "Workshop day",
+      "date": "2026-10-14",
+      "displayDate": "October 14, 2026",
+      "tracks": [
+        {
+          "id": "workshop",
+          "label": "Workshops"
+        },
+        {
+          "id": "side-activity",
+          "label": "Side activities"
+        }
+      ],
+      "layout": "independent-tracks",
+      "slots": [
+        {
+          "start": "2026-10-14T10:00:00+02:00",
+          "end": "2026-10-14T16:00:00+02:00",
+          "time": "10:00–16:00",
+          "entries": [
+            {
+              "type": "workshop",
+              "track": "workshop",
+              "ref": "c-to-rust"
+            },
+            {
+              "type": "workshop",
+              "track": "workshop",
+              "ref": "containers-are-dead"
+            },
+            {
+              "type": "workshop",
+              "track": "workshop",
+              "ref": "programming-a-line-follower-robot"
+            },
+            {
+              "type": "workshop",
+              "track": "workshop",
+              "ref": "hands-on-embedded-rust"
+            }
+          ]
+        },
+        {
+          "start": "2026-10-14T14:30:00+02:00",
+          "end": "2026-10-14T17:30:00+02:00",
+          "time": "14:30–17:30",
+          "entries": [
+            {
+              "type": "side-activity",
+              "track": "side-activity",
+              "ref": "bike-tour"
+            }
+          ]
+        },
+        {
+          "start": "2026-10-14T18:30:00+02:00",
+          "end": "2026-10-14T20:00:00+02:00",
+          "time": "18:30–20:00",
+          "entries": [
+            {
+              "type": "side-activity",
+              "track": "side-activity",
+              "ref": "boat-tour"
+            },
+            {
+              "type": "side-activity",
+              "track": "side-activity",
+              "ref": "wine-tasting"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day1",
+      "label": "Conference Day 1",
+      "navLabel": "Day 1",
+      "date": "2026-10-15",
+      "displayDate": "October 15, 2026",
+      "tracks": [
+        {
+          "id": "main-stage",
+          "label": "Main Stage"
+        },
+        {
+          "id": "side-stage",
+          "label": "Side Track"
+        }
+      ],
+      "slots": [
+        {
+          "start": "2026-10-15T09:00:00+02:00",
+          "end": "2026-10-15T10:00:00+02:00",
+          "time": "09:00–10:00",
+          "entries": [
+            {
+              "type": "service",
+              "track": "all-stages",
+              "title": "Doors open"
+            }
+          ]
+        },
+        {
+          "start": "2026-10-15T10:00:00+02:00",
+          "end": "2026-10-15T10:45:00+02:00",
+          "time": "10:00–10:45",
+          "entries": [
+            {
+              "type": "talk",
+              "track": "main-stage",
+              "ref": "move-your-problems",
+              "fullWidth": true
+            }
+          ]
+        },
+        {
+          "start": "2026-10-15T11:00:00+02:00",
+          "end": "2026-10-15T11:30:00+02:00",
+          "time": "11:00–11:30",
+          "entries": [
+            {
+              "type": "talk",
+              "track": "main-stage",
+              "ref": "compiling-the-linux-kernel-with-gccrs"
+            },
+            {
+              "type": "talk",
+              "track": "side-stage",
+              "ref": "what-s-next-for-rust-s-type-system"
+            }
+          ]
+        },
+        {
+          "start": "2026-10-15T11:45:00+02:00",
+          "end": "2026-10-15T12:15:00+02:00",
+          "time": "11:45–12:15",
+          "entries": [
+            {
+              "type": "talk",
+              "track": "main-stage",
+              "ref": "shipping-temporal-how-the-rust-ecosystem-built-chrome-s-newest-web-api"
+            },
+            {
+              "type": "talk",
+              "track": "side-stage",
+              "ref": "optimizing-the-new-rust-trait-solver"
+            }
+          ]
+        },
+        {
+          "start": "2026-10-15T12:15:00+02:00",
+          "end": "2026-10-15T13:45:00+02:00",
+          "time": "12:15–13:45",
+          "entries": [
+            {
+              "type": "break",
+              "track": "all-stages",
+              "title": "Lunch break"
+            }
+          ]
+        },
+        {
+          "start": "2026-10-15T13:45:00+02:00",
+          "end": "2026-10-15T14:15:00+02:00",
+          "time": "13:45–14:15",
+          "entries": [
+            {
+              "type": "talk",
+              "track": "main-stage",
+              "ref": "tales-from-the-embedded-rust-frontier-bootstrapping-a-brand-new-ecosystem"
+            },
+            {
+              "type": "talk",
+              "track": "side-stage",
+              "ref": "building-a-query-system"
+            }
+          ]
+        },
+        {
+          "start": "2026-10-15T14:30:00+02:00",
+          "end": "2026-10-15T15:00:00+02:00",
+          "time": "14:30–15:00",
+          "entries": [
+            {
+              "type": "talk",
+              "track": "main-stage",
+              "ref": "from-hardware-to-human-interface-building-hid-devices-in-rust"
+            },
+            {
+              "type": "talk",
+              "track": "side-stage",
+              "ref": "rebuilding-the-tower-of-babel-write-your-own-language-server-with-tree-sitter"
+            }
+          ]
+        },
+        {
+          "start": "2026-10-15T15:15:00+02:00",
+          "end": "2026-10-15T15:45:00+02:00",
+          "time": "15:15–15:45",
+          "entries": [
+            {
+              "type": "talk",
+              "track": "main-stage",
+              "ref": "running-safely-with-scissors-lock-free-concurrency-for-maximum-throughput"
+            },
+            {
+              "type": "talk",
+              "track": "side-stage",
+              "ref": "lessons-from-building-a-background-task-processing-library"
+            }
+          ]
+        },
+        {
+          "start": "2026-10-15T15:45:00+02:00",
+          "end": "2026-10-15T16:15:00+02:00",
+          "time": "15:45–16:15",
+          "entries": [
+            {
+              "type": "break",
+              "track": "all-stages",
+              "title": "Coffee break"
+            }
+          ]
+        },
+        {
+          "start": "2026-10-15T16:15:00+02:00",
+          "end": "2026-10-15T16:45:00+02:00",
+          "time": "16:15–16:45",
+          "entries": [
+            {
+              "type": "talk",
+              "track": "main-stage",
+              "ref": "game-show",
+              "fullWidth": true
+            }
+          ]
+        },
+        {
+          "start": "2026-10-15T17:00:00+02:00",
+          "end": "2026-10-15T17:30:00+02:00",
+          "time": "17:00–17:30",
+          "entries": [
+            {
+              "type": "talk",
+              "track": "main-stage",
+              "title": "TBA"
+            },
+            {
+              "type": "talk",
+              "track": "side-stage",
+              "ref": "inside-cloud-hypervisor-from-kvm-to-a-running-vm"
+            }
+          ]
+        },
+        {
+          "start": "2026-10-15T17:45:00+02:00",
+          "end": "2026-10-15T18:30:00+02:00",
+          "time": "17:45–18:30",
+          "entries": [
+            {
+              "type": "talk",
+              "track": "main-stage",
+              "ref": "image-codecs-rustification-in-chromium",
+              "fullWidth": true
+            }
+          ]
+        },
+        {
+          "start": "2026-10-15T20:00:00+02:00",
+          "time": "20:00",
+          "entries": [
+            {
+              "type": "side-activity",
+              "track": "side-activity",
+              "ref": "group-dinner",
+              "fullWidth": true
+            }
+          ]
+        },
+        {
+          "start": "2026-10-15T21:00:00+02:00",
+          "end": "2026-10-15T23:00:00+02:00",
+          "time": "21:00–23:00",
+          "entries": [
+            {
+              "type": "side-activity",
+              "track": "side-activity",
+              "ref": "karaoke",
+              "fullWidth": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "day2",
+      "label": "Conference Day 2",
+      "navLabel": "Day 2",
+      "date": "2026-10-16",
+      "displayDate": "October 16, 2026",
+      "tracks": [
+        {
+          "id": "main-stage",
+          "label": "Main Stage"
+        },
+        {
+          "id": "side-stage",
+          "label": "Side Track"
+        }
+      ],
+      "slots": [
+        {
+          "start": "2026-10-16T10:00:00+02:00",
+          "end": "2026-10-16T10:45:00+02:00",
+          "time": "10:00–10:45",
+          "entries": [
+            {
+              "type": "talk",
+              "track": "main-stage",
+              "ref": "rust-s-influence-on-c-and-python-shaping-the-future-of-three-communities",
+              "fullWidth": true
+            }
+          ]
+        },
+        {
+          "start": "2026-10-16T11:00:00+02:00",
+          "end": "2026-10-16T11:30:00+02:00",
+          "time": "11:00–11:30",
+          "entries": [
+            {
+              "type": "talk",
+              "track": "main-stage",
+              "ref": "blastbeat-when-a-decade-of-c-meets-rust-and-io-uring"
+            },
+            {
+              "type": "talk",
+              "track": "side-stage",
+              "ref": "designing-state-machines-for-streaming-proxies-in-rust"
+            }
+          ]
+        },
+        {
+          "start": "2026-10-16T11:45:00+02:00",
+          "end": "2026-10-16T12:15:00+02:00",
+          "time": "11:45–12:15",
+          "entries": [
+            {
+              "type": "talk",
+              "track": "main-stage",
+              "ref": "qt-bridges-bringing-a-mature-c-ui-framework-to-rust"
+            },
+            {
+              "type": "talk",
+              "track": "side-stage",
+              "ref": "supply-chain-attacks-and-how-to-protect-ourselves"
+            }
+          ]
+        },
+        {
+          "start": "2026-10-16T12:15:00+02:00",
+          "end": "2026-10-16T13:45:00+02:00",
+          "time": "12:15–13:45",
+          "entries": [
+            {
+              "type": "break",
+              "track": "all-stages",
+              "title": "Lunch break"
+            }
+          ]
+        },
+        {
+          "start": "2026-10-16T13:45:00+02:00",
+          "end": "2026-10-16T14:15:00+02:00",
+          "time": "13:45–14:15",
+          "entries": [
+            {
+              "type": "talk",
+              "track": "main-stage",
+              "ref": "how-i-built-a-file-search-that-is-50x-faster-than-ripgrep-and-made-it-into-opencode"
+            },
+            {
+              "type": "talk",
+              "track": "side-stage",
+              "ref": "vortex-one-format-for-any-shape"
+            }
+          ]
+        },
+        {
+          "start": "2026-10-16T14:30:00+02:00",
+          "end": "2026-10-16T15:00:00+02:00",
+          "time": "14:30–15:00",
+          "entries": [
+            {
+              "type": "talk",
+              "track": "main-stage",
+              "ref": "atomic-design-patterns-in-rust-from-orderings-to-code"
+            },
+            {
+              "type": "talk",
+              "track": "side-stage",
+              "ref": "moving-a-quantum-compiler-from-python-to-rust"
+            }
+          ]
+        },
+        {
+          "start": "2026-10-16T15:15:00+02:00",
+          "end": "2026-10-16T15:45:00+02:00",
+          "time": "15:15–15:45",
+          "entries": [
+            {
+              "type": "talk",
+              "track": "main-stage",
+              "ref": "building-a-high-performance-thread-per-core-zero-copy-opentelemetry-engine-in-rust"
+            },
+            {
+              "type": "talk",
+              "track": "side-stage",
+              "title": "TBA"
+            }
+          ]
+        },
+        {
+          "start": "2026-10-16T15:45:00+02:00",
+          "end": "2026-10-16T16:15:00+02:00",
+          "time": "15:45–16:15",
+          "entries": [
+            {
+              "type": "break",
+              "track": "all-stages",
+              "title": "Coffee break"
+            }
+          ]
+        },
+        {
+          "start": "2026-10-16T16:15:00+02:00",
+          "end": "2026-10-16T16:45:00+02:00",
+          "time": "16:15–16:45",
+          "entries": [
+            {
+              "type": "talk",
+              "track": "main-stage",
+              "ref": "from-deref-into-borrow-a-primer-on-standard-library-traits"
+            },
+            {
+              "type": "service",
+              "track": "side-stage",
+              "title": "Main sponsor slot"
+            }
+          ]
+        },
+        {
+          "start": "2026-10-16T17:00:00+02:00",
+          "end": "2026-10-16T17:30:00+02:00",
+          "time": "17:00–17:30",
+          "entries": [
+            {
+              "type": "talk",
+              "track": "main-stage",
+              "title": "TBA"
+            },
+            {
+              "type": "talk",
+              "track": "side-stage",
+              "ref": "beyond-flamegraphs-precise-rust-profiling-with-hotpath-rs"
+            }
+          ]
+        },
+        {
+          "start": "2026-10-16T17:45:00+02:00",
+          "end": "2026-10-16T18:30:00+02:00",
+          "time": "17:45–18:30",
+          "entries": [
+            {
+              "type": "talk",
+              "track": "main-stage",
+              "ref": "beyond-cargo-build",
+              "fullWidth": true
+            }
+          ]
+        },
+        {
+          "start": "2026-10-16T18:00:00+02:00",
+          "end": "2026-10-16T22:00:00+02:00",
+          "time": "18:00–22:00",
+          "entries": [
+            {
+              "type": "side-activity",
+              "track": "side-activity",
+              "fullWidth": true,
+              "title": "Closing Party",
+              "description": "The conference ends with a closing party at Bikini Barcelona.",
+              "image": "/images/activities/party.webp",
+              "imageAlt": "Disco ball",
+              "url": "https://maps.app.goo.gl/rfuhDZ3M6pxXWYP58"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "post-day",
+      "label": "Post-Conference Day",
+      "navLabel": "Post-conference day",
+      "date": "2026-10-17",
+      "displayDate": "October 17, 2026",
+      "tracks": [
+        {
+          "id": "side-activity",
+          "label": "Side activities"
+        }
+      ],
+      "slots": [
+        {
+          "start": "2026-10-17T10:00:00+02:00",
+          "end": "2026-10-17T16:00:00+02:00",
+          "time": "10:00–16:00",
+          "entries": [
+            {
+              "type": "side-activity",
+              "track": "side-activity",
+              "ref": "impl-day"
+            }
+          ]
+        },
+        {
+          "start": "2026-10-17T13:00:00+02:00",
+          "end": "2026-10-17T15:00:00+02:00",
+          "time": "13:00–15:00",
+          "entries": [
+            {
+              "type": "side-activity",
+              "track": "side-activity",
+              "ref": "museum-tour"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

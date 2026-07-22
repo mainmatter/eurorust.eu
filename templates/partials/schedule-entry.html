@@ -1,0 +1,96 @@
+{% set track_label = schedule.entryTrackLabels[entry.track] %}
+
+{% if entry.type == "talk" and entry.ref %}
+  {% set path = "talks/" ~ entry.ref ~ ".md" %}
+  {% set event = get_page(path = path) %}
+  <article class="activity-card">
+    <a class="activity-card__link" href="{{ event.path }}">
+      <div class="activity-card__content">
+        <p class="activity-card__track">{{ track_label }}</p>
+        <time class="activity-card__time" datetime="{{ slot.start }}">{{ slot.time }}</time>
+        <p class="beige activity-card__title"><strong>{{ event.title }}</strong></p>
+        {% for speaker_slug in event.extra.speakers | default(value=[]) %}
+          {% set speaker_path = "speakers/" ~ speaker_slug ~ ".md" %}
+          {% set speaker = get_page(path = speaker_path) %}
+          {% if speaker.extra.image %}
+            <img
+              class="activity-card__portrait mb-3"
+              src="{{ speaker.extra.image }}"
+              alt="Photo of {{ speaker.extra.name }}"
+            />
+          {% else %}
+            <img class="activity-card__portrait mb-3" src="/images/talks/placeholder.webp" alt="" />
+          {% endif %}
+          <p class="beige activity-card__speaker mt-3">»{{ speaker.extra.name }}</p>
+        {% endfor %}
+        {% if event.extra.sponsor %}
+          <p class="beige activity-card__speaker mt-3">*Sponsored by {{ event.extra.sponsor }}</p>
+        {% endif %}
+        <p class="activity-card__status" data-live-status hidden></p>
+      </div>
+    </a>
+  </article>
+{% elif entry.type == "workshop" and entry.ref %}
+  {% set path = "workshops/" ~ entry.ref ~ ".md" %}
+  {% set event = get_page(path = path) %}
+  <article class="activity-card">
+    <a class="activity-card__link" href="{{ event.path }}">
+      <div class="activity-card__content">
+        <p class="activity-card__track">{{ track_label }}</p>
+        {% if event.extra.heroimage %}
+          <img
+            class="activity-card__image mb-3"
+            src="{{ event.extra.heroimage }}"
+            alt="{{ event.extra.heroimage_alt }}"
+          />
+        {% else %}
+          <img class="activity-card__image mb-3" src="/images/events/placeholder.webp" alt="" />
+        {% endif %}
+        <time class="activity-card__time" datetime="{{ slot.start }}">{{ slot.time }}</time>
+        <p class="activity-card__title"><strong>{{ event.title }}</strong></p>
+        {% if event.extra.mentors %}
+          <p class="activity-card__speaker mt-3">
+            »Led by
+            {% for mentor in event.extra.mentors %}{{ mentor.name }}{% if not loop.last %},{% endif %}{% endfor %}
+          </p>
+        {% endif %}
+        {% if event.extra.sponsor %}
+          <p class="sponsored-by">*Sponsored by {{ event.extra.sponsor }}</p>
+        {% endif %}
+        <p class="activity-card__status" data-live-status hidden></p>
+      </div>
+    </a>
+  </article>
+{% elif entry.type == "side-activity" and entry.ref %}
+  {% set path = "activities/" ~ entry.ref ~ ".md" %}
+  {% set event = get_page(path = path) %}
+  <article class="activity-card">
+    <a class="activity-card__link" href="{{ event.path }}">
+      <div class="activity-card__content">
+        <p class="activity-card__track">{{ track_label }}</p>
+        {% if event.extra.heroimage %}
+          <img
+            class="activity-card__image mb-3"
+            src="{{ event.extra.heroimage }}"
+            alt="{{ event.extra.heroimage_alt }}"
+          />
+        {% else %}
+          <img class="activity-card__image mb-3" src="/images/events/placeholder.webp" alt="" />
+        {% endif %}
+        <time class="activity-card__time" datetime="{{ slot.start }}">{{ slot.time }}</time>
+        <p class="beige activity-card__title"><strong>{{ event.title }}</strong></p>
+        <p class="activity-card__status" data-live-status hidden></p>
+      </div>
+    </a>
+  </article>
+{% else %}
+  <article class="activity-card">
+    {% if entry.url %}
+      <a class="activity-card__link" href="{{ entry.url }}" target="_blank" rel="noopener">
+        {% include "partials/schedule-entry-generic-content.html" %}
+      </a>
+    {% else %}
+      {% include "partials/schedule-entry-generic-content.html" %}
+    {% endif %}
+  </article>
+{% endif %}

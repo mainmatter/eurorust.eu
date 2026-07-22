@@ -1,0 +1,20 @@
+{% if entry.type == "talk" %}
+  {% set filter_type = entry.track ~ "-talk" %}
+{% elif entry.type == "workshop" %}
+  {% set filter_type = "workshop" %}
+{% elif entry.type == "side-activity" %}
+  {% set filter_type = "side-activity" %}
+{% else %}
+  {% set filter_type = "service" %}
+{% endif %}
+<li
+  class="schedule__event{% if entry_layout == 'full' %}{{ ' schedule__event--full' }}{% endif %}"
+  data-schedule-entry
+  data-start="{{ slot.start }}"
+  {% if slot.end %}data-end="{{ slot.end }}"{% endif %}
+  data-filter-type="{{ filter_type }}"
+  data-track="{{ entry.track }}"
+  data-track-label="{{ schedule.entryTrackLabels[entry.track] }}"
+>
+  {% include "partials/schedule-entry.html" %}
+</li>
