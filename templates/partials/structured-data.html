@@ -1,0 +1,195 @@
+{% set event = load_data(path="data/event.json") %}
+{% set schedule = load_data(path="data/schedule.json") %}
+{% set canonical_url = current_url | default(value=event.website) %}
+{% set organization_id = event.website ~ "#organization" %}
+{% set website_id = event.website ~ "#website" %}
+{% set event_id = event.website ~ "#event" %}
+{% set organization_logo = config.base_url ~ "/images/logo.webp" %}
+{% set event_image = config.base_url ~ event.image %}
+{% set page_description = event.description %}
+{% if page is defined %}
+  {% if page.description %}
+    {% set page_description = page.description %}
+  {% elif page.extra.description %}
+    {% set page_description = page.extra.description | striptags %}
+  {% elif page.extra.abstract %}
+    {% set page_description = page.extra.abstract | striptags %}
+  {% elif page.extra.bio %}
+    {% set page_description = page.extra.bio | striptags %}
+  {% endif %}
+{% endif %}
+
+{% set_global session_start = false %}
+{% set_global session_end = false %}
+{% set_global session_track = false %}
+{% if page is defined %}
+  {% for day in schedule.days %}
+    {% for slot in day.slots %}
+      {% for entry in slot.entries %}
+        {% if entry.ref and entry.ref == page.slug %}
+          {% set_global session_start = slot.start %}
+          {% set_global session_end = slot.end | default(value=false) %}
+          {% set_global session_track = schedule.entryTrackLabels[entry.track] %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  {% endfor %}
+{% endif %}
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": {{ organization_id | json_encode | safe }},
+        "name": {{ event.organizer.name | json_encode | safe }},
+        "url": {{ event.organizer.url | json_encode | safe }},
+        "logo": {{ organization_logo | json_encode | safe }},
+        "sameAs": {{ event.socialProfiles | json_encode | safe }}
+      },
+      {
+        "@type": "WebSite",
+        "@id": {{ website_id | json_encode | safe }},
+        "name": {{ event.siteName | json_encode | safe }},
+        "url": {{ event.website | json_encode | safe }},
+        "description": {{ event.description | json_encode | safe }},
+        "publisher": { "@id": {{ organization_id | json_encode | safe }} },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "Event",
+        "@id": {{ event_id | json_encode | safe }},
+        "name": {{ event.name | json_encode | safe }},
+        "description": {{ event.description | json_encode | safe }},
+        "url": {{ event.website | json_encode | safe }},
+        "image": {{ event_image | json_encode | safe }},
+        "startDate": {{ event.startDate | json_encode | safe }},
+        "endDate": {{ event.endDate | json_encode | safe }},
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
+        "location": {
+          "@type": "Place",
+          "name": {{ event.location.name | json_encode | safe }},
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": {{ event.location.streetAddress | json_encode | safe }},
+            "postalCode": {{ event.location.postalCode | json_encode | safe }},
+            "addressLocality": {{ event.location.addressLocality | json_encode | safe }},
+            "addressCountry": {{ event.location.addressCountry | json_encode | safe }}
+          }
+        },
+        "organizer": { "@id": {{ organization_id | json_encode | safe }} }
+      }
+      {% if page is defined and current_path is starting_with("/speakers/") %}
+        {% set person_id = canonical_url ~ "#person" %}
+        ,{
+          "@type": "Person",
+          "@id": {{ person_id | json_encode | safe }},
+          "name": {{ page.extra.name | json_encode | safe }},
+          "description": {{ page_description | json_encode | safe }},
+          "url": {{ canonical_url | json_encode | safe }}
+          {% if page.extra.image and not page.extra.image is containing("/.") %}
+            {% set person_image = config.base_url ~ page.extra.image %}
+            ,"image": {{ person_image | json_encode | safe }}
+          {% endif %}
+        }
+      {% elif page is defined and current_path is starting_with("/talks/") and session_start %}
+        {% set session_id = canonical_url ~ "#session" %}
+        ,{
+          "@type": "Event",
+          "@id": {{ session_id | json_encode | safe }},
+          "name": {{ page.title | json_encode | safe }},
+          "description": {{ page_description | json_encode | safe }},
+          "url": {{ canonical_url | json_encode | safe }},
+          "superEvent": { "@id": {{ event_id | json_encode | safe }} }
+          {% if session_start %},"startDate": {{ session_start | json_encode | safe }}{% endif %}
+          {% if session_end %},"endDate": {{ session_end | json_encode | safe }}{% endif %}
+          {% if session_track %}
+            {% set session_location = event.location.name ~ " – " ~ session_track %}
+            ,"location": {
+              "@type": "Place",
+              "name": {{ session_location | json_encode | safe }},
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": {{ event.location.streetAddress | json_encode | safe }},
+                "postalCode": {{ event.location.postalCode | json_encode | safe }},
+                "addressLocality": {{ event.location.addressLocality | json_encode | safe }},
+                "addressCountry": {{ event.location.addressCountry | json_encode | safe }}
+              }
+            }
+          {% endif %}
+          {% if page.extra.speakers %}
+            ,"performer": [
+              {% for speaker_slug in page.extra.speakers %}
+                {% set speaker = get_page(path="speakers/" ~ speaker_slug ~ ".md") %}
+                {
+                  "@type": "Person",
+                  "name": {{ speaker.extra.name | json_encode | safe }},
+                  "url": {{ speaker.permalink | json_encode | safe }}
+                }{% if not loop.last %},{% endif %}
+              {% endfor %}
+            ]
+          {% endif %}
+        }
+      {% elif page is defined and current_path is starting_with("/workshops/") %}
+        {% set course_id = canonical_url ~ "#course" %}
+        ,{
+          "@type": "Course",
+          "@id": {{ course_id | json_encode | safe }},
+          "name": {{ page.title | json_encode | safe }},
+          "description": {{ page_description | json_encode | safe }},
+          "url": {{ canonical_url | json_encode | safe }},
+          "provider": { "@id": {{ organization_id | json_encode | safe }} }
+          {% if page.extra.mentors %}
+            ,"instructor": [
+              {% for mentor in page.extra.mentors %}
+                { "@type": "Person", "name": {{ mentor.name | json_encode | safe }} }{% if not loop.last %},{% endif %}
+              {% endfor %}
+            ]
+          {% endif %}
+          {% if session_start %}
+            ,"hasCourseInstance": {
+              "@type": "CourseInstance",
+              "courseMode": "onsite",
+              "startDate": {{ session_start | json_encode | safe }}
+              {% if session_end %},"endDate": {{ session_end | json_encode | safe }}{% endif %}
+              ,"location": {
+                "@type": "Place",
+                "name": "Workshop location to be announced",
+                "address": { "@type": "PostalAddress", "addressLocality": "Barcelona", "addressCountry": "ES" }
+              }
+            }
+          {% endif %}
+        }
+      {% elif page is defined and current_path is starting_with("/activities/") and session_start %}
+        {% set activity_id = canonical_url ~ "#activity" %}
+        ,{
+          "@type": "Event",
+          "@id": {{ activity_id | json_encode | safe }},
+          "name": {{ page.title | json_encode | safe }},
+          "description": {{ page_description | json_encode | safe }},
+          "url": {{ canonical_url | json_encode | safe }},
+          "superEvent": { "@id": {{ event_id | json_encode | safe }} },
+          "eventStatus": "https://schema.org/EventScheduled",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+          {% if session_start %},"startDate": {{ session_start | json_encode | safe }}{% endif %}
+          {% if session_end %},"endDate": {{ session_end | json_encode | safe }}{% endif %}
+          {% if page.extra.location_name %}
+            ,"location": {
+              "@type": "Place",
+              "name": {{ page.extra.location_name | json_encode | safe }}
+              {% if page.extra.location %},"address": {{ page.extra.location | json_encode | safe }}{% endif %}
+            }
+          {% else %}
+            ,"location": {
+              "@type": "Place",
+              "name": "Barcelona",
+              "address": { "@type": "PostalAddress", "addressLocality": "Barcelona", "addressCountry": "ES" }
+            }
+          {% endif %}
+        }
+      {% endif %}
+    ]
+  }
+</script>

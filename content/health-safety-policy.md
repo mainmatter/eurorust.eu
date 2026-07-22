@@ -1,6 +1,7 @@
 +++
 template = "generic-content.html"
 title = "Health & Safety Policy"
+description = "Health and safety guidance for EuroRust 2026 attendees, speakers, sponsors, and service partners."
 +++
 
 <div class="box mb-7"">

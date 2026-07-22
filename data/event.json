@@ -1,0 +1,29 @@
+{
+  "name": "EuroRust 2026",
+  "siteName": "EuroRust",
+  "description": "EuroRust 2026 is a conference for the European Rust community, held in Barcelona and online from October 14 to 17, 2026.",
+  "website": "https://eurorust.eu/",
+  "startDate": "2026-10-14T10:00:00+02:00",
+  "endDate": "2026-10-17T16:00:00+02:00",
+  "location": {
+    "name": "Auditori L’illa",
+    "streetAddress": "Av. Diagonal, 547",
+    "postalCode": "08029",
+    "addressLocality": "Barcelona",
+    "addressCountry": "ES"
+  },
+  "image": "/images/og-image.webp",
+  "imageAlt": "EuroRust 2026 in Barcelona and online",
+  "ticketUrl": "https://www.tickettailor.com/events/eurorust/2022388",
+  "sponsorshipUrl": "https://eurorust.eu/2026-sponsorship-prospectus.pdf",
+  "organizer": {
+    "name": "Events Matter UG",
+    "url": "https://eurorust.eu/"
+  },
+  "socialProfiles": [
+    "https://www.youtube.com/@eurorust",
+    "https://fosstodon.org/@eurorust",
+    "https://bsky.app/profile/eurorust.eu",
+    "https://twitter.com/euro_rust"
+  ]
+}

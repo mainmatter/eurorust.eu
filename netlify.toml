@@ -16,22 +16,14 @@ BUILD_MODE = "production"
 # `$DEPLOY_PRIME_URL`.
 
 [context.deploy-preview]
-command = "vite build && zola build --base-url $DEPLOY_PRIME_URL"
+command = "vite build && zola build --base-url $DEPLOY_PRIME_URL && node scripts/generate-llms.js"
 
 [[redirects]]
   from = "/workshops/you-cant-fix-what-you-cant-see-telemetry-for-rust-apis/"
   to = "/workshops/telemetry-for-rust-apis"
 
 [[redirects]]
-  from = "/schedule/*"
-  to = "/"
-
-[[redirects]]
   from = "/workshops/"
-  to = "/"
-
-[[redirects]]
-  from = "/health-safety-policy/"
   to = "/"
 
 [[redirects]]
@@ -39,29 +31,7 @@ command = "vite build && zola build --base-url $DEPLOY_PRIME_URL"
   to = "/sponsorship-prospectus-2026.pdf"
 
 [[redirects]]
-  from = "/travel/"
-  to = "/2024/travel/"
-
-[[redirects]]
-  from = "/cancellation/"
-  to = "/"
-
-[[redirects]]
-  from = "/accessibility"
-  to = "/"
-
-[[redirects]]
-  from = "/health-safety-policy"
-  to = "/"
-
-# the old speaker and moderator pages no longer exist in the root (and not at all for 2024)
-
-[[redirects]]
   from = "/moderators/*"
-  to = "/"
-
-[[redirects]]
-  from = "/speakers/*"
   to = "/"
 
 # 2024 sponsor
@@ -428,4 +398,3 @@ command = "vite build && zola build --base-url $DEPLOY_PRIME_URL"
 [[redirects]]
   from = "/talks/encodings-all-the-way-down-building-vortex-an-extensible-file-format-in-rust"
   to = "/talks/vortex-one-format-for-any-shape/"
-

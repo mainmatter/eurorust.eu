@@ -1,11 +1,4 @@
 {% extends "base.html" %}
-{% block og_image %}
-  {% if page.extra.ogimage %}
-    <meta property="og:image" content="{{ config.base_url | safe }}{{ page.extra.ogimage | safe }}" />
-    <meta name="twitter:image" content="{{ config.base_url | safe }}{{ page.extra.ogimage | safe }}" />
-  {% endif %}
-{% endblock %}
-
 {% block content %}
   <div class="generic-block workshop {{ page.title | lower | replace(from=' ', to='_') }}">
     {% include "sections/nav.html" %}

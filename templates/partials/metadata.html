@@ -1,0 +1,65 @@
+{% set event = load_data(path="data/event.json") %}
+{% set meta_title = event.name ~ ", Barcelona & online" %}
+{% set meta_description = event.description %}
+{% set meta_image = event.image %}
+{% set meta_image_alt = event.imageAlt %}
+{% set meta_type = "website" %}
+{% set canonical_url = current_url | default(value=event.website) %}
+
+{% if page is defined %}
+  {% set meta_title = page.title ~ " | " ~ event.name %}
+  {% if page.description %}
+    {% set meta_description = page.description %}
+  {% elif page.extra.description %}
+    {% set meta_description = page.extra.description | striptags | truncate(length=220) %}
+  {% elif page.extra.abstract %}
+    {% set meta_description = page.extra.abstract | striptags | truncate(length=220) %}
+  {% elif page.extra.bio %}
+    {% set meta_description = page.extra.bio | striptags | truncate(length=220) %}
+  {% endif %}
+  {% if page.extra.meta_title %}
+    {% set meta_title = page.extra.meta_title %}
+  {% endif %}
+  {% if page.extra.ogimage %}
+    {% set meta_image = page.extra.ogimage %}
+  {% endif %}
+  {% if page.extra.ogimage_alt %}
+    {% set meta_image_alt = page.extra.ogimage_alt %}
+  {% elif page.extra.heroimage_alt %}
+    {% set meta_image_alt = page.extra.heroimage_alt %}
+  {% else %}
+    {% set meta_image_alt = page.title %}
+  {% endif %}
+  {% if page.extra.ogtype %}
+    {% set meta_type = page.extra.ogtype %}
+  {% elif current_path is starting_with("/talks/") or current_path is starting_with("/workshops/") %}
+    {% set meta_type = "article" %}
+  {% elif current_path is starting_with("/speakers/") %}
+    {% set meta_type = "profile" %}
+  {% endif %}
+{% elif section is defined and section.extra.meta_title %}
+  {% set meta_title = section.extra.meta_title %}
+{% endif %}
+
+{% if meta_image is starting_with("http") %}
+  {% set absolute_meta_image = meta_image %}
+{% else %}
+  {% set absolute_meta_image = config.base_url ~ meta_image %}
+{% endif %}
+
+<title>{{ meta_title }}</title>
+<link rel="canonical" href="{{ canonical_url }}" />
+<meta name="description" content="{{ meta_description }}" />
+<meta property="og:site_name" content="{{ event.siteName }}" />
+<meta property="og:title" content="{{ meta_title }}" />
+<meta property="og:description" content="{{ meta_description }}" />
+<meta property="og:type" content="{{ meta_type }}" />
+<meta property="og:url" content="{{ canonical_url }}" />
+<meta property="og:image" content="{{ absolute_meta_image }}" />
+<meta property="og:image:alt" content="{{ meta_image_alt }}" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@euro_rust" />
+<meta name="twitter:title" content="{{ meta_title }}" />
+<meta name="twitter:description" content="{{ meta_description }}" />
+<meta name="twitter:image" content="{{ absolute_meta_image }}" />
+<meta name="twitter:image:alt" content="{{ meta_image_alt }}" />
