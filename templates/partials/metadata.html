@@ -1,13 +1,18 @@
-{% set event = load_data(path="data/event.json") %}
-{% set meta_title = event.name ~ ", Barcelona & online" %}
-{% set meta_description = event.description %}
-{% set meta_image = event.image %}
-{% set meta_image_alt = event.imageAlt %}
+{% set event_name = "EuroRust 2026" %}
+{% set site_name = "EuroRust" %}
+{% set event_description = "EuroRust 2026 is a conference for the European Rust community, held in Barcelona and online from October 14 to 17, 2026." %}
+{% set event_website = "https://eurorust.eu/" %}
+{% set event_image = "/images/og-image.webp" %}
+{% set event_image_alt = "EuroRust 2026 in Barcelona and online" %}
+{% set meta_title = event_name ~ ", Barcelona & online" %}
+{% set meta_description = event_description %}
+{% set meta_image = event_image %}
+{% set meta_image_alt = event_image_alt %}
 {% set meta_type = "website" %}
-{% set canonical_url = current_url | default(value=event.website) %}
+{% set canonical_url = current_url | default(value=event_website) %}
 
 {% if page is defined %}
-  {% set meta_title = page.title ~ " | " ~ event.name %}
+  {% set meta_title = page.title ~ " | " ~ event_name %}
   {% if page.description %}
     {% set meta_description = page.description %}
   {% elif page.extra.description %}
@@ -34,8 +39,6 @@
     {% set meta_type = page.extra.ogtype %}
   {% elif current_path is starting_with("/talks/") or current_path is starting_with("/workshops/") %}
     {% set meta_type = "article" %}
-  {% elif current_path is starting_with("/speakers/") %}
-    {% set meta_type = "profile" %}
   {% endif %}
 {% elif section is defined and section.extra.meta_title %}
   {% set meta_title = section.extra.meta_title %}
@@ -50,7 +53,7 @@
 <title>{{ meta_title }}</title>
 <link rel="canonical" href="{{ canonical_url }}" />
 <meta name="description" content="{{ meta_description }}" />
-<meta property="og:site_name" content="{{ event.siteName }}" />
+<meta property="og:site_name" content="{{ site_name }}" />
 <meta property="og:title" content="{{ meta_title }}" />
 <meta property="og:description" content="{{ meta_description }}" />
 <meta property="og:type" content="{{ meta_type }}" />

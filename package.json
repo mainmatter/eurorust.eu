@@ -8,9 +8,7 @@
     "lint:fix": "prettier --write **/*.{html,scss,js,json,yml,yaml,md}",
     "build:vite": "cross-env BUILD_MODE=production vite build",
     "build:zola": "cross-env BUILD_MODE=production zola build",
-    "build:llms": "node scripts/generate-llms.js",
-    "build": "concurrently --max-processes 1 \"pnpm:build:vite\" \"pnpm:build:zola\" \"pnpm:build:llms\"",
-    "check:metadata": "node scripts/validate-generated-metadata.js",
+    "build": "concurrently --max-processes 1 \"pnpm:build:vite\" \"pnpm:build:zola\"",
     "dev": "concurrently -c magenta,cyan \"pnpm:serve:*\"",
     "serve:vite": "vite serve",
     "serve:zola": "zola serve"

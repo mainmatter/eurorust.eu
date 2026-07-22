@@ -1,12 +1,26 @@
-{% set event = load_data(path="data/event.json") %}
+{% set event_name = "EuroRust 2026" %}
+{% set site_name = "EuroRust" %}
+{% set event_description = "EuroRust 2026 is a conference for the European Rust community, held in Barcelona and online from October 14 to 17, 2026." %}
+{% set event_website = "https://eurorust.eu/" %}
+{% set event_start = "2026-10-14T10:00:00+02:00" %}
+{% set event_end = "2026-10-17T16:00:00+02:00" %}
+{% set venue_name = "Auditori L’illa" %}
+{% set venue_street = "Av. Diagonal, 547" %}
+{% set venue_postal_code = "08029" %}
+{% set venue_city = "Barcelona" %}
+{% set venue_country = "ES" %}
+{% set event_image_path = "/images/og-image.webp" %}
+{% set organizer_name = "Events Matter UG" %}
+{% set organizer_url = "https://eurorust.eu/" %}
+{% set social_profiles = ["https://www.youtube.com/@eurorust", "https://fosstodon.org/@eurorust", "https://bsky.app/profile/eurorust.eu", "https://twitter.com/euro_rust"] %}
 {% set schedule = load_data(path="data/schedule.json") %}
-{% set canonical_url = current_url | default(value=event.website) %}
-{% set organization_id = event.website ~ "#organization" %}
-{% set website_id = event.website ~ "#website" %}
-{% set event_id = event.website ~ "#event" %}
+{% set canonical_url = current_url | default(value=event_website) %}
+{% set organization_id = event_website ~ "#organization" %}
+{% set website_id = event_website ~ "#website" %}
+{% set event_id = event_website ~ "#event" %}
 {% set organization_logo = config.base_url ~ "/images/logo.webp" %}
-{% set event_image = config.base_url ~ event.image %}
-{% set page_description = event.description %}
+{% set event_image = config.base_url ~ event_image_path %}
+{% set page_description = event_description %}
 {% if page is defined %}
   {% if page.description %}
     {% set page_description = page.description %}
@@ -43,58 +57,45 @@
       {
         "@type": "Organization",
         "@id": {{ organization_id | json_encode | safe }},
-        "name": {{ event.organizer.name | json_encode | safe }},
-        "url": {{ event.organizer.url | json_encode | safe }},
+        "name": {{ organizer_name | json_encode | safe }},
+        "url": {{ organizer_url | json_encode | safe }},
         "logo": {{ organization_logo | json_encode | safe }},
-        "sameAs": {{ event.socialProfiles | json_encode | safe }}
+        "sameAs": {{ social_profiles | json_encode | safe }}
       },
       {
         "@type": "WebSite",
         "@id": {{ website_id | json_encode | safe }},
-        "name": {{ event.siteName | json_encode | safe }},
-        "url": {{ event.website | json_encode | safe }},
-        "description": {{ event.description | json_encode | safe }},
+        "name": {{ site_name | json_encode | safe }},
+        "url": {{ event_website | json_encode | safe }},
+        "description": {{ event_description | json_encode | safe }},
         "publisher": { "@id": {{ organization_id | json_encode | safe }} },
         "inLanguage": "en"
       },
       {
         "@type": "Event",
         "@id": {{ event_id | json_encode | safe }},
-        "name": {{ event.name | json_encode | safe }},
-        "description": {{ event.description | json_encode | safe }},
-        "url": {{ event.website | json_encode | safe }},
+        "name": {{ event_name | json_encode | safe }},
+        "description": {{ event_description | json_encode | safe }},
+        "url": {{ event_website | json_encode | safe }},
         "image": {{ event_image | json_encode | safe }},
-        "startDate": {{ event.startDate | json_encode | safe }},
-        "endDate": {{ event.endDate | json_encode | safe }},
+        "startDate": {{ event_start | json_encode | safe }},
+        "endDate": {{ event_end | json_encode | safe }},
         "eventStatus": "https://schema.org/EventScheduled",
         "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
         "location": {
           "@type": "Place",
-          "name": {{ event.location.name | json_encode | safe }},
+          "name": {{ venue_name | json_encode | safe }},
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": {{ event.location.streetAddress | json_encode | safe }},
-            "postalCode": {{ event.location.postalCode | json_encode | safe }},
-            "addressLocality": {{ event.location.addressLocality | json_encode | safe }},
-            "addressCountry": {{ event.location.addressCountry | json_encode | safe }}
+            "streetAddress": {{ venue_street | json_encode | safe }},
+            "postalCode": {{ venue_postal_code | json_encode | safe }},
+            "addressLocality": {{ venue_city | json_encode | safe }},
+            "addressCountry": {{ venue_country | json_encode | safe }}
           }
         },
         "organizer": { "@id": {{ organization_id | json_encode | safe }} }
       }
-      {% if page is defined and current_path is starting_with("/speakers/") %}
-        {% set person_id = canonical_url ~ "#person" %}
-        ,{
-          "@type": "Person",
-          "@id": {{ person_id | json_encode | safe }},
-          "name": {{ page.extra.name | json_encode | safe }},
-          "description": {{ page_description | json_encode | safe }},
-          "url": {{ canonical_url | json_encode | safe }}
-          {% if page.extra.image and not page.extra.image is containing("/.") %}
-            {% set person_image = config.base_url ~ page.extra.image %}
-            ,"image": {{ person_image | json_encode | safe }}
-          {% endif %}
-        }
-      {% elif page is defined and current_path is starting_with("/talks/") and session_start %}
+      {% if page is defined and current_path is starting_with("/talks/") and session_start %}
         {% set session_id = canonical_url ~ "#session" %}
         ,{
           "@type": "Event",
@@ -106,16 +107,16 @@
           {% if session_start %},"startDate": {{ session_start | json_encode | safe }}{% endif %}
           {% if session_end %},"endDate": {{ session_end | json_encode | safe }}{% endif %}
           {% if session_track %}
-            {% set session_location = event.location.name ~ " – " ~ session_track %}
+            {% set session_location = venue_name ~ " – " ~ session_track %}
             ,"location": {
               "@type": "Place",
               "name": {{ session_location | json_encode | safe }},
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": {{ event.location.streetAddress | json_encode | safe }},
-                "postalCode": {{ event.location.postalCode | json_encode | safe }},
-                "addressLocality": {{ event.location.addressLocality | json_encode | safe }},
-                "addressCountry": {{ event.location.addressCountry | json_encode | safe }}
+                "streetAddress": {{ venue_street | json_encode | safe }},
+                "postalCode": {{ venue_postal_code | json_encode | safe }},
+                "addressLocality": {{ venue_city | json_encode | safe }},
+                "addressCountry": {{ venue_country | json_encode | safe }}
               }
             }
           {% endif %}
@@ -125,8 +126,7 @@
                 {% set speaker = get_page(path="speakers/" ~ speaker_slug ~ ".md") %}
                 {
                   "@type": "Person",
-                  "name": {{ speaker.extra.name | json_encode | safe }},
-                  "url": {{ speaker.permalink | json_encode | safe }}
+                  "name": {{ speaker.extra.name | json_encode | safe }}
                 }{% if not loop.last %},{% endif %}
               {% endfor %}
             ]

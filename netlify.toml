@@ -16,7 +16,7 @@ BUILD_MODE = "production"
 # `$DEPLOY_PRIME_URL`.
 
 [context.deploy-preview]
-command = "vite build && zola build --base-url $DEPLOY_PRIME_URL && node scripts/generate-llms.js"
+command = "vite build && zola build --base-url $DEPLOY_PRIME_URL"
 
 [[redirects]]
   from = "/workshops/you-cant-fix-what-you-cant-see-telemetry-for-rust-apis/"
@@ -32,6 +32,10 @@ command = "vite build && zola build --base-url $DEPLOY_PRIME_URL && node scripts
 
 [[redirects]]
   from = "/moderators/*"
+  to = "/"
+
+[[redirects]]
+  from = "/speakers/*"
   to = "/"
 
 # 2024 sponsor
