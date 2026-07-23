@@ -1,0 +1,176 @@
+{% set schedule = load_data(path="data/schedule.json") %}
+{% set canonical_url = current_url | default(value="https://eurorust.eu/") %}
+{% set organization_logo = config.base_url ~ "/images/mainmatter-logo-dark.svg" %}
+{% set event_image = config.base_url ~ "/images/og-image.webp" %}
+{% set page_description = "EuroRust 2026 is a conference for the European Rust community, held in Barcelona and online from October 14 to 17, 2026." %}
+{% if page is defined %}
+  {% if page.description %}
+    {% set page_description = page.description %}
+  {% elif page.extra.description %}
+    {% set page_description = page.extra.description | striptags %}
+  {% elif page.extra.abstract %}
+    {% set page_description = page.extra.abstract | striptags %}
+  {% elif page.extra.bio %}
+    {% set page_description = page.extra.bio | striptags %}
+  {% endif %}
+{% endif %}
+
+{% set_global session_start = false %}
+{% set_global session_end = false %}
+{% set_global session_track = false %}
+{% if page is defined %}
+  {% for day in schedule.days %}
+    {% for slot in day.slots %}
+      {% for entry in slot.entries %}
+        {% if entry.ref and entry.ref == page.slug %}
+          {% set_global session_start = slot.start %}
+          {% set_global session_end = slot.end | default(value=false) %}
+          {% set_global session_track = schedule.entryTrackLabels[entry.track] %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  {% endfor %}
+{% endif %}
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://mainmatter.com/#organization",
+        "name": "Mainmatter",
+        "url": "https://mainmatter.com/",
+        "logo": {{ organization_logo | json_encode | safe }}
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://eurorust.eu/#website",
+        "name": "EuroRust",
+        "url": "https://eurorust.eu/",
+        "description": "EuroRust 2026 is a conference for the European Rust community, held in Barcelona and online from October 14 to 17, 2026.",
+        "publisher": { "@id": "https://mainmatter.com/#organization" },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "Event",
+        "@id": "https://eurorust.eu/#event",
+        "name": "EuroRust 2026",
+        "description": "EuroRust 2026 is a conference for the European Rust community, held in Barcelona and online from October 14 to 17, 2026.",
+        "url": "https://eurorust.eu/",
+        "image": {{ event_image | json_encode | safe }},
+        "startDate": "2026-10-14T10:00:00+02:00",
+        "endDate": "2026-10-17T16:00:00+02:00",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
+        "location": {
+          "@type": "Place",
+          "name": "Auditori L’illa",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Diagonal, 547",
+            "postalCode": "08029",
+            "addressLocality": "Barcelona",
+            "addressCountry": "ES"
+          }
+        },
+        "organizer": { "@id": "https://mainmatter.com/#organization" }
+      }
+      {% if page is defined and current_path is starting_with("/talks/") and session_start %}
+        {% set session_id = canonical_url ~ "#session" %}
+        ,{
+          "@type": "Event",
+          "@id": {{ session_id | json_encode | safe }},
+          "name": {{ page.title | json_encode | safe }},
+          "description": {{ page_description | json_encode | safe }},
+          "url": {{ canonical_url | json_encode | safe }},
+          "superEvent": { "@id": "https://eurorust.eu/#event" }
+          {% if session_start %},"startDate": {{ session_start | json_encode | safe }}{% endif %}
+          {% if session_end %},"endDate": {{ session_end | json_encode | safe }}{% endif %}
+          {% if session_track %}
+            {% set session_location = "Auditori L’illa – " ~ session_track %}
+            ,"location": {
+              "@type": "Place",
+              "name": {{ session_location | json_encode | safe }},
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Av. Diagonal, 547",
+                "postalCode": "08029",
+                "addressLocality": "Barcelona",
+                "addressCountry": "ES"
+              }
+            }
+          {% endif %}
+          {% if page.extra.speakers %}
+            ,"performer": [
+              {% for speaker_slug in page.extra.speakers %}
+                {% set speaker = get_page(path="speakers/" ~ speaker_slug ~ ".md") %}
+                {
+                  "@type": "Person",
+                  "name": {{ speaker.extra.name | json_encode | safe }}
+                }{% if not loop.last %},{% endif %}
+              {% endfor %}
+            ]
+          {% endif %}
+        }
+      {% elif page is defined and current_path is starting_with("/workshops/") %}
+        {% set course_id = canonical_url ~ "#course" %}
+        ,{
+          "@type": "Course",
+          "@id": {{ course_id | json_encode | safe }},
+          "name": {{ page.title | json_encode | safe }},
+          "description": {{ page_description | json_encode | safe }},
+          "url": {{ canonical_url | json_encode | safe }},
+          "provider": { "@id": "https://mainmatter.com/#organization" }
+          {% if page.extra.mentors %}
+            ,"instructor": [
+              {% for mentor in page.extra.mentors %}
+                { "@type": "Person", "name": {{ mentor.name | json_encode | safe }} }{% if not loop.last %},{% endif %}
+              {% endfor %}
+            ]
+          {% endif %}
+          {% if session_start %}
+            ,"hasCourseInstance": {
+              "@type": "CourseInstance",
+              "courseMode": "onsite",
+              "startDate": {{ session_start | json_encode | safe }}
+              {% if session_end %},"endDate": {{ session_end | json_encode | safe }}{% endif %}
+              ,"location": {
+                "@type": "Place",
+                "name": "Workshop location to be announced",
+                "address": { "@type": "PostalAddress", "addressLocality": "Barcelona", "addressCountry": "ES" }
+              }
+            }
+          {% endif %}
+        }
+      {% elif page is defined and current_path is starting_with("/activities/") and session_start %}
+        {% set activity_id = canonical_url ~ "#activity" %}
+        ,{
+          "@type": "Event",
+          "@id": {{ activity_id | json_encode | safe }},
+          "name": {{ page.title | json_encode | safe }},
+          "description": {{ page_description | json_encode | safe }},
+          "url": {{ canonical_url | json_encode | safe }},
+          "superEvent": { "@id": "https://eurorust.eu/#event" },
+          "eventStatus": "https://schema.org/EventScheduled",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+          {% if session_start %},"startDate": {{ session_start | json_encode | safe }}{% endif %}
+          {% if session_end %},"endDate": {{ session_end | json_encode | safe }}{% endif %}
+          {% if page.extra.location_name %}
+            ,"location": {
+              "@type": "Place",
+              "name": {{ page.extra.location_name | json_encode | safe }}
+              {% if page.extra.location %},"address": {{ page.extra.location | json_encode | safe }}{% endif %}
+            }
+          {% else %}
+            ,"location": {
+              "@type": "Place",
+              "name": "Barcelona",
+              "address": { "@type": "PostalAddress", "addressLocality": "Barcelona", "addressCountry": "ES" }
+            }
+          {% endif %}
+        }
+      {% endif %}
+    ]
+  }
+</script>

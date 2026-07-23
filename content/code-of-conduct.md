@@ -1,6 +1,7 @@
 +++
 template = "generic-content.html"
 title = "Conference Code of Conduct"
+description = "The EuroRust Code of Conduct and anti-harassment policy for attendees, speakers, sponsors, volunteers, and online participants."
 +++
 
 <div class="box mb-7">
