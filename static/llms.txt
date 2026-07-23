@@ -1,7 +1,5 @@
 # EuroRust
 
-> EuroRust 2026 is a conference for the European Rust community, held in Barcelona and online from October 14 to 17, 2026.
-
 EuroRust is an annual conference for the European Rust community. EuroRust 2026 runs from October 14–17, 2026, in Barcelona and online. Workshops and side activities begin on October 14. The conference takes place on October 15–16 at Auditori L’illa, Av. Diagonal, 547, 08029 Barcelona, Spain. Community activities continue on October 17.
 
 ## Core event information
