@@ -38,7 +38,7 @@
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://eurorust.eu/#organization",
+        "@id": "https://mainmatter.com/#organization",
         "name": "Mainmatter",
         "url": "https://mainmatter.com/",
         "logo": {{ organization_logo | json_encode | safe }}
@@ -49,7 +49,7 @@
         "name": "EuroRust",
         "url": "https://eurorust.eu/",
         "description": "EuroRust 2026 is a conference for the European Rust community, held in Barcelona and online from October 14 to 17, 2026.",
-        "publisher": { "@id": "https://eurorust.eu/#organization" },
+        "publisher": { "@id": "https://mainmatter.com/#organization" },
         "inLanguage": "en"
       },
       {
@@ -74,7 +74,7 @@
             "addressCountry": "ES"
           }
         },
-        "organizer": { "@id": "https://eurorust.eu/#organization" }
+        "organizer": { "@id": "https://mainmatter.com/#organization" }
       }
       {% if page is defined and current_path is starting_with("/talks/") and session_start %}
         {% set session_id = canonical_url ~ "#session" %}
@@ -121,7 +121,7 @@
           "name": {{ page.title | json_encode | safe }},
           "description": {{ page_description | json_encode | safe }},
           "url": {{ canonical_url | json_encode | safe }},
-          "provider": { "@id": "https://eurorust.eu/#organization" }
+          "provider": { "@id": "https://mainmatter.com/#organization" }
           {% if page.extra.mentors %}
             ,"instructor": [
               {% for mentor in page.extra.mentors %}
