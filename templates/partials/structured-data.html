@@ -122,19 +122,19 @@
           "description": {{ page_description | json_encode | safe }},
           "url": {{ canonical_url | json_encode | safe }},
           "provider": { "@id": "https://mainmatter.com/#organization" }
-          {% if page.extra.mentors %}
-            ,"instructor": [
-              {% for mentor in page.extra.mentors %}
-                { "@type": "Person", "name": {{ mentor.name | json_encode | safe }} }{% if not loop.last %},{% endif %}
-              {% endfor %}
-            ]
-          {% endif %}
           {% if session_start %}
             ,"hasCourseInstance": {
               "@type": "CourseInstance",
               "courseMode": "onsite",
               "startDate": {{ session_start | json_encode | safe }}
               {% if session_end %},"endDate": {{ session_end | json_encode | safe }}{% endif %}
+              {% if page.extra.mentors %}
+                ,"instructor": [
+                  {% for mentor in page.extra.mentors %}
+                    { "@type": "Person", "name": {{ mentor.name | json_encode | safe }} }{% if not loop.last %},{% endif %}
+                  {% endfor %}
+                ]
+              {% endif %}
               ,"location": {
                 "@type": "Place",
                 "name": "Workshop location to be announced",
