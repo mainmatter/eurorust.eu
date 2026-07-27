@@ -1,4 +1,5 @@
 +++
+render = false
 title = "Speaker: Filip Petkovski"
 [extra]
   name = "Filip Petkovski"

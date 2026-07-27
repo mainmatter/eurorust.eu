@@ -1,4 +1,5 @@
 +++
+render = false
 title = "Speaker: Cristián Maureira-Fredes"
 [extra]
   name = "Cristián Maureira-Fredes"

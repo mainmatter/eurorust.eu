@@ -5,15 +5,11 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="EuroRust 2026 is a conference for the European Rust community – Barcelona & online, 14.10-17.10.2026"
-    />
     <meta name="keywords" content="" />
     <meta name="language" content="en" />
     <meta name="content-language" content="en" />
     <meta name="publisher" content="EuroRust" />
-    <title>EuroRust 2026, Barcelona & online</title>
+    {% include "partials/metadata.html" %}
     <link rel="stylesheet" href="/app.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" as="image" href="/images/backgrounds/cloud1.webp" fetchpriority="high" />
@@ -27,34 +23,11 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/favicon-192x192.png" />
     <link rel="icon" type="image/png" sizes="256x256" href="/images/icons/favicon-256x256.png" />
-    <!--  Essential META Tags -->
-    <meta property="og:title" content="EuroRust 2026, Barcelona & online" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="/" />
-    {% block og_image %}
-      <meta property="og:image" content="{{ config.base_url | safe }}/images/og-image.webp" />
-      <meta name="twitter:image" content="{{ config.base_url | safe }}/images/og-image.webp" />
-    {% endblock %}
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="EuroRust 2026, Barcelona & online" />
-    <meta
-      name="twitter:description"
-      content="EuroRust 2026 is a conference for the European Rust community – Barcelona & online, 14.10-17.10.2026"
-    />
-
-    <!--  Non-Essential, But Recommended -->
-    <meta
-      property="og:description"
-      content="EuroRust 2026 is a conference for the European Rust community – Barcelona & online, 14.10-17.10.2026"
-    />
-    <meta property="og:site_name" content="EuroRust" />
-    <meta name="twitter:image:alt" content="EuroRust 2026" />
-
-    <!--  Non-Essential, But Required for Analytics -->
-    <meta name="twitter:site" content="@euro_rust" />
     <meta name="fediverse:creator" content="@eurorust@fosstodon.org" />
+    {% include "partials/structured-data.html" %}
 
-    {% block head %}{% endblock %}
+    {% block head %}
+    {% endblock %}
     {% if build_mode == "production" %}
       <script
         defer

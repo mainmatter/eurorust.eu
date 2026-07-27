@@ -1,6 +1,7 @@
 +++
 template = "generic-content.html"
 title = "Traveling to Barcelona and the Venue"
+description = "Travel and venue information for EuroRust 2026 at Auditori L’illa in Barcelona, including public transport and accessibility details."
 +++
 
 <h3 class="mb-3 mt-7">To Barcelona</h3>

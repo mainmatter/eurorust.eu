@@ -1,6 +1,7 @@
 +++
 template = "generic-content.html"
 title = "Accessibility Statement"
+description = "Accessibility information and support available to EuroRust 2026 attendees in Barcelona and online."
 +++
 
 <div class="box mb-7">
