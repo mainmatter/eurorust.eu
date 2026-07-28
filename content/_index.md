@@ -82,6 +82,7 @@
   name="Ernest Kissiedu"
   image="/images/moderators/ernest-kissiedu.png"
   github="https://github.com/ernestkissiedu"
+  twitter="https://x.com/ErnestKissiedu"
 
 
 [[extra.moderators]]
