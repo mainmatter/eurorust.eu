@@ -204,16 +204,6 @@
       padding: 1rem 0.125rem;
     }
 
-    .sponsors-grid--partners a img {
-      width: min(70%, 34rem);
-      max-height: 6rem;
-
-      @media screen and (max-width: 60rem) {
-        width: min(80%, 24rem);
-        max-height: 4rem;
-      }
-    }
-
     .sponsors-grid--supporters {
       img {
         max-width: 6rem;
