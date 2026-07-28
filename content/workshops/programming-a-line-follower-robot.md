@@ -2,6 +2,7 @@
 title = "Programming a Line Follower Robot"
 template = "workshop.html"
 [extra]
+  price = 400
   mentors = [
     { name = "Massimiliano Mantione", avatar = "massimiliano-mantione.webp", avatar_alt = "Massimiliano Mantione",  bio = "I am a software engineer, mostly interested in programming languages and compilers. I have worked on implementing telecom switching stations, the Mono JIT compiler, the Unity3D game engine, the V8 Javascript VM at Google, a collaborative virtual reality system on the web, and blockchains. Currently, I am working on operational research applied to logistics at scale in WorkWave and using Rust full-time to solve logistical vehicle routing problems at scale.", url = "https://www.linkedin.com/in/massimilianomantione" },
     { name = "Michele Mantione", avatar = "michele-mantione.webp", avatar_alt = "Michele Mantione",  bio = "I am a Software Engineering student passionate about music, sound engineering, and robotics.While I am not writing code, I train as a theatrical actor, work as a light and sound engineer, and practice parkour." }
@@ -14,5 +15,4 @@ template = "workshop.html"
   heroimage_alt = "Line follower robot"
   venue = "tba"
 +++
-
 

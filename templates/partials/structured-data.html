@@ -3,6 +3,21 @@
 {% set organization_logo = config.base_url ~ "/images/mainmatter-logo-dark.svg" %}
 {% set event_image = config.base_url ~ "/images/og-image.webp" %}
 {% set page_description = "EuroRust 2026 is a conference for the European Rust community, held in Barcelona and online from October 14 to 17, 2026." %}
+{% set_global main_speaker_slugs = [] %}
+{% for day in schedule.days %}
+  {% for slot in day.slots %}
+    {% for entry in slot.entries %}
+      {% if entry.type == "talk" and entry.ref %}
+        {% set talk = get_page(path="talks/" ~ entry.ref ~ ".md") %}
+        {% for speaker_slug in talk.extra.speakers | default(value=[]) %}
+          {% if speaker_slug not in main_speaker_slugs %}
+            {% set_global main_speaker_slugs = main_speaker_slugs | concat(with=speaker_slug) %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+{% endfor %}
 {% if page is defined %}
   {% if page.description %}
     {% set page_description = page.description %}
@@ -74,6 +89,81 @@
             "addressCountry": "ES"
           }
         },
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Remote Conference Attendance – Private Purchase",
+            "price": 50,
+            "priceCurrency": "EUR",
+            "url": "https://www.tickettailor.com/events/eurorust/2022388"
+          },
+          {
+            "@type": "Offer",
+            "name": "Remote Conference Ticket – Freelancer Purchase",
+            "price": 60.5,
+            "priceCurrency": "EUR",
+            "url": "https://www.tickettailor.com/events/eurorust/2022388"
+          },
+          {
+            "@type": "Offer",
+            "name": "Remote Conference Ticket – Company Purchase",
+            "price": 100,
+            "priceCurrency": "EUR",
+            "url": "https://www.tickettailor.com/events/eurorust/2022388"
+          },
+          {
+            "@type": "Offer",
+            "name": "On-Site Conference Attendance – Private Purchase",
+            "price": 275,
+            "priceCurrency": "EUR",
+            "url": "https://www.tickettailor.com/events/eurorust/2022388"
+          },
+          {
+            "@type": "Offer",
+            "name": "On-Site Conference Ticket – Freelancer Purchase",
+            "price": 332.75,
+            "priceCurrency": "EUR",
+            "url": "https://www.tickettailor.com/events/eurorust/2022388"
+          },
+          {
+            "@type": "Offer",
+            "name": "On-Site Conference Ticket – Company Purchase",
+            "price": 600,
+            "priceCurrency": "EUR",
+            "url": "https://www.tickettailor.com/events/eurorust/2022388"
+          }
+        ],
+        "performer": [
+          {
+            "@type": "Person",
+            "@id": "https://eurorust.eu/#moderator-ernest-kissiedu",
+            "name": "Ernest Kissiedu"
+          },
+          {
+            "@type": "Person",
+            "@id": "https://eurorust.eu/#moderator-ciara-rowland-simms",
+            "name": "Ciara Rowland-Simms"
+          },
+          {
+            "@type": "Person",
+            "@id": "https://eurorust.eu/#moderator-jan-erik-rediger",
+            "name": "Jan-Erik Rediger"
+          },
+          {
+            "@type": "Person",
+            "@id": "https://eurorust.eu/#moderator-adam-harvey",
+            "name": "Adam Harvey"
+          }{% if main_speaker_slugs | length > 0 %},{% endif %}
+          {% for speaker_slug in main_speaker_slugs %}
+            {% set speaker = get_page(path="speakers/" ~ speaker_slug ~ ".md") %}
+            {% set speaker_id = "https://eurorust.eu/#speaker-" ~ speaker_slug %}
+            {
+              "@type": "Person",
+              "@id": {{ speaker_id | json_encode | safe }},
+              "name": {{ speaker.extra.name | json_encode | safe }}
+            }{% if not loop.last %},{% endif %}
+          {% endfor %}
+        ],
         "organizer": { "@id": "https://mainmatter.com/#organization" }
       }
       {% if page is defined and current_path is starting_with("/talks/") and session_start %}
@@ -105,8 +195,10 @@
             ,"performer": [
               {% for speaker_slug in page.extra.speakers %}
                 {% set speaker = get_page(path="speakers/" ~ speaker_slug ~ ".md") %}
+                {% set speaker_id = "https://eurorust.eu/#speaker-" ~ speaker_slug %}
                 {
                   "@type": "Person",
+                  "@id": {{ speaker_id | json_encode | safe }},
                   "name": {{ speaker.extra.name | json_encode | safe }}
                 }{% if not loop.last %},{% endif %}
               {% endfor %}
@@ -135,6 +227,16 @@
                   {% endfor %}
                 ]
               {% endif %}
+              {% if page.extra.price is defined %}
+                {% set workshop_offer_name = "Workshop: " ~ page.title %}
+                ,"offers": {
+                  "@type": "Offer",
+                  "name": {{ workshop_offer_name | json_encode | safe }},
+                  "price": {{ page.extra.price }},
+                  "priceCurrency": "EUR",
+                  "url": "https://www.tickettailor.com/events/eurorust/2022388"
+                }
+              {% endif %}
               ,"location": {
                 "@type": "Place",
                 "name": "Workshop location to be announced",
@@ -156,6 +258,16 @@
           "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
           {% if session_start %},"startDate": {{ session_start | json_encode | safe }}{% endif %}
           {% if session_end %},"endDate": {{ session_end | json_encode | safe }}{% endif %}
+          {% if page.extra.price is defined %}
+            {% set activity_offer_name = "Side activity: " ~ page.title %}
+            ,"offers": {
+              "@type": "Offer",
+              "name": {{ activity_offer_name | json_encode | safe }},
+              "price": {{ page.extra.price }},
+              "priceCurrency": "EUR",
+              "url": "https://www.tickettailor.com/events/eurorust/2022388"
+            }
+          {% endif %}
           {% if page.extra.location_name %}
             ,"location": {
               "@type": "Place",
