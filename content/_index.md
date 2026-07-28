@@ -1,5 +1,10 @@
 +++
 
+[[extra.onsite_partner_sponsors]]
+  title="Myrmic"
+  link="https://myrmic.org/"
+  image="/images/sponsors/myrmic.svg"
+
 [[extra.supporter_sponsors]]
   title="Spiral"
   link="https://spiraldb.com/"
