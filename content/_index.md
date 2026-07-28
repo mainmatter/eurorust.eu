@@ -79,12 +79,11 @@
   speakers = ["johan-rosengren", "sergio-gonzalez-martin"]
 
 [[extra.moderators]]
-  name="Stefan Baumgartner"
-  image="/images/moderators/stefan-baumgartner.png"
-  bsky="https://bsky.app/profile/deadparrot.dev"
-  web="https://fettblog.eu/?utm_source=eurorust"
-  github="https://github.com/ddprrt"
-  mastodon="https://mastodon.social/@deadparrot"
+  name="Ernest Kissiedu"
+  image="/images/moderators/ernest-kissiedu.png"
+  github="https://github.com/ernestkissiedu"
+  twitter="https://x.com/ErnestKissiedu"
+
 
 [[extra.moderators]]
   name="Ciara Rowland-Simms"
