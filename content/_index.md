@@ -1,5 +1,10 @@
 +++
 
+[[extra.partner_sponsors]]
+  title="Raven"
+  link="https://raven-trading.com/"
+  image="/images/sponsors/raven-trading.svg"
+
 [[extra.supporter_sponsors]]
   title="Spiral"
   link="https://spiraldb.com/"
