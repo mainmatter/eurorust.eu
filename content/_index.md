@@ -15,6 +15,11 @@
   link="https://opensrcsec.com"
   image="/images/sponsors/oss.svg"
 
+[[extra.supporter_sponsors]]
+  title="Ferrous Systems"
+  link="https://ferrous-systems.com/"
+  image="/images/sponsors/ferrous-systems.svg"
+
 [[extra.premier_partner_sponsors]]
   title="JetBrains"
   link="/jetbrains"
