@@ -91,7 +91,7 @@
 
 
 [[extra.moderators]]
-  name="Ciara Rowland-Simms"
+  name="Ciara RS"
   image="/images/moderators/ciara.png"
   twitter="https://x.com/Ciara0x1F973"
 
