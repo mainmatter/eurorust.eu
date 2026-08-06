@@ -52,6 +52,9 @@
 [[extra.workshops]]
   title="hands-on-embedded-rust"
 
+[[extra.workshops]]
+  title="rust-in-action"
+
 [[extra.talks]]
   title="game-show"
   image="/images/headline-speakers/tris%26amos-pink.webp"
