@@ -40,6 +40,11 @@
   link="https://helsing.ai/"
   image="/images/sponsors/helsing.svg"
 
+[[extra.premier_partner_sponsors]]
+  title="AWS"
+  link="https://aws.amazon.com/"
+  image="/images/sponsors/aws.svg"
+
 [[extra.workshops]]
   title="programming-a-line-follower-robot"
 
