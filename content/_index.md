@@ -58,10 +58,10 @@
   title="hands-on-embedded-rust"
 
 [[extra.workshops]]
-  title="building-a-virtual-machine-monitor-in-rust"
+  title="rust-in-action"
 
 [[extra.workshops]]
-  title="rust-in-action"
+  title="building-a-virtual-machine-monitor-in-rust"
 
 [[extra.talks]]
   title="game-show"

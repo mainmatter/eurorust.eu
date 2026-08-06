@@ -54,12 +54,12 @@
             {
               "type": "workshop",
               "track": "workshop",
-              "ref": "building-a-virtual-machine-monitor-in-rust"
+              "ref": "rust-in-action"
             },
             {
               "type": "workshop",
               "track": "workshop",
-              "ref": "rust-in-action"
+              "ref": "building-a-virtual-machine-monitor-in-rust"
             }
           ]
         },
