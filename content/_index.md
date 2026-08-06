@@ -1,5 +1,10 @@
 +++
 
+[[extra.onsite_partner_sponsors]]
+  title="Modal"
+  link="https://modal.com/"
+  image="/images/sponsors/modal-logo.svg"
+
 [[extra.partner_sponsors]]
   title="Raven"
   link="https://raven-trading.com/"
@@ -54,6 +59,9 @@
 
 [[extra.workshops]]
   title="rust-in-action"
+
+[[extra.workshops]]
+  title="building-a-virtual-machine-monitor-in-rust"
 
 [[extra.talks]]
   title="game-show"
