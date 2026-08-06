@@ -20,6 +20,11 @@
   link="https://opensrcsec.com"
   image="/images/sponsors/oss.svg"
 
+[[extra.supporter_sponsors]]
+  title="Ferrous Systems"
+  link="https://ferrous-systems.com/"
+  image="/images/sponsors/ferrous-systems.svg"
+
 [[extra.premier_partner_sponsors]]
   title="JetBrains"
   link="/jetbrains"
@@ -54,6 +59,9 @@
 
 [[extra.workshops]]
   title="building-a-virtual-machine-monitor-in-rust"
+
+[[extra.workshops]]
+  title="rust-in-action"
 
 [[extra.talks]]
   title="game-show"
@@ -99,7 +107,7 @@
 
 
 [[extra.moderators]]
-  name="Ciara Rowland-Simms"
+  name="Ciara RS"
   image="/images/moderators/ciara.png"
   twitter="https://x.com/Ciara0x1F973"
 
