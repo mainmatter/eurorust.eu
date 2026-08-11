@@ -82,6 +82,13 @@
                 /></a>
               </li>
             {% endif %}
+            {% if speaker.extra.codeberg %}
+              <li>
+                <a class="btn__icon" href="{{ speaker.extra.codeberg }}" target="_blank" rel="noopener noreferrer"
+                  ><img src="/images/icons/codeberg.svg" alt="Codeberg" width="42" height="42"
+                /></a>
+              </li>
+            {% endif %}
           </ul>
         {% endfor %}
       </li>
