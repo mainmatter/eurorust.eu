@@ -114,6 +114,7 @@
     .sponsors-grid--closing_party_partners,
     .sponsors-grid--impl_room_partners,
     .sponsors-grid--head_partners,
+    .sponsors-grid--onsite_partners,
     .sponsors-grid--partners,
     .sponsors-grid--supporters {
       display: grid;
@@ -154,6 +155,7 @@
     }
 
     .sponsors-grid--premier_partners a:last-child:nth-child(3n+1),
+    .sponsors-grid--onsite_partners a:last-child:nth-child(3n+1),
     .sponsors-grid--partners a:last-child:nth-child(3n+1) {
       grid-column: revert;
     }
@@ -169,6 +171,7 @@
     .sponsors-grid--closing_party_partners a,
     .sponsors-grid--impl_room_partners a,
     .sponsors-grid--head_partners a,
+    .sponsors-grid--onsite_partners a,
     .sponsors-grid--partners a {
       aspect-ratio: 4/1;
       line-height: 6rem;
@@ -194,11 +197,13 @@
     }
 
     .sponsors-grid--premier_partners,
+    .sponsors-grid--onsite_partners,
     .sponsors-grid--partners {
       grid-template-columns: 1fr;
     }
 
     .sponsors-grid--premier_partners a,
+    .sponsors-grid--onsite_partners a,
     .sponsors-grid--partners a {
       aspect-ratio: 6/1;
       padding: 1rem 0.125rem;
