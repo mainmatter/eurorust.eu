@@ -11,7 +11,7 @@
         {% set talk = get_page(path="talks/" ~ entry.ref ~ ".md") %}
         {% for speaker_slug in talk.extra.speakers | default(value=[]) %}
           {% if speaker_slug not in main_speaker_slugs %}
-            {% set_global main_speaker_slugs = main_speaker_slugs | concat(with=speaker_slug) %}
+            {% set_global main_speaker_slugs = [...main_speaker_slugs, speaker_slug] %}
           {% endif %}
         {% endfor %}
       {% endif %}
@@ -166,7 +166,7 @@
         ],
         "organizer": { "@id": "https://mainmatter.com/#organization" }
       }
-      {% if page is defined and current_path is starting_with("/talks/") and session_start %}
+      {% if page is defined and current_path is starting_with(pat="/talks/") and session_start %}
         {% set session_id = canonical_url ~ "#session" %}
         ,{
           "@type": "Event",
@@ -205,7 +205,7 @@
             ]
           {% endif %}
         }
-      {% elif page is defined and current_path is starting_with("/workshops/") %}
+      {% elif page is defined and current_path is starting_with(pat="/workshops/") %}
         {% set course_id = canonical_url ~ "#course" %}
         ,{
           "@type": "Course",
@@ -245,7 +245,7 @@
             }
           {% endif %}
         }
-      {% elif page is defined and current_path is starting_with("/activities/") and session_start %}
+      {% elif page is defined and current_path is starting_with(pat="/activities/") and session_start %}
         {% set activity_id = canonical_url ~ "#activity" %}
         ,{
           "@type": "Event",

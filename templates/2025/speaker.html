@@ -22,7 +22,7 @@
         <div class="title">
           <div class="photo-container">
             <div class="photo-container-overlay"></div>
-            {% if page.extra.image and not page.extra.image is containing("/.") %}
+            {% if page.extra.image and not page.extra.image is containing(pat="/.") %}
               <img class="photo" src="{{ page.extra.image }}" alt="Photo of {{ page.extra.name }}" />
             {% else %}
               <img class="photo" src="/2025/images/talks/placeholder.webp" alt="" />

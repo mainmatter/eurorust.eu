@@ -75,7 +75,7 @@
                   </div>
                 {% endif %}
                 <div class="mentor__grid-photo-links">
-                  {% if speaker.extra.image and not speaker.extra.image is containing("/.") %}
+                  {% if speaker.extra.image and not speaker.extra.image is containing(pat="/.") %}
                     <img class="photo" src="{{ speaker.extra.image }}" alt="{{ speaker.extra.name }}" />
                   {% else %}
                     <img class="photo" src="/images/talks/placeholder.webp" alt="" />
