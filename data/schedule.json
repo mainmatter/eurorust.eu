@@ -59,7 +59,7 @@
             {
               "type": "workshop",
               "track": "workshop",
-              "ref": "building-a-virtual-machine-monitor-in-rust"
+              "ref": "beyond-p99-observing-async-rust"
             }
           ]
         },
