@@ -9,6 +9,27 @@ on:
     - cron: "0 3 * * *" # daily, at 3am
 
 jobs:
+  linting:
+    name: "Linting"
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+
+      - name: install dependencies
+        run: pnpm install
+
+      - name: Run Linting
+        run: pnpm lint
+
   gravity:
     name: "Gravity"
     runs-on: ubuntu-latest
