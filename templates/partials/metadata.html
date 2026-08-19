@@ -37,14 +37,14 @@
   {% endif %}
   {% if page.extra.ogtype %}
     {% set meta_type = page.extra.ogtype %}
-  {% elif current_path is starting_with("/talks/") or current_path is starting_with("/workshops/") %}
+  {% elif current_path is starting_with(pat="/talks/") or current_path is starting_with(pat="/workshops/") %}
     {% set meta_type = "article" %}
   {% endif %}
 {% elif section is defined and section.extra.meta_title %}
   {% set meta_title = section.extra.meta_title %}
 {% endif %}
 
-{% if meta_image is starting_with("http") %}
+{% if meta_image is starting_with(pat="http") %}
   {% set absolute_meta_image = meta_image %}
 {% else %}
   {% set absolute_meta_image = config.base_url ~ meta_image %}

@@ -28,7 +28,7 @@
           <div class="photo-container">
 
             <div class="photo-container-overlay"></div>
-            {%if page.extra.image and not page.extra.image is containing("/.")  %}
+            {%if page.extra.image and not page.extra.image is containing(pat="/.")  %}
               <img
                 class="photo"
                 src="/{{ page.extra.image }}"

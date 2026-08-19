@@ -100,7 +100,7 @@
               </div>
               <div class="photo-container mentor__wrapper-image">
                 <div class="photo-container-overlay"></div>
-                  {%if speaker.extra.image and not speaker.extra.image is containing("/.")  %}
+                  {%if speaker.extra.image and not speaker.extra.image is containing(pat="/.")  %}
                     <img
                       class="photo"
                       src="/{{ speaker.extra.image }}"
