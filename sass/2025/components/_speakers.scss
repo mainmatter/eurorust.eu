@@ -33,23 +33,22 @@
     list-style: none;
     max-width: 1024px;
     margin: 0 auto;
-    text-align: center; 
+    text-align: center;
 
     @media screen and (max-width: 60rem) {
       grid-template-columns: 1fr;
       gap: 5rem;
     }
 
-
     p {
       margin: 1rem auto;
       color: var(--beige);
       width: 30rem;
-      max-width:400px;
+      max-width: 400px;
 
-       @media screen and (max-width: 60rem) {
+      @media screen and (max-width: 60rem) {
         width: 70vw;
-       }
+      }
     }
 
     .speaker__socials {
@@ -60,14 +59,11 @@
   }
 
   li.speaker__details:last-child:nth-child(odd) {
-      grid-column: span 2 / span 2;
-      justify-self: center;
+    grid-column: span 2 / span 2;
+    justify-self: center;
 
-      @media screen and (max-width: 60rem) {
-        grid-column: 1;
+    @media screen and (max-width: 60rem) {
+      grid-column: 1;
     }
   }
-  
-    
-  
 }

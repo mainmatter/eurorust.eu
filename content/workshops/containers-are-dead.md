@@ -19,4 +19,3 @@ bio = "Jonas is an engineer at <a target='_blank' rel='noopener' href='https://m
   heroimage_alt = "Gravestone that says R.I.P. Containers"
   venue = "tba"
 +++
-

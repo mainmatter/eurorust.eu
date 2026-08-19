@@ -12,4 +12,3 @@ template = "2025/activity.html"
   heroimage = "/2025/images/activities/bike-tour.webp"
   heroimage_alt = "Bicycle"
 +++
-

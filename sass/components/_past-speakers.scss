@@ -157,7 +157,6 @@
         background-color: var(--pink-600);
       }
     }
-
   }
 
   &.speakers--highlights li.speaker__details {
@@ -190,14 +189,13 @@
     transition: all 0.2s ease-in-out;
     word-break: break-word;
 
-
     &:hover,
     &:active {
       scale: 1.05;
       transition: all 0.2s ease-in-out;
 
       .title {
-        background: #F9BD7A;
+        background: #f9bd7a;
       }
     }
   }

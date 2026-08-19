@@ -15,7 +15,7 @@
     }
 
     a.inline:hover {
-      @include textlink-hover-animation 
+      @include textlink-hover-animation;
     }
 
     .tab1::before {
@@ -37,9 +37,10 @@
       gap: 1rem;
     }
 
-    p, a {
+    p,
+    a {
       line-height: 1.5;
-      font-size: clamp(10px,1.25vw,30px);
+      font-size: clamp(10px, 1.25vw, 30px);
 
       @media (max-width: 60rem) {
         font-size: 0.75rem;
@@ -154,16 +155,16 @@
   }
 
   ul.syllabus {
-      list-style-position: outside;
-      padding-left: 4rem;
-      list-style-type: disclosure-closed;
-      ::marker {
-        color: var(--pink-300);
-      }
-      @media (max-width: 60rem) {
-        padding-left: 2rem;
-      }
+    list-style-position: outside;
+    padding-left: 4rem;
+    list-style-type: disclosure-closed;
+    ::marker {
+      color: var(--pink-300);
     }
+    @media (max-width: 60rem) {
+      padding-left: 2rem;
+    }
+  }
 
   .workshop-author {
     padding-top: 4rem;

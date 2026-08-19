@@ -21,7 +21,6 @@ title = "Image Credits"
   </p>
 </div>
 
-
 <h3 class="mb-3 mt-7">Photo of the venue Cité des Sciences et de l'Industrie</h3>
 <div class="box">
   <p>

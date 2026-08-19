@@ -19,4 +19,3 @@ bio = "Luca Palmieri builds technology products for a living. His current focus 
   heroimage_alt = "Arrow pointing from C to Rust"
   venue = "tba"
 +++
-

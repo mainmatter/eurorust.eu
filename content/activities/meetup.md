@@ -12,4 +12,3 @@ template = "meetup.html"
   heroimage = "/images/activities/meetup.webp"
   heroimage_alt = "An alien and an astronaut waving at each other"
 +++
-

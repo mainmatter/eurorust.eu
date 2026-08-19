@@ -1,58 +1,58 @@
 <section class="sponsors">
   <h1 class="pb-6">Sponsors</h1>
   <div class="sponsors-grid">
-      {% if section.extra.premier_partner_sponsors %}
-        <h2>Premier Partners</h2>
-        <div class="sponsors-grid--premier_partners">
-          {% for sponsor in section.extra.premier_partner_sponsors %}
-            <a href="{{ sponsor.link }}" aria-label="{{ sponsor.title }}" rel="noopener noreferrer" target="_blank">
-              {% set meta = get_image_metadata(path=sponsor.image) %}
-              <img
-                alt="{{ sponsor.title }}"
-                src="{{ sponsor.image }}"
-                width="{{ meta.width }}"
-                height="{{ meta.height }}"
-                loading="lazy"
-              />
-            </a>
-          {% endfor %}
-          </div>
-      {% endif %}
-      {% if section.extra.onsite_partner_sponsors %}
-        <h2 class="mt-6">Onsite Partner</h2>
-        <div class="sponsors-grid--onsite_partners">
-          {% for sponsor in section.extra.onsite_partner_sponsors %}
-            <a href="{{ sponsor.link }}" aria-label="{{ sponsor.title }}" rel="noopener noreferrer" target="_blank">
-              {% set meta = get_image_metadata(path=sponsor.image) %}
-              <img
-                alt="{{ sponsor.title }}"
-                src="{{ sponsor.image }}"
-                width="{{ meta.width }}"
-                height="{{ meta.height }}"
-                loading="lazy"
-              />
-            </a>
-          {% endfor %}
-        </div>
-      {% endif %}
-      {% if section.extra.partner_sponsors %}
-        <h2 class="mt-6">Partners</h2>
-        <div class="sponsors-grid--partners">
-          {% for sponsor in section.extra.partner_sponsors %}
-            <a href="{{ sponsor.link }}" aria-label="{{ sponsor.title }}" rel="noopener noreferrer" target="_blank">
-              {% set meta = get_image_metadata(path=sponsor.image) %}
-              <img
-                alt="{{ sponsor.title }}"
-                src="{{ sponsor.image }}"
-                width="{{ meta.width }}"
-                height="{{ meta.height }}"
-                loading="lazy"
-              />
-            </a>
-          {% endfor %}
-        </div>
-      {% endif %}
-      {% if section.extra.supporter_sponsors %}
+    {% if section.extra.premier_partner_sponsors %}
+      <h2>Premier Partners</h2>
+      <div class="sponsors-grid--premier_partners">
+        {% for sponsor in section.extra.premier_partner_sponsors %}
+          <a href="{{ sponsor.link }}" aria-label="{{ sponsor.title }}" rel="noopener noreferrer" target="_blank">
+            {% set meta = get_image_metadata(path=sponsor.image) %}
+            <img
+              alt="{{ sponsor.title }}"
+              src="{{ sponsor.image }}"
+              width="{{ meta.width }}"
+              height="{{ meta.height }}"
+              loading="lazy"
+            />
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% if section.extra.onsite_partner_sponsors %}
+      <h2 class="mt-6">Onsite Partner</h2>
+      <div class="sponsors-grid--onsite_partners">
+        {% for sponsor in section.extra.onsite_partner_sponsors %}
+          <a href="{{ sponsor.link }}" aria-label="{{ sponsor.title }}" rel="noopener noreferrer" target="_blank">
+            {% set meta = get_image_metadata(path=sponsor.image) %}
+            <img
+              alt="{{ sponsor.title }}"
+              src="{{ sponsor.image }}"
+              width="{{ meta.width }}"
+              height="{{ meta.height }}"
+              loading="lazy"
+            />
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% if section.extra.partner_sponsors %}
+      <h2 class="mt-6">Partners</h2>
+      <div class="sponsors-grid--partners">
+        {% for sponsor in section.extra.partner_sponsors %}
+          <a href="{{ sponsor.link }}" aria-label="{{ sponsor.title }}" rel="noopener noreferrer" target="_blank">
+            {% set meta = get_image_metadata(path=sponsor.image) %}
+            <img
+              alt="{{ sponsor.title }}"
+              src="{{ sponsor.image }}"
+              width="{{ meta.width }}"
+              height="{{ meta.height }}"
+              loading="lazy"
+            />
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% if section.extra.supporter_sponsors %}
       <h2 class="mt-6">Supporters</h2>
       <div class="sponsors-grid--supporters">
         <div>

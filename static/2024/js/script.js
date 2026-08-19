@@ -45,8 +45,8 @@ scene.add(ambientLight);
 
 window.addEventListener('resize', () => {
   // Update sizes
-  (sizes.width = document.getElementById('hero').offsetWidth),
-    (sizes.height = document.getElementById('hero').offsetHeight);
+  ((sizes.width = document.getElementById('hero').offsetWidth),
+    (sizes.height = document.getElementById('hero').offsetHeight));
 
   // Update camera
   camera.aspect = sizes.width / sizes.height;
