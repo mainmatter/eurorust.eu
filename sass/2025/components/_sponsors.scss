@@ -90,9 +90,9 @@
       div {
         gap: 4rem;
 
-      @media screen and (max-width: 60rem) {
-        gap: 1rem;
-      }
+        @media screen and (max-width: 60rem) {
+          gap: 1rem;
+        }
       }
 
       a {

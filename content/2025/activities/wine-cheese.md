@@ -12,4 +12,3 @@ template = "2025/activity.html"
   heroimage = "/2025/images/activities/wine-cheese.webp"
   heroimage_alt = "Wine glass and a wedge of cheese"
 +++
-

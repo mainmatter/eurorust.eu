@@ -154,9 +154,9 @@
       }
     }
 
-    .sponsors-grid--premier_partners a:last-child:nth-child(3n+1),
-    .sponsors-grid--onsite_partners a:last-child:nth-child(3n+1),
-    .sponsors-grid--partners a:last-child:nth-child(3n+1) {
+    .sponsors-grid--premier_partners a:last-child:nth-child(3n + 1),
+    .sponsors-grid--onsite_partners a:last-child:nth-child(3n + 1),
+    .sponsors-grid--partners a:last-child:nth-child(3n + 1) {
       grid-column: revert;
     }
 

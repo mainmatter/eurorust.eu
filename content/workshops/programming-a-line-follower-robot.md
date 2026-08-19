@@ -15,4 +15,3 @@ template = "workshop.html"
   heroimage_alt = "Line follower robot"
   venue = "tba"
 +++
-
