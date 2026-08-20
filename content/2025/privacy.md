@@ -30,7 +30,7 @@ title = "Privacy Policy"
     transfer personal data to us via alternative means, e.g. by telephone.
   </p>
 </div>
-  
+
 <h3 class="mb-3 mt-7">1. Definitions</h3>
 <div class="box privacy text-centered">
   <p>
@@ -145,7 +145,7 @@ title = "Privacy Policy"
     </li>
   </ul>
 </div>
-  
+
 <h3 class="mb-3 mt-7">2. Name and Address of the controller</h3>
 <div class="box privacy text-centered">
   <p>
@@ -162,7 +162,7 @@ title = "Privacy Policy"
   <p>Email: info@eurorust.eu</p>
   <p>Website: eurorust.eu</p>
 </div>
-  
+
 <h3 class="mb-3 mt-7">3. Collection of general data and information</h3>
 <div class="box privacy text-centered">
   <p>
@@ -231,7 +231,7 @@ title = "Privacy Policy"
     website of the controller, or to communicate this to the controller in a different way.
   </p>
 </div>
-  
+
 <h3 class="mb-3 mt-7">5. Newsletter-Tracking</h3>
 <div class="box privacy text-centered">
   <p>
@@ -254,7 +254,7 @@ title = "Privacy Policy"
     newsletter as a revocation.
   </p>
 </div>
-  
+
 <h3 class="mb-3 mt-7">6. Contact possibility via the website</h3>
 <div class="box privacy text-centered">
   <p>
@@ -267,7 +267,7 @@ title = "Privacy Policy"
     data subject. There is no transfer of this personal data to third parties.
   </p>
 </div>
-  
+
 <h3 class="mb-3 mt-7">7. Subscription to comments in the blog on the website</h3>
 <div class="box privacy text-centered">
   <p>
@@ -621,7 +621,7 @@ title = "Privacy Policy"
     https://plausible.io/data-policy.
   </p>
 </div>
-  
+
 <h3 class="mb-3 mt-7">12. Data protection provisions about the application and use of Mailchimp</h3>
 <div class="box privacy text-centered">
   <p>
@@ -690,7 +690,7 @@ title = "Privacy Policy"
     https://ti.to/privacy.
   </p>
 </div>
-  
+
 <h3 class="mb-3 mt-7">14. Data protection provisions about the application and use of LinkedIn</h3>
 <div class="box privacy text-centered">
   <p>
@@ -747,7 +747,7 @@ title = "Privacy Policy"
     is available under https://www.linkedin.com/legal/cookie-policy.
   </p>
 </div>
-  
+
 <h3 class="mb-3 mt-7">15. Data protection provisions about the application and use of Twitter</h3>
 <div class="box privacy text-centered">
   <p>
@@ -801,7 +801,7 @@ title = "Privacy Policy"
     https://twitter.com/privacy?lang=en.
   </p>
 </div>
-  
+
 <h3 class="mb-3 mt-7">16. Legal basis for the processing</h3>
 <div class="box privacy text-centered">
   <p>
@@ -829,7 +829,7 @@ title = "Privacy Policy"
     controller (Recital 47 Sentence 2 GDPR).
   </p>
 </div>
-  
+
 <h3 class="mb-3 mt-7">17. The legitimate interests pursued by the controller or by a third party</h3>
 <div class="box privacy text-centered">
   <p>
@@ -838,7 +838,7 @@ title = "Privacy Policy"
     shareholders.
   </p>
 </div>
-  
+
 <h3 class="mb-3 mt-7">18. Period for which the personal data will be stored</h3>
 <div class="box privacy text-centered">
   <p>
@@ -848,7 +848,7 @@ title = "Privacy Policy"
     the initiation of a contract.
   </p>
 </div>
-  
+
 <h3 class="mb-3 mt-7">
   19. Provision of personal data as statutory or contractual requirement; Requirement necessary
   to enter into a contract; Obligation of the data subject to provide the personal data;
@@ -869,7 +869,7 @@ title = "Privacy Policy"
     provide the personal data and the consequences of non-provision of the personal data.
   </p>
 </div>
-  
+
 <h3 class="mb-3 mt-7">20. Existence of automated decision-making</h3>
 <div class="box privacy text-centered">
   <p>As a responsible company, we do not use automatic decision-making or profiling.</p>
