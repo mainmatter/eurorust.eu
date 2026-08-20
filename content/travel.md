@@ -19,7 +19,7 @@ description = "Travel and venue information for EuroRust 2026 at Auditori L’il
 <h3 class="mb-3 mt-9">To the Venue</h3>
 <div class="box text-centered">
   <p>Our venue this year is Auditori L’illa in Barcelona, <a href="https://maps.app.goo.gl/AZKERLAtjEceYFQs8" target="_blank">Av. Diagonal, 547, 08029 Barcelona, Spain</a>. The venue is located in the Les Corts district and is well connected by public transportation.</p>
-  
+
   <p><strong>Note for arrivals:</strong> While the main complex faces Av. Diagonal, the direct entrance doors to the Auditorium halls are at the back. If you are arriving by taxi or ride-share, we recommend using the address <strong>Carrer de Déu i Mata, 111</strong> to be dropped off right at the event doors.</p>
 
   <h4 class="mt-3">Public transit to the Venue</h4>
