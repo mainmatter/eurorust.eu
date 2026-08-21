@@ -17,5 +17,4 @@ bio = "<p>Jonas is an engineer at <a target='_blank' rel='noopener' href='https:
   ogimage = "/images/workshops/og-images/og-image-containers-are-dead.png"
   heroimage = "/images/workshops/hero-containers-are-dead.webp"
   heroimage_alt = "Gravestone that says R.I.P. Containers"
-  venue = "tba"
 +++

@@ -20,5 +20,4 @@ bio = "<p>Johan Sannemo builds the infrastructure other people's code runs on. H
   ogimage = "/images/workshops/og-images/og-image-hypervisor-rust.webp"
   heroimage = "/images/workshops/hypervisor-rust.webp"
   heroimage_alt = "Stylized virtual machine monitor with three virtual machines"
-  venue = "tba"
 +++
