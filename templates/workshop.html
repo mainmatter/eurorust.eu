@@ -12,12 +12,11 @@
               {% if page.extra.day and page.extra.time %}
                 {{ page.extra.day | safe }}<br />
                 {{ page.extra.time | safe }}<br />
-                Location:
               {% else %}
                 Wednesday, October 14, 2026<br />
                 10:00–16:00<br />
-                Location: Workshop location TBA
               {% endif %}
+              Location: WeWork Glories Barcelona, Carrer Tànger 86 Barcelona, B 08018
             </p>
             {% if page.extra.sponsor %}
               <div class="workshop-hero__sponsor-container">
@@ -202,9 +201,7 @@
         </section>
       {% endif %}
 
-      {% if page.extra.venue %}
-        <section class="workshop-sponsor mb-5">{% include "sections/workshop-venue.html" %}</section>
-      {% endif %}
+      <section class="workshop-sponsor mb-5">{% include "sections/workshop-venue.html" %}</section>
 
       <div class="CTA__buttons pb-8">
         <a href="https://www.tickettailor.com/events/eurorust/2022388" class="CTA__ticket-button" target="_blank"
