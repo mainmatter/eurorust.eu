@@ -73,6 +73,9 @@
 [[extra.workshops]]
   title="building-a-virtual-machine-monitor-in-rust"
 
+[[extra.workshops]]
+  title="beyond-p99-observing-async-rust"
+
 [[extra.talks]]
   title="game-show"
   image="/images/headline-speakers/tris%26amos-pink.webp"

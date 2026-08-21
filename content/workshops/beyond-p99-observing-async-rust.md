@@ -3,7 +3,9 @@ title = "Beyond p99: Observing Async Rust"
 template = "workshop.html"
 [[extra.mentors]]
 name = "Julián Montes de Oca"
-github = "https://github.com/jv1i"
+avatar = "julian-montes-de-oca.webp"
+avatar_alt = "Julián Montes de Oca"
+github = "jv1i"
 bio = "<p>Julián Montes de Oca is a Principal Engineer at WyeWorks, where he works on open source Rust, focusing on profiling and telemetry for services running in production.</p><p>Before observability he worked extensively in the Rust UI ecosystem, on projects like Makepad and Robius.</p><p>Libraries he contributes to include <a target='_blank' rel='noopener' href='https://github.com/dial9-rs/dial9' class='inline'>dial9</a>, <a target='_blank' rel='noopener' href='https://github.com/awslabs/metrique' class='inline'>metrique</a>, and <a target='_blank' rel='noopener' href='https://github.com/tokio-rs/tokio-metrics' class='inline'>tokio-metrics</a>.</p><p>Outside of work he plays the same handful of video games he's been playing since childhood, most of them roughly his own age.</p>"
 
 [extra]
