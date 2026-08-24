@@ -27,5 +27,4 @@ bio = "<p>Björn Barwinski’s main interest is in embedded systems, from microc
   ogimage = "/images/workshops/og-images/og-image-embedded-rust.webp"
   heroimage = "/images/workshops/embedded-rust.webp"
   heroimage_alt = "Hands-On Embedded Rust workshop"
-  venue = "tba"
 +++
