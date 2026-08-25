@@ -76,6 +76,9 @@
 [[extra.workshops]]
   title="beyond-p99-observing-async-rust"
 
+[[extra.workshops]]
+  title="rust-on-the-field-integrating-real-autonomous-systems"
+
 [[extra.talks]]
   title="game-show"
   image="/images/headline-speakers/tris%26amos-pink.webp"
