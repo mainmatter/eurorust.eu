@@ -23,7 +23,7 @@
                 <div class="workshop-hero__sponsor">
                   <p>Sponsored by</p>
                   <img
-                    src="/images/workshops/workshop-sponsors/{{ page.extra.sponsor }}.svg"
+                    src="{% if page.extra.sponsor_logo %}{{ page.extra.sponsor_logo }}{% else %}/images/workshops/workshop-sponsors/{{ page.extra.sponsor }}.svg{% endif %}"
                     alt="{{ page.extra.sponsor }}"
                   />
                 </div>
@@ -176,7 +176,7 @@
                 <div class="photo-container">
                   <img
                     class="photo sponsor-logo"
-                    src="/images/workshops/workshop-sponsors/{{ page.extra.sponsor }}.svg"
+                    src="{% if page.extra.sponsor_logo %}{{ page.extra.sponsor_logo }}{% else %}/images/workshops/workshop-sponsors/{{ page.extra.sponsor }}.svg{% endif %}"
                     alt="{{ page.extra.sponsor }}"
                   />
                 </div>

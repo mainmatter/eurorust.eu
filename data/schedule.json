@@ -34,17 +34,17 @@
             {
               "type": "workshop",
               "track": "workshop",
+              "ref": "programming-a-line-follower-robot"
+            },
+            {
+              "type": "workshop",
+              "track": "workshop",
               "ref": "c-to-rust"
             },
             {
               "type": "workshop",
               "track": "workshop",
               "ref": "containers-are-dead"
-            },
-            {
-              "type": "workshop",
-              "track": "workshop",
-              "ref": "programming-a-line-follower-robot"
             },
             {
               "type": "workshop",
@@ -65,6 +65,11 @@
               "type": "workshop",
               "track": "workshop",
               "ref": "beyond-p99-observing-async-rust"
+            },
+            {
+              "type": "workshop",
+              "track": "workshop",
+              "ref": "rust-on-the-field-integrating-real-autonomous-systems"
             }
           ]
         },
