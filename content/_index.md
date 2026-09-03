@@ -15,6 +15,11 @@
   link="https://myrmic.org/"
   image="/images/sponsors/myrmic.svg"
 
+[[extra.onsite_partner_sponsors]]
+  title="Kong"
+  link="https://konghq.com/"
+  image="/images/sponsors/kong.svg"
+
 [[extra.supporter_sponsors]]
   title="Spiral"
   link="https://spiraldb.com/"
