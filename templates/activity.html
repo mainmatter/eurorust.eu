@@ -35,7 +35,7 @@
             {% if page.extra.sponsor %}
               <div class="workshop-hero__sponsor-container">
                 <div class="workshop-hero__sponsor">
-                  <p>Sponsored by</p>
+                  <p>{{ page.extra.sponsor_label | default(value="Sponsored by") }}</p>
                   <img
                     src="{% if page.extra.sponsor_logo %}{{ page.extra.sponsor_logo }}{% else %}/images/workshops/workshop-sponsors/{{ page.extra.sponsor }}.svg{% endif %}"
                     alt="{{ page.extra.sponsor }}"
@@ -86,7 +86,7 @@
           <div class="container">
             <div class="sponsor__grid">
               <div class="sponsor__grid-title">
-                <h5 class="mb-4">Sponsored by</h5>
+                <h5 class="mb-4">{{ page.extra.sponsor_label | default(value="Sponsored by") }}</h5>
               </div>
               <div class="sponsor__grid-name">
                 <h2 class="mb-4">{{ page.extra.sponsor }}</h2>
