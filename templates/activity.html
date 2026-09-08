@@ -32,6 +32,17 @@
                 €
               {% endif %}
             </p>
+            {% if page.extra.sponsor %}
+              <div class="workshop-hero__sponsor-container">
+                <div class="workshop-hero__sponsor">
+                  <p>{{ page.extra.sponsor_label | default(value="Sponsored by") }}</p>
+                  <img
+                    src="{% if page.extra.sponsor_logo %}{{ page.extra.sponsor_logo }}{% else %}/images/workshops/workshop-sponsors/{{ page.extra.sponsor }}.svg{% endif %}"
+                    alt="{{ page.extra.sponsor }}"
+                  />
+                </div>
+              </div>
+            {% endif %}
           </div>
 
           <div class="">
@@ -70,6 +81,62 @@
           </div>
         </div>
       </section>
+      {% if page.extra.sponsor %}
+        <section class="workshop-sponsor mt-9 mb-10 py-6">
+          <div class="container">
+            <div class="sponsor__grid">
+              <div class="sponsor__grid-title">
+                <h5 class="mb-4">{{ page.extra.sponsor_label | default(value="Sponsored by") }}</h5>
+              </div>
+              <div class="sponsor__grid-name">
+                <h2 class="mb-4">{{ page.extra.sponsor }}</h2>
+              </div>
+              <div class="sponsor__grid-bio">
+                <p>{{ page.extra.sponsor_bio | safe }}</p>
+                {% if page.extra.sponsor_url %}
+                  <a href="{{ page.extra.sponsor_url }}" target="_blank" rel="noopener noreferrer">
+                    {% if page.extra.sponsor_cta %}
+                      <br />
+                      <p><strong>{{ page.extra.sponsor_cta | safe }}</strong></p>
+                    {% endif %}
+                  </a>
+                {% endif %}
+              </div>
+              <div class="sponsor__grid-photo-links">
+                <div class="photo-container">
+                  <img
+                    class="photo sponsor-logo"
+                    src="{% if page.extra.sponsor_logo %}{{ page.extra.sponsor_logo }}{% else %}/images/workshops/workshop-sponsors/{{ page.extra.sponsor }}.svg{% endif %}"
+                    alt="{{ page.extra.sponsor }}"
+                  />
+                </div>
+                {% if page.extra.sponsor_url %}
+                  <div class="links mt-5 mb-5">
+                    <ul class="social mt-3">
+                      <li>
+                        <a
+                          href="{{ page.extra.sponsor_url }}"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="btn__icon"
+                          ><img src="/images/icons/web.svg" alt="Website"
+                        /></a>
+                      </li>
+                    </ul>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </section>
+      {% endif %}
+      {% if page.extra.ticket_url %}
+        <div class="CTA__buttons pb-8">
+          <a href="{{ page.extra.ticket_url }}" class="CTA__ticket-button" target="_blank" rel="noopener noreferrer">
+            {{ page.extra.ticket_cta | default(value="Register") }}
+          </a>
+        </div>
+      {% endif %}
       {% if page.extra.show_activity_ticket is not defined or page.extra.show_activity_ticket %}
         <div class="CTA__buttons pb-8">
           <a href="https://www.tickettailor.com/events/eurorust/2022388" class="CTA__ticket-button" target="_blank"

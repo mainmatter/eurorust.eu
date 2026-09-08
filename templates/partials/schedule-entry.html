@@ -79,6 +79,9 @@
         {% endif %}
         <time class="activity-card__time" datetime="{{ slot.start }}">{{ slot.time }}</time>
         <p class="beige activity-card__title"><strong>{{ event.title }}</strong></p>
+        {% if event.extra.schedule_description %}
+          <p class="activity-card__description">{{ event.extra.schedule_description }}</p>
+        {% endif %}
         <p class="activity-card__status" data-live-status hidden></p>
       </div>
     </a>
