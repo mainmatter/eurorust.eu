@@ -43,7 +43,7 @@ jobs:
         run: npm i -g @gravityci/cli
 
       - name: Build
-        uses: shalzz/zola-deploy-action@v0.23.3
+        uses: shalzz/zola-deploy-action@v0.23.4
         env:
           BUILD_ONLY: true
 
