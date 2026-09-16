@@ -60,6 +60,11 @@
   link="https://aws.amazon.com/"
   image="/images/sponsors/aws.svg"
 
+[[extra.premier_partner_sponsors]]
+  title="Antithesis"
+  link="https://antithesis.com/"
+  image="/images/sponsors/antithesis.svg"
+
 [[extra.workshops]]
   title="programming-a-line-follower-robot"
 
