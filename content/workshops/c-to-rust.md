@@ -2,10 +2,12 @@
 title = "C→Rust, Beyond the Basics"
 template = "workshop.html"
 [[extra.mentors]]
-name = "Magnus Markling"
-avatar = "magnus-markling.webp"
-avatar_alt = "Magnus Markling"
-bio = "<p>Magnus has been building software professionally since 2006. He has written production code in more than ten languages and Rust is the one he finds most rewarding. For many years he was lead architect of minPension.se, a Swedish pension portal with 3.8 million users, taking it from a small Visual Basic application to a modern distributed system.</p><p>Today he's an independent contractor working with Mainmatter. He is helping migrate the search engine of a widely used open-source data platform from C to Rust, one module at a time. His day-to-day involves the parts of a migration that decide whether it succeeds: FFI boundaries, core data structures like tries, and Unicode validation and conversion.</p><p>He is based in Gothenburg, Sweden. Outside of code, he sings in choral ensembles, plays Swedish and Irish folk music on mandolin and tin whistle, and can be found on the padel court.</p>"
+name = "Luca Palmieri"
+avatar = "luca-palmieri.webp"
+avatar_alt = "Luca Palmieri"
+url = "https://www.lpalmieri.com/"
+github = "https://github.com/LukeMathWalker"
+bio = "<p>Luca Palmieri builds technology products for a living. His current focus is on backend development, software architecture and the Rust programming language.</p><p>He currently works at <a target='_blank' rel='noopener' href='https://mainmatter.com/rust/' class='inline'>Mainmatter</a> as a Principal Engineering Consultant. He partners with teams across the industry to make sure they succeed in adopting or scaling their Rust usage, where it makes sense to do so. He was formerly at AWS and TrueLayer. He has been part of the Rust community since 2018 and is best known as the author of <a target='_blank' rel='noopener' href='https://www.zero2prod.com/' class='inline'>Zero to Production in Rust</a>, an introduction to using Rust for backend development.</p>"
 
 [extra]
   price = 400
