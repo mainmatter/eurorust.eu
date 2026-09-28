@@ -10,6 +10,11 @@
   link="https://raven-trading.com/"
   image="/images/sponsors/raven-trading.svg"
 
+[[extra.partner_sponsors]]
+  title="Infineon"
+  link="https://www.infineon.com/"
+  image="/images/sponsors/infineon.svg"
+
 [[extra.onsite_partner_sponsors]]
   title="Myrmic"
   link="https://myrmic.org/"
