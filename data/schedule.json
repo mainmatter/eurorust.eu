@@ -421,7 +421,7 @@
             {
               "type": "talk",
               "track": "main-stage",
-              "ref": "rust-builds-at-scale-buck2-bazel-and-reproducibility"
+              "ref": "build-systems-when-you-systems-need-systems-to-build"
             },
             {
               "type": "talk",
