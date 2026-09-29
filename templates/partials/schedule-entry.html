@@ -24,7 +24,7 @@
           <p class="beige activity-card__speaker mt-3">»{{ speaker.extra.name }}</p>
         {% endfor %}
         {% if event.extra.sponsor %}
-          <p class="beige activity-card__speaker mt-3">*Sponsored by {{ event.extra.sponsor }}</p>
+          <p class="sponsored-by">*Sponsored by {{ event.extra.sponsor }}</p>
         {% endif %}
         <p class="activity-card__status" data-live-status hidden></p>
       </div>
