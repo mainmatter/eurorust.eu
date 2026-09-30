@@ -1,5 +1,5 @@
 +++
-title = "Build systems: when you systems need systems to build"
+title = "Build systems: when your systems need systems to build"
 template = "talk.html"
 [extra]
   speakers = ["jonas-kruckenberg"]
