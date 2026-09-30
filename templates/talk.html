@@ -30,16 +30,18 @@
                 {{ talk_stage }}
               </p>
             {% endif %}
-            {% if page.extra.sponsor %}
+            {% if page.extra.sponsor and (page.extra.sponsor_logo or page.extra.sponsor_bio) %}
               <div class="workshop-hero__sponsor-container">
                 <div class="workshop-hero__sponsor">
                   <p>Sponsored by</p>
                   <img
-                    src="/images/workshops/workshop-sponsors/{{ page.extra.sponsor }}.svg"
+                    src="{% if page.extra.sponsor_logo %}{{ page.extra.sponsor_logo }}{% else %}/images/workshops/workshop-sponsors/{{ page.extra.sponsor }}.svg{% endif %}"
                     alt="{{ page.extra.sponsor }}"
                   />
                 </div>
               </div>
+            {% elif page.extra.sponsor %}
+              <p class="sponsored-by">Sponsored by {{ page.extra.sponsor }}</p>
             {% endif %}
           </div>
 
@@ -164,7 +166,7 @@
         </div>
       </section>
 
-      {% if page.extra.sponsor %}
+      {% if page.extra.sponsor and page.extra.sponsor_bio %}
         <section class="workshop-sponsor mt-4 mb-9 py-6">
           <div class="container py-8">
             <div class="sponsor__grid">
@@ -189,7 +191,7 @@
                 <div class="photo-container">
                   <img
                     class="photo sponsor-logo"
-                    src="/images/workshops/workshop-sponsors/{{ page.extra.sponsor }}.svg"
+                    src="{% if page.extra.sponsor_logo %}{{ page.extra.sponsor_logo }}{% else %}/images/workshops/workshop-sponsors/{{ page.extra.sponsor }}.svg{% endif %}"
                     alt="{{ page.extra.sponsor }}"
                   />
                 </div>

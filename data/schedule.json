@@ -171,7 +171,7 @@
             {
               "type": "talk",
               "track": "side-stage",
-              "ref": "what-s-next-for-rust-s-type-system"
+              "ref": "the-future-of-unmanned-systems-is-built-on-rust"
             }
           ]
         },
@@ -288,7 +288,7 @@
             {
               "type": "talk",
               "track": "main-stage",
-              "title": "TBA"
+              "ref": "what-s-next-for-rust-s-type-system"
             },
             {
               "type": "talk",
@@ -421,7 +421,7 @@
             {
               "type": "talk",
               "track": "main-stage",
-              "ref": "how-i-built-a-file-search-that-is-50x-faster-than-ripgrep-and-made-it-into-opencode"
+              "ref": "build-systems-when-you-systems-need-systems-to-build"
             },
             {
               "type": "talk",
@@ -460,7 +460,7 @@
             {
               "type": "talk",
               "track": "side-stage",
-              "title": "TBA"
+              "ref": "your-infrastructure-should-compile-too"
             }
           ]
         },
@@ -501,7 +501,7 @@
             {
               "type": "talk",
               "track": "main-stage",
-              "title": "TBA"
+              "ref": "the-lamp"
             },
             {
               "type": "talk",
