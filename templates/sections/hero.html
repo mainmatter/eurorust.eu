@@ -6,7 +6,7 @@
 
   <div class="hero__grid">
     <div class="hero__grid-meta">
-      <p class="hero__grid-meta-info">October 14–17, 2026 <span>|</span> Barcelona and online</p>
+      <p class="hero__grid-meta-info">{{ section.extra.dates }} <span>|</span> {{ section.extra.location }}</p>
       <picture>
         <source srcset="/images/logo-mobile.webp" media="(max-width: 32rem)" />
         <img class="hero__logo" alt="Eurorust" src="/images/logo.webp" width="850" height="502" />
@@ -20,17 +20,14 @@
     <div class="hero__grid-content">
       <div>
         <div>
-          <h1 class="pb-4 hero__grid-content-header">We cover all things rust</h1>
+          <h1 class="pb-4 hero__grid-content-header">Thank you for EuroRust 2026!</h1>
           <p class="hero__grid-content-about">
-            Two conference days and two days of fun side events, hackathons and exploring Barcelona.
+            Thank you to everyone who joined us in Barcelona and online. See you in Prague, Czechia, on October 14–17,
+            2027!
           </p>
         </div>
         <div class="hero__grid-buttons">
-          <a href="https://www.tickettailor.com/events/eurorust/2022388" class="hero__grid-button" target="_blank"
-            >Get your ticket</a
-          >
-          <a href="/schedule" class="hero__grid-button">View schedule</a>
-          <a href="/2026-sponsorship-prospectus.pdf" class="hero__grid-button" target="_blank">Become a sponsor</a>
+          <a href="{{ section.extra.ticket_url }}" class="hero__grid-button">Get Early Bird tickets for 2027</a>
         </div>
       </div>
     </div>

@@ -1,0 +1,9 @@
+.activity {
+  p + a {
+    @include btn__secondary;
+  }
+
+  img {
+    max-height: 20rem;
+  }
+}

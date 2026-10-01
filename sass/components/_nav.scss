@@ -109,3 +109,12 @@ nav {
   padding: 0.5rem 4.2rem 0.75rem 4.2rem;
   border-radius: 0 0 var(--corner) var(--corner);
 }
+
+.nav__links {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav__archive-link {
+  color: var(--orange-100);
+}

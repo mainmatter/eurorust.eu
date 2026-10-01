@@ -1,0 +1,63 @@
+.newsletter {
+  position: relative;
+  z-index: 40;
+  padding: 7rem 0 0 0;
+  text-align: center;
+
+  @media screen and (max-width: 60rem) {
+    padding: 3rem 0 0 0;
+  }
+
+  h1 {
+    @include stroke__shadow(var(--orange-100), 0.5px);
+  }
+
+  #mc_embed_signup_scroll {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    justify-content: center;
+    padding-top: 2rem;
+
+    @media screen and (max-width: 60rem) {
+      flex-direction: column;
+    }
+  }
+
+  #mce-EMAIL {
+    width: 55vw;
+    max-width: 700px;
+    height: 58px;
+    border-radius: 100px 0 0 100px;
+    border: 0;
+    text-indent: 2rem;
+    font-size: clamp(14px, 1.5vw, 38px);
+    color: var(--blue-700);
+    box-shadow: inset -10px 5px 5px var(--pink-300);
+    margin-bottom: 1rem;
+
+    @media screen and (max-width: 60rem) {
+      width: 50vw;
+      min-width: 280px;
+      border-radius: 100px;
+    }
+
+    &:focus-visible {
+      outline: 2px var(--orange-300) solid;
+      outline-offset: -2px;
+    }
+
+    &::placeholder {
+      color: var(--blue-500);
+    }
+  }
+
+  .button {
+    @include btn__primary-orange($icon: url("/images/icons/send.svg"));
+    border: 0;
+    height: 60px;
+    margin-left: -30px;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}

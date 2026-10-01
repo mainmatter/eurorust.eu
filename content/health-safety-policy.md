@@ -1,12 +1,12 @@
 +++
 template = "generic-content.html"
 title = "Health & Safety Policy"
-description = "Health and safety guidance for EuroRust 2026 attendees, speakers, sponsors, and service partners."
+description = "Health and safety guidance for EuroRust 2027 attendees, speakers, sponsors, and service partners."
 +++
 
 <div class="box mb-7"">
   <p>
-    While we're all excited about connecting with the Rust community face-to-face in Barcelona, we want to ensure that the event is accessible and attendees remain safe during the two days of the conference. The following safety policy applies to all on-site ticket holders, sponsors, speakers, service partners, etc. If it needs to be changed, we will update everyone via email.
+    While we're all excited about connecting with the Rust community face-to-face in Prague, we want to ensure that the event is accessible and attendees remain safe during the two days of the conference. The following safety policy applies to all on-site ticket holders, sponsors, speakers, service partners, etc. If it needs to be changed, we will update everyone via email.
   </p>
 </div>
 <h3 class="mb-3 mt-7">General Recommendations</h3>

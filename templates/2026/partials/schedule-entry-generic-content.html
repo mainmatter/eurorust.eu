@@ -1,0 +1,10 @@
+<div class="activity-card__content">
+  <p class="activity-card__track">{{ track_label }}</p>
+  {% if entry.image %}
+    <img class="activity-card__image mb-3" src="{{ entry.image }}" alt="{{ entry.imageAlt }}" />
+  {% endif %}
+  <time class="activity-card__time" datetime="{{ slot.start }}">{{ slot.time }}</time>
+  <p class="beige activity-card__title"><strong>{{ entry.title }}</strong></p>
+  {% if entry.description %}<p class="activity-card__description">{{ entry.description }}</p>{% endif %}
+  <p class="activity-card__status" data-live-status hidden></p>
+</div>

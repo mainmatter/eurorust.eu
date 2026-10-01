@@ -6,15 +6,9 @@
       </a>
     </div>
     <div class="nav__links">
-      <div class="nav__links-mm">
-        Presented by
-        <a href="https://www.mainmatter.com/rust?utm_source=eurorust" target="_blank"
-          ><img src="/images/mainmatter-logo-light.svg" alt="Mainmatter"
-        /></a>
-      </div>
-      <a href="https://www.tickettailor.com/events/eurorust/2022388" class="nav__tito-button" target="_blank"
-        >Get your ticket</a
-      >
+      <a href="/2026" class="nav__archive-link">2026 conference</a>
+      {% set homepage = get_section(path="_index.md") %}
+      <a href="{{ homepage.extra.ticket_url }}" class="nav__tito-button">2027 Early Bird tickets</a>
     </div>
   </div>
 </nav>

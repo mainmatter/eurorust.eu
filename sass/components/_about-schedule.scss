@@ -27,6 +27,13 @@
     padding-bottom: 8rem;
   }
 
+  &--topics .about-schedule__inner-container {
+    @media screen and (min-width: 60rem) {
+      padding-top: 12vw;
+      padding-bottom: calc(8rem + 8vw);
+    }
+  }
+
   .about-schedule__section {
     width: 60vw;
     max-width: 90rem;

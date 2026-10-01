@@ -1,0 +1,97 @@
+<section class="speakers speakers--highlights pt-4 pb-8">
+  <h1 class="pb-8">Highlights</h1>
+  <ul>
+    {% for talk in section.extra.talks %}
+      {% if talk.title %}
+        {% set path = "2026/talks/" ~ talk.title ~ ".md" %}
+        {% set event = get_page(path = path) %}
+      {% endif %}
+
+      <li class="speaker__details{% if talk.is_wide %}speaker__details--wide{% endif %}">
+        {% if talk.image %}
+          <a href="{{ event.path }}">
+            <img
+              class="speaker__portrait"
+              alt="Speakers for {{ event.title }}"
+              src="{{ talk.image }}"
+              loading="lazy"
+              width="400"
+              height="402"
+            />
+          </a>
+        {% endif %}
+        <a href="{{ event.path }}" class="talk__link">
+          <p class="title">{{ event.title | safe }}</p>
+        </a>
+        {% for speaker_slug in talk.speakers %}
+          {% set speaker_path = "2026/speakers/" ~ speaker_slug ~ ".md" %}
+          {% set speaker = get_page(path = speaker_path) %}
+          <p>
+            <span class="speaker__name">{{ speaker.extra.name }}</span>
+            {% if talk.title == "game-show" and speaker.extra.handle %}
+              <span class="speaker__handle">{{ speaker.extra.handle }}</span>
+            {% endif %}
+          </p>
+          {% if speaker.extra.role %}
+            <p class="speaker__job">{{ speaker.extra.role }}</p>
+          {% endif %}
+          <ul class="speaker__socials pb-4">
+            {% if speaker.extra.twitter %}
+              <li>
+                <a
+                  class="btn__icon"
+                  href="https://twitter.com/{{ speaker.extra.twitter }}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><img src="/images/icons/twitter.svg" alt="X" width="42" height="42"
+                /></a>
+              </li>
+            {% endif %}
+            {% if speaker.extra.bluesky %}
+              <li>
+                <a class="btn__icon" href="{{ speaker.extra.bluesky }}" target="_blank" rel="noopener noreferrer"
+                  ><img src="/images/icons/bluesky.svg" alt="Bluesky" width="42" height="42"
+                /></a>
+              </li>
+            {% endif %}
+            {% if speaker.extra.mastodon %}
+              <li>
+                <a class="btn__icon" href="{{ speaker.extra.mastodon }}" target="_blank" rel="noopener noreferrer"
+                  ><img src="/images/icons/mastodon.svg" alt="Mastodon" width="42" height="42"
+                /></a>
+              </li>
+            {% endif %}
+            {% if speaker.extra.linkedin %}
+              <li>
+                <a class="btn__icon" href="{{ speaker.extra.linkedin }}" target="_blank" rel="noopener noreferrer"
+                  ><img src="/images/icons/linkedin.svg" alt="LinkedIn" width="42" height="42"
+                /></a>
+              </li>
+            {% endif %}
+            {% if speaker.extra.url %}
+              <li>
+                <a class="btn__icon" href="{{ speaker.extra.url }}" target="_blank" rel="noopener noreferrer"
+                  ><img src="/images/icons/web.svg" alt="Internet" width="42" height="42"
+                /></a>
+              </li>
+            {% endif %}
+            {% if speaker.extra.github %}
+              <li>
+                <a class="btn__icon" href="{{ speaker.extra.github }}" target="_blank" rel="noopener noreferrer"
+                  ><img src="/images/icons/github.svg" alt="GitHub" width="42" height="42"
+                /></a>
+              </li>
+            {% endif %}
+            {% if speaker.extra.codeberg %}
+              <li>
+                <a class="btn__icon" href="{{ speaker.extra.codeberg }}" target="_blank" rel="noopener noreferrer"
+                  ><img src="/images/icons/codeberg.svg" alt="Codeberg" width="42" height="42"
+                /></a>
+              </li>
+            {% endif %}
+          </ul>
+        {% endfor %}
+      </li>
+    {% endfor %}
+  </ul>
+</section>
