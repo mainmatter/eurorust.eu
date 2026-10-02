@@ -1,37 +1,24 @@
-<main class="hero">
-  <div class="clouds">
-    <div class="clouds-1"></div>
-    <div class="clouds-2"></div>
-  </div>
-
-  <div class="hero__grid">
-    <div class="hero__grid-meta">
-      <p class="hero__grid-meta-info">{{ section.extra.dates }} <span>|</span> {{ section.extra.location }}</p>
-      <picture>
-        <source srcset="/images/logo-mobile.webp" media="(max-width: 32rem)" />
-        <img class="hero__logo" alt="Eurorust" src="/images/logo.webp" width="850" height="502" />
-      </picture>
-
-      <div class="hero__canvas">
-        <canvas></canvas>
-      </div>
+<section class="hero">
+  <div class="hero__content">
+    <img class="hero__logo" src="/images/EuroRust2027_logo_horizontal.svg" alt="EuroRust" width="529" height="90" />
+    <p class="hero__year">2027</p>
+    <p class="hero__date">{{ section.extra.dates }} | Prague and online</p>
+    <div class="hero__intro">
+      <h1>We cover all things rust</h1>
+      <p>Two conference days and two days of fun side events, hackathons and exploring Prague.</p>
     </div>
-
-    <div class="hero__grid-content">
-      <div>
-        <div>
-          <h1 class="pb-4 hero__grid-content-header">Thank you for EuroRust 2026!</h1>
-          <p class="hero__grid-content-about">
-            Thank you to everyone who joined us in Barcelona and online. See you in Prague, Czechia, on October 14–17,
-            2027!
-          </p>
-        </div>
-        <div class="hero__grid-buttons">
-          <a href="{{ section.extra.ticket_url }}" class="hero__grid-button">Get Early Bird tickets for 2027</a>
-        </div>
-      </div>
+    <div class="hero__actions">
+      <a href="{{ section.extra.ticket_url }}" class="button-primary">Get your Early Bird ticket</a>
+      <a href="mailto:mail@eurorust.eu?subject=EuroRust%202027%20sponsorship" class="button-secondary"
+        >Become a sponsor</a
+      >
     </div>
   </div>
-  {% include "sections/newsletter.html" %}
-  {% include "sections/rustfest.html" %}
-</main>
+  <div class="hero__canvas">
+    <span class="hero__circle-yellow" aria-hidden="true"></span>
+    <span class="hero__circle-red" aria-hidden="true"></span>
+    <span class="hero__square" aria-hidden="true"></span>
+    <span class="hero__triangle" aria-hidden="true"></span>
+    <canvas role="img" aria-label="Glossy red Ferris on a blue platform"></canvas>
+  </div>
+</section>

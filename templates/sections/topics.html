@@ -1,32 +1,41 @@
-<section class="about-schedule about-schedule--topics">
-  <div class="separator__top">
-    <div class="separator__content"></div>
+<section class="topics" aria-labelledby="topics-title">
+  <div class="section-heading">
+    <h2 id="topics-title">What we cover</h2>
+    <svg class="heading-pattern" viewBox="0 0 360 120" aria-hidden="true" focusable="false">
+      <path fill="var(--orange)" d="M0 120V0a120 120 0 0 1 120 120Z" />
+      <path fill="#FEC328" d="M120 0h120v120H120z" />
+      <g fill="none" stroke="#000" stroke-width="2">
+        <path
+          d="M130 120a110 110 0 0 1 110-110M146 120a94 94 0 0 1 94-94M162 120a78 78 0 0 1 78-78M178 120a62 62 0 0 1 62-62M194 120a46 46 0 0 1 46-46M210 120a30 30 0 0 1 30-30M226 120a14 14 0 0 1 14-14"
+        />
+      </g>
+      <path fill="#114B9A" d="M240 0h120a120 120 0 0 1-120 120Z" />
+    </svg>
   </div>
-
-  <div class="about-schedule__inner-container">
-    <div class="about-schedule__section about">
-      <h1 class="about-schedule__h1">What we cover</h1>
-      <div class="about-schedule__topics-grid">
-        <div class="about-schedule__topics-list">
-          <p class="about-schedule__topic line-1">Rust Patterns & Idioms</p>
-          <p class="about-schedule__topic line-2">Distributed Systems</p>
-          <p class="about-schedule__topic line-3">Embedded Systems</p>
-          <p class="about-schedule__topic line-4">Rust case studies</p>
-          <div class="about-schedule__topic line-5"></div>
-          <p class="about-schedule__topic line-6">Servers</p>
-          <p class="about-schedule__topic line-7">Wasm</p>
-        </div>
-
-        <div class="about-schedule__topics-image">
-          <div class="about-schedule__image-wrapper">
-            <img src="/images/rust-logo.png" alt="Rust Lang" width="320" height="320" loading="lazy" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="separator__bottom">
-    <div class="separator__content"></div>
-  </div>
+  <ol class="topics__grid">
+    <li>
+      <span class="topics__number">01</span>
+      <h3>Rust Patterns<br />&amp; Idioms</h3>
+    </li>
+    <li>
+      <span class="topics__number">02</span>
+      <h3>Distributed<br />Systems</h3>
+    </li>
+    <li>
+      <span class="topics__number">03</span>
+      <h3>Embedded<br />Systems</h3>
+    </li>
+    <li>
+      <span class="topics__number">04</span>
+      <h3>Rust case<br />studies</h3>
+    </li>
+    <li>
+      <span class="topics__number">05</span>
+      <h3>Servers</h3>
+    </li>
+    <li>
+      <span class="topics__number">06</span>
+      <h3>Wasm</h3>
+    </li>
+  </ol>
 </section>

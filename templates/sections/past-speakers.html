@@ -1,63 +1,75 @@
-<section class="speakers mt-9">
-  <h1 class="pb-8">Past Speakers</h1>
+<section class="speakers" aria-labelledby="speakers-title">
+  <div class="section-heading">
+    <h2 id="speakers-title">Past speakers</h2>
+    <svg class="heading-pattern" viewBox="0 0 360 120" aria-hidden="true" focusable="false">
+      <path fill="#114B9A" d="M0 0h120v120H0z" />
+      <circle cx="60" cy="60" r="42" fill="var(--green)" />
+      <g fill="none" stroke="#000" stroke-width="2">
+        <circle cx="180" cy="60" r="55" />
+        <circle cx="180" cy="60" r="43" />
+        <circle cx="180" cy="60" r="31" />
+        <circle cx="180" cy="60" r="19" />
+      </g>
+      <circle cx="180" cy="60" r="7" fill="#DD331D" />
+      <path fill="#DD331D" d="M240 0h60v120h-60a60 60 0 0 0 0-120Z" />
+      <path fill="#DD331D" d="M300 0a60 60 0 0 1 0 120Z" />
+    </svg>
+  </div>
   <ul>
     {% for speaker in section.extra.speakers %}
       <li class="speaker__details">
-        <img
-          class="speaker__portrait"
-          alt="{{ speaker.name }}"
-          src="{{ speaker.image }}"
-          loading="lazy"
-          width="400"
-          height="402"
-        />
-        <p><span class="speaker__name">{{ speaker.name }}</span></p>
-        <p></p>
-        <p class="speaker__job">
-          {% if speaker.job_title %}{{ speaker.job_title }}{% endif %}{% if speaker.company %}
-            &nbsp;at {{ speaker.company }}
-          {% endif %}
-        </p>
+        <div class="speaker__frame">
+          <img
+            class="speaker__portrait"
+            alt="{{ speaker.name }}"
+            src="{{ speaker.image }}"
+            loading="lazy"
+            width="400"
+            height="402"
+          />
+        </div>
+        <h3 class="speaker__name">{{ speaker.name }}</h3>
+
         <ul class="speaker__socials">
           {% if speaker.twitter %}
             <li>
               <a class="btn__icon" href="{{ speaker.twitter }}" target="_blank" rel="noopener noreferrer"
-                ><img src="/images/icons/twitter.svg" alt="X" width="42" height="42"
+                ><img src="/images/icons/x-dark.svg" alt="X" width="48" height="48" loading="lazy"
               /></a>
             </li>
           {% endif %}
           {% if speaker.bsky %}
             <li>
               <a class="btn__icon" href="{{ speaker.bsky }}" target="_blank" rel="noopener noreferrer"
-                ><img src="/images/icons/bluesky.svg" alt="Bluesky" width="42" height="42"
+                ><img src="/images/icons/bluesky-dark.svg" alt="Bluesky" width="48" height="48" loading="lazy"
               /></a>
             </li>
           {% endif %}
           {% if speaker.mastodon %}
             <li>
               <a class="btn__icon" href="{{ speaker.mastodon }}" target="_blank" rel="noopener noreferrer"
-                ><img src="/images/icons/mastodon.svg" alt="Mastodon" width="42" height="42"
+                ><img src="/images/icons/mastodon-dark.svg" alt="Mastodon" width="48" height="48" loading="lazy"
               /></a>
             </li>
           {% endif %}
           {% if speaker.linkedin %}
             <li>
               <a class="btn__icon" href="{{ speaker.linkedin }}" target="_blank" rel="noopener noreferrer"
-                ><img src="/images/icons/linkedin.svg" alt="LinkedIn" width="42" height="42"
+                ><img src="/images/icons/linkedin-dark.svg" alt="LinkedIn" width="48" height="48" loading="lazy"
               /></a>
             </li>
           {% endif %}
           {% if speaker.web %}
             <li>
               <a class="btn__icon" href="{{ speaker.web }}" target="_blank" rel="noopener noreferrer"
-                ><img src="/images/icons/web.svg" alt="Internet" width="42" height="42"
+                ><img src="/images/icons/web.svg" alt="Website" width="48" height="48" loading="lazy"
               /></a>
             </li>
           {% endif %}
           {% if speaker.github %}
             <li>
               <a class="btn__icon" href="{{ speaker.github }}" target="_blank" rel="noopener noreferrer"
-                ><img src="/images/icons/github.svg" alt="GitHub" width="42" height="42"
+                ><img src="/images/icons/github.svg" alt="GitHub" width="48" height="48" loading="lazy"
               /></a>
             </li>
           {% endif %}

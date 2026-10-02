@@ -10,13 +10,13 @@
     <meta name="content-language" content="en" />
     <meta name="publisher" content="EuroRust" />
     {% include "partials/metadata.html" %}
-    <link rel="stylesheet" href="/app.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="image" href="/images/backgrounds/cloud1.webp" fetchpriority="high" />
-    <link rel="preload" as="image" href="/images/backgrounds/cloud2.webp" fetchpriority="high" />
-    <link rel="preload" as="image" href="/images/backgrounds/cloud3.webp" fetchpriority="high" />
-    <link rel="preload" as="image" href="/images/backgrounds/cloud4.webp" fetchpriority="high" />
-    <link rel="preload" as="image" href="/images/backgrounds/cloud5.webp" fetchpriority="high" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&amp;display=swap"
+    />
+    <link rel="stylesheet" href="/app.css" />
     <link rel="icon" type="image/x-icon" href="/images/icons/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png" />
@@ -38,7 +38,7 @@
   </head>
 
   <body>
-    {% block content %}{% endblock %}
+    <div class="site-container">{% block content %}{% endblock %}</div>
 
     {% if build_mode == "production" %}
       {% set manifest = load_data(path="static/bundle/.vite/manifest.json") %}

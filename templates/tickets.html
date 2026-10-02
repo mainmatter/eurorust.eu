@@ -17,7 +17,11 @@
       {% if homepage.extra.ticket_url == "/tickets" %}
         <p>Ticket sales will open soon.</p>
       {% else %}
-        <p><a href="{{ homepage.extra.ticket_url }}">Continue to EuroRust 2027 Early Bird tickets</a></p>
+        <p>
+          <a href="{{ homepage.extra.ticket_url }}" class="button-primary"
+            >Continue to EuroRust 2027 Early Bird tickets</a
+          >
+        </p>
       {% endif %}
       {% include "sections/newsletter.html" %}
     </div>
