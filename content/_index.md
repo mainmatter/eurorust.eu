@@ -10,6 +10,12 @@
   link="https://raven-trading.com/"
   image="/images/sponsors/raven-trading.svg"
 
+[[extra.partner_sponsors]]
+  title="Exein"
+  link="https://www.exein.io/?ic_medium=direct&ic_source=surlent&utm_source=eurorust"
+  image="/images/sponsors/exein.svg"
+  logo_scale=0.7
+
 [[extra.onsite_partner_sponsors]]
   title="Myrmic"
   link="https://myrmic.org/"
