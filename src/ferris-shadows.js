@@ -51,7 +51,7 @@ export function createContactShadow(renderer, scene, platform, radius, height, m
   const vertical = new ShaderMaterial(VerticalBlurShader);
   horizontal.depthTest = vertical.depthTest = false;
   const quad = new Mesh(new PlaneGeometry(2, 2), horizontal);
-  blurScene.add(quad);.
+  blurScene.add(quad);
   for (const spread of [2.5, 1.25]) {
     quad.material = horizontal;
     horizontal.uniforms.tDiffuse.value = target.texture;
