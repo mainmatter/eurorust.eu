@@ -65,6 +65,12 @@
   link="https://antithesis.com/"
   image="/images/sponsors/antithesis.svg"
 
+[[extra.premier_partner_sponsors]]
+  title="Solana"
+  link="https://solana.com/"
+  image="/images/sponsors/solana.svg"
+  logo_scale=0.7
+
 [[extra.workshops]]
   title="programming-a-line-follower-robot"
 
