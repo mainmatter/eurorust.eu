@@ -16,6 +16,12 @@
   image="/images/sponsors/exein.svg"
   logo_scale=0.7
 
+[[extra.partner_sponsors]]
+  title="Encore"
+  link="https://github.com/encoredev/encore"
+  image="/images/sponsors/encore.svg"
+  logo_scale=0.5
+
 [[extra.onsite_partner_sponsors]]
   title="Myrmic"
   link="https://myrmic.org/"

@@ -487,9 +487,9 @@
               "ref": "from-deref-into-borrow-a-primer-on-standard-library-traits"
             },
             {
-              "type": "service",
+              "type": "talk",
               "track": "side-stage",
-              "title": "Main sponsor slot"
+              "ref": "fearless-concurrency-on-the-gpu"
             }
           ]
         },
