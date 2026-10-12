@@ -9,7 +9,7 @@ title = "Speaker: Pierre-Emmanuel Patry"
   linkedin = "https://www.linkedin.com/in/pierre-emmanuel-patry/"
   bluesky = ""
   mastodon = ""
-  image = "/images/talks/pierre-emmanuel-patry.webp"
+  image = "/2026/images/talks/pierre-emmanuel-patry.webp"
   twitter = ""
   bio = "<p>Toolchain engineer at Embecosm and lecturer at EPITA, Pierre-Emmanuel has been involved with GCC for three years. His work mostly revolves around the rust frontend and the RISCV backend.</p>"
 +++

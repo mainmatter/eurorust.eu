@@ -8,7 +8,7 @@ title = "Speaker: Frank Lyaruu"
   url = ""
   bluesky = ""
   mastodon = ""
-  image = "/images/talks/frank-lyaruu.webp"
+  image = "/2026/images/talks/frank-lyaruu.webp"
   twitter = ""
   bio = "<p>Architect and software generalist. Rustacean. Java veteran. Sustainable computing advocate. Web assembly enthousiast. Occasional Embedded Rust streamer.</p>"
 +++

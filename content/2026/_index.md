@@ -54,7 +54,7 @@ template = "2026/index.html"
 [[extra.premier_partner_sponsors]]
   title="Helsing"
   link="https://helsing.ai/"
-  image="/images/sponsors/helsing.svg"
+  image="/2026/images/sponsors/helsing.svg"
 
 [[extra.premier_partner_sponsors]]
   title="AWS"
@@ -87,62 +87,62 @@ template = "2026/index.html"
 
 [[extra.talks]]
   title="game-show"
-  image="/images/headline-speakers/tris%26amos-pink.webp"
+  image="/2026/images/headline-speakers/tris%26amos-pink.webp"
   speakers = ["amos-wenger", "tristram-oaten"]
   is_wide = true
 
 [[extra.talks]]
   title="move-your-problems"
-  image="/images/talks/oli-scherer.webp"
+  image="/2026/images/talks/oli-scherer.webp"
   speakers = ["oli-scherer"]
 
 [[extra.talks]]
   title="optimizing-the-new-rust-trait-solver"
-  image="/images/headline-speakers/jana-purple.webp"
+  image="/2026/images/headline-speakers/jana-purple.webp"
   speakers = ["jana-doenszelmann"]
 
 [[extra.talks]]
   title="beyond-cargo-build"
-  image="/images/headline-speakers/amos-pink.webp"
+  image="/2026/images/headline-speakers/amos-pink.webp"
   speakers = ["amos-wenger"]
 
 [[extra.talks]]
   title="rust-s-influence-on-c-and-python-shaping-the-future-of-three-communities"
-  image = "/images/talks/cristian-maureira-fredes.webp"
+  image = "/2026/images/talks/cristian-maureira-fredes.webp"
   speakers = ["cristian-maureira-fredes"]
 
 [[extra.talks]]
   title="building-a-query-system"
-  image="/images/headline-speakers/arya-purple.webp"
+  image="/2026/images/headline-speakers/arya-purple.webp"
   speakers = ["arya-dradjica"]
 
 [[extra.talks]]
   title="image-codecs-rustification-in-chromium"
-  image="/images/headline-speakers/johan-sergio-pink.webp"
+  image="/2026/images/headline-speakers/johan-sergio-pink.webp"
   speakers = ["johan-rosengren", "sergio-gonzalez-martin"]
 
 [[extra.moderators]]
   name="Ernest Kissiedu"
-  image="/images/moderators/ernest-kissiedu.png"
+  image="/2026/images/moderators/ernest-kissiedu.png"
   github="https://github.com/ernestkissiedu"
   twitter="https://x.com/ErnestKissiedu"
 
 
 [[extra.moderators]]
   name="Ciara RS"
-  image="/images/moderators/ciara.png"
+  image="/2026/images/moderators/ciara.png"
   twitter="https://x.com/Ciara0x1F973"
 
 [[extra.moderators]]
   name="Jan-Erik Rediger"
-  image="/images/moderators/jan-erik-rediger.png"
+  image="/2026/images/moderators/jan-erik-rediger.png"
   web="https://fnordig.de/"
   github="https://github.com/badboy/"
   mastodon="https://hachyderm.io/@jer"
 
 [[extra.moderators]]
   name="Adam Harvey"
-  image="/images/moderators/adam-harvey.png"
+  image="/2026/images/moderators/adam-harvey.png"
   web="https://lawngno.me"
   github="https://github.com/LawnGnome/"
    mastodon="https://fedi.lawngno.me/@a"

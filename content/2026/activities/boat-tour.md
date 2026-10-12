@@ -9,7 +9,7 @@ template = "2026/activity.html"
   location_url = ""
   price = 30
   abstract = "Meet fellow Rustaceans while taking in stunning views of Barcelona from the water, and listening to live music. A full bar and snacks are available for purchase.<br/>"
-  ogimage = "/images/activities/og-images/boat-tour.png"
-  heroimage = "/images/activities/boat-tour.webp"
+  ogimage = "/2026/images/activities/og-images/boat-tour.png"
+  heroimage = "/2026/images/activities/boat-tour.webp"
   heroimage_alt = "Boat"
 +++

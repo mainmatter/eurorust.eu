@@ -9,7 +9,7 @@ The path to this architecture was iterative. The first prototype of the Mosaic G
 Traditional ground control stations typically connect one operator to one vehicle. Mosaic introduces a distributed model in which multiple operators, vehicles, vendors, and ground stations must work together securely and reliably. This talk presents the Rust architecture behind that model, from trusted communication between independent Cores to resilient synchronization, airspace coordination, and real-time data exchange.<br />
 It also examines the architectural patterns used to manage a mission-critical Rust codebase at scale, including actor-based communication, capability-driven drivers, and compiler-enforced boundaries between system layers. Beyond the technical design, the talk reflects on how Rust’s safety guarantees and expressive type system have shaped engineering practices at Quantum Systems, enabling reliable development in an increasingly complex operational environment.</p>
 """
-  ogimage = "/images/talks/og-images/future-of-unmanned-systems.webp"
+  ogimage = "/2026/images/talks/og-images/future-of-unmanned-systems.webp"
   sponsor = "Quantum Systems"
   sponsor_logo = "/images/sponsors/quantum-systems.svg"
   sponsor_bio = "Quantum Systems develops MOSAIC-UXS, an open, multi-domain UXV orchestration platform for integrating aerial drones, ground robots, surface vessels, and sensor platforms."

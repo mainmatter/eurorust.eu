@@ -19,8 +19,18 @@
     {% for speaker in section.extra.speakers %}
       <li class="speaker__details">
         <div class="speaker__frame">
+          <svg class="speaker__filters" width="0" height="0" aria-hidden="true" focusable="false">
+            <defs>
+              <filter id="speaker-tint-{{ loop.index }}" color-interpolation-filters="sRGB">
+                <feFlood style="flood-color: var(--frame-color)" result="color" />
+                <feBlend in="SourceGraphic" in2="color" mode="multiply" />
+                <feComposite in2="SourceGraphic" operator="in" />
+              </filter>
+            </defs>
+          </svg>
           <img
             class="speaker__portrait"
+            style="--portrait-tint: url(#speaker-tint-{{ loop.index }})"
             alt="{{ speaker.name }}"
             src="{{ speaker.image }}"
             loading="lazy"

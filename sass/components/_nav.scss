@@ -13,7 +13,7 @@
 
 .nav__logo {
   flex-shrink: 0;
-  width: clamp(12rem, 16vw, 20rem);
+  width: clamp(6rem, 16vw, 12rem);
 }
 
 .nav__links {
@@ -33,7 +33,7 @@
 .nav {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 104;
   isolation: isolate;
   background: var(--background);
   padding-block: 0.6rem;
@@ -61,7 +61,9 @@
 }
 
 .nav__ticket-button {
-  padding-inline: 2.5rem;
+  flex-shrink: 0;
+  padding-inline: clamp(1rem, 2vw, 2rem);
+  white-space: nowrap;
 }
 
 @media screen and (max-width: 64rem) {

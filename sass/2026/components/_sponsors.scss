@@ -1,7 +1,7 @@
 .sponsors {
   &::before {
     content: "";
-    background-image: url("/images/backgrounds/lens-flare.webp");
+    background-image: url("/2026/images/backgrounds/lens-flare.webp");
     position: relative;
     display: block;
     background-size: contain;
@@ -18,7 +18,7 @@
   /* Add back in when there are more sponsors 
   &::after {
     content: "";
-    background-image: url("/images/backgrounds/bubble3.webp");
+    background-image: url("/2026/images/backgrounds/bubble3.webp");
     position: relative;
     display: block;
     background-size: contain;
@@ -61,7 +61,7 @@
   .sponsors-grid {
     &::before {
       content: "";
-      background-image: url("/images/backgrounds/bubble2.webp");
+      background-image: url("/2026/images/backgrounds/bubble2.webp");
       position: relative;
       display: block;
       background-size: contain;
@@ -84,7 +84,7 @@
 
     &::after {
       content: "";
-      background-image: url("/images/backgrounds/lens-flare.webp");
+      background-image: url("/2026/images/backgrounds/lens-flare.webp");
       position: relative;
       display: block;
       background-size: contain;

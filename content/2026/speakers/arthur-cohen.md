@@ -8,7 +8,7 @@ title = "Speaker: Arthur Cohen"
   url = ""
   bluesky = ""
   mastodon = ""
-  image = "/images/talks/arthur-cohen.webp"
+  image = "/2026/images/talks/arthur-cohen.webp"
   twitter = ""
   bio = "<p>Arthur is a French compiler engineer working full-time on the <span>gccrs</span> project at Embecosm. He is responsible for many of the bugs within the macro expansion and name resolution passes of the frontend.</p>"
 +++

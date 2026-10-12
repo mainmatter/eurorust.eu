@@ -1,7 +1,7 @@
 .past-event-highlights {
   &::before {
     content: "";
-    background-image: url("/images/backgrounds/lens-flare.webp");
+    background-image: url("/2026/images/backgrounds/lens-flare.webp");
     position: relative;
     display: block;
     background-size: contain;
@@ -16,7 +16,7 @@
 
   &::after {
     content: "";
-    background-image: url("/images/backgrounds/lens-flare.webp");
+    background-image: url("/2026/images/backgrounds/lens-flare.webp");
     position: relative;
     display: block;
     background-size: contain;
@@ -53,7 +53,7 @@
 }
 
 .past-event-highlights__content {
-  background: url("/images/backgrounds/circle.svg") no-repeat center center;
+  background: url("/2026/images/backgrounds/circle.svg") no-repeat center center;
   background-size: contain;
   padding-bottom: 10rem;
   z-index: 2;

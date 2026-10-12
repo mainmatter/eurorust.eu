@@ -23,9 +23,29 @@
 body {
   margin: 0;
   padding: 0;
+  position: relative;
+  min-height: 100vh;
   color: #000;
   background: var(--background);
   overflow-x: clip;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 102;
+    pointer-events: none;
+    background: url("/images/backgrounds/paper_texture.jpeg") repeat;
+    mix-blend-mode: multiply;
+    background-size: 30% auto;
+    opacity: 0.5;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  body::after {
+    content: none;
+  }
 }
 
 section,

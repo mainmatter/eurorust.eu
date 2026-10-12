@@ -9,6 +9,7 @@
   background: var(--paper);
   pointer-events: none;
 
+
   &--dots {
     background:
       radial-gradient(circle, var(--ink) 0 42%, transparent 44%) 0 0 / var(--dot-size, 2rem) var(--dot-size, 2rem),

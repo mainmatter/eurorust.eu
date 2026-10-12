@@ -1,14 +1,18 @@
 .speaker__portrait {
+  position: relative;
+  z-index: 1;
   width: 100%;
   aspect-ratio: 1;
   object-fit: contain;
   object-position: center bottom;
   border: 2px solid #000;
   border-radius: inherit;
-  background: #fff;
 
-  filter: grayscale(1) contrast(1.05);
-  mix-blend-mode: multiply;
+  filter: grayscale(1) contrast(1.05) var(--portrait-tint);
+}
+
+.speaker__filters {
+  position: absolute;
 }
 
 .speakers > ul {
@@ -28,13 +32,29 @@
 
 .speaker__frame {
   --frame-color: var(--yellow);
+  --frame-gap: clamp(0.65rem, 1.2vw, 1.25rem);
   position: relative;
   isolation: isolate;
-  padding: clamp(0.65rem, 1.2vw, 1.25rem);
+  padding: var(--frame-gap);
   border: 2px solid #000;
   border-radius: var(--frame-radius, 30% 0 0 0);
   background: var(--frame-color);
   overflow: hidden;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    inset: calc(2 * var(--frame-gap) + 2px);
+    border: 2px solid #000;
+    border-radius: inherit;
+    pointer-events: none;
+  }
+
+  &::after {
+    inset: calc(3 * var(--frame-gap) + 4px);
+  }
 }
 
 $speaker-frames: (

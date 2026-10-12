@@ -302,7 +302,7 @@
 }
 
 @mixin separator__content {
-  background-image: url("/images/backgrounds/separator.svg");
+  background-image: url("/2026/images/backgrounds/separator.svg");
   background-size: contain;
   background-repeat: no-repeat;
   display: block;
@@ -316,7 +316,7 @@
 
 @mixin background-pink {
   background-color: var(--pink-300);
-  background-image: url("/images/backgrounds/eurorust.svg");
+  background-image: url("/2026/images/backgrounds/eurorust.svg");
   background-repeat: repeat;
   margin: -18vw auto;
   padding: 20vw 0;

@@ -3,7 +3,7 @@ title = "JetBrains"
 template = "2026/sponsor-page.html"
 [extra]
     sponsor_type = "Premier Partner"
-    image = "/images/sponsors/rustrover.svg"
+    image = "/2026/images/sponsors/rustrover.svg"
     tagline = "RustRover - A Powerful IDE for Rust"
     url = "https://www.jetbrains.com/rust"
     cta = "Learn more about RustRover"

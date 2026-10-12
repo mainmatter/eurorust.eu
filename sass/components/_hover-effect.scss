@@ -1,5 +1,6 @@
-a:any-link {
-  background-image: linear-gradient(var(--yellow), var(--yellow));
+a:any-link,
+input.button-primary[type="submit"] {
+  background-image: linear-gradient(var(--hover-color, var(--yellow)), var(--hover-color, var(--yellow)));
   background-repeat: no-repeat;
   background-position: left bottom;
   background-size: 100% 0%;
@@ -16,7 +17,8 @@ a:any-link {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  a:any-link {
+  a:any-link,
+  input.button-primary[type="submit"] {
     transition: none;
   }
 }

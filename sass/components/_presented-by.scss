@@ -20,13 +20,20 @@
 }
 
 .presented-by__art {
-  --ink: #000;
-  --paper: var(--background);
-  --dot-size: clamp(0.8rem, 1.85vw, 2.15rem);
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  background: var(--background);
   width: clamp(5rem, 12vw, 14rem);
   grid-column: 1;
   grid-row: 1;
   border-right: 2px solid #000;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media screen and (max-width: 48rem) {

@@ -9,7 +9,7 @@ template = "2026/activity.html"
   location_url = ""
   price = 20
   abstract = "Explore 1,000 years of Catalan art on a guided tour of one of Barcelona's most iconic art museums. Uncover Catalunya’s history through art and discover the most important works in the collection, from medieval masterpieces to modern Catalan art."
-  ogimage = "/images/activities/og-images/museum-tour.png"
-  heroimage = "/images/activities/museum.webp"
+  ogimage = "/2026/images/activities/og-images/museum-tour.png"
+  heroimage = "/2026/images/activities/museum.webp"
   heroimage_alt = "Painting of Ferris"
 +++

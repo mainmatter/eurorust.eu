@@ -9,6 +9,10 @@
   background: var(--yellow);
   margin-block: clamp(4rem, 7vw, 9rem) 0;
 
+  .button-primary {
+    --hover-color: var(--orange);
+  }
+
   .newsletter__wrapper {
     padding: clamp(1.5rem, 4vw, 5rem);
     align-self: center;

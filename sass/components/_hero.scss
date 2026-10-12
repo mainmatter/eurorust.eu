@@ -14,7 +14,6 @@
 
 .hero__canvas {
   position: relative;
-  isolation: isolate;
   aspect-ratio: 1;
   min-width: 0;
   margin-top: -3vw;
@@ -44,7 +43,7 @@
       calc(100% / 9) 100%,
       100% calc(100% / 5);
     pointer-events: none;
-    z-index: -2;
+    z-index: 0;
   }
 
   .hero__circle-yellow {
@@ -56,7 +55,7 @@
     border-radius: 50%;
     background: var(--yellow);
     pointer-events: none;
-    z-index: -1;
+    z-index: 1;
   }
 
   .hero__circle-red {
@@ -68,7 +67,7 @@
     border-radius: 50%;
     background: var(--red);
     pointer-events: none;
-    z-index: -1;
+    z-index: 1;
   }
 }
 
@@ -80,7 +79,7 @@
   height: 22%;
   background: var(--green);
   pointer-events: none;
-  z-index: -1;
+  z-index: 0;
 }
 
 .hero__triangle {
@@ -92,10 +91,12 @@
   background: var(--orange);
   clip-path: polygon(100% 0, 100% 100%, 0 100%);
   pointer-events: none;
-  z-index: -1;
+  z-index: 1;
 }
 
 .hero__canvas canvas {
+  position: relative;
+  z-index: 103;
   display: block;
   width: 100%;
   height: 100%;
@@ -153,13 +154,27 @@
   .hero {
     grid-template-columns: 1fr;
     padding-top: 2rem;
+    justify-items: center;
   }
 
   .hero__content {
+    grid-row: 2;
+    width: 100%;
     max-width: 42rem;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .hero__intro {
+    margin-inline: auto;
+  }
+
+  .hero__actions {
+    justify-content: center;
   }
 
   .hero__canvas {
+    grid-row: 1;
     width: 100%;
     max-width: 42rem;
     margin: 2rem auto 0;
@@ -176,16 +191,6 @@
   }
 
   .hero__canvas {
-    grid-row: 1;
     margin-top: 0;
-  }
-
-  .hero__content,
-  .hero__intro {
-    margin-inline: auto;
-  }
-
-  .hero__actions {
-    justify-content: center;
   }
 }

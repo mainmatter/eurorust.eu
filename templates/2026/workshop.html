@@ -23,7 +23,7 @@
                 <div class="workshop-hero__sponsor">
                   <p>Sponsored by</p>
                   <img
-                    src="{% if page.extra.sponsor_logo %}{{ page.extra.sponsor_logo }}{% else %}/images/workshops/workshop-sponsors/{{ page.extra.sponsor }}.svg{% endif %}"
+                    src="{% if page.extra.sponsor_logo %}{{ page.extra.sponsor_logo }}{% else %}/2026/images/workshops/workshop-sponsors/{{ page.extra.sponsor }}.svg{% endif %}"
                     alt="{{ page.extra.sponsor }}"
                   />
                 </div>
@@ -85,7 +85,7 @@
                 <div class="mentor__grid-photo-links">
                   {% if mentor.avatar %}
                     <div class="photo-container">
-                      <img class="photo" src="/images/workshops/{{ mentor.avatar }}" alt="{{ mentor.avatar_alt }}" />
+                      <img class="photo" src="/2026/images/workshops/{{ mentor.avatar }}" alt="{{ mentor.avatar_alt }}" />
                     </div>
                   {% endif %}
                   {% if mentor.github or mentor.url or mentor.linkedin or mentor.bluesky or mentor.mastodon or mentor.twitter %}
@@ -112,7 +112,7 @@
                         {% if mentor.linkedin %}
                           <li>
                             <a href="{{ mentor.linkedin }}" target="_blank" rel="noopener noreferrer" class="btn__icon"
-                              ><img src="/images/icons/linkedin.svg" alt="LinkedIn"
+                              ><img src="/2026/images/icons/linkedin.svg" alt="LinkedIn"
                             /></a>
                           </li>
                         {% endif %}
@@ -123,21 +123,21 @@
                               target="_blank"
                               rel="noopener noreferrer"
                               class="btn__icon"
-                              ><img src="/images/icons/bluesky.svg" alt="Bluesky"
+                              ><img src="/2026/images/icons/bluesky.svg" alt="Bluesky"
                             /></a>
                           </li>
                         {% endif %}
                         {% if mentor.mastodon %}
                           <li>
                             <a href="{{ mentor.mastodon }}" target="_blank" rel="noopener noreferrer" class="btn__icon"
-                              ><img src="/images/icons/mastodon.svg" alt="Mastodon"
+                              ><img src="/2026/images/icons/mastodon.svg" alt="Mastodon"
                             /></a>
                           </li>
                         {% endif %}
                         {% if mentor.twitter %}
                           <li>
                             <a href="{{ mentor.twitter }}" target="_blank" rel="noopener noreferrer" class="btn__icon"
-                              ><img src="/images/icons/twitter.svg" alt="X"
+                              ><img src="/2026/images/icons/twitter.svg" alt="X"
                             /></a>
                           </li>
                         {% endif %}
@@ -176,7 +176,7 @@
                 <div class="photo-container">
                   <img
                     class="photo sponsor-logo"
-                    src="{% if page.extra.sponsor_logo %}{{ page.extra.sponsor_logo }}{% else %}/images/workshops/workshop-sponsors/{{ page.extra.sponsor }}.svg{% endif %}"
+                    src="{% if page.extra.sponsor_logo %}{{ page.extra.sponsor_logo }}{% else %}/2026/images/workshops/workshop-sponsors/{{ page.extra.sponsor }}.svg{% endif %}"
                     alt="{{ page.extra.sponsor }}"
                   />
                 </div>

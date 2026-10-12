@@ -13,8 +13,8 @@ bio = "<p>Alex is a Deployed AI Engineer at Helsing, working on Lura, Helsing's 
   sponsor_cta = "Visit our website"
   sponsor_url = "https://helsing.ai/?utm_source=eurorust"
   abstract = "<p>It’s one thing doing things in theory - it’s a totally different ballgame to do them in action. In this workshop, you’ll be combining computer vision, control theory, and a healthy dosage of Rust, to play a Helsing-edition of Simon-says, using real cameras and vehicles!</p><p>Every 30 seconds, the server will issue a new command - who can get their vehicle into the targeted quadrant the fastest?</p>"
-  ogimage = "/images/workshops/og-images/og-image-rust-in-action.webp"
-  heroimage = "/images/workshops/rust-in-action.webp"
+  ogimage = "/2026/images/workshops/og-images/og-image-rust-in-action.webp"
+  heroimage = "/2026/images/workshops/rust-in-action.webp"
   heroimage_alt = "A computer with an eye coming out of it"
 +++
 
@@ -31,14 +31,14 @@ bio = "<p>Alex is a Deployed AI Engineer at Helsing, working on Lura, Helsing's 
       <h4>2. Grab your wheels</h4>
       <div>
         <p>Each team will receive their own vehicle and details on how to connect to it.</p>
-        <img class="workshop-addnl-image" src="/images/workshops/rust-in-action-1.webp">
+        <img class="workshop-addnl-image" src="/2026/images/workshops/rust-in-action-1.webp">
       </div>
     </li>
     <li class="mb-7 border">
       <h4>3. Kickstart your code</h4>
       <div>
         <p>We’ll be providing a simple Rust SDK to help people ramp up faster.</p>
-        <img class="workshop-addnl-image" src="/images/workshops/rust-in-action-2.webp">
+        <img class="workshop-addnl-image" src="/2026/images/workshops/rust-in-action-2.webp">
       </div>
     </li>
     <li class="mb-7 border">

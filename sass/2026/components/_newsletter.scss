@@ -53,7 +53,7 @@
   }
 
   .button {
-    @include btn__primary-orange($icon: url("/images/icons/send.svg"));
+    @include btn__primary-orange($icon: url("/2026/images/icons/send.svg"));
     border: 0;
     height: 60px;
     margin-left: -30px;
