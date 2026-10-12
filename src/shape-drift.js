@@ -1,5 +1,7 @@
 export function initShapeDrift() {
   const shapes = document.querySelectorAll('.hero__circle-yellow, .hero__circle-red, .hero__square, .hero__triangle');
+  if (!shapes.length) return;
+
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let animations = [];
 

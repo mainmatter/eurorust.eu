@@ -14,7 +14,6 @@ import {
 import { HorizontalBlurShader } from 'three/addons/shaders/HorizontalBlurShader.js';
 import { VerticalBlurShader } from 'three/addons/shaders/VerticalBlurShader.js';
 
-
 export function createContactShadow(renderer, scene, platform, radius, height, modelHeight) {
   const resolution = 1024;
   const target = new WebGLRenderTarget(resolution, resolution);

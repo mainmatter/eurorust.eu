@@ -2,8 +2,7 @@
 [extra]
 dates = "October 14–17, 2027"
 location = "Prague, Czechia"
-# Replace with the confirmed Early Bird ticket URL before launch.
-ticket_url = "/tickets"
+ticket_url = "https://app.tickettailor.com/events/eurorust/2414461"
 
 [[extra.past_sponsors]]
 title = "Arm"
@@ -330,23 +329,5 @@ name = "Lisa Passing"
 job_title = "Creative Technologist"
 image = "/images/speakers/lisa-passing.webp"
 web = "https://lislis.de/?utm_source=eurorust"
-
-[[extra.speakers]]
-name = "Jana D\u00f6nszelmann"
-image = "/images/talks/jana-doenszelmann.webp"
-github = "https://github.com/jdonszelmann"
-mastodon = "https://fedi.xirion.net/@jana"
-web = "https://donsz.nl"
-
-[[extra.speakers]]
-name = "Tris Oaten"
-image = "/images/talks/tristram-oaten.webp"
-web = "http://youtube.com/c/NoBoilerplate"
-
-[[extra.speakers]]
-name = "Oli Scherer"
-image = "/images/talks/oli-scherer.webp"
-github = "https://github.com/oli-obk/"
-mastodon = "https://hachyderm.io/@oli"
 
 +++

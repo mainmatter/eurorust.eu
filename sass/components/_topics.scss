@@ -1,2 +1,100 @@
-.topics {
+.topics__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 2px solid #000;
+  border-left: 2px solid #000;
+  li {
+    position: relative;
+    isolation: isolate;
+    min-height: clamp(14rem, 22vw, 28rem);
+    padding: clamp(1.5rem, 2.5vw, 3.5rem);
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 50%;
+      aspect-ratio: 1;
+      top: 0;
+      right: 0;
+      z-index: -1;
+      background: var(--yellow);
+      border-radius: 0 0 0 100%;
+    }
+    &:nth-child(2)::after {
+      background: var(--blue);
+      width: 35%;
+      border-radius: 50%;
+      top: 8%;
+      right: 8%;
+    }
+    &:nth-child(3)::after {
+      background: var(--red);
+      clip-path: polygon(100% 0, 100% 100%, 0 0);
+      border-radius: 0;
+    }
+    &:nth-child(4)::after {
+      background: repeating-linear-gradient(90deg, #000 0 3px, transparent 3px 12px);
+      border-radius: 0 0 0 100%;
+    }
+    &:nth-child(5)::after {
+      background: var(--green);
+      width: 35%;
+      top: 8%;
+      right: 8%;
+      border-radius: 0;
+    }
+    &:nth-child(6)::after {
+      background: var(--orange);
+      border-radius: 0 0 100% 0;
+    }
+  }
+  h3 {
+    font-size: clamp(1.8rem, 2.7vw, 3.75rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    font-weight: 500;
+    margin: 0;
+  }
+}
+
+.topics__number {
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 64rem) {
+  .topics__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .topics__grid {
+    grid-template-columns: 1fr;
+    li {
+      min-height: 6rem;
+      padding: 0.75rem calc(clamp(3.5rem, 20vw, 5rem) + 1.5rem) 0.75rem 1rem;
+      gap: 0.25rem;
+      align-items: flex-start;
+      text-align: left;
+      justify-content: center;
+      &:nth-child(n)::after {
+        top: 50%;
+        right: 0.75rem;
+        width: clamp(3.5rem, 20vw, 5rem);
+        transform: translateY(-50%);
+      }
+    }
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
 }

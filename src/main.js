@@ -183,7 +183,7 @@ async function initFerris() {
   };
 
   window.addEventListener('pointermove', (event) => {
-    if (event.pointerType === 'touch') return;
+    if (event.pointerType === 'touch' || reducedMotion.matches) return;
     const bounds = canvas.getBoundingClientRect();
     if (!bounds.width) return;
     const position = Math.max(-1, Math.min(1, ((event.clientX - bounds.left) / bounds.width) * 2 - 1));

@@ -1,0 +1,38 @@
+.section-heading {
+  margin-bottom: clamp(2rem, 3.5vw, 4rem);
+  h2 {
+    font-size: clamp(3rem, 5.5vw, 7.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.045em;
+    font-weight: 600;
+    margin: 0;
+  }
+}
+
+.topics .section-heading,
+.speakers .section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.heading-pattern {
+  display: block;
+  width: clamp(9rem, 22vw, 26rem);
+  height: auto;
+  flex-shrink: 0;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 48rem) {
+  .topics .section-heading,
+  .speakers .section-heading {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .heading-pattern {
+    display: none;
+  }
+}

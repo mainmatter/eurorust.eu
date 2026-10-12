@@ -1,18 +1,20 @@
 .rustfest {
-  margin: 0 auto;
-  padding: 9rem 0 4rem 0;
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: clamp(10rem, 16vw, 20rem);
+  margin: 3rem 0 0;
+  padding: 2rem 0;
   text-align: center;
-
-  @media screen and (max-width: 60rem) {
-    padding: 6rem 0 0 0;
-  }
-
+  font-size: clamp(1.1rem, 1.5vw, 2rem);
   p {
-    color: var(--orange-100);
-    text-wrap: balance;
-
-    @media screen and (max-width: 60rem) {
-      padding-bottom: 1rem;
-    }
+    margin: 0;
+    line-height: 1.2;
+  }
+  img {
+    width: clamp(12rem, 16vw, 18rem);
+    margin: 1.5rem auto 0;
   }
 }
