@@ -1,7 +1,7 @@
 {% set schedule = load_data(path="data/2026/schedule.json") %}
 {% set canonical_url = current_url | default(value="https://eurorust.eu/2026/") %}
 {% set organization_logo = config.base_url ~ "/images/mainmatter-logo-dark.svg" %}
-{% set event_image = config.base_url ~ "/images/og-image.webp" %}
+{% set event_image = config.base_url ~ "/2026/images/og-image.webp" %}
 {% set page_description = "EuroRust 2026 is a conference for the European Rust community, held in Barcelona and online from October 14 to 17, 2026." %}
 {% set_global main_speaker_slugs = [] %}
 {% for day in schedule.days %}
