@@ -20,5 +20,22 @@
     <span class="hero__square" aria-hidden="true"></span>
     <span class="hero__triangle" aria-hidden="true"></span>
     <canvas role="img" aria-label="Glossy red Ferris on a blue platform"></canvas>
+    <img
+      class="hero__fallback"
+      src="/images/bauhaus_ferris.webp"
+      alt="Glossy red Ferris on a blue platform"
+      width="1600"
+      height="1600"
+    />
+    <noscript>
+      <style>
+        .hero__canvas canvas {
+          display: none;
+        }
+        .hero__canvas .hero__fallback {
+          display: block;
+        }
+      </style>
+    </noscript>
   </div>
 </section>

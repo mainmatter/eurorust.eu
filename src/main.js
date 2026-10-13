@@ -24,11 +24,19 @@ import { addRaisedPlatformLogo } from './platform-lettering';
 
 initShapeDrift();
 
+function showFerrisFallback() {
+  const hero = document.querySelector('.hero__canvas');
+  if (hero) hero.dataset.ferrisState = 'fallback';
+}
+
 async function initFerris() {
   const canvas = document.querySelector('.hero__canvas canvas');
   if (!canvas) return;
+  const usingFallback = () => canvas.parentElement.dataset.ferrisState === 'fallback';
+  canvas.addEventListener('webglcontextlost', showFerrisFallback, { once: true });
 
   const model = await new GLTFLoader().loadAsync('/three/ferris.glb');
+  if (usingFallback()) return;
   const scene = new Scene();
   const ferris = model.scene.children[0];
   const material = new MeshPhysicalMaterial({
@@ -55,14 +63,12 @@ async function initFerris() {
   const radius = Math.max(size.x, size.z) * 0.58;
   const height = radius * 0.4;
   const bevel = height * 0.06;
-  // Enlarge Ferris independently of the pedestal and keep his feet seated.
   ferris.scale.multiplyScalar(1.12);
   bounds.setFromObject(ferris);
   bounds.getSize(size);
   const center = bounds.getCenter(new Vector3());
   ferris.position.set(-center.x, height - bounds.min.y, -center.z + radius * 0.1);
 
-  // A rounded profile gives the blue pedestal a narrow, smooth rim.
   const profile = [new Vector2(0, 0), new Vector2(radius - bevel, 0)];
   for (let i = 1; i <= 8; i++) {
     const angle = -Math.PI / 2 + (i / 8) * (Math.PI / 2);
@@ -112,6 +118,10 @@ async function initFerris() {
   scene.add(createGroundShadow(radius));
 
   await addRaisedPlatformLogo(platform, radius, height);
+  if (usingFallback()) {
+    renderer.dispose();
+    return;
+  }
 
   const framing = new Box3().setFromObject(ferris).union(new Box3().setFromObject(platform));
   const sphere = framing.getBoundingSphere(new Sphere());
@@ -122,9 +132,20 @@ async function initFerris() {
   display.attach(platform);
   display.attach(contactShadow);
   const camera = new PerspectiveCamera(35, 1, 0.1, 100);
+  const renderFrame = () => {
+    if (usingFallback()) return;
+    try {
+      if (renderer.getContext().isContextLost()) throw new Error('WebGL context lost');
+      renderer.render(scene, camera);
+    } catch (error) {
+      showFerrisFallback();
+      console.error('Unable to render Ferris:', error);
+    }
+  };
 
   // Keep the camera fixed while Ferris and the platform rotate together.
   const render = () => {
+    if (usingFallback()) return;
     const width = canvas.parentElement.clientWidth;
     const height = canvas.parentElement.clientHeight;
     if (!width || !height) return;
@@ -142,7 +163,7 @@ async function initFerris() {
     camera.updateProjectionMatrix();
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.setSize(width, height, false);
-    renderer.render(scene, camera);
+    renderFrame();
   };
   new ResizeObserver(render).observe(canvas.parentElement);
   render();
@@ -156,9 +177,12 @@ async function initFerris() {
   let animationFrame;
 
   const animate = (time) => {
+    if (usingFallback()) {
+      animationFrame = undefined;
+      return;
+    }
     const delta = previousTime === undefined ? 0 : Math.min((time - previousTime) / 1000, 0.05);
     previousTime = time;
-    // Critically damped motion eases both speed and direction changes.
     const offset = display.rotation.y - targetRotation;
     const decay = Math.exp(-responsiveness * delta);
     const movement = (angularVelocity + responsiveness * offset) * delta;
@@ -174,10 +198,11 @@ async function initFerris() {
     } else {
       animationFrame = requestAnimationFrame(animate);
     }
-    renderer.render(scene, camera);
+    renderFrame();
   };
 
   const rotateTo = (angle) => {
+    if (usingFallback()) return;
     targetRotation = reducedMotion.matches ? 0 : angle;
     if (animationFrame === undefined) animationFrame = requestAnimationFrame(animate);
   };
@@ -199,11 +224,12 @@ async function initFerris() {
       targetRotation = 0;
       angularVelocity = 0;
       display.rotation.y = 0;
-      renderer.render(scene, camera);
+      renderFrame();
     }
   });
 }
 
 initFerris().catch((error) => {
+  showFerrisFallback();
   console.error('Unable to display Ferris:', error);
 });
