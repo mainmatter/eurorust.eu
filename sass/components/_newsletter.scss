@@ -100,19 +100,14 @@
   }
 
   .newsletter__mobile-art {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    display: block;
+    background: var(--background);
     border-bottom: 2px solid #000;
-    .pattern {
-      --paper: var(--background);
-      --ink: #000;
-    }
-    .pattern:first-child {
-      --ink: var(--green);
-    }
-    .pattern:last-child {
-      --ink: var(--orange);
-      transform: rotate(180deg);
+
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
     }
   }
 }

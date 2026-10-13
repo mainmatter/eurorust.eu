@@ -122,6 +122,23 @@ $speaker-colors: yellow, blue, red, green, orange;
   }
 
   .speaker__socials {
+    flex-wrap: nowrap;
     gap: 0.25rem;
+
+    li {
+      flex: 0 1 2rem;
+      min-width: 0;
+    }
+
+    .btn__icon {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
   }
 }
