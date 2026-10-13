@@ -11,6 +11,11 @@
   image="/images/sponsors/raven-trading.svg"
 
 [[extra.partner_sponsors]]
+  title="Infineon"
+  link="https://www.infineon.com/"
+  image="/images/sponsors/infineon.svg"
+
+[[extra.partner_sponsors]]
   title="Exein"
   link="https://www.exein.io/?ic_medium=direct&ic_source=surlent&utm_source=eurorust"
   image="/images/sponsors/exein.svg"
