@@ -61,6 +61,29 @@ template = "2026/index.html"
   link="https://aws.amazon.com/"
   image="/images/sponsors/aws.svg"
 
+[[extra.partner_sponsors]]
+  title="Exein"
+  link="https://www.exein.io/?ic_medium=direct&ic_source=surlent&utm_source=eurorust"
+  image="/2026/images/sponsors/exein.svg"
+  logo_scale=0.7
+
+[[extra.partner_sponsors]]
+  title="Encore"
+  link="https://github.com/encoredev/encore"
+  image="/2026/images/sponsors/encore.svg"
+  logo_scale=0.5
+
+[[extra.premier_partner_sponsors]]
+  title="Antithesis"
+  link="https://antithesis.com/"
+  image="/2026/images/sponsors/antithesis.svg"
+
+[[extra.premier_partner_sponsors]]
+  title="Solana"
+  link="https://solana.com/"
+  image="/2026/images/sponsors/solana.svg"
+  logo_scale=0.7
+
 [[extra.workshops]]
   title="programming-a-line-follower-robot"
 

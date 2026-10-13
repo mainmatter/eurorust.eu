@@ -5,6 +5,11 @@ location = "Prague, Czechia"
 ticket_url = "https://app.tickettailor.com/events/eurorust/2414461"
 
 [[extra.past_sponsors]]
+title = "Antithesis"
+link = "https://antithesis.com/"
+image = "/2026/images/sponsors/antithesis.svg"
+
+[[extra.past_sponsors]]
 title = "Arm"
 link = "https://www.arm.com/?utm_source=eurorust"
 image = "/images/past-sponsors/arm.svg"
@@ -48,6 +53,11 @@ image = "/images/past-sponsors/crabnebula.svg"
 title = "DevITjobs"
 link = "https://devitjobs.uk/"
 image = "/images/past-sponsors/dev-it.png"
+
+[[extra.past_sponsors]]
+title = "Encore"
+link = "https://github.com/encoredev/encore"
+image = "/2026/images/sponsors/encore.svg"
 
 [[extra.past_sponsors]]
 title = "Exein"
