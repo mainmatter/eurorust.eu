@@ -197,6 +197,10 @@ command = "vite build && zola build --base-url $DEPLOY_PRIME_URL"
   to = "/2026/talks/inside-cloud-hypervisor-from-kvm-to-a-running-vm/"
 
 [[redirects]]
+  from = "/talks/fearless-concurrency-on-the-gpu/"
+  to = "/2026/talks/fearless-concurrency-on-the-gpu/"
+
+[[redirects]]
   from = "/activities/meetup/"
   to = "/2026/activities/meetup/"
 
@@ -234,7 +238,7 @@ command = "vite build && zola build --base-url $DEPLOY_PRIME_URL"
 
 [[redirects]]
   from = "/workshops/you-cant-fix-what-you-cant-see-telemetry-for-rust-apis/"
-  to = "/workshops/telemetry-for-rust-apis"
+  to = "/2023/workshops/telemetry-for-rust-apis/"
 
 [[redirects]]
   from = "/workshops/"
@@ -242,7 +246,7 @@ command = "vite build && zola build --base-url $DEPLOY_PRIME_URL"
 
 [[redirects]]
   from = "/sponsorship-prospectus.pdf"
-  to = "/sponsorship-prospectus-2026.pdf"
+  to = "/2026/sponsorship-prospectus.pdf"
 
 [[redirects]]
   from = "/moderators/*"
@@ -403,10 +407,6 @@ command = "vite build && zola build --base-url $DEPLOY_PRIME_URL"
 # 2025 workshops
 
 [[redirects]]
-  from = "/workshops/rust-in-action/"
-  to = "/2025/workshops/rust-in-action/"
-
-[[redirects]]
   from = "/workshops/rust-python-interoperability/"
   to = "/2025/workshops/rust-python-interoperability/"
 
@@ -439,30 +439,6 @@ command = "vite build && zola build --base-url $DEPLOY_PRIME_URL"
   to = "/2025/workshops/profiling-rust-in-action/"
 
 # 2025 activities
-
-[[redirects]]
-  from = "/activities/bike-tour/"
-  to = "/2025/activities/bike-tour/"
-
-[[redirects]]
-  from = "/activities/boat-tour/"
-  to = "/2025/activities/boat-tour/"
-
-[[redirects]]
-  from = "/activities/impl-day/"
-  to = "/2025/activities/impl-day/"
-
-[[redirects]]
-  from = "/activities/impl-room/"
-  to = "/2025/activities/impl-room/"
-
-[[redirects]]
-  from = "/activities/karaoke/"
-  to = "/2025/activities/karaoke/"
-
-[[redirects]]
-  from = "/activities/meetup/"
-  to = "/2025/activities/meetup/"
 
 [[redirects]]
   from = "/activities/street-art-tour/"
