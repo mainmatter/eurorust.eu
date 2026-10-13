@@ -10,6 +10,7 @@
             <img
               alt="{{ sponsor.title }}"
               src="{{ sponsor.image }}"
+              style="transform: scale({{ sponsor.logo_scale | default(value=1) }})"
               width="{{ meta.width }}"
               height="{{ meta.height }}"
               loading="lazy"
@@ -27,6 +28,7 @@
             <img
               alt="{{ sponsor.title }}"
               src="{{ sponsor.image }}"
+              style="transform: scale({{ sponsor.logo_scale | default(value=1) }})"
               width="{{ meta.width }}"
               height="{{ meta.height }}"
               loading="lazy"
@@ -44,6 +46,7 @@
             <img
               alt="{{ sponsor.title }}"
               src="{{ sponsor.image }}"
+              style="transform: scale({{ sponsor.logo_scale | default(value=1) }})"
               width="{{ meta.width }}"
               height="{{ meta.height }}"
               loading="lazy"
@@ -62,6 +65,7 @@
               <img
                 alt="{{ sponsor.title }}"
                 src="{{ sponsor.image }}"
+                style="transform: scale({{ sponsor.logo_scale | default(value=1) }})"
                 width="{{ meta.width }}"
                 height="{{ meta.height }}"
                 loading="lazy"

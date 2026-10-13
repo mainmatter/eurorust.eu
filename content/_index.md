@@ -15,6 +15,18 @@
   link="https://www.infineon.com/"
   image="/images/sponsors/infineon.svg"
 
+[[extra.partner_sponsors]]
+  title="Exein"
+  link="https://www.exein.io/?ic_medium=direct&ic_source=surlent&utm_source=eurorust"
+  image="/images/sponsors/exein.svg"
+  logo_scale=0.7
+
+[[extra.partner_sponsors]]
+  title="Encore"
+  link="https://github.com/encoredev/encore"
+  image="/images/sponsors/encore.svg"
+  logo_scale=0.5
+
 [[extra.onsite_partner_sponsors]]
   title="Myrmic"
   link="https://myrmic.org/"
@@ -64,6 +76,17 @@
   title="AWS"
   link="https://aws.amazon.com/"
   image="/images/sponsors/aws.svg"
+
+[[extra.premier_partner_sponsors]]
+  title="Antithesis"
+  link="https://antithesis.com/"
+  image="/images/sponsors/antithesis.svg"
+
+[[extra.premier_partner_sponsors]]
+  title="Solana"
+  link="https://solana.com/"
+  image="/images/sponsors/solana.svg"
+  logo_scale=0.7
 
 [[extra.workshops]]
   title="programming-a-line-follower-robot"
