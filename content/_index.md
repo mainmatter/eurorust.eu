@@ -20,6 +20,11 @@ link = "https://astral.sh/?utm_source=eurorust"
 image = "/images/past-sponsors/astral.svg"
 
 [[extra.past_sponsors]]
+title = "Infineon"
+link = "https://www.infineon.com/"
+image = "/images/sponsors/infineon.svg"
+
+[[extra.past_sponsors]]
 title = "AWS"
 link = "https://aws.amazon.com/"
 image = "/images/sponsors/aws.svg"
