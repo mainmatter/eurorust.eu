@@ -194,7 +194,7 @@ async function initFerris() {
     if (autoRotate()) {
       if (driftElapsed >= driftDuration) {
         driftFrom = targetRotation;
-        driftTo = driftDirection * ((12 + Math.random() * 14) * Math.PI / 180);
+        driftTo = driftDirection * (((12 + Math.random() * 14) * Math.PI) / 180);
         driftDirection *= -1;
         driftDuration = 3 + Math.random() * 2;
         driftElapsed = 0;
