@@ -24,7 +24,8 @@
             {% endfor %}
             {% if talk_date and talk_time and talk_stage %}
               <p class="workshop-hero__details">
-                »<a href="/2026/schedule" class="inline">Schedule</a> // {{ page.extra.type | default(value="Talk") }}<br />
+                »<a href="/2026/schedule" class="inline">Schedule</a> //
+                {{ page.extra.type | default(value="Talk") }}<br />
                 {{ talk_date }}<br />
                 {{ talk_time }}<br />
                 {{ talk_stage }}
@@ -215,7 +216,6 @@
           </div>
         </section>
       {% endif %}
-
     </main>
 
     {% include "2026/sections/footer.html" %}

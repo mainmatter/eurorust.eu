@@ -85,7 +85,11 @@
                 <div class="mentor__grid-photo-links">
                   {% if mentor.avatar %}
                     <div class="photo-container">
-                      <img class="photo" src="/2026/images/workshops/{{ mentor.avatar }}" alt="{{ mentor.avatar_alt }}" />
+                      <img
+                        class="photo"
+                        src="/2026/images/workshops/{{ mentor.avatar }}"
+                        alt="{{ mentor.avatar_alt }}"
+                      />
                     </div>
                   {% endif %}
                   {% if mentor.github or mentor.url or mentor.linkedin or mentor.bluesky or mentor.mastodon or mentor.twitter %}
@@ -202,7 +206,6 @@
       {% endif %}
 
       <section class="workshop-sponsor mb-5">{% include "2026/sections/workshop-venue.html" %}</section>
-
     </main>
 
     {% include "2026/sections/footer.html" %}
