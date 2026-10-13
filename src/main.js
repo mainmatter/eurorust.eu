@@ -169,20 +169,42 @@ async function initFerris() {
   render();
 
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const touchPointer = window.matchMedia('(hover: none) and (pointer: coarse)');
   const maxRotation = (45 * Math.PI) / 180;
   const responsiveness = 12;
   let angularVelocity = 0;
   let targetRotation = 0;
   let previousTime;
   let animationFrame;
+  let inView = true;
+  let driftElapsed = 0;
+  let driftDuration = 0;
+  let driftFrom = 0;
+  let driftTo = 0;
+  let driftDirection = Math.random() < 0.5 ? -1 : 1;
+  const autoRotate = () => touchPointer.matches && !reducedMotion.matches;
 
   const animate = (time) => {
-    if (usingFallback()) {
+    if (usingFallback() || document.hidden || !inView || reducedMotion.matches) {
       animationFrame = undefined;
       return;
     }
     const delta = previousTime === undefined ? 0 : Math.min((time - previousTime) / 1000, 0.05);
     previousTime = time;
+    if (autoRotate()) {
+      if (driftElapsed >= driftDuration) {
+        driftFrom = targetRotation;
+        driftTo = driftDirection * ((12 + Math.random() * 14) * Math.PI / 180);
+        driftDirection *= -1;
+        driftDuration = 3 + Math.random() * 2;
+        driftElapsed = 0;
+      }
+      driftElapsed = Math.min(driftElapsed + delta, driftDuration);
+      const progress = driftElapsed / driftDuration;
+      // Ease each turn with zero velocity and acceleration at both ends.
+      const eased = progress ** 3 * (progress * (progress * 6 - 15) + 10);
+      targetRotation = driftFrom + (driftTo - driftFrom) * eased;
+    }
     const offset = display.rotation.y - targetRotation;
     const decay = Math.exp(-responsiveness * delta);
     const movement = (angularVelocity + responsiveness * offset) * delta;
@@ -190,7 +212,7 @@ async function initFerris() {
     angularVelocity = (angularVelocity - responsiveness * movement) * decay;
     display.rotation.y = Math.max(-maxRotation, Math.min(maxRotation, rotation));
     if (display.rotation.y !== rotation) angularVelocity = 0;
-    if (Math.abs(targetRotation - display.rotation.y) < 0.0001 && Math.abs(angularVelocity) < 0.001) {
+    if (!autoRotate() && Math.abs(targetRotation - display.rotation.y) < 0.0001 && Math.abs(angularVelocity) < 0.001) {
       display.rotation.y = targetRotation;
       angularVelocity = 0;
       animationFrame = undefined;
@@ -202,13 +224,13 @@ async function initFerris() {
   };
 
   const rotateTo = (angle) => {
-    if (usingFallback()) return;
+    if (usingFallback() || document.hidden || !inView || autoRotate()) return;
     targetRotation = reducedMotion.matches ? 0 : angle;
     if (animationFrame === undefined) animationFrame = requestAnimationFrame(animate);
   };
 
   window.addEventListener('pointermove', (event) => {
-    if (event.pointerType === 'touch' || reducedMotion.matches) return;
+    if (event.pointerType === 'touch' || touchPointer.matches || reducedMotion.matches) return;
     const bounds = canvas.getBoundingClientRect();
     if (!bounds.width) return;
     const position = Math.max(-1, Math.min(1, ((event.clientX - bounds.left) / bounds.width) * 2 - 1));
@@ -216,17 +238,29 @@ async function initFerris() {
   });
   document.documentElement.addEventListener('pointerleave', () => rotateTo(0));
   window.addEventListener('blur', () => rotateTo(0));
-  reducedMotion.addEventListener('change', () => {
+  const updateMotion = () => {
+    cancelAnimationFrame(animationFrame);
+    animationFrame = undefined;
+    previousTime = undefined;
+    angularVelocity = 0;
+    targetRotation = display.rotation.y;
+    driftDuration = 0;
     if (reducedMotion.matches) {
-      cancelAnimationFrame(animationFrame);
-      animationFrame = undefined;
-      previousTime = undefined;
       targetRotation = 0;
-      angularVelocity = 0;
       display.rotation.y = 0;
       renderFrame();
+    } else if (autoRotate() && !document.hidden && inView && !usingFallback()) {
+      animationFrame = requestAnimationFrame(animate);
     }
-  });
+  };
+  reducedMotion.addEventListener('change', updateMotion);
+  touchPointer.addEventListener('change', updateMotion);
+  document.addEventListener('visibilitychange', updateMotion);
+  new IntersectionObserver(([entry]) => {
+    inView = entry.isIntersecting;
+    updateMotion();
+  }).observe(canvas.parentElement);
+  updateMotion();
 }
 
 initFerris().catch((error) => {
