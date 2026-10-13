@@ -2,7 +2,7 @@
 [extra]
 dates = "October 14–17, 2027"
 location = "Prague, Czechia"
-ticket_url = "https://app.tickettailor.com/events/eurorust/2414461"
+ticket_url = "https://www.tickettailor.com/events/eurorust/2414461"
 
 [[extra.past_sponsors]]
 title = "Antithesis"
