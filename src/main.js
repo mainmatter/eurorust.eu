@@ -117,7 +117,6 @@ async function initFerris() {
   light.shadow.normalBias = 0.015;
   scene.add(light);
 
-  const contactShadow = createContactShadow(renderer, scene, platform, radius, height, size.y);
   scene.add(createGroundShadow(radius));
 
   await addRaisedPlatformLogo(platform, radius, height);
@@ -133,12 +132,13 @@ async function initFerris() {
   scene.add(display);
   display.attach(ferris);
   display.attach(platform);
-  display.attach(contactShadow);
+  const updateContactShadow = createContactShadow(renderer, scene, display, ferris, platform, radius, height, size.y);
   const camera = new PerspectiveCamera(35, 1, 0.1, 100);
-  const renderFrame = () => {
+  const renderFrame = (time) => {
     if (usingFallback()) return;
     try {
       if (renderer.getContext().isContextLost()) throw new Error('WebGL context lost');
+      updateContactShadow(time);
       renderer.render(scene, camera);
     } catch (error) {
       showFerrisFallback();
@@ -224,7 +224,7 @@ async function initFerris() {
     } else {
       animationFrame = requestAnimationFrame(animate);
     }
-    renderFrame();
+    renderFrame(time);
   };
 
   const rotateTo = (angle) => {

@@ -14,8 +14,8 @@ import {
 import { HorizontalBlurShader } from 'three/addons/shaders/HorizontalBlurShader.js';
 import { VerticalBlurShader } from 'three/addons/shaders/VerticalBlurShader.js';
 
-export function createContactShadow(renderer, scene, platform, radius, height, modelHeight) {
-  const resolution = 1024;
+export function createContactShadow(renderer, scene, display, ferris, platform, radius, height, modelHeight) {
+  const resolution = 512;
   const target = new WebGLRenderTarget(resolution, resolution);
   const intermediate = new WebGLRenderTarget(resolution, resolution);
   const depth = new MeshDepthMaterial({ side: DoubleSide, blending: NoBlending });
@@ -25,23 +25,14 @@ export function createContactShadow(renderer, scene, platform, radius, height, m
       'gl_FragColor = vec4( vec3( 0.0 ), exp( -fragCoordZ * 9.0 ) );'
     );
   };
-  const camera = new OrthographicCamera(-radius, radius, radius, -radius, 0, modelHeight * 1.1);
-  camera.position.set(0, height + 0.001, 0);
-  camera.up.set(0, 0, 1);
-  camera.lookAt(0, height + 1, 0);
 
-  const previousTarget = renderer.getRenderTarget();
-  const previousOverride = scene.overrideMaterial;
-  const previousShadows = renderer.shadowMap.enabled;
-  platform.visible = false;
-  renderer.shadowMap.enabled = false;
-  scene.overrideMaterial = depth;
-  renderer.setRenderTarget(target);
-  renderer.clear();
-  renderer.render(scene, camera);
-  scene.overrideMaterial = previousOverride;
-  platform.visible = true;
-  renderer.shadowMap.enabled = previousShadows;
+  // Render only Ferris. The camera and shadow rotate with the platform.
+  ferris.traverse((child) => child.layers.enable(1));
+  const camera = new OrthographicCamera(-radius, radius, radius, -radius, 0, modelHeight * 1.1);
+  camera.layers.set(1);
+  camera.position.set(platform.position.x, platform.position.y + height + 0.001, platform.position.z);
+  camera.rotation.x = Math.PI / 2;
+  display.add(camera);
 
   const blurScene = new Scene();
   const blurCamera = new OrthographicCamera(-1, 1, 1, -1, 0, 2);
@@ -51,24 +42,6 @@ export function createContactShadow(renderer, scene, platform, radius, height, m
   horizontal.depthTest = vertical.depthTest = false;
   const quad = new Mesh(new PlaneGeometry(2, 2), horizontal);
   blurScene.add(quad);
-  for (const spread of [2.5, 1.25]) {
-    quad.material = horizontal;
-    horizontal.uniforms.tDiffuse.value = target.texture;
-    horizontal.uniforms.h.value = spread / resolution;
-    renderer.setRenderTarget(intermediate);
-    renderer.render(blurScene, blurCamera);
-    quad.material = vertical;
-    vertical.uniforms.tDiffuse.value = intermediate.texture;
-    vertical.uniforms.v.value = spread / resolution;
-    renderer.setRenderTarget(target);
-    renderer.render(blurScene, blurCamera);
-  }
-  renderer.setRenderTarget(previousTarget);
-  intermediate.dispose();
-  depth.dispose();
-  horizontal.dispose();
-  vertical.dispose();
-  quad.geometry.dispose();
 
   const shadow = new Mesh(
     new CircleGeometry(radius - height * 0.06, 96),
@@ -82,10 +55,44 @@ export function createContactShadow(renderer, scene, platform, radius, height, m
     })
   );
   shadow.rotation.x = Math.PI / 2;
-  shadow.position.y = height + 0.002;
+  shadow.position.set(platform.position.x, platform.position.y + height + 0.002, platform.position.z);
   shadow.renderOrder = 1;
-  scene.add(shadow);
-  return shadow;
+  display.add(shadow);
+
+  let lastUpdate = -Infinity;
+  const update = (time) => {
+    if (time !== undefined && time - lastUpdate < 1000 / 30) return;
+    const previousTarget = renderer.getRenderTarget();
+    const previousOverride = scene.overrideMaterial;
+    const previousShadows = renderer.shadowMap.enabled;
+    try {
+      renderer.shadowMap.enabled = false;
+      scene.overrideMaterial = depth;
+      renderer.setRenderTarget(target);
+      renderer.clear();
+      renderer.render(scene, camera);
+      scene.overrideMaterial = previousOverride;
+
+      // One blur pair at half resolution matches the old two-pass softness.
+      quad.material = horizontal;
+      horizontal.uniforms.tDiffuse.value = target.texture;
+      horizontal.uniforms.h.value = 1.4 / resolution;
+      renderer.setRenderTarget(intermediate);
+      renderer.render(blurScene, blurCamera);
+      quad.material = vertical;
+      vertical.uniforms.tDiffuse.value = intermediate.texture;
+      vertical.uniforms.v.value = 1.4 / resolution;
+      renderer.setRenderTarget(target);
+      renderer.render(blurScene, blurCamera);
+      lastUpdate = time ?? performance.now();
+    } finally {
+      scene.overrideMaterial = previousOverride;
+      renderer.shadowMap.enabled = previousShadows;
+      renderer.setRenderTarget(previousTarget);
+    }
+  };
+
+  return update;
 }
 
 export function createGroundShadow(radius) {
