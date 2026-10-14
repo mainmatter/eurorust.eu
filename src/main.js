@@ -33,6 +33,7 @@ function showFerrisFallback() {
 async function initFerris() {
   const canvas = document.querySelector('.hero__canvas canvas');
   if (!canvas) return;
+  const touchPointer = window.matchMedia('(hover: none) and (pointer: coarse)');
   const usingFallback = () => canvas.parentElement.dataset.ferrisState === 'fallback';
   canvas.addEventListener('webglcontextlost', showFerrisFallback, { once: true });
 
@@ -104,7 +105,8 @@ async function initFerris() {
 
   const light = new DirectionalLight(0xffffff, 0.8);
   light.position.set(-radius * 2, size.y * 2 + height, radius * 3);
-  light.castShadow = true;
+  // The soft contact shadow is enough on touch devices; VSM flickers on some mobile GPUs.
+  light.castShadow = !touchPointer.matches;
   light.shadow.mapSize.set(1024, 1024);
   light.shadow.radius = 24;
   light.shadow.blurSamples = 32;
@@ -172,7 +174,6 @@ async function initFerris() {
   render();
 
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const touchPointer = window.matchMedia('(hover: none) and (pointer: coarse)');
   const maxRotation = (45 * Math.PI) / 180;
   const responsiveness = 12;
   let angularVelocity = 0;
@@ -248,6 +249,7 @@ async function initFerris() {
   document.documentElement.addEventListener('pointerleave', () => rotateTo(0));
   window.addEventListener('blur', () => rotateTo(0));
   const updateMotion = () => {
+    light.castShadow = !touchPointer.matches;
     cancelAnimationFrame(animationFrame);
     animationFrame = undefined;
     previousTime = undefined;
