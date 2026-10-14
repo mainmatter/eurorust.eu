@@ -15,6 +15,7 @@ import {
   PMREMGenerator,
   VSMShadowMap,
   ACESFilmicToneMapping,
+  AnimationMixer,
 } from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
@@ -35,7 +36,7 @@ async function initFerris() {
   const usingFallback = () => canvas.parentElement.dataset.ferrisState === 'fallback';
   canvas.addEventListener('webglcontextlost', showFerrisFallback, { once: true });
 
-  const model = await new GLTFLoader().loadAsync('/three/ferris.glb');
+  const model = await new GLTFLoader().loadAsync('/three/ferris-2027.glb');
   if (usingFallback()) return;
   const scene = new Scene();
   const ferris = model.scene.children[0];
@@ -57,6 +58,8 @@ async function initFerris() {
     }
   });
   scene.add(ferris);
+  const mixer = new AnimationMixer(ferris);
+  model.animations.forEach((clip) => mixer.clipAction(clip).play());
 
   const bounds = new Box3().setFromObject(ferris);
   const size = bounds.getSize(new Vector3());
@@ -191,6 +194,7 @@ async function initFerris() {
     }
     const delta = previousTime === undefined ? 0 : Math.min((time - previousTime) / 1000, 0.05);
     previousTime = time;
+    mixer.update(delta);
     if (autoRotate()) {
       if (driftElapsed >= driftDuration) {
         driftFrom = targetRotation;
@@ -212,7 +216,7 @@ async function initFerris() {
     angularVelocity = (angularVelocity - responsiveness * movement) * decay;
     display.rotation.y = Math.max(-maxRotation, Math.min(maxRotation, rotation));
     if (display.rotation.y !== rotation) angularVelocity = 0;
-    if (!autoRotate() && Math.abs(targetRotation - display.rotation.y) < 0.0001 && Math.abs(angularVelocity) < 0.001) {
+    if (!autoRotate() && !model.animations.length && Math.abs(targetRotation - display.rotation.y) < 0.0001 && Math.abs(angularVelocity) < 0.001) {
       display.rotation.y = targetRotation;
       angularVelocity = 0;
       animationFrame = undefined;
@@ -246,10 +250,11 @@ async function initFerris() {
     targetRotation = display.rotation.y;
     driftDuration = 0;
     if (reducedMotion.matches) {
+      mixer.setTime(0);
       targetRotation = 0;
       display.rotation.y = 0;
       renderFrame();
-    } else if (autoRotate() && !document.hidden && inView && !usingFallback()) {
+    } else if (!document.hidden && inView && !usingFallback()) {
       animationFrame = requestAnimationFrame(animate);
     }
   };
