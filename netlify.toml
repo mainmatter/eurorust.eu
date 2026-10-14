@@ -21,26 +21,6 @@ command = "vite build && zola build --base-url $DEPLOY_PRIME_URL"
 # 2026 archive
 
 [[redirects]]
-  from = "/accessibility/"
-  to = "/2026/accessibility/"
-
-[[redirects]]
-  from = "/schedule/"
-  to = "/2026/schedule/"
-
-[[redirects]]
-  from = "/travel/"
-  to = "/2026/travel/"
-
-[[redirects]]
-  from = "/microsoft/"
-  to = "/2026/microsoft/"
-
-[[redirects]]
-  from = "/jetbrains/"
-  to = "/2026/jetbrains/"
-
-[[redirects]]
   from = "/workshops/c-to-rust/"
   to = "/2026/workshops/c-to-rust/"
 
