@@ -40,7 +40,7 @@ async function initFerris() {
   const model = await new GLTFLoader().loadAsync('/three/ferris-2027.glb');
   if (usingFallback()) return;
   const scene = new Scene();
-  const ferris = model.scene.children[0];
+  const ferris = model.scene;
   const material = new MeshPhysicalMaterial({
     color: 0xdd331d,
     metalness: 0,
@@ -62,16 +62,27 @@ async function initFerris() {
   const mixer = new AnimationMixer(ferris);
   model.animations.forEach((clip) => mixer.clipAction(clip).play());
 
-  const bounds = new Box3().setFromObject(ferris);
+  // The exported leg rig has oversized bounds. Size the platform from visible body meshes.
+  const visualBounds = new Box3();
+  const measureBody = () => {
+    ferris.updateWorldMatrix(true, true);
+    visualBounds.makeEmpty();
+    ferris.traverse((child) => {
+      if (child.isMesh && !child.isSkinnedMesh) visualBounds.expandByObject(child, true);
+    });
+  };
+  measureBody();
+  const bounds = new Box3().setFromObject(ferris, true);
   const size = bounds.getSize(new Vector3());
-  const radius = Math.max(size.x, size.z) * 0.58;
+  const bodySize = visualBounds.getSize(new Vector3());
+  const radius = Math.max(bodySize.x, bodySize.z) * 0.58;
   const height = radius * 0.4;
   const bevel = height * 0.06;
   ferris.scale.multiplyScalar(1.12);
-  bounds.setFromObject(ferris);
+  bounds.setFromObject(ferris, true);
   bounds.getSize(size);
   const center = bounds.getCenter(new Vector3());
-  ferris.position.set(-center.x, height - bounds.min.y, -center.z + radius * 0.1);
+  ferris.position.set(-center.x, height - bounds.min.y - radius * 0.02, -center.z - radius * 0.1);
 
   const profile = [new Vector2(0, 0), new Vector2(radius - bevel, 0)];
   for (let i = 1; i <= 8; i++) {
@@ -127,7 +138,8 @@ async function initFerris() {
     return;
   }
 
-  const framing = new Box3().setFromObject(ferris).union(new Box3().setFromObject(platform));
+  measureBody();
+  const framing = visualBounds.union(new Box3().setFromObject(platform));
   const sphere = framing.getBoundingSphere(new Sphere());
   const display = new Group();
   display.position.copy(sphere.center);
@@ -161,10 +173,10 @@ async function initFerris() {
     camera.far = distance + sphere.radius * 4;
     camera.position.set(
       sphere.center.x,
-      sphere.center.y + Math.sin(0.18) * distance,
-      sphere.center.z + Math.cos(0.18) * distance
+      sphere.center.y + Math.sin(0.1) * distance,
+      sphere.center.z + Math.cos(0.1) * distance
     );
-    camera.lookAt(sphere.center);
+    camera.lookAt(sphere.center.x, sphere.center.y + sphere.radius * 0.08, sphere.center.z);
     camera.updateProjectionMatrix();
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.setSize(width, height, false);
