@@ -2,7 +2,7 @@
 
 The source code for [https://eurorust.eu](https://eurorust.eu).
 
-![EuroRust logo](./static/images/eurorust-logo-light.png)
+![EuroRust logo](./static/images/EuroRust2027_logo_horizontal.svg)
 
 ## Requirements
 

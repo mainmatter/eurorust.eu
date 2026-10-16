@@ -1,201 +1,143 @@
-.speakers {
-  &::before {
+.speaker__portrait {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center bottom;
+  border: 2px solid #000;
+  border-radius: inherit;
+
+  filter: grayscale(1) contrast(1.05) var(--portrait-tint);
+}
+
+.speaker__filters {
+  position: absolute;
+}
+
+.speakers > ul {
+  padding: 0;
+  list-style: none;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(2.5rem, 4vw, 5rem) clamp(1.25rem, 2.5vw, 3rem);
+  margin: 0;
+}
+
+.speaker__details {
+  min-width: 0;
+  margin: 0;
+}
+
+.speaker__frame {
+  --frame-color: var(--yellow);
+  --frame-gap: clamp(0.65rem, 1.2vw, 1.25rem);
+  position: relative;
+  isolation: isolate;
+  padding: var(--frame-gap);
+  border: 2px solid #000;
+  border-radius: var(--frame-radius, 30% 0 0 0);
+  background: var(--frame-color);
+  overflow: hidden;
+
+  &::before,
+  &::after {
     content: "";
-    background-image: url("/images/backgrounds/lens-flare.webp");
-    position: relative;
-    display: block;
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 14.7vw;
-    height: 14.7vw;
-    margin-bottom: -14.7vw;
-    top: 20vw;
-    left: 3vw;
-    z-index: 1;
+    position: absolute;
+    z-index: 0;
+    inset: calc(2 * var(--frame-gap) + 2px);
+    border: 2px solid #000;
+    border-radius: inherit;
+    pointer-events: none;
   }
 
-  * {
-    z-index: 2;
-    position: relative;
+  &::after {
+    inset: calc(3 * var(--frame-gap) + 4px);
   }
+}
 
-  .speakers__buttons {
-    text-align: center;
-    margin-top: 10rem;
+$speaker-frames: (
+  50%,
+  45% 45% 0 0,
+  0 45% 0 45%,
+  0,
+  45% 0 0 0,
+  0 0 50% 50%,
+  35% 0 35% 0,
+  50% 50% 50% 0,
+  0 50% 50% 0,
+  0 0 40% 0,
+  50% 0 50% 50%,
+  35% 35% 0 35%
+);
 
-    .speakers__buttons__background {
-      background-image: url("/images/backgrounds/bubble1.webp");
-      position: relative;
-      display: block;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center center;
-      width: 16rem;
-      height: 16rem;
-      margin: -11rem auto 0 auto;
-      animation: bubbles 9s infinite ease-in-out;
-      animation-delay: 1s;
-      z-index: 1;
-    }
+@for $i from 1 through length($speaker-frames) {
+  .speaker__details:nth-child(12n + #{$i}) .speaker__frame {
+    --frame-radius: #{nth($speaker-frames, $i)};
   }
-  .speakers__ticket-button {
-    @include btn__primary-orange;
-    padding: 0.8rem 4.5rem;
-    z-index: 2;
+}
 
-    @media screen and (max-width: 60rem) {
-      padding: 1rem 4.5rem;
-    }
+$speaker-colors: yellow, blue, red, green, orange;
+
+@for $i from 1 through length($speaker-colors) {
+  .speaker__details:nth-child(5n + #{$i}) .speaker__frame {
+    --frame-color: var(--#{nth($speaker-colors, $i)});
   }
+}
 
-  img.speaker__portrait {
-    width: 30vw;
-    max-width: 400px;
+.speaker__name {
+  text-align: center;
+  font-size: clamp(1.6rem, 2vw, 2.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  margin: 1.5rem 0 0.75rem;
+  font-weight: 600;
+}
 
-    @media screen and (max-width: 60rem) {
-      width: 75vw;
-    }
+.speaker__socials {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  list-style: none;
+  padding: 0;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 64rem) {
+  .speakers > ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .speakers > ul {
+    column-gap: 1rem;
   }
 
   .speaker__name {
-    font-weight: 700;
-    text-transform: uppercase;
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    overflow-wrap: anywhere;
   }
 
-  .title {
-    font-weight: 700;
-    text-transform: uppercase;
-    padding: 5px 25px;
-    background-color: var(--orange-300);
-    border-radius: var(--corner);
-  }
+  .speaker__socials {
+    flex-wrap: nowrap;
+    gap: 0.25rem;
 
-  h1 {
-    @include stroke__shadow(var(--orange-100), 0.5px);
-  }
-
-  h1,
-  h4 {
-    text-align: center;
-  }
-
-  h4 {
-    margin-bottom: 2rem;
-  }
-
-  ul {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 1rem;
-    row-gap: 6rem;
-    list-style: none;
-    max-width: 1024px;
-    margin: 0 auto;
-    text-align: center;
-
-    @media screen and (max-width: 60rem) {
-      grid-template-columns: 1fr;
-      gap: 5rem;
+    li {
+      flex: 0 1 2rem;
+      min-width: 0;
     }
 
-    p {
-      margin: 1.25rem auto 1rem auto;
-      color: var(--beige);
-      width: calc(30vw - 50px);
-      max-width: 350px;
-      text-wrap: balance;
+    .btn__icon {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1;
 
-      @media screen and (max-width: 60rem) {
-        width: calc(75vw - 50px);
-      }
-    }
-
-    .speaker__job,
-    .speaker__name,
-    .speaker__handle {
-      @include dark-blue-shadow;
-    }
-
-    h4 {
-      @include dark-blue-shadow;
-      max-width: 50vw;
-      margin: 0 auto;
-    }
-
-    .speaker__socials {
-      display: flex;
-      gap: 1.5rem;
-      justify-content: center;
-    }
-  }
-
-  li.speaker__details {
-    &.speaker__details--wide {
-      grid-column: span 2 / span 2;
-      justify-self: center;
-
-      .title,
-      .btn__icon {
-        background-color: var(--pink-600);
-      }
-
-      @media screen and (max-width: 60rem) {
-        grid-column: 1;
-      }
-    }
-
-    &:nth-child(3n + 2) {
-      .title,
-      .btn__icon {
-        background-color: var(--purple-200);
-      }
-    }
-
-    &:nth-child(3n + 3) {
-      .title,
-      .btn__icon {
-        background-color: var(--pink-600);
-      }
-    }
-  }
-
-  &.speakers--highlights li.speaker__details {
-    &:nth-child(3n + 2) {
-      .title,
-      .btn__icon {
-        background-color: var(--orange-300);
-      }
-    }
-
-    &:nth-child(3n + 3) {
-      .title,
-      .btn__icon {
-        background-color: var(--purple-200);
-      }
-    }
-
-    &:not(.speaker__details--wide):nth-child(3n + 1) {
-      .title,
-      .btn__icon {
-        background-color: var(--pink-600);
-      }
-    }
-  }
-
-  .talk__link {
-    text-decoration-line: none;
-    display: block;
-    scale: 1;
-    transition: all 0.2s ease-in-out;
-    word-break: break-word;
-
-    &:hover,
-    &:active {
-      scale: 1.05;
-      transition: all 0.2s ease-in-out;
-
-      .title {
-        background: #f9bd7a;
+      img {
+        width: 100%;
+        height: auto;
       }
     }
   }

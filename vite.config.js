@@ -4,7 +4,8 @@ export default {
     rollupOptions: {
       input: {
         2025: './src/2025/main.js',
-        2026: './src/main.js',
+        2026: './src/2026/main.js',
+        2027: './src/main.js',
       },
     },
     outDir: 'static/bundle',

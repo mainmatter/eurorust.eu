@@ -1,0 +1,34 @@
+.pattern {
+  --ink: var(--blue);
+  --paper: var(--yellow);
+  display: block;
+  position: relative;
+  isolation: isolate;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: var(--paper);
+  pointer-events: none;
+
+  &--dots {
+    background:
+      radial-gradient(circle, var(--ink) 0 42%, transparent 44%) 0 0 / var(--dot-size, 2rem) var(--dot-size, 2rem),
+      var(--paper);
+  }
+
+  &--stripes {
+    background: repeating-linear-gradient(135deg, var(--ink) 0 12px, var(--paper) 12px 28px);
+  }
+  &--quarter::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 100% 0 0 0;
+    background: var(--ink);
+  }
+}
+
+.bauhaus-pattern {
+  display: block;
+  width: 100%;
+  height: auto;
+}

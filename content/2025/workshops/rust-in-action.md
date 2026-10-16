@@ -28,14 +28,14 @@ template = "2025/workshop.html"
       <h4>2. Grab your wheels</h4>
       <div>
         <p>Each team will receive their own vehicle and details on how to connect to it.</p>
-        <img class="workshop-addnl-image" src="/images/workshops/rust-in-action-1.webp">
+        <img class="workshop-addnl-image" src="/2025/images/workshops/rust-in-action-1.webp">
       </div>
     </li>
     <li class="mb-7 border">
       <h4>3. Kickstart your code</h4>
       <div>
         <p>We’ll be providing a simple Rust SDK to help people ramp up faster.</p>
-        <img class="workshop-addnl-image" src="/images/workshops/rust-in-action-2.webp">
+        <img class="workshop-addnl-image" src="/2025/images/workshops/rust-in-action-2.webp">
       </div>
     </li>
     <li class="mb-7 border">

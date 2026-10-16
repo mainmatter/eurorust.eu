@@ -1,40 +1,48 @@
-<main class="hero">
-  <div class="clouds">
-    <div class="clouds-1"></div>
-    <div class="clouds-2"></div>
-  </div>
-
-  <div class="hero__grid">
-    <div class="hero__grid-meta">
-      <p class="hero__grid-meta-info">October 14–17, 2026 <span>|</span> Barcelona and online</p>
-      <picture>
-        <source srcset="/images/logo-mobile.webp" media="(max-width: 32rem)" />
-        <img class="hero__logo" alt="Eurorust" src="/images/logo.webp" width="850" height="502" />
-      </picture>
-
-      <div class="hero__canvas">
-        <canvas></canvas>
-      </div>
+<section class="hero">
+  <div class="hero__content">
+    <img
+      class="hero__logo"
+      src="/images/EuroRust2027_logo_horizontal.svg"
+      alt="EuroRust"
+      width="529"
+      height="90"
+      fetchpriority="high"
+    />
+    <p class="hero__year">2027</p>
+    <p class="hero__date">{{ section.extra.dates }} | Prague and online</p>
+    <div class="hero__intro">
+      <h1>We cover all things rust</h1>
+      <p>Two conference days and two days of fun side events, hackathons and exploring Prague.</p>
     </div>
-
-    <div class="hero__grid-content">
-      <div>
-        <div>
-          <h1 class="pb-4 hero__grid-content-header">We cover all things rust</h1>
-          <p class="hero__grid-content-about">
-            Two conference days and two days of fun side events, hackathons and exploring Barcelona.
-          </p>
-        </div>
-        <div class="hero__grid-buttons">
-          <a href="https://www.tickettailor.com/events/eurorust/2022388" class="hero__grid-button" target="_blank"
-            >Get your ticket</a
-          >
-          <a href="/schedule" class="hero__grid-button">View schedule</a>
-          <a href="/2026-sponsorship-prospectus.pdf" class="hero__grid-button" target="_blank">Become a sponsor</a>
-        </div>
-      </div>
+    <div class="hero__actions">
+      <a href="{{ section.extra.ticket_url }}" class="button-primary">Get your Early Bird ticket</a>
+      <a href="mailto:mail@eurorust.eu?subject=EuroRust%202027%20sponsorship" class="button-secondary"
+        >Become a sponsor</a
+      >
     </div>
   </div>
-  {% include "sections/newsletter.html" %}
-  {% include "sections/rustfest.html" %}
-</main>
+  <div class="hero__canvas">
+    <span class="hero__circle-yellow" aria-hidden="true"></span>
+    <span class="hero__circle-red" aria-hidden="true"></span>
+    <span class="hero__square" aria-hidden="true"></span>
+    <span class="hero__triangle" aria-hidden="true"></span>
+    <canvas role="img" aria-label="Glossy red Ferris on a blue platform"></canvas>
+    <img
+      class="hero__fallback"
+      src="/images/bauhaus_ferris.webp"
+      alt="Glossy red Ferris on a blue platform"
+      width="1600"
+      height="1600"
+    />
+    <noscript>
+      <style>
+        .hero__canvas canvas {
+          display: none;
+        }
+        .hero__canvas .hero__fallback {
+          display: block;
+        }
+      </style>
+    </noscript>
+  </div>
+</section>

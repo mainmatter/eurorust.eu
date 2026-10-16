@@ -1,0 +1,23 @@
+.announcement {
+  margin-top: 1.5rem;
+  padding: 1rem 2rem;
+  border: 2px solid #000;
+  background: var(--yellow);
+  text-align: center;
+  font-size: clamp(1.25rem, 1.6vw, 2rem);
+  font-weight: 500;
+  p {
+    margin: 0;
+  }
+  a {
+    --hover-color: var(--orange);
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+}
+
+@media screen and (max-width: 64rem) {
+  .announcement {
+    display: none;
+  }
+}
