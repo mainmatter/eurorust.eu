@@ -50,11 +50,6 @@ link = "https://crabnebula.dev/?utm_campaign=eurorust23&utm_source=eurorust"
 image = "/images/past-sponsors/crabnebula.svg"
 
 [[extra.past_sponsors]]
-title = "DevITjobs"
-link = "https://devitjobs.uk/"
-image = "/images/past-sponsors/dev-it.png"
-
-[[extra.past_sponsors]]
 title = "Encore"
 link = "https://github.com/encoredev/encore"
 image = "/2026/images/sponsors/encore.svg"
