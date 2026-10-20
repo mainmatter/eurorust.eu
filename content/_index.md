@@ -65,11 +65,6 @@ link = "https://ferrous-systems.com/"
 image = "/images/sponsors/ferrous-systems.svg"
 
 [[extra.past_sponsors]]
-title = "Filtra"
-link = "https://filtra.io/"
-image = "/images/past-sponsors/filtra.svg"
-
-[[extra.past_sponsors]]
 title = "Gensyn"
 link = "https://www.gensyn.ai/?utm_source=eurorust"
 image = "/images/past-sponsors/gensyn.svg"
