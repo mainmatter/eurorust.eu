@@ -230,11 +230,6 @@ link = "https://www.wincent.com/"
 image = "/2025/images/sponsors/wincent.svg"
 
 [[extra.past_sponsors]]
-title = "Women in Tech Germany"
-link = "https://women-in-tech.org/gr/"
-image = "/images/past-sponsors/women-in-tech.png"
-
-[[extra.past_sponsors]]
 title = "Woven by Toyota"
 link = "https://woven.toyota/"
 image = "/2025/images/sponsors/woven.svg"
