@@ -1,6 +1,6 @@
 +++
 [extra]
-dates = "October 14–17, 2027"
+dates = "October 13–16, 2027"
 location = "Prague, Czechia"
 ticket_url = "https://www.tickettailor.com/events/eurorust/2414461"
 

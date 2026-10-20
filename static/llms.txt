@@ -1,6 +1,6 @@
 # EuroRust
 
-EuroRust is an annual conference for the European Rust community. EuroRust 2027 takes place in Prague, Czechia, from October 14–17, 2027.
+EuroRust is an annual conference for the European Rust community. EuroRust 2027 takes place in Prague, Czechia, from October 13–16, 2027.
 
 ## Current event
 
