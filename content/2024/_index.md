@@ -113,92 +113,92 @@ template="2024/index.html"
 [[extra.sponsors.media_partners]]
 	title="DevITjobs"
 	link="https://devitjobs.uk/"
-	image="/images/sponsors/current_sponsors/devit-jobs-logo.png"
+	image="/2024/images/sponsors/current_sponsors/devit-jobs-logo.png"
 
 [[extra.sponsors.media_partners]]
 	title="Women in Tech Germany"
 	link="https://women-in-tech.org/gr/"
-	image="/images/sponsors/current_sponsors/women-in-tech-logo.png"
+	image="/2024/images/sponsors/current_sponsors/women-in-tech-logo.png"
 
 [[extra.sponsors.media_partners]]
 	title="Rust Vienna"
 	link="https://www.meetup.com/rust-vienna/"
-	image="/images/sponsors/current_sponsors/rustvienna-logo.svg"
+	image="/2024/images/sponsors/current_sponsors/rustvienna-logo.svg"
 
 [[extra.sponsors.media_partners]]
 	title="Rust Meetup Linz"
 	link="https://rust-linz.at/"
-	image="/images/sponsors/current_sponsors/rustlinz-logo.svg"
+	image="/2024/images/sponsors/current_sponsors/rustlinz-logo.svg"
 
 [[extra.sponsors.supporters]]
 	title="Rust Foundation"
 	link="https://foundation.rust-lang.org/?utm_source=eurorust"
-	image="/images/sponsors/current_sponsors/rust_foundation.svg"
+	image="/2024/images/sponsors/current_sponsors/rust_foundation.svg"
 
 [[extra.sponsors.supporters]]
 	title="Trail of Bits"
 	link="https://www.trailofbits.com/?utm_source=eurorust"
-	image="/images/sponsors/current_sponsors/trail-of-bits.svg"
+	image="/2024/images/sponsors/current_sponsors/trail-of-bits.svg"
 
 [[extra.sponsors.supporters]]
 	title="GiGa infosystems GmbH"
 	link="https://giga-infosystems.com/?utm_source=eurorust"
-	image="/images/sponsors/current_sponsors/giga.svg"
+	image="/2024/images/sponsors/current_sponsors/giga.svg"
 
 [[extra.sponsors.supporters]]
 	title="JetBrains"
 	link="https://www.jetbrains.com/?utm_source=eurorust"
-	image="/images/sponsors/current_sponsors/jetbrains.svg"
+	image="/2024/images/sponsors/current_sponsors/jetbrains.svg"
 
 [[extra.sponsors.partners]]
 	title="Astral"
 	link="https://astral.sh/?utm_source=eurorust"
-	image="/images/sponsors/current_sponsors/astral.svg"
+	image="/2024/images/sponsors/current_sponsors/astral.svg"
 
 [[extra.sponsors.partners]]
 	title="BMW Car IT"
 	link="https://www.bmw-carit.de/en.html"
-	image="/images/sponsors/current_sponsors/bmw_car_it.svg"
+	image="/2024/images/sponsors/current_sponsors/bmw_car_it.svg"
 
 [[extra.sponsors.partners]]
 	title="Veecle GmbH"
 	link="https://veecle.io"
-	image="/images/sponsors/current_sponsors/veecle.png"
+	image="/2024/images/sponsors/current_sponsors/veecle.png"
 
 [[extra.sponsors.partners]]
 	title="WyeWorks LLC"
 	link="https://www.wyeworks.com/"
-	image="/images/sponsors/current_sponsors/wyeworks.png"
+	image="/2024/images/sponsors/current_sponsors/wyeworks.png"
 
 [[extra.sponsors.partners]]
 	title="hightec_rt"
 	link="https://hightec-rt.com/en/?utm_source=eurorust"
-	image="/images/sponsors/current_sponsors/hightec_rt.svg"
+	image="/2024/images/sponsors/current_sponsors/hightec_rt.svg"
 
 [[extra.sponsors.partners]]
 	title="Polkadot Blockchain Academy"
 	link="https://polkadot.academy/"
-	image="/images/sponsors/current_sponsors/polkadot_logo.svg"
+	image="/2024/images/sponsors/current_sponsors/polkadot_logo.svg"
 
 [[extra.sponsors.head_partners]]
 	title="CodSpeed"
 	link="https://codspeed.io/?utm_source=eurorust"
-	image="/images/sponsors/current_sponsors/codspeed.png"
+	image="/2024/images/sponsors/current_sponsors/codspeed.png"
 
 [[extra.sponsors.head_partners]]
 	title="Sentry"
 	link="https://sentry.io/?utm_source=eurorust"
-	image="/images/sponsors/current_sponsors/sentry.svg"
+	image="/2024/images/sponsors/current_sponsors/sentry.svg"
 
 [[extra.sponsors.live_stream_partners]]
 	title="Huawei"
 	link="https://www.huawei.com/en/?ic_medium=direct&ic_source=surlent&utm_source=eurorust"
-	image="/images/sponsors/current_sponsors/huawei.png"
+	image="/2024/images/sponsors/current_sponsors/huawei.png"
 
 [[extra.sponsors.premier_partners]]
 	title="Helsing"
 	link="/helsing"
-	image="/images/sponsors/current_sponsors/helsing-logo.svg"
+	image="/2024/images/sponsors/current_sponsors/helsing-logo.svg"
 
 
 [[extra.speakers]]

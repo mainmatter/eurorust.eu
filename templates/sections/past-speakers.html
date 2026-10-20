@@ -1,63 +1,72 @@
-<section class="speakers mt-9">
-  <h1 class="pb-8">Past Speakers</h1>
+<section class="speakers" aria-labelledby="speakers-title">
+  <div class="section-heading">
+    <h2 id="speakers-title">Past speakers</h2>
+  </div>
   <ul>
     {% for speaker in section.extra.speakers %}
       <li class="speaker__details">
-        <img
-          class="speaker__portrait"
-          alt="{{ speaker.name }}"
-          src="{{ speaker.image }}"
-          loading="lazy"
-          width="400"
-          height="402"
-        />
-        <p><span class="speaker__name">{{ speaker.name }}</span></p>
-        <p></p>
-        <p class="speaker__job">
-          {% if speaker.job_title %}{{ speaker.job_title }}{% endif %}{% if speaker.company %}
-            &nbsp;at {{ speaker.company }}
-          {% endif %}
-        </p>
+        <div class="speaker__frame">
+          <svg class="speaker__filters" width="0" height="0" aria-hidden="true" focusable="false">
+            <defs>
+              <filter id="speaker-tint-{{ loop.index }}" color-interpolation-filters="sRGB">
+                <feFlood style="flood-color: var(--frame-color)" result="color" />
+                <feBlend in="SourceGraphic" in2="color" mode="multiply" />
+                <feComposite in2="SourceGraphic" operator="in" />
+              </filter>
+            </defs>
+          </svg>
+          <img
+            class="speaker__portrait"
+            style="--portrait-tint: url(#speaker-tint-{{ loop.index }})"
+            alt="{{ speaker.name }}"
+            src="{{ speaker.image }}"
+            loading="lazy"
+            width="400"
+            height="402"
+          />
+        </div>
+        <h3 class="speaker__name">{{ speaker.name }}</h3>
+
         <ul class="speaker__socials">
           {% if speaker.twitter %}
             <li>
               <a class="btn__icon" href="{{ speaker.twitter }}" target="_blank" rel="noopener noreferrer"
-                ><img src="/images/icons/twitter.svg" alt="X" width="42" height="42"
+                ><img src="/images/icons/x-dark.svg" alt="X" width="48" height="48" loading="lazy"
               /></a>
             </li>
           {% endif %}
           {% if speaker.bsky %}
             <li>
               <a class="btn__icon" href="{{ speaker.bsky }}" target="_blank" rel="noopener noreferrer"
-                ><img src="/images/icons/bluesky.svg" alt="Bluesky" width="42" height="42"
+                ><img src="/images/icons/bluesky-dark.svg" alt="Bluesky" width="48" height="48" loading="lazy"
               /></a>
             </li>
           {% endif %}
           {% if speaker.mastodon %}
             <li>
               <a class="btn__icon" href="{{ speaker.mastodon }}" target="_blank" rel="noopener noreferrer"
-                ><img src="/images/icons/mastodon.svg" alt="Mastodon" width="42" height="42"
+                ><img src="/images/icons/mastodon-dark.svg" alt="Mastodon" width="48" height="48" loading="lazy"
               /></a>
             </li>
           {% endif %}
           {% if speaker.linkedin %}
             <li>
               <a class="btn__icon" href="{{ speaker.linkedin }}" target="_blank" rel="noopener noreferrer"
-                ><img src="/images/icons/linkedin.svg" alt="LinkedIn" width="42" height="42"
+                ><img src="/images/icons/linkedin-dark.svg" alt="LinkedIn" width="48" height="48" loading="lazy"
               /></a>
             </li>
           {% endif %}
           {% if speaker.web %}
             <li>
               <a class="btn__icon" href="{{ speaker.web }}" target="_blank" rel="noopener noreferrer"
-                ><img src="/images/icons/web.svg" alt="Internet" width="42" height="42"
+                ><img src="/images/icons/web.svg" alt="Website" width="48" height="48" loading="lazy"
               /></a>
             </li>
           {% endif %}
           {% if speaker.github %}
             <li>
               <a class="btn__icon" href="{{ speaker.github }}" target="_blank" rel="noopener noreferrer"
-                ><img src="/images/icons/github.svg" alt="GitHub" width="42" height="42"
+                ><img src="/images/icons/github.svg" alt="GitHub" width="48" height="48" loading="lazy"
               /></a>
             </li>
           {% endif %}
@@ -65,10 +74,4 @@
       </li>
     {% endfor %}
   </ul>
-  <div class="speakers__buttons">
-    <a href="https://www.tickettailor.com/events/eurorust/2414461" class="speakers__ticket-button" target="_blank"
-      >2027 Early Bird tickets</a
-    >
-    <div class="speakers__buttons__background"></div>
-  </div>
 </section>

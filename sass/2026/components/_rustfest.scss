@@ -1,0 +1,18 @@
+.rustfest {
+  margin: 0 auto;
+  padding: 9rem 0 4rem 0;
+  text-align: center;
+
+  @media screen and (max-width: 60rem) {
+    padding: 6rem 0 0 0;
+  }
+
+  p {
+    color: var(--orange-100);
+    text-wrap: balance;
+
+    @media screen and (max-width: 60rem) {
+      padding-bottom: 1rem;
+    }
+  }
+}

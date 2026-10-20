@@ -18,9 +18,207 @@ BUILD_MODE = "production"
 [context.deploy-preview]
 command = "vite build && zola build --base-url $DEPLOY_PRIME_URL"
 
+# 2026 archive
+
+[[redirects]]
+  from = "/workshops/c-to-rust/"
+  to = "/2026/workshops/c-to-rust/"
+
+[[redirects]]
+  from = "/workshops/hands-on-embedded-rust/"
+  to = "/2026/workshops/hands-on-embedded-rust/"
+
+[[redirects]]
+  from = "/workshops/containers-are-dead/"
+  to = "/2026/workshops/containers-are-dead/"
+
+[[redirects]]
+  from = "/workshops/rust-in-action/"
+  to = "/2026/workshops/rust-in-action/"
+
+[[redirects]]
+  from = "/workshops/programming-a-line-follower-robot/"
+  to = "/2026/workshops/programming-a-line-follower-robot/"
+
+[[redirects]]
+  from = "/workshops/rust-on-the-field-integrating-real-autonomous-systems/"
+  to = "/2026/workshops/rust-on-the-field-integrating-real-autonomous-systems/"
+
+[[redirects]]
+  from = "/workshops/beyond-p99-observing-async-rust/"
+  to = "/2026/workshops/beyond-p99-observing-async-rust/"
+
+[[redirects]]
+  from = "/workshops/building-a-virtual-machine-monitor-in-rust/"
+  to = "/2026/workshops/building-a-virtual-machine-monitor-in-rust/"
+
+[[redirects]]
+  from = "/talks/beyond-cargo-build/"
+  to = "/2026/talks/beyond-cargo-build/"
+
+[[redirects]]
+  from = "/talks/tales-from-the-embedded-rust-frontier-bootstrapping-a-brand-new-ecosystem/"
+  to = "/2026/talks/tales-from-the-embedded-rust-frontier-bootstrapping-a-brand-new-ecosystem/"
+
+[[redirects]]
+  from = "/talks/your-infrastructure-should-compile-too/"
+  to = "/2026/talks/your-infrastructure-should-compile-too/"
+
+[[redirects]]
+  from = "/talks/optimizing-the-new-rust-trait-solver/"
+  to = "/2026/talks/optimizing-the-new-rust-trait-solver/"
+
+[[redirects]]
+  from = "/talks/building-a-query-system/"
+  to = "/2026/talks/building-a-query-system/"
+
+[[redirects]]
+  from = "/talks/move-your-problems/"
+  to = "/2026/talks/move-your-problems/"
+
+[[redirects]]
+  from = "/talks/blastbeat-when-a-decade-of-c-meets-rust-and-io-uring/"
+  to = "/2026/talks/blastbeat-when-a-decade-of-c-meets-rust-and-io-uring/"
+
+[[redirects]]
+  from = "/talks/vortex-one-format-for-any-shape/"
+  to = "/2026/talks/vortex-one-format-for-any-shape/"
+
+[[redirects]]
+  from = "/talks/supply-chain-attacks-and-how-to-protect-ourselves/"
+  to = "/2026/talks/supply-chain-attacks-and-how-to-protect-ourselves/"
+
+[[redirects]]
+  from = "/talks/rust-s-influence-on-c-and-python-shaping-the-future-of-three-communities/"
+  to = "/2026/talks/rust-s-influence-on-c-and-python-shaping-the-future-of-three-communities/"
+
+[[redirects]]
+  from = "/talks/rebuilding-the-tower-of-babel-write-your-own-language-server-with-tree-sitter/"
+  to = "/2026/talks/rebuilding-the-tower-of-babel-write-your-own-language-server-with-tree-sitter/"
+
+[[redirects]]
+  from = "/talks/the-future-of-unmanned-systems-is-built-on-rust/"
+  to = "/2026/talks/the-future-of-unmanned-systems-is-built-on-rust/"
+
+[[redirects]]
+  from = "/talks/building-a-high-performance-thread-per-core-zero-copy-opentelemetry-engine-in-rust/"
+  to = "/2026/talks/building-a-high-performance-thread-per-core-zero-copy-opentelemetry-engine-in-rust/"
+
+[[redirects]]
+  from = "/talks/moving-a-quantum-compiler-from-python-to-rust/"
+  to = "/2026/talks/moving-a-quantum-compiler-from-python-to-rust/"
+
+[[redirects]]
+  from = "/talks/qt-bridges-bringing-a-mature-c-ui-framework-to-rust/"
+  to = "/2026/talks/qt-bridges-bringing-a-mature-c-ui-framework-to-rust/"
+
+[[redirects]]
+  from = "/talks/beyond-flamegraphs-precise-rust-profiling-with-hotpath-rs/"
+  to = "/2026/talks/beyond-flamegraphs-precise-rust-profiling-with-hotpath-rs/"
+
+[[redirects]]
+  from = "/talks/designing-state-machines-for-streaming-proxies-in-rust/"
+  to = "/2026/talks/designing-state-machines-for-streaming-proxies-in-rust/"
+
+[[redirects]]
+  from = "/talks/running-safely-with-scissors-lock-free-concurrency-for-maximum-throughput/"
+  to = "/2026/talks/running-safely-with-scissors-lock-free-concurrency-for-maximum-throughput/"
+
+[[redirects]]
+  from = "/talks/build-systems-when-your-systems-need-systems-to-build/"
+  to = "/2026/talks/build-systems-when-your-systems-need-systems-to-build/"
+
+[[redirects]]
+  from = "/talks/game-show/"
+  to = "/2026/talks/game-show/"
+
+[[redirects]]
+  from = "/talks/the-lamp/"
+  to = "/2026/talks/the-lamp/"
+
+[[redirects]]
+  from = "/talks/from-deref-into-borrow-a-primer-on-standard-library-traits/"
+  to = "/2026/talks/from-deref-into-borrow-a-primer-on-standard-library-traits/"
+
+[[redirects]]
+  from = "/talks/lessons-from-building-a-background-task-processing-library/"
+  to = "/2026/talks/lessons-from-building-a-background-task-processing-library/"
+
+[[redirects]]
+  from = "/talks/shipping-temporal-how-the-rust-ecosystem-built-chrome-s-newest-web-api/"
+  to = "/2026/talks/shipping-temporal-how-the-rust-ecosystem-built-chrome-s-newest-web-api/"
+
+[[redirects]]
+  from = "/talks/image-codecs-rustification-in-chromium/"
+  to = "/2026/talks/image-codecs-rustification-in-chromium/"
+
+[[redirects]]
+  from = "/talks/from-hardware-to-human-interface-building-hid-devices-in-rust/"
+  to = "/2026/talks/from-hardware-to-human-interface-building-hid-devices-in-rust/"
+
+[[redirects]]
+  from = "/talks/compiling-the-linux-kernel-with-gccrs/"
+  to = "/2026/talks/compiling-the-linux-kernel-with-gccrs/"
+
+[[redirects]]
+  from = "/talks/how-i-built-a-file-search-that-is-50x-faster-than-ripgrep-and-made-it-into-opencode/"
+  to = "/2026/talks/how-i-built-a-file-search-that-is-50x-faster-than-ripgrep-and-made-it-into-opencode/"
+
+[[redirects]]
+  from = "/talks/what-s-next-for-rust-s-type-system/"
+  to = "/2026/talks/what-s-next-for-rust-s-type-system/"
+
+[[redirects]]
+  from = "/talks/atomic-design-patterns-in-rust-from-orderings-to-code/"
+  to = "/2026/talks/atomic-design-patterns-in-rust-from-orderings-to-code/"
+
+[[redirects]]
+  from = "/talks/inside-cloud-hypervisor-from-kvm-to-a-running-vm/"
+  to = "/2026/talks/inside-cloud-hypervisor-from-kvm-to-a-running-vm/"
+
+[[redirects]]
+  from = "/talks/fearless-concurrency-on-the-gpu/"
+  to = "/2026/talks/fearless-concurrency-on-the-gpu/"
+
+[[redirects]]
+  from = "/activities/meetup/"
+  to = "/2026/activities/meetup/"
+
+[[redirects]]
+  from = "/activities/boat-tour/"
+  to = "/2026/activities/boat-tour/"
+
+[[redirects]]
+  from = "/activities/karaoke/"
+  to = "/2026/activities/karaoke/"
+
+[[redirects]]
+  from = "/activities/wine-tasting/"
+  to = "/2026/activities/wine-tasting/"
+
+[[redirects]]
+  from = "/activities/impl-room/"
+  to = "/2026/activities/impl-room/"
+
+[[redirects]]
+  from = "/activities/group-dinner/"
+  to = "/2026/activities/group-dinner/"
+
+[[redirects]]
+  from = "/activities/bike-tour/"
+  to = "/2026/activities/bike-tour/"
+
+[[redirects]]
+  from = "/activities/impl-day/"
+  to = "/2026/activities/impl-day/"
+
+[[redirects]]
+  from = "/activities/museum-tour/"
+  to = "/2026/activities/museum-tour/"
+
 [[redirects]]
   from = "/workshops/you-cant-fix-what-you-cant-see-telemetry-for-rust-apis/"
-  to = "/workshops/telemetry-for-rust-apis"
+  to = "/2023/workshops/telemetry-for-rust-apis/"
 
 [[redirects]]
   from = "/workshops/"
@@ -28,7 +226,7 @@ command = "vite build && zola build --base-url $DEPLOY_PRIME_URL"
 
 [[redirects]]
   from = "/sponsorship-prospectus.pdf"
-  to = "/sponsorship-prospectus-2026.pdf"
+  to = "/2026/sponsorship-prospectus.pdf"
 
 [[redirects]]
   from = "/moderators/*"
@@ -189,10 +387,6 @@ command = "vite build && zola build --base-url $DEPLOY_PRIME_URL"
 # 2025 workshops
 
 [[redirects]]
-  from = "/workshops/rust-in-action/"
-  to = "/2025/workshops/rust-in-action/"
-
-[[redirects]]
   from = "/workshops/rust-python-interoperability/"
   to = "/2025/workshops/rust-python-interoperability/"
 
@@ -225,30 +419,6 @@ command = "vite build && zola build --base-url $DEPLOY_PRIME_URL"
   to = "/2025/workshops/profiling-rust-in-action/"
 
 # 2025 activities
-
-[[redirects]]
-  from = "/activities/bike-tour/"
-  to = "/2025/activities/bike-tour/"
-
-[[redirects]]
-  from = "/activities/boat-tour/"
-  to = "/2025/activities/boat-tour/"
-
-[[redirects]]
-  from = "/activities/impl-day/"
-  to = "/2025/activities/impl-day/"
-
-[[redirects]]
-  from = "/activities/impl-room/"
-  to = "/2025/activities/impl-room/"
-
-[[redirects]]
-  from = "/activities/karaoke/"
-  to = "/2025/activities/karaoke/"
-
-[[redirects]]
-  from = "/activities/meetup/"
-  to = "/2025/activities/meetup/"
 
 [[redirects]]
   from = "/activities/street-art-tour/"
@@ -401,4 +571,4 @@ command = "vite build && zola build --base-url $DEPLOY_PRIME_URL"
 
 [[redirects]]
   from = "/talks/encodings-all-the-way-down-building-vortex-an-extensible-file-format-in-rust"
-  to = "/talks/vortex-one-format-for-any-shape/"
+  to = "/2026/talks/vortex-one-format-for-any-shape/"

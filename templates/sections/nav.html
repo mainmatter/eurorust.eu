@@ -1,20 +1,17 @@
-<nav class="nav">
+<nav class="nav" aria-label="Main navigation">
   <div class="nav__wrapper">
-    <div class="nav__logo">
-      <a href="/" class="link">
-        <h1>EuroRust</h1>
-      </a>
-    </div>
+    <a href="/" class="nav__logo">
+      <img src="/images/EuroRust2027_logo_horizontal.svg" alt="EuroRust 2027 home" width="529" height="90" />
+    </a>
     <div class="nav__links">
-      <div class="nav__links-mm">
-        Presented by
-        <a href="https://www.mainmatter.com/rust?utm_source=eurorust" target="_blank"
-          ><img src="/images/mainmatter-logo-light.svg" alt="Mainmatter"
-        /></a>
+      <div class="nav__presented-by">
+        <span>Presented by</span>
+        <a href="https://mainmatter.com/rust-consulting/?utm_source=eurorust" target="_blank" rel="noopener noreferrer">
+          <img src="/images/mainmatter-logo-dark.svg" alt="Mainmatter" width="216" height="31" />
+        </a>
       </div>
-      <a href="https://www.tickettailor.com/events/eurorust/2414461" class="nav__tito-button" target="_blank"
-        >2027 Early Bird tickets</a
-      >
+      {% set homepage = get_section(path="_index.md") %}
+      <a href="{{ homepage.extra.ticket_url }}" class="nav__ticket-button button-primary">Get your Early Bird ticket</a>
     </div>
   </div>
 </nav>

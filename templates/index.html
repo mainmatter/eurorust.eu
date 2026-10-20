@@ -2,35 +2,29 @@
 
 {% block content %}
   {% include "sections/nav.html" %}
-  <div class="main sections">
-    <a id="main"></a>
+  <aside class="announcement" aria-label="EuroRust 2026 thank you">
+    <p>
+      Thank you to everyone who joined <a href="/2026">EuroRust 2026</a> in Barcelona and online. See you in Prague in
+      2027!
+    </p>
+  </aside>
+  <main id="main" tabindex="-1">
     {% include "sections/hero.html" %}
-    {% include "sections/about-schedule.html" %}
-    <div class="combined-background pt-8">
-      <div class="clouds clouds-top">
-        <div class="clouds-3"></div>
-        <div class="clouds-4"></div>
-      </div>
-      {% include "sections/speakers.html" %}
-      {% include "sections/workshops.html" %}
-      {% include "sections/moderators.html" %}
-      <div class="clouds clouds-midway">
-        <div class="clouds-5"></div>
-      </div>
-    </div>
-    {% include "sections/venue.html" %}
-    <div class="combined-background combined-background-2">
-      {% include "sections/past-event-highlights.html" %}
-      {% include "sections/presented-by.html" %}
-      {% include "sections/sponsors.html" %}
-      <div class="clouds clouds-middle">
-        <div class="clouds-5"></div>
-      </div>
-      <div class="clouds clouds-bottom">
-        <div class="clouds-3"></div>
-        <div class="clouds-5"></div>
-      </div>
-    </div>
-  </div>
+    {% include "sections/rustfest.html" %}
+    {% include "sections/topics.html" %}
+    {% include "sections/past-speakers.html" %}
+    {% include "sections/newsletter.html" %}
+    {% include "sections/past-sponsors.html" %}
+  </main>
   {% include "sections/footer.html" %}
 {% endblock content %}
+
+{% block scripts %}
+  {% if build_mode == "production" %}
+    {% set manifest = load_data(path="static/bundle/.vite/manifest.json") %}
+    <script defer type="module" src='/bundle/{{ manifest["src/main.js"]["file"] }}'></script>
+  {% else %}
+    <script defer type="module" src="http://localhost:5173/@vite/client"></script>
+    <script defer type="module" src="http://localhost:5173/src/main.js"></script>
+  {% endif %}
+{% endblock scripts %}

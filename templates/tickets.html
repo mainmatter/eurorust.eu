@@ -1,13 +1,30 @@
 {% extends "base.html" %}
 
 {% block head %}
-  <meta http-equiv="refresh" content="0; url=https://www.tickettailor.com/events/eurorust/2414461" />
+  {% set homepage = get_section(path="_index.md") %}
+  {% if homepage.extra.ticket_url != "/tickets" %}
+    <meta http-equiv="refresh" content="0; url={{ homepage.extra.ticket_url }}" />
+  {% endif %}
 {% endblock head %}
 
 {% block content %}
-  <main class="container py-8">
-    <p>
-      <a href="https://www.tickettailor.com/events/eurorust/2414461">Continue to EuroRust 2027 Early Bird tickets</a>
-    </p>
+  {% set homepage = get_section(path="_index.md") %}
+  {% include "sections/nav-generic.html" %}
+  <main class="generic-block" id="main" tabindex="-1">
+    <div class="container py-8">
+      <h1>EuroRust 2027 Early Bird tickets</h1>
+      <p>October 13–16, 2027 · Prague, Czechia</p>
+      {% if homepage.extra.ticket_url == "/tickets" %}
+        <p>Ticket sales will open soon.</p>
+      {% else %}
+        <p>
+          <a href="{{ homepage.extra.ticket_url }}" class="button-primary"
+            >Continue to EuroRust 2027 Early Bird tickets</a
+          >
+        </p>
+      {% endif %}
+      {% include "sections/newsletter.html" %}
+    </div>
   </main>
+  {% include "sections/footer.html" %}
 {% endblock content %}

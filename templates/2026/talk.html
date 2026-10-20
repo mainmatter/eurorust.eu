@@ -1,0 +1,223 @@
+{% extends "2026/base.html" %}
+{% block content %}
+  <div class="generic-block workshop {{ page.title | lower | replace(from=' ', to='_') }}">
+    {% include "2026/sections/nav.html" %}
+
+    <main tabindex="-1" id="main">
+      <section class="workshop-hero">
+        <div class="container blurred-background p-1">
+          <div class="mb-7 workshop-hero__topline">
+            {% set schedule = load_data(path = "data/2026/schedule.json") %}
+            {% set_global talk_date = false %}
+            {% set_global talk_time = false %}
+            {% set_global talk_stage = false %}
+            {% for day in schedule.days %}
+              {% for slot in day.slots %}
+                {% for entry in slot.entries %}
+                  {% if entry.type == "talk" and entry.ref and entry.ref == page.slug %}
+                    {% set_global talk_date = day.displayDate %}
+                    {% set_global talk_time = slot.time %}
+                    {% set_global talk_stage = schedule.entryTrackLabels[entry.track] %}
+                  {% endif %}
+                {% endfor %}
+              {% endfor %}
+            {% endfor %}
+            {% if talk_date and talk_time and talk_stage %}
+              <p class="workshop-hero__details">
+                »<a href="/2026/schedule" class="inline">Schedule</a> //
+                {{ page.extra.type | default(value="Talk") }}<br />
+                {{ talk_date }}<br />
+                {{ talk_time }}<br />
+                {{ talk_stage }}
+              </p>
+            {% endif %}
+            {% if page.extra.sponsor and (page.extra.sponsor_logo or page.extra.sponsor_bio) %}
+              <div class="workshop-hero__sponsor-container">
+                <div class="workshop-hero__sponsor">
+                  <p>Sponsored by</p>
+                  <img
+                    src="{% if page.extra.sponsor_logo %}{{ page.extra.sponsor_logo }}{% else %}/2026/images/workshops/workshop-sponsors/{{ page.extra.sponsor }}.svg{% endif %}"
+                    alt="{{ page.extra.sponsor }}"
+                  />
+                </div>
+              </div>
+            {% elif page.extra.sponsor %}
+              <p class="sponsored-by">Sponsored by {{ page.extra.sponsor }}</p>
+            {% endif %}
+          </div>
+
+          <div class="">
+            <div class="wrapper-content">
+              <h1 class="h1 pb-7">{{ page.title | safe }}</h1>
+              {% if page.extra.description %}
+                <div>{{ page.extra.description | safe }}</div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="workshop-author mb-4">
+        <div class="author-and-booking container">
+          {% if page.extra.speakers %}
+            {% for speaker in page.extra.speakers %}
+              {% set path = "2026/speakers/" ~ speaker ~ ".md" %}
+              {% set speaker = get_page(path = path) %}
+              <div class="mentor__grid">
+                <div class="mentor__grid-title">
+                  <h5 class="mb-4">Speaker</h5>
+                </div>
+                <div class="mentor__grid-name">
+                  {% if speaker.extra.name %}
+                    <h2 class="mb-4">{{ speaker.extra.name }}</h2>
+                  {% endif %}
+                </div>
+                {% if speaker.extra.bio %}
+                  <div class="mentor__grid-bio blurred-background">
+                    <p class="">{{ speaker.extra.bio | safe }}</p>
+                  </div>
+                {% endif %}
+                <div class="mentor__grid-photo-links">
+                  {% if speaker.extra.image and not speaker.extra.image is containing(pat="/.") %}
+                    <img class="photo" src="{{ speaker.extra.image }}" alt="{{ speaker.extra.name }}" />
+                  {% else %}
+                    <img class="photo" src="/2026/images/talks/placeholder.webp" alt="" />
+                  {% endif %}
+                  <div class="links mt-5">
+                    <ul class="social mt-3">
+                      {% if speaker.extra.github %}
+                        <li>
+                          <a
+                            href="{{ speaker.extra.github }}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn__icon"
+                            ><img src="/images/icons/github.svg" alt="Github"
+                          /></a>
+                        </li>
+                      {% endif %}
+                      {% if speaker.extra.codeberg %}
+                        <li>
+                          <a
+                            href="{{ speaker.extra.codeberg }}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn__icon"
+                            ><img src="/2026/images/icons/codeberg.svg" alt="Codeberg"
+                          /></a>
+                        </li>
+                      {% endif %}
+                      {% if speaker.extra.url %}
+                        <li>
+                          <a href="{{ speaker.extra.url }}" target="_blank" rel="noopener noreferrer" class="btn__icon"
+                            ><img src="/images/icons/web.svg" alt="Website"
+                          /></a>
+                        </li>
+                      {% endif %}
+                      {% if speaker.extra.linkedin %}
+                        <li>
+                          <a
+                            href="{{ speaker.extra.linkedin }}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn__icon"
+                            ><img src="/2026/images/icons/linkedin.svg" alt="LinkedIn"
+                          /></a>
+                        </li>
+                      {% endif %}
+                      {% if speaker.extra.bluesky %}
+                        <li>
+                          <a
+                            href="{{ speaker.extra.bluesky }}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn__icon"
+                            ><img src="/2026/images/icons/bluesky.svg" alt="Bluesky"
+                          /></a>
+                        </li>
+                      {% endif %}
+                      {% if speaker.extra.mastodon %}
+                        <li>
+                          <a
+                            href="{{ speaker.extra.mastodon }}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn__icon"
+                            ><img src="/2026/images/icons/mastodon.svg" alt="Mastodon"
+                          /></a>
+                        </li>
+                      {% endif %}
+                      {% if speaker.extra.twitter %}
+                        <li>
+                          <a
+                            href="https://twitter.com/{{ speaker.extra.twitter }}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn__icon"
+                            ><img src="/2026/images/icons/twitter.svg" alt="Twitter"
+                          /></a>
+                        </li>
+                      {% endif %}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          {% endif %}
+        </div>
+      </section>
+
+      {% if page.extra.sponsor and page.extra.sponsor_bio %}
+        <section class="workshop-sponsor mt-4 mb-9 py-6">
+          <div class="container py-8">
+            <div class="sponsor__grid">
+              <div class="sponsor__grid-title">
+                <h5 class="mb-4">Sponsored by</h5>
+              </div>
+              <div class="sponsor__grid-name">
+                <h2 class="mb-4">{{ page.extra.sponsor }}</h2>
+              </div>
+              <div class="sponsor__grid-bio blurred-background">
+                <p class="">{{ page.extra.sponsor_bio | safe }}</p>
+                {% if page.extra.sponsor_url %}
+                  <a href="{{ page.extra.sponsor_url }}" target="_blank">
+                    {% if page.extra.sponsor_cta %}
+                      <br />
+                      <p class=""><strong>{{ page.extra.sponsor_cta | safe }}</strong></p>
+                    {% endif %}
+                  </a>
+                {% endif %}
+              </div>
+              <div class="sponsor__grid-photo-links">
+                <div class="photo-container">
+                  <img
+                    class="photo sponsor-logo"
+                    src="{% if page.extra.sponsor_logo %}{{ page.extra.sponsor_logo }}{% else %}/2026/images/workshops/workshop-sponsors/{{ page.extra.sponsor }}.svg{% endif %}"
+                    alt="{{ page.extra.sponsor }}"
+                  />
+                </div>
+                <div class="links mt-5 mb-5">
+                  <ul class="social mt-3">
+                    {% if page.extra.sponsor_url %}
+                      <li>
+                        <a
+                          href="{{ page.extra.sponsor_url }}"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="btn__icon"
+                          ><img src="/images/icons/web.svg" alt="Website"
+                        /></a>
+                      </li>
+                    {% endif %}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      {% endif %}
+    </main>
+
+    {% include "2026/sections/footer.html" %}
+  </div>
+{% endblock content %}

@@ -1,161 +1,38 @@
-$spacer: 1rem;
-$spacers: (
-  0: 0,
-  1: $spacer * 0.25,
-  2: $spacer * 0.5,
-  3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 2,
-  6: $spacer * 2.5,
-  7: $spacer * 3,
-  8: $spacer * 4,
-  9: $spacer * 5,
-  10: $spacer * 10,
-);
-
-@each $name, $glyph in $spacers {
-  .m-#{$name} {
-    margin: $glyph;
-  }
-  .mt-#{$name} {
-    margin-top: $glyph;
-  }
-  .mb-#{$name} {
-    margin-bottom: $glyph;
-  }
-  .mx-#{$name} {
-    margin-right: $glyph;
-    margin-left: $glyph;
-  }
-  .my-#{$name} {
-    margin-bottom: $glyph;
-    margin-top: $glyph;
-  }
-  .me-#{$name} {
-    margin-right: $glyph;
-  }
-  .ms-#{$name} {
-    margin-left: $glyph;
-  }
-  .p-#{$name} {
-    padding: $glyph;
-  }
-  .pt-#{$name} {
-    padding-top: $glyph;
-  }
-  .pb-#{$name} {
-    padding-bottom: $glyph;
-  }
-  .px-#{$name} {
-    padding-right: $glyph;
-    padding-left: $glyph;
-  }
-  .py-#{$name} {
-    padding-bottom: $glyph;
-    padding-top: $glyph;
-  }
-  .ps-#{$name} {
-    padding-left: $glyph;
-  }
-  .pe-#{$name} {
-    padding-right: $glyph;
-  }
-  .gap-#{$name} {
-    gap: $glyph;
-  }
+:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 4px;
 }
 
-.border {
-  border: 2px solid var(--white);
-
-  &-y {
-    border: none;
-    border-top: 2px solid var(--white);
-    border-bottom: 2px solid var(--white);
-  }
-
-  &-x {
-    border: none;
-    border-right: 2px solid var(--white);
-    border-left: 2px solid var(--white);
-    @media (max-width: 60rem) {
-      border-right: 0;
-      border-left: 0;
-    }
-  }
-
-  &-r {
-    border: none;
-    border-right: 2px solid var(--white);
-    @media (max-width: 60rem) {
-      border-right: 0;
-    }
-  }
-
-  &-l {
-    border: none;
-    border-left: 2px solid var(--white);
-    @media (max-width: 60rem) {
-      border-left: 0;
-    }
-  }
-
-  &-t {
-    border: none;
-    border-top: 2px solid var(--white);
-  }
-
-  &-b {
-    border: none;
-    border-bottom: 2px solid var(--white);
-  }
+::selection {
+  background: var(--yellow);
+  color: #000;
 }
 
-.container {
-  margin: 0 auto;
-  max-width: 1440px;
-}
-
-.mw {
-  &-70 {
-    max-width: 30rem;
-  }
-
-  &-80 {
-    max-width: 50rem;
-  }
-}
-
-.center {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
-.visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
+.site-container {
+  width: 100%;
+  max-width: 1920px;
+  margin-inline: auto;
+  padding-block: 0;
+  padding-inline: clamp(1.5rem, 7vw, 10rem);
 }
 
 .skip-link {
-  position: absolute;
-  background-color: var(--black);
-  color: var(--white);
-  padding: 0.5rem;
-  opacity: 0;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 101;
+  padding: 0.75rem 1rem;
+  color: #000;
+  background: var(--background);
+  transform: translateY(calc(-100% - 2rem));
 
   &:focus {
-    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media (max-width: 96rem) {
-  .container {
-    margin: 0 5%;
-  }
+.topics,
+.speakers,
+.sponsors {
+  margin-block: clamp(5rem, 9vw, 12rem);
 }
