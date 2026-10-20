@@ -30,6 +30,11 @@
   width: clamp(9rem, 12vw, 15rem);
 }
 
+.nav__presented-by a {
+  border-bottom: 2px solid currentColor;
+  padding-bottom: 0.15em;
+}
+
 .nav {
   position: sticky;
   top: 0;
