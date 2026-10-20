@@ -200,11 +200,6 @@ link = "https://foundation.rust-lang.org/?utm_source=eurorust"
 image = "/images/past-sponsors/rust-foundation.svg"
 
 [[extra.past_sponsors]]
-title = "Rust Meetup Linz"
-link = "https://rust-linz.at/"
-image = "/images/past-sponsors/rust-linz.png"
-
-[[extra.past_sponsors]]
 title = "Rust Vienna"
 link = "https://www.meetup.com/rust-vienna/"
 image = "/images/past-sponsors/rust-vienna.png"
