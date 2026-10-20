@@ -200,11 +200,6 @@ link = "https://foundation.rust-lang.org/?utm_source=eurorust"
 image = "/images/past-sponsors/rust-foundation.svg"
 
 [[extra.past_sponsors]]
-title = "Rust Vienna"
-link = "https://www.meetup.com/rust-vienna/"
-image = "/images/past-sponsors/rust-vienna.png"
-
-[[extra.past_sponsors]]
 title = "Self-Directed Research podcast"
 link = "https://sdr-podcast.com"
 image = "/images/past-sponsors/sdr.png"
