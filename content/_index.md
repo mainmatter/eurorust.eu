@@ -40,11 +40,6 @@ link = "https://www.bmw-carit.de/en.html"
 image = "/images/past-sponsors/bmw-car-it.png"
 
 [[extra.past_sponsors]]
-title = "Code Beam Europe"
-link = "https://codebeameurope.com/"
-image = "/images/past-sponsors/code-beam-europe.png"
-
-[[extra.past_sponsors]]
 title = "Codspeed"
 link = "https://codspeed.io/"
 image = "/2025/images/sponsors/codspeed.svg"
