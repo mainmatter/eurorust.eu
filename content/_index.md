@@ -40,11 +40,6 @@ link = "https://www.bmw-carit.de/en.html"
 image = "/images/past-sponsors/bmw-car-it.png"
 
 [[extra.past_sponsors]]
-title = "Code Beam Europe"
-link = "https://codebeameurope.com/"
-image = "/images/past-sponsors/code-beam-europe.png"
-
-[[extra.past_sponsors]]
 title = "Codspeed"
 link = "https://codspeed.io/"
 image = "/2025/images/sponsors/codspeed.svg"
@@ -53,11 +48,6 @@ image = "/2025/images/sponsors/codspeed.svg"
 title = "CrabNebula"
 link = "https://crabnebula.dev/?utm_campaign=eurorust23&utm_source=eurorust"
 image = "/images/past-sponsors/crabnebula.svg"
-
-[[extra.past_sponsors]]
-title = "DevITjobs"
-link = "https://devitjobs.uk/"
-image = "/images/past-sponsors/dev-it.png"
 
 [[extra.past_sponsors]]
 title = "Encore"
@@ -73,11 +63,6 @@ image = "/2025/images/sponsors/exein.svg"
 title = "Ferrous Systems"
 link = "https://ferrous-systems.com/"
 image = "/images/sponsors/ferrous-systems.svg"
-
-[[extra.past_sponsors]]
-title = "Filtra"
-link = "https://filtra.io/"
-image = "/images/past-sponsors/filtra.svg"
 
 [[extra.past_sponsors]]
 title = "Gensyn"
@@ -210,21 +195,6 @@ link = "https://foundation.rust-lang.org/?utm_source=eurorust"
 image = "/images/past-sponsors/rust-foundation.svg"
 
 [[extra.past_sponsors]]
-title = "Rust Meetup Linz"
-link = "https://rust-linz.at/"
-image = "/images/past-sponsors/rust-linz.png"
-
-[[extra.past_sponsors]]
-title = "Rust Vienna"
-link = "https://www.meetup.com/rust-vienna/"
-image = "/images/past-sponsors/rust-vienna.png"
-
-[[extra.past_sponsors]]
-title = "Self-Directed Research podcast"
-link = "https://sdr-podcast.com"
-image = "/images/past-sponsors/sdr.png"
-
-[[extra.past_sponsors]]
 title = "Sentry"
 link = "https://sentry.io/?utm_source=eurorust"
 image = "/images/past-sponsors/sentry.svg"
@@ -253,11 +223,6 @@ image = "/images/past-sponsors/veecle.png"
 title = "Wincent"
 link = "https://www.wincent.com/"
 image = "/2025/images/sponsors/wincent.svg"
-
-[[extra.past_sponsors]]
-title = "Women in Tech Germany"
-link = "https://women-in-tech.org/gr/"
-image = "/images/past-sponsors/women-in-tech.png"
 
 [[extra.past_sponsors]]
 title = "Woven by Toyota"
