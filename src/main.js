@@ -37,7 +37,7 @@ async function initFerris() {
   const usingFallback = () => canvas.parentElement.dataset.ferrisState === 'fallback';
   canvas.addEventListener('webglcontextlost', showFerrisFallback, { once: true });
 
-  const model = await new GLTFLoader().loadAsync('/three/ferris-2027.glb');
+  const model = await new GLTFLoader().loadAsync('/three/ferris_joyful.glb');
   if (usingFallback()) return;
   const scene = new Scene();
   const ferris = model.scene;
@@ -61,6 +61,7 @@ async function initFerris() {
   scene.add(ferris);
   const mixer = new AnimationMixer(ferris);
   model.animations.forEach((clip) => mixer.clipAction(clip).play());
+  mixer.setTime(0);
 
   // The exported leg rig has oversized bounds. Size the platform from visible body meshes.
   const visualBounds = new Box3();
@@ -82,7 +83,7 @@ async function initFerris() {
   bounds.setFromObject(ferris, true);
   bounds.getSize(size);
   const center = bounds.getCenter(new Vector3());
-  ferris.position.set(-center.x, height - bounds.min.y - radius * 0.02, -center.z - radius * 0.1);
+  ferris.position.set(-center.x, height - bounds.min.y + radius * 0.025, -center.z - radius * 0.1);
 
   const profile = [new Vector2(0, 0), new Vector2(radius - bevel, 0)];
   for (let i = 1; i <= 8; i++) {
@@ -154,6 +155,7 @@ async function initFerris() {
       if (renderer.getContext().isContextLost()) throw new Error('WebGL context lost');
       updateContactShadow(time);
       renderer.render(scene, camera);
+      canvas.parentElement.dataset.ferrisState = 'ready';
     } catch (error) {
       showFerrisFallback();
       console.error('Unable to render Ferris:', error);
@@ -287,7 +289,22 @@ async function initFerris() {
   updateMotion();
 }
 
-initFerris().catch((error) => {
-  showFerrisFallback();
-  console.error('Unable to display Ferris:', error);
-});
+function loadFerrisWhenIdle() {
+  const load = () => {
+    initFerris().catch((error) => {
+      showFerrisFallback();
+      console.error('Unable to display Ferris:', error);
+    });
+  };
+  if ('requestIdleCallback' in window) {
+    window.requestIdleCallback(load, { timeout: 2000 });
+  } else {
+    window.setTimeout(load, 0);
+  }
+}
+
+if (document.readyState === 'complete') {
+  loadFerrisWhenIdle();
+} else {
+  window.addEventListener('load', loadFerrisWhenIdle, { once: true });
+}

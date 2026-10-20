@@ -112,7 +112,7 @@
   object-fit: contain;
 }
 
-.hero__canvas[data-ferris-state="fallback"] {
+.hero__canvas:not([data-ferris-state="ready"]) {
   canvas {
     visibility: hidden;
   }
