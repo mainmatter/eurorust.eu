@@ -36,6 +36,7 @@
 
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
+    {% include "sections/nav.html" %}
     <div class="site-container">{% block content %}{% endblock %}</div>
 
     {% block scripts %}{% endblock scripts %}

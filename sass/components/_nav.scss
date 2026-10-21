@@ -41,28 +41,8 @@
   z-index: 104;
   isolation: isolate;
   background: var(--background);
-  padding-block: 0.6rem;
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset-block: 0;
-    left: 50%;
-    width: 100vw;
-    transform: translateX(-50%);
-    background: var(--background);
-    z-index: -1;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    width: 100vw;
-    transform: translateX(-50%);
-    border-bottom: 2px solid #000;
-  }
+  padding-block: 0.6rem calc(0.6rem - 2px);
+  border-bottom: 2px solid #000;
 }
 
 .nav__ticket-button {
