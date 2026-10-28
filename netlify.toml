@@ -225,10 +225,6 @@ command = "vite build && zola build --base-url $DEPLOY_PRIME_URL"
   to = "/"
 
 [[redirects]]
-  from = "/sponsorship-prospectus.pdf"
-  to = "/2026/sponsorship-prospectus.pdf"
-
-[[redirects]]
   from = "/moderators/*"
   to = "/"
 
