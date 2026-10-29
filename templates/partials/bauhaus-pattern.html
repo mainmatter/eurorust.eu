@@ -1,37 +1,38 @@
-<svg
-  class="bauhaus-pattern"
-  viewBox="0 0 400 400"
-  xmlns="http://www.w3.org/2000/svg"
-  aria-hidden="true"
-  focusable="false"
->
-  <defs>
-    <pattern id="bauhaus-stripes" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <rect width="5" height="12" fill="#000" />
-    </pattern>
-    <pattern id="bauhaus-dots" width="16" height="16" patternUnits="userSpaceOnUse">
-      <circle cx="8" cy="8" r="5" fill="#000" />
-    </pattern>
-  </defs>
-  <path fill="#F7F3EB" d="M0 0h400v400H0z" />
-  <path
-    fill="#DD331D"
-    d="M0 0h100v100A100 100 0 0 1 0 0ZM200 100h100v100A100 100 0 0 1 200 100ZM0 300h100v100A100 100 0 0 1 0 300Z"
-  />
-  <path
-    fill="#FEC328"
-    d="M100 0a100 100 0 0 1 100 100H100ZM300 200a100 100 0 0 1 100 100H300ZM100 300a100 100 0 0 1 100 100H100Z"
-  />
-  <path
-    fill="#114B9A"
-    d="M300 0h100v100A100 100 0 0 1 300 0ZM0 200a100 100 0 0 1 100-100v100ZM100 200h100v100A100 100 0 0 1 100 200ZM300 300h100v100A100 100 0 0 1 300 300Z"
-  />
-  <path
-    fill="#000"
-    d="M200 0h100a100 100 0 0 1-100 100ZM100 100h100a100 100 0 0 1-100 100ZM0 200h100a100 100 0 0 1-100 100ZM200 300h100a100 100 0 0 1-100 100Z"
-  />
-  <path fill="var(--green)" d="M0 200a100 100 0 0 1 100-100v100Z" />
-  <path fill="var(--orange)" d="M100 300a100 100 0 0 1 100 100H100Z" />
-  <path fill="url(#bauhaus-dots)" d="M300 100h100v100H300z" />
-  <path fill="url(#bauhaus-stripes)" d="M200 200h100v100H200z" />
-</svg>
+<div class="newsletter__shapes">
+  {% for repetition in range(end=8) %}
+    {% if pattern_id == "newsletter-right" %}
+      <svg viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+        <path fill="var(--green)" d="M0 0h100a50 50 0 0 1-100 0Z" />
+        <path fill="var(--red)" d="M0 50h100a50 50 0 0 1-100 0Z" />
+      </svg>
+      <svg viewBox="0 0 50 100" aria-hidden="true" focusable="false">
+        <path fill="var(--orange)" d="M0 0a50 50 0 0 1 0 100Z" />
+      </svg>
+      <svg viewBox="0 0 50 100" aria-hidden="true" focusable="false">
+        <path fill="var(--red)" d="M0 0a50 50 0 0 1 0 100Z" />
+      </svg>
+      <svg viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+        <circle fill="var(--orange)" cx="50" cy="50" r="50" />
+      </svg>
+      <svg viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+        <path fill="var(--blue)" d="M0 0h100v100H0z" />
+      </svg>
+    {% else %}
+      <svg viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+        <path fill="var(--orange)" d="M0 0h100v100H0z" />
+      </svg>
+      <svg viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+        <path fill="var(--red)" d="M0 0h100a50 50 0 0 1-100 0ZM0 100a50 50 0 0 1 100 0Z" />
+      </svg>
+      <svg viewBox="0 0 50 100" aria-hidden="true" focusable="false">
+        <path fill="var(--blue)" d="M0 0a50 50 0 0 1 0 100Z" />
+      </svg>
+      <svg viewBox="0 0 50 100" aria-hidden="true" focusable="false">
+        <path fill="var(--yellow)" d="M50 0v100a50 50 0 0 1 0-100Z" />
+      </svg>
+      <svg viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+        <circle fill="var(--orange)" cx="50" cy="50" r="50" />
+      </svg>
+    {% endif %}
+  {% endfor %}
+</div>
