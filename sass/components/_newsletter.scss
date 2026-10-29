@@ -7,6 +7,10 @@
   grid-template-columns: minmax(0, 1fr) minmax(0, 40rem) minmax(0, 1fr);
   margin-block: clamp(4rem, 7vw, 9rem) 0;
 
+  + .rustfest {
+    margin-top: clamp(3rem, 5vw, 6rem);
+  }
+
   &::selection,
   ::selection {
     background: var(--orange);
