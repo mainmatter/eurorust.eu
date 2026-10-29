@@ -1,14 +1,10 @@
 <section class="newsletter">
-  <div class="newsletter__mobile-art" aria-hidden="true">
-    <svg viewBox="0 0 400 100" focusable="false">
-      <path fill="var(--green)" d="M0 100A100 100 0 0 1 100 0V100Z" />
-      <circle fill="var(--red)" cx="150" cy="50" r="50" />
-      <path fill="var(--blue)" d="M200 50a50 50 0 0 1 100 0ZM200 100a50 50 0 0 1 100 0Z" />
-      <path fill="var(--orange)" d="M300 0H400A100 100 0 0 1 300 100Z" />
-    </svg>
+  <div class="newsletter__art newsletter__art--left" aria-hidden="true">
+    {% set pattern_id = "newsletter-left" %}
+    {% include "partials/bauhaus-pattern.html" %}
   </div>
   <div class="newsletter__wrapper container">
-    <h2>Join our<br />mailing list</h2>
+    <h2>Join our mailing list</h2>
 
     <div id="mc_embed_shell">
       <div id="mc_embed_signup">
@@ -52,5 +48,8 @@
       </div>
     </div>
   </div>
-  <div class="newsletter__art" aria-hidden="true">{% include "partials/bauhaus-pattern.html" %}</div>
+  <div class="newsletter__art" aria-hidden="true">
+    {% set pattern_id = "newsletter-right" %}
+    {% include "partials/bauhaus-pattern.html" %}
+  </div>
 </section>
