@@ -1,4 +1,5 @@
 <div class="newsletter__shapes">
+  {% for repetition in range(end=8) %}
   {% if pattern_id == "newsletter-right" %}
     <svg viewBox="0 0 100 100" aria-hidden="true" focusable="false">
       <path fill="var(--green)" d="M0 0h100a50 50 0 0 1-100 0Z" />
@@ -33,4 +34,5 @@
       <circle fill="var(--orange)" cx="50" cy="50" r="50" />
     </svg>
   {% endif %}
+  {% endfor %}
 </div>
