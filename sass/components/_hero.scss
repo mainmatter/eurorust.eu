@@ -122,6 +122,13 @@
   }
 }
 
+@media screen and (min-width: 64.001rem) {
+  .hero__canvas canvas,
+  .hero__canvas .hero__fallback {
+    transform: translateY(-3rem);
+  }
+}
+
 .hero__content {
   position: relative;
   z-index: 1;
