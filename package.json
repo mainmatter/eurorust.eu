@@ -19,7 +19,7 @@
   "packageManager": "pnpm@10.14.0",
   "type": "module",
   "dependencies": {
-    "concurrently": "^9.1.2",
+    "concurrently": "^10.0.0",
     "cross-env": "^10.0.0",
     "prettier": "^3.5.3",
     "prettier-plugin-jinja-template": "^2.0.0",
